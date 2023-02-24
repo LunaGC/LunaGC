@@ -1,11 +1,12 @@
 package emu.grasscutter.server.packet.recv;
 
-import emu.grasscutter.game.quest.enums.QuestTrigger;
 import emu.grasscutter.net.packet.Opcodes;
 import emu.grasscutter.net.packet.PacketHandler;
 import emu.grasscutter.net.packet.PacketOpcodes;
 import emu.grasscutter.net.proto.EvtDoSkillSuccNotifyOuterClass.EvtDoSkillSuccNotify;
 import emu.grasscutter.server.game.GameSession;
+import emu.grasscutter.Grasscutter;
+import emu.grasscutter.game.ability.HealAbilityManager;
 
 @Opcodes(PacketOpcodes.EvtDoSkillSuccNotify)
 public class HandlerEvtDoSkillSuccNotify extends PacketHandler {
@@ -18,12 +19,13 @@ public class HandlerEvtDoSkillSuccNotify extends PacketHandler {
         int skillId = notify.getSkillId();
         int casterId = notify.getCasterId();
 
+        HealAbilityManager.skillId = skillId;
+
         // Call skill perform in the player's ability manager.
         player.getAbilityManager().onSkillStart(session.getPlayer(), skillId, casterId);
 
         // Handle skill notify in other managers.
         player.getStaminaManager().handleEvtDoSkillSuccNotify(session, skillId, casterId);
         player.getEnergyManager().handleEvtDoSkillSuccNotify(session, skillId, casterId);
-        player.getQuestManager().triggerEvent(QuestTrigger.QUEST_CONTENT_SKILL, skillId, 0);
     }
 }
