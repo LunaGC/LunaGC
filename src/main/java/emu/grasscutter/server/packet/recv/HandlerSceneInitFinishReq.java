@@ -18,6 +18,7 @@ import emu.grasscutter.server.packet.send.PacketSceneTimeNotify;
 import emu.grasscutter.server.packet.send.PacketServerTimeNotify;
 import emu.grasscutter.server.packet.send.PacketSyncScenePlayTeamEntityNotify;
 import emu.grasscutter.server.packet.send.PacketSyncTeamEntityNotify;
+import emu.grasscutter.server.packet.send.PacketWindSeedUID;
 import emu.grasscutter.server.packet.send.PacketWorldDataNotify;
 import emu.grasscutter.server.packet.send.PacketWorldPlayerInfoNotify;
 
@@ -46,6 +47,7 @@ public class HandlerSceneInitFinishReq extends PacketHandler {
 		
 		// Done Packet
 		session.send(new PacketSceneInitFinishRsp(session.getPlayer()));
+		session.send((BasePacket)new PacketWindSeedUID());
 		
 		// Set state
 		session.getPlayer().setSceneLoadState(SceneLoadState.INIT);
