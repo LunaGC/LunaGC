@@ -19,12 +19,6 @@ public final class BartenderActivityDetailInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_content_closed = 15;</code>
-     * @return The isContentClosed.
-     */
-    boolean getIsContentClosed();
-
-    /**
      * <code>repeated .BartenderLevelInfo unlock_level_list = 10;</code>
      */
     java.util.List<emu.grasscutter.net.proto.BartenderLevelInfoOuterClass.BartenderLevelInfo> 
@@ -49,70 +43,80 @@ public final class BartenderActivityDetailInfoOuterClass {
         int index);
 
     /**
-     * <code>repeated uint32 unlock_item_list = 3;</code>
-     * @return A list containing the unlockItemList.
+     * <code>bool is_develop_module_open = 4;</code>
+     * @return The isDevelopModuleOpen.
      */
-    java.util.List<java.lang.Integer> getUnlockItemListList();
-    /**
-     * <code>repeated uint32 unlock_item_list = 3;</code>
-     * @return The count of unlockItemList.
-     */
-    int getUnlockItemListCount();
-    /**
-     * <code>repeated uint32 unlock_item_list = 3;</code>
-     * @param index The index of the element to return.
-     * @return The unlockItemList at the given index.
-     */
-    int getUnlockItemList(int index);
+    boolean getIsDevelopModuleOpen();
 
     /**
-     * <code>repeated uint32 unlock_formula_list = 6;</code>
-     * @return A list containing the unlockFormulaList.
+     * <code>repeated uint32 HABKKALDAHF = 6;</code>
+     * @return A list containing the hABKKALDAHF.
      */
-    java.util.List<java.lang.Integer> getUnlockFormulaListList();
+    java.util.List<java.lang.Integer> getHABKKALDAHFList();
     /**
-     * <code>repeated uint32 unlock_formula_list = 6;</code>
-     * @return The count of unlockFormulaList.
+     * <code>repeated uint32 HABKKALDAHF = 6;</code>
+     * @return The count of hABKKALDAHF.
      */
-    int getUnlockFormulaListCount();
+    int getHABKKALDAHFCount();
     /**
-     * <code>repeated uint32 unlock_formula_list = 6;</code>
+     * <code>repeated uint32 HABKKALDAHF = 6;</code>
      * @param index The index of the element to return.
-     * @return The unlockFormulaList at the given index.
+     * @return The hABKKALDAHF at the given index.
      */
-    int getUnlockFormulaList(int index);
+    int getHABKKALDAHF(int index);
 
     /**
-     * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+     * <code>bool is_content_closed = 5;</code>
+     * @return The isContentClosed.
+     */
+    boolean getIsContentClosed();
+
+    /**
+     * <code>repeated uint32 DPFPEEGPEKO = 15;</code>
+     * @return A list containing the dPFPEEGPEKO.
+     */
+    java.util.List<java.lang.Integer> getDPFPEEGPEKOList();
+    /**
+     * <code>repeated uint32 DPFPEEGPEKO = 15;</code>
+     * @return The count of dPFPEEGPEKO.
+     */
+    int getDPFPEEGPEKOCount();
+    /**
+     * <code>repeated uint32 DPFPEEGPEKO = 15;</code>
+     * @param index The index of the element to return.
+     * @return The dPFPEEGPEKO at the given index.
+     */
+    int getDPFPEEGPEKO(int index);
+
+    /**
+     * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
      */
     java.util.List<emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo> 
         getUnlockTaskListList();
     /**
-     * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+     * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
      */
     emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo getUnlockTaskList(int index);
     /**
-     * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+     * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
      */
     int getUnlockTaskListCount();
     /**
-     * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+     * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfoOrBuilder> 
         getUnlockTaskListOrBuilderList();
     /**
-     * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+     * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
      */
     emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfoOrBuilder getUnlockTaskListOrBuilder(
         int index);
-
-    /**
-     * <code>bool is_develop_module_open = 9;</code>
-     * @return The isDevelopModuleOpen.
-     */
-    boolean getIsDevelopModuleOpen();
   }
   /**
+   * <pre>
+   * Name: KHJFNIAKPID
+   * </pre>
+   *
    * Protobuf type {@code BartenderActivityDetailInfo}
    */
   public static final class BartenderActivityDetailInfo extends
@@ -126,8 +130,8 @@ public final class BartenderActivityDetailInfoOuterClass {
     }
     private BartenderActivityDetailInfo() {
       unlockLevelList_ = java.util.Collections.emptyList();
-      unlockItemList_ = emptyIntList();
-      unlockFormulaList_ = emptyIntList();
+      hABKKALDAHF_ = emptyIntList();
+      dPFPEEGPEKO_ = emptyIntList();
       unlockTaskList_ = java.util.Collections.emptyList();
     }
 
@@ -143,126 +147,6 @@ public final class BartenderActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private BartenderActivityDetailInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                unlockItemList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              unlockItemList_.addInt(input.readUInt32());
-              break;
-            }
-            case 26: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                unlockItemList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unlockItemList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                unlockTaskList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              unlockTaskList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 48: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                unlockFormulaList_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              unlockFormulaList_.addInt(input.readUInt32());
-              break;
-            }
-            case 50: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
-                unlockFormulaList_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unlockFormulaList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 72: {
-
-              isDevelopModuleOpen_ = input.readBool();
-              break;
-            }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                unlockLevelList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BartenderLevelInfoOuterClass.BartenderLevelInfo>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              unlockLevelList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.BartenderLevelInfoOuterClass.BartenderLevelInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 120: {
-
-              isContentClosed_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          unlockItemList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          unlockTaskList_ = java.util.Collections.unmodifiableList(unlockTaskList_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          unlockFormulaList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          unlockLevelList_ = java.util.Collections.unmodifiableList(unlockLevelList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.internal_static_BartenderActivityDetailInfo_descriptor;
@@ -276,18 +160,8 @@ public final class BartenderActivityDetailInfoOuterClass {
               emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo.class, emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo.Builder.class);
     }
 
-    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 15;
-    private boolean isContentClosed_;
-    /**
-     * <code>bool is_content_closed = 15;</code>
-     * @return The isContentClosed.
-     */
-    @java.lang.Override
-    public boolean getIsContentClosed() {
-      return isContentClosed_;
-    }
-
     public static final int UNLOCK_LEVEL_LIST_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.BartenderLevelInfoOuterClass.BartenderLevelInfo> unlockLevelList_;
     /**
      * <code>repeated .BartenderLevelInfo unlock_level_list = 10;</code>
@@ -327,73 +201,98 @@ public final class BartenderActivityDetailInfoOuterClass {
       return unlockLevelList_.get(index);
     }
 
-    public static final int UNLOCK_ITEM_LIST_FIELD_NUMBER = 3;
-    private com.google.protobuf.Internal.IntList unlockItemList_;
+    public static final int IS_DEVELOP_MODULE_OPEN_FIELD_NUMBER = 4;
+    private boolean isDevelopModuleOpen_ = false;
     /**
-     * <code>repeated uint32 unlock_item_list = 3;</code>
-     * @return A list containing the unlockItemList.
+     * <code>bool is_develop_module_open = 4;</code>
+     * @return The isDevelopModuleOpen.
+     */
+    @java.lang.Override
+    public boolean getIsDevelopModuleOpen() {
+      return isDevelopModuleOpen_;
+    }
+
+    public static final int HABKKALDAHF_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.IntList hABKKALDAHF_;
+    /**
+     * <code>repeated uint32 HABKKALDAHF = 6;</code>
+     * @return A list containing the hABKKALDAHF.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getUnlockItemListList() {
-      return unlockItemList_;
+        getHABKKALDAHFList() {
+      return hABKKALDAHF_;
     }
     /**
-     * <code>repeated uint32 unlock_item_list = 3;</code>
-     * @return The count of unlockItemList.
+     * <code>repeated uint32 HABKKALDAHF = 6;</code>
+     * @return The count of hABKKALDAHF.
      */
-    public int getUnlockItemListCount() {
-      return unlockItemList_.size();
+    public int getHABKKALDAHFCount() {
+      return hABKKALDAHF_.size();
     }
     /**
-     * <code>repeated uint32 unlock_item_list = 3;</code>
+     * <code>repeated uint32 HABKKALDAHF = 6;</code>
      * @param index The index of the element to return.
-     * @return The unlockItemList at the given index.
+     * @return The hABKKALDAHF at the given index.
      */
-    public int getUnlockItemList(int index) {
-      return unlockItemList_.getInt(index);
+    public int getHABKKALDAHF(int index) {
+      return hABKKALDAHF_.getInt(index);
     }
-    private int unlockItemListMemoizedSerializedSize = -1;
+    private int hABKKALDAHFMemoizedSerializedSize = -1;
 
-    public static final int UNLOCK_FORMULA_LIST_FIELD_NUMBER = 6;
-    private com.google.protobuf.Internal.IntList unlockFormulaList_;
+    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 5;
+    private boolean isContentClosed_ = false;
     /**
-     * <code>repeated uint32 unlock_formula_list = 6;</code>
-     * @return A list containing the unlockFormulaList.
+     * <code>bool is_content_closed = 5;</code>
+     * @return The isContentClosed.
+     */
+    @java.lang.Override
+    public boolean getIsContentClosed() {
+      return isContentClosed_;
+    }
+
+    public static final int DPFPEEGPEKO_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.IntList dPFPEEGPEKO_;
+    /**
+     * <code>repeated uint32 DPFPEEGPEKO = 15;</code>
+     * @return A list containing the dPFPEEGPEKO.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getUnlockFormulaListList() {
-      return unlockFormulaList_;
+        getDPFPEEGPEKOList() {
+      return dPFPEEGPEKO_;
     }
     /**
-     * <code>repeated uint32 unlock_formula_list = 6;</code>
-     * @return The count of unlockFormulaList.
+     * <code>repeated uint32 DPFPEEGPEKO = 15;</code>
+     * @return The count of dPFPEEGPEKO.
      */
-    public int getUnlockFormulaListCount() {
-      return unlockFormulaList_.size();
+    public int getDPFPEEGPEKOCount() {
+      return dPFPEEGPEKO_.size();
     }
     /**
-     * <code>repeated uint32 unlock_formula_list = 6;</code>
+     * <code>repeated uint32 DPFPEEGPEKO = 15;</code>
      * @param index The index of the element to return.
-     * @return The unlockFormulaList at the given index.
+     * @return The dPFPEEGPEKO at the given index.
      */
-    public int getUnlockFormulaList(int index) {
-      return unlockFormulaList_.getInt(index);
+    public int getDPFPEEGPEKO(int index) {
+      return dPFPEEGPEKO_.getInt(index);
     }
-    private int unlockFormulaListMemoizedSerializedSize = -1;
+    private int dPFPEEGPEKOMemoizedSerializedSize = -1;
 
-    public static final int UNLOCK_TASK_LIST_FIELD_NUMBER = 5;
+    public static final int UNLOCK_TASK_LIST_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo> unlockTaskList_;
     /**
-     * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+     * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo> getUnlockTaskListList() {
       return unlockTaskList_;
     }
     /**
-     * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+     * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfoOrBuilder> 
@@ -401,37 +300,26 @@ public final class BartenderActivityDetailInfoOuterClass {
       return unlockTaskList_;
     }
     /**
-     * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+     * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
      */
     @java.lang.Override
     public int getUnlockTaskListCount() {
       return unlockTaskList_.size();
     }
     /**
-     * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+     * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo getUnlockTaskList(int index) {
       return unlockTaskList_.get(index);
     }
     /**
-     * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+     * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfoOrBuilder getUnlockTaskListOrBuilder(
         int index) {
       return unlockTaskList_.get(index);
-    }
-
-    public static final int IS_DEVELOP_MODULE_OPEN_FIELD_NUMBER = 9;
-    private boolean isDevelopModuleOpen_;
-    /**
-     * <code>bool is_develop_module_open = 9;</code>
-     * @return The isDevelopModuleOpen.
-     */
-    @java.lang.Override
-    public boolean getIsDevelopModuleOpen() {
-      return isDevelopModuleOpen_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -449,33 +337,33 @@ public final class BartenderActivityDetailInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (getUnlockItemListList().size() > 0) {
-        output.writeUInt32NoTag(26);
-        output.writeUInt32NoTag(unlockItemListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < unlockItemList_.size(); i++) {
-        output.writeUInt32NoTag(unlockItemList_.getInt(i));
-      }
       for (int i = 0; i < unlockTaskList_.size(); i++) {
-        output.writeMessage(5, unlockTaskList_.get(i));
-      }
-      if (getUnlockFormulaListList().size() > 0) {
-        output.writeUInt32NoTag(50);
-        output.writeUInt32NoTag(unlockFormulaListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < unlockFormulaList_.size(); i++) {
-        output.writeUInt32NoTag(unlockFormulaList_.getInt(i));
+        output.writeMessage(1, unlockTaskList_.get(i));
       }
       if (isDevelopModuleOpen_ != false) {
-        output.writeBool(9, isDevelopModuleOpen_);
+        output.writeBool(4, isDevelopModuleOpen_);
+      }
+      if (isContentClosed_ != false) {
+        output.writeBool(5, isContentClosed_);
+      }
+      if (getHABKKALDAHFList().size() > 0) {
+        output.writeUInt32NoTag(50);
+        output.writeUInt32NoTag(hABKKALDAHFMemoizedSerializedSize);
+      }
+      for (int i = 0; i < hABKKALDAHF_.size(); i++) {
+        output.writeUInt32NoTag(hABKKALDAHF_.getInt(i));
       }
       for (int i = 0; i < unlockLevelList_.size(); i++) {
         output.writeMessage(10, unlockLevelList_.get(i));
       }
-      if (isContentClosed_ != false) {
-        output.writeBool(15, isContentClosed_);
+      if (getDPFPEEGPEKOList().size() > 0) {
+        output.writeUInt32NoTag(122);
+        output.writeUInt32NoTag(dPFPEEGPEKOMemoizedSerializedSize);
       }
-      unknownFields.writeTo(output);
+      for (int i = 0; i < dPFPEEGPEKO_.size(); i++) {
+        output.writeUInt32NoTag(dPFPEEGPEKO_.getInt(i));
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -484,51 +372,51 @@ public final class BartenderActivityDetailInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < unlockItemList_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(unlockItemList_.getInt(i));
-        }
-        size += dataSize;
-        if (!getUnlockItemListList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        unlockItemListMemoizedSerializedSize = dataSize;
-      }
       for (int i = 0; i < unlockTaskList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, unlockTaskList_.get(i));
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < unlockFormulaList_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(unlockFormulaList_.getInt(i));
-        }
-        size += dataSize;
-        if (!getUnlockFormulaListList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        unlockFormulaListMemoizedSerializedSize = dataSize;
+          .computeMessageSize(1, unlockTaskList_.get(i));
       }
       if (isDevelopModuleOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(9, isDevelopModuleOpen_);
+          .computeBoolSize(4, isDevelopModuleOpen_);
+      }
+      if (isContentClosed_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, isContentClosed_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < hABKKALDAHF_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(hABKKALDAHF_.getInt(i));
+        }
+        size += dataSize;
+        if (!getHABKKALDAHFList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        hABKKALDAHFMemoizedSerializedSize = dataSize;
       }
       for (int i = 0; i < unlockLevelList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, unlockLevelList_.get(i));
       }
-      if (isContentClosed_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, isContentClosed_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < dPFPEEGPEKO_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dPFPEEGPEKO_.getInt(i));
+        }
+        size += dataSize;
+        if (!getDPFPEEGPEKOList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        dPFPEEGPEKOMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -543,19 +431,19 @@ public final class BartenderActivityDetailInfoOuterClass {
       }
       emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo other = (emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo) obj;
 
-      if (getIsContentClosed()
-          != other.getIsContentClosed()) return false;
       if (!getUnlockLevelListList()
           .equals(other.getUnlockLevelListList())) return false;
-      if (!getUnlockItemListList()
-          .equals(other.getUnlockItemListList())) return false;
-      if (!getUnlockFormulaListList()
-          .equals(other.getUnlockFormulaListList())) return false;
-      if (!getUnlockTaskListList()
-          .equals(other.getUnlockTaskListList())) return false;
       if (getIsDevelopModuleOpen()
           != other.getIsDevelopModuleOpen()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getHABKKALDAHFList()
+          .equals(other.getHABKKALDAHFList())) return false;
+      if (getIsContentClosed()
+          != other.getIsContentClosed()) return false;
+      if (!getDPFPEEGPEKOList()
+          .equals(other.getDPFPEEGPEKOList())) return false;
+      if (!getUnlockTaskListList()
+          .equals(other.getUnlockTaskListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -566,29 +454,29 @@ public final class BartenderActivityDetailInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + IS_CONTENT_CLOSED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsContentClosed());
       if (getUnlockLevelListCount() > 0) {
         hash = (37 * hash) + UNLOCK_LEVEL_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getUnlockLevelListList().hashCode();
       }
-      if (getUnlockItemListCount() > 0) {
-        hash = (37 * hash) + UNLOCK_ITEM_LIST_FIELD_NUMBER;
-        hash = (53 * hash) + getUnlockItemListList().hashCode();
+      hash = (37 * hash) + IS_DEVELOP_MODULE_OPEN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsDevelopModuleOpen());
+      if (getHABKKALDAHFCount() > 0) {
+        hash = (37 * hash) + HABKKALDAHF_FIELD_NUMBER;
+        hash = (53 * hash) + getHABKKALDAHFList().hashCode();
       }
-      if (getUnlockFormulaListCount() > 0) {
-        hash = (37 * hash) + UNLOCK_FORMULA_LIST_FIELD_NUMBER;
-        hash = (53 * hash) + getUnlockFormulaListList().hashCode();
+      hash = (37 * hash) + IS_CONTENT_CLOSED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsContentClosed());
+      if (getDPFPEEGPEKOCount() > 0) {
+        hash = (37 * hash) + DPFPEEGPEKO_FIELD_NUMBER;
+        hash = (53 * hash) + getDPFPEEGPEKOList().hashCode();
       }
       if (getUnlockTaskListCount() > 0) {
         hash = (37 * hash) + UNLOCK_TASK_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getUnlockTaskListList().hashCode();
       }
-      hash = (37 * hash) + IS_DEVELOP_MODULE_OPEN_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsDevelopModuleOpen());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -684,6 +572,10 @@ public final class BartenderActivityDetailInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: KHJFNIAKPID
+     * </pre>
+     *
      * Protobuf type {@code BartenderActivityDetailInfo}
      */
     public static final class Builder extends
@@ -705,44 +597,36 @@ public final class BartenderActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUnlockLevelListFieldBuilder();
-          getUnlockTaskListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        isContentClosed_ = false;
-
+        bitField0_ = 0;
         if (unlockLevelListBuilder_ == null) {
           unlockLevelList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          unlockLevelList_ = null;
           unlockLevelListBuilder_.clear();
         }
-        unlockItemList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        unlockFormulaList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isDevelopModuleOpen_ = false;
+        hABKKALDAHF_ = emptyIntList();
+        isContentClosed_ = false;
+        dPFPEEGPEKO_ = emptyIntList();
         if (unlockTaskListBuilder_ == null) {
           unlockTaskList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
+          unlockTaskList_ = null;
           unlockTaskListBuilder_.clear();
         }
-        isDevelopModuleOpen_ = false;
-
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -769,8 +653,13 @@ public final class BartenderActivityDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo buildPartial() {
         emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo result = new emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo(this);
-        int from_bitField0_ = bitField0_;
-        result.isContentClosed_ = isContentClosed_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo result) {
         if (unlockLevelListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             unlockLevelList_ = java.util.Collections.unmodifiableList(unlockLevelList_);
@@ -780,28 +669,35 @@ public final class BartenderActivityDetailInfoOuterClass {
         } else {
           result.unlockLevelList_ = unlockLevelListBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) != 0)) {
-          unlockItemList_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.unlockItemList_ = unlockItemList_;
         if (((bitField0_ & 0x00000004) != 0)) {
-          unlockFormulaList_.makeImmutable();
+          hABKKALDAHF_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000004);
         }
-        result.unlockFormulaList_ = unlockFormulaList_;
+        result.hABKKALDAHF_ = hABKKALDAHF_;
+        if (((bitField0_ & 0x00000010) != 0)) {
+          dPFPEEGPEKO_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.dPFPEEGPEKO_ = dPFPEEGPEKO_;
         if (unlockTaskListBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             unlockTaskList_ = java.util.Collections.unmodifiableList(unlockTaskList_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.unlockTaskList_ = unlockTaskList_;
         } else {
           result.unlockTaskList_ = unlockTaskListBuilder_.build();
         }
-        result.isDevelopModuleOpen_ = isDevelopModuleOpen_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.isDevelopModuleOpen_ = isDevelopModuleOpen_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.isContentClosed_ = isContentClosed_;
+        }
       }
 
       @java.lang.Override
@@ -848,9 +744,6 @@ public final class BartenderActivityDetailInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo other) {
         if (other == emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo.getDefaultInstance()) return this;
-        if (other.getIsContentClosed() != false) {
-          setIsContentClosed(other.getIsContentClosed());
-        }
         if (unlockLevelListBuilder_ == null) {
           if (!other.unlockLevelList_.isEmpty()) {
             if (unlockLevelList_.isEmpty()) {
@@ -877,23 +770,29 @@ public final class BartenderActivityDetailInfoOuterClass {
             }
           }
         }
-        if (!other.unlockItemList_.isEmpty()) {
-          if (unlockItemList_.isEmpty()) {
-            unlockItemList_ = other.unlockItemList_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+        if (other.getIsDevelopModuleOpen() != false) {
+          setIsDevelopModuleOpen(other.getIsDevelopModuleOpen());
+        }
+        if (!other.hABKKALDAHF_.isEmpty()) {
+          if (hABKKALDAHF_.isEmpty()) {
+            hABKKALDAHF_ = other.hABKKALDAHF_;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
-            ensureUnlockItemListIsMutable();
-            unlockItemList_.addAll(other.unlockItemList_);
+            ensureHABKKALDAHFIsMutable();
+            hABKKALDAHF_.addAll(other.hABKKALDAHF_);
           }
           onChanged();
         }
-        if (!other.unlockFormulaList_.isEmpty()) {
-          if (unlockFormulaList_.isEmpty()) {
-            unlockFormulaList_ = other.unlockFormulaList_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+        if (other.getIsContentClosed() != false) {
+          setIsContentClosed(other.getIsContentClosed());
+        }
+        if (!other.dPFPEEGPEKO_.isEmpty()) {
+          if (dPFPEEGPEKO_.isEmpty()) {
+            dPFPEEGPEKO_ = other.dPFPEEGPEKO_;
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
-            ensureUnlockFormulaListIsMutable();
-            unlockFormulaList_.addAll(other.unlockFormulaList_);
+            ensureDPFPEEGPEKOIsMutable();
+            dPFPEEGPEKO_.addAll(other.dPFPEEGPEKO_);
           }
           onChanged();
         }
@@ -901,7 +800,7 @@ public final class BartenderActivityDetailInfoOuterClass {
           if (!other.unlockTaskList_.isEmpty()) {
             if (unlockTaskList_.isEmpty()) {
               unlockTaskList_ = other.unlockTaskList_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureUnlockTaskListIsMutable();
               unlockTaskList_.addAll(other.unlockTaskList_);
@@ -914,7 +813,7 @@ public final class BartenderActivityDetailInfoOuterClass {
               unlockTaskListBuilder_.dispose();
               unlockTaskListBuilder_ = null;
               unlockTaskList_ = other.unlockTaskList_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000020);
               unlockTaskListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getUnlockTaskListFieldBuilder() : null;
@@ -923,10 +822,7 @@ public final class BartenderActivityDetailInfoOuterClass {
             }
           }
         }
-        if (other.getIsDevelopModuleOpen() != false) {
-          setIsDevelopModuleOpen(other.getIsDevelopModuleOpen());
-        }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -941,51 +837,101 @@ public final class BartenderActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo.parser(),
+                        extensionRegistry);
+                if (unlockTaskListBuilder_ == null) {
+                  ensureUnlockTaskListIsMutable();
+                  unlockTaskList_.add(m);
+                } else {
+                  unlockTaskListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 32: {
+                isDevelopModuleOpen_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 32
+              case 40: {
+                isContentClosed_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 40
+              case 48: {
+                int v = input.readUInt32();
+                ensureHABKKALDAHFIsMutable();
+                hABKKALDAHF_.addInt(v);
+                break;
+              } // case 48
+              case 50: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureHABKKALDAHFIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  hABKKALDAHF_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 50
+              case 82: {
+                emu.grasscutter.net.proto.BartenderLevelInfoOuterClass.BartenderLevelInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.BartenderLevelInfoOuterClass.BartenderLevelInfo.parser(),
+                        extensionRegistry);
+                if (unlockLevelListBuilder_ == null) {
+                  ensureUnlockLevelListIsMutable();
+                  unlockLevelList_.add(m);
+                } else {
+                  unlockLevelListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              case 120: {
+                int v = input.readUInt32();
+                ensureDPFPEEGPEKOIsMutable();
+                dPFPEEGPEKO_.addInt(v);
+                break;
+              } // case 120
+              case 122: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureDPFPEEGPEKOIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  dPFPEEGPEKO_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 122
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.BartenderActivityDetailInfoOuterClass.BartenderActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
-
-      private boolean isContentClosed_ ;
-      /**
-       * <code>bool is_content_closed = 15;</code>
-       * @return The isContentClosed.
-       */
-      @java.lang.Override
-      public boolean getIsContentClosed() {
-        return isContentClosed_;
-      }
-      /**
-       * <code>bool is_content_closed = 15;</code>
-       * @param value The isContentClosed to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsContentClosed(boolean value) {
-        
-        isContentClosed_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_content_closed = 15;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsContentClosed() {
-        
-        isContentClosed_ = false;
-        onChanged();
-        return this;
-      }
 
       private java.util.List<emu.grasscutter.net.proto.BartenderLevelInfoOuterClass.BartenderLevelInfo> unlockLevelList_ =
         java.util.Collections.emptyList();
@@ -1227,160 +1173,228 @@ public final class BartenderActivityDetailInfoOuterClass {
         return unlockLevelListBuilder_;
       }
 
-      private com.google.protobuf.Internal.IntList unlockItemList_ = emptyIntList();
-      private void ensureUnlockItemListIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          unlockItemList_ = mutableCopy(unlockItemList_);
-          bitField0_ |= 0x00000002;
-         }
-      }
+      private boolean isDevelopModuleOpen_ ;
       /**
-       * <code>repeated uint32 unlock_item_list = 3;</code>
-       * @return A list containing the unlockItemList.
+       * <code>bool is_develop_module_open = 4;</code>
+       * @return The isDevelopModuleOpen.
        */
-      public java.util.List<java.lang.Integer>
-          getUnlockItemListList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(unlockItemList_) : unlockItemList_;
+      @java.lang.Override
+      public boolean getIsDevelopModuleOpen() {
+        return isDevelopModuleOpen_;
       }
       /**
-       * <code>repeated uint32 unlock_item_list = 3;</code>
-       * @return The count of unlockItemList.
-       */
-      public int getUnlockItemListCount() {
-        return unlockItemList_.size();
-      }
-      /**
-       * <code>repeated uint32 unlock_item_list = 3;</code>
-       * @param index The index of the element to return.
-       * @return The unlockItemList at the given index.
-       */
-      public int getUnlockItemList(int index) {
-        return unlockItemList_.getInt(index);
-      }
-      /**
-       * <code>repeated uint32 unlock_item_list = 3;</code>
-       * @param index The index to set the value at.
-       * @param value The unlockItemList to set.
+       * <code>bool is_develop_module_open = 4;</code>
+       * @param value The isDevelopModuleOpen to set.
        * @return This builder for chaining.
        */
-      public Builder setUnlockItemList(
-          int index, int value) {
-        ensureUnlockItemListIsMutable();
-        unlockItemList_.setInt(index, value);
+      public Builder setIsDevelopModuleOpen(boolean value) {
+        
+        isDevelopModuleOpen_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 unlock_item_list = 3;</code>
-       * @param value The unlockItemList to add.
+       * <code>bool is_develop_module_open = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder addUnlockItemList(int value) {
-        ensureUnlockItemListIsMutable();
-        unlockItemList_.addInt(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 unlock_item_list = 3;</code>
-       * @param values The unlockItemList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllUnlockItemList(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureUnlockItemListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, unlockItemList_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 unlock_item_list = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUnlockItemList() {
-        unlockItemList_ = emptyIntList();
+      public Builder clearIsDevelopModuleOpen() {
         bitField0_ = (bitField0_ & ~0x00000002);
+        isDevelopModuleOpen_ = false;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList unlockFormulaList_ = emptyIntList();
-      private void ensureUnlockFormulaListIsMutable() {
+      private com.google.protobuf.Internal.IntList hABKKALDAHF_ = emptyIntList();
+      private void ensureHABKKALDAHFIsMutable() {
         if (!((bitField0_ & 0x00000004) != 0)) {
-          unlockFormulaList_ = mutableCopy(unlockFormulaList_);
+          hABKKALDAHF_ = mutableCopy(hABKKALDAHF_);
           bitField0_ |= 0x00000004;
-         }
+        }
       }
       /**
-       * <code>repeated uint32 unlock_formula_list = 6;</code>
-       * @return A list containing the unlockFormulaList.
+       * <code>repeated uint32 HABKKALDAHF = 6;</code>
+       * @return A list containing the hABKKALDAHF.
        */
       public java.util.List<java.lang.Integer>
-          getUnlockFormulaListList() {
+          getHABKKALDAHFList() {
         return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(unlockFormulaList_) : unlockFormulaList_;
+                 java.util.Collections.unmodifiableList(hABKKALDAHF_) : hABKKALDAHF_;
       }
       /**
-       * <code>repeated uint32 unlock_formula_list = 6;</code>
-       * @return The count of unlockFormulaList.
+       * <code>repeated uint32 HABKKALDAHF = 6;</code>
+       * @return The count of hABKKALDAHF.
        */
-      public int getUnlockFormulaListCount() {
-        return unlockFormulaList_.size();
+      public int getHABKKALDAHFCount() {
+        return hABKKALDAHF_.size();
       }
       /**
-       * <code>repeated uint32 unlock_formula_list = 6;</code>
+       * <code>repeated uint32 HABKKALDAHF = 6;</code>
        * @param index The index of the element to return.
-       * @return The unlockFormulaList at the given index.
+       * @return The hABKKALDAHF at the given index.
        */
-      public int getUnlockFormulaList(int index) {
-        return unlockFormulaList_.getInt(index);
+      public int getHABKKALDAHF(int index) {
+        return hABKKALDAHF_.getInt(index);
       }
       /**
-       * <code>repeated uint32 unlock_formula_list = 6;</code>
+       * <code>repeated uint32 HABKKALDAHF = 6;</code>
        * @param index The index to set the value at.
-       * @param value The unlockFormulaList to set.
+       * @param value The hABKKALDAHF to set.
        * @return This builder for chaining.
        */
-      public Builder setUnlockFormulaList(
+      public Builder setHABKKALDAHF(
           int index, int value) {
-        ensureUnlockFormulaListIsMutable();
-        unlockFormulaList_.setInt(index, value);
+        
+        ensureHABKKALDAHFIsMutable();
+        hABKKALDAHF_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 unlock_formula_list = 6;</code>
-       * @param value The unlockFormulaList to add.
+       * <code>repeated uint32 HABKKALDAHF = 6;</code>
+       * @param value The hABKKALDAHF to add.
        * @return This builder for chaining.
        */
-      public Builder addUnlockFormulaList(int value) {
-        ensureUnlockFormulaListIsMutable();
-        unlockFormulaList_.addInt(value);
+      public Builder addHABKKALDAHF(int value) {
+        
+        ensureHABKKALDAHFIsMutable();
+        hABKKALDAHF_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 unlock_formula_list = 6;</code>
-       * @param values The unlockFormulaList to add.
+       * <code>repeated uint32 HABKKALDAHF = 6;</code>
+       * @param values The hABKKALDAHF to add.
        * @return This builder for chaining.
        */
-      public Builder addAllUnlockFormulaList(
+      public Builder addAllHABKKALDAHF(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureUnlockFormulaListIsMutable();
+        ensureHABKKALDAHFIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, unlockFormulaList_);
+            values, hABKKALDAHF_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 unlock_formula_list = 6;</code>
+       * <code>repeated uint32 HABKKALDAHF = 6;</code>
        * @return This builder for chaining.
        */
-      public Builder clearUnlockFormulaList() {
-        unlockFormulaList_ = emptyIntList();
+      public Builder clearHABKKALDAHF() {
+        hABKKALDAHF_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+
+      private boolean isContentClosed_ ;
+      /**
+       * <code>bool is_content_closed = 5;</code>
+       * @return The isContentClosed.
+       */
+      @java.lang.Override
+      public boolean getIsContentClosed() {
+        return isContentClosed_;
+      }
+      /**
+       * <code>bool is_content_closed = 5;</code>
+       * @param value The isContentClosed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsContentClosed(boolean value) {
+        
+        isContentClosed_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_content_closed = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsContentClosed() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        isContentClosed_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList dPFPEEGPEKO_ = emptyIntList();
+      private void ensureDPFPEEGPEKOIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          dPFPEEGPEKO_ = mutableCopy(dPFPEEGPEKO_);
+          bitField0_ |= 0x00000010;
+        }
+      }
+      /**
+       * <code>repeated uint32 DPFPEEGPEKO = 15;</code>
+       * @return A list containing the dPFPEEGPEKO.
+       */
+      public java.util.List<java.lang.Integer>
+          getDPFPEEGPEKOList() {
+        return ((bitField0_ & 0x00000010) != 0) ?
+                 java.util.Collections.unmodifiableList(dPFPEEGPEKO_) : dPFPEEGPEKO_;
+      }
+      /**
+       * <code>repeated uint32 DPFPEEGPEKO = 15;</code>
+       * @return The count of dPFPEEGPEKO.
+       */
+      public int getDPFPEEGPEKOCount() {
+        return dPFPEEGPEKO_.size();
+      }
+      /**
+       * <code>repeated uint32 DPFPEEGPEKO = 15;</code>
+       * @param index The index of the element to return.
+       * @return The dPFPEEGPEKO at the given index.
+       */
+      public int getDPFPEEGPEKO(int index) {
+        return dPFPEEGPEKO_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 DPFPEEGPEKO = 15;</code>
+       * @param index The index to set the value at.
+       * @param value The dPFPEEGPEKO to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDPFPEEGPEKO(
+          int index, int value) {
+        
+        ensureDPFPEEGPEKOIsMutable();
+        dPFPEEGPEKO_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 DPFPEEGPEKO = 15;</code>
+       * @param value The dPFPEEGPEKO to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDPFPEEGPEKO(int value) {
+        
+        ensureDPFPEEGPEKOIsMutable();
+        dPFPEEGPEKO_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 DPFPEEGPEKO = 15;</code>
+       * @param values The dPFPEEGPEKO to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDPFPEEGPEKO(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureDPFPEEGPEKOIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, dPFPEEGPEKO_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 DPFPEEGPEKO = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDPFPEEGPEKO() {
+        dPFPEEGPEKO_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -1388,9 +1402,9 @@ public final class BartenderActivityDetailInfoOuterClass {
       private java.util.List<emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo> unlockTaskList_ =
         java.util.Collections.emptyList();
       private void ensureUnlockTaskListIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           unlockTaskList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo>(unlockTaskList_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -1398,7 +1412,7 @@ public final class BartenderActivityDetailInfoOuterClass {
           emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo, emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo.Builder, emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfoOrBuilder> unlockTaskListBuilder_;
 
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo> getUnlockTaskListList() {
         if (unlockTaskListBuilder_ == null) {
@@ -1408,7 +1422,7 @@ public final class BartenderActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public int getUnlockTaskListCount() {
         if (unlockTaskListBuilder_ == null) {
@@ -1418,7 +1432,7 @@ public final class BartenderActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo getUnlockTaskList(int index) {
         if (unlockTaskListBuilder_ == null) {
@@ -1428,7 +1442,7 @@ public final class BartenderActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public Builder setUnlockTaskList(
           int index, emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo value) {
@@ -1445,7 +1459,7 @@ public final class BartenderActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public Builder setUnlockTaskList(
           int index, emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo.Builder builderForValue) {
@@ -1459,7 +1473,7 @@ public final class BartenderActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public Builder addUnlockTaskList(emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo value) {
         if (unlockTaskListBuilder_ == null) {
@@ -1475,7 +1489,7 @@ public final class BartenderActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public Builder addUnlockTaskList(
           int index, emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo value) {
@@ -1492,7 +1506,7 @@ public final class BartenderActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public Builder addUnlockTaskList(
           emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo.Builder builderForValue) {
@@ -1506,7 +1520,7 @@ public final class BartenderActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public Builder addUnlockTaskList(
           int index, emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo.Builder builderForValue) {
@@ -1520,7 +1534,7 @@ public final class BartenderActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public Builder addAllUnlockTaskList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo> values) {
@@ -1535,12 +1549,12 @@ public final class BartenderActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public Builder clearUnlockTaskList() {
         if (unlockTaskListBuilder_ == null) {
           unlockTaskList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           unlockTaskListBuilder_.clear();
@@ -1548,7 +1562,7 @@ public final class BartenderActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public Builder removeUnlockTaskList(int index) {
         if (unlockTaskListBuilder_ == null) {
@@ -1561,14 +1575,14 @@ public final class BartenderActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo.Builder getUnlockTaskListBuilder(
           int index) {
         return getUnlockTaskListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfoOrBuilder getUnlockTaskListOrBuilder(
           int index) {
@@ -1578,7 +1592,7 @@ public final class BartenderActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfoOrBuilder> 
            getUnlockTaskListOrBuilderList() {
@@ -1589,14 +1603,14 @@ public final class BartenderActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo.Builder addUnlockTaskListBuilder() {
         return getUnlockTaskListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo.Builder addUnlockTaskListBuilder(
           int index) {
@@ -1604,7 +1618,7 @@ public final class BartenderActivityDetailInfoOuterClass {
             index, emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .BartenderTaskInfo unlock_task_list = 5;</code>
+       * <code>repeated .BartenderTaskInfo unlock_task_list = 1;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo.Builder> 
            getUnlockTaskListBuilderList() {
@@ -1617,43 +1631,12 @@ public final class BartenderActivityDetailInfoOuterClass {
           unlockTaskListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo, emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfo.Builder, emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.BartenderTaskInfoOrBuilder>(
                   unlockTaskList_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           unlockTaskList_ = null;
         }
         return unlockTaskListBuilder_;
-      }
-
-      private boolean isDevelopModuleOpen_ ;
-      /**
-       * <code>bool is_develop_module_open = 9;</code>
-       * @return The isDevelopModuleOpen.
-       */
-      @java.lang.Override
-      public boolean getIsDevelopModuleOpen() {
-        return isDevelopModuleOpen_;
-      }
-      /**
-       * <code>bool is_develop_module_open = 9;</code>
-       * @param value The isDevelopModuleOpen to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsDevelopModuleOpen(boolean value) {
-        
-        isDevelopModuleOpen_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_develop_module_open = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsDevelopModuleOpen() {
-        
-        isDevelopModuleOpen_ = false;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1688,7 +1671,18 @@ public final class BartenderActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BartenderActivityDetailInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1724,14 +1718,13 @@ public final class BartenderActivityDetailInfoOuterClass {
     java.lang.String[] descriptorData = {
       "\n!BartenderActivityDetailInfo.proto\032\030Bar" +
       "tenderLevelInfo.proto\032\027BartenderTaskInfo" +
-      ".proto\"\355\001\n\033BartenderActivityDetailInfo\022\031" +
-      "\n\021is_content_closed\030\017 \001(\010\022.\n\021unlock_leve" +
-      "l_list\030\n \003(\0132\023.BartenderLevelInfo\022\030\n\020unl" +
-      "ock_item_list\030\003 \003(\r\022\033\n\023unlock_formula_li" +
-      "st\030\006 \003(\r\022,\n\020unlock_task_list\030\005 \003(\0132\022.Bar" +
-      "tenderTaskInfo\022\036\n\026is_develop_module_open" +
-      "\030\t \001(\010B\033\n\031emu.grasscutter.net.protob\006pro" +
-      "to3"
+      ".proto\"\340\001\n\033BartenderActivityDetailInfo\022." +
+      "\n\021unlock_level_list\030\n \003(\0132\023.BartenderLev" +
+      "elInfo\022\036\n\026is_develop_module_open\030\004 \001(\010\022\023" +
+      "\n\013HABKKALDAHF\030\006 \003(\r\022\031\n\021is_content_closed" +
+      "\030\005 \001(\010\022\023\n\013DPFPEEGPEKO\030\017 \003(\r\022,\n\020unlock_ta" +
+      "sk_list\030\001 \003(\0132\022.BartenderTaskInfoB\033\n\031emu" +
+      ".grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1744,7 +1737,7 @@ public final class BartenderActivityDetailInfoOuterClass {
     internal_static_BartenderActivityDetailInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BartenderActivityDetailInfo_descriptor,
-        new java.lang.String[] { "IsContentClosed", "UnlockLevelList", "UnlockItemList", "UnlockFormulaList", "UnlockTaskList", "IsDevelopModuleOpen", });
+        new java.lang.String[] { "UnlockLevelList", "IsDevelopModuleOpen", "HABKKALDAHF", "IsContentClosed", "DPFPEEGPEKO", "UnlockTaskList", });
     emu.grasscutter.net.proto.BartenderLevelInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.BartenderTaskInfoOuterClass.getDescriptor();
   }

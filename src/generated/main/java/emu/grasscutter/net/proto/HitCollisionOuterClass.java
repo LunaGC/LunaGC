@@ -326,7 +326,7 @@ public final class HitCollisionOuterClass {
       if (hitDir_ != null) {
         output.writeMessage(4, getHitDir());
       }
-      if (hitColliderType_ != emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType.HIT_COLLIDER_TYPE_INVALID.getNumber()) {
+      if (hitColliderType_ != emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType.HIT_COLLIDER_INVALID.getNumber()) {
         output.writeEnum(9, hitColliderType_);
       }
       if (hitBoxIndex_ != 0) {
@@ -355,7 +355,7 @@ public final class HitCollisionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getHitDir());
       }
-      if (hitColliderType_ != emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType.HIT_COLLIDER_TYPE_INVALID.getNumber()) {
+      if (hitColliderType_ != emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType.HIT_COLLIDER_INVALID.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, hitColliderType_);
       }

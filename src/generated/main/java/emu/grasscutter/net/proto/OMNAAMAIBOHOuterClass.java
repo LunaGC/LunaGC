@@ -69,63 +69,6 @@ public final class OMNAAMAIBOHOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private OMNAAMAIBOH(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 16: {
-
-              isFinished_ = input.readBool();
-              break;
-            }
-            case 32: {
-
-              isOpen_ = input.readBool();
-              break;
-            }
-            case 40: {
-
-              levelId_ = input.readUInt32();
-              break;
-            }
-            case 96: {
-
-              stageId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.OMNAAMAIBOHOuterClass.internal_static_OMNAAMAIBOH_descriptor;
@@ -140,7 +83,7 @@ public final class OMNAAMAIBOHOuterClass {
     }
 
     public static final int ISFINISHED_FIELD_NUMBER = 2;
-    private boolean isFinished_;
+    private boolean isFinished_ = false;
     /**
      * <code>bool isFinished = 2;</code>
      * @return The isFinished.
@@ -151,7 +94,7 @@ public final class OMNAAMAIBOHOuterClass {
     }
 
     public static final int ISOPEN_FIELD_NUMBER = 4;
-    private boolean isOpen_;
+    private boolean isOpen_ = false;
     /**
      * <code>bool isOpen = 4;</code>
      * @return The isOpen.
@@ -162,7 +105,7 @@ public final class OMNAAMAIBOHOuterClass {
     }
 
     public static final int STAGEID_FIELD_NUMBER = 12;
-    private int stageId_;
+    private int stageId_ = 0;
     /**
      * <code>uint32 stageId = 12;</code>
      * @return The stageId.
@@ -173,7 +116,7 @@ public final class OMNAAMAIBOHOuterClass {
     }
 
     public static final int LEVELID_FIELD_NUMBER = 5;
-    private int levelId_;
+    private int levelId_ = 0;
     /**
      * <code>uint32 levelId = 5;</code>
      * @return The levelId.
@@ -209,7 +152,7 @@ public final class OMNAAMAIBOHOuterClass {
       if (stageId_ != 0) {
         output.writeUInt32(12, stageId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -234,7 +177,7 @@ public final class OMNAAMAIBOHOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(12, stageId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -257,7 +200,7 @@ public final class OMNAAMAIBOHOuterClass {
           != other.getStageId()) return false;
       if (getLevelId()
           != other.getLevelId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -278,7 +221,7 @@ public final class OMNAAMAIBOHOuterClass {
       hash = (53 * hash) + getStageId();
       hash = (37 * hash) + LEVELID_FIELD_NUMBER;
       hash = (53 * hash) + getLevelId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -395,30 +338,22 @@ public final class OMNAAMAIBOHOuterClass {
 
       // Construct using emu.grasscutter.net.proto.OMNAAMAIBOHOuterClass.OMNAAMAIBOH.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         isFinished_ = false;
-
         isOpen_ = false;
-
         stageId_ = 0;
-
         levelId_ = 0;
-
         return this;
       }
 
@@ -445,12 +380,25 @@ public final class OMNAAMAIBOHOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.OMNAAMAIBOHOuterClass.OMNAAMAIBOH buildPartial() {
         emu.grasscutter.net.proto.OMNAAMAIBOHOuterClass.OMNAAMAIBOH result = new emu.grasscutter.net.proto.OMNAAMAIBOHOuterClass.OMNAAMAIBOH(this);
-        result.isFinished_ = isFinished_;
-        result.isOpen_ = isOpen_;
-        result.stageId_ = stageId_;
-        result.levelId_ = levelId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.OMNAAMAIBOHOuterClass.OMNAAMAIBOH result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.isFinished_ = isFinished_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.isOpen_ = isOpen_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.stageId_ = stageId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.levelId_ = levelId_;
+        }
       }
 
       @java.lang.Override
@@ -509,7 +457,7 @@ public final class OMNAAMAIBOHOuterClass {
         if (other.getLevelId() != 0) {
           setLevelId(other.getLevelId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -524,19 +472,53 @@ public final class OMNAAMAIBOHOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.OMNAAMAIBOHOuterClass.OMNAAMAIBOH parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                isFinished_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 16
+              case 32: {
+                isOpen_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 32
+              case 40: {
+                levelId_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 40
+              case 96: {
+                stageId_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 96
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.OMNAAMAIBOHOuterClass.OMNAAMAIBOH) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private boolean isFinished_ ;
       /**
@@ -555,6 +537,7 @@ public final class OMNAAMAIBOHOuterClass {
       public Builder setIsFinished(boolean value) {
         
         isFinished_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -563,7 +546,7 @@ public final class OMNAAMAIBOHOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsFinished() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         isFinished_ = false;
         onChanged();
         return this;
@@ -586,6 +569,7 @@ public final class OMNAAMAIBOHOuterClass {
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -594,7 +578,7 @@ public final class OMNAAMAIBOHOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         isOpen_ = false;
         onChanged();
         return this;
@@ -617,6 +601,7 @@ public final class OMNAAMAIBOHOuterClass {
       public Builder setStageId(int value) {
         
         stageId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -625,7 +610,7 @@ public final class OMNAAMAIBOHOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStageId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         stageId_ = 0;
         onChanged();
         return this;
@@ -648,6 +633,7 @@ public final class OMNAAMAIBOHOuterClass {
       public Builder setLevelId(int value) {
         
         levelId_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -656,7 +642,7 @@ public final class OMNAAMAIBOHOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLevelId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         levelId_ = 0;
         onChanged();
         return this;
@@ -694,7 +680,18 @@ public final class OMNAAMAIBOHOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new OMNAAMAIBOH(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

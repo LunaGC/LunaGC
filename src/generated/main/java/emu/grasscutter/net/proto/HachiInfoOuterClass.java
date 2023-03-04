@@ -41,14 +41,14 @@ public final class HachiInfoOuterClass {
     /**
      * <code>map&lt;uint32, .HachiStageInfo&gt; stageMap = 9;</code>
      */
-
-    emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo getStageMapOrDefault(
+    /* nullable */
+emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo getStageMapOrDefault(
         int key,
-        emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo defaultValue);
+        /* nullable */
+emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo defaultValue);
     /**
      * <code>map&lt;uint32, .HachiStageInfo&gt; stageMap = 9;</code>
      */
-
     emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo getStageMapOrThrow(
         int key);
   }
@@ -78,57 +78,6 @@ public final class HachiInfoOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private HachiInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 74: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                stageMap_ = com.google.protobuf.MapField.newMapField(
-                    StageMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo>
-              stageMap__ = input.readMessage(
-                  StageMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              stageMap_.getMutableMap().put(
-                  stageMap__.getKey(), stageMap__.getValue());
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -167,6 +116,7 @@ public final class HachiInfoOuterClass {
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo> stageMap_;
     private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo>
@@ -177,14 +127,12 @@ public final class HachiInfoOuterClass {
       }
       return stageMap_;
     }
-
     public int getStageMapCount() {
       return internalGetStageMap().getMap().size();
     }
     /**
      * <code>map&lt;uint32, .HachiStageInfo&gt; stageMap = 9;</code>
      */
-
     @java.lang.Override
     public boolean containsStageMap(
         int key) {
@@ -203,7 +151,6 @@ public final class HachiInfoOuterClass {
      * <code>map&lt;uint32, .HachiStageInfo&gt; stageMap = 9;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo> getStageMapMap() {
       return internalGetStageMap().getMap();
     }
@@ -211,10 +158,11 @@ public final class HachiInfoOuterClass {
      * <code>map&lt;uint32, .HachiStageInfo&gt; stageMap = 9;</code>
      */
     @java.lang.Override
-
-    public emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo getStageMapOrDefault(
+    public /* nullable */
+emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo getStageMapOrDefault(
         int key,
-        emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo defaultValue) {
+        /* nullable */
+emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo defaultValue) {
       
       java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo> map =
           internalGetStageMap().getMap();
@@ -224,7 +172,6 @@ public final class HachiInfoOuterClass {
      * <code>map&lt;uint32, .HachiStageInfo&gt; stageMap = 9;</code>
      */
     @java.lang.Override
-
     public emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo getStageMapOrThrow(
         int key) {
       
@@ -256,7 +203,7 @@ public final class HachiInfoOuterClass {
           internalGetStageMap(),
           StageMapDefaultEntryHolder.defaultEntry,
           9);
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -275,7 +222,7 @@ public final class HachiInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(9, stageMap__);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -292,7 +239,7 @@ public final class HachiInfoOuterClass {
 
       if (!internalGetStageMap().equals(
           other.internalGetStageMap())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -307,7 +254,7 @@ public final class HachiInfoOuterClass {
         hash = (37 * hash) + STAGEMAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetStageMap().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -446,22 +393,18 @@ public final class HachiInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.HachiInfoOuterClass.HachiInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         internalGetMutableStageMap().clear();
         return this;
       }
@@ -489,11 +432,17 @@ public final class HachiInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.HachiInfoOuterClass.HachiInfo buildPartial() {
         emu.grasscutter.net.proto.HachiInfoOuterClass.HachiInfo result = new emu.grasscutter.net.proto.HachiInfoOuterClass.HachiInfo(this);
-        int from_bitField0_ = bitField0_;
-        result.stageMap_ = internalGetStageMap();
-        result.stageMap_.makeImmutable();
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.HachiInfoOuterClass.HachiInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stageMap_ = internalGetStageMap();
+          result.stageMap_.makeImmutable();
+        }
       }
 
       @java.lang.Override
@@ -542,7 +491,8 @@ public final class HachiInfoOuterClass {
         if (other == emu.grasscutter.net.proto.HachiInfoOuterClass.HachiInfo.getDefaultInstance()) return this;
         internalGetMutableStageMap().mergeFrom(
             other.internalGetStageMap());
-        this.mergeUnknownFields(other.unknownFields);
+        bitField0_ |= 0x00000001;
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -557,17 +507,39 @@ public final class HachiInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.HachiInfoOuterClass.HachiInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 74: {
+                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo>
+                stageMap__ = input.readMessage(
+                    StageMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableStageMap().getMutableMap().put(
+                    stageMap__.getKey(), stageMap__.getValue());
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.HachiInfoOuterClass.HachiInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -575,7 +547,7 @@ public final class HachiInfoOuterClass {
       private com.google.protobuf.MapField<
           java.lang.Integer, emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo> stageMap_;
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo>
-      internalGetStageMap() {
+          internalGetStageMap() {
         if (stageMap_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               StageMapDefaultEntryHolder.defaultEntry);
@@ -583,8 +555,7 @@ public final class HachiInfoOuterClass {
         return stageMap_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo>
-      internalGetMutableStageMap() {
-        onChanged();;
+          internalGetMutableStageMap() {
         if (stageMap_ == null) {
           stageMap_ = com.google.protobuf.MapField.newMapField(
               StageMapDefaultEntryHolder.defaultEntry);
@@ -592,16 +563,16 @@ public final class HachiInfoOuterClass {
         if (!stageMap_.isMutable()) {
           stageMap_ = stageMap_.copy();
         }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return stageMap_;
       }
-
       public int getStageMapCount() {
         return internalGetStageMap().getMap().size();
       }
       /**
        * <code>map&lt;uint32, .HachiStageInfo&gt; stageMap = 9;</code>
        */
-
       @java.lang.Override
       public boolean containsStageMap(
           int key) {
@@ -620,7 +591,6 @@ public final class HachiInfoOuterClass {
        * <code>map&lt;uint32, .HachiStageInfo&gt; stageMap = 9;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo> getStageMapMap() {
         return internalGetStageMap().getMap();
       }
@@ -628,10 +598,11 @@ public final class HachiInfoOuterClass {
        * <code>map&lt;uint32, .HachiStageInfo&gt; stageMap = 9;</code>
        */
       @java.lang.Override
-
-      public emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo getStageMapOrDefault(
+      public /* nullable */
+emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo getStageMapOrDefault(
           int key,
-          emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo defaultValue) {
+          /* nullable */
+emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo defaultValue) {
         
         java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo> map =
             internalGetStageMap().getMap();
@@ -641,7 +612,6 @@ public final class HachiInfoOuterClass {
        * <code>map&lt;uint32, .HachiStageInfo&gt; stageMap = 9;</code>
        */
       @java.lang.Override
-
       public emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo getStageMapOrThrow(
           int key) {
         
@@ -652,8 +622,8 @@ public final class HachiInfoOuterClass {
         }
         return map.get(key);
       }
-
       public Builder clearStageMap() {
+        bitField0_ = (bitField0_ & ~0x00000001);
         internalGetMutableStageMap().getMutableMap()
             .clear();
         return this;
@@ -661,7 +631,6 @@ public final class HachiInfoOuterClass {
       /**
        * <code>map&lt;uint32, .HachiStageInfo&gt; stageMap = 9;</code>
        */
-
       public Builder removeStageMap(
           int key) {
         
@@ -674,7 +643,8 @@ public final class HachiInfoOuterClass {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo>
-      getMutableStageMap() {
+          getMutableStageMap() {
+        bitField0_ |= 0x00000001;
         return internalGetMutableStageMap().getMutableMap();
       }
       /**
@@ -684,19 +654,20 @@ public final class HachiInfoOuterClass {
           int key,
           emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo value) {
         
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableStageMap().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
        * <code>map&lt;uint32, .HachiStageInfo&gt; stageMap = 9;</code>
        */
-
       public Builder putAllStageMap(
           java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo> values) {
         internalGetMutableStageMap().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000001;
         return this;
       }
       @java.lang.Override
@@ -732,7 +703,18 @@ public final class HachiInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new HachiInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

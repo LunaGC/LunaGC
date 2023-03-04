@@ -19,38 +19,38 @@ public final class GetScenePointRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 lockedPointList = 7;</code>
-     * @return A list containing the lockedPointList.
+     * <code>repeated uint32 LHGAOJELAMA = 3;</code>
+     * @return A list containing the lHGAOJELAMA.
      */
-    java.util.List<java.lang.Integer> getLockedPointListList();
+    java.util.List<java.lang.Integer> getLHGAOJELAMAList();
     /**
-     * <code>repeated uint32 lockedPointList = 7;</code>
-     * @return The count of lockedPointList.
+     * <code>repeated uint32 LHGAOJELAMA = 3;</code>
+     * @return The count of lHGAOJELAMA.
      */
-    int getLockedPointListCount();
+    int getLHGAOJELAMACount();
     /**
-     * <code>repeated uint32 lockedPointList = 7;</code>
+     * <code>repeated uint32 LHGAOJELAMA = 3;</code>
      * @param index The index of the element to return.
-     * @return The lockedPointList at the given index.
+     * @return The lHGAOJELAMA at the given index.
      */
-    int getLockedPointList(int index);
+    int getLHGAOJELAMA(int index);
 
     /**
-     * <code>repeated uint32 notInteractDungeonEntryList = 10;</code>
-     * @return A list containing the notInteractDungeonEntryList.
+     * <code>repeated uint32 FKDLJELPPOJ = 13;</code>
+     * @return A list containing the fKDLJELPPOJ.
      */
-    java.util.List<java.lang.Integer> getNotInteractDungeonEntryListList();
+    java.util.List<java.lang.Integer> getFKDLJELPPOJList();
     /**
-     * <code>repeated uint32 notInteractDungeonEntryList = 10;</code>
-     * @return The count of notInteractDungeonEntryList.
+     * <code>repeated uint32 FKDLJELPPOJ = 13;</code>
+     * @return The count of fKDLJELPPOJ.
      */
-    int getNotInteractDungeonEntryListCount();
+    int getFKDLJELPPOJCount();
     /**
-     * <code>repeated uint32 notInteractDungeonEntryList = 10;</code>
+     * <code>repeated uint32 FKDLJELPPOJ = 13;</code>
      * @param index The index of the element to return.
-     * @return The notInteractDungeonEntryList at the given index.
+     * @return The fKDLJELPPOJ at the given index.
      */
-    int getNotInteractDungeonEntryList(int index);
+    int getFKDLJELPPOJ(int index);
 
     /**
      * <code>int32 retcode = 2;</code>
@@ -59,137 +59,148 @@ public final class GetScenePointRspOuterClass {
     int getRetcode();
 
     /**
-     * <code>repeated uint32 toBeExploreDungeonEntryList = 13;</code>
-     * @return A list containing the toBeExploreDungeonEntryList.
-     */
-    java.util.List<java.lang.Integer> getToBeExploreDungeonEntryListList();
-    /**
-     * <code>repeated uint32 toBeExploreDungeonEntryList = 13;</code>
-     * @return The count of toBeExploreDungeonEntryList.
-     */
-    int getToBeExploreDungeonEntryListCount();
-    /**
-     * <code>repeated uint32 toBeExploreDungeonEntryList = 13;</code>
-     * @param index The index of the element to return.
-     * @return The toBeExploreDungeonEntryList at the given index.
-     */
-    int getToBeExploreDungeonEntryList(int index);
-
-    /**
-     * <code>uint32 belongUid = 6;</code>
-     * @return The belongUid.
-     */
-    int getBelongUid();
-
-    /**
-     * <code>repeated uint32 hidePointList = 3;</code>
+     * <code>repeated uint32 hide_point_list = 12;</code>
      * @return A list containing the hidePointList.
      */
     java.util.List<java.lang.Integer> getHidePointListList();
     /**
-     * <code>repeated uint32 hidePointList = 3;</code>
+     * <code>repeated uint32 hide_point_list = 12;</code>
      * @return The count of hidePointList.
      */
     int getHidePointListCount();
     /**
-     * <code>repeated uint32 hidePointList = 3;</code>
+     * <code>repeated uint32 hide_point_list = 12;</code>
      * @param index The index of the element to return.
      * @return The hidePointList at the given index.
      */
     int getHidePointList(int index);
 
     /**
-     * <code>repeated uint32 unlockAreaList = 9;</code>
+     * <code>repeated uint32 LLLIACPHNEH = 7;</code>
+     * @return A list containing the lLLIACPHNEH.
+     */
+    java.util.List<java.lang.Integer> getLLLIACPHNEHList();
+    /**
+     * <code>repeated uint32 LLLIACPHNEH = 7;</code>
+     * @return The count of lLLIACPHNEH.
+     */
+    int getLLLIACPHNEHCount();
+    /**
+     * <code>repeated uint32 LLLIACPHNEH = 7;</code>
+     * @param index The index of the element to return.
+     * @return The lLLIACPHNEH at the given index.
+     */
+    int getLLLIACPHNEH(int index);
+
+    /**
+     * <code>uint32 belong_uid = 8;</code>
+     * @return The belongUid.
+     */
+    int getBelongUid();
+
+    /**
+     * <code>repeated uint32 KBGDANIJLFK = 11;</code>
+     * @return A list containing the kBGDANIJLFK.
+     */
+    java.util.List<java.lang.Integer> getKBGDANIJLFKList();
+    /**
+     * <code>repeated uint32 KBGDANIJLFK = 11;</code>
+     * @return The count of kBGDANIJLFK.
+     */
+    int getKBGDANIJLFKCount();
+    /**
+     * <code>repeated uint32 KBGDANIJLFK = 11;</code>
+     * @param index The index of the element to return.
+     * @return The kBGDANIJLFK at the given index.
+     */
+    int getKBGDANIJLFK(int index);
+
+    /**
+     * <code>repeated uint32 unlockAreaList = 14;</code>
      * @return A list containing the unlockAreaList.
      */
     java.util.List<java.lang.Integer> getUnlockAreaListList();
     /**
-     * <code>repeated uint32 unlockAreaList = 9;</code>
+     * <code>repeated uint32 unlockAreaList = 14;</code>
      * @return The count of unlockAreaList.
      */
     int getUnlockAreaListCount();
     /**
-     * <code>repeated uint32 unlockAreaList = 9;</code>
+     * <code>repeated uint32 unlockAreaList = 14;</code>
      * @param index The index of the element to return.
      * @return The unlockAreaList at the given index.
      */
     int getUnlockAreaList(int index);
 
     /**
-     * <code>repeated uint32 unlockedPointList = 12;</code>
-     * @return A list containing the unlockedPointList.
+     * <code>bool PGBKOMBKBKG = 5;</code>
+     * @return The pGBKOMBKBKG.
      */
-    java.util.List<java.lang.Integer> getUnlockedPointListList();
-    /**
-     * <code>repeated uint32 unlockedPointList = 12;</code>
-     * @return The count of unlockedPointList.
-     */
-    int getUnlockedPointListCount();
-    /**
-     * <code>repeated uint32 unlockedPointList = 12;</code>
-     * @param index The index of the element to return.
-     * @return The unlockedPointList at the given index.
-     */
-    int getUnlockedPointList(int index);
+    boolean getPGBKOMBKBKG();
 
     /**
-     * <code>repeated uint32 notExploredDungeonEntryList = 4;</code>
-     * @return A list containing the notExploredDungeonEntryList.
-     */
-    java.util.List<java.lang.Integer> getNotExploredDungeonEntryListList();
-    /**
-     * <code>repeated uint32 notExploredDungeonEntryList = 4;</code>
-     * @return The count of notExploredDungeonEntryList.
-     */
-    int getNotExploredDungeonEntryListCount();
-    /**
-     * <code>repeated uint32 notExploredDungeonEntryList = 4;</code>
-     * @param index The index of the element to return.
-     * @return The notExploredDungeonEntryList at the given index.
-     */
-    int getNotExploredDungeonEntryList(int index);
-
-    /**
-     * <code>repeated uint32 unhidePointList = 5;</code>
+     * <code>repeated uint32 unhidePointList = 10;</code>
      * @return A list containing the unhidePointList.
      */
     java.util.List<java.lang.Integer> getUnhidePointListList();
     /**
-     * <code>repeated uint32 unhidePointList = 5;</code>
+     * <code>repeated uint32 unhidePointList = 10;</code>
      * @return The count of unhidePointList.
      */
     int getUnhidePointListCount();
     /**
-     * <code>repeated uint32 unhidePointList = 5;</code>
+     * <code>repeated uint32 unhidePointList = 10;</code>
      * @param index The index of the element to return.
      * @return The unhidePointList at the given index.
      */
     int getUnhidePointList(int index);
 
     /**
-     * <code>uint32 sceneId = 14;</code>
+     * <code>repeated uint32 HJLALADBFAC = 15;</code>
+     * @return A list containing the hJLALADBFAC.
+     */
+    java.util.List<java.lang.Integer> getHJLALADBFACList();
+    /**
+     * <code>repeated uint32 HJLALADBFAC = 15;</code>
+     * @return The count of hJLALADBFAC.
+     */
+    int getHJLALADBFACCount();
+    /**
+     * <code>repeated uint32 HJLALADBFAC = 15;</code>
+     * @param index The index of the element to return.
+     * @return The hJLALADBFAC at the given index.
+     */
+    int getHJLALADBFAC(int index);
+
+    /**
+     * <code>uint32 scene_id = 6;</code>
      * @return The sceneId.
      */
     int getSceneId();
 
     /**
-     * <code>repeated uint32 groupUnlimitPointList = 1;</code>
-     * @return A list containing the groupUnlimitPointList.
+     * <code>repeated uint32 unlocked_point_list = 4;</code>
+     * @return A list containing the unlockedPointList.
      */
-    java.util.List<java.lang.Integer> getGroupUnlimitPointListList();
+    java.util.List<java.lang.Integer> getUnlockedPointListList();
     /**
-     * <code>repeated uint32 groupUnlimitPointList = 1;</code>
-     * @return The count of groupUnlimitPointList.
+     * <code>repeated uint32 unlocked_point_list = 4;</code>
+     * @return The count of unlockedPointList.
      */
-    int getGroupUnlimitPointListCount();
+    int getUnlockedPointListCount();
     /**
-     * <code>repeated uint32 groupUnlimitPointList = 1;</code>
+     * <code>repeated uint32 unlocked_point_list = 4;</code>
      * @param index The index of the element to return.
-     * @return The groupUnlimitPointList at the given index.
+     * @return The unlockedPointList at the given index.
      */
-    int getGroupUnlimitPointList(int index);
+    int getUnlockedPointList(int index);
   }
   /**
+   * <pre>
+   * Name: ODCLFBBMOFA
+   * CmdId: 229
+   * </pre>
+   *
    * Protobuf type {@code GetScenePointRsp}
    */
   public static final class GetScenePointRsp extends
@@ -202,15 +213,15 @@ public final class GetScenePointRspOuterClass {
       super(builder);
     }
     private GetScenePointRsp() {
-      lockedPointList_ = emptyIntList();
-      notInteractDungeonEntryList_ = emptyIntList();
-      toBeExploreDungeonEntryList_ = emptyIntList();
+      lHGAOJELAMA_ = emptyIntList();
+      fKDLJELPPOJ_ = emptyIntList();
       hidePointList_ = emptyIntList();
+      lLLIACPHNEH_ = emptyIntList();
+      kBGDANIJLFK_ = emptyIntList();
       unlockAreaList_ = emptyIntList();
-      unlockedPointList_ = emptyIntList();
-      notExploredDungeonEntryList_ = emptyIntList();
       unhidePointList_ = emptyIntList();
-      groupUnlimitPointList_ = emptyIntList();
+      hJLALADBFAC_ = emptyIntList();
+      unlockedPointList_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -244,177 +255,46 @@ public final class GetScenePointRspOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
-              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
-                groupUnlimitPointList_ = newIntList();
-                mutable_bitField0_ |= 0x00000100;
-              }
-              groupUnlimitPointList_.addInt(input.readUInt32());
-              break;
-            }
-            case 10: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000100) != 0) && input.getBytesUntilLimit() > 0) {
-                groupUnlimitPointList_ = newIntList();
-                mutable_bitField0_ |= 0x00000100;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                groupUnlimitPointList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
             case 16: {
 
               retcode_ = input.readInt32();
               break;
             }
             case 24: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                hidePointList_ = newIntList();
-                mutable_bitField0_ |= 0x00000008;
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                lHGAOJELAMA_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
               }
-              hidePointList_.addInt(input.readUInt32());
+              lHGAOJELAMA_.addInt(input.readUInt32());
               break;
             }
             case 26: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
-                hidePointList_ = newIntList();
-                mutable_bitField0_ |= 0x00000008;
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                lHGAOJELAMA_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
               }
               while (input.getBytesUntilLimit() > 0) {
-                hidePointList_.addInt(input.readUInt32());
+                lHGAOJELAMA_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
               break;
             }
             case 32: {
-              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
-                notExploredDungeonEntryList_ = newIntList();
-                mutable_bitField0_ |= 0x00000040;
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+                unlockedPointList_ = newIntList();
+                mutable_bitField0_ |= 0x00000100;
               }
-              notExploredDungeonEntryList_.addInt(input.readUInt32());
+              unlockedPointList_.addInt(input.readUInt32());
               break;
             }
             case 34: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000040) != 0) && input.getBytesUntilLimit() > 0) {
-                notExploredDungeonEntryList_ = newIntList();
-                mutable_bitField0_ |= 0x00000040;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                notExploredDungeonEntryList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 40: {
-              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
-                unhidePointList_ = newIntList();
-                mutable_bitField0_ |= 0x00000080;
-              }
-              unhidePointList_.addInt(input.readUInt32());
-              break;
-            }
-            case 42: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000080) != 0) && input.getBytesUntilLimit() > 0) {
-                unhidePointList_ = newIntList();
-                mutable_bitField0_ |= 0x00000080;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unhidePointList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 48: {
-
-              belongUid_ = input.readUInt32();
-              break;
-            }
-            case 56: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                lockedPointList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              lockedPointList_.addInt(input.readUInt32());
-              break;
-            }
-            case 58: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                lockedPointList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                lockedPointList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 72: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                unlockAreaList_ = newIntList();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              unlockAreaList_.addInt(input.readUInt32());
-              break;
-            }
-            case 74: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000010) != 0) && input.getBytesUntilLimit() > 0) {
-                unlockAreaList_ = newIntList();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unlockAreaList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 80: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                notInteractDungeonEntryList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              notInteractDungeonEntryList_.addInt(input.readUInt32());
-              break;
-            }
-            case 82: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                notInteractDungeonEntryList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                notInteractDungeonEntryList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 96: {
-              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000100) != 0) && input.getBytesUntilLimit() > 0) {
                 unlockedPointList_ = newIntList();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              unlockedPointList_.addInt(input.readUInt32());
-              break;
-            }
-            case 98: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000020) != 0) && input.getBytesUntilLimit() > 0) {
-                unlockedPointList_ = newIntList();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000100;
               }
               while (input.getBytesUntilLimit() > 0) {
                 unlockedPointList_.addInt(input.readUInt32());
@@ -422,30 +302,166 @@ public final class GetScenePointRspOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 104: {
+            case 40: {
+
+              pGBKOMBKBKG_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              sceneId_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                lLLIACPHNEH_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              lLLIACPHNEH_.addInt(input.readUInt32());
+              break;
+            }
+            case 58: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+                lLLIACPHNEH_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                lLLIACPHNEH_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 64: {
+
+              belongUid_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+                unhidePointList_ = newIntList();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              unhidePointList_.addInt(input.readUInt32());
+              break;
+            }
+            case 82: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000040) != 0) && input.getBytesUntilLimit() > 0) {
+                unhidePointList_ = newIntList();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                unhidePointList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 88: {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                kBGDANIJLFK_ = newIntList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              kBGDANIJLFK_.addInt(input.readUInt32());
+              break;
+            }
+            case 90: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000010) != 0) && input.getBytesUntilLimit() > 0) {
+                kBGDANIJLFK_ = newIntList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                kBGDANIJLFK_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 96: {
               if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                toBeExploreDungeonEntryList_ = newIntList();
+                hidePointList_ = newIntList();
                 mutable_bitField0_ |= 0x00000004;
               }
-              toBeExploreDungeonEntryList_.addInt(input.readUInt32());
+              hidePointList_.addInt(input.readUInt32());
+              break;
+            }
+            case 98: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                hidePointList_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                hidePointList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 104: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                fKDLJELPPOJ_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              fKDLJELPPOJ_.addInt(input.readUInt32());
               break;
             }
             case 106: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
-                toBeExploreDungeonEntryList_ = newIntList();
-                mutable_bitField0_ |= 0x00000004;
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                fKDLJELPPOJ_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
               }
               while (input.getBytesUntilLimit() > 0) {
-                toBeExploreDungeonEntryList_.addInt(input.readUInt32());
+                fKDLJELPPOJ_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
               break;
             }
             case 112: {
-
-              sceneId_ = input.readUInt32();
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+                unlockAreaList_ = newIntList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              unlockAreaList_.addInt(input.readUInt32());
+              break;
+            }
+            case 114: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000020) != 0) && input.getBytesUntilLimit() > 0) {
+                unlockAreaList_ = newIntList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                unlockAreaList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 120: {
+              if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+                hJLALADBFAC_ = newIntList();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              hJLALADBFAC_.addInt(input.readUInt32());
+              break;
+            }
+            case 122: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000080) != 0) && input.getBytesUntilLimit() > 0) {
+                hJLALADBFAC_ = newIntList();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                hJLALADBFAC_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
               break;
             }
             default: {
@@ -463,32 +479,32 @@ public final class GetScenePointRspOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000100) != 0)) {
-          groupUnlimitPointList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          hidePointList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000040) != 0)) {
-          notExploredDungeonEntryList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000080) != 0)) {
-          unhidePointList_.makeImmutable(); // C
-        }
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          lockedPointList_.makeImmutable(); // C
+          lHGAOJELAMA_.makeImmutable(); // C
         }
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
-          unlockAreaList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          notInteractDungeonEntryList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000020) != 0)) {
+        if (((mutable_bitField0_ & 0x00000100) != 0)) {
           unlockedPointList_.makeImmutable(); // C
         }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          lLLIACPHNEH_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
+          unhidePointList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          kBGDANIJLFK_.makeImmutable(); // C
+        }
         if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          toBeExploreDungeonEntryList_.makeImmutable(); // C
+          hidePointList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          fKDLJELPPOJ_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
+          unlockAreaList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000080) != 0)) {
+          hJLALADBFAC_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -507,192 +523,61 @@ public final class GetScenePointRspOuterClass {
               emu.grasscutter.net.proto.GetScenePointRspOuterClass.GetScenePointRsp.class, emu.grasscutter.net.proto.GetScenePointRspOuterClass.GetScenePointRsp.Builder.class);
     }
 
+    public static final int LHGAOJELAMA_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.IntList lHGAOJELAMA_;
     /**
-     * Protobuf enum {@code GetScenePointRsp.FJBIDFAAFJK}
-     */
-    public enum FJBIDFAAFJK
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>NONE = 0;</code>
-       */
-      NONE(0, 0),
-      /**
-       * <code>PEPPOHPHJOJ = 213;</code>
-       */
-      PEPPOHPHJOJ(1, 213),
-      /**
-       * <code>NNBKOLMPOEA = 1;</code>
-       */
-      NNBKOLMPOEA(3, 1),
-      UNRECOGNIZED(-1, -1),
-      ;
-
-      /**
-       * <code>DCDNILFDFLB = 0;</code>
-       */
-      public static final FJBIDFAAFJK DCDNILFDFLB = NONE;
-      /**
-       * <code>NONE = 0;</code>
-       */
-      public static final int NONE_VALUE = 0;
-      /**
-       * <code>PEPPOHPHJOJ = 213;</code>
-       */
-      public static final int PEPPOHPHJOJ_VALUE = 213;
-      /**
-       * <code>DCDNILFDFLB = 0;</code>
-       */
-      public static final int DCDNILFDFLB_VALUE = 0;
-      /**
-       * <code>NNBKOLMPOEA = 1;</code>
-       */
-      public static final int NNBKOLMPOEA_VALUE = 1;
-
-
-      public final int getNumber() {
-        if (index == -1) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static FJBIDFAAFJK valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static FJBIDFAAFJK forNumber(int value) {
-        switch (value) {
-          case 0: return NONE;
-          case 213: return PEPPOHPHJOJ;
-          case 1: return NNBKOLMPOEA;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<FJBIDFAAFJK>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          FJBIDFAAFJK> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<FJBIDFAAFJK>() {
-              public FJBIDFAAFJK findValueByNumber(int number) {
-                return FJBIDFAAFJK.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        if (index == -1) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return emu.grasscutter.net.proto.GetScenePointRspOuterClass.GetScenePointRsp.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final FJBIDFAAFJK[] VALUES = getStaticValuesArray();
-      private static FJBIDFAAFJK[] getStaticValuesArray() {
-        return new FJBIDFAAFJK[] {
-          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, 
-        };
-      }
-      public static FJBIDFAAFJK valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int index;
-      private final int value;
-
-      private FJBIDFAAFJK(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:GetScenePointRsp.FJBIDFAAFJK)
-    }
-
-    public static final int LOCKEDPOINTLIST_FIELD_NUMBER = 7;
-    private com.google.protobuf.Internal.IntList lockedPointList_;
-    /**
-     * <code>repeated uint32 lockedPointList = 7;</code>
-     * @return A list containing the lockedPointList.
+     * <code>repeated uint32 LHGAOJELAMA = 3;</code>
+     * @return A list containing the lHGAOJELAMA.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getLockedPointListList() {
-      return lockedPointList_;
+        getLHGAOJELAMAList() {
+      return lHGAOJELAMA_;
     }
     /**
-     * <code>repeated uint32 lockedPointList = 7;</code>
-     * @return The count of lockedPointList.
+     * <code>repeated uint32 LHGAOJELAMA = 3;</code>
+     * @return The count of lHGAOJELAMA.
      */
-    public int getLockedPointListCount() {
-      return lockedPointList_.size();
+    public int getLHGAOJELAMACount() {
+      return lHGAOJELAMA_.size();
     }
     /**
-     * <code>repeated uint32 lockedPointList = 7;</code>
+     * <code>repeated uint32 LHGAOJELAMA = 3;</code>
      * @param index The index of the element to return.
-     * @return The lockedPointList at the given index.
+     * @return The lHGAOJELAMA at the given index.
      */
-    public int getLockedPointList(int index) {
-      return lockedPointList_.getInt(index);
+    public int getLHGAOJELAMA(int index) {
+      return lHGAOJELAMA_.getInt(index);
     }
-    private int lockedPointListMemoizedSerializedSize = -1;
+    private int lHGAOJELAMAMemoizedSerializedSize = -1;
 
-    public static final int NOTINTERACTDUNGEONENTRYLIST_FIELD_NUMBER = 10;
-    private com.google.protobuf.Internal.IntList notInteractDungeonEntryList_;
+    public static final int FKDLJELPPOJ_FIELD_NUMBER = 13;
+    private com.google.protobuf.Internal.IntList fKDLJELPPOJ_;
     /**
-     * <code>repeated uint32 notInteractDungeonEntryList = 10;</code>
-     * @return A list containing the notInteractDungeonEntryList.
+     * <code>repeated uint32 FKDLJELPPOJ = 13;</code>
+     * @return A list containing the fKDLJELPPOJ.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getNotInteractDungeonEntryListList() {
-      return notInteractDungeonEntryList_;
+        getFKDLJELPPOJList() {
+      return fKDLJELPPOJ_;
     }
     /**
-     * <code>repeated uint32 notInteractDungeonEntryList = 10;</code>
-     * @return The count of notInteractDungeonEntryList.
+     * <code>repeated uint32 FKDLJELPPOJ = 13;</code>
+     * @return The count of fKDLJELPPOJ.
      */
-    public int getNotInteractDungeonEntryListCount() {
-      return notInteractDungeonEntryList_.size();
+    public int getFKDLJELPPOJCount() {
+      return fKDLJELPPOJ_.size();
     }
     /**
-     * <code>repeated uint32 notInteractDungeonEntryList = 10;</code>
+     * <code>repeated uint32 FKDLJELPPOJ = 13;</code>
      * @param index The index of the element to return.
-     * @return The notInteractDungeonEntryList at the given index.
+     * @return The fKDLJELPPOJ at the given index.
      */
-    public int getNotInteractDungeonEntryList(int index) {
-      return notInteractDungeonEntryList_.getInt(index);
+    public int getFKDLJELPPOJ(int index) {
+      return fKDLJELPPOJ_.getInt(index);
     }
-    private int notInteractDungeonEntryListMemoizedSerializedSize = -1;
+    private int fKDLJELPPOJMemoizedSerializedSize = -1;
 
     public static final int RETCODE_FIELD_NUMBER = 2;
     private int retcode_;
@@ -705,49 +590,10 @@ public final class GetScenePointRspOuterClass {
       return retcode_;
     }
 
-    public static final int TOBEEXPLOREDUNGEONENTRYLIST_FIELD_NUMBER = 13;
-    private com.google.protobuf.Internal.IntList toBeExploreDungeonEntryList_;
-    /**
-     * <code>repeated uint32 toBeExploreDungeonEntryList = 13;</code>
-     * @return A list containing the toBeExploreDungeonEntryList.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.Integer>
-        getToBeExploreDungeonEntryListList() {
-      return toBeExploreDungeonEntryList_;
-    }
-    /**
-     * <code>repeated uint32 toBeExploreDungeonEntryList = 13;</code>
-     * @return The count of toBeExploreDungeonEntryList.
-     */
-    public int getToBeExploreDungeonEntryListCount() {
-      return toBeExploreDungeonEntryList_.size();
-    }
-    /**
-     * <code>repeated uint32 toBeExploreDungeonEntryList = 13;</code>
-     * @param index The index of the element to return.
-     * @return The toBeExploreDungeonEntryList at the given index.
-     */
-    public int getToBeExploreDungeonEntryList(int index) {
-      return toBeExploreDungeonEntryList_.getInt(index);
-    }
-    private int toBeExploreDungeonEntryListMemoizedSerializedSize = -1;
-
-    public static final int BELONGUID_FIELD_NUMBER = 6;
-    private int belongUid_;
-    /**
-     * <code>uint32 belongUid = 6;</code>
-     * @return The belongUid.
-     */
-    @java.lang.Override
-    public int getBelongUid() {
-      return belongUid_;
-    }
-
-    public static final int HIDEPOINTLIST_FIELD_NUMBER = 3;
+    public static final int HIDE_POINT_LIST_FIELD_NUMBER = 12;
     private com.google.protobuf.Internal.IntList hidePointList_;
     /**
-     * <code>repeated uint32 hidePointList = 3;</code>
+     * <code>repeated uint32 hide_point_list = 12;</code>
      * @return A list containing the hidePointList.
      */
     @java.lang.Override
@@ -756,14 +602,14 @@ public final class GetScenePointRspOuterClass {
       return hidePointList_;
     }
     /**
-     * <code>repeated uint32 hidePointList = 3;</code>
+     * <code>repeated uint32 hide_point_list = 12;</code>
      * @return The count of hidePointList.
      */
     public int getHidePointListCount() {
       return hidePointList_.size();
     }
     /**
-     * <code>repeated uint32 hidePointList = 3;</code>
+     * <code>repeated uint32 hide_point_list = 12;</code>
      * @param index The index of the element to return.
      * @return The hidePointList at the given index.
      */
@@ -772,10 +618,77 @@ public final class GetScenePointRspOuterClass {
     }
     private int hidePointListMemoizedSerializedSize = -1;
 
-    public static final int UNLOCKAREALIST_FIELD_NUMBER = 9;
+    public static final int LLLIACPHNEH_FIELD_NUMBER = 7;
+    private com.google.protobuf.Internal.IntList lLLIACPHNEH_;
+    /**
+     * <code>repeated uint32 LLLIACPHNEH = 7;</code>
+     * @return A list containing the lLLIACPHNEH.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getLLLIACPHNEHList() {
+      return lLLIACPHNEH_;
+    }
+    /**
+     * <code>repeated uint32 LLLIACPHNEH = 7;</code>
+     * @return The count of lLLIACPHNEH.
+     */
+    public int getLLLIACPHNEHCount() {
+      return lLLIACPHNEH_.size();
+    }
+    /**
+     * <code>repeated uint32 LLLIACPHNEH = 7;</code>
+     * @param index The index of the element to return.
+     * @return The lLLIACPHNEH at the given index.
+     */
+    public int getLLLIACPHNEH(int index) {
+      return lLLIACPHNEH_.getInt(index);
+    }
+    private int lLLIACPHNEHMemoizedSerializedSize = -1;
+
+    public static final int BELONG_UID_FIELD_NUMBER = 8;
+    private int belongUid_;
+    /**
+     * <code>uint32 belong_uid = 8;</code>
+     * @return The belongUid.
+     */
+    @java.lang.Override
+    public int getBelongUid() {
+      return belongUid_;
+    }
+
+    public static final int KBGDANIJLFK_FIELD_NUMBER = 11;
+    private com.google.protobuf.Internal.IntList kBGDANIJLFK_;
+    /**
+     * <code>repeated uint32 KBGDANIJLFK = 11;</code>
+     * @return A list containing the kBGDANIJLFK.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getKBGDANIJLFKList() {
+      return kBGDANIJLFK_;
+    }
+    /**
+     * <code>repeated uint32 KBGDANIJLFK = 11;</code>
+     * @return The count of kBGDANIJLFK.
+     */
+    public int getKBGDANIJLFKCount() {
+      return kBGDANIJLFK_.size();
+    }
+    /**
+     * <code>repeated uint32 KBGDANIJLFK = 11;</code>
+     * @param index The index of the element to return.
+     * @return The kBGDANIJLFK at the given index.
+     */
+    public int getKBGDANIJLFK(int index) {
+      return kBGDANIJLFK_.getInt(index);
+    }
+    private int kBGDANIJLFKMemoizedSerializedSize = -1;
+
+    public static final int UNLOCKAREALIST_FIELD_NUMBER = 14;
     private com.google.protobuf.Internal.IntList unlockAreaList_;
     /**
-     * <code>repeated uint32 unlockAreaList = 9;</code>
+     * <code>repeated uint32 unlockAreaList = 14;</code>
      * @return A list containing the unlockAreaList.
      */
     @java.lang.Override
@@ -784,14 +697,14 @@ public final class GetScenePointRspOuterClass {
       return unlockAreaList_;
     }
     /**
-     * <code>repeated uint32 unlockAreaList = 9;</code>
+     * <code>repeated uint32 unlockAreaList = 14;</code>
      * @return The count of unlockAreaList.
      */
     public int getUnlockAreaListCount() {
       return unlockAreaList_.size();
     }
     /**
-     * <code>repeated uint32 unlockAreaList = 9;</code>
+     * <code>repeated uint32 unlockAreaList = 14;</code>
      * @param index The index of the element to return.
      * @return The unlockAreaList at the given index.
      */
@@ -800,66 +713,21 @@ public final class GetScenePointRspOuterClass {
     }
     private int unlockAreaListMemoizedSerializedSize = -1;
 
-    public static final int UNLOCKEDPOINTLIST_FIELD_NUMBER = 12;
-    private com.google.protobuf.Internal.IntList unlockedPointList_;
+    public static final int PGBKOMBKBKG_FIELD_NUMBER = 5;
+    private boolean pGBKOMBKBKG_;
     /**
-     * <code>repeated uint32 unlockedPointList = 12;</code>
-     * @return A list containing the unlockedPointList.
+     * <code>bool PGBKOMBKBKG = 5;</code>
+     * @return The pGBKOMBKBKG.
      */
     @java.lang.Override
-    public java.util.List<java.lang.Integer>
-        getUnlockedPointListList() {
-      return unlockedPointList_;
+    public boolean getPGBKOMBKBKG() {
+      return pGBKOMBKBKG_;
     }
-    /**
-     * <code>repeated uint32 unlockedPointList = 12;</code>
-     * @return The count of unlockedPointList.
-     */
-    public int getUnlockedPointListCount() {
-      return unlockedPointList_.size();
-    }
-    /**
-     * <code>repeated uint32 unlockedPointList = 12;</code>
-     * @param index The index of the element to return.
-     * @return The unlockedPointList at the given index.
-     */
-    public int getUnlockedPointList(int index) {
-      return unlockedPointList_.getInt(index);
-    }
-    private int unlockedPointListMemoizedSerializedSize = -1;
 
-    public static final int NOTEXPLOREDDUNGEONENTRYLIST_FIELD_NUMBER = 4;
-    private com.google.protobuf.Internal.IntList notExploredDungeonEntryList_;
-    /**
-     * <code>repeated uint32 notExploredDungeonEntryList = 4;</code>
-     * @return A list containing the notExploredDungeonEntryList.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.Integer>
-        getNotExploredDungeonEntryListList() {
-      return notExploredDungeonEntryList_;
-    }
-    /**
-     * <code>repeated uint32 notExploredDungeonEntryList = 4;</code>
-     * @return The count of notExploredDungeonEntryList.
-     */
-    public int getNotExploredDungeonEntryListCount() {
-      return notExploredDungeonEntryList_.size();
-    }
-    /**
-     * <code>repeated uint32 notExploredDungeonEntryList = 4;</code>
-     * @param index The index of the element to return.
-     * @return The notExploredDungeonEntryList at the given index.
-     */
-    public int getNotExploredDungeonEntryList(int index) {
-      return notExploredDungeonEntryList_.getInt(index);
-    }
-    private int notExploredDungeonEntryListMemoizedSerializedSize = -1;
-
-    public static final int UNHIDEPOINTLIST_FIELD_NUMBER = 5;
+    public static final int UNHIDEPOINTLIST_FIELD_NUMBER = 10;
     private com.google.protobuf.Internal.IntList unhidePointList_;
     /**
-     * <code>repeated uint32 unhidePointList = 5;</code>
+     * <code>repeated uint32 unhidePointList = 10;</code>
      * @return A list containing the unhidePointList.
      */
     @java.lang.Override
@@ -868,14 +736,14 @@ public final class GetScenePointRspOuterClass {
       return unhidePointList_;
     }
     /**
-     * <code>repeated uint32 unhidePointList = 5;</code>
+     * <code>repeated uint32 unhidePointList = 10;</code>
      * @return The count of unhidePointList.
      */
     public int getUnhidePointListCount() {
       return unhidePointList_.size();
     }
     /**
-     * <code>repeated uint32 unhidePointList = 5;</code>
+     * <code>repeated uint32 unhidePointList = 10;</code>
      * @param index The index of the element to return.
      * @return The unhidePointList at the given index.
      */
@@ -884,10 +752,38 @@ public final class GetScenePointRspOuterClass {
     }
     private int unhidePointListMemoizedSerializedSize = -1;
 
-    public static final int SCENEID_FIELD_NUMBER = 14;
+    public static final int HJLALADBFAC_FIELD_NUMBER = 15;
+    private com.google.protobuf.Internal.IntList hJLALADBFAC_;
+    /**
+     * <code>repeated uint32 HJLALADBFAC = 15;</code>
+     * @return A list containing the hJLALADBFAC.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getHJLALADBFACList() {
+      return hJLALADBFAC_;
+    }
+    /**
+     * <code>repeated uint32 HJLALADBFAC = 15;</code>
+     * @return The count of hJLALADBFAC.
+     */
+    public int getHJLALADBFACCount() {
+      return hJLALADBFAC_.size();
+    }
+    /**
+     * <code>repeated uint32 HJLALADBFAC = 15;</code>
+     * @param index The index of the element to return.
+     * @return The hJLALADBFAC at the given index.
+     */
+    public int getHJLALADBFAC(int index) {
+      return hJLALADBFAC_.getInt(index);
+    }
+    private int hJLALADBFACMemoizedSerializedSize = -1;
+
+    public static final int SCENE_ID_FIELD_NUMBER = 6;
     private int sceneId_;
     /**
-     * <code>uint32 sceneId = 14;</code>
+     * <code>uint32 scene_id = 6;</code>
      * @return The sceneId.
      */
     @java.lang.Override
@@ -895,33 +791,33 @@ public final class GetScenePointRspOuterClass {
       return sceneId_;
     }
 
-    public static final int GROUPUNLIMITPOINTLIST_FIELD_NUMBER = 1;
-    private com.google.protobuf.Internal.IntList groupUnlimitPointList_;
+    public static final int UNLOCKED_POINT_LIST_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.IntList unlockedPointList_;
     /**
-     * <code>repeated uint32 groupUnlimitPointList = 1;</code>
-     * @return A list containing the groupUnlimitPointList.
+     * <code>repeated uint32 unlocked_point_list = 4;</code>
+     * @return A list containing the unlockedPointList.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getGroupUnlimitPointListList() {
-      return groupUnlimitPointList_;
+        getUnlockedPointListList() {
+      return unlockedPointList_;
     }
     /**
-     * <code>repeated uint32 groupUnlimitPointList = 1;</code>
-     * @return The count of groupUnlimitPointList.
+     * <code>repeated uint32 unlocked_point_list = 4;</code>
+     * @return The count of unlockedPointList.
      */
-    public int getGroupUnlimitPointListCount() {
-      return groupUnlimitPointList_.size();
+    public int getUnlockedPointListCount() {
+      return unlockedPointList_.size();
     }
     /**
-     * <code>repeated uint32 groupUnlimitPointList = 1;</code>
+     * <code>repeated uint32 unlocked_point_list = 4;</code>
      * @param index The index of the element to return.
-     * @return The groupUnlimitPointList at the given index.
+     * @return The unlockedPointList at the given index.
      */
-    public int getGroupUnlimitPointList(int index) {
-      return groupUnlimitPointList_.getInt(index);
+    public int getUnlockedPointList(int index) {
+      return unlockedPointList_.getInt(index);
     }
-    private int groupUnlimitPointListMemoizedSerializedSize = -1;
+    private int unlockedPointListMemoizedSerializedSize = -1;
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -938,77 +834,80 @@ public final class GetScenePointRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (getGroupUnlimitPointListList().size() > 0) {
-        output.writeUInt32NoTag(10);
-        output.writeUInt32NoTag(groupUnlimitPointListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < groupUnlimitPointList_.size(); i++) {
-        output.writeUInt32NoTag(groupUnlimitPointList_.getInt(i));
-      }
       if (retcode_ != 0) {
         output.writeInt32(2, retcode_);
       }
-      if (getHidePointListList().size() > 0) {
+      if (getLHGAOJELAMAList().size() > 0) {
         output.writeUInt32NoTag(26);
-        output.writeUInt32NoTag(hidePointListMemoizedSerializedSize);
+        output.writeUInt32NoTag(lHGAOJELAMAMemoizedSerializedSize);
       }
-      for (int i = 0; i < hidePointList_.size(); i++) {
-        output.writeUInt32NoTag(hidePointList_.getInt(i));
-      }
-      if (getNotExploredDungeonEntryListList().size() > 0) {
-        output.writeUInt32NoTag(34);
-        output.writeUInt32NoTag(notExploredDungeonEntryListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < notExploredDungeonEntryList_.size(); i++) {
-        output.writeUInt32NoTag(notExploredDungeonEntryList_.getInt(i));
-      }
-      if (getUnhidePointListList().size() > 0) {
-        output.writeUInt32NoTag(42);
-        output.writeUInt32NoTag(unhidePointListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < unhidePointList_.size(); i++) {
-        output.writeUInt32NoTag(unhidePointList_.getInt(i));
-      }
-      if (belongUid_ != 0) {
-        output.writeUInt32(6, belongUid_);
-      }
-      if (getLockedPointListList().size() > 0) {
-        output.writeUInt32NoTag(58);
-        output.writeUInt32NoTag(lockedPointListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < lockedPointList_.size(); i++) {
-        output.writeUInt32NoTag(lockedPointList_.getInt(i));
-      }
-      if (getUnlockAreaListList().size() > 0) {
-        output.writeUInt32NoTag(74);
-        output.writeUInt32NoTag(unlockAreaListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < unlockAreaList_.size(); i++) {
-        output.writeUInt32NoTag(unlockAreaList_.getInt(i));
-      }
-      if (getNotInteractDungeonEntryListList().size() > 0) {
-        output.writeUInt32NoTag(82);
-        output.writeUInt32NoTag(notInteractDungeonEntryListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < notInteractDungeonEntryList_.size(); i++) {
-        output.writeUInt32NoTag(notInteractDungeonEntryList_.getInt(i));
+      for (int i = 0; i < lHGAOJELAMA_.size(); i++) {
+        output.writeUInt32NoTag(lHGAOJELAMA_.getInt(i));
       }
       if (getUnlockedPointListList().size() > 0) {
-        output.writeUInt32NoTag(98);
+        output.writeUInt32NoTag(34);
         output.writeUInt32NoTag(unlockedPointListMemoizedSerializedSize);
       }
       for (int i = 0; i < unlockedPointList_.size(); i++) {
         output.writeUInt32NoTag(unlockedPointList_.getInt(i));
       }
-      if (getToBeExploreDungeonEntryListList().size() > 0) {
-        output.writeUInt32NoTag(106);
-        output.writeUInt32NoTag(toBeExploreDungeonEntryListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < toBeExploreDungeonEntryList_.size(); i++) {
-        output.writeUInt32NoTag(toBeExploreDungeonEntryList_.getInt(i));
+      if (pGBKOMBKBKG_ != false) {
+        output.writeBool(5, pGBKOMBKBKG_);
       }
       if (sceneId_ != 0) {
-        output.writeUInt32(14, sceneId_);
+        output.writeUInt32(6, sceneId_);
+      }
+      if (getLLLIACPHNEHList().size() > 0) {
+        output.writeUInt32NoTag(58);
+        output.writeUInt32NoTag(lLLIACPHNEHMemoizedSerializedSize);
+      }
+      for (int i = 0; i < lLLIACPHNEH_.size(); i++) {
+        output.writeUInt32NoTag(lLLIACPHNEH_.getInt(i));
+      }
+      if (belongUid_ != 0) {
+        output.writeUInt32(8, belongUid_);
+      }
+      if (getUnhidePointListList().size() > 0) {
+        output.writeUInt32NoTag(82);
+        output.writeUInt32NoTag(unhidePointListMemoizedSerializedSize);
+      }
+      for (int i = 0; i < unhidePointList_.size(); i++) {
+        output.writeUInt32NoTag(unhidePointList_.getInt(i));
+      }
+      if (getKBGDANIJLFKList().size() > 0) {
+        output.writeUInt32NoTag(90);
+        output.writeUInt32NoTag(kBGDANIJLFKMemoizedSerializedSize);
+      }
+      for (int i = 0; i < kBGDANIJLFK_.size(); i++) {
+        output.writeUInt32NoTag(kBGDANIJLFK_.getInt(i));
+      }
+      if (getHidePointListList().size() > 0) {
+        output.writeUInt32NoTag(98);
+        output.writeUInt32NoTag(hidePointListMemoizedSerializedSize);
+      }
+      for (int i = 0; i < hidePointList_.size(); i++) {
+        output.writeUInt32NoTag(hidePointList_.getInt(i));
+      }
+      if (getFKDLJELPPOJList().size() > 0) {
+        output.writeUInt32NoTag(106);
+        output.writeUInt32NoTag(fKDLJELPPOJMemoizedSerializedSize);
+      }
+      for (int i = 0; i < fKDLJELPPOJ_.size(); i++) {
+        output.writeUInt32NoTag(fKDLJELPPOJ_.getInt(i));
+      }
+      if (getUnlockAreaListList().size() > 0) {
+        output.writeUInt32NoTag(114);
+        output.writeUInt32NoTag(unlockAreaListMemoizedSerializedSize);
+      }
+      for (int i = 0; i < unlockAreaList_.size(); i++) {
+        output.writeUInt32NoTag(unlockAreaList_.getInt(i));
+      }
+      if (getHJLALADBFACList().size() > 0) {
+        output.writeUInt32NoTag(122);
+        output.writeUInt32NoTag(hJLALADBFACMemoizedSerializedSize);
+      }
+      for (int i = 0; i < hJLALADBFAC_.size(); i++) {
+        output.writeUInt32NoTag(hJLALADBFAC_.getInt(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1019,23 +918,91 @@ public final class GetScenePointRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, retcode_);
+      }
       {
         int dataSize = 0;
-        for (int i = 0; i < groupUnlimitPointList_.size(); i++) {
+        for (int i = 0; i < lHGAOJELAMA_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(groupUnlimitPointList_.getInt(i));
+            .computeUInt32SizeNoTag(lHGAOJELAMA_.getInt(i));
         }
         size += dataSize;
-        if (!getGroupUnlimitPointListList().isEmpty()) {
+        if (!getLHGAOJELAMAList().isEmpty()) {
           size += 1;
           size += com.google.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
-        groupUnlimitPointListMemoizedSerializedSize = dataSize;
+        lHGAOJELAMAMemoizedSerializedSize = dataSize;
       }
-      if (retcode_ != 0) {
+      {
+        int dataSize = 0;
+        for (int i = 0; i < unlockedPointList_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(unlockedPointList_.getInt(i));
+        }
+        size += dataSize;
+        if (!getUnlockedPointListList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        unlockedPointListMemoizedSerializedSize = dataSize;
+      }
+      if (pGBKOMBKBKG_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, retcode_);
+          .computeBoolSize(5, pGBKOMBKBKG_);
+      }
+      if (sceneId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, sceneId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < lLLIACPHNEH_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(lLLIACPHNEH_.getInt(i));
+        }
+        size += dataSize;
+        if (!getLLLIACPHNEHList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        lLLIACPHNEHMemoizedSerializedSize = dataSize;
+      }
+      if (belongUid_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, belongUid_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < unhidePointList_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(unhidePointList_.getInt(i));
+        }
+        size += dataSize;
+        if (!getUnhidePointListList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        unhidePointListMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < kBGDANIJLFK_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(kBGDANIJLFK_.getInt(i));
+        }
+        size += dataSize;
+        if (!getKBGDANIJLFKList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        kBGDANIJLFKMemoizedSerializedSize = dataSize;
       }
       {
         int dataSize = 0;
@@ -1053,49 +1020,17 @@ public final class GetScenePointRspOuterClass {
       }
       {
         int dataSize = 0;
-        for (int i = 0; i < notExploredDungeonEntryList_.size(); i++) {
+        for (int i = 0; i < fKDLJELPPOJ_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(notExploredDungeonEntryList_.getInt(i));
+            .computeUInt32SizeNoTag(fKDLJELPPOJ_.getInt(i));
         }
         size += dataSize;
-        if (!getNotExploredDungeonEntryListList().isEmpty()) {
+        if (!getFKDLJELPPOJList().isEmpty()) {
           size += 1;
           size += com.google.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
-        notExploredDungeonEntryListMemoizedSerializedSize = dataSize;
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < unhidePointList_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(unhidePointList_.getInt(i));
-        }
-        size += dataSize;
-        if (!getUnhidePointListList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        unhidePointListMemoizedSerializedSize = dataSize;
-      }
-      if (belongUid_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, belongUid_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < lockedPointList_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(lockedPointList_.getInt(i));
-        }
-        size += dataSize;
-        if (!getLockedPointListList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        lockedPointListMemoizedSerializedSize = dataSize;
+        fKDLJELPPOJMemoizedSerializedSize = dataSize;
       }
       {
         int dataSize = 0;
@@ -1113,49 +1048,17 @@ public final class GetScenePointRspOuterClass {
       }
       {
         int dataSize = 0;
-        for (int i = 0; i < notInteractDungeonEntryList_.size(); i++) {
+        for (int i = 0; i < hJLALADBFAC_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(notInteractDungeonEntryList_.getInt(i));
+            .computeUInt32SizeNoTag(hJLALADBFAC_.getInt(i));
         }
         size += dataSize;
-        if (!getNotInteractDungeonEntryListList().isEmpty()) {
+        if (!getHJLALADBFACList().isEmpty()) {
           size += 1;
           size += com.google.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
-        notInteractDungeonEntryListMemoizedSerializedSize = dataSize;
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < unlockedPointList_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(unlockedPointList_.getInt(i));
-        }
-        size += dataSize;
-        if (!getUnlockedPointListList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        unlockedPointListMemoizedSerializedSize = dataSize;
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < toBeExploreDungeonEntryList_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(toBeExploreDungeonEntryList_.getInt(i));
-        }
-        size += dataSize;
-        if (!getToBeExploreDungeonEntryListList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        toBeExploreDungeonEntryListMemoizedSerializedSize = dataSize;
-      }
-      if (sceneId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, sceneId_);
+        hJLALADBFACMemoizedSerializedSize = dataSize;
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1172,30 +1075,32 @@ public final class GetScenePointRspOuterClass {
       }
       emu.grasscutter.net.proto.GetScenePointRspOuterClass.GetScenePointRsp other = (emu.grasscutter.net.proto.GetScenePointRspOuterClass.GetScenePointRsp) obj;
 
-      if (!getLockedPointListList()
-          .equals(other.getLockedPointListList())) return false;
-      if (!getNotInteractDungeonEntryListList()
-          .equals(other.getNotInteractDungeonEntryListList())) return false;
+      if (!getLHGAOJELAMAList()
+          .equals(other.getLHGAOJELAMAList())) return false;
+      if (!getFKDLJELPPOJList()
+          .equals(other.getFKDLJELPPOJList())) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
-      if (!getToBeExploreDungeonEntryListList()
-          .equals(other.getToBeExploreDungeonEntryListList())) return false;
-      if (getBelongUid()
-          != other.getBelongUid()) return false;
       if (!getHidePointListList()
           .equals(other.getHidePointListList())) return false;
+      if (!getLLLIACPHNEHList()
+          .equals(other.getLLLIACPHNEHList())) return false;
+      if (getBelongUid()
+          != other.getBelongUid()) return false;
+      if (!getKBGDANIJLFKList()
+          .equals(other.getKBGDANIJLFKList())) return false;
       if (!getUnlockAreaListList()
           .equals(other.getUnlockAreaListList())) return false;
-      if (!getUnlockedPointListList()
-          .equals(other.getUnlockedPointListList())) return false;
-      if (!getNotExploredDungeonEntryListList()
-          .equals(other.getNotExploredDungeonEntryListList())) return false;
+      if (getPGBKOMBKBKG()
+          != other.getPGBKOMBKBKG()) return false;
       if (!getUnhidePointListList()
           .equals(other.getUnhidePointListList())) return false;
+      if (!getHJLALADBFACList()
+          .equals(other.getHJLALADBFACList())) return false;
       if (getSceneId()
           != other.getSceneId()) return false;
-      if (!getGroupUnlimitPointListList()
-          .equals(other.getGroupUnlimitPointListList())) return false;
+      if (!getUnlockedPointListList()
+          .equals(other.getUnlockedPointListList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1207,47 +1112,50 @@ public final class GetScenePointRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getLockedPointListCount() > 0) {
-        hash = (37 * hash) + LOCKEDPOINTLIST_FIELD_NUMBER;
-        hash = (53 * hash) + getLockedPointListList().hashCode();
+      if (getLHGAOJELAMACount() > 0) {
+        hash = (37 * hash) + LHGAOJELAMA_FIELD_NUMBER;
+        hash = (53 * hash) + getLHGAOJELAMAList().hashCode();
       }
-      if (getNotInteractDungeonEntryListCount() > 0) {
-        hash = (37 * hash) + NOTINTERACTDUNGEONENTRYLIST_FIELD_NUMBER;
-        hash = (53 * hash) + getNotInteractDungeonEntryListList().hashCode();
+      if (getFKDLJELPPOJCount() > 0) {
+        hash = (37 * hash) + FKDLJELPPOJ_FIELD_NUMBER;
+        hash = (53 * hash) + getFKDLJELPPOJList().hashCode();
       }
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      if (getToBeExploreDungeonEntryListCount() > 0) {
-        hash = (37 * hash) + TOBEEXPLOREDUNGEONENTRYLIST_FIELD_NUMBER;
-        hash = (53 * hash) + getToBeExploreDungeonEntryListList().hashCode();
-      }
-      hash = (37 * hash) + BELONGUID_FIELD_NUMBER;
-      hash = (53 * hash) + getBelongUid();
       if (getHidePointListCount() > 0) {
-        hash = (37 * hash) + HIDEPOINTLIST_FIELD_NUMBER;
+        hash = (37 * hash) + HIDE_POINT_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getHidePointListList().hashCode();
+      }
+      if (getLLLIACPHNEHCount() > 0) {
+        hash = (37 * hash) + LLLIACPHNEH_FIELD_NUMBER;
+        hash = (53 * hash) + getLLLIACPHNEHList().hashCode();
+      }
+      hash = (37 * hash) + BELONG_UID_FIELD_NUMBER;
+      hash = (53 * hash) + getBelongUid();
+      if (getKBGDANIJLFKCount() > 0) {
+        hash = (37 * hash) + KBGDANIJLFK_FIELD_NUMBER;
+        hash = (53 * hash) + getKBGDANIJLFKList().hashCode();
       }
       if (getUnlockAreaListCount() > 0) {
         hash = (37 * hash) + UNLOCKAREALIST_FIELD_NUMBER;
         hash = (53 * hash) + getUnlockAreaListList().hashCode();
       }
-      if (getUnlockedPointListCount() > 0) {
-        hash = (37 * hash) + UNLOCKEDPOINTLIST_FIELD_NUMBER;
-        hash = (53 * hash) + getUnlockedPointListList().hashCode();
-      }
-      if (getNotExploredDungeonEntryListCount() > 0) {
-        hash = (37 * hash) + NOTEXPLOREDDUNGEONENTRYLIST_FIELD_NUMBER;
-        hash = (53 * hash) + getNotExploredDungeonEntryListList().hashCode();
-      }
+      hash = (37 * hash) + PGBKOMBKBKG_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPGBKOMBKBKG());
       if (getUnhidePointListCount() > 0) {
         hash = (37 * hash) + UNHIDEPOINTLIST_FIELD_NUMBER;
         hash = (53 * hash) + getUnhidePointListList().hashCode();
       }
-      hash = (37 * hash) + SCENEID_FIELD_NUMBER;
+      if (getHJLALADBFACCount() > 0) {
+        hash = (37 * hash) + HJLALADBFAC_FIELD_NUMBER;
+        hash = (53 * hash) + getHJLALADBFACList().hashCode();
+      }
+      hash = (37 * hash) + SCENE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSceneId();
-      if (getGroupUnlimitPointListCount() > 0) {
-        hash = (37 * hash) + GROUPUNLIMITPOINTLIST_FIELD_NUMBER;
-        hash = (53 * hash) + getGroupUnlimitPointListList().hashCode();
+      if (getUnlockedPointListCount() > 0) {
+        hash = (37 * hash) + UNLOCKED_POINT_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getUnlockedPointListList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1345,6 +1253,11 @@ public final class GetScenePointRspOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: ODCLFBBMOFA
+     * CmdId: 229
+     * </pre>
+     *
      * Protobuf type {@code GetScenePointRsp}
      */
     public static final class Builder extends
@@ -1382,29 +1295,31 @@ public final class GetScenePointRspOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        lockedPointList_ = emptyIntList();
+        lHGAOJELAMA_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
-        notInteractDungeonEntryList_ = emptyIntList();
+        fKDLJELPPOJ_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
         retcode_ = 0;
 
-        toBeExploreDungeonEntryList_ = emptyIntList();
+        hidePointList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000004);
+        lLLIACPHNEH_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         belongUid_ = 0;
 
-        hidePointList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        unlockAreaList_ = emptyIntList();
+        kBGDANIJLFK_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000010);
-        unlockedPointList_ = emptyIntList();
+        unlockAreaList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000020);
-        notExploredDungeonEntryList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        pGBKOMBKBKG_ = false;
+
         unhidePointList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        hJLALADBFAC_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000080);
         sceneId_ = 0;
 
-        groupUnlimitPointList_ = emptyIntList();
+        unlockedPointList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
@@ -1434,53 +1349,54 @@ public final class GetScenePointRspOuterClass {
         emu.grasscutter.net.proto.GetScenePointRspOuterClass.GetScenePointRsp result = new emu.grasscutter.net.proto.GetScenePointRspOuterClass.GetScenePointRsp(this);
         int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
-          lockedPointList_.makeImmutable();
+          lHGAOJELAMA_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.lockedPointList_ = lockedPointList_;
+        result.lHGAOJELAMA_ = lHGAOJELAMA_;
         if (((bitField0_ & 0x00000002) != 0)) {
-          notInteractDungeonEntryList_.makeImmutable();
+          fKDLJELPPOJ_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.notInteractDungeonEntryList_ = notInteractDungeonEntryList_;
+        result.fKDLJELPPOJ_ = fKDLJELPPOJ_;
         result.retcode_ = retcode_;
         if (((bitField0_ & 0x00000004) != 0)) {
-          toBeExploreDungeonEntryList_.makeImmutable();
+          hidePointList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000004);
         }
-        result.toBeExploreDungeonEntryList_ = toBeExploreDungeonEntryList_;
-        result.belongUid_ = belongUid_;
+        result.hidePointList_ = hidePointList_;
         if (((bitField0_ & 0x00000008) != 0)) {
-          hidePointList_.makeImmutable();
+          lLLIACPHNEH_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000008);
         }
-        result.hidePointList_ = hidePointList_;
+        result.lLLIACPHNEH_ = lLLIACPHNEH_;
+        result.belongUid_ = belongUid_;
         if (((bitField0_ & 0x00000010) != 0)) {
-          unlockAreaList_.makeImmutable();
+          kBGDANIJLFK_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000010);
         }
-        result.unlockAreaList_ = unlockAreaList_;
+        result.kBGDANIJLFK_ = kBGDANIJLFK_;
         if (((bitField0_ & 0x00000020) != 0)) {
-          unlockedPointList_.makeImmutable();
+          unlockAreaList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000020);
         }
-        result.unlockedPointList_ = unlockedPointList_;
+        result.unlockAreaList_ = unlockAreaList_;
+        result.pGBKOMBKBKG_ = pGBKOMBKBKG_;
         if (((bitField0_ & 0x00000040) != 0)) {
-          notExploredDungeonEntryList_.makeImmutable();
+          unhidePointList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000040);
         }
-        result.notExploredDungeonEntryList_ = notExploredDungeonEntryList_;
+        result.unhidePointList_ = unhidePointList_;
         if (((bitField0_ & 0x00000080) != 0)) {
-          unhidePointList_.makeImmutable();
+          hJLALADBFAC_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000080);
         }
-        result.unhidePointList_ = unhidePointList_;
+        result.hJLALADBFAC_ = hJLALADBFAC_;
         result.sceneId_ = sceneId_;
         if (((bitField0_ & 0x00000100) != 0)) {
-          groupUnlimitPointList_.makeImmutable();
+          unlockedPointList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000100);
         }
-        result.groupUnlimitPointList_ = groupUnlimitPointList_;
+        result.unlockedPointList_ = unlockedPointList_;
         onBuilt();
         return result;
       }
@@ -1529,102 +1445,105 @@ public final class GetScenePointRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.GetScenePointRspOuterClass.GetScenePointRsp other) {
         if (other == emu.grasscutter.net.proto.GetScenePointRspOuterClass.GetScenePointRsp.getDefaultInstance()) return this;
-        if (!other.lockedPointList_.isEmpty()) {
-          if (lockedPointList_.isEmpty()) {
-            lockedPointList_ = other.lockedPointList_;
+        if (!other.lHGAOJELAMA_.isEmpty()) {
+          if (lHGAOJELAMA_.isEmpty()) {
+            lHGAOJELAMA_ = other.lHGAOJELAMA_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureLockedPointListIsMutable();
-            lockedPointList_.addAll(other.lockedPointList_);
+            ensureLHGAOJELAMAIsMutable();
+            lHGAOJELAMA_.addAll(other.lHGAOJELAMA_);
           }
           onChanged();
         }
-        if (!other.notInteractDungeonEntryList_.isEmpty()) {
-          if (notInteractDungeonEntryList_.isEmpty()) {
-            notInteractDungeonEntryList_ = other.notInteractDungeonEntryList_;
+        if (!other.fKDLJELPPOJ_.isEmpty()) {
+          if (fKDLJELPPOJ_.isEmpty()) {
+            fKDLJELPPOJ_ = other.fKDLJELPPOJ_;
             bitField0_ = (bitField0_ & ~0x00000002);
           } else {
-            ensureNotInteractDungeonEntryListIsMutable();
-            notInteractDungeonEntryList_.addAll(other.notInteractDungeonEntryList_);
+            ensureFKDLJELPPOJIsMutable();
+            fKDLJELPPOJ_.addAll(other.fKDLJELPPOJ_);
           }
           onChanged();
         }
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
         }
-        if (!other.toBeExploreDungeonEntryList_.isEmpty()) {
-          if (toBeExploreDungeonEntryList_.isEmpty()) {
-            toBeExploreDungeonEntryList_ = other.toBeExploreDungeonEntryList_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-          } else {
-            ensureToBeExploreDungeonEntryListIsMutable();
-            toBeExploreDungeonEntryList_.addAll(other.toBeExploreDungeonEntryList_);
-          }
-          onChanged();
-        }
-        if (other.getBelongUid() != 0) {
-          setBelongUid(other.getBelongUid());
-        }
         if (!other.hidePointList_.isEmpty()) {
           if (hidePointList_.isEmpty()) {
             hidePointList_ = other.hidePointList_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureHidePointListIsMutable();
             hidePointList_.addAll(other.hidePointList_);
           }
           onChanged();
         }
+        if (!other.lLLIACPHNEH_.isEmpty()) {
+          if (lLLIACPHNEH_.isEmpty()) {
+            lLLIACPHNEH_ = other.lLLIACPHNEH_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureLLLIACPHNEHIsMutable();
+            lLLIACPHNEH_.addAll(other.lLLIACPHNEH_);
+          }
+          onChanged();
+        }
+        if (other.getBelongUid() != 0) {
+          setBelongUid(other.getBelongUid());
+        }
+        if (!other.kBGDANIJLFK_.isEmpty()) {
+          if (kBGDANIJLFK_.isEmpty()) {
+            kBGDANIJLFK_ = other.kBGDANIJLFK_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureKBGDANIJLFKIsMutable();
+            kBGDANIJLFK_.addAll(other.kBGDANIJLFK_);
+          }
+          onChanged();
+        }
         if (!other.unlockAreaList_.isEmpty()) {
           if (unlockAreaList_.isEmpty()) {
             unlockAreaList_ = other.unlockAreaList_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureUnlockAreaListIsMutable();
             unlockAreaList_.addAll(other.unlockAreaList_);
           }
           onChanged();
         }
-        if (!other.unlockedPointList_.isEmpty()) {
-          if (unlockedPointList_.isEmpty()) {
-            unlockedPointList_ = other.unlockedPointList_;
-            bitField0_ = (bitField0_ & ~0x00000020);
-          } else {
-            ensureUnlockedPointListIsMutable();
-            unlockedPointList_.addAll(other.unlockedPointList_);
-          }
-          onChanged();
-        }
-        if (!other.notExploredDungeonEntryList_.isEmpty()) {
-          if (notExploredDungeonEntryList_.isEmpty()) {
-            notExploredDungeonEntryList_ = other.notExploredDungeonEntryList_;
-            bitField0_ = (bitField0_ & ~0x00000040);
-          } else {
-            ensureNotExploredDungeonEntryListIsMutable();
-            notExploredDungeonEntryList_.addAll(other.notExploredDungeonEntryList_);
-          }
-          onChanged();
+        if (other.getPGBKOMBKBKG() != false) {
+          setPGBKOMBKBKG(other.getPGBKOMBKBKG());
         }
         if (!other.unhidePointList_.isEmpty()) {
           if (unhidePointList_.isEmpty()) {
             unhidePointList_ = other.unhidePointList_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureUnhidePointListIsMutable();
             unhidePointList_.addAll(other.unhidePointList_);
           }
           onChanged();
         }
+        if (!other.hJLALADBFAC_.isEmpty()) {
+          if (hJLALADBFAC_.isEmpty()) {
+            hJLALADBFAC_ = other.hJLALADBFAC_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensureHJLALADBFACIsMutable();
+            hJLALADBFAC_.addAll(other.hJLALADBFAC_);
+          }
+          onChanged();
+        }
         if (other.getSceneId() != 0) {
           setSceneId(other.getSceneId());
         }
-        if (!other.groupUnlimitPointList_.isEmpty()) {
-          if (groupUnlimitPointList_.isEmpty()) {
-            groupUnlimitPointList_ = other.groupUnlimitPointList_;
+        if (!other.unlockedPointList_.isEmpty()) {
+          if (unlockedPointList_.isEmpty()) {
+            unlockedPointList_ = other.unlockedPointList_;
             bitField0_ = (bitField0_ & ~0x00000100);
           } else {
-            ensureGroupUnlimitPointListIsMutable();
-            groupUnlimitPointList_.addAll(other.groupUnlimitPointList_);
+            ensureUnlockedPointListIsMutable();
+            unlockedPointList_.addAll(other.unlockedPointList_);
           }
           onChanged();
         }
@@ -1658,159 +1577,159 @@ public final class GetScenePointRspOuterClass {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Internal.IntList lockedPointList_ = emptyIntList();
-      private void ensureLockedPointListIsMutable() {
+      private com.google.protobuf.Internal.IntList lHGAOJELAMA_ = emptyIntList();
+      private void ensureLHGAOJELAMAIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          lockedPointList_ = mutableCopy(lockedPointList_);
+          lHGAOJELAMA_ = mutableCopy(lHGAOJELAMA_);
           bitField0_ |= 0x00000001;
          }
       }
       /**
-       * <code>repeated uint32 lockedPointList = 7;</code>
-       * @return A list containing the lockedPointList.
+       * <code>repeated uint32 LHGAOJELAMA = 3;</code>
+       * @return A list containing the lHGAOJELAMA.
        */
       public java.util.List<java.lang.Integer>
-          getLockedPointListList() {
+          getLHGAOJELAMAList() {
         return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(lockedPointList_) : lockedPointList_;
+                 java.util.Collections.unmodifiableList(lHGAOJELAMA_) : lHGAOJELAMA_;
       }
       /**
-       * <code>repeated uint32 lockedPointList = 7;</code>
-       * @return The count of lockedPointList.
+       * <code>repeated uint32 LHGAOJELAMA = 3;</code>
+       * @return The count of lHGAOJELAMA.
        */
-      public int getLockedPointListCount() {
-        return lockedPointList_.size();
+      public int getLHGAOJELAMACount() {
+        return lHGAOJELAMA_.size();
       }
       /**
-       * <code>repeated uint32 lockedPointList = 7;</code>
+       * <code>repeated uint32 LHGAOJELAMA = 3;</code>
        * @param index The index of the element to return.
-       * @return The lockedPointList at the given index.
+       * @return The lHGAOJELAMA at the given index.
        */
-      public int getLockedPointList(int index) {
-        return lockedPointList_.getInt(index);
+      public int getLHGAOJELAMA(int index) {
+        return lHGAOJELAMA_.getInt(index);
       }
       /**
-       * <code>repeated uint32 lockedPointList = 7;</code>
+       * <code>repeated uint32 LHGAOJELAMA = 3;</code>
        * @param index The index to set the value at.
-       * @param value The lockedPointList to set.
+       * @param value The lHGAOJELAMA to set.
        * @return This builder for chaining.
        */
-      public Builder setLockedPointList(
+      public Builder setLHGAOJELAMA(
           int index, int value) {
-        ensureLockedPointListIsMutable();
-        lockedPointList_.setInt(index, value);
+        ensureLHGAOJELAMAIsMutable();
+        lHGAOJELAMA_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 lockedPointList = 7;</code>
-       * @param value The lockedPointList to add.
+       * <code>repeated uint32 LHGAOJELAMA = 3;</code>
+       * @param value The lHGAOJELAMA to add.
        * @return This builder for chaining.
        */
-      public Builder addLockedPointList(int value) {
-        ensureLockedPointListIsMutable();
-        lockedPointList_.addInt(value);
+      public Builder addLHGAOJELAMA(int value) {
+        ensureLHGAOJELAMAIsMutable();
+        lHGAOJELAMA_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 lockedPointList = 7;</code>
-       * @param values The lockedPointList to add.
+       * <code>repeated uint32 LHGAOJELAMA = 3;</code>
+       * @param values The lHGAOJELAMA to add.
        * @return This builder for chaining.
        */
-      public Builder addAllLockedPointList(
+      public Builder addAllLHGAOJELAMA(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureLockedPointListIsMutable();
+        ensureLHGAOJELAMAIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, lockedPointList_);
+            values, lHGAOJELAMA_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 lockedPointList = 7;</code>
+       * <code>repeated uint32 LHGAOJELAMA = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearLockedPointList() {
-        lockedPointList_ = emptyIntList();
+      public Builder clearLHGAOJELAMA() {
+        lHGAOJELAMA_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList notInteractDungeonEntryList_ = emptyIntList();
-      private void ensureNotInteractDungeonEntryListIsMutable() {
+      private com.google.protobuf.Internal.IntList fKDLJELPPOJ_ = emptyIntList();
+      private void ensureFKDLJELPPOJIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          notInteractDungeonEntryList_ = mutableCopy(notInteractDungeonEntryList_);
+          fKDLJELPPOJ_ = mutableCopy(fKDLJELPPOJ_);
           bitField0_ |= 0x00000002;
          }
       }
       /**
-       * <code>repeated uint32 notInteractDungeonEntryList = 10;</code>
-       * @return A list containing the notInteractDungeonEntryList.
+       * <code>repeated uint32 FKDLJELPPOJ = 13;</code>
+       * @return A list containing the fKDLJELPPOJ.
        */
       public java.util.List<java.lang.Integer>
-          getNotInteractDungeonEntryListList() {
+          getFKDLJELPPOJList() {
         return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(notInteractDungeonEntryList_) : notInteractDungeonEntryList_;
+                 java.util.Collections.unmodifiableList(fKDLJELPPOJ_) : fKDLJELPPOJ_;
       }
       /**
-       * <code>repeated uint32 notInteractDungeonEntryList = 10;</code>
-       * @return The count of notInteractDungeonEntryList.
+       * <code>repeated uint32 FKDLJELPPOJ = 13;</code>
+       * @return The count of fKDLJELPPOJ.
        */
-      public int getNotInteractDungeonEntryListCount() {
-        return notInteractDungeonEntryList_.size();
+      public int getFKDLJELPPOJCount() {
+        return fKDLJELPPOJ_.size();
       }
       /**
-       * <code>repeated uint32 notInteractDungeonEntryList = 10;</code>
+       * <code>repeated uint32 FKDLJELPPOJ = 13;</code>
        * @param index The index of the element to return.
-       * @return The notInteractDungeonEntryList at the given index.
+       * @return The fKDLJELPPOJ at the given index.
        */
-      public int getNotInteractDungeonEntryList(int index) {
-        return notInteractDungeonEntryList_.getInt(index);
+      public int getFKDLJELPPOJ(int index) {
+        return fKDLJELPPOJ_.getInt(index);
       }
       /**
-       * <code>repeated uint32 notInteractDungeonEntryList = 10;</code>
+       * <code>repeated uint32 FKDLJELPPOJ = 13;</code>
        * @param index The index to set the value at.
-       * @param value The notInteractDungeonEntryList to set.
+       * @param value The fKDLJELPPOJ to set.
        * @return This builder for chaining.
        */
-      public Builder setNotInteractDungeonEntryList(
+      public Builder setFKDLJELPPOJ(
           int index, int value) {
-        ensureNotInteractDungeonEntryListIsMutable();
-        notInteractDungeonEntryList_.setInt(index, value);
+        ensureFKDLJELPPOJIsMutable();
+        fKDLJELPPOJ_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 notInteractDungeonEntryList = 10;</code>
-       * @param value The notInteractDungeonEntryList to add.
+       * <code>repeated uint32 FKDLJELPPOJ = 13;</code>
+       * @param value The fKDLJELPPOJ to add.
        * @return This builder for chaining.
        */
-      public Builder addNotInteractDungeonEntryList(int value) {
-        ensureNotInteractDungeonEntryListIsMutable();
-        notInteractDungeonEntryList_.addInt(value);
+      public Builder addFKDLJELPPOJ(int value) {
+        ensureFKDLJELPPOJIsMutable();
+        fKDLJELPPOJ_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 notInteractDungeonEntryList = 10;</code>
-       * @param values The notInteractDungeonEntryList to add.
+       * <code>repeated uint32 FKDLJELPPOJ = 13;</code>
+       * @param values The fKDLJELPPOJ to add.
        * @return This builder for chaining.
        */
-      public Builder addAllNotInteractDungeonEntryList(
+      public Builder addAllFKDLJELPPOJ(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureNotInteractDungeonEntryListIsMutable();
+        ensureFKDLJELPPOJIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, notInteractDungeonEntryList_);
+            values, fKDLJELPPOJ_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 notInteractDungeonEntryList = 10;</code>
+       * <code>repeated uint32 FKDLJELPPOJ = 13;</code>
        * @return This builder for chaining.
        */
-      public Builder clearNotInteractDungeonEntryList() {
-        notInteractDungeonEntryList_ = emptyIntList();
+      public Builder clearFKDLJELPPOJ() {
+        fKDLJELPPOJ_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
@@ -1847,141 +1766,31 @@ public final class GetScenePointRspOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList toBeExploreDungeonEntryList_ = emptyIntList();
-      private void ensureToBeExploreDungeonEntryListIsMutable() {
+      private com.google.protobuf.Internal.IntList hidePointList_ = emptyIntList();
+      private void ensureHidePointListIsMutable() {
         if (!((bitField0_ & 0x00000004) != 0)) {
-          toBeExploreDungeonEntryList_ = mutableCopy(toBeExploreDungeonEntryList_);
+          hidePointList_ = mutableCopy(hidePointList_);
           bitField0_ |= 0x00000004;
          }
       }
       /**
-       * <code>repeated uint32 toBeExploreDungeonEntryList = 13;</code>
-       * @return A list containing the toBeExploreDungeonEntryList.
-       */
-      public java.util.List<java.lang.Integer>
-          getToBeExploreDungeonEntryListList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(toBeExploreDungeonEntryList_) : toBeExploreDungeonEntryList_;
-      }
-      /**
-       * <code>repeated uint32 toBeExploreDungeonEntryList = 13;</code>
-       * @return The count of toBeExploreDungeonEntryList.
-       */
-      public int getToBeExploreDungeonEntryListCount() {
-        return toBeExploreDungeonEntryList_.size();
-      }
-      /**
-       * <code>repeated uint32 toBeExploreDungeonEntryList = 13;</code>
-       * @param index The index of the element to return.
-       * @return The toBeExploreDungeonEntryList at the given index.
-       */
-      public int getToBeExploreDungeonEntryList(int index) {
-        return toBeExploreDungeonEntryList_.getInt(index);
-      }
-      /**
-       * <code>repeated uint32 toBeExploreDungeonEntryList = 13;</code>
-       * @param index The index to set the value at.
-       * @param value The toBeExploreDungeonEntryList to set.
-       * @return This builder for chaining.
-       */
-      public Builder setToBeExploreDungeonEntryList(
-          int index, int value) {
-        ensureToBeExploreDungeonEntryListIsMutable();
-        toBeExploreDungeonEntryList_.setInt(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 toBeExploreDungeonEntryList = 13;</code>
-       * @param value The toBeExploreDungeonEntryList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addToBeExploreDungeonEntryList(int value) {
-        ensureToBeExploreDungeonEntryListIsMutable();
-        toBeExploreDungeonEntryList_.addInt(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 toBeExploreDungeonEntryList = 13;</code>
-       * @param values The toBeExploreDungeonEntryList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllToBeExploreDungeonEntryList(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureToBeExploreDungeonEntryListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, toBeExploreDungeonEntryList_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 toBeExploreDungeonEntryList = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearToBeExploreDungeonEntryList() {
-        toBeExploreDungeonEntryList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-
-      private int belongUid_ ;
-      /**
-       * <code>uint32 belongUid = 6;</code>
-       * @return The belongUid.
-       */
-      @java.lang.Override
-      public int getBelongUid() {
-        return belongUid_;
-      }
-      /**
-       * <code>uint32 belongUid = 6;</code>
-       * @param value The belongUid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBelongUid(int value) {
-        
-        belongUid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 belongUid = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBelongUid() {
-        
-        belongUid_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Internal.IntList hidePointList_ = emptyIntList();
-      private void ensureHidePointListIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          hidePointList_ = mutableCopy(hidePointList_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-      /**
-       * <code>repeated uint32 hidePointList = 3;</code>
+       * <code>repeated uint32 hide_point_list = 12;</code>
        * @return A list containing the hidePointList.
        */
       public java.util.List<java.lang.Integer>
           getHidePointListList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
+        return ((bitField0_ & 0x00000004) != 0) ?
                  java.util.Collections.unmodifiableList(hidePointList_) : hidePointList_;
       }
       /**
-       * <code>repeated uint32 hidePointList = 3;</code>
+       * <code>repeated uint32 hide_point_list = 12;</code>
        * @return The count of hidePointList.
        */
       public int getHidePointListCount() {
         return hidePointList_.size();
       }
       /**
-       * <code>repeated uint32 hidePointList = 3;</code>
+       * <code>repeated uint32 hide_point_list = 12;</code>
        * @param index The index of the element to return.
        * @return The hidePointList at the given index.
        */
@@ -1989,7 +1798,7 @@ public final class GetScenePointRspOuterClass {
         return hidePointList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 hidePointList = 3;</code>
+       * <code>repeated uint32 hide_point_list = 12;</code>
        * @param index The index to set the value at.
        * @param value The hidePointList to set.
        * @return This builder for chaining.
@@ -2002,7 +1811,7 @@ public final class GetScenePointRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 hidePointList = 3;</code>
+       * <code>repeated uint32 hide_point_list = 12;</code>
        * @param value The hidePointList to add.
        * @return This builder for chaining.
        */
@@ -2013,7 +1822,7 @@ public final class GetScenePointRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 hidePointList = 3;</code>
+       * <code>repeated uint32 hide_point_list = 12;</code>
        * @param values The hidePointList to add.
        * @return This builder for chaining.
        */
@@ -2026,41 +1835,230 @@ public final class GetScenePointRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 hidePointList = 3;</code>
+       * <code>repeated uint32 hide_point_list = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearHidePointList() {
         hidePointList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList lLLIACPHNEH_ = emptyIntList();
+      private void ensureLLLIACPHNEHIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          lLLIACPHNEH_ = mutableCopy(lLLIACPHNEH_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <code>repeated uint32 LLLIACPHNEH = 7;</code>
+       * @return A list containing the lLLIACPHNEH.
+       */
+      public java.util.List<java.lang.Integer>
+          getLLLIACPHNEHList() {
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(lLLIACPHNEH_) : lLLIACPHNEH_;
+      }
+      /**
+       * <code>repeated uint32 LLLIACPHNEH = 7;</code>
+       * @return The count of lLLIACPHNEH.
+       */
+      public int getLLLIACPHNEHCount() {
+        return lLLIACPHNEH_.size();
+      }
+      /**
+       * <code>repeated uint32 LLLIACPHNEH = 7;</code>
+       * @param index The index of the element to return.
+       * @return The lLLIACPHNEH at the given index.
+       */
+      public int getLLLIACPHNEH(int index) {
+        return lLLIACPHNEH_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 LLLIACPHNEH = 7;</code>
+       * @param index The index to set the value at.
+       * @param value The lLLIACPHNEH to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLLLIACPHNEH(
+          int index, int value) {
+        ensureLLLIACPHNEHIsMutable();
+        lLLIACPHNEH_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 LLLIACPHNEH = 7;</code>
+       * @param value The lLLIACPHNEH to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLLLIACPHNEH(int value) {
+        ensureLLLIACPHNEHIsMutable();
+        lLLIACPHNEH_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 LLLIACPHNEH = 7;</code>
+       * @param values The lLLIACPHNEH to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllLLLIACPHNEH(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureLLLIACPHNEHIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, lLLIACPHNEH_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 LLLIACPHNEH = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLLLIACPHNEH() {
+        lLLIACPHNEH_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+
+      private int belongUid_ ;
+      /**
+       * <code>uint32 belong_uid = 8;</code>
+       * @return The belongUid.
+       */
+      @java.lang.Override
+      public int getBelongUid() {
+        return belongUid_;
+      }
+      /**
+       * <code>uint32 belong_uid = 8;</code>
+       * @param value The belongUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBelongUid(int value) {
+        
+        belongUid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 belong_uid = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBelongUid() {
+        
+        belongUid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList kBGDANIJLFK_ = emptyIntList();
+      private void ensureKBGDANIJLFKIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          kBGDANIJLFK_ = mutableCopy(kBGDANIJLFK_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <code>repeated uint32 KBGDANIJLFK = 11;</code>
+       * @return A list containing the kBGDANIJLFK.
+       */
+      public java.util.List<java.lang.Integer>
+          getKBGDANIJLFKList() {
+        return ((bitField0_ & 0x00000010) != 0) ?
+                 java.util.Collections.unmodifiableList(kBGDANIJLFK_) : kBGDANIJLFK_;
+      }
+      /**
+       * <code>repeated uint32 KBGDANIJLFK = 11;</code>
+       * @return The count of kBGDANIJLFK.
+       */
+      public int getKBGDANIJLFKCount() {
+        return kBGDANIJLFK_.size();
+      }
+      /**
+       * <code>repeated uint32 KBGDANIJLFK = 11;</code>
+       * @param index The index of the element to return.
+       * @return The kBGDANIJLFK at the given index.
+       */
+      public int getKBGDANIJLFK(int index) {
+        return kBGDANIJLFK_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 KBGDANIJLFK = 11;</code>
+       * @param index The index to set the value at.
+       * @param value The kBGDANIJLFK to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKBGDANIJLFK(
+          int index, int value) {
+        ensureKBGDANIJLFKIsMutable();
+        kBGDANIJLFK_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 KBGDANIJLFK = 11;</code>
+       * @param value The kBGDANIJLFK to add.
+       * @return This builder for chaining.
+       */
+      public Builder addKBGDANIJLFK(int value) {
+        ensureKBGDANIJLFKIsMutable();
+        kBGDANIJLFK_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 KBGDANIJLFK = 11;</code>
+       * @param values The kBGDANIJLFK to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllKBGDANIJLFK(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureKBGDANIJLFKIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, kBGDANIJLFK_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 KBGDANIJLFK = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKBGDANIJLFK() {
+        kBGDANIJLFK_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
 
       private com.google.protobuf.Internal.IntList unlockAreaList_ = emptyIntList();
       private void ensureUnlockAreaListIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           unlockAreaList_ = mutableCopy(unlockAreaList_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
          }
       }
       /**
-       * <code>repeated uint32 unlockAreaList = 9;</code>
+       * <code>repeated uint32 unlockAreaList = 14;</code>
        * @return A list containing the unlockAreaList.
        */
       public java.util.List<java.lang.Integer>
           getUnlockAreaListList() {
-        return ((bitField0_ & 0x00000010) != 0) ?
+        return ((bitField0_ & 0x00000020) != 0) ?
                  java.util.Collections.unmodifiableList(unlockAreaList_) : unlockAreaList_;
       }
       /**
-       * <code>repeated uint32 unlockAreaList = 9;</code>
+       * <code>repeated uint32 unlockAreaList = 14;</code>
        * @return The count of unlockAreaList.
        */
       public int getUnlockAreaListCount() {
         return unlockAreaList_.size();
       }
       /**
-       * <code>repeated uint32 unlockAreaList = 9;</code>
+       * <code>repeated uint32 unlockAreaList = 14;</code>
        * @param index The index of the element to return.
        * @return The unlockAreaList at the given index.
        */
@@ -2068,7 +2066,7 @@ public final class GetScenePointRspOuterClass {
         return unlockAreaList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 unlockAreaList = 9;</code>
+       * <code>repeated uint32 unlockAreaList = 14;</code>
        * @param index The index to set the value at.
        * @param value The unlockAreaList to set.
        * @return This builder for chaining.
@@ -2081,7 +2079,7 @@ public final class GetScenePointRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 unlockAreaList = 9;</code>
+       * <code>repeated uint32 unlockAreaList = 14;</code>
        * @param value The unlockAreaList to add.
        * @return This builder for chaining.
        */
@@ -2092,7 +2090,7 @@ public final class GetScenePointRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 unlockAreaList = 9;</code>
+       * <code>repeated uint32 unlockAreaList = 14;</code>
        * @param values The unlockAreaList to add.
        * @return This builder for chaining.
        */
@@ -2105,199 +2103,72 @@ public final class GetScenePointRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 unlockAreaList = 9;</code>
+       * <code>repeated uint32 unlockAreaList = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearUnlockAreaList() {
         unlockAreaList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Internal.IntList unlockedPointList_ = emptyIntList();
-      private void ensureUnlockedPointListIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
-          unlockedPointList_ = mutableCopy(unlockedPointList_);
-          bitField0_ |= 0x00000020;
-         }
-      }
-      /**
-       * <code>repeated uint32 unlockedPointList = 12;</code>
-       * @return A list containing the unlockedPointList.
-       */
-      public java.util.List<java.lang.Integer>
-          getUnlockedPointListList() {
-        return ((bitField0_ & 0x00000020) != 0) ?
-                 java.util.Collections.unmodifiableList(unlockedPointList_) : unlockedPointList_;
-      }
-      /**
-       * <code>repeated uint32 unlockedPointList = 12;</code>
-       * @return The count of unlockedPointList.
-       */
-      public int getUnlockedPointListCount() {
-        return unlockedPointList_.size();
-      }
-      /**
-       * <code>repeated uint32 unlockedPointList = 12;</code>
-       * @param index The index of the element to return.
-       * @return The unlockedPointList at the given index.
-       */
-      public int getUnlockedPointList(int index) {
-        return unlockedPointList_.getInt(index);
-      }
-      /**
-       * <code>repeated uint32 unlockedPointList = 12;</code>
-       * @param index The index to set the value at.
-       * @param value The unlockedPointList to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUnlockedPointList(
-          int index, int value) {
-        ensureUnlockedPointListIsMutable();
-        unlockedPointList_.setInt(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 unlockedPointList = 12;</code>
-       * @param value The unlockedPointList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addUnlockedPointList(int value) {
-        ensureUnlockedPointListIsMutable();
-        unlockedPointList_.addInt(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 unlockedPointList = 12;</code>
-       * @param values The unlockedPointList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllUnlockedPointList(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureUnlockedPointListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, unlockedPointList_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 unlockedPointList = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUnlockedPointList() {
-        unlockedPointList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList notExploredDungeonEntryList_ = emptyIntList();
-      private void ensureNotExploredDungeonEntryListIsMutable() {
-        if (!((bitField0_ & 0x00000040) != 0)) {
-          notExploredDungeonEntryList_ = mutableCopy(notExploredDungeonEntryList_);
-          bitField0_ |= 0x00000040;
-         }
-      }
+      private boolean pGBKOMBKBKG_ ;
       /**
-       * <code>repeated uint32 notExploredDungeonEntryList = 4;</code>
-       * @return A list containing the notExploredDungeonEntryList.
+       * <code>bool PGBKOMBKBKG = 5;</code>
+       * @return The pGBKOMBKBKG.
        */
-      public java.util.List<java.lang.Integer>
-          getNotExploredDungeonEntryListList() {
-        return ((bitField0_ & 0x00000040) != 0) ?
-                 java.util.Collections.unmodifiableList(notExploredDungeonEntryList_) : notExploredDungeonEntryList_;
+      @java.lang.Override
+      public boolean getPGBKOMBKBKG() {
+        return pGBKOMBKBKG_;
       }
       /**
-       * <code>repeated uint32 notExploredDungeonEntryList = 4;</code>
-       * @return The count of notExploredDungeonEntryList.
-       */
-      public int getNotExploredDungeonEntryListCount() {
-        return notExploredDungeonEntryList_.size();
-      }
-      /**
-       * <code>repeated uint32 notExploredDungeonEntryList = 4;</code>
-       * @param index The index of the element to return.
-       * @return The notExploredDungeonEntryList at the given index.
-       */
-      public int getNotExploredDungeonEntryList(int index) {
-        return notExploredDungeonEntryList_.getInt(index);
-      }
-      /**
-       * <code>repeated uint32 notExploredDungeonEntryList = 4;</code>
-       * @param index The index to set the value at.
-       * @param value The notExploredDungeonEntryList to set.
+       * <code>bool PGBKOMBKBKG = 5;</code>
+       * @param value The pGBKOMBKBKG to set.
        * @return This builder for chaining.
        */
-      public Builder setNotExploredDungeonEntryList(
-          int index, int value) {
-        ensureNotExploredDungeonEntryListIsMutable();
-        notExploredDungeonEntryList_.setInt(index, value);
+      public Builder setPGBKOMBKBKG(boolean value) {
+        
+        pGBKOMBKBKG_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 notExploredDungeonEntryList = 4;</code>
-       * @param value The notExploredDungeonEntryList to add.
+       * <code>bool PGBKOMBKBKG = 5;</code>
        * @return This builder for chaining.
        */
-      public Builder addNotExploredDungeonEntryList(int value) {
-        ensureNotExploredDungeonEntryListIsMutable();
-        notExploredDungeonEntryList_.addInt(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 notExploredDungeonEntryList = 4;</code>
-       * @param values The notExploredDungeonEntryList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllNotExploredDungeonEntryList(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureNotExploredDungeonEntryListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, notExploredDungeonEntryList_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 notExploredDungeonEntryList = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearNotExploredDungeonEntryList() {
-        notExploredDungeonEntryList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+      public Builder clearPGBKOMBKBKG() {
+        
+        pGBKOMBKBKG_ = false;
         onChanged();
         return this;
       }
 
       private com.google.protobuf.Internal.IntList unhidePointList_ = emptyIntList();
       private void ensureUnhidePointListIsMutable() {
-        if (!((bitField0_ & 0x00000080) != 0)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           unhidePointList_ = mutableCopy(unhidePointList_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000040;
          }
       }
       /**
-       * <code>repeated uint32 unhidePointList = 5;</code>
+       * <code>repeated uint32 unhidePointList = 10;</code>
        * @return A list containing the unhidePointList.
        */
       public java.util.List<java.lang.Integer>
           getUnhidePointListList() {
-        return ((bitField0_ & 0x00000080) != 0) ?
+        return ((bitField0_ & 0x00000040) != 0) ?
                  java.util.Collections.unmodifiableList(unhidePointList_) : unhidePointList_;
       }
       /**
-       * <code>repeated uint32 unhidePointList = 5;</code>
+       * <code>repeated uint32 unhidePointList = 10;</code>
        * @return The count of unhidePointList.
        */
       public int getUnhidePointListCount() {
         return unhidePointList_.size();
       }
       /**
-       * <code>repeated uint32 unhidePointList = 5;</code>
+       * <code>repeated uint32 unhidePointList = 10;</code>
        * @param index The index of the element to return.
        * @return The unhidePointList at the given index.
        */
@@ -2305,7 +2176,7 @@ public final class GetScenePointRspOuterClass {
         return unhidePointList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 unhidePointList = 5;</code>
+       * <code>repeated uint32 unhidePointList = 10;</code>
        * @param index The index to set the value at.
        * @param value The unhidePointList to set.
        * @return This builder for chaining.
@@ -2318,7 +2189,7 @@ public final class GetScenePointRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 unhidePointList = 5;</code>
+       * <code>repeated uint32 unhidePointList = 10;</code>
        * @param value The unhidePointList to add.
        * @return This builder for chaining.
        */
@@ -2329,7 +2200,7 @@ public final class GetScenePointRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 unhidePointList = 5;</code>
+       * <code>repeated uint32 unhidePointList = 10;</code>
        * @param values The unhidePointList to add.
        * @return This builder for chaining.
        */
@@ -2342,11 +2213,90 @@ public final class GetScenePointRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 unhidePointList = 5;</code>
+       * <code>repeated uint32 unhidePointList = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearUnhidePointList() {
         unhidePointList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList hJLALADBFAC_ = emptyIntList();
+      private void ensureHJLALADBFACIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          hJLALADBFAC_ = mutableCopy(hJLALADBFAC_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+      /**
+       * <code>repeated uint32 HJLALADBFAC = 15;</code>
+       * @return A list containing the hJLALADBFAC.
+       */
+      public java.util.List<java.lang.Integer>
+          getHJLALADBFACList() {
+        return ((bitField0_ & 0x00000080) != 0) ?
+                 java.util.Collections.unmodifiableList(hJLALADBFAC_) : hJLALADBFAC_;
+      }
+      /**
+       * <code>repeated uint32 HJLALADBFAC = 15;</code>
+       * @return The count of hJLALADBFAC.
+       */
+      public int getHJLALADBFACCount() {
+        return hJLALADBFAC_.size();
+      }
+      /**
+       * <code>repeated uint32 HJLALADBFAC = 15;</code>
+       * @param index The index of the element to return.
+       * @return The hJLALADBFAC at the given index.
+       */
+      public int getHJLALADBFAC(int index) {
+        return hJLALADBFAC_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 HJLALADBFAC = 15;</code>
+       * @param index The index to set the value at.
+       * @param value The hJLALADBFAC to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHJLALADBFAC(
+          int index, int value) {
+        ensureHJLALADBFACIsMutable();
+        hJLALADBFAC_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 HJLALADBFAC = 15;</code>
+       * @param value The hJLALADBFAC to add.
+       * @return This builder for chaining.
+       */
+      public Builder addHJLALADBFAC(int value) {
+        ensureHJLALADBFACIsMutable();
+        hJLALADBFAC_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 HJLALADBFAC = 15;</code>
+       * @param values The hJLALADBFAC to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllHJLALADBFAC(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureHJLALADBFACIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, hJLALADBFAC_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 HJLALADBFAC = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHJLALADBFAC() {
+        hJLALADBFAC_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
@@ -2354,7 +2304,7 @@ public final class GetScenePointRspOuterClass {
 
       private int sceneId_ ;
       /**
-       * <code>uint32 sceneId = 14;</code>
+       * <code>uint32 scene_id = 6;</code>
        * @return The sceneId.
        */
       @java.lang.Override
@@ -2362,7 +2312,7 @@ public final class GetScenePointRspOuterClass {
         return sceneId_;
       }
       /**
-       * <code>uint32 sceneId = 14;</code>
+       * <code>uint32 scene_id = 6;</code>
        * @param value The sceneId to set.
        * @return This builder for chaining.
        */
@@ -2373,7 +2323,7 @@ public final class GetScenePointRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 sceneId = 14;</code>
+       * <code>uint32 scene_id = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearSceneId() {
@@ -2383,80 +2333,80 @@ public final class GetScenePointRspOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList groupUnlimitPointList_ = emptyIntList();
-      private void ensureGroupUnlimitPointListIsMutable() {
+      private com.google.protobuf.Internal.IntList unlockedPointList_ = emptyIntList();
+      private void ensureUnlockedPointListIsMutable() {
         if (!((bitField0_ & 0x00000100) != 0)) {
-          groupUnlimitPointList_ = mutableCopy(groupUnlimitPointList_);
+          unlockedPointList_ = mutableCopy(unlockedPointList_);
           bitField0_ |= 0x00000100;
          }
       }
       /**
-       * <code>repeated uint32 groupUnlimitPointList = 1;</code>
-       * @return A list containing the groupUnlimitPointList.
+       * <code>repeated uint32 unlocked_point_list = 4;</code>
+       * @return A list containing the unlockedPointList.
        */
       public java.util.List<java.lang.Integer>
-          getGroupUnlimitPointListList() {
+          getUnlockedPointListList() {
         return ((bitField0_ & 0x00000100) != 0) ?
-                 java.util.Collections.unmodifiableList(groupUnlimitPointList_) : groupUnlimitPointList_;
+                 java.util.Collections.unmodifiableList(unlockedPointList_) : unlockedPointList_;
       }
       /**
-       * <code>repeated uint32 groupUnlimitPointList = 1;</code>
-       * @return The count of groupUnlimitPointList.
+       * <code>repeated uint32 unlocked_point_list = 4;</code>
+       * @return The count of unlockedPointList.
        */
-      public int getGroupUnlimitPointListCount() {
-        return groupUnlimitPointList_.size();
+      public int getUnlockedPointListCount() {
+        return unlockedPointList_.size();
       }
       /**
-       * <code>repeated uint32 groupUnlimitPointList = 1;</code>
+       * <code>repeated uint32 unlocked_point_list = 4;</code>
        * @param index The index of the element to return.
-       * @return The groupUnlimitPointList at the given index.
+       * @return The unlockedPointList at the given index.
        */
-      public int getGroupUnlimitPointList(int index) {
-        return groupUnlimitPointList_.getInt(index);
+      public int getUnlockedPointList(int index) {
+        return unlockedPointList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 groupUnlimitPointList = 1;</code>
+       * <code>repeated uint32 unlocked_point_list = 4;</code>
        * @param index The index to set the value at.
-       * @param value The groupUnlimitPointList to set.
+       * @param value The unlockedPointList to set.
        * @return This builder for chaining.
        */
-      public Builder setGroupUnlimitPointList(
+      public Builder setUnlockedPointList(
           int index, int value) {
-        ensureGroupUnlimitPointListIsMutable();
-        groupUnlimitPointList_.setInt(index, value);
+        ensureUnlockedPointListIsMutable();
+        unlockedPointList_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 groupUnlimitPointList = 1;</code>
-       * @param value The groupUnlimitPointList to add.
+       * <code>repeated uint32 unlocked_point_list = 4;</code>
+       * @param value The unlockedPointList to add.
        * @return This builder for chaining.
        */
-      public Builder addGroupUnlimitPointList(int value) {
-        ensureGroupUnlimitPointListIsMutable();
-        groupUnlimitPointList_.addInt(value);
+      public Builder addUnlockedPointList(int value) {
+        ensureUnlockedPointListIsMutable();
+        unlockedPointList_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 groupUnlimitPointList = 1;</code>
-       * @param values The groupUnlimitPointList to add.
+       * <code>repeated uint32 unlocked_point_list = 4;</code>
+       * @param values The unlockedPointList to add.
        * @return This builder for chaining.
        */
-      public Builder addAllGroupUnlimitPointList(
+      public Builder addAllUnlockedPointList(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureGroupUnlimitPointListIsMutable();
+        ensureUnlockedPointListIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, groupUnlimitPointList_);
+            values, unlockedPointList_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 groupUnlimitPointList = 1;</code>
+       * <code>repeated uint32 unlocked_point_list = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearGroupUnlimitPointList() {
-        groupUnlimitPointList_ = emptyIntList();
+      public Builder clearUnlockedPointList() {
+        unlockedPointList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
@@ -2528,19 +2478,16 @@ public final class GetScenePointRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026GetScenePointRsp.proto\"\242\003\n\020GetScenePoi" +
-      "ntRsp\022\027\n\017lockedPointList\030\007 \003(\r\022#\n\033notInt" +
-      "eractDungeonEntryList\030\n \003(\r\022\017\n\007retcode\030\002" +
-      " \001(\005\022#\n\033toBeExploreDungeonEntryList\030\r \003(" +
-      "\r\022\021\n\tbelongUid\030\006 \001(\r\022\025\n\rhidePointList\030\003 " +
-      "\003(\r\022\026\n\016unlockAreaList\030\t \003(\r\022\031\n\021unlockedP" +
-      "ointList\030\014 \003(\r\022#\n\033notExploredDungeonEntr" +
-      "yList\030\004 \003(\r\022\027\n\017unhidePointList\030\005 \003(\r\022\017\n\007" +
-      "sceneId\030\016 \001(\r\022\035\n\025groupUnlimitPointList\030\001" +
-      " \003(\r\"O\n\013FJBIDFAAFJK\022\010\n\004NONE\020\000\022\020\n\013PEPPOHP" +
-      "HJOJ\020\325\001\022\017\n\013DCDNILFDFLB\020\000\022\017\n\013NNBKOLMPOEA\020" +
-      "\001\032\002\020\001B\033\n\031emu.grasscutter.net.protob\006prot" +
-      "o3"
+      "\n\026GetScenePointRsp.proto\"\256\002\n\020GetScenePoi" +
+      "ntRsp\022\023\n\013LHGAOJELAMA\030\003 \003(\r\022\023\n\013FKDLJELPPO" +
+      "J\030\r \003(\r\022\017\n\007retcode\030\002 \001(\005\022\027\n\017hide_point_l" +
+      "ist\030\014 \003(\r\022\023\n\013LLLIACPHNEH\030\007 \003(\r\022\022\n\nbelong" +
+      "_uid\030\010 \001(\r\022\023\n\013KBGDANIJLFK\030\013 \003(\r\022\026\n\016unloc" +
+      "kAreaList\030\016 \003(\r\022\023\n\013PGBKOMBKBKG\030\005 \001(\010\022\027\n\017" +
+      "unhidePointList\030\n \003(\r\022\023\n\013HJLALADBFAC\030\017 \003" +
+      "(\r\022\020\n\010scene_id\030\006 \001(\r\022\033\n\023unlocked_point_l" +
+      "ist\030\004 \003(\rB\033\n\031emu.grasscutter.net.protob\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2551,7 +2498,7 @@ public final class GetScenePointRspOuterClass {
     internal_static_GetScenePointRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetScenePointRsp_descriptor,
-        new java.lang.String[] { "LockedPointList", "NotInteractDungeonEntryList", "Retcode", "ToBeExploreDungeonEntryList", "BelongUid", "HidePointList", "UnlockAreaList", "UnlockedPointList", "NotExploredDungeonEntryList", "UnhidePointList", "SceneId", "GroupUnlimitPointList", });
+        new java.lang.String[] { "LHGAOJELAMA", "FKDLJELPPOJ", "Retcode", "HidePointList", "LLLIACPHNEH", "BelongUid", "KBGDANIJLFK", "UnlockAreaList", "PGBKOMBKBKG", "UnhidePointList", "HJLALADBFAC", "SceneId", "UnlockedPointList", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

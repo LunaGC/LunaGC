@@ -43,6 +43,10 @@ public final class MuqadasPotionActivityDetailInfoOuterClass {
         int index);
   }
   /**
+   * <pre>
+   * Name: MLIOFGMAFPP
+   * </pre>
+   *
    * Protobuf type {@code MuqadasPotionActivityDetailInfo}
    */
   public static final class MuqadasPotionActivityDetailInfo extends
@@ -70,56 +74,6 @@ public final class MuqadasPotionActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private MuqadasPotionActivityDetailInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                muqadasPotionLevelDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.MuqadasPotionLevelDataOuterClass.MuqadasPotionLevelData>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              muqadasPotionLevelDataList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.MuqadasPotionLevelDataOuterClass.MuqadasPotionLevelData.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          muqadasPotionLevelDataList_ = java.util.Collections.unmodifiableList(muqadasPotionLevelDataList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.MuqadasPotionActivityDetailInfoOuterClass.internal_static_MuqadasPotionActivityDetailInfo_descriptor;
@@ -134,6 +88,7 @@ public final class MuqadasPotionActivityDetailInfoOuterClass {
     }
 
     public static final int MUQADAS_POTION_LEVEL_DATA_LIST_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.MuqadasPotionLevelDataOuterClass.MuqadasPotionLevelData> muqadasPotionLevelDataList_;
     /**
      * <code>repeated .MuqadasPotionLevelData muqadas_potion_level_data_list = 5;</code>
@@ -190,7 +145,7 @@ public final class MuqadasPotionActivityDetailInfoOuterClass {
       for (int i = 0; i < muqadasPotionLevelDataList_.size(); i++) {
         output.writeMessage(5, muqadasPotionLevelDataList_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -203,7 +158,7 @@ public final class MuqadasPotionActivityDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, muqadasPotionLevelDataList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -220,7 +175,7 @@ public final class MuqadasPotionActivityDetailInfoOuterClass {
 
       if (!getMuqadasPotionLevelDataListList()
           .equals(other.getMuqadasPotionLevelDataListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -235,7 +190,7 @@ public final class MuqadasPotionActivityDetailInfoOuterClass {
         hash = (37 * hash) + MUQADAS_POTION_LEVEL_DATA_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getMuqadasPotionLevelDataListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -331,6 +286,10 @@ public final class MuqadasPotionActivityDetailInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: MLIOFGMAFPP
+     * </pre>
+     *
      * Protobuf type {@code MuqadasPotionActivityDetailInfo}
      */
     public static final class Builder extends
@@ -352,29 +311,25 @@ public final class MuqadasPotionActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MuqadasPotionActivityDetailInfoOuterClass.MuqadasPotionActivityDetailInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMuqadasPotionLevelDataListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (muqadasPotionLevelDataListBuilder_ == null) {
           muqadasPotionLevelDataList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          muqadasPotionLevelDataList_ = null;
           muqadasPotionLevelDataListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -401,7 +356,13 @@ public final class MuqadasPotionActivityDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.MuqadasPotionActivityDetailInfoOuterClass.MuqadasPotionActivityDetailInfo buildPartial() {
         emu.grasscutter.net.proto.MuqadasPotionActivityDetailInfoOuterClass.MuqadasPotionActivityDetailInfo result = new emu.grasscutter.net.proto.MuqadasPotionActivityDetailInfoOuterClass.MuqadasPotionActivityDetailInfo(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.MuqadasPotionActivityDetailInfoOuterClass.MuqadasPotionActivityDetailInfo result) {
         if (muqadasPotionLevelDataListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             muqadasPotionLevelDataList_ = java.util.Collections.unmodifiableList(muqadasPotionLevelDataList_);
@@ -411,8 +372,10 @@ public final class MuqadasPotionActivityDetailInfoOuterClass {
         } else {
           result.muqadasPotionLevelDataList_ = muqadasPotionLevelDataListBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.MuqadasPotionActivityDetailInfoOuterClass.MuqadasPotionActivityDetailInfo result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -485,7 +448,7 @@ public final class MuqadasPotionActivityDetailInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -500,17 +463,43 @@ public final class MuqadasPotionActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.MuqadasPotionActivityDetailInfoOuterClass.MuqadasPotionActivityDetailInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 42: {
+                emu.grasscutter.net.proto.MuqadasPotionLevelDataOuterClass.MuqadasPotionLevelData m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.MuqadasPotionLevelDataOuterClass.MuqadasPotionLevelData.parser(),
+                        extensionRegistry);
+                if (muqadasPotionLevelDataListBuilder_ == null) {
+                  ensureMuqadasPotionLevelDataListIsMutable();
+                  muqadasPotionLevelDataList_.add(m);
+                } else {
+                  muqadasPotionLevelDataListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.MuqadasPotionActivityDetailInfoOuterClass.MuqadasPotionActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -787,7 +776,18 @@ public final class MuqadasPotionActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MuqadasPotionActivityDetailInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

@@ -76,61 +76,6 @@ public final class InstableSprayInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private InstableSprayInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                buffInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.SceneGalleryInstableSprayBuffInfoOuterClass.SceneGalleryInstableSprayBuffInfo>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              buffInfoList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.SceneGalleryInstableSprayBuffInfoOuterClass.SceneGalleryInstableSprayBuffInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 104: {
-
-              score_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          buffInfoList_ = java.util.Collections.unmodifiableList(buffInfoList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.InstableSprayInfoOuterClass.internal_static_InstableSprayInfo_descriptor;
@@ -145,7 +90,7 @@ public final class InstableSprayInfoOuterClass {
     }
 
     public static final int SCORE_FIELD_NUMBER = 13;
-    private int score_;
+    private int score_ = 0;
     /**
      * <code>uint32 score = 13;</code>
      * @return The score.
@@ -156,6 +101,7 @@ public final class InstableSprayInfoOuterClass {
     }
 
     public static final int BUFFINFOLIST_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.SceneGalleryInstableSprayBuffInfoOuterClass.SceneGalleryInstableSprayBuffInfo> buffInfoList_;
     /**
      * <code>repeated .SceneGalleryInstableSprayBuffInfo buffInfoList = 6;</code>
@@ -215,7 +161,7 @@ public final class InstableSprayInfoOuterClass {
       if (score_ != 0) {
         output.writeUInt32(13, score_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -232,7 +178,7 @@ public final class InstableSprayInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, score_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -251,7 +197,7 @@ public final class InstableSprayInfoOuterClass {
           != other.getScore()) return false;
       if (!getBuffInfoListList()
           .equals(other.getBuffInfoListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -268,7 +214,7 @@ public final class InstableSprayInfoOuterClass {
         hash = (37 * hash) + BUFFINFOLIST_FIELD_NUMBER;
         hash = (53 * hash) + getBuffInfoListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -385,31 +331,26 @@ public final class InstableSprayInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.InstableSprayInfoOuterClass.InstableSprayInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBuffInfoListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         score_ = 0;
-
         if (buffInfoListBuilder_ == null) {
           buffInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          buffInfoList_ = null;
           buffInfoListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -436,19 +377,29 @@ public final class InstableSprayInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.InstableSprayInfoOuterClass.InstableSprayInfo buildPartial() {
         emu.grasscutter.net.proto.InstableSprayInfoOuterClass.InstableSprayInfo result = new emu.grasscutter.net.proto.InstableSprayInfoOuterClass.InstableSprayInfo(this);
-        int from_bitField0_ = bitField0_;
-        result.score_ = score_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.InstableSprayInfoOuterClass.InstableSprayInfo result) {
         if (buffInfoListBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             buffInfoList_ = java.util.Collections.unmodifiableList(buffInfoList_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.buffInfoList_ = buffInfoList_;
         } else {
           result.buffInfoList_ = buffInfoListBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.InstableSprayInfoOuterClass.InstableSprayInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.score_ = score_;
+        }
       }
 
       @java.lang.Override
@@ -502,7 +453,7 @@ public final class InstableSprayInfoOuterClass {
           if (!other.buffInfoList_.isEmpty()) {
             if (buffInfoList_.isEmpty()) {
               buffInfoList_ = other.buffInfoList_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureBuffInfoListIsMutable();
               buffInfoList_.addAll(other.buffInfoList_);
@@ -515,7 +466,7 @@ public final class InstableSprayInfoOuterClass {
               buffInfoListBuilder_.dispose();
               buffInfoListBuilder_ = null;
               buffInfoList_ = other.buffInfoList_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               buffInfoListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getBuffInfoListFieldBuilder() : null;
@@ -524,7 +475,7 @@ public final class InstableSprayInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -539,17 +490,48 @@ public final class InstableSprayInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.InstableSprayInfoOuterClass.InstableSprayInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 50: {
+                emu.grasscutter.net.proto.SceneGalleryInstableSprayBuffInfoOuterClass.SceneGalleryInstableSprayBuffInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.SceneGalleryInstableSprayBuffInfoOuterClass.SceneGalleryInstableSprayBuffInfo.parser(),
+                        extensionRegistry);
+                if (buffInfoListBuilder_ == null) {
+                  ensureBuffInfoListIsMutable();
+                  buffInfoList_.add(m);
+                } else {
+                  buffInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 104: {
+                score_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 104
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.InstableSprayInfoOuterClass.InstableSprayInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -571,6 +553,7 @@ public final class InstableSprayInfoOuterClass {
       public Builder setScore(int value) {
         
         score_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -579,7 +562,7 @@ public final class InstableSprayInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearScore() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         score_ = 0;
         onChanged();
         return this;
@@ -588,9 +571,9 @@ public final class InstableSprayInfoOuterClass {
       private java.util.List<emu.grasscutter.net.proto.SceneGalleryInstableSprayBuffInfoOuterClass.SceneGalleryInstableSprayBuffInfo> buffInfoList_ =
         java.util.Collections.emptyList();
       private void ensureBuffInfoListIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           buffInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.SceneGalleryInstableSprayBuffInfoOuterClass.SceneGalleryInstableSprayBuffInfo>(buffInfoList_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -740,7 +723,7 @@ public final class InstableSprayInfoOuterClass {
       public Builder clearBuffInfoList() {
         if (buffInfoListBuilder_ == null) {
           buffInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           buffInfoListBuilder_.clear();
@@ -817,7 +800,7 @@ public final class InstableSprayInfoOuterClass {
           buffInfoListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.SceneGalleryInstableSprayBuffInfoOuterClass.SceneGalleryInstableSprayBuffInfo, emu.grasscutter.net.proto.SceneGalleryInstableSprayBuffInfoOuterClass.SceneGalleryInstableSprayBuffInfo.Builder, emu.grasscutter.net.proto.SceneGalleryInstableSprayBuffInfoOuterClass.SceneGalleryInstableSprayBuffInfoOrBuilder>(
                   buffInfoList_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           buffInfoList_ = null;
@@ -857,7 +840,18 @@ public final class InstableSprayInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new InstableSprayInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

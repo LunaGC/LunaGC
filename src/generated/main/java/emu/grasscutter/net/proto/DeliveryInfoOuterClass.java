@@ -75,78 +75,6 @@ public final class DeliveryInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private DeliveryInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 32: {
-
-              isTakenReward_ = input.readBool();
-              break;
-            }
-            case 48: {
-
-              dayIndex_ = input.readUInt32();
-              break;
-            }
-            case 56: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                finishedDeliveryQuestIndex_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              finishedDeliveryQuestIndex_.addInt(input.readUInt32());
-              break;
-            }
-            case 58: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                finishedDeliveryQuestIndex_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                finishedDeliveryQuestIndex_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          finishedDeliveryQuestIndex_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.DeliveryInfoOuterClass.internal_static_DeliveryInfo_descriptor;
@@ -161,7 +89,7 @@ public final class DeliveryInfoOuterClass {
     }
 
     public static final int DAYINDEX_FIELD_NUMBER = 6;
-    private int dayIndex_;
+    private int dayIndex_ = 0;
     /**
      * <code>uint32 dayIndex = 6;</code>
      * @return The dayIndex.
@@ -172,6 +100,7 @@ public final class DeliveryInfoOuterClass {
     }
 
     public static final int FINISHEDDELIVERYQUESTINDEX_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList finishedDeliveryQuestIndex_;
     /**
      * <code>repeated uint32 finishedDeliveryQuestIndex = 7;</code>
@@ -200,7 +129,7 @@ public final class DeliveryInfoOuterClass {
     private int finishedDeliveryQuestIndexMemoizedSerializedSize = -1;
 
     public static final int ISTAKENREWARD_FIELD_NUMBER = 4;
-    private boolean isTakenReward_;
+    private boolean isTakenReward_ = false;
     /**
      * <code>bool isTakenReward = 4;</code>
      * @return The isTakenReward.
@@ -238,7 +167,7 @@ public final class DeliveryInfoOuterClass {
       for (int i = 0; i < finishedDeliveryQuestIndex_.size(); i++) {
         output.writeUInt32NoTag(finishedDeliveryQuestIndex_.getInt(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -269,7 +198,7 @@ public final class DeliveryInfoOuterClass {
         }
         finishedDeliveryQuestIndexMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -290,7 +219,7 @@ public final class DeliveryInfoOuterClass {
           .equals(other.getFinishedDeliveryQuestIndexList())) return false;
       if (getIsTakenReward()
           != other.getIsTakenReward()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -310,7 +239,7 @@ public final class DeliveryInfoOuterClass {
       hash = (37 * hash) + ISTAKENREWARD_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsTakenReward());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -427,28 +356,21 @@ public final class DeliveryInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.DeliveryInfoOuterClass.DeliveryInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         dayIndex_ = 0;
-
         finishedDeliveryQuestIndex_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
         isTakenReward_ = false;
-
         return this;
       }
 
@@ -475,16 +397,28 @@ public final class DeliveryInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.DeliveryInfoOuterClass.DeliveryInfo buildPartial() {
         emu.grasscutter.net.proto.DeliveryInfoOuterClass.DeliveryInfo result = new emu.grasscutter.net.proto.DeliveryInfoOuterClass.DeliveryInfo(this);
-        int from_bitField0_ = bitField0_;
-        result.dayIndex_ = dayIndex_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          finishedDeliveryQuestIndex_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.finishedDeliveryQuestIndex_ = finishedDeliveryQuestIndex_;
-        result.isTakenReward_ = isTakenReward_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.DeliveryInfoOuterClass.DeliveryInfo result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          finishedDeliveryQuestIndex_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.finishedDeliveryQuestIndex_ = finishedDeliveryQuestIndex_;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.DeliveryInfoOuterClass.DeliveryInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dayIndex_ = dayIndex_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.isTakenReward_ = isTakenReward_;
+        }
       }
 
       @java.lang.Override
@@ -537,7 +471,7 @@ public final class DeliveryInfoOuterClass {
         if (!other.finishedDeliveryQuestIndex_.isEmpty()) {
           if (finishedDeliveryQuestIndex_.isEmpty()) {
             finishedDeliveryQuestIndex_ = other.finishedDeliveryQuestIndex_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureFinishedDeliveryQuestIndexIsMutable();
             finishedDeliveryQuestIndex_.addAll(other.finishedDeliveryQuestIndex_);
@@ -547,7 +481,7 @@ public final class DeliveryInfoOuterClass {
         if (other.getIsTakenReward() != false) {
           setIsTakenReward(other.getIsTakenReward());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -562,17 +496,56 @@ public final class DeliveryInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.DeliveryInfoOuterClass.DeliveryInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 32: {
+                isTakenReward_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 32
+              case 48: {
+                dayIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 48
+              case 56: {
+                int v = input.readUInt32();
+                ensureFinishedDeliveryQuestIndexIsMutable();
+                finishedDeliveryQuestIndex_.addInt(v);
+                break;
+              } // case 56
+              case 58: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureFinishedDeliveryQuestIndexIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  finishedDeliveryQuestIndex_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.DeliveryInfoOuterClass.DeliveryInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -594,6 +567,7 @@ public final class DeliveryInfoOuterClass {
       public Builder setDayIndex(int value) {
         
         dayIndex_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -602,7 +576,7 @@ public final class DeliveryInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDayIndex() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         dayIndex_ = 0;
         onChanged();
         return this;
@@ -610,10 +584,10 @@ public final class DeliveryInfoOuterClass {
 
       private com.google.protobuf.Internal.IntList finishedDeliveryQuestIndex_ = emptyIntList();
       private void ensureFinishedDeliveryQuestIndexIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           finishedDeliveryQuestIndex_ = mutableCopy(finishedDeliveryQuestIndex_);
-          bitField0_ |= 0x00000001;
-         }
+          bitField0_ |= 0x00000002;
+        }
       }
       /**
        * <code>repeated uint32 finishedDeliveryQuestIndex = 7;</code>
@@ -621,7 +595,7 @@ public final class DeliveryInfoOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getFinishedDeliveryQuestIndexList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
+        return ((bitField0_ & 0x00000002) != 0) ?
                  java.util.Collections.unmodifiableList(finishedDeliveryQuestIndex_) : finishedDeliveryQuestIndex_;
       }
       /**
@@ -647,6 +621,7 @@ public final class DeliveryInfoOuterClass {
        */
       public Builder setFinishedDeliveryQuestIndex(
           int index, int value) {
+        
         ensureFinishedDeliveryQuestIndexIsMutable();
         finishedDeliveryQuestIndex_.setInt(index, value);
         onChanged();
@@ -658,6 +633,7 @@ public final class DeliveryInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addFinishedDeliveryQuestIndex(int value) {
+        
         ensureFinishedDeliveryQuestIndexIsMutable();
         finishedDeliveryQuestIndex_.addInt(value);
         onChanged();
@@ -682,7 +658,7 @@ public final class DeliveryInfoOuterClass {
        */
       public Builder clearFinishedDeliveryQuestIndex() {
         finishedDeliveryQuestIndex_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -704,6 +680,7 @@ public final class DeliveryInfoOuterClass {
       public Builder setIsTakenReward(boolean value) {
         
         isTakenReward_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -712,7 +689,7 @@ public final class DeliveryInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsTakenReward() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         isTakenReward_ = false;
         onChanged();
         return this;
@@ -750,7 +727,18 @@ public final class DeliveryInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DeliveryInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

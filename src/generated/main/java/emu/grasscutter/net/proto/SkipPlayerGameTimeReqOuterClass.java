@@ -128,145 +128,6 @@ public final class SkipPlayerGameTimeReqOuterClass {
               emu.grasscutter.net.proto.SkipPlayerGameTimeReqOuterClass.SkipPlayerGameTimeReq.class, emu.grasscutter.net.proto.SkipPlayerGameTimeReqOuterClass.SkipPlayerGameTimeReq.Builder.class);
     }
 
-    /**
-     * Protobuf enum {@code SkipPlayerGameTimeReq.PPJDKEJDOGN}
-     */
-    public enum PPJDKEJDOGN
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>NONE = 0;</code>
-       */
-      NONE(0, 0),
-      /**
-       * <code>PEPPOHPHJOJ = 108;</code>
-       */
-      PEPPOHPHJOJ(1, 108),
-      /**
-       * <code>NNBKOLMPOEA = 1;</code>
-       */
-      NNBKOLMPOEA(3, 1),
-      UNRECOGNIZED(-1, -1),
-      ;
-
-      /**
-       * <code>DCDNILFDFLB = 0;</code>
-       */
-      public static final PPJDKEJDOGN DCDNILFDFLB = NONE;
-      /**
-       * <code>EAJIABGAOCI = 1;</code>
-       */
-      public static final PPJDKEJDOGN EAJIABGAOCI = NNBKOLMPOEA;
-      /**
-       * <code>NONE = 0;</code>
-       */
-      public static final int NONE_VALUE = 0;
-      /**
-       * <code>PEPPOHPHJOJ = 108;</code>
-       */
-      public static final int PEPPOHPHJOJ_VALUE = 108;
-      /**
-       * <code>DCDNILFDFLB = 0;</code>
-       */
-      public static final int DCDNILFDFLB_VALUE = 0;
-      /**
-       * <code>NNBKOLMPOEA = 1;</code>
-       */
-      public static final int NNBKOLMPOEA_VALUE = 1;
-      /**
-       * <code>EAJIABGAOCI = 1;</code>
-       */
-      public static final int EAJIABGAOCI_VALUE = 1;
-
-
-      public final int getNumber() {
-        if (index == -1) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static PPJDKEJDOGN valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static PPJDKEJDOGN forNumber(int value) {
-        switch (value) {
-          case 0: return NONE;
-          case 108: return PEPPOHPHJOJ;
-          case 1: return NNBKOLMPOEA;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<PPJDKEJDOGN>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          PPJDKEJDOGN> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<PPJDKEJDOGN>() {
-              public PPJDKEJDOGN findValueByNumber(int number) {
-                return PPJDKEJDOGN.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        if (index == -1) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return emu.grasscutter.net.proto.SkipPlayerGameTimeReqOuterClass.SkipPlayerGameTimeReq.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final PPJDKEJDOGN[] VALUES = getStaticValuesArray();
-      private static PPJDKEJDOGN[] getStaticValuesArray() {
-        return new PPJDKEJDOGN[] {
-          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, EAJIABGAOCI, 
-        };
-      }
-      public static PPJDKEJDOGN valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int index;
-      private final int value;
-
-      private PPJDKEJDOGN(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:SkipPlayerGameTimeReq.PPJDKEJDOGN)
-    }
-
     public static final int ISFORCESET_FIELD_NUMBER = 3;
     private boolean isForceSet_;
     /**
@@ -796,13 +657,10 @@ public final class SkipPlayerGameTimeReqOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033SkipPlayerGameTimeReq.proto\"\266\001\n\025SkipPl" +
-      "ayerGameTimeReq\022\022\n\nisForceSet\030\003 \001(\010\022\026\n\016c" +
-      "lientGameTime\030\001 \001(\r\022\020\n\010gameTime\030\017 \001(\r\"_\n" +
-      "\013PPJDKEJDOGN\022\010\n\004NONE\020\000\022\017\n\013PEPPOHPHJOJ\020l\022" +
-      "\017\n\013DCDNILFDFLB\020\000\022\017\n\013NNBKOLMPOEA\020\001\022\017\n\013EAJ" +
-      "IABGAOCI\020\001\032\002\020\001B\033\n\031emu.grasscutter.net.pr" +
-      "otob\006proto3"
+      "\n\033SkipPlayerGameTimeReq.proto\"U\n\025SkipPla" +
+      "yerGameTimeReq\022\022\n\nisForceSet\030\003 \001(\010\022\026\n\016cl" +
+      "ientGameTime\030\001 \001(\r\022\020\n\010gameTime\030\017 \001(\rB\033\n\031" +
+      "emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -95,68 +95,6 @@ public final class LunaRiteInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private LunaRiteInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                hintPoint_ = new java.util.ArrayList<emu.grasscutter.net.proto.LunaRiteHintPointOuterClass.LunaRiteHintPoint>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              hintPoint_.add(
-                  input.readMessage(emu.grasscutter.net.proto.LunaRiteHintPointOuterClass.LunaRiteHintPoint.parser(), extensionRegistry));
-              break;
-            }
-            case 74: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                areaInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.LunaRiteAreaInfoOuterClass.LunaRiteAreaInfo>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              areaInfoList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.LunaRiteAreaInfoOuterClass.LunaRiteAreaInfo.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          hintPoint_ = java.util.Collections.unmodifiableList(hintPoint_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          areaInfoList_ = java.util.Collections.unmodifiableList(areaInfoList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.LunaRiteInfoOuterClass.internal_static_LunaRiteInfo_descriptor;
@@ -171,6 +109,7 @@ public final class LunaRiteInfoOuterClass {
     }
 
     public static final int HINTPOINT_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.LunaRiteHintPointOuterClass.LunaRiteHintPoint> hintPoint_;
     /**
      * <code>repeated .LunaRiteHintPoint hintPoint = 8;</code>
@@ -211,6 +150,7 @@ public final class LunaRiteInfoOuterClass {
     }
 
     public static final int AREAINFOLIST_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.LunaRiteAreaInfoOuterClass.LunaRiteAreaInfo> areaInfoList_;
     /**
      * <code>repeated .LunaRiteAreaInfo areaInfoList = 9;</code>
@@ -270,7 +210,7 @@ public final class LunaRiteInfoOuterClass {
       for (int i = 0; i < areaInfoList_.size(); i++) {
         output.writeMessage(9, areaInfoList_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -287,7 +227,7 @@ public final class LunaRiteInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, areaInfoList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -306,7 +246,7 @@ public final class LunaRiteInfoOuterClass {
           .equals(other.getHintPointList())) return false;
       if (!getAreaInfoListList()
           .equals(other.getAreaInfoListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -325,7 +265,7 @@ public final class LunaRiteInfoOuterClass {
         hash = (37 * hash) + AREAINFOLIST_FIELD_NUMBER;
         hash = (53 * hash) + getAreaInfoListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -442,36 +382,32 @@ public final class LunaRiteInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.LunaRiteInfoOuterClass.LunaRiteInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getHintPointFieldBuilder();
-          getAreaInfoListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (hintPointBuilder_ == null) {
           hintPoint_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          hintPoint_ = null;
           hintPointBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (areaInfoListBuilder_ == null) {
           areaInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          areaInfoList_ = null;
           areaInfoListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -498,7 +434,13 @@ public final class LunaRiteInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.LunaRiteInfoOuterClass.LunaRiteInfo buildPartial() {
         emu.grasscutter.net.proto.LunaRiteInfoOuterClass.LunaRiteInfo result = new emu.grasscutter.net.proto.LunaRiteInfoOuterClass.LunaRiteInfo(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.LunaRiteInfoOuterClass.LunaRiteInfo result) {
         if (hintPointBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             hintPoint_ = java.util.Collections.unmodifiableList(hintPoint_);
@@ -517,8 +459,10 @@ public final class LunaRiteInfoOuterClass {
         } else {
           result.areaInfoList_ = areaInfoListBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.LunaRiteInfoOuterClass.LunaRiteInfo result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -617,7 +561,7 @@ public final class LunaRiteInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -632,17 +576,56 @@ public final class LunaRiteInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.LunaRiteInfoOuterClass.LunaRiteInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 66: {
+                emu.grasscutter.net.proto.LunaRiteHintPointOuterClass.LunaRiteHintPoint m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.LunaRiteHintPointOuterClass.LunaRiteHintPoint.parser(),
+                        extensionRegistry);
+                if (hintPointBuilder_ == null) {
+                  ensureHintPointIsMutable();
+                  hintPoint_.add(m);
+                } else {
+                  hintPointBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                emu.grasscutter.net.proto.LunaRiteAreaInfoOuterClass.LunaRiteAreaInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.LunaRiteAreaInfoOuterClass.LunaRiteAreaInfo.parser(),
+                        extensionRegistry);
+                if (areaInfoListBuilder_ == null) {
+                  ensureAreaInfoListIsMutable();
+                  areaInfoList_.add(m);
+                } else {
+                  areaInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.LunaRiteInfoOuterClass.LunaRiteInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1159,7 +1142,18 @@ public final class LunaRiteInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LunaRiteInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

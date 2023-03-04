@@ -53,14 +53,12 @@ public final class FallPlayerInfoOuterClass {
     /**
      * <code>map&lt;uint32, uint32&gt; ballCatchCountMap = 8;</code>
      */
-
     int getBallCatchCountMapOrDefault(
         int key,
         int defaultValue);
     /**
      * <code>map&lt;uint32, uint32&gt; ballCatchCountMap = 8;</code>
      */
-
     int getBallCatchCountMapOrThrow(
         int key);
 
@@ -103,77 +101,6 @@ public final class FallPlayerInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private FallPlayerInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 32: {
-
-              uid_ = input.readUInt32();
-              break;
-            }
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                ballCatchCountMap_ = com.google.protobuf.MapField.newMapField(
-                    BallCatchCountMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              ballCatchCountMap__ = input.readMessage(
-                  BallCatchCountMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              ballCatchCountMap_.getMutableMap().put(
-                  ballCatchCountMap__.getKey(), ballCatchCountMap__.getValue());
-              break;
-            }
-            case 80: {
-
-              timeCost_ = input.readUInt32();
-              break;
-            }
-            case 88: {
-
-              curScore_ = input.readUInt32();
-              break;
-            }
-            case 120: {
-
-              isGround_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FallPlayerInfoOuterClass.internal_static_FallPlayerInfo_descriptor;
@@ -200,7 +127,7 @@ public final class FallPlayerInfoOuterClass {
     }
 
     public static final int TIMECOST_FIELD_NUMBER = 10;
-    private int timeCost_;
+    private int timeCost_ = 0;
     /**
      * <code>uint32 timeCost = 10;</code>
      * @return The timeCost.
@@ -211,7 +138,7 @@ public final class FallPlayerInfoOuterClass {
     }
 
     public static final int UID_FIELD_NUMBER = 4;
-    private int uid_;
+    private int uid_ = 0;
     /**
      * <code>uint32 uid = 4;</code>
      * @return The uid.
@@ -233,6 +160,7 @@ public final class FallPlayerInfoOuterClass {
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0);
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, java.lang.Integer> ballCatchCountMap_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
@@ -243,14 +171,12 @@ public final class FallPlayerInfoOuterClass {
       }
       return ballCatchCountMap_;
     }
-
     public int getBallCatchCountMapCount() {
       return internalGetBallCatchCountMap().getMap().size();
     }
     /**
      * <code>map&lt;uint32, uint32&gt; ballCatchCountMap = 8;</code>
      */
-
     @java.lang.Override
     public boolean containsBallCatchCountMap(
         int key) {
@@ -269,7 +195,6 @@ public final class FallPlayerInfoOuterClass {
      * <code>map&lt;uint32, uint32&gt; ballCatchCountMap = 8;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.Integer, java.lang.Integer> getBallCatchCountMapMap() {
       return internalGetBallCatchCountMap().getMap();
     }
@@ -277,7 +202,6 @@ public final class FallPlayerInfoOuterClass {
      * <code>map&lt;uint32, uint32&gt; ballCatchCountMap = 8;</code>
      */
     @java.lang.Override
-
     public int getBallCatchCountMapOrDefault(
         int key,
         int defaultValue) {
@@ -290,7 +214,6 @@ public final class FallPlayerInfoOuterClass {
      * <code>map&lt;uint32, uint32&gt; ballCatchCountMap = 8;</code>
      */
     @java.lang.Override
-
     public int getBallCatchCountMapOrThrow(
         int key) {
       
@@ -303,7 +226,7 @@ public final class FallPlayerInfoOuterClass {
     }
 
     public static final int CURSCORE_FIELD_NUMBER = 11;
-    private int curScore_;
+    private int curScore_ = 0;
     /**
      * <code>uint32 curScore = 11;</code>
      * @return The curScore.
@@ -314,7 +237,7 @@ public final class FallPlayerInfoOuterClass {
     }
 
     public static final int ISGROUND_FIELD_NUMBER = 15;
-    private boolean isGround_;
+    private boolean isGround_ = false;
     /**
      * <code>bool isGround = 15;</code>
      * @return The isGround.
@@ -356,7 +279,7 @@ public final class FallPlayerInfoOuterClass {
       if (isGround_ != false) {
         output.writeBool(15, isGround_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -391,7 +314,7 @@ public final class FallPlayerInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(15, isGround_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -416,7 +339,7 @@ public final class FallPlayerInfoOuterClass {
           != other.getCurScore()) return false;
       if (getIsGround()
           != other.getIsGround()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -440,7 +363,7 @@ public final class FallPlayerInfoOuterClass {
       hash = (37 * hash) + ISGROUND_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsGround());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -579,31 +502,23 @@ public final class FallPlayerInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         timeCost_ = 0;
-
         uid_ = 0;
-
         internalGetMutableBallCatchCountMap().clear();
         curScore_ = 0;
-
         isGround_ = false;
-
         return this;
       }
 
@@ -630,15 +545,29 @@ public final class FallPlayerInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo buildPartial() {
         emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo result = new emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo(this);
-        int from_bitField0_ = bitField0_;
-        result.timeCost_ = timeCost_;
-        result.uid_ = uid_;
-        result.ballCatchCountMap_ = internalGetBallCatchCountMap();
-        result.ballCatchCountMap_.makeImmutable();
-        result.curScore_ = curScore_;
-        result.isGround_ = isGround_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.timeCost_ = timeCost_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.uid_ = uid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.ballCatchCountMap_ = internalGetBallCatchCountMap();
+          result.ballCatchCountMap_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.curScore_ = curScore_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.isGround_ = isGround_;
+        }
       }
 
       @java.lang.Override
@@ -693,13 +622,14 @@ public final class FallPlayerInfoOuterClass {
         }
         internalGetMutableBallCatchCountMap().mergeFrom(
             other.internalGetBallCatchCountMap());
+        bitField0_ |= 0x00000004;
         if (other.getCurScore() != 0) {
           setCurScore(other.getCurScore());
         }
         if (other.getIsGround() != false) {
           setIsGround(other.getIsGround());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -714,17 +644,59 @@ public final class FallPlayerInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 32: {
+                uid_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 32
+              case 66: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+                ballCatchCountMap__ = input.readMessage(
+                    BallCatchCountMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableBallCatchCountMap().getMutableMap().put(
+                    ballCatchCountMap__.getKey(), ballCatchCountMap__.getValue());
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 66
+              case 80: {
+                timeCost_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 80
+              case 88: {
+                curScore_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 88
+              case 120: {
+                isGround_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -746,6 +718,7 @@ public final class FallPlayerInfoOuterClass {
       public Builder setTimeCost(int value) {
         
         timeCost_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -754,7 +727,7 @@ public final class FallPlayerInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTimeCost() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         timeCost_ = 0;
         onChanged();
         return this;
@@ -777,6 +750,7 @@ public final class FallPlayerInfoOuterClass {
       public Builder setUid(int value) {
         
         uid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -785,7 +759,7 @@ public final class FallPlayerInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUid() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         uid_ = 0;
         onChanged();
         return this;
@@ -794,7 +768,7 @@ public final class FallPlayerInfoOuterClass {
       private com.google.protobuf.MapField<
           java.lang.Integer, java.lang.Integer> ballCatchCountMap_;
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetBallCatchCountMap() {
+          internalGetBallCatchCountMap() {
         if (ballCatchCountMap_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               BallCatchCountMapDefaultEntryHolder.defaultEntry);
@@ -802,8 +776,7 @@ public final class FallPlayerInfoOuterClass {
         return ballCatchCountMap_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetMutableBallCatchCountMap() {
-        onChanged();;
+          internalGetMutableBallCatchCountMap() {
         if (ballCatchCountMap_ == null) {
           ballCatchCountMap_ = com.google.protobuf.MapField.newMapField(
               BallCatchCountMapDefaultEntryHolder.defaultEntry);
@@ -811,16 +784,16 @@ public final class FallPlayerInfoOuterClass {
         if (!ballCatchCountMap_.isMutable()) {
           ballCatchCountMap_ = ballCatchCountMap_.copy();
         }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return ballCatchCountMap_;
       }
-
       public int getBallCatchCountMapCount() {
         return internalGetBallCatchCountMap().getMap().size();
       }
       /**
        * <code>map&lt;uint32, uint32&gt; ballCatchCountMap = 8;</code>
        */
-
       @java.lang.Override
       public boolean containsBallCatchCountMap(
           int key) {
@@ -839,7 +812,6 @@ public final class FallPlayerInfoOuterClass {
        * <code>map&lt;uint32, uint32&gt; ballCatchCountMap = 8;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.Integer, java.lang.Integer> getBallCatchCountMapMap() {
         return internalGetBallCatchCountMap().getMap();
       }
@@ -847,7 +819,6 @@ public final class FallPlayerInfoOuterClass {
        * <code>map&lt;uint32, uint32&gt; ballCatchCountMap = 8;</code>
        */
       @java.lang.Override
-
       public int getBallCatchCountMapOrDefault(
           int key,
           int defaultValue) {
@@ -860,7 +831,6 @@ public final class FallPlayerInfoOuterClass {
        * <code>map&lt;uint32, uint32&gt; ballCatchCountMap = 8;</code>
        */
       @java.lang.Override
-
       public int getBallCatchCountMapOrThrow(
           int key) {
         
@@ -871,8 +841,8 @@ public final class FallPlayerInfoOuterClass {
         }
         return map.get(key);
       }
-
       public Builder clearBallCatchCountMap() {
+        bitField0_ = (bitField0_ & ~0x00000004);
         internalGetMutableBallCatchCountMap().getMutableMap()
             .clear();
         return this;
@@ -880,7 +850,6 @@ public final class FallPlayerInfoOuterClass {
       /**
        * <code>map&lt;uint32, uint32&gt; ballCatchCountMap = 8;</code>
        */
-
       public Builder removeBallCatchCountMap(
           int key) {
         
@@ -893,7 +862,8 @@ public final class FallPlayerInfoOuterClass {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, java.lang.Integer>
-      getMutableBallCatchCountMap() {
+          getMutableBallCatchCountMap() {
+        bitField0_ |= 0x00000004;
         return internalGetMutableBallCatchCountMap().getMutableMap();
       }
       /**
@@ -906,16 +876,17 @@ public final class FallPlayerInfoOuterClass {
         
         internalGetMutableBallCatchCountMap().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
        * <code>map&lt;uint32, uint32&gt; ballCatchCountMap = 8;</code>
        */
-
       public Builder putAllBallCatchCountMap(
           java.util.Map<java.lang.Integer, java.lang.Integer> values) {
         internalGetMutableBallCatchCountMap().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000004;
         return this;
       }
 
@@ -936,6 +907,7 @@ public final class FallPlayerInfoOuterClass {
       public Builder setCurScore(int value) {
         
         curScore_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -944,7 +916,7 @@ public final class FallPlayerInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCurScore() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         curScore_ = 0;
         onChanged();
         return this;
@@ -967,6 +939,7 @@ public final class FallPlayerInfoOuterClass {
       public Builder setIsGround(boolean value) {
         
         isGround_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -975,7 +948,7 @@ public final class FallPlayerInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsGround() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         isGround_ = false;
         onChanged();
         return this;
@@ -1013,7 +986,18 @@ public final class FallPlayerInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FallPlayerInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

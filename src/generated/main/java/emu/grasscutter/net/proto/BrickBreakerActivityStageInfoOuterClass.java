@@ -19,24 +19,28 @@ public final class BrickBreakerActivityStageInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 stageId = 1;</code>
+     * <code>bool FIBOFNLKBLM = 1;</code>
+     * @return The fIBOFNLKBLM.
+     */
+    boolean getFIBOFNLKBLM();
+
+    /**
+     * <code>uint32 stage_id = 7;</code>
      * @return The stageId.
      */
     int getStageId();
 
     /**
-     * <code>bool Unk3300_FFKIEDNGNGK = 12;</code>
-     * @return The unk3300FFKIEDNGNGK.
+     * <code>bool FEKFFLBBOEI = 14;</code>
+     * @return The fEKFFLBBOEI.
      */
-    boolean getUnk3300FFKIEDNGNGK();
-
-    /**
-     * <code>bool Unk3300_ALOGIKNHEIM = 5;</code>
-     * @return The unk3300ALOGIKNHEIM.
-     */
-    boolean getUnk3300ALOGIKNHEIM();
+    boolean getFEKFFLBBOEI();
   }
   /**
+   * <pre>
+   * Name: KJDMCAKDFCO
+   * </pre>
+   *
    * Protobuf type {@code BrickBreakerActivityStageInfo}
    */
   public static final class BrickBreakerActivityStageInfo extends
@@ -63,58 +67,6 @@ public final class BrickBreakerActivityStageInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private BrickBreakerActivityStageInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              stageId_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-
-              unk3300ALOGIKNHEIM_ = input.readBool();
-              break;
-            }
-            case 96: {
-
-              unk3300FFKIEDNGNGK_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.BrickBreakerActivityStageInfoOuterClass.internal_static_BrickBreakerActivityStageInfo_descriptor;
@@ -128,10 +80,21 @@ public final class BrickBreakerActivityStageInfoOuterClass {
               emu.grasscutter.net.proto.BrickBreakerActivityStageInfoOuterClass.BrickBreakerActivityStageInfo.class, emu.grasscutter.net.proto.BrickBreakerActivityStageInfoOuterClass.BrickBreakerActivityStageInfo.Builder.class);
     }
 
-    public static final int STAGEID_FIELD_NUMBER = 1;
-    private int stageId_;
+    public static final int FIBOFNLKBLM_FIELD_NUMBER = 1;
+    private boolean fIBOFNLKBLM_ = false;
     /**
-     * <code>uint32 stageId = 1;</code>
+     * <code>bool FIBOFNLKBLM = 1;</code>
+     * @return The fIBOFNLKBLM.
+     */
+    @java.lang.Override
+    public boolean getFIBOFNLKBLM() {
+      return fIBOFNLKBLM_;
+    }
+
+    public static final int STAGE_ID_FIELD_NUMBER = 7;
+    private int stageId_ = 0;
+    /**
+     * <code>uint32 stage_id = 7;</code>
      * @return The stageId.
      */
     @java.lang.Override
@@ -139,26 +102,15 @@ public final class BrickBreakerActivityStageInfoOuterClass {
       return stageId_;
     }
 
-    public static final int UNK3300_FFKIEDNGNGK_FIELD_NUMBER = 12;
-    private boolean unk3300FFKIEDNGNGK_;
+    public static final int FEKFFLBBOEI_FIELD_NUMBER = 14;
+    private boolean fEKFFLBBOEI_ = false;
     /**
-     * <code>bool Unk3300_FFKIEDNGNGK = 12;</code>
-     * @return The unk3300FFKIEDNGNGK.
+     * <code>bool FEKFFLBBOEI = 14;</code>
+     * @return The fEKFFLBBOEI.
      */
     @java.lang.Override
-    public boolean getUnk3300FFKIEDNGNGK() {
-      return unk3300FFKIEDNGNGK_;
-    }
-
-    public static final int UNK3300_ALOGIKNHEIM_FIELD_NUMBER = 5;
-    private boolean unk3300ALOGIKNHEIM_;
-    /**
-     * <code>bool Unk3300_ALOGIKNHEIM = 5;</code>
-     * @return The unk3300ALOGIKNHEIM.
-     */
-    @java.lang.Override
-    public boolean getUnk3300ALOGIKNHEIM() {
-      return unk3300ALOGIKNHEIM_;
+    public boolean getFEKFFLBBOEI() {
+      return fEKFFLBBOEI_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -175,16 +127,16 @@ public final class BrickBreakerActivityStageInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (fIBOFNLKBLM_ != false) {
+        output.writeBool(1, fIBOFNLKBLM_);
+      }
       if (stageId_ != 0) {
-        output.writeUInt32(1, stageId_);
+        output.writeUInt32(7, stageId_);
       }
-      if (unk3300ALOGIKNHEIM_ != false) {
-        output.writeBool(5, unk3300ALOGIKNHEIM_);
+      if (fEKFFLBBOEI_ != false) {
+        output.writeBool(14, fEKFFLBBOEI_);
       }
-      if (unk3300FFKIEDNGNGK_ != false) {
-        output.writeBool(12, unk3300FFKIEDNGNGK_);
-      }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -193,19 +145,19 @@ public final class BrickBreakerActivityStageInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (fIBOFNLKBLM_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, fIBOFNLKBLM_);
+      }
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, stageId_);
+          .computeUInt32Size(7, stageId_);
       }
-      if (unk3300ALOGIKNHEIM_ != false) {
+      if (fEKFFLBBOEI_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, unk3300ALOGIKNHEIM_);
+          .computeBoolSize(14, fEKFFLBBOEI_);
       }
-      if (unk3300FFKIEDNGNGK_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, unk3300FFKIEDNGNGK_);
-      }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -220,13 +172,13 @@ public final class BrickBreakerActivityStageInfoOuterClass {
       }
       emu.grasscutter.net.proto.BrickBreakerActivityStageInfoOuterClass.BrickBreakerActivityStageInfo other = (emu.grasscutter.net.proto.BrickBreakerActivityStageInfoOuterClass.BrickBreakerActivityStageInfo) obj;
 
+      if (getFIBOFNLKBLM()
+          != other.getFIBOFNLKBLM()) return false;
       if (getStageId()
           != other.getStageId()) return false;
-      if (getUnk3300FFKIEDNGNGK()
-          != other.getUnk3300FFKIEDNGNGK()) return false;
-      if (getUnk3300ALOGIKNHEIM()
-          != other.getUnk3300ALOGIKNHEIM()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getFEKFFLBBOEI()
+          != other.getFEKFFLBBOEI()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -237,15 +189,15 @@ public final class BrickBreakerActivityStageInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + STAGEID_FIELD_NUMBER;
+      hash = (37 * hash) + FIBOFNLKBLM_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getFIBOFNLKBLM());
+      hash = (37 * hash) + STAGE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getStageId();
-      hash = (37 * hash) + UNK3300_FFKIEDNGNGK_FIELD_NUMBER;
+      hash = (37 * hash) + FEKFFLBBOEI_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUnk3300FFKIEDNGNGK());
-      hash = (37 * hash) + UNK3300_ALOGIKNHEIM_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUnk3300ALOGIKNHEIM());
-      hash = (29 * hash) + unknownFields.hashCode();
+          getFEKFFLBBOEI());
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -341,6 +293,10 @@ public final class BrickBreakerActivityStageInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: KJDMCAKDFCO
+     * </pre>
+     *
      * Protobuf type {@code BrickBreakerActivityStageInfo}
      */
     public static final class Builder extends
@@ -362,28 +318,21 @@ public final class BrickBreakerActivityStageInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BrickBreakerActivityStageInfoOuterClass.BrickBreakerActivityStageInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        fIBOFNLKBLM_ = false;
         stageId_ = 0;
-
-        unk3300FFKIEDNGNGK_ = false;
-
-        unk3300ALOGIKNHEIM_ = false;
-
+        fEKFFLBBOEI_ = false;
         return this;
       }
 
@@ -410,11 +359,22 @@ public final class BrickBreakerActivityStageInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.BrickBreakerActivityStageInfoOuterClass.BrickBreakerActivityStageInfo buildPartial() {
         emu.grasscutter.net.proto.BrickBreakerActivityStageInfoOuterClass.BrickBreakerActivityStageInfo result = new emu.grasscutter.net.proto.BrickBreakerActivityStageInfoOuterClass.BrickBreakerActivityStageInfo(this);
-        result.stageId_ = stageId_;
-        result.unk3300FFKIEDNGNGK_ = unk3300FFKIEDNGNGK_;
-        result.unk3300ALOGIKNHEIM_ = unk3300ALOGIKNHEIM_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.BrickBreakerActivityStageInfoOuterClass.BrickBreakerActivityStageInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.fIBOFNLKBLM_ = fIBOFNLKBLM_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stageId_ = stageId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.fEKFFLBBOEI_ = fEKFFLBBOEI_;
+        }
       }
 
       @java.lang.Override
@@ -461,16 +421,16 @@ public final class BrickBreakerActivityStageInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.BrickBreakerActivityStageInfoOuterClass.BrickBreakerActivityStageInfo other) {
         if (other == emu.grasscutter.net.proto.BrickBreakerActivityStageInfoOuterClass.BrickBreakerActivityStageInfo.getDefaultInstance()) return this;
+        if (other.getFIBOFNLKBLM() != false) {
+          setFIBOFNLKBLM(other.getFIBOFNLKBLM());
+        }
         if (other.getStageId() != 0) {
           setStageId(other.getStageId());
         }
-        if (other.getUnk3300FFKIEDNGNGK() != false) {
-          setUnk3300FFKIEDNGNGK(other.getUnk3300FFKIEDNGNGK());
+        if (other.getFEKFFLBBOEI() != false) {
+          setFEKFFLBBOEI(other.getFEKFFLBBOEI());
         }
-        if (other.getUnk3300ALOGIKNHEIM() != false) {
-          setUnk3300ALOGIKNHEIM(other.getUnk3300ALOGIKNHEIM());
-        }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -485,23 +445,84 @@ public final class BrickBreakerActivityStageInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.BrickBreakerActivityStageInfoOuterClass.BrickBreakerActivityStageInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                fIBOFNLKBLM_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 56: {
+                stageId_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 56
+              case 112: {
+                fEKFFLBBOEI_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 112
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.BrickBreakerActivityStageInfoOuterClass.BrickBreakerActivityStageInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean fIBOFNLKBLM_ ;
+      /**
+       * <code>bool FIBOFNLKBLM = 1;</code>
+       * @return The fIBOFNLKBLM.
+       */
+      @java.lang.Override
+      public boolean getFIBOFNLKBLM() {
+        return fIBOFNLKBLM_;
+      }
+      /**
+       * <code>bool FIBOFNLKBLM = 1;</code>
+       * @param value The fIBOFNLKBLM to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFIBOFNLKBLM(boolean value) {
+        
+        fIBOFNLKBLM_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool FIBOFNLKBLM = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFIBOFNLKBLM() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        fIBOFNLKBLM_ = false;
+        onChanged();
         return this;
       }
 
       private int stageId_ ;
       /**
-       * <code>uint32 stageId = 1;</code>
+       * <code>uint32 stage_id = 7;</code>
        * @return The stageId.
        */
       @java.lang.Override
@@ -509,85 +530,56 @@ public final class BrickBreakerActivityStageInfoOuterClass {
         return stageId_;
       }
       /**
-       * <code>uint32 stageId = 1;</code>
+       * <code>uint32 stage_id = 7;</code>
        * @param value The stageId to set.
        * @return This builder for chaining.
        */
       public Builder setStageId(int value) {
         
         stageId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 stageId = 1;</code>
+       * <code>uint32 stage_id = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearStageId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         stageId_ = 0;
         onChanged();
         return this;
       }
 
-      private boolean unk3300FFKIEDNGNGK_ ;
+      private boolean fEKFFLBBOEI_ ;
       /**
-       * <code>bool Unk3300_FFKIEDNGNGK = 12;</code>
-       * @return The unk3300FFKIEDNGNGK.
+       * <code>bool FEKFFLBBOEI = 14;</code>
+       * @return The fEKFFLBBOEI.
        */
       @java.lang.Override
-      public boolean getUnk3300FFKIEDNGNGK() {
-        return unk3300FFKIEDNGNGK_;
+      public boolean getFEKFFLBBOEI() {
+        return fEKFFLBBOEI_;
       }
       /**
-       * <code>bool Unk3300_FFKIEDNGNGK = 12;</code>
-       * @param value The unk3300FFKIEDNGNGK to set.
+       * <code>bool FEKFFLBBOEI = 14;</code>
+       * @param value The fEKFFLBBOEI to set.
        * @return This builder for chaining.
        */
-      public Builder setUnk3300FFKIEDNGNGK(boolean value) {
+      public Builder setFEKFFLBBOEI(boolean value) {
         
-        unk3300FFKIEDNGNGK_ = value;
+        fEKFFLBBOEI_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>bool Unk3300_FFKIEDNGNGK = 12;</code>
+       * <code>bool FEKFFLBBOEI = 14;</code>
        * @return This builder for chaining.
        */
-      public Builder clearUnk3300FFKIEDNGNGK() {
-        
-        unk3300FFKIEDNGNGK_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean unk3300ALOGIKNHEIM_ ;
-      /**
-       * <code>bool Unk3300_ALOGIKNHEIM = 5;</code>
-       * @return The unk3300ALOGIKNHEIM.
-       */
-      @java.lang.Override
-      public boolean getUnk3300ALOGIKNHEIM() {
-        return unk3300ALOGIKNHEIM_;
-      }
-      /**
-       * <code>bool Unk3300_ALOGIKNHEIM = 5;</code>
-       * @param value The unk3300ALOGIKNHEIM to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUnk3300ALOGIKNHEIM(boolean value) {
-        
-        unk3300ALOGIKNHEIM_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool Unk3300_ALOGIKNHEIM = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUnk3300ALOGIKNHEIM() {
-        
-        unk3300ALOGIKNHEIM_ = false;
+      public Builder clearFEKFFLBBOEI() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        fEKFFLBBOEI_ = false;
         onChanged();
         return this;
       }
@@ -624,7 +616,18 @@ public final class BrickBreakerActivityStageInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BrickBreakerActivityStageInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -658,11 +661,11 @@ public final class BrickBreakerActivityStageInfoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n#BrickBreakerActivityStageInfo.proto\"j\n" +
-      "\035BrickBreakerActivityStageInfo\022\017\n\007stageI" +
-      "d\030\001 \001(\r\022\033\n\023Unk3300_FFKIEDNGNGK\030\014 \001(\010\022\033\n\023" +
-      "Unk3300_ALOGIKNHEIM\030\005 \001(\010B\033\n\031emu.grasscu" +
-      "tter.net.protob\006proto3"
+      "\n#BrickBreakerActivityStageInfo.proto\"[\n" +
+      "\035BrickBreakerActivityStageInfo\022\023\n\013FIBOFN" +
+      "LKBLM\030\001 \001(\010\022\020\n\010stage_id\030\007 \001(\r\022\023\n\013FEKFFLB" +
+      "BOEI\030\016 \001(\010B\033\n\031emu.grasscutter.net.protob" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -673,7 +676,7 @@ public final class BrickBreakerActivityStageInfoOuterClass {
     internal_static_BrickBreakerActivityStageInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BrickBreakerActivityStageInfo_descriptor,
-        new java.lang.String[] { "StageId", "Unk3300FFKIEDNGNGK", "Unk3300ALOGIKNHEIM", });
+        new java.lang.String[] { "FIBOFNLKBLM", "StageId", "FEKFFLBBOEI", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

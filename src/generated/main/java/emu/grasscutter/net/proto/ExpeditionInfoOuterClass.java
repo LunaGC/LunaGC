@@ -119,88 +119,6 @@ public final class ExpeditionInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ExpeditionInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                exceededItemTypeList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ExpeditionChallengeInfoOuterClass.ExpeditionChallengeInfo>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              exceededItemTypeList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ExpeditionChallengeInfoOuterClass.ExpeditionChallengeInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 24: {
-
-              unk3300MNPBCNEDKAJ_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-
-              unk3300GJLCAJOFCKL_ = input.readUInt32();
-              break;
-            }
-            case 72: {
-
-              contentCloseTime_ = input.readUInt32();
-              break;
-            }
-            case 96: {
-
-              leftMonsters_ = input.readBool();
-              break;
-            }
-            case 106: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                pathInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ExpeditionPathInfoOuterClass.ExpeditionPathInfo>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              pathInfoList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.ExpeditionPathInfoOuterClass.ExpeditionPathInfo.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          exceededItemTypeList_ = java.util.Collections.unmodifiableList(exceededItemTypeList_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          pathInfoList_ = java.util.Collections.unmodifiableList(pathInfoList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ExpeditionInfoOuterClass.internal_static_ExpeditionInfo_descriptor;
@@ -215,6 +133,7 @@ public final class ExpeditionInfoOuterClass {
     }
 
     public static final int EXCEEDEDITEMTYPELIST_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.ExpeditionChallengeInfoOuterClass.ExpeditionChallengeInfo> exceededItemTypeList_;
     /**
      * <code>repeated .ExpeditionChallengeInfo exceededItemTypeList = 2;</code>
@@ -255,7 +174,7 @@ public final class ExpeditionInfoOuterClass {
     }
 
     public static final int LEFTMONSTERS_FIELD_NUMBER = 12;
-    private boolean leftMonsters_;
+    private boolean leftMonsters_ = false;
     /**
      * <code>bool leftMonsters = 12;</code>
      * @return The leftMonsters.
@@ -266,7 +185,7 @@ public final class ExpeditionInfoOuterClass {
     }
 
     public static final int UNK3300_MNPBCNEDKAJ_FIELD_NUMBER = 3;
-    private int unk3300MNPBCNEDKAJ_;
+    private int unk3300MNPBCNEDKAJ_ = 0;
     /**
      * <code>uint32 Unk3300_MNPBCNEDKAJ = 3;</code>
      * @return The unk3300MNPBCNEDKAJ.
@@ -277,7 +196,7 @@ public final class ExpeditionInfoOuterClass {
     }
 
     public static final int CONTENTCLOSETIME_FIELD_NUMBER = 9;
-    private int contentCloseTime_;
+    private int contentCloseTime_ = 0;
     /**
      * <code>uint32 contentCloseTime = 9;</code>
      * @return The contentCloseTime.
@@ -288,7 +207,7 @@ public final class ExpeditionInfoOuterClass {
     }
 
     public static final int UNK3300_GJLCAJOFCKL_FIELD_NUMBER = 4;
-    private int unk3300GJLCAJOFCKL_;
+    private int unk3300GJLCAJOFCKL_ = 0;
     /**
      * <code>uint32 Unk3300_GJLCAJOFCKL = 4;</code>
      * @return The unk3300GJLCAJOFCKL.
@@ -299,6 +218,7 @@ public final class ExpeditionInfoOuterClass {
     }
 
     public static final int PATHINFOLIST_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.ExpeditionPathInfoOuterClass.ExpeditionPathInfo> pathInfoList_;
     /**
      * <code>repeated .ExpeditionPathInfo pathInfoList = 13;</code>
@@ -370,7 +290,7 @@ public final class ExpeditionInfoOuterClass {
       for (int i = 0; i < pathInfoList_.size(); i++) {
         output.writeMessage(13, pathInfoList_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -403,7 +323,7 @@ public final class ExpeditionInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, pathInfoList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -430,7 +350,7 @@ public final class ExpeditionInfoOuterClass {
           != other.getUnk3300GJLCAJOFCKL()) return false;
       if (!getPathInfoListList()
           .equals(other.getPathInfoListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -458,7 +378,7 @@ public final class ExpeditionInfoOuterClass {
         hash = (37 * hash) + PATHINFOLIST_FIELD_NUMBER;
         hash = (53 * hash) + getPathInfoListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -575,44 +495,36 @@ public final class ExpeditionInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ExpeditionInfoOuterClass.ExpeditionInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExceededItemTypeListFieldBuilder();
-          getPathInfoListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (exceededItemTypeListBuilder_ == null) {
           exceededItemTypeList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          exceededItemTypeList_ = null;
           exceededItemTypeListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         leftMonsters_ = false;
-
         unk3300MNPBCNEDKAJ_ = 0;
-
         contentCloseTime_ = 0;
-
         unk3300GJLCAJOFCKL_ = 0;
-
         if (pathInfoListBuilder_ == null) {
           pathInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          pathInfoList_ = null;
           pathInfoListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -639,7 +551,13 @@ public final class ExpeditionInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ExpeditionInfoOuterClass.ExpeditionInfo buildPartial() {
         emu.grasscutter.net.proto.ExpeditionInfoOuterClass.ExpeditionInfo result = new emu.grasscutter.net.proto.ExpeditionInfoOuterClass.ExpeditionInfo(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.ExpeditionInfoOuterClass.ExpeditionInfo result) {
         if (exceededItemTypeListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             exceededItemTypeList_ = java.util.Collections.unmodifiableList(exceededItemTypeList_);
@@ -649,21 +567,31 @@ public final class ExpeditionInfoOuterClass {
         } else {
           result.exceededItemTypeList_ = exceededItemTypeListBuilder_.build();
         }
-        result.leftMonsters_ = leftMonsters_;
-        result.unk3300MNPBCNEDKAJ_ = unk3300MNPBCNEDKAJ_;
-        result.contentCloseTime_ = contentCloseTime_;
-        result.unk3300GJLCAJOFCKL_ = unk3300GJLCAJOFCKL_;
         if (pathInfoListBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             pathInfoList_ = java.util.Collections.unmodifiableList(pathInfoList_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.pathInfoList_ = pathInfoList_;
         } else {
           result.pathInfoList_ = pathInfoListBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.ExpeditionInfoOuterClass.ExpeditionInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.leftMonsters_ = leftMonsters_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.unk3300MNPBCNEDKAJ_ = unk3300MNPBCNEDKAJ_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.contentCloseTime_ = contentCloseTime_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.unk3300GJLCAJOFCKL_ = unk3300GJLCAJOFCKL_;
+        }
       }
 
       @java.lang.Override
@@ -752,7 +680,7 @@ public final class ExpeditionInfoOuterClass {
           if (!other.pathInfoList_.isEmpty()) {
             if (pathInfoList_.isEmpty()) {
               pathInfoList_ = other.pathInfoList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensurePathInfoListIsMutable();
               pathInfoList_.addAll(other.pathInfoList_);
@@ -765,7 +693,7 @@ public final class ExpeditionInfoOuterClass {
               pathInfoListBuilder_.dispose();
               pathInfoListBuilder_ = null;
               pathInfoList_ = other.pathInfoList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000020);
               pathInfoListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getPathInfoListFieldBuilder() : null;
@@ -774,7 +702,7 @@ public final class ExpeditionInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -789,17 +717,76 @@ public final class ExpeditionInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ExpeditionInfoOuterClass.ExpeditionInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                emu.grasscutter.net.proto.ExpeditionChallengeInfoOuterClass.ExpeditionChallengeInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ExpeditionChallengeInfoOuterClass.ExpeditionChallengeInfo.parser(),
+                        extensionRegistry);
+                if (exceededItemTypeListBuilder_ == null) {
+                  ensureExceededItemTypeListIsMutable();
+                  exceededItemTypeList_.add(m);
+                } else {
+                  exceededItemTypeListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 24: {
+                unk3300MNPBCNEDKAJ_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                unk3300GJLCAJOFCKL_ = input.readUInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 32
+              case 72: {
+                contentCloseTime_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 72
+              case 96: {
+                leftMonsters_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 96
+              case 106: {
+                emu.grasscutter.net.proto.ExpeditionPathInfoOuterClass.ExpeditionPathInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.ExpeditionPathInfoOuterClass.ExpeditionPathInfo.parser(),
+                        extensionRegistry);
+                if (pathInfoListBuilder_ == null) {
+                  ensurePathInfoListIsMutable();
+                  pathInfoList_.add(m);
+                } else {
+                  pathInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 106
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ExpeditionInfoOuterClass.ExpeditionInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1061,6 +1048,7 @@ public final class ExpeditionInfoOuterClass {
       public Builder setLeftMonsters(boolean value) {
         
         leftMonsters_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1069,7 +1057,7 @@ public final class ExpeditionInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLeftMonsters() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         leftMonsters_ = false;
         onChanged();
         return this;
@@ -1092,6 +1080,7 @@ public final class ExpeditionInfoOuterClass {
       public Builder setUnk3300MNPBCNEDKAJ(int value) {
         
         unk3300MNPBCNEDKAJ_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1100,7 +1089,7 @@ public final class ExpeditionInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300MNPBCNEDKAJ() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         unk3300MNPBCNEDKAJ_ = 0;
         onChanged();
         return this;
@@ -1123,6 +1112,7 @@ public final class ExpeditionInfoOuterClass {
       public Builder setContentCloseTime(int value) {
         
         contentCloseTime_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1131,7 +1121,7 @@ public final class ExpeditionInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearContentCloseTime() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         contentCloseTime_ = 0;
         onChanged();
         return this;
@@ -1154,6 +1144,7 @@ public final class ExpeditionInfoOuterClass {
       public Builder setUnk3300GJLCAJOFCKL(int value) {
         
         unk3300GJLCAJOFCKL_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1162,7 +1153,7 @@ public final class ExpeditionInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300GJLCAJOFCKL() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         unk3300GJLCAJOFCKL_ = 0;
         onChanged();
         return this;
@@ -1171,9 +1162,9 @@ public final class ExpeditionInfoOuterClass {
       private java.util.List<emu.grasscutter.net.proto.ExpeditionPathInfoOuterClass.ExpeditionPathInfo> pathInfoList_ =
         java.util.Collections.emptyList();
       private void ensurePathInfoListIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           pathInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ExpeditionPathInfoOuterClass.ExpeditionPathInfo>(pathInfoList_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -1323,7 +1314,7 @@ public final class ExpeditionInfoOuterClass {
       public Builder clearPathInfoList() {
         if (pathInfoListBuilder_ == null) {
           pathInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           pathInfoListBuilder_.clear();
@@ -1400,7 +1391,7 @@ public final class ExpeditionInfoOuterClass {
           pathInfoListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.ExpeditionPathInfoOuterClass.ExpeditionPathInfo, emu.grasscutter.net.proto.ExpeditionPathInfoOuterClass.ExpeditionPathInfo.Builder, emu.grasscutter.net.proto.ExpeditionPathInfoOuterClass.ExpeditionPathInfoOrBuilder>(
                   pathInfoList_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           pathInfoList_ = null;
@@ -1440,7 +1431,18 @@ public final class ExpeditionInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ExpeditionInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

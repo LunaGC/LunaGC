@@ -111,117 +111,6 @@ public final class SamLampInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private SamLampInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-
-              progress_ = input.readUInt32();
-              break;
-            }
-            case 56: {
-
-              phaseId_ = input.readUInt32();
-              break;
-            }
-            case 72: {
-
-              contribution_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-
-              factor_ = input.readUInt32();
-              break;
-            }
-            case 88: {
-
-              days_ = input.readUInt32();
-              break;
-            }
-            case 112: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                unk3300ODBFFAIIPMB_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              unk3300ODBFFAIIPMB_.addInt(input.readUInt32());
-              break;
-            }
-            case 114: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                unk3300ODBFFAIIPMB_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unk3300ODBFFAIIPMB_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 120: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                unk3300FGHDJJCLNFN_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              unk3300FGHDJJCLNFN_.addInt(input.readUInt32());
-              break;
-            }
-            case 122: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                unk3300FGHDJJCLNFN_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unk3300FGHDJJCLNFN_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          unk3300ODBFFAIIPMB_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          unk3300FGHDJJCLNFN_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SamLampInfoOuterClass.internal_static_SamLampInfo_descriptor;
@@ -236,7 +125,7 @@ public final class SamLampInfoOuterClass {
     }
 
     public static final int DAYS_FIELD_NUMBER = 11;
-    private int days_;
+    private int days_ = 0;
     /**
      * <code>uint32 days = 11;</code>
      * @return The days.
@@ -247,7 +136,7 @@ public final class SamLampInfoOuterClass {
     }
 
     public static final int PROGRESS_FIELD_NUMBER = 3;
-    private int progress_;
+    private int progress_ = 0;
     /**
      * <code>uint32 progress = 3;</code>
      * @return The progress.
@@ -258,7 +147,7 @@ public final class SamLampInfoOuterClass {
     }
 
     public static final int FACTOR_FIELD_NUMBER = 10;
-    private int factor_;
+    private int factor_ = 0;
     /**
      * <code>uint32 factor = 10;</code>
      * @return The factor.
@@ -269,7 +158,7 @@ public final class SamLampInfoOuterClass {
     }
 
     public static final int CONTRIBUTION_FIELD_NUMBER = 9;
-    private int contribution_;
+    private int contribution_ = 0;
     /**
      * <code>uint32 contribution = 9;</code>
      * @return The contribution.
@@ -280,7 +169,7 @@ public final class SamLampInfoOuterClass {
     }
 
     public static final int PHASEID_FIELD_NUMBER = 7;
-    private int phaseId_;
+    private int phaseId_ = 0;
     /**
      * <code>uint32 phaseId = 7;</code>
      * @return The phaseId.
@@ -291,6 +180,7 @@ public final class SamLampInfoOuterClass {
     }
 
     public static final int UNK3300_ODBFFAIIPMB_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList unk3300ODBFFAIIPMB_;
     /**
      * <code>repeated uint32 Unk3300_ODBFFAIIPMB = 14;</code>
@@ -319,6 +209,7 @@ public final class SamLampInfoOuterClass {
     private int unk3300ODBFFAIIPMBMemoizedSerializedSize = -1;
 
     public static final int UNK3300_FGHDJJCLNFN_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList unk3300FGHDJJCLNFN_;
     /**
      * <code>repeated uint32 Unk3300_FGHDJJCLNFN = 15;</code>
@@ -390,7 +281,7 @@ public final class SamLampInfoOuterClass {
       for (int i = 0; i < unk3300FGHDJJCLNFN_.size(); i++) {
         output.writeUInt32NoTag(unk3300FGHDJJCLNFN_.getInt(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -447,7 +338,7 @@ public final class SamLampInfoOuterClass {
         }
         unk3300FGHDJJCLNFNMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -476,7 +367,7 @@ public final class SamLampInfoOuterClass {
           .equals(other.getUnk3300ODBFFAIIPMBList())) return false;
       if (!getUnk3300FGHDJJCLNFNList()
           .equals(other.getUnk3300FGHDJJCLNFNList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -505,7 +396,7 @@ public final class SamLampInfoOuterClass {
         hash = (37 * hash) + UNK3300_FGHDJJCLNFN_FIELD_NUMBER;
         hash = (53 * hash) + getUnk3300FGHDJJCLNFNList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -622,36 +513,25 @@ public final class SamLampInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SamLampInfoOuterClass.SamLampInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         days_ = 0;
-
         progress_ = 0;
-
         factor_ = 0;
-
         contribution_ = 0;
-
         phaseId_ = 0;
-
         unk3300ODBFFAIIPMB_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
         unk3300FGHDJJCLNFN_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -678,24 +558,42 @@ public final class SamLampInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SamLampInfoOuterClass.SamLampInfo buildPartial() {
         emu.grasscutter.net.proto.SamLampInfoOuterClass.SamLampInfo result = new emu.grasscutter.net.proto.SamLampInfoOuterClass.SamLampInfo(this);
-        int from_bitField0_ = bitField0_;
-        result.days_ = days_;
-        result.progress_ = progress_;
-        result.factor_ = factor_;
-        result.contribution_ = contribution_;
-        result.phaseId_ = phaseId_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          unk3300ODBFFAIIPMB_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.unk3300ODBFFAIIPMB_ = unk3300ODBFFAIIPMB_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          unk3300FGHDJJCLNFN_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.unk3300FGHDJJCLNFN_ = unk3300FGHDJJCLNFN_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.SamLampInfoOuterClass.SamLampInfo result) {
+        if (((bitField0_ & 0x00000020) != 0)) {
+          unk3300ODBFFAIIPMB_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.unk3300ODBFFAIIPMB_ = unk3300ODBFFAIIPMB_;
+        if (((bitField0_ & 0x00000040) != 0)) {
+          unk3300FGHDJJCLNFN_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.unk3300FGHDJJCLNFN_ = unk3300FGHDJJCLNFN_;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.SamLampInfoOuterClass.SamLampInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.days_ = days_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.progress_ = progress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.factor_ = factor_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.contribution_ = contribution_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.phaseId_ = phaseId_;
+        }
       }
 
       @java.lang.Override
@@ -760,7 +658,7 @@ public final class SamLampInfoOuterClass {
         if (!other.unk3300ODBFFAIIPMB_.isEmpty()) {
           if (unk3300ODBFFAIIPMB_.isEmpty()) {
             unk3300ODBFFAIIPMB_ = other.unk3300ODBFFAIIPMB_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureUnk3300ODBFFAIIPMBIsMutable();
             unk3300ODBFFAIIPMB_.addAll(other.unk3300ODBFFAIIPMB_);
@@ -770,14 +668,14 @@ public final class SamLampInfoOuterClass {
         if (!other.unk3300FGHDJJCLNFN_.isEmpty()) {
           if (unk3300FGHDJJCLNFN_.isEmpty()) {
             unk3300FGHDJJCLNFN_ = other.unk3300FGHDJJCLNFN_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureUnk3300FGHDJJCLNFNIsMutable();
             unk3300FGHDJJCLNFN_.addAll(other.unk3300FGHDJJCLNFN_);
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -792,17 +690,87 @@ public final class SamLampInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.SamLampInfoOuterClass.SamLampInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 24: {
+                progress_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 24
+              case 56: {
+                phaseId_ = input.readUInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 56
+              case 72: {
+                contribution_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 72
+              case 80: {
+                factor_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 80
+              case 88: {
+                days_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 88
+              case 112: {
+                int v = input.readUInt32();
+                ensureUnk3300ODBFFAIIPMBIsMutable();
+                unk3300ODBFFAIIPMB_.addInt(v);
+                break;
+              } // case 112
+              case 114: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureUnk3300ODBFFAIIPMBIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  unk3300ODBFFAIIPMB_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 114
+              case 120: {
+                int v = input.readUInt32();
+                ensureUnk3300FGHDJJCLNFNIsMutable();
+                unk3300FGHDJJCLNFN_.addInt(v);
+                break;
+              } // case 120
+              case 122: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureUnk3300FGHDJJCLNFNIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  unk3300FGHDJJCLNFN_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 122
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.SamLampInfoOuterClass.SamLampInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -824,6 +792,7 @@ public final class SamLampInfoOuterClass {
       public Builder setDays(int value) {
         
         days_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -832,7 +801,7 @@ public final class SamLampInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDays() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         days_ = 0;
         onChanged();
         return this;
@@ -855,6 +824,7 @@ public final class SamLampInfoOuterClass {
       public Builder setProgress(int value) {
         
         progress_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -863,7 +833,7 @@ public final class SamLampInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearProgress() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         progress_ = 0;
         onChanged();
         return this;
@@ -886,6 +856,7 @@ public final class SamLampInfoOuterClass {
       public Builder setFactor(int value) {
         
         factor_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -894,7 +865,7 @@ public final class SamLampInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFactor() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         factor_ = 0;
         onChanged();
         return this;
@@ -917,6 +888,7 @@ public final class SamLampInfoOuterClass {
       public Builder setContribution(int value) {
         
         contribution_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -925,7 +897,7 @@ public final class SamLampInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearContribution() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         contribution_ = 0;
         onChanged();
         return this;
@@ -948,6 +920,7 @@ public final class SamLampInfoOuterClass {
       public Builder setPhaseId(int value) {
         
         phaseId_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -956,7 +929,7 @@ public final class SamLampInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPhaseId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         phaseId_ = 0;
         onChanged();
         return this;
@@ -964,10 +937,10 @@ public final class SamLampInfoOuterClass {
 
       private com.google.protobuf.Internal.IntList unk3300ODBFFAIIPMB_ = emptyIntList();
       private void ensureUnk3300ODBFFAIIPMBIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           unk3300ODBFFAIIPMB_ = mutableCopy(unk3300ODBFFAIIPMB_);
-          bitField0_ |= 0x00000001;
-         }
+          bitField0_ |= 0x00000020;
+        }
       }
       /**
        * <code>repeated uint32 Unk3300_ODBFFAIIPMB = 14;</code>
@@ -975,7 +948,7 @@ public final class SamLampInfoOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getUnk3300ODBFFAIIPMBList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
+        return ((bitField0_ & 0x00000020) != 0) ?
                  java.util.Collections.unmodifiableList(unk3300ODBFFAIIPMB_) : unk3300ODBFFAIIPMB_;
       }
       /**
@@ -1001,6 +974,7 @@ public final class SamLampInfoOuterClass {
        */
       public Builder setUnk3300ODBFFAIIPMB(
           int index, int value) {
+        
         ensureUnk3300ODBFFAIIPMBIsMutable();
         unk3300ODBFFAIIPMB_.setInt(index, value);
         onChanged();
@@ -1012,6 +986,7 @@ public final class SamLampInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addUnk3300ODBFFAIIPMB(int value) {
+        
         ensureUnk3300ODBFFAIIPMBIsMutable();
         unk3300ODBFFAIIPMB_.addInt(value);
         onChanged();
@@ -1036,17 +1011,17 @@ public final class SamLampInfoOuterClass {
        */
       public Builder clearUnk3300ODBFFAIIPMB() {
         unk3300ODBFFAIIPMB_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
 
       private com.google.protobuf.Internal.IntList unk3300FGHDJJCLNFN_ = emptyIntList();
       private void ensureUnk3300FGHDJJCLNFNIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           unk3300FGHDJJCLNFN_ = mutableCopy(unk3300FGHDJJCLNFN_);
-          bitField0_ |= 0x00000002;
-         }
+          bitField0_ |= 0x00000040;
+        }
       }
       /**
        * <code>repeated uint32 Unk3300_FGHDJJCLNFN = 15;</code>
@@ -1054,7 +1029,7 @@ public final class SamLampInfoOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getUnk3300FGHDJJCLNFNList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
+        return ((bitField0_ & 0x00000040) != 0) ?
                  java.util.Collections.unmodifiableList(unk3300FGHDJJCLNFN_) : unk3300FGHDJJCLNFN_;
       }
       /**
@@ -1080,6 +1055,7 @@ public final class SamLampInfoOuterClass {
        */
       public Builder setUnk3300FGHDJJCLNFN(
           int index, int value) {
+        
         ensureUnk3300FGHDJJCLNFNIsMutable();
         unk3300FGHDJJCLNFN_.setInt(index, value);
         onChanged();
@@ -1091,6 +1067,7 @@ public final class SamLampInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addUnk3300FGHDJJCLNFN(int value) {
+        
         ensureUnk3300FGHDJJCLNFNIsMutable();
         unk3300FGHDJJCLNFN_.addInt(value);
         onChanged();
@@ -1115,7 +1092,7 @@ public final class SamLampInfoOuterClass {
        */
       public Builder clearUnk3300FGHDJJCLNFN() {
         unk3300FGHDJJCLNFN_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -1152,7 +1129,18 @@ public final class SamLampInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SamLampInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

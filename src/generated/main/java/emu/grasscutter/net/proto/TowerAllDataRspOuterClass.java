@@ -222,6 +222,11 @@ public final class TowerAllDataRspOuterClass {
     int getRetcode();
   }
   /**
+   * <pre>
+   * Name: NFDBAJIDFBG (3.4)
+   * CmdId: 2465
+   * </pre>
+   *
    * Protobuf type {@code TowerAllDataRsp}
    */
   public static final class TowerAllDataRsp extends
@@ -444,137 +449,6 @@ public final class TowerAllDataRspOuterClass {
       return emu.grasscutter.net.proto.TowerAllDataRspOuterClass.internal_static_TowerAllDataRsp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp.class, emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp.Builder.class);
-    }
-
-    /**
-     * Protobuf enum {@code TowerAllDataRsp.ADOPBFIMDJI}
-     */
-    public enum ADOPBFIMDJI
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>NONE = 0;</code>
-       */
-      NONE(0, 0),
-      /**
-       * <code>PEPPOHPHJOJ = 2462;</code>
-       */
-      PEPPOHPHJOJ(1, 2462),
-      /**
-       * <code>NNBKOLMPOEA = 1;</code>
-       */
-      NNBKOLMPOEA(3, 1),
-      UNRECOGNIZED(-1, -1),
-      ;
-
-      /**
-       * <code>DCDNILFDFLB = 0;</code>
-       */
-      public static final ADOPBFIMDJI DCDNILFDFLB = NONE;
-      /**
-       * <code>NONE = 0;</code>
-       */
-      public static final int NONE_VALUE = 0;
-      /**
-       * <code>PEPPOHPHJOJ = 2462;</code>
-       */
-      public static final int PEPPOHPHJOJ_VALUE = 2462;
-      /**
-       * <code>DCDNILFDFLB = 0;</code>
-       */
-      public static final int DCDNILFDFLB_VALUE = 0;
-      /**
-       * <code>NNBKOLMPOEA = 1;</code>
-       */
-      public static final int NNBKOLMPOEA_VALUE = 1;
-
-
-      public final int getNumber() {
-        if (index == -1) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static ADOPBFIMDJI valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static ADOPBFIMDJI forNumber(int value) {
-        switch (value) {
-          case 0: return NONE;
-          case 2462: return PEPPOHPHJOJ;
-          case 1: return NNBKOLMPOEA;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<ADOPBFIMDJI>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          ADOPBFIMDJI> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<ADOPBFIMDJI>() {
-              public ADOPBFIMDJI findValueByNumber(int number) {
-                return ADOPBFIMDJI.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        if (index == -1) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final ADOPBFIMDJI[] VALUES = getStaticValuesArray();
-      private static ADOPBFIMDJI[] getStaticValuesArray() {
-        return new ADOPBFIMDJI[] {
-          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, 
-        };
-      }
-      public static ADOPBFIMDJI valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int index;
-      private final int value;
-
-      private ADOPBFIMDJI(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:TowerAllDataRsp.ADOPBFIMDJI)
     }
 
     public static final int UNK3300_OHCHCJGJIDK_FIELD_NUMBER = 7;
@@ -1351,6 +1225,11 @@ public final class TowerAllDataRspOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: NFDBAJIDFBG (3.4)
+     * CmdId: 2465
+     * </pre>
+     *
      * Protobuf type {@code TowerAllDataRsp}
      */
     public static final class Builder extends
@@ -2949,9 +2828,9 @@ public final class TowerAllDataRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025TowerAllDataRsp.proto\032\031TowerCurLevelRe" +
-      "cord.proto\032\027TowerMonthlyBrief.proto\032\026Tow" +
-      "erFloorRecord.proto\"\360\006\n\017TowerAllDataRsp\022" +
+      "\n\025TowerAllDataRsp.proto\032\027TowerMonthlyBri" +
+      "ef.proto\032\031TowerCurLevelRecord.proto\032\026Tow" +
+      "erFloorRecord.proto\"\237\006\n\017TowerAllDataRsp\022" +
       "\033\n\023Unk3300_OHCHCJGJIDK\030\007 \001(\r\022,\n\016curLevel" +
       "Record\030\001 \001(\0132\024.TowerCurLevelRecord\022\027\n\017is" +
       "FirstInteract\030\010 \001(\010\022/\n\024towerFloorRecordL" +
@@ -2971,16 +2850,14 @@ public final class TowerAllDataRspOuterClass {
       "\007retcode\030\004 \001(\005\0327\n\025FloorOpenTimeMapEntry\022" +
       "\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001\032D\n\"SkipF" +
       "loorGrantedRewardItemMapEntry\022\013\n\003key\030\001 \001" +
-      "(\r\022\r\n\005value\030\002 \001(\r:\0028\001\"O\n\013ADOPBFIMDJI\022\010\n\004" +
-      "NONE\020\000\022\020\n\013PEPPOHPHJOJ\020\236\023\022\017\n\013DCDNILFDFLB\020" +
-      "\000\022\017\n\013NNBKOLMPOEA\020\001\032\002\020\001B\033\n\031emu.grasscutte" +
-      "r.net.protob\006proto3"
+      "(\r\022\r\n\005value\030\002 \001(\r:\0028\001B\033\n\031emu.grasscutter" +
+      ".net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.TowerFloorRecordOuterClass.getDescriptor(),
         });
     internal_static_TowerAllDataRsp_descriptor =
@@ -3001,8 +2878,8 @@ public final class TowerAllDataRspOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TowerAllDataRsp_SkipFloorGrantedRewardItemMapEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.getDescriptor();
     emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.getDescriptor();
     emu.grasscutter.net.proto.TowerFloorRecordOuterClass.getDescriptor();
   }
 

@@ -82,66 +82,6 @@ public final class FlightInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private FlightInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 16: {
-
-              minOpenPlayerLevel_ = input.readUInt32();
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                dailyRecordList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FlightDailyRecordOuterClass.FlightDailyRecord>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              dailyRecordList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.FlightDailyRecordOuterClass.FlightDailyRecord.parser(), extensionRegistry));
-              break;
-            }
-            case 56: {
-
-              previewRewardId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          dailyRecordList_ = java.util.Collections.unmodifiableList(dailyRecordList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FlightInfoOuterClass.internal_static_FlightInfo_descriptor;
@@ -156,6 +96,7 @@ public final class FlightInfoOuterClass {
     }
 
     public static final int DAILYRECORDLIST_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.FlightDailyRecordOuterClass.FlightDailyRecord> dailyRecordList_;
     /**
      * <code>repeated .FlightDailyRecord dailyRecordList = 5;</code>
@@ -196,7 +137,7 @@ public final class FlightInfoOuterClass {
     }
 
     public static final int MINOPENPLAYERLEVEL_FIELD_NUMBER = 2;
-    private int minOpenPlayerLevel_;
+    private int minOpenPlayerLevel_ = 0;
     /**
      * <code>uint32 minOpenPlayerLevel = 2;</code>
      * @return The minOpenPlayerLevel.
@@ -207,7 +148,7 @@ public final class FlightInfoOuterClass {
     }
 
     public static final int PREVIEWREWARDID_FIELD_NUMBER = 7;
-    private int previewRewardId_;
+    private int previewRewardId_ = 0;
     /**
      * <code>uint32 previewRewardId = 7;</code>
      * @return The previewRewardId.
@@ -240,7 +181,7 @@ public final class FlightInfoOuterClass {
       if (previewRewardId_ != 0) {
         output.writeUInt32(7, previewRewardId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -261,7 +202,7 @@ public final class FlightInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(7, previewRewardId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -282,7 +223,7 @@ public final class FlightInfoOuterClass {
           != other.getMinOpenPlayerLevel()) return false;
       if (getPreviewRewardId()
           != other.getPreviewRewardId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -301,7 +242,7 @@ public final class FlightInfoOuterClass {
       hash = (53 * hash) + getMinOpenPlayerLevel();
       hash = (37 * hash) + PREVIEWREWARDID_FIELD_NUMBER;
       hash = (53 * hash) + getPreviewRewardId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -418,33 +359,27 @@ public final class FlightInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.FlightInfoOuterClass.FlightInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDailyRecordListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (dailyRecordListBuilder_ == null) {
           dailyRecordList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          dailyRecordList_ = null;
           dailyRecordListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         minOpenPlayerLevel_ = 0;
-
         previewRewardId_ = 0;
-
         return this;
       }
 
@@ -471,7 +406,13 @@ public final class FlightInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.FlightInfoOuterClass.FlightInfo buildPartial() {
         emu.grasscutter.net.proto.FlightInfoOuterClass.FlightInfo result = new emu.grasscutter.net.proto.FlightInfoOuterClass.FlightInfo(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.FlightInfoOuterClass.FlightInfo result) {
         if (dailyRecordListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             dailyRecordList_ = java.util.Collections.unmodifiableList(dailyRecordList_);
@@ -481,10 +422,16 @@ public final class FlightInfoOuterClass {
         } else {
           result.dailyRecordList_ = dailyRecordListBuilder_.build();
         }
-        result.minOpenPlayerLevel_ = minOpenPlayerLevel_;
-        result.previewRewardId_ = previewRewardId_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.FlightInfoOuterClass.FlightInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.minOpenPlayerLevel_ = minOpenPlayerLevel_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.previewRewardId_ = previewRewardId_;
+        }
       }
 
       @java.lang.Override
@@ -563,7 +510,7 @@ public final class FlightInfoOuterClass {
         if (other.getPreviewRewardId() != 0) {
           setPreviewRewardId(other.getPreviewRewardId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -578,17 +525,53 @@ public final class FlightInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.FlightInfoOuterClass.FlightInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                minOpenPlayerLevel_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 42: {
+                emu.grasscutter.net.proto.FlightDailyRecordOuterClass.FlightDailyRecord m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.FlightDailyRecordOuterClass.FlightDailyRecord.parser(),
+                        extensionRegistry);
+                if (dailyRecordListBuilder_ == null) {
+                  ensureDailyRecordListIsMutable();
+                  dailyRecordList_.add(m);
+                } else {
+                  dailyRecordListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 56: {
+                previewRewardId_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 56
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.FlightInfoOuterClass.FlightInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -850,6 +833,7 @@ public final class FlightInfoOuterClass {
       public Builder setMinOpenPlayerLevel(int value) {
         
         minOpenPlayerLevel_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -858,7 +842,7 @@ public final class FlightInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMinOpenPlayerLevel() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         minOpenPlayerLevel_ = 0;
         onChanged();
         return this;
@@ -881,6 +865,7 @@ public final class FlightInfoOuterClass {
       public Builder setPreviewRewardId(int value) {
         
         previewRewardId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -889,7 +874,7 @@ public final class FlightInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPreviewRewardId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         previewRewardId_ = 0;
         onChanged();
         return this;
@@ -927,7 +912,18 @@ public final class FlightInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FlightInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

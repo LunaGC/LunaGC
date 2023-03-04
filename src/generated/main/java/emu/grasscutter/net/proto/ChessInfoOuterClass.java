@@ -111,108 +111,6 @@ public final class ChessInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ChessInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 32: {
-
-              punishOverTime_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-
-              playerInfoMap_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-
-              escapedMonsters_ = input.readBool();
-              break;
-            }
-            case 56: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                totalRound_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              totalRound_.addInt(input.readUInt32());
-              break;
-            }
-            case 58: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                totalRound_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                totalRound_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 64: {
-
-              selectedCardInfoList_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-
-              contentCloseTime_ = input.readUInt32();
-              break;
-            }
-            case 88: {
-
-              exp_ = input.readUInt32();
-              break;
-            }
-            case 112: {
-
-              level_ = input.readUInt32();
-              break;
-            }
-            case 120: {
-
-              leftMonsters_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          totalRound_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ChessInfoOuterClass.internal_static_ChessInfo_descriptor;
@@ -227,7 +125,7 @@ public final class ChessInfoOuterClass {
     }
 
     public static final int PUNISHOVERTIME_FIELD_NUMBER = 4;
-    private int punishOverTime_;
+    private int punishOverTime_ = 0;
     /**
      * <code>uint32 punishOverTime = 4;</code>
      * @return The punishOverTime.
@@ -238,7 +136,7 @@ public final class ChessInfoOuterClass {
     }
 
     public static final int CONTENTCLOSETIME_FIELD_NUMBER = 10;
-    private int contentCloseTime_;
+    private int contentCloseTime_ = 0;
     /**
      * <code>uint32 contentCloseTime = 10;</code>
      * @return The contentCloseTime.
@@ -249,7 +147,7 @@ public final class ChessInfoOuterClass {
     }
 
     public static final int PLAYERINFOMAP_FIELD_NUMBER = 5;
-    private int playerInfoMap_;
+    private int playerInfoMap_ = 0;
     /**
      * <code>uint32 playerInfoMap = 5;</code>
      * @return The playerInfoMap.
@@ -260,7 +158,7 @@ public final class ChessInfoOuterClass {
     }
 
     public static final int EXP_FIELD_NUMBER = 11;
-    private int exp_;
+    private int exp_ = 0;
     /**
      * <code>uint32 exp = 11;</code>
      * @return The exp.
@@ -271,7 +169,7 @@ public final class ChessInfoOuterClass {
     }
 
     public static final int ESCAPEDMONSTERS_FIELD_NUMBER = 6;
-    private boolean escapedMonsters_;
+    private boolean escapedMonsters_ = false;
     /**
      * <code>bool escapedMonsters = 6;</code>
      * @return The escapedMonsters.
@@ -282,7 +180,7 @@ public final class ChessInfoOuterClass {
     }
 
     public static final int SELECTEDCARDINFOLIST_FIELD_NUMBER = 8;
-    private int selectedCardInfoList_;
+    private int selectedCardInfoList_ = 0;
     /**
      * <code>uint32 selectedCardInfoList = 8;</code>
      * @return The selectedCardInfoList.
@@ -293,7 +191,7 @@ public final class ChessInfoOuterClass {
     }
 
     public static final int LEVEL_FIELD_NUMBER = 14;
-    private int level_;
+    private int level_ = 0;
     /**
      * <code>uint32 level = 14;</code>
      * @return The level.
@@ -304,6 +202,7 @@ public final class ChessInfoOuterClass {
     }
 
     public static final int TOTALROUND_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList totalRound_;
     /**
      * <code>repeated uint32 totalRound = 7;</code>
@@ -332,7 +231,7 @@ public final class ChessInfoOuterClass {
     private int totalRoundMemoizedSerializedSize = -1;
 
     public static final int LEFTMONSTERS_FIELD_NUMBER = 15;
-    private boolean leftMonsters_;
+    private boolean leftMonsters_ = false;
     /**
      * <code>bool leftMonsters = 15;</code>
      * @return The leftMonsters.
@@ -388,7 +287,7 @@ public final class ChessInfoOuterClass {
       if (leftMonsters_ != false) {
         output.writeBool(15, leftMonsters_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -443,7 +342,7 @@ public final class ChessInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(15, leftMonsters_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -476,7 +375,7 @@ public final class ChessInfoOuterClass {
           .equals(other.getTotalRoundList())) return false;
       if (getLeftMonsters()
           != other.getLeftMonsters()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -509,7 +408,7 @@ public final class ChessInfoOuterClass {
       hash = (37 * hash) + LEFTMONSTERS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getLeftMonsters());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -626,40 +525,27 @@ public final class ChessInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ChessInfoOuterClass.ChessInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         punishOverTime_ = 0;
-
         contentCloseTime_ = 0;
-
         playerInfoMap_ = 0;
-
         exp_ = 0;
-
         escapedMonsters_ = false;
-
         selectedCardInfoList_ = 0;
-
         level_ = 0;
-
         totalRound_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
         leftMonsters_ = false;
-
         return this;
       }
 
@@ -686,22 +572,46 @@ public final class ChessInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ChessInfoOuterClass.ChessInfo buildPartial() {
         emu.grasscutter.net.proto.ChessInfoOuterClass.ChessInfo result = new emu.grasscutter.net.proto.ChessInfoOuterClass.ChessInfo(this);
-        int from_bitField0_ = bitField0_;
-        result.punishOverTime_ = punishOverTime_;
-        result.contentCloseTime_ = contentCloseTime_;
-        result.playerInfoMap_ = playerInfoMap_;
-        result.exp_ = exp_;
-        result.escapedMonsters_ = escapedMonsters_;
-        result.selectedCardInfoList_ = selectedCardInfoList_;
-        result.level_ = level_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          totalRound_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.totalRound_ = totalRound_;
-        result.leftMonsters_ = leftMonsters_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.ChessInfoOuterClass.ChessInfo result) {
+        if (((bitField0_ & 0x00000080) != 0)) {
+          totalRound_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.totalRound_ = totalRound_;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.ChessInfoOuterClass.ChessInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.punishOverTime_ = punishOverTime_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contentCloseTime_ = contentCloseTime_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.playerInfoMap_ = playerInfoMap_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.exp_ = exp_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.escapedMonsters_ = escapedMonsters_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.selectedCardInfoList_ = selectedCardInfoList_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.level_ = level_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.leftMonsters_ = leftMonsters_;
+        }
       }
 
       @java.lang.Override
@@ -772,7 +682,7 @@ public final class ChessInfoOuterClass {
         if (!other.totalRound_.isEmpty()) {
           if (totalRound_.isEmpty()) {
             totalRound_ = other.totalRound_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureTotalRoundIsMutable();
             totalRound_.addAll(other.totalRound_);
@@ -782,7 +692,7 @@ public final class ChessInfoOuterClass {
         if (other.getLeftMonsters() != false) {
           setLeftMonsters(other.getLeftMonsters());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -797,17 +707,86 @@ public final class ChessInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ChessInfoOuterClass.ChessInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 32: {
+                punishOverTime_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 32
+              case 40: {
+                playerInfoMap_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 40
+              case 48: {
+                escapedMonsters_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 48
+              case 56: {
+                int v = input.readUInt32();
+                ensureTotalRoundIsMutable();
+                totalRound_.addInt(v);
+                break;
+              } // case 56
+              case 58: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureTotalRoundIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  totalRound_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 58
+              case 64: {
+                selectedCardInfoList_ = input.readUInt32();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 64
+              case 80: {
+                contentCloseTime_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 80
+              case 88: {
+                exp_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 88
+              case 112: {
+                level_ = input.readUInt32();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 112
+              case 120: {
+                leftMonsters_ = input.readBool();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ChessInfoOuterClass.ChessInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -829,6 +808,7 @@ public final class ChessInfoOuterClass {
       public Builder setPunishOverTime(int value) {
         
         punishOverTime_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -837,7 +817,7 @@ public final class ChessInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPunishOverTime() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         punishOverTime_ = 0;
         onChanged();
         return this;
@@ -860,6 +840,7 @@ public final class ChessInfoOuterClass {
       public Builder setContentCloseTime(int value) {
         
         contentCloseTime_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -868,7 +849,7 @@ public final class ChessInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearContentCloseTime() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         contentCloseTime_ = 0;
         onChanged();
         return this;
@@ -891,6 +872,7 @@ public final class ChessInfoOuterClass {
       public Builder setPlayerInfoMap(int value) {
         
         playerInfoMap_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -899,7 +881,7 @@ public final class ChessInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPlayerInfoMap() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         playerInfoMap_ = 0;
         onChanged();
         return this;
@@ -922,6 +904,7 @@ public final class ChessInfoOuterClass {
       public Builder setExp(int value) {
         
         exp_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -930,7 +913,7 @@ public final class ChessInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearExp() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         exp_ = 0;
         onChanged();
         return this;
@@ -953,6 +936,7 @@ public final class ChessInfoOuterClass {
       public Builder setEscapedMonsters(boolean value) {
         
         escapedMonsters_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -961,7 +945,7 @@ public final class ChessInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearEscapedMonsters() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         escapedMonsters_ = false;
         onChanged();
         return this;
@@ -984,6 +968,7 @@ public final class ChessInfoOuterClass {
       public Builder setSelectedCardInfoList(int value) {
         
         selectedCardInfoList_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -992,7 +977,7 @@ public final class ChessInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSelectedCardInfoList() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         selectedCardInfoList_ = 0;
         onChanged();
         return this;
@@ -1015,6 +1000,7 @@ public final class ChessInfoOuterClass {
       public Builder setLevel(int value) {
         
         level_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1023,7 +1009,7 @@ public final class ChessInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLevel() {
-        
+        bitField0_ = (bitField0_ & ~0x00000040);
         level_ = 0;
         onChanged();
         return this;
@@ -1031,10 +1017,10 @@ public final class ChessInfoOuterClass {
 
       private com.google.protobuf.Internal.IntList totalRound_ = emptyIntList();
       private void ensureTotalRoundIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           totalRound_ = mutableCopy(totalRound_);
-          bitField0_ |= 0x00000001;
-         }
+          bitField0_ |= 0x00000080;
+        }
       }
       /**
        * <code>repeated uint32 totalRound = 7;</code>
@@ -1042,7 +1028,7 @@ public final class ChessInfoOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getTotalRoundList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
+        return ((bitField0_ & 0x00000080) != 0) ?
                  java.util.Collections.unmodifiableList(totalRound_) : totalRound_;
       }
       /**
@@ -1068,6 +1054,7 @@ public final class ChessInfoOuterClass {
        */
       public Builder setTotalRound(
           int index, int value) {
+        
         ensureTotalRoundIsMutable();
         totalRound_.setInt(index, value);
         onChanged();
@@ -1079,6 +1066,7 @@ public final class ChessInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addTotalRound(int value) {
+        
         ensureTotalRoundIsMutable();
         totalRound_.addInt(value);
         onChanged();
@@ -1103,7 +1091,7 @@ public final class ChessInfoOuterClass {
        */
       public Builder clearTotalRound() {
         totalRound_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -1125,6 +1113,7 @@ public final class ChessInfoOuterClass {
       public Builder setLeftMonsters(boolean value) {
         
         leftMonsters_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -1133,7 +1122,7 @@ public final class ChessInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLeftMonsters() {
-        
+        bitField0_ = (bitField0_ & ~0x00000100);
         leftMonsters_ = false;
         onChanged();
         return this;
@@ -1171,7 +1160,18 @@ public final class ChessInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ChessInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

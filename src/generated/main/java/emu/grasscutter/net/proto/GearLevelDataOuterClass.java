@@ -81,73 +81,6 @@ public final class GearLevelDataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GearLevelData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              unk3300DFGHKDBENED_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-
-              openTime_ = input.readUInt32();
-              break;
-            }
-            case 56: {
-
-              levelId_ = input.readUInt32();
-              break;
-            }
-            case 72: {
-
-              isOpen_ = input.readBool();
-              break;
-            }
-            case 96: {
-
-              unk3300FIKPLGJIBGP_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              isFinished_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GearLevelDataOuterClass.internal_static_GearLevelData_descriptor;
@@ -162,7 +95,7 @@ public final class GearLevelDataOuterClass {
     }
 
     public static final int UNK3300_DFGHKDBENED_FIELD_NUMBER = 1;
-    private int unk3300DFGHKDBENED_;
+    private int unk3300DFGHKDBENED_ = 0;
     /**
      * <code>uint32 Unk3300_DFGHKDBENED = 1;</code>
      * @return The unk3300DFGHKDBENED.
@@ -173,7 +106,7 @@ public final class GearLevelDataOuterClass {
     }
 
     public static final int OPENTIME_FIELD_NUMBER = 4;
-    private int openTime_;
+    private int openTime_ = 0;
     /**
      * <code>uint32 openTime = 4;</code>
      * @return The openTime.
@@ -184,7 +117,7 @@ public final class GearLevelDataOuterClass {
     }
 
     public static final int LEVELID_FIELD_NUMBER = 7;
-    private int levelId_;
+    private int levelId_ = 0;
     /**
      * <code>uint32 levelId = 7;</code>
      * @return The levelId.
@@ -195,7 +128,7 @@ public final class GearLevelDataOuterClass {
     }
 
     public static final int UNK3300_FIKPLGJIBGP_FIELD_NUMBER = 12;
-    private int unk3300FIKPLGJIBGP_;
+    private int unk3300FIKPLGJIBGP_ = 0;
     /**
      * <code>uint32 Unk3300_FIKPLGJIBGP = 12;</code>
      * @return The unk3300FIKPLGJIBGP.
@@ -206,7 +139,7 @@ public final class GearLevelDataOuterClass {
     }
 
     public static final int ISFINISHED_FIELD_NUMBER = 13;
-    private boolean isFinished_;
+    private boolean isFinished_ = false;
     /**
      * <code>bool isFinished = 13;</code>
      * @return The isFinished.
@@ -217,7 +150,7 @@ public final class GearLevelDataOuterClass {
     }
 
     public static final int ISOPEN_FIELD_NUMBER = 9;
-    private boolean isOpen_;
+    private boolean isOpen_ = false;
     /**
      * <code>bool isOpen = 9;</code>
      * @return The isOpen.
@@ -259,7 +192,7 @@ public final class GearLevelDataOuterClass {
       if (isFinished_ != false) {
         output.writeBool(13, isFinished_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -292,7 +225,7 @@ public final class GearLevelDataOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(13, isFinished_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -319,7 +252,7 @@ public final class GearLevelDataOuterClass {
           != other.getIsFinished()) return false;
       if (getIsOpen()
           != other.getIsOpen()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -344,7 +277,7 @@ public final class GearLevelDataOuterClass {
       hash = (37 * hash) + ISOPEN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsOpen());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -461,34 +394,24 @@ public final class GearLevelDataOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GearLevelDataOuterClass.GearLevelData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         unk3300DFGHKDBENED_ = 0;
-
         openTime_ = 0;
-
         levelId_ = 0;
-
         unk3300FIKPLGJIBGP_ = 0;
-
         isFinished_ = false;
-
         isOpen_ = false;
-
         return this;
       }
 
@@ -515,14 +438,31 @@ public final class GearLevelDataOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.GearLevelDataOuterClass.GearLevelData buildPartial() {
         emu.grasscutter.net.proto.GearLevelDataOuterClass.GearLevelData result = new emu.grasscutter.net.proto.GearLevelDataOuterClass.GearLevelData(this);
-        result.unk3300DFGHKDBENED_ = unk3300DFGHKDBENED_;
-        result.openTime_ = openTime_;
-        result.levelId_ = levelId_;
-        result.unk3300FIKPLGJIBGP_ = unk3300FIKPLGJIBGP_;
-        result.isFinished_ = isFinished_;
-        result.isOpen_ = isOpen_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.GearLevelDataOuterClass.GearLevelData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.unk3300DFGHKDBENED_ = unk3300DFGHKDBENED_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.openTime_ = openTime_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.levelId_ = levelId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.unk3300FIKPLGJIBGP_ = unk3300FIKPLGJIBGP_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.isFinished_ = isFinished_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.isOpen_ = isOpen_;
+        }
       }
 
       @java.lang.Override
@@ -587,7 +527,7 @@ public final class GearLevelDataOuterClass {
         if (other.getIsOpen() != false) {
           setIsOpen(other.getIsOpen());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -602,19 +542,63 @@ public final class GearLevelDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.GearLevelDataOuterClass.GearLevelData parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                unk3300DFGHKDBENED_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 32: {
+                openTime_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 32
+              case 56: {
+                levelId_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 56
+              case 72: {
+                isOpen_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 72
+              case 96: {
+                unk3300FIKPLGJIBGP_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 96
+              case 104: {
+                isFinished_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 104
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.GearLevelDataOuterClass.GearLevelData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private int unk3300DFGHKDBENED_ ;
       /**
@@ -633,6 +617,7 @@ public final class GearLevelDataOuterClass {
       public Builder setUnk3300DFGHKDBENED(int value) {
         
         unk3300DFGHKDBENED_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -641,7 +626,7 @@ public final class GearLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300DFGHKDBENED() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         unk3300DFGHKDBENED_ = 0;
         onChanged();
         return this;
@@ -664,6 +649,7 @@ public final class GearLevelDataOuterClass {
       public Builder setOpenTime(int value) {
         
         openTime_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -672,7 +658,7 @@ public final class GearLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOpenTime() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         openTime_ = 0;
         onChanged();
         return this;
@@ -695,6 +681,7 @@ public final class GearLevelDataOuterClass {
       public Builder setLevelId(int value) {
         
         levelId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -703,7 +690,7 @@ public final class GearLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLevelId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         levelId_ = 0;
         onChanged();
         return this;
@@ -726,6 +713,7 @@ public final class GearLevelDataOuterClass {
       public Builder setUnk3300FIKPLGJIBGP(int value) {
         
         unk3300FIKPLGJIBGP_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -734,7 +722,7 @@ public final class GearLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300FIKPLGJIBGP() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         unk3300FIKPLGJIBGP_ = 0;
         onChanged();
         return this;
@@ -757,6 +745,7 @@ public final class GearLevelDataOuterClass {
       public Builder setIsFinished(boolean value) {
         
         isFinished_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -765,7 +754,7 @@ public final class GearLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsFinished() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         isFinished_ = false;
         onChanged();
         return this;
@@ -788,6 +777,7 @@ public final class GearLevelDataOuterClass {
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -796,7 +786,7 @@ public final class GearLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         isOpen_ = false;
         onChanged();
         return this;
@@ -834,7 +824,18 @@ public final class GearLevelDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GearLevelData(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

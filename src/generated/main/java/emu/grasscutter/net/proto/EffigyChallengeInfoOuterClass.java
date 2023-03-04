@@ -75,68 +75,6 @@ public final class EffigyChallengeInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private EffigyChallengeInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 40: {
-
-              unk3300MBHBNIPEPNJ_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-
-              unk3300MICPCKIOEJA_ = input.readUInt32();
-              break;
-            }
-            case 64: {
-
-              unk3300BMPCKGJAGPE_ = input.readUInt32();
-              break;
-            }
-            case 96: {
-
-              unk3300EOGAPBOFHOP_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              unk3300AIEEGIBMOFH_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.EffigyChallengeInfoOuterClass.internal_static_EffigyChallengeInfo_descriptor;
@@ -151,7 +89,7 @@ public final class EffigyChallengeInfoOuterClass {
     }
 
     public static final int UNK3300_MBHBNIPEPNJ_FIELD_NUMBER = 5;
-    private int unk3300MBHBNIPEPNJ_;
+    private int unk3300MBHBNIPEPNJ_ = 0;
     /**
      * <code>uint32 Unk3300_MBHBNIPEPNJ = 5;</code>
      * @return The unk3300MBHBNIPEPNJ.
@@ -162,7 +100,7 @@ public final class EffigyChallengeInfoOuterClass {
     }
 
     public static final int UNK3300_EOGAPBOFHOP_FIELD_NUMBER = 12;
-    private int unk3300EOGAPBOFHOP_;
+    private int unk3300EOGAPBOFHOP_ = 0;
     /**
      * <code>uint32 Unk3300_EOGAPBOFHOP = 12;</code>
      * @return The unk3300EOGAPBOFHOP.
@@ -173,7 +111,7 @@ public final class EffigyChallengeInfoOuterClass {
     }
 
     public static final int UNK3300_BMPCKGJAGPE_FIELD_NUMBER = 8;
-    private int unk3300BMPCKGJAGPE_;
+    private int unk3300BMPCKGJAGPE_ = 0;
     /**
      * <code>uint32 Unk3300_BMPCKGJAGPE = 8;</code>
      * @return The unk3300BMPCKGJAGPE.
@@ -184,7 +122,7 @@ public final class EffigyChallengeInfoOuterClass {
     }
 
     public static final int UNK3300_AIEEGIBMOFH_FIELD_NUMBER = 13;
-    private int unk3300AIEEGIBMOFH_;
+    private int unk3300AIEEGIBMOFH_ = 0;
     /**
      * <code>uint32 Unk3300_AIEEGIBMOFH = 13;</code>
      * @return The unk3300AIEEGIBMOFH.
@@ -195,7 +133,7 @@ public final class EffigyChallengeInfoOuterClass {
     }
 
     public static final int UNK3300_MICPCKIOEJA_FIELD_NUMBER = 6;
-    private int unk3300MICPCKIOEJA_;
+    private int unk3300MICPCKIOEJA_ = 0;
     /**
      * <code>uint32 Unk3300_MICPCKIOEJA = 6;</code>
      * @return The unk3300MICPCKIOEJA.
@@ -234,7 +172,7 @@ public final class EffigyChallengeInfoOuterClass {
       if (unk3300AIEEGIBMOFH_ != 0) {
         output.writeUInt32(13, unk3300AIEEGIBMOFH_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -263,7 +201,7 @@ public final class EffigyChallengeInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, unk3300AIEEGIBMOFH_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -288,7 +226,7 @@ public final class EffigyChallengeInfoOuterClass {
           != other.getUnk3300AIEEGIBMOFH()) return false;
       if (getUnk3300MICPCKIOEJA()
           != other.getUnk3300MICPCKIOEJA()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -309,7 +247,7 @@ public final class EffigyChallengeInfoOuterClass {
       hash = (53 * hash) + getUnk3300AIEEGIBMOFH();
       hash = (37 * hash) + UNK3300_MICPCKIOEJA_FIELD_NUMBER;
       hash = (53 * hash) + getUnk3300MICPCKIOEJA();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -426,32 +364,23 @@ public final class EffigyChallengeInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.EffigyChallengeInfoOuterClass.EffigyChallengeInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         unk3300MBHBNIPEPNJ_ = 0;
-
         unk3300EOGAPBOFHOP_ = 0;
-
         unk3300BMPCKGJAGPE_ = 0;
-
         unk3300AIEEGIBMOFH_ = 0;
-
         unk3300MICPCKIOEJA_ = 0;
-
         return this;
       }
 
@@ -478,13 +407,28 @@ public final class EffigyChallengeInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.EffigyChallengeInfoOuterClass.EffigyChallengeInfo buildPartial() {
         emu.grasscutter.net.proto.EffigyChallengeInfoOuterClass.EffigyChallengeInfo result = new emu.grasscutter.net.proto.EffigyChallengeInfoOuterClass.EffigyChallengeInfo(this);
-        result.unk3300MBHBNIPEPNJ_ = unk3300MBHBNIPEPNJ_;
-        result.unk3300EOGAPBOFHOP_ = unk3300EOGAPBOFHOP_;
-        result.unk3300BMPCKGJAGPE_ = unk3300BMPCKGJAGPE_;
-        result.unk3300AIEEGIBMOFH_ = unk3300AIEEGIBMOFH_;
-        result.unk3300MICPCKIOEJA_ = unk3300MICPCKIOEJA_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.EffigyChallengeInfoOuterClass.EffigyChallengeInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.unk3300MBHBNIPEPNJ_ = unk3300MBHBNIPEPNJ_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.unk3300EOGAPBOFHOP_ = unk3300EOGAPBOFHOP_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.unk3300BMPCKGJAGPE_ = unk3300BMPCKGJAGPE_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.unk3300AIEEGIBMOFH_ = unk3300AIEEGIBMOFH_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.unk3300MICPCKIOEJA_ = unk3300MICPCKIOEJA_;
+        }
       }
 
       @java.lang.Override
@@ -546,7 +490,7 @@ public final class EffigyChallengeInfoOuterClass {
         if (other.getUnk3300MICPCKIOEJA() != 0) {
           setUnk3300MICPCKIOEJA(other.getUnk3300MICPCKIOEJA());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -561,19 +505,58 @@ public final class EffigyChallengeInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.EffigyChallengeInfoOuterClass.EffigyChallengeInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 40: {
+                unk3300MBHBNIPEPNJ_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 40
+              case 48: {
+                unk3300MICPCKIOEJA_ = input.readUInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 48
+              case 64: {
+                unk3300BMPCKGJAGPE_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 64
+              case 96: {
+                unk3300EOGAPBOFHOP_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 96
+              case 104: {
+                unk3300AIEEGIBMOFH_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 104
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.EffigyChallengeInfoOuterClass.EffigyChallengeInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private int unk3300MBHBNIPEPNJ_ ;
       /**
@@ -592,6 +575,7 @@ public final class EffigyChallengeInfoOuterClass {
       public Builder setUnk3300MBHBNIPEPNJ(int value) {
         
         unk3300MBHBNIPEPNJ_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -600,7 +584,7 @@ public final class EffigyChallengeInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300MBHBNIPEPNJ() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         unk3300MBHBNIPEPNJ_ = 0;
         onChanged();
         return this;
@@ -623,6 +607,7 @@ public final class EffigyChallengeInfoOuterClass {
       public Builder setUnk3300EOGAPBOFHOP(int value) {
         
         unk3300EOGAPBOFHOP_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -631,7 +616,7 @@ public final class EffigyChallengeInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300EOGAPBOFHOP() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         unk3300EOGAPBOFHOP_ = 0;
         onChanged();
         return this;
@@ -654,6 +639,7 @@ public final class EffigyChallengeInfoOuterClass {
       public Builder setUnk3300BMPCKGJAGPE(int value) {
         
         unk3300BMPCKGJAGPE_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -662,7 +648,7 @@ public final class EffigyChallengeInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300BMPCKGJAGPE() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         unk3300BMPCKGJAGPE_ = 0;
         onChanged();
         return this;
@@ -685,6 +671,7 @@ public final class EffigyChallengeInfoOuterClass {
       public Builder setUnk3300AIEEGIBMOFH(int value) {
         
         unk3300AIEEGIBMOFH_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -693,7 +680,7 @@ public final class EffigyChallengeInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300AIEEGIBMOFH() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         unk3300AIEEGIBMOFH_ = 0;
         onChanged();
         return this;
@@ -716,6 +703,7 @@ public final class EffigyChallengeInfoOuterClass {
       public Builder setUnk3300MICPCKIOEJA(int value) {
         
         unk3300MICPCKIOEJA_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -724,7 +712,7 @@ public final class EffigyChallengeInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300MICPCKIOEJA() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         unk3300MICPCKIOEJA_ = 0;
         onChanged();
         return this;
@@ -762,7 +750,18 @@ public final class EffigyChallengeInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EffigyChallengeInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

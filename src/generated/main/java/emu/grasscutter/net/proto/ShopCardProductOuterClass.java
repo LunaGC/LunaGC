@@ -87,7 +87,7 @@ public final class ShopCardProductOuterClass {
      */
     emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCardOrBuilder getResinCardOrBuilder();
 
-    public emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.KNKJCIMNEPFCase getKNKJCIMNEPFCase();
+    public emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ExtraCardDataCase getExtraCardDataCase();
   }
   /**
    * Protobuf type {@code ShopCardProduct}
@@ -175,16 +175,16 @@ public final class ShopCardProductOuterClass {
             }
             case 810: {
               emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.Builder subBuilder = null;
-              if (kNKJCIMNEPFCase_ == 101) {
-                subBuilder = ((emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) kNKJCIMNEPF_).toBuilder();
+              if (extraCardDataCase_ == 101) {
+                subBuilder = ((emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) extraCardData_).toBuilder();
               }
-              kNKJCIMNEPF_ =
+              extraCardData_ =
                   input.readMessage(emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) kNKJCIMNEPF_);
-                kNKJCIMNEPF_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) extraCardData_);
+                extraCardData_ = subBuilder.buildPartial();
               }
-              kNKJCIMNEPFCase_ = 101;
+              extraCardDataCase_ = 101;
               break;
             }
             default: {
@@ -1384,15 +1384,15 @@ public final class ShopCardProductOuterClass {
 
     }
 
-    private int kNKJCIMNEPFCase_ = 0;
-    private java.lang.Object kNKJCIMNEPF_;
-    public enum KNKJCIMNEPFCase
+    private int extraCardDataCase_ = 0;
+    private java.lang.Object extraCardData_;
+    public enum ExtraCardDataCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       RESIN_CARD(101),
-      KNKJCIMNEPF_NOT_SET(0);
+      EXTRACARDDATA_NOT_SET(0);
       private final int value;
-      private KNKJCIMNEPFCase(int value) {
+      private ExtraCardDataCase(int value) {
         this.value = value;
       }
       /**
@@ -1401,14 +1401,14 @@ public final class ShopCardProductOuterClass {
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
-      public static KNKJCIMNEPFCase valueOf(int value) {
+      public static ExtraCardDataCase valueOf(int value) {
         return forNumber(value);
       }
 
-      public static KNKJCIMNEPFCase forNumber(int value) {
+      public static ExtraCardDataCase forNumber(int value) {
         switch (value) {
           case 101: return RESIN_CARD;
-          case 0: return KNKJCIMNEPF_NOT_SET;
+          case 0: return EXTRACARDDATA_NOT_SET;
           default: return null;
         }
       }
@@ -1417,10 +1417,10 @@ public final class ShopCardProductOuterClass {
       }
     };
 
-    public KNKJCIMNEPFCase
-    getKNKJCIMNEPFCase() {
-      return KNKJCIMNEPFCase.forNumber(
-          kNKJCIMNEPFCase_);
+    public ExtraCardDataCase
+    getExtraCardDataCase() {
+      return ExtraCardDataCase.forNumber(
+          extraCardDataCase_);
     }
 
     public static final int PRODUCTID_FIELD_NUMBER = 1;
@@ -1561,7 +1561,7 @@ public final class ShopCardProductOuterClass {
      */
     @java.lang.Override
     public boolean hasResinCard() {
-      return kNKJCIMNEPFCase_ == 101;
+      return extraCardDataCase_ == 101;
     }
     /**
      * <code>.ShopCardProduct.ResinCard resin_card = 101;</code>
@@ -1569,8 +1569,8 @@ public final class ShopCardProductOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard getResinCard() {
-      if (kNKJCIMNEPFCase_ == 101) {
-         return (emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) kNKJCIMNEPF_;
+      if (extraCardDataCase_ == 101) {
+         return (emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) extraCardData_;
       }
       return emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.getDefaultInstance();
     }
@@ -1579,8 +1579,8 @@ public final class ShopCardProductOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCardOrBuilder getResinCardOrBuilder() {
-      if (kNKJCIMNEPFCase_ == 101) {
-         return (emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) kNKJCIMNEPF_;
+      if (extraCardDataCase_ == 101) {
+         return (emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) extraCardData_;
       }
       return emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.getDefaultInstance();
     }
@@ -1620,8 +1620,8 @@ public final class ShopCardProductOuterClass {
       if (cardProductType_ != 0) {
         output.writeUInt32(7, cardProductType_);
       }
-      if (kNKJCIMNEPFCase_ == 101) {
-        output.writeMessage(101, (emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) kNKJCIMNEPF_);
+      if (extraCardDataCase_ == 101) {
+        output.writeMessage(101, (emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) extraCardData_);
       }
       unknownFields.writeTo(output);
     }
@@ -1658,9 +1658,9 @@ public final class ShopCardProductOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(7, cardProductType_);
       }
-      if (kNKJCIMNEPFCase_ == 101) {
+      if (extraCardDataCase_ == 101) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(101, (emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) kNKJCIMNEPF_);
+          .computeMessageSize(101, (emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) extraCardData_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1691,8 +1691,8 @@ public final class ShopCardProductOuterClass {
           != other.getRemainRewardDays()) return false;
       if (getCardProductType()
           != other.getCardProductType()) return false;
-      if (!getKNKJCIMNEPFCase().equals(other.getKNKJCIMNEPFCase())) return false;
-      switch (kNKJCIMNEPFCase_) {
+      if (!getExtraCardDataCase().equals(other.getExtraCardDataCase())) return false;
+      switch (extraCardDataCase_) {
         case 101:
           if (!getResinCard()
               .equals(other.getResinCard())) return false;
@@ -1725,7 +1725,7 @@ public final class ShopCardProductOuterClass {
       hash = (53 * hash) + getRemainRewardDays();
       hash = (37 * hash) + CARDPRODUCTTYPE_FIELD_NUMBER;
       hash = (53 * hash) + getCardProductType();
-      switch (kNKJCIMNEPFCase_) {
+      switch (extraCardDataCase_) {
         case 101:
           hash = (37 * hash) + RESIN_CARD_FIELD_NUMBER;
           hash = (53 * hash) + getResinCard().hashCode();
@@ -1880,8 +1880,8 @@ public final class ShopCardProductOuterClass {
 
         cardProductType_ = 0;
 
-        kNKJCIMNEPFCase_ = 0;
-        kNKJCIMNEPF_ = null;
+        extraCardDataCase_ = 0;
+        extraCardData_ = null;
         return this;
       }
 
@@ -1915,14 +1915,14 @@ public final class ShopCardProductOuterClass {
         result.days_ = days_;
         result.remainRewardDays_ = remainRewardDays_;
         result.cardProductType_ = cardProductType_;
-        if (kNKJCIMNEPFCase_ == 101) {
+        if (extraCardDataCase_ == 101) {
           if (resinCardBuilder_ == null) {
-            result.kNKJCIMNEPF_ = kNKJCIMNEPF_;
+            result.extraCardData_ = extraCardData_;
           } else {
-            result.kNKJCIMNEPF_ = resinCardBuilder_.build();
+            result.extraCardData_ = resinCardBuilder_.build();
           }
         }
-        result.kNKJCIMNEPFCase_ = kNKJCIMNEPFCase_;
+        result.extraCardDataCase_ = extraCardDataCase_;
         onBuilt();
         return result;
       }
@@ -1994,12 +1994,12 @@ public final class ShopCardProductOuterClass {
         if (other.getCardProductType() != 0) {
           setCardProductType(other.getCardProductType());
         }
-        switch (other.getKNKJCIMNEPFCase()) {
+        switch (other.getExtraCardDataCase()) {
           case RESIN_CARD: {
             mergeResinCard(other.getResinCard());
             break;
           }
-          case KNKJCIMNEPF_NOT_SET: {
+          case EXTRACARDDATA_NOT_SET: {
             break;
           }
         }
@@ -2031,17 +2031,17 @@ public final class ShopCardProductOuterClass {
         }
         return this;
       }
-      private int kNKJCIMNEPFCase_ = 0;
-      private java.lang.Object kNKJCIMNEPF_;
-      public KNKJCIMNEPFCase
-          getKNKJCIMNEPFCase() {
-        return KNKJCIMNEPFCase.forNumber(
-            kNKJCIMNEPFCase_);
+      private int extraCardDataCase_ = 0;
+      private java.lang.Object extraCardData_;
+      public ExtraCardDataCase
+          getExtraCardDataCase() {
+        return ExtraCardDataCase.forNumber(
+            extraCardDataCase_);
       }
 
-      public Builder clearKNKJCIMNEPF() {
-        kNKJCIMNEPFCase_ = 0;
-        kNKJCIMNEPF_ = null;
+      public Builder clearExtraCardData() {
+        extraCardDataCase_ = 0;
+        extraCardData_ = null;
         onChanged();
         return this;
       }
@@ -2362,7 +2362,7 @@ public final class ShopCardProductOuterClass {
        */
       @java.lang.Override
       public boolean hasResinCard() {
-        return kNKJCIMNEPFCase_ == 101;
+        return extraCardDataCase_ == 101;
       }
       /**
        * <code>.ShopCardProduct.ResinCard resin_card = 101;</code>
@@ -2371,12 +2371,12 @@ public final class ShopCardProductOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard getResinCard() {
         if (resinCardBuilder_ == null) {
-          if (kNKJCIMNEPFCase_ == 101) {
-            return (emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) kNKJCIMNEPF_;
+          if (extraCardDataCase_ == 101) {
+            return (emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) extraCardData_;
           }
           return emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.getDefaultInstance();
         } else {
-          if (kNKJCIMNEPFCase_ == 101) {
+          if (extraCardDataCase_ == 101) {
             return resinCardBuilder_.getMessage();
           }
           return emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.getDefaultInstance();
@@ -2390,12 +2390,12 @@ public final class ShopCardProductOuterClass {
           if (value == null) {
             throw new NullPointerException();
           }
-          kNKJCIMNEPF_ = value;
+          extraCardData_ = value;
           onChanged();
         } else {
           resinCardBuilder_.setMessage(value);
         }
-        kNKJCIMNEPFCase_ = 101;
+        extraCardDataCase_ = 101;
         return this;
       }
       /**
@@ -2404,12 +2404,12 @@ public final class ShopCardProductOuterClass {
       public Builder setResinCard(
           emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.Builder builderForValue) {
         if (resinCardBuilder_ == null) {
-          kNKJCIMNEPF_ = builderForValue.build();
+          extraCardData_ = builderForValue.build();
           onChanged();
         } else {
           resinCardBuilder_.setMessage(builderForValue.build());
         }
-        kNKJCIMNEPFCase_ = 101;
+        extraCardDataCase_ = 101;
         return this;
       }
       /**
@@ -2417,21 +2417,21 @@ public final class ShopCardProductOuterClass {
        */
       public Builder mergeResinCard(emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard value) {
         if (resinCardBuilder_ == null) {
-          if (kNKJCIMNEPFCase_ == 101 &&
-              kNKJCIMNEPF_ != emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.getDefaultInstance()) {
-            kNKJCIMNEPF_ = emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.newBuilder((emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) kNKJCIMNEPF_)
+          if (extraCardDataCase_ == 101 &&
+              extraCardData_ != emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.getDefaultInstance()) {
+            extraCardData_ = emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.newBuilder((emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) extraCardData_)
                 .mergeFrom(value).buildPartial();
           } else {
-            kNKJCIMNEPF_ = value;
+            extraCardData_ = value;
           }
           onChanged();
         } else {
-          if (kNKJCIMNEPFCase_ == 101) {
+          if (extraCardDataCase_ == 101) {
             resinCardBuilder_.mergeFrom(value);
           }
           resinCardBuilder_.setMessage(value);
         }
-        kNKJCIMNEPFCase_ = 101;
+        extraCardDataCase_ = 101;
         return this;
       }
       /**
@@ -2439,15 +2439,15 @@ public final class ShopCardProductOuterClass {
        */
       public Builder clearResinCard() {
         if (resinCardBuilder_ == null) {
-          if (kNKJCIMNEPFCase_ == 101) {
-            kNKJCIMNEPFCase_ = 0;
-            kNKJCIMNEPF_ = null;
+          if (extraCardDataCase_ == 101) {
+            extraCardDataCase_ = 0;
+            extraCardData_ = null;
             onChanged();
           }
         } else {
-          if (kNKJCIMNEPFCase_ == 101) {
-            kNKJCIMNEPFCase_ = 0;
-            kNKJCIMNEPF_ = null;
+          if (extraCardDataCase_ == 101) {
+            extraCardDataCase_ = 0;
+            extraCardData_ = null;
           }
           resinCardBuilder_.clear();
         }
@@ -2464,11 +2464,11 @@ public final class ShopCardProductOuterClass {
        */
       @java.lang.Override
       public emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCardOrBuilder getResinCardOrBuilder() {
-        if ((kNKJCIMNEPFCase_ == 101) && (resinCardBuilder_ != null)) {
+        if ((extraCardDataCase_ == 101) && (resinCardBuilder_ != null)) {
           return resinCardBuilder_.getMessageOrBuilder();
         } else {
-          if (kNKJCIMNEPFCase_ == 101) {
-            return (emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) kNKJCIMNEPF_;
+          if (extraCardDataCase_ == 101) {
+            return (emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) extraCardData_;
           }
           return emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.getDefaultInstance();
         }
@@ -2480,17 +2480,17 @@ public final class ShopCardProductOuterClass {
           emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard, emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.Builder, emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCardOrBuilder> 
           getResinCardFieldBuilder() {
         if (resinCardBuilder_ == null) {
-          if (!(kNKJCIMNEPFCase_ == 101)) {
-            kNKJCIMNEPF_ = emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.getDefaultInstance();
+          if (!(extraCardDataCase_ == 101)) {
+            extraCardData_ = emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.getDefaultInstance();
           }
           resinCardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard, emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.Builder, emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCardOrBuilder>(
-                  (emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) kNKJCIMNEPF_,
+                  (emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard) extraCardData_,
                   getParentForChildren(),
                   isClean());
-          kNKJCIMNEPF_ = null;
+          extraCardData_ = null;
         }
-        kNKJCIMNEPFCase_ = 101;
+        extraCardDataCase_ = 101;
         onChanged();;
         return resinCardBuilder_;
       }
@@ -2567,15 +2567,15 @@ public final class ShopCardProductOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\025ShopCardProduct.proto\032\017ItemParam.proto" +
-      "\"\264\002\n\017ShopCardProduct\022\021\n\tproductId\030\001 \001(\t\022" +
+      "\"\270\002\n\017ShopCardProduct\022\021\n\tproductId\030\001 \001(\t\022" +
       "\021\n\tpriceTier\030\002 \001(\t\022\021\n\tmcoinBase\030\003 \001(\r\022\023\n" +
       "\013hcoinPerDay\030\004 \001(\r\022\014\n\004days\030\005 \001(\r\022\030\n\020rema" +
       "inRewardDays\030\006 \001(\r\022\027\n\017cardProductType\030\007 " +
       "\001(\r\0220\n\nresin_card\030e \001(\0132\032.ShopCardProduc" +
       "t.ResinCardH\000\032Q\n\tResinCard\022 \n\014baseItemLi" +
       "st\030\001 \003(\0132\n.ItemParam\022\"\n\016perDayItemList\030\002" +
-      " \003(\0132\n.ItemParamB\r\n\013KNKJCIMNEPFB\033\n\031emu.g" +
-      "rasscutter.net.protob\006proto3"
+      " \003(\0132\n.ItemParamB\021\n\017extra_card_dataB\033\n\031e" +
+      "mu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2587,7 +2587,7 @@ public final class ShopCardProductOuterClass {
     internal_static_ShopCardProduct_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ShopCardProduct_descriptor,
-        new java.lang.String[] { "ProductId", "PriceTier", "McoinBase", "HcoinPerDay", "Days", "RemainRewardDays", "CardProductType", "ResinCard", "KNKJCIMNEPF", });
+        new java.lang.String[] { "ProductId", "PriceTier", "McoinBase", "HcoinPerDay", "Days", "RemainRewardDays", "CardProductType", "ResinCard", "ExtraCardData", });
     internal_static_ShopCardProduct_ResinCard_descriptor =
       internal_static_ShopCardProduct_descriptor.getNestedTypes().get(0);
     internal_static_ShopCardProduct_ResinCard_fieldAccessorTable = new

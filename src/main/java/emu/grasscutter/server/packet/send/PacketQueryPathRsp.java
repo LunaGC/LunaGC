@@ -4,19 +4,20 @@ import emu.grasscutter.net.packet.BasePacket;
 import emu.grasscutter.net.packet.PacketOpcodes;
 import emu.grasscutter.net.proto.QueryPathReqOuterClass;
 import emu.grasscutter.net.proto.QueryPathRspOuterClass;
+import emu.grasscutter.net.proto.PathStatusTypeOuterClass;
 
 public class PacketQueryPathRsp extends BasePacket {
 
-	public PacketQueryPathRsp(QueryPathReqOuterClass.QueryPathReq req) {
-		super(PacketOpcodes.QueryPathRsp);
+    public PacketQueryPathRsp(QueryPathReqOuterClass.QueryPathReq req) {
+        super(PacketOpcodes.QueryPathRsp);
 
         var proto = QueryPathRspOuterClass.QueryPathRsp.newBuilder();
 
         proto.addCorners(req.getSourcePos())
             .addCorners(req.getDestinationPos(0))
             .setQueryId(req.getQueryId())
-            .setQueryStatus(QueryPathRspOuterClass.QueryPathRsp.PathStatusType.PATH_STATUS_TYPE_SUCC);
+            .setQueryStatus(PathStatusTypeOuterClass.PathStatusType.PATH_STATUS_TYPE_SUCC);
 
         this.setData(proto);
-	}
+    }
 }

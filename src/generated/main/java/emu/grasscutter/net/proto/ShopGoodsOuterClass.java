@@ -177,6 +177,10 @@ public final class ShopGoodsOuterClass {
     int getMcoin();
   }
   /**
+   * <pre>
+   * Name: EFLDHGLFIDD (3.4)
+   * </pre>
+   *
    * Protobuf type {@code ShopGoods}
    */
   public static final class ShopGoods extends
@@ -1060,6 +1064,10 @@ public final class ShopGoodsOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: EFLDHGLFIDD (3.4)
+     * </pre>
+     *
      * Protobuf type {@code ShopGoods}
      */
     public static final class Builder extends

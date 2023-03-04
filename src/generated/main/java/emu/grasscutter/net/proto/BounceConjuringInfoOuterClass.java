@@ -57,53 +57,6 @@ public final class BounceConjuringInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private BounceConjuringInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 32: {
-
-              totalScore_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-
-              totalDestroyedMachineCount_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.BounceConjuringInfoOuterClass.internal_static_BounceConjuringInfo_descriptor;
@@ -118,7 +71,7 @@ public final class BounceConjuringInfoOuterClass {
     }
 
     public static final int TOTALDESTROYEDMACHINECOUNT_FIELD_NUMBER = 5;
-    private int totalDestroyedMachineCount_;
+    private int totalDestroyedMachineCount_ = 0;
     /**
      * <code>uint32 totalDestroyedMachineCount = 5;</code>
      * @return The totalDestroyedMachineCount.
@@ -129,7 +82,7 @@ public final class BounceConjuringInfoOuterClass {
     }
 
     public static final int TOTALSCORE_FIELD_NUMBER = 4;
-    private int totalScore_;
+    private int totalScore_ = 0;
     /**
      * <code>uint32 totalScore = 4;</code>
      * @return The totalScore.
@@ -159,7 +112,7 @@ public final class BounceConjuringInfoOuterClass {
       if (totalDestroyedMachineCount_ != 0) {
         output.writeUInt32(5, totalDestroyedMachineCount_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -176,7 +129,7 @@ public final class BounceConjuringInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(5, totalDestroyedMachineCount_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -195,7 +148,7 @@ public final class BounceConjuringInfoOuterClass {
           != other.getTotalDestroyedMachineCount()) return false;
       if (getTotalScore()
           != other.getTotalScore()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -210,7 +163,7 @@ public final class BounceConjuringInfoOuterClass {
       hash = (53 * hash) + getTotalDestroyedMachineCount();
       hash = (37 * hash) + TOTALSCORE_FIELD_NUMBER;
       hash = (53 * hash) + getTotalScore();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -327,26 +280,20 @@ public final class BounceConjuringInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BounceConjuringInfoOuterClass.BounceConjuringInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         totalDestroyedMachineCount_ = 0;
-
         totalScore_ = 0;
-
         return this;
       }
 
@@ -373,10 +320,19 @@ public final class BounceConjuringInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.BounceConjuringInfoOuterClass.BounceConjuringInfo buildPartial() {
         emu.grasscutter.net.proto.BounceConjuringInfoOuterClass.BounceConjuringInfo result = new emu.grasscutter.net.proto.BounceConjuringInfoOuterClass.BounceConjuringInfo(this);
-        result.totalDestroyedMachineCount_ = totalDestroyedMachineCount_;
-        result.totalScore_ = totalScore_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.BounceConjuringInfoOuterClass.BounceConjuringInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.totalDestroyedMachineCount_ = totalDestroyedMachineCount_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.totalScore_ = totalScore_;
+        }
       }
 
       @java.lang.Override
@@ -429,7 +385,7 @@ public final class BounceConjuringInfoOuterClass {
         if (other.getTotalScore() != 0) {
           setTotalScore(other.getTotalScore());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -444,19 +400,43 @@ public final class BounceConjuringInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.BounceConjuringInfoOuterClass.BounceConjuringInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 32: {
+                totalScore_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 32
+              case 40: {
+                totalDestroyedMachineCount_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.BounceConjuringInfoOuterClass.BounceConjuringInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private int totalDestroyedMachineCount_ ;
       /**
@@ -475,6 +455,7 @@ public final class BounceConjuringInfoOuterClass {
       public Builder setTotalDestroyedMachineCount(int value) {
         
         totalDestroyedMachineCount_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -483,7 +464,7 @@ public final class BounceConjuringInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTotalDestroyedMachineCount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         totalDestroyedMachineCount_ = 0;
         onChanged();
         return this;
@@ -506,6 +487,7 @@ public final class BounceConjuringInfoOuterClass {
       public Builder setTotalScore(int value) {
         
         totalScore_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -514,7 +496,7 @@ public final class BounceConjuringInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTotalScore() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         totalScore_ = 0;
         onChanged();
         return this;
@@ -552,7 +534,18 @@ public final class BounceConjuringInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BounceConjuringInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

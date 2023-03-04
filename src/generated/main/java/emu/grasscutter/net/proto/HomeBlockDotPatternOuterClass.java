@@ -660,15 +660,14 @@ public final class HomeBlockDotPatternOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031HomeBlockDotPattern.proto\032\013bytes.proto" +
-      "\"B\n\023HomeBlockDotPattern\022\r\n\005width\030\003 \001(\r\022\014" +
-      "\n\004data\030\016 \001(\014\022\016\n\006height\030\010 \001(\rB\033\n\031emu.gras" +
-      "scutter.net.protob\006proto3"
+      "\n\031HomeBlockDotPattern.proto\"B\n\023HomeBlock" +
+      "DotPattern\022\r\n\005width\030\003 \001(\r\022\014\n\004data\030\016 \001(\014\022" +
+      "\016\n\006height\030\010 \001(\rB\033\n\031emu.grasscutter.net.p" +
+      "rotob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.Bytes.getDescriptor(),
         });
     internal_static_HomeBlockDotPattern_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -676,7 +675,6 @@ public final class HomeBlockDotPatternOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_HomeBlockDotPattern_descriptor,
         new java.lang.String[] { "Width", "Data", "Height", });
-    emu.grasscutter.net.proto.Bytes.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

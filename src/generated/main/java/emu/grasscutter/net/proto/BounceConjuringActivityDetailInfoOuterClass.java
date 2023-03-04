@@ -19,42 +19,46 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_content_closed = 8;</code>
-     * @return The isContentClosed.
-     */
-    boolean getIsContentClosed();
-
-    /**
-     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
      */
     java.util.List<emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo> 
         getChapterInfoListList();
     /**
-     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
      */
     emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo getChapterInfoList(int index);
     /**
-     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
      */
     int getChapterInfoListCount();
     /**
-     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfoOrBuilder> 
         getChapterInfoListOrBuilderList();
     /**
-     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
      */
     emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfoOrBuilder getChapterInfoListOrBuilder(
         int index);
 
     /**
-     * <code>uint32 content_close_time = 2;</code>
+     * <code>uint32 content_close_time = 4;</code>
      * @return The contentCloseTime.
      */
     int getContentCloseTime();
+
+    /**
+     * <code>bool is_content_closed = 3;</code>
+     * @return The isContentClosed.
+     */
+    boolean getIsContentClosed();
   }
   /**
+   * <pre>
+   * Name: CPGHOEPNAID
+   * </pre>
+   *
    * Protobuf type {@code BounceConjuringActivityDetailInfo}
    */
   public static final class BounceConjuringActivityDetailInfo extends
@@ -82,66 +86,6 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private BounceConjuringActivityDetailInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 16: {
-
-              contentCloseTime_ = input.readUInt32();
-              break;
-            }
-            case 64: {
-
-              isContentClosed_ = input.readBool();
-              break;
-            }
-            case 122: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                chapterInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              chapterInfoList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          chapterInfoList_ = java.util.Collections.unmodifiableList(chapterInfoList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.internal_static_BounceConjuringActivityDetailInfo_descriptor;
@@ -155,28 +99,18 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
               emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo.class, emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo.Builder.class);
     }
 
-    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 8;
-    private boolean isContentClosed_;
-    /**
-     * <code>bool is_content_closed = 8;</code>
-     * @return The isContentClosed.
-     */
-    @java.lang.Override
-    public boolean getIsContentClosed() {
-      return isContentClosed_;
-    }
-
-    public static final int CHAPTER_INFO_LIST_FIELD_NUMBER = 15;
+    public static final int CHAPTER_INFO_LIST_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo> chapterInfoList_;
     /**
-     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo> getChapterInfoListList() {
       return chapterInfoList_;
     }
     /**
-     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfoOrBuilder> 
@@ -184,21 +118,21 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
       return chapterInfoList_;
     }
     /**
-     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
      */
     @java.lang.Override
     public int getChapterInfoListCount() {
       return chapterInfoList_.size();
     }
     /**
-     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo getChapterInfoList(int index) {
       return chapterInfoList_.get(index);
     }
     /**
-     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+     * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfoOrBuilder getChapterInfoListOrBuilder(
@@ -206,15 +140,26 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
       return chapterInfoList_.get(index);
     }
 
-    public static final int CONTENT_CLOSE_TIME_FIELD_NUMBER = 2;
-    private int contentCloseTime_;
+    public static final int CONTENT_CLOSE_TIME_FIELD_NUMBER = 4;
+    private int contentCloseTime_ = 0;
     /**
-     * <code>uint32 content_close_time = 2;</code>
+     * <code>uint32 content_close_time = 4;</code>
      * @return The contentCloseTime.
      */
     @java.lang.Override
     public int getContentCloseTime() {
       return contentCloseTime_;
+    }
+
+    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 3;
+    private boolean isContentClosed_ = false;
+    /**
+     * <code>bool is_content_closed = 3;</code>
+     * @return The isContentClosed.
+     */
+    @java.lang.Override
+    public boolean getIsContentClosed() {
+      return isContentClosed_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -231,16 +176,16 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (contentCloseTime_ != 0) {
-        output.writeUInt32(2, contentCloseTime_);
-      }
       if (isContentClosed_ != false) {
-        output.writeBool(8, isContentClosed_);
+        output.writeBool(3, isContentClosed_);
+      }
+      if (contentCloseTime_ != 0) {
+        output.writeUInt32(4, contentCloseTime_);
       }
       for (int i = 0; i < chapterInfoList_.size(); i++) {
-        output.writeMessage(15, chapterInfoList_.get(i));
+        output.writeMessage(7, chapterInfoList_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -249,19 +194,19 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (contentCloseTime_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, contentCloseTime_);
-      }
       if (isContentClosed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, isContentClosed_);
+          .computeBoolSize(3, isContentClosed_);
+      }
+      if (contentCloseTime_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, contentCloseTime_);
       }
       for (int i = 0; i < chapterInfoList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, chapterInfoList_.get(i));
+          .computeMessageSize(7, chapterInfoList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -276,13 +221,13 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
       }
       emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo other = (emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo) obj;
 
-      if (getIsContentClosed()
-          != other.getIsContentClosed()) return false;
       if (!getChapterInfoListList()
           .equals(other.getChapterInfoListList())) return false;
       if (getContentCloseTime()
           != other.getContentCloseTime()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getIsContentClosed()
+          != other.getIsContentClosed()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -293,16 +238,16 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + IS_CONTENT_CLOSED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsContentClosed());
       if (getChapterInfoListCount() > 0) {
         hash = (37 * hash) + CHAPTER_INFO_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getChapterInfoListList().hashCode();
       }
       hash = (37 * hash) + CONTENT_CLOSE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getContentCloseTime();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + IS_CONTENT_CLOSED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsContentClosed());
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -398,6 +343,10 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: CPGHOEPNAID
+     * </pre>
+     *
      * Protobuf type {@code BounceConjuringActivityDetailInfo}
      */
     public static final class Builder extends
@@ -419,33 +368,27 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getChapterInfoListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        isContentClosed_ = false;
-
+        bitField0_ = 0;
         if (chapterInfoListBuilder_ == null) {
           chapterInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          chapterInfoList_ = null;
           chapterInfoListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         contentCloseTime_ = 0;
-
+        isContentClosed_ = false;
         return this;
       }
 
@@ -472,8 +415,13 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo buildPartial() {
         emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo result = new emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo(this);
-        int from_bitField0_ = bitField0_;
-        result.isContentClosed_ = isContentClosed_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo result) {
         if (chapterInfoListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             chapterInfoList_ = java.util.Collections.unmodifiableList(chapterInfoList_);
@@ -483,9 +431,16 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         } else {
           result.chapterInfoList_ = chapterInfoListBuilder_.build();
         }
-        result.contentCloseTime_ = contentCloseTime_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contentCloseTime_ = contentCloseTime_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.isContentClosed_ = isContentClosed_;
+        }
       }
 
       @java.lang.Override
@@ -532,9 +487,6 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo other) {
         if (other == emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo.getDefaultInstance()) return this;
-        if (other.getIsContentClosed() != false) {
-          setIsContentClosed(other.getIsContentClosed());
-        }
         if (chapterInfoListBuilder_ == null) {
           if (!other.chapterInfoList_.isEmpty()) {
             if (chapterInfoList_.isEmpty()) {
@@ -564,7 +516,10 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         if (other.getContentCloseTime() != 0) {
           setContentCloseTime(other.getContentCloseTime());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.getIsContentClosed() != false) {
+          setIsContentClosed(other.getIsContentClosed());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -579,51 +534,56 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 24: {
+                isContentClosed_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                contentCloseTime_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 32
+              case 58: {
+                emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo.parser(),
+                        extensionRegistry);
+                if (chapterInfoListBuilder_ == null) {
+                  ensureChapterInfoListIsMutable();
+                  chapterInfoList_.add(m);
+                } else {
+                  chapterInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.BounceConjuringActivityDetailInfoOuterClass.BounceConjuringActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
-
-      private boolean isContentClosed_ ;
-      /**
-       * <code>bool is_content_closed = 8;</code>
-       * @return The isContentClosed.
-       */
-      @java.lang.Override
-      public boolean getIsContentClosed() {
-        return isContentClosed_;
-      }
-      /**
-       * <code>bool is_content_closed = 8;</code>
-       * @param value The isContentClosed to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsContentClosed(boolean value) {
-        
-        isContentClosed_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_content_closed = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsContentClosed() {
-        
-        isContentClosed_ = false;
-        onChanged();
-        return this;
-      }
 
       private java.util.List<emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo> chapterInfoList_ =
         java.util.Collections.emptyList();
@@ -638,7 +598,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
           emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo, emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo.Builder, emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfoOrBuilder> chapterInfoListBuilder_;
 
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo> getChapterInfoListList() {
         if (chapterInfoListBuilder_ == null) {
@@ -648,7 +608,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public int getChapterInfoListCount() {
         if (chapterInfoListBuilder_ == null) {
@@ -658,7 +618,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo getChapterInfoList(int index) {
         if (chapterInfoListBuilder_ == null) {
@@ -668,7 +628,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public Builder setChapterInfoList(
           int index, emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo value) {
@@ -685,7 +645,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public Builder setChapterInfoList(
           int index, emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo.Builder builderForValue) {
@@ -699,7 +659,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public Builder addChapterInfoList(emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo value) {
         if (chapterInfoListBuilder_ == null) {
@@ -715,7 +675,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public Builder addChapterInfoList(
           int index, emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo value) {
@@ -732,7 +692,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public Builder addChapterInfoList(
           emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo.Builder builderForValue) {
@@ -746,7 +706,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public Builder addChapterInfoList(
           int index, emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo.Builder builderForValue) {
@@ -760,7 +720,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public Builder addAllChapterInfoList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo> values) {
@@ -775,7 +735,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public Builder clearChapterInfoList() {
         if (chapterInfoListBuilder_ == null) {
@@ -788,7 +748,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public Builder removeChapterInfoList(int index) {
         if (chapterInfoListBuilder_ == null) {
@@ -801,14 +761,14 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo.Builder getChapterInfoListBuilder(
           int index) {
         return getChapterInfoListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfoOrBuilder getChapterInfoListOrBuilder(
           int index) {
@@ -818,7 +778,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfoOrBuilder> 
            getChapterInfoListOrBuilderList() {
@@ -829,14 +789,14 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo.Builder addChapterInfoListBuilder() {
         return getChapterInfoListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo.Builder addChapterInfoListBuilder(
           int index) {
@@ -844,7 +804,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
             index, emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 15;</code>
+       * <code>repeated .BounceConjuringChapterInfo chapter_info_list = 7;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.BounceConjuringChapterInfo.Builder> 
            getChapterInfoListBuilderList() {
@@ -867,7 +827,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
 
       private int contentCloseTime_ ;
       /**
-       * <code>uint32 content_close_time = 2;</code>
+       * <code>uint32 content_close_time = 4;</code>
        * @return The contentCloseTime.
        */
       @java.lang.Override
@@ -875,23 +835,56 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
         return contentCloseTime_;
       }
       /**
-       * <code>uint32 content_close_time = 2;</code>
+       * <code>uint32 content_close_time = 4;</code>
        * @param value The contentCloseTime to set.
        * @return This builder for chaining.
        */
       public Builder setContentCloseTime(int value) {
         
         contentCloseTime_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 content_close_time = 2;</code>
+       * <code>uint32 content_close_time = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearContentCloseTime() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         contentCloseTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isContentClosed_ ;
+      /**
+       * <code>bool is_content_closed = 3;</code>
+       * @return The isContentClosed.
+       */
+      @java.lang.Override
+      public boolean getIsContentClosed() {
+        return isContentClosed_;
+      }
+      /**
+       * <code>bool is_content_closed = 3;</code>
+       * @param value The isContentClosed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsContentClosed(boolean value) {
+        
+        isContentClosed_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_content_closed = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsContentClosed() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        isContentClosed_ = false;
         onChanged();
         return this;
       }
@@ -928,7 +921,18 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BounceConjuringActivityDetailInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -964,10 +968,10 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
     java.lang.String[] descriptorData = {
       "\n\'BounceConjuringActivityDetailInfo.prot" +
       "o\032 BounceConjuringChapterInfo.proto\"\222\001\n!" +
-      "BounceConjuringActivityDetailInfo\022\031\n\021is_" +
-      "content_closed\030\010 \001(\010\0226\n\021chapter_info_lis" +
-      "t\030\017 \003(\0132\033.BounceConjuringChapterInfo\022\032\n\022" +
-      "content_close_time\030\002 \001(\rB\033\n\031emu.grasscut" +
+      "BounceConjuringActivityDetailInfo\0226\n\021cha" +
+      "pter_info_list\030\007 \003(\0132\033.BounceConjuringCh" +
+      "apterInfo\022\032\n\022content_close_time\030\004 \001(\r\022\031\n" +
+      "\021is_content_closed\030\003 \001(\010B\033\n\031emu.grasscut" +
       "ter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -980,7 +984,7 @@ public final class BounceConjuringActivityDetailInfoOuterClass {
     internal_static_BounceConjuringActivityDetailInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BounceConjuringActivityDetailInfo_descriptor,
-        new java.lang.String[] { "IsContentClosed", "ChapterInfoList", "ContentCloseTime", });
+        new java.lang.String[] { "ChapterInfoList", "ContentCloseTime", "IsContentClosed", });
     emu.grasscutter.net.proto.BounceConjuringChapterInfoOuterClass.getDescriptor();
   }
 

@@ -19,52 +19,56 @@ public final class AvatarTeamResonanceInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 avatarGuid = 10;</code>
-     * @return The avatarGuid.
+     * <code>repeated uint32 INOIJMMCNEF = 8;</code>
+     * @return A list containing the iNOIJMMCNEF.
      */
-    long getAvatarGuid();
-
+    java.util.List<java.lang.Integer> getINOIJMMCNEFList();
     /**
-     * <code>repeated uint32 delTeamResonanceIdList = 8;</code>
-     * @return A list containing the delTeamResonanceIdList.
+     * <code>repeated uint32 INOIJMMCNEF = 8;</code>
+     * @return The count of iNOIJMMCNEF.
      */
-    java.util.List<java.lang.Integer> getDelTeamResonanceIdListList();
+    int getINOIJMMCNEFCount();
     /**
-     * <code>repeated uint32 delTeamResonanceIdList = 8;</code>
-     * @return The count of delTeamResonanceIdList.
-     */
-    int getDelTeamResonanceIdListCount();
-    /**
-     * <code>repeated uint32 delTeamResonanceIdList = 8;</code>
+     * <code>repeated uint32 INOIJMMCNEF = 8;</code>
      * @param index The index of the element to return.
-     * @return The delTeamResonanceIdList at the given index.
+     * @return The iNOIJMMCNEF at the given index.
      */
-    int getDelTeamResonanceIdList(int index);
+    int getINOIJMMCNEF(int index);
 
     /**
-     * <code>uint32 entityId = 15;</code>
+     * <code>uint32 entity_id = 2;</code>
      * @return The entityId.
      */
     int getEntityId();
 
     /**
-     * <code>repeated uint32 addTeamResonanceIdList = 2;</code>
-     * @return A list containing the addTeamResonanceIdList.
+     * <code>repeated uint32 MJMEKGPPGIO = 10;</code>
+     * @return A list containing the mJMEKGPPGIO.
      */
-    java.util.List<java.lang.Integer> getAddTeamResonanceIdListList();
+    java.util.List<java.lang.Integer> getMJMEKGPPGIOList();
     /**
-     * <code>repeated uint32 addTeamResonanceIdList = 2;</code>
-     * @return The count of addTeamResonanceIdList.
+     * <code>repeated uint32 MJMEKGPPGIO = 10;</code>
+     * @return The count of mJMEKGPPGIO.
      */
-    int getAddTeamResonanceIdListCount();
+    int getMJMEKGPPGIOCount();
     /**
-     * <code>repeated uint32 addTeamResonanceIdList = 2;</code>
+     * <code>repeated uint32 MJMEKGPPGIO = 10;</code>
      * @param index The index of the element to return.
-     * @return The addTeamResonanceIdList at the given index.
+     * @return The mJMEKGPPGIO at the given index.
      */
-    int getAddTeamResonanceIdList(int index);
+    int getMJMEKGPPGIO(int index);
+
+    /**
+     * <code>uint64 avatar_guid = 3;</code>
+     * @return The avatarGuid.
+     */
+    long getAvatarGuid();
   }
   /**
+   * <pre>
+   * Name: LLKMMEJJNNF
+   * </pre>
+   *
    * Protobuf type {@code AvatarTeamResonanceInfo}
    */
   public static final class AvatarTeamResonanceInfo extends
@@ -77,8 +81,8 @@ public final class AvatarTeamResonanceInfoOuterClass {
       super(builder);
     }
     private AvatarTeamResonanceInfo() {
-      delTeamResonanceIdList_ = emptyIntList();
-      addTeamResonanceIdList_ = emptyIntList();
+      iNOIJMMCNEF_ = emptyIntList();
+      mJMEKGPPGIO_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -113,55 +117,55 @@ public final class AvatarTeamResonanceInfoOuterClass {
               done = true;
               break;
             case 16: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                addTeamResonanceIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              addTeamResonanceIdList_.addInt(input.readUInt32());
+
+              entityId_ = input.readUInt32();
               break;
             }
-            case 18: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                addTeamResonanceIdList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                addTeamResonanceIdList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
+            case 24: {
+
+              avatarGuid_ = input.readUInt64();
               break;
             }
             case 64: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                delTeamResonanceIdList_ = newIntList();
+                iNOIJMMCNEF_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              delTeamResonanceIdList_.addInt(input.readUInt32());
+              iNOIJMMCNEF_.addInt(input.readUInt32());
               break;
             }
             case 66: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                delTeamResonanceIdList_ = newIntList();
+                iNOIJMMCNEF_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
               }
               while (input.getBytesUntilLimit() > 0) {
-                delTeamResonanceIdList_.addInt(input.readUInt32());
+                iNOIJMMCNEF_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
               break;
             }
             case 80: {
-
-              avatarGuid_ = input.readUInt64();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                mJMEKGPPGIO_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              mJMEKGPPGIO_.addInt(input.readUInt32());
               break;
             }
-            case 120: {
-
-              entityId_ = input.readUInt32();
+            case 82: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                mJMEKGPPGIO_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                mJMEKGPPGIO_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
               break;
             }
             default: {
@@ -179,11 +183,11 @@ public final class AvatarTeamResonanceInfoOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          addTeamResonanceIdList_.makeImmutable(); // C
-        }
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          delTeamResonanceIdList_.makeImmutable(); // C
+          iNOIJMMCNEF_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          mJMEKGPPGIO_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -202,49 +206,38 @@ public final class AvatarTeamResonanceInfoOuterClass {
               emu.grasscutter.net.proto.AvatarTeamResonanceInfoOuterClass.AvatarTeamResonanceInfo.class, emu.grasscutter.net.proto.AvatarTeamResonanceInfoOuterClass.AvatarTeamResonanceInfo.Builder.class);
     }
 
-    public static final int AVATARGUID_FIELD_NUMBER = 10;
-    private long avatarGuid_;
+    public static final int INOIJMMCNEF_FIELD_NUMBER = 8;
+    private com.google.protobuf.Internal.IntList iNOIJMMCNEF_;
     /**
-     * <code>uint64 avatarGuid = 10;</code>
-     * @return The avatarGuid.
-     */
-    @java.lang.Override
-    public long getAvatarGuid() {
-      return avatarGuid_;
-    }
-
-    public static final int DELTEAMRESONANCEIDLIST_FIELD_NUMBER = 8;
-    private com.google.protobuf.Internal.IntList delTeamResonanceIdList_;
-    /**
-     * <code>repeated uint32 delTeamResonanceIdList = 8;</code>
-     * @return A list containing the delTeamResonanceIdList.
+     * <code>repeated uint32 INOIJMMCNEF = 8;</code>
+     * @return A list containing the iNOIJMMCNEF.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getDelTeamResonanceIdListList() {
-      return delTeamResonanceIdList_;
+        getINOIJMMCNEFList() {
+      return iNOIJMMCNEF_;
     }
     /**
-     * <code>repeated uint32 delTeamResonanceIdList = 8;</code>
-     * @return The count of delTeamResonanceIdList.
+     * <code>repeated uint32 INOIJMMCNEF = 8;</code>
+     * @return The count of iNOIJMMCNEF.
      */
-    public int getDelTeamResonanceIdListCount() {
-      return delTeamResonanceIdList_.size();
+    public int getINOIJMMCNEFCount() {
+      return iNOIJMMCNEF_.size();
     }
     /**
-     * <code>repeated uint32 delTeamResonanceIdList = 8;</code>
+     * <code>repeated uint32 INOIJMMCNEF = 8;</code>
      * @param index The index of the element to return.
-     * @return The delTeamResonanceIdList at the given index.
+     * @return The iNOIJMMCNEF at the given index.
      */
-    public int getDelTeamResonanceIdList(int index) {
-      return delTeamResonanceIdList_.getInt(index);
+    public int getINOIJMMCNEF(int index) {
+      return iNOIJMMCNEF_.getInt(index);
     }
-    private int delTeamResonanceIdListMemoizedSerializedSize = -1;
+    private int iNOIJMMCNEFMemoizedSerializedSize = -1;
 
-    public static final int ENTITYID_FIELD_NUMBER = 15;
+    public static final int ENTITY_ID_FIELD_NUMBER = 2;
     private int entityId_;
     /**
-     * <code>uint32 entityId = 15;</code>
+     * <code>uint32 entity_id = 2;</code>
      * @return The entityId.
      */
     @java.lang.Override
@@ -252,33 +245,44 @@ public final class AvatarTeamResonanceInfoOuterClass {
       return entityId_;
     }
 
-    public static final int ADDTEAMRESONANCEIDLIST_FIELD_NUMBER = 2;
-    private com.google.protobuf.Internal.IntList addTeamResonanceIdList_;
+    public static final int MJMEKGPPGIO_FIELD_NUMBER = 10;
+    private com.google.protobuf.Internal.IntList mJMEKGPPGIO_;
     /**
-     * <code>repeated uint32 addTeamResonanceIdList = 2;</code>
-     * @return A list containing the addTeamResonanceIdList.
+     * <code>repeated uint32 MJMEKGPPGIO = 10;</code>
+     * @return A list containing the mJMEKGPPGIO.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getAddTeamResonanceIdListList() {
-      return addTeamResonanceIdList_;
+        getMJMEKGPPGIOList() {
+      return mJMEKGPPGIO_;
     }
     /**
-     * <code>repeated uint32 addTeamResonanceIdList = 2;</code>
-     * @return The count of addTeamResonanceIdList.
+     * <code>repeated uint32 MJMEKGPPGIO = 10;</code>
+     * @return The count of mJMEKGPPGIO.
      */
-    public int getAddTeamResonanceIdListCount() {
-      return addTeamResonanceIdList_.size();
+    public int getMJMEKGPPGIOCount() {
+      return mJMEKGPPGIO_.size();
     }
     /**
-     * <code>repeated uint32 addTeamResonanceIdList = 2;</code>
+     * <code>repeated uint32 MJMEKGPPGIO = 10;</code>
      * @param index The index of the element to return.
-     * @return The addTeamResonanceIdList at the given index.
+     * @return The mJMEKGPPGIO at the given index.
      */
-    public int getAddTeamResonanceIdList(int index) {
-      return addTeamResonanceIdList_.getInt(index);
+    public int getMJMEKGPPGIO(int index) {
+      return mJMEKGPPGIO_.getInt(index);
     }
-    private int addTeamResonanceIdListMemoizedSerializedSize = -1;
+    private int mJMEKGPPGIOMemoizedSerializedSize = -1;
+
+    public static final int AVATAR_GUID_FIELD_NUMBER = 3;
+    private long avatarGuid_;
+    /**
+     * <code>uint64 avatar_guid = 3;</code>
+     * @return The avatarGuid.
+     */
+    @java.lang.Override
+    public long getAvatarGuid() {
+      return avatarGuid_;
+    }
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -295,25 +299,25 @@ public final class AvatarTeamResonanceInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (getAddTeamResonanceIdListList().size() > 0) {
-        output.writeUInt32NoTag(18);
-        output.writeUInt32NoTag(addTeamResonanceIdListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < addTeamResonanceIdList_.size(); i++) {
-        output.writeUInt32NoTag(addTeamResonanceIdList_.getInt(i));
-      }
-      if (getDelTeamResonanceIdListList().size() > 0) {
-        output.writeUInt32NoTag(66);
-        output.writeUInt32NoTag(delTeamResonanceIdListMemoizedSerializedSize);
-      }
-      for (int i = 0; i < delTeamResonanceIdList_.size(); i++) {
-        output.writeUInt32NoTag(delTeamResonanceIdList_.getInt(i));
+      if (entityId_ != 0) {
+        output.writeUInt32(2, entityId_);
       }
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(10, avatarGuid_);
+        output.writeUInt64(3, avatarGuid_);
       }
-      if (entityId_ != 0) {
-        output.writeUInt32(15, entityId_);
+      if (getINOIJMMCNEFList().size() > 0) {
+        output.writeUInt32NoTag(66);
+        output.writeUInt32NoTag(iNOIJMMCNEFMemoizedSerializedSize);
+      }
+      for (int i = 0; i < iNOIJMMCNEF_.size(); i++) {
+        output.writeUInt32NoTag(iNOIJMMCNEF_.getInt(i));
+      }
+      if (getMJMEKGPPGIOList().size() > 0) {
+        output.writeUInt32NoTag(82);
+        output.writeUInt32NoTag(mJMEKGPPGIOMemoizedSerializedSize);
+      }
+      for (int i = 0; i < mJMEKGPPGIO_.size(); i++) {
+        output.writeUInt32NoTag(mJMEKGPPGIO_.getInt(i));
       }
       unknownFields.writeTo(output);
     }
@@ -324,41 +328,41 @@ public final class AvatarTeamResonanceInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < addTeamResonanceIdList_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(addTeamResonanceIdList_.getInt(i));
-        }
-        size += dataSize;
-        if (!getAddTeamResonanceIdListList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        addTeamResonanceIdListMemoizedSerializedSize = dataSize;
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < delTeamResonanceIdList_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(delTeamResonanceIdList_.getInt(i));
-        }
-        size += dataSize;
-        if (!getDelTeamResonanceIdListList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        delTeamResonanceIdListMemoizedSerializedSize = dataSize;
+      if (entityId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, entityId_);
       }
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(10, avatarGuid_);
+          .computeUInt64Size(3, avatarGuid_);
       }
-      if (entityId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, entityId_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < iNOIJMMCNEF_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(iNOIJMMCNEF_.getInt(i));
+        }
+        size += dataSize;
+        if (!getINOIJMMCNEFList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        iNOIJMMCNEFMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < mJMEKGPPGIO_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(mJMEKGPPGIO_.getInt(i));
+        }
+        size += dataSize;
+        if (!getMJMEKGPPGIOList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        mJMEKGPPGIOMemoizedSerializedSize = dataSize;
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -375,14 +379,14 @@ public final class AvatarTeamResonanceInfoOuterClass {
       }
       emu.grasscutter.net.proto.AvatarTeamResonanceInfoOuterClass.AvatarTeamResonanceInfo other = (emu.grasscutter.net.proto.AvatarTeamResonanceInfoOuterClass.AvatarTeamResonanceInfo) obj;
 
-      if (getAvatarGuid()
-          != other.getAvatarGuid()) return false;
-      if (!getDelTeamResonanceIdListList()
-          .equals(other.getDelTeamResonanceIdListList())) return false;
+      if (!getINOIJMMCNEFList()
+          .equals(other.getINOIJMMCNEFList())) return false;
       if (getEntityId()
           != other.getEntityId()) return false;
-      if (!getAddTeamResonanceIdListList()
-          .equals(other.getAddTeamResonanceIdListList())) return false;
+      if (!getMJMEKGPPGIOList()
+          .equals(other.getMJMEKGPPGIOList())) return false;
+      if (getAvatarGuid()
+          != other.getAvatarGuid()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -394,19 +398,19 @@ public final class AvatarTeamResonanceInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AVATARGUID_FIELD_NUMBER;
+      if (getINOIJMMCNEFCount() > 0) {
+        hash = (37 * hash) + INOIJMMCNEF_FIELD_NUMBER;
+        hash = (53 * hash) + getINOIJMMCNEFList().hashCode();
+      }
+      hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEntityId();
+      if (getMJMEKGPPGIOCount() > 0) {
+        hash = (37 * hash) + MJMEKGPPGIO_FIELD_NUMBER;
+        hash = (53 * hash) + getMJMEKGPPGIOList().hashCode();
+      }
+      hash = (37 * hash) + AVATAR_GUID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getAvatarGuid());
-      if (getDelTeamResonanceIdListCount() > 0) {
-        hash = (37 * hash) + DELTEAMRESONANCEIDLIST_FIELD_NUMBER;
-        hash = (53 * hash) + getDelTeamResonanceIdListList().hashCode();
-      }
-      hash = (37 * hash) + ENTITYID_FIELD_NUMBER;
-      hash = (53 * hash) + getEntityId();
-      if (getAddTeamResonanceIdListCount() > 0) {
-        hash = (37 * hash) + ADDTEAMRESONANCEIDLIST_FIELD_NUMBER;
-        hash = (53 * hash) + getAddTeamResonanceIdListList().hashCode();
-      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -503,6 +507,10 @@ public final class AvatarTeamResonanceInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: LLKMMEJJNNF
+     * </pre>
+     *
      * Protobuf type {@code AvatarTeamResonanceInfo}
      */
     public static final class Builder extends
@@ -540,14 +548,14 @@ public final class AvatarTeamResonanceInfoOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        avatarGuid_ = 0L;
-
-        delTeamResonanceIdList_ = emptyIntList();
+        iNOIJMMCNEF_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
         entityId_ = 0;
 
-        addTeamResonanceIdList_ = emptyIntList();
+        mJMEKGPPGIO_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
+        avatarGuid_ = 0L;
+
         return this;
       }
 
@@ -575,18 +583,18 @@ public final class AvatarTeamResonanceInfoOuterClass {
       public emu.grasscutter.net.proto.AvatarTeamResonanceInfoOuterClass.AvatarTeamResonanceInfo buildPartial() {
         emu.grasscutter.net.proto.AvatarTeamResonanceInfoOuterClass.AvatarTeamResonanceInfo result = new emu.grasscutter.net.proto.AvatarTeamResonanceInfoOuterClass.AvatarTeamResonanceInfo(this);
         int from_bitField0_ = bitField0_;
-        result.avatarGuid_ = avatarGuid_;
         if (((bitField0_ & 0x00000001) != 0)) {
-          delTeamResonanceIdList_.makeImmutable();
+          iNOIJMMCNEF_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.delTeamResonanceIdList_ = delTeamResonanceIdList_;
+        result.iNOIJMMCNEF_ = iNOIJMMCNEF_;
         result.entityId_ = entityId_;
         if (((bitField0_ & 0x00000002) != 0)) {
-          addTeamResonanceIdList_.makeImmutable();
+          mJMEKGPPGIO_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.addTeamResonanceIdList_ = addTeamResonanceIdList_;
+        result.mJMEKGPPGIO_ = mJMEKGPPGIO_;
+        result.avatarGuid_ = avatarGuid_;
         onBuilt();
         return result;
       }
@@ -635,31 +643,31 @@ public final class AvatarTeamResonanceInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.AvatarTeamResonanceInfoOuterClass.AvatarTeamResonanceInfo other) {
         if (other == emu.grasscutter.net.proto.AvatarTeamResonanceInfoOuterClass.AvatarTeamResonanceInfo.getDefaultInstance()) return this;
-        if (other.getAvatarGuid() != 0L) {
-          setAvatarGuid(other.getAvatarGuid());
-        }
-        if (!other.delTeamResonanceIdList_.isEmpty()) {
-          if (delTeamResonanceIdList_.isEmpty()) {
-            delTeamResonanceIdList_ = other.delTeamResonanceIdList_;
+        if (!other.iNOIJMMCNEF_.isEmpty()) {
+          if (iNOIJMMCNEF_.isEmpty()) {
+            iNOIJMMCNEF_ = other.iNOIJMMCNEF_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureDelTeamResonanceIdListIsMutable();
-            delTeamResonanceIdList_.addAll(other.delTeamResonanceIdList_);
+            ensureINOIJMMCNEFIsMutable();
+            iNOIJMMCNEF_.addAll(other.iNOIJMMCNEF_);
           }
           onChanged();
         }
         if (other.getEntityId() != 0) {
           setEntityId(other.getEntityId());
         }
-        if (!other.addTeamResonanceIdList_.isEmpty()) {
-          if (addTeamResonanceIdList_.isEmpty()) {
-            addTeamResonanceIdList_ = other.addTeamResonanceIdList_;
+        if (!other.mJMEKGPPGIO_.isEmpty()) {
+          if (mJMEKGPPGIO_.isEmpty()) {
+            mJMEKGPPGIO_ = other.mJMEKGPPGIO_;
             bitField0_ = (bitField0_ & ~0x00000002);
           } else {
-            ensureAddTeamResonanceIdListIsMutable();
-            addTeamResonanceIdList_.addAll(other.addTeamResonanceIdList_);
+            ensureMJMEKGPPGIOIsMutable();
+            mJMEKGPPGIO_.addAll(other.mJMEKGPPGIO_);
           }
           onChanged();
+        }
+        if (other.getAvatarGuid() != 0L) {
+          setAvatarGuid(other.getAvatarGuid());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -691,111 +699,80 @@ public final class AvatarTeamResonanceInfoOuterClass {
       }
       private int bitField0_;
 
-      private long avatarGuid_ ;
-      /**
-       * <code>uint64 avatarGuid = 10;</code>
-       * @return The avatarGuid.
-       */
-      @java.lang.Override
-      public long getAvatarGuid() {
-        return avatarGuid_;
-      }
-      /**
-       * <code>uint64 avatarGuid = 10;</code>
-       * @param value The avatarGuid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAvatarGuid(long value) {
-        
-        avatarGuid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 avatarGuid = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAvatarGuid() {
-        
-        avatarGuid_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Internal.IntList delTeamResonanceIdList_ = emptyIntList();
-      private void ensureDelTeamResonanceIdListIsMutable() {
+      private com.google.protobuf.Internal.IntList iNOIJMMCNEF_ = emptyIntList();
+      private void ensureINOIJMMCNEFIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          delTeamResonanceIdList_ = mutableCopy(delTeamResonanceIdList_);
+          iNOIJMMCNEF_ = mutableCopy(iNOIJMMCNEF_);
           bitField0_ |= 0x00000001;
          }
       }
       /**
-       * <code>repeated uint32 delTeamResonanceIdList = 8;</code>
-       * @return A list containing the delTeamResonanceIdList.
+       * <code>repeated uint32 INOIJMMCNEF = 8;</code>
+       * @return A list containing the iNOIJMMCNEF.
        */
       public java.util.List<java.lang.Integer>
-          getDelTeamResonanceIdListList() {
+          getINOIJMMCNEFList() {
         return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(delTeamResonanceIdList_) : delTeamResonanceIdList_;
+                 java.util.Collections.unmodifiableList(iNOIJMMCNEF_) : iNOIJMMCNEF_;
       }
       /**
-       * <code>repeated uint32 delTeamResonanceIdList = 8;</code>
-       * @return The count of delTeamResonanceIdList.
+       * <code>repeated uint32 INOIJMMCNEF = 8;</code>
+       * @return The count of iNOIJMMCNEF.
        */
-      public int getDelTeamResonanceIdListCount() {
-        return delTeamResonanceIdList_.size();
+      public int getINOIJMMCNEFCount() {
+        return iNOIJMMCNEF_.size();
       }
       /**
-       * <code>repeated uint32 delTeamResonanceIdList = 8;</code>
+       * <code>repeated uint32 INOIJMMCNEF = 8;</code>
        * @param index The index of the element to return.
-       * @return The delTeamResonanceIdList at the given index.
+       * @return The iNOIJMMCNEF at the given index.
        */
-      public int getDelTeamResonanceIdList(int index) {
-        return delTeamResonanceIdList_.getInt(index);
+      public int getINOIJMMCNEF(int index) {
+        return iNOIJMMCNEF_.getInt(index);
       }
       /**
-       * <code>repeated uint32 delTeamResonanceIdList = 8;</code>
+       * <code>repeated uint32 INOIJMMCNEF = 8;</code>
        * @param index The index to set the value at.
-       * @param value The delTeamResonanceIdList to set.
+       * @param value The iNOIJMMCNEF to set.
        * @return This builder for chaining.
        */
-      public Builder setDelTeamResonanceIdList(
+      public Builder setINOIJMMCNEF(
           int index, int value) {
-        ensureDelTeamResonanceIdListIsMutable();
-        delTeamResonanceIdList_.setInt(index, value);
+        ensureINOIJMMCNEFIsMutable();
+        iNOIJMMCNEF_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 delTeamResonanceIdList = 8;</code>
-       * @param value The delTeamResonanceIdList to add.
+       * <code>repeated uint32 INOIJMMCNEF = 8;</code>
+       * @param value The iNOIJMMCNEF to add.
        * @return This builder for chaining.
        */
-      public Builder addDelTeamResonanceIdList(int value) {
-        ensureDelTeamResonanceIdListIsMutable();
-        delTeamResonanceIdList_.addInt(value);
+      public Builder addINOIJMMCNEF(int value) {
+        ensureINOIJMMCNEFIsMutable();
+        iNOIJMMCNEF_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 delTeamResonanceIdList = 8;</code>
-       * @param values The delTeamResonanceIdList to add.
+       * <code>repeated uint32 INOIJMMCNEF = 8;</code>
+       * @param values The iNOIJMMCNEF to add.
        * @return This builder for chaining.
        */
-      public Builder addAllDelTeamResonanceIdList(
+      public Builder addAllINOIJMMCNEF(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureDelTeamResonanceIdListIsMutable();
+        ensureINOIJMMCNEFIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, delTeamResonanceIdList_);
+            values, iNOIJMMCNEF_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 delTeamResonanceIdList = 8;</code>
+       * <code>repeated uint32 INOIJMMCNEF = 8;</code>
        * @return This builder for chaining.
        */
-      public Builder clearDelTeamResonanceIdList() {
-        delTeamResonanceIdList_ = emptyIntList();
+      public Builder clearINOIJMMCNEF() {
+        iNOIJMMCNEF_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
@@ -803,7 +780,7 @@ public final class AvatarTeamResonanceInfoOuterClass {
 
       private int entityId_ ;
       /**
-       * <code>uint32 entityId = 15;</code>
+       * <code>uint32 entity_id = 2;</code>
        * @return The entityId.
        */
       @java.lang.Override
@@ -811,7 +788,7 @@ public final class AvatarTeamResonanceInfoOuterClass {
         return entityId_;
       }
       /**
-       * <code>uint32 entityId = 15;</code>
+       * <code>uint32 entity_id = 2;</code>
        * @param value The entityId to set.
        * @return This builder for chaining.
        */
@@ -822,7 +799,7 @@ public final class AvatarTeamResonanceInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 entityId = 15;</code>
+       * <code>uint32 entity_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId() {
@@ -832,81 +809,112 @@ public final class AvatarTeamResonanceInfoOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList addTeamResonanceIdList_ = emptyIntList();
-      private void ensureAddTeamResonanceIdListIsMutable() {
+      private com.google.protobuf.Internal.IntList mJMEKGPPGIO_ = emptyIntList();
+      private void ensureMJMEKGPPGIOIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          addTeamResonanceIdList_ = mutableCopy(addTeamResonanceIdList_);
+          mJMEKGPPGIO_ = mutableCopy(mJMEKGPPGIO_);
           bitField0_ |= 0x00000002;
          }
       }
       /**
-       * <code>repeated uint32 addTeamResonanceIdList = 2;</code>
-       * @return A list containing the addTeamResonanceIdList.
+       * <code>repeated uint32 MJMEKGPPGIO = 10;</code>
+       * @return A list containing the mJMEKGPPGIO.
        */
       public java.util.List<java.lang.Integer>
-          getAddTeamResonanceIdListList() {
+          getMJMEKGPPGIOList() {
         return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(addTeamResonanceIdList_) : addTeamResonanceIdList_;
+                 java.util.Collections.unmodifiableList(mJMEKGPPGIO_) : mJMEKGPPGIO_;
       }
       /**
-       * <code>repeated uint32 addTeamResonanceIdList = 2;</code>
-       * @return The count of addTeamResonanceIdList.
+       * <code>repeated uint32 MJMEKGPPGIO = 10;</code>
+       * @return The count of mJMEKGPPGIO.
        */
-      public int getAddTeamResonanceIdListCount() {
-        return addTeamResonanceIdList_.size();
+      public int getMJMEKGPPGIOCount() {
+        return mJMEKGPPGIO_.size();
       }
       /**
-       * <code>repeated uint32 addTeamResonanceIdList = 2;</code>
+       * <code>repeated uint32 MJMEKGPPGIO = 10;</code>
        * @param index The index of the element to return.
-       * @return The addTeamResonanceIdList at the given index.
+       * @return The mJMEKGPPGIO at the given index.
        */
-      public int getAddTeamResonanceIdList(int index) {
-        return addTeamResonanceIdList_.getInt(index);
+      public int getMJMEKGPPGIO(int index) {
+        return mJMEKGPPGIO_.getInt(index);
       }
       /**
-       * <code>repeated uint32 addTeamResonanceIdList = 2;</code>
+       * <code>repeated uint32 MJMEKGPPGIO = 10;</code>
        * @param index The index to set the value at.
-       * @param value The addTeamResonanceIdList to set.
+       * @param value The mJMEKGPPGIO to set.
        * @return This builder for chaining.
        */
-      public Builder setAddTeamResonanceIdList(
+      public Builder setMJMEKGPPGIO(
           int index, int value) {
-        ensureAddTeamResonanceIdListIsMutable();
-        addTeamResonanceIdList_.setInt(index, value);
+        ensureMJMEKGPPGIOIsMutable();
+        mJMEKGPPGIO_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 addTeamResonanceIdList = 2;</code>
-       * @param value The addTeamResonanceIdList to add.
+       * <code>repeated uint32 MJMEKGPPGIO = 10;</code>
+       * @param value The mJMEKGPPGIO to add.
        * @return This builder for chaining.
        */
-      public Builder addAddTeamResonanceIdList(int value) {
-        ensureAddTeamResonanceIdListIsMutable();
-        addTeamResonanceIdList_.addInt(value);
+      public Builder addMJMEKGPPGIO(int value) {
+        ensureMJMEKGPPGIOIsMutable();
+        mJMEKGPPGIO_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 addTeamResonanceIdList = 2;</code>
-       * @param values The addTeamResonanceIdList to add.
+       * <code>repeated uint32 MJMEKGPPGIO = 10;</code>
+       * @param values The mJMEKGPPGIO to add.
        * @return This builder for chaining.
        */
-      public Builder addAllAddTeamResonanceIdList(
+      public Builder addAllMJMEKGPPGIO(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureAddTeamResonanceIdListIsMutable();
+        ensureMJMEKGPPGIOIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, addTeamResonanceIdList_);
+            values, mJMEKGPPGIO_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 addTeamResonanceIdList = 2;</code>
+       * <code>repeated uint32 MJMEKGPPGIO = 10;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAddTeamResonanceIdList() {
-        addTeamResonanceIdList_ = emptyIntList();
+      public Builder clearMJMEKGPPGIO() {
+        mJMEKGPPGIO_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private long avatarGuid_ ;
+      /**
+       * <code>uint64 avatar_guid = 3;</code>
+       * @return The avatarGuid.
+       */
+      @java.lang.Override
+      public long getAvatarGuid() {
+        return avatarGuid_;
+      }
+      /**
+       * <code>uint64 avatar_guid = 3;</code>
+       * @param value The avatarGuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvatarGuid(long value) {
+        
+        avatarGuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 avatar_guid = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAvatarGuid() {
+        
+        avatarGuid_ = 0L;
         onChanged();
         return this;
       }
@@ -977,11 +985,11 @@ public final class AvatarTeamResonanceInfoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\035AvatarTeamResonanceInfo.proto\"\177\n\027Avata" +
-      "rTeamResonanceInfo\022\022\n\navatarGuid\030\n \001(\004\022\036" +
-      "\n\026delTeamResonanceIdList\030\010 \003(\r\022\020\n\010entity" +
-      "Id\030\017 \001(\r\022\036\n\026addTeamResonanceIdList\030\002 \003(\r" +
-      "B\033\n\031emu.grasscutter.net.protob\006proto3"
+      "\n\035AvatarTeamResonanceInfo.proto\"k\n\027Avata" +
+      "rTeamResonanceInfo\022\023\n\013INOIJMMCNEF\030\010 \003(\r\022" +
+      "\021\n\tentity_id\030\002 \001(\r\022\023\n\013MJMEKGPPGIO\030\n \003(\r\022" +
+      "\023\n\013avatar_guid\030\003 \001(\004B\033\n\031emu.grasscutter." +
+      "net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -992,7 +1000,7 @@ public final class AvatarTeamResonanceInfoOuterClass {
     internal_static_AvatarTeamResonanceInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AvatarTeamResonanceInfo_descriptor,
-        new java.lang.String[] { "AvatarGuid", "DelTeamResonanceIdList", "EntityId", "AddTeamResonanceIdList", });
+        new java.lang.String[] { "INOIJMMCNEF", "EntityId", "MJMEKGPPGIO", "AvatarGuid", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -70,56 +70,6 @@ public final class BDKPJAMLNCLOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private BDKPJAMLNCL(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                levelInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.MLBFNDKNIEMOuterClass.MLBFNDKNIEM>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              levelInfoList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.MLBFNDKNIEMOuterClass.MLBFNDKNIEM.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          levelInfoList_ = java.util.Collections.unmodifiableList(levelInfoList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.BDKPJAMLNCLOuterClass.internal_static_BDKPJAMLNCL_descriptor;
@@ -134,6 +84,7 @@ public final class BDKPJAMLNCLOuterClass {
     }
 
     public static final int LEVELINFOLIST_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.MLBFNDKNIEMOuterClass.MLBFNDKNIEM> levelInfoList_;
     /**
      * <code>repeated .MLBFNDKNIEM levelInfoList = 6;</code>
@@ -190,7 +141,7 @@ public final class BDKPJAMLNCLOuterClass {
       for (int i = 0; i < levelInfoList_.size(); i++) {
         output.writeMessage(6, levelInfoList_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -203,7 +154,7 @@ public final class BDKPJAMLNCLOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, levelInfoList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -220,7 +171,7 @@ public final class BDKPJAMLNCLOuterClass {
 
       if (!getLevelInfoListList()
           .equals(other.getLevelInfoListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -235,7 +186,7 @@ public final class BDKPJAMLNCLOuterClass {
         hash = (37 * hash) + LEVELINFOLIST_FIELD_NUMBER;
         hash = (53 * hash) + getLevelInfoListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -352,29 +303,25 @@ public final class BDKPJAMLNCLOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BDKPJAMLNCLOuterClass.BDKPJAMLNCL.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLevelInfoListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (levelInfoListBuilder_ == null) {
           levelInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          levelInfoList_ = null;
           levelInfoListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -401,7 +348,13 @@ public final class BDKPJAMLNCLOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.BDKPJAMLNCLOuterClass.BDKPJAMLNCL buildPartial() {
         emu.grasscutter.net.proto.BDKPJAMLNCLOuterClass.BDKPJAMLNCL result = new emu.grasscutter.net.proto.BDKPJAMLNCLOuterClass.BDKPJAMLNCL(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.BDKPJAMLNCLOuterClass.BDKPJAMLNCL result) {
         if (levelInfoListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             levelInfoList_ = java.util.Collections.unmodifiableList(levelInfoList_);
@@ -411,8 +364,10 @@ public final class BDKPJAMLNCLOuterClass {
         } else {
           result.levelInfoList_ = levelInfoListBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.BDKPJAMLNCLOuterClass.BDKPJAMLNCL result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -485,7 +440,7 @@ public final class BDKPJAMLNCLOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -500,17 +455,43 @@ public final class BDKPJAMLNCLOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.BDKPJAMLNCLOuterClass.BDKPJAMLNCL parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 50: {
+                emu.grasscutter.net.proto.MLBFNDKNIEMOuterClass.MLBFNDKNIEM m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.MLBFNDKNIEMOuterClass.MLBFNDKNIEM.parser(),
+                        extensionRegistry);
+                if (levelInfoListBuilder_ == null) {
+                  ensureLevelInfoListIsMutable();
+                  levelInfoList_.add(m);
+                } else {
+                  levelInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.BDKPJAMLNCLOuterClass.BDKPJAMLNCL) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -787,7 +768,18 @@ public final class BDKPJAMLNCLOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BDKPJAMLNCL(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

@@ -64,17 +64,17 @@ public final class PlatformInfoOuterClass {
     boolean getIsStarted();
 
     /**
-     * <code>.MathQuaternion startRot = 9;</code>
+     * <code>.MathQuaternion start_rot = 9;</code>
      * @return Whether the startRot field is set.
      */
     boolean hasStartRot();
     /**
-     * <code>.MathQuaternion startRot = 9;</code>
+     * <code>.MathQuaternion start_rot = 9;</code>
      * @return The startRot.
      */
     emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion getStartRot();
     /**
-     * <code>.MathQuaternion startRot = 9;</code>
+     * <code>.MathQuaternion start_rot = 9;</code>
      */
     emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternionOrBuilder getStartRotOrBuilder();
 
@@ -100,17 +100,17 @@ public final class PlatformInfoOuterClass {
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOffsetOrBuilder();
 
     /**
-     * <code>.MathQuaternion rotOffset = 12;</code>
+     * <code>.MathQuaternion rot_offset = 12;</code>
      * @return Whether the rotOffset field is set.
      */
     boolean hasRotOffset();
     /**
-     * <code>.MathQuaternion rotOffset = 12;</code>
+     * <code>.MathQuaternion rot_offset = 12;</code>
      * @return The rotOffset.
      */
     emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion getRotOffset();
     /**
-     * <code>.MathQuaternion rotOffset = 12;</code>
+     * <code>.MathQuaternion rot_offset = 12;</code>
      */
     emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternionOrBuilder getRotOffsetOrBuilder();
 
@@ -153,6 +153,10 @@ public final class PlatformInfoOuterClass {
     int getPointId();
   }
   /**
+   * <pre>
+   * Name: COPHAEDKHOK
+   * </pre>
+   *
    * Protobuf type {@code PlatformInfo}
    */
   public static final class PlatformInfo extends
@@ -422,10 +426,10 @@ public final class PlatformInfoOuterClass {
       return isStarted_;
     }
 
-    public static final int STARTROT_FIELD_NUMBER = 9;
+    public static final int START_ROT_FIELD_NUMBER = 9;
     private emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion startRot_;
     /**
-     * <code>.MathQuaternion startRot = 9;</code>
+     * <code>.MathQuaternion start_rot = 9;</code>
      * @return Whether the startRot field is set.
      */
     @java.lang.Override
@@ -433,7 +437,7 @@ public final class PlatformInfoOuterClass {
       return startRot_ != null;
     }
     /**
-     * <code>.MathQuaternion startRot = 9;</code>
+     * <code>.MathQuaternion start_rot = 9;</code>
      * @return The startRot.
      */
     @java.lang.Override
@@ -441,7 +445,7 @@ public final class PlatformInfoOuterClass {
       return startRot_ == null ? emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.getDefaultInstance() : startRot_;
     }
     /**
-     * <code>.MathQuaternion startRot = 9;</code>
+     * <code>.MathQuaternion start_rot = 9;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternionOrBuilder getStartRotOrBuilder() {
@@ -485,10 +489,10 @@ public final class PlatformInfoOuterClass {
       return getPosOffset();
     }
 
-    public static final int ROTOFFSET_FIELD_NUMBER = 12;
+    public static final int ROT_OFFSET_FIELD_NUMBER = 12;
     private emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion rotOffset_;
     /**
-     * <code>.MathQuaternion rotOffset = 12;</code>
+     * <code>.MathQuaternion rot_offset = 12;</code>
      * @return Whether the rotOffset field is set.
      */
     @java.lang.Override
@@ -496,7 +500,7 @@ public final class PlatformInfoOuterClass {
       return rotOffset_ != null;
     }
     /**
-     * <code>.MathQuaternion rotOffset = 12;</code>
+     * <code>.MathQuaternion rot_offset = 12;</code>
      * @return The rotOffset.
      */
     @java.lang.Override
@@ -504,7 +508,7 @@ public final class PlatformInfoOuterClass {
       return rotOffset_ == null ? emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.getDefaultInstance() : rotOffset_;
     }
     /**
-     * <code>.MathQuaternion rotOffset = 12;</code>
+     * <code>.MathQuaternion rot_offset = 12;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternionOrBuilder getRotOffsetOrBuilder() {
@@ -783,7 +787,7 @@ public final class PlatformInfoOuterClass {
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsStarted());
       if (hasStartRot()) {
-        hash = (37 * hash) + STARTROT_FIELD_NUMBER;
+        hash = (37 * hash) + START_ROT_FIELD_NUMBER;
         hash = (53 * hash) + getStartRot().hashCode();
       }
       hash = (37 * hash) + STOPSCENETIME_FIELD_NUMBER;
@@ -793,7 +797,7 @@ public final class PlatformInfoOuterClass {
         hash = (53 * hash) + getPosOffset().hashCode();
       }
       if (hasRotOffset()) {
-        hash = (37 * hash) + ROTOFFSET_FIELD_NUMBER;
+        hash = (37 * hash) + ROT_OFFSET_FIELD_NUMBER;
         hash = (53 * hash) + getRotOffset().hashCode();
       }
       hash = (37 * hash) + MOVINGPLATFORMTYPE_FIELD_NUMBER;
@@ -903,6 +907,10 @@ public final class PlatformInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: COPHAEDKHOK
+     * </pre>
+     *
      * Protobuf type {@code PlatformInfo}
      */
     public static final class Builder extends
@@ -1445,14 +1453,14 @@ public final class PlatformInfoOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion, emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.Builder, emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternionOrBuilder> startRotBuilder_;
       /**
-       * <code>.MathQuaternion startRot = 9;</code>
+       * <code>.MathQuaternion start_rot = 9;</code>
        * @return Whether the startRot field is set.
        */
       public boolean hasStartRot() {
         return startRotBuilder_ != null || startRot_ != null;
       }
       /**
-       * <code>.MathQuaternion startRot = 9;</code>
+       * <code>.MathQuaternion start_rot = 9;</code>
        * @return The startRot.
        */
       public emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion getStartRot() {
@@ -1463,7 +1471,7 @@ public final class PlatformInfoOuterClass {
         }
       }
       /**
-       * <code>.MathQuaternion startRot = 9;</code>
+       * <code>.MathQuaternion start_rot = 9;</code>
        */
       public Builder setStartRot(emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion value) {
         if (startRotBuilder_ == null) {
@@ -1479,7 +1487,7 @@ public final class PlatformInfoOuterClass {
         return this;
       }
       /**
-       * <code>.MathQuaternion startRot = 9;</code>
+       * <code>.MathQuaternion start_rot = 9;</code>
        */
       public Builder setStartRot(
           emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.Builder builderForValue) {
@@ -1493,7 +1501,7 @@ public final class PlatformInfoOuterClass {
         return this;
       }
       /**
-       * <code>.MathQuaternion startRot = 9;</code>
+       * <code>.MathQuaternion start_rot = 9;</code>
        */
       public Builder mergeStartRot(emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion value) {
         if (startRotBuilder_ == null) {
@@ -1511,7 +1519,7 @@ public final class PlatformInfoOuterClass {
         return this;
       }
       /**
-       * <code>.MathQuaternion startRot = 9;</code>
+       * <code>.MathQuaternion start_rot = 9;</code>
        */
       public Builder clearStartRot() {
         if (startRotBuilder_ == null) {
@@ -1525,7 +1533,7 @@ public final class PlatformInfoOuterClass {
         return this;
       }
       /**
-       * <code>.MathQuaternion startRot = 9;</code>
+       * <code>.MathQuaternion start_rot = 9;</code>
        */
       public emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.Builder getStartRotBuilder() {
         
@@ -1533,7 +1541,7 @@ public final class PlatformInfoOuterClass {
         return getStartRotFieldBuilder().getBuilder();
       }
       /**
-       * <code>.MathQuaternion startRot = 9;</code>
+       * <code>.MathQuaternion start_rot = 9;</code>
        */
       public emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternionOrBuilder getStartRotOrBuilder() {
         if (startRotBuilder_ != null) {
@@ -1544,7 +1552,7 @@ public final class PlatformInfoOuterClass {
         }
       }
       /**
-       * <code>.MathQuaternion startRot = 9;</code>
+       * <code>.MathQuaternion start_rot = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion, emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.Builder, emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternionOrBuilder> 
@@ -1714,14 +1722,14 @@ public final class PlatformInfoOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion, emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.Builder, emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternionOrBuilder> rotOffsetBuilder_;
       /**
-       * <code>.MathQuaternion rotOffset = 12;</code>
+       * <code>.MathQuaternion rot_offset = 12;</code>
        * @return Whether the rotOffset field is set.
        */
       public boolean hasRotOffset() {
         return rotOffsetBuilder_ != null || rotOffset_ != null;
       }
       /**
-       * <code>.MathQuaternion rotOffset = 12;</code>
+       * <code>.MathQuaternion rot_offset = 12;</code>
        * @return The rotOffset.
        */
       public emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion getRotOffset() {
@@ -1732,7 +1740,7 @@ public final class PlatformInfoOuterClass {
         }
       }
       /**
-       * <code>.MathQuaternion rotOffset = 12;</code>
+       * <code>.MathQuaternion rot_offset = 12;</code>
        */
       public Builder setRotOffset(emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion value) {
         if (rotOffsetBuilder_ == null) {
@@ -1748,7 +1756,7 @@ public final class PlatformInfoOuterClass {
         return this;
       }
       /**
-       * <code>.MathQuaternion rotOffset = 12;</code>
+       * <code>.MathQuaternion rot_offset = 12;</code>
        */
       public Builder setRotOffset(
           emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.Builder builderForValue) {
@@ -1762,7 +1770,7 @@ public final class PlatformInfoOuterClass {
         return this;
       }
       /**
-       * <code>.MathQuaternion rotOffset = 12;</code>
+       * <code>.MathQuaternion rot_offset = 12;</code>
        */
       public Builder mergeRotOffset(emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion value) {
         if (rotOffsetBuilder_ == null) {
@@ -1780,7 +1788,7 @@ public final class PlatformInfoOuterClass {
         return this;
       }
       /**
-       * <code>.MathQuaternion rotOffset = 12;</code>
+       * <code>.MathQuaternion rot_offset = 12;</code>
        */
       public Builder clearRotOffset() {
         if (rotOffsetBuilder_ == null) {
@@ -1794,7 +1802,7 @@ public final class PlatformInfoOuterClass {
         return this;
       }
       /**
-       * <code>.MathQuaternion rotOffset = 12;</code>
+       * <code>.MathQuaternion rot_offset = 12;</code>
        */
       public emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.Builder getRotOffsetBuilder() {
         
@@ -1802,7 +1810,7 @@ public final class PlatformInfoOuterClass {
         return getRotOffsetFieldBuilder().getBuilder();
       }
       /**
-       * <code>.MathQuaternion rotOffset = 12;</code>
+       * <code>.MathQuaternion rot_offset = 12;</code>
        */
       public emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternionOrBuilder getRotOffsetOrBuilder() {
         if (rotOffsetBuilder_ != null) {
@@ -1813,7 +1821,7 @@ public final class PlatformInfoOuterClass {
         }
       }
       /**
-       * <code>.MathQuaternion rotOffset = 12;</code>
+       * <code>.MathQuaternion rot_offset = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion, emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternion.Builder, emu.grasscutter.net.proto.MathQuaternionOuterClass.MathQuaternionOrBuilder> 
@@ -2131,28 +2139,26 @@ public final class PlatformInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\022PlatformInfo.proto\032\024MathQuaternion.pro" +
-      "to\032\014Vector.proto\032\023RotationSpeed.proto\032\030M" +
-      "ovingPlatformType.proto\032\013Route.proto\"\366\002\n" +
-      "\014PlatformInfo\022\017\n\007routeId\030\001 \001(\r\022\022\n\nstartI" +
-      "ndex\030\002 \001(\005\022\026\n\016startRouteTime\030\003 \001(\r\022\026\n\016st" +
-      "artSceneTime\030\004 \001(\r\022\031\n\010startPos\030\007 \001(\0132\007.V" +
-      "ector\022\021\n\tisStarted\030\010 \001(\010\022!\n\010startRot\030\t \001" +
-      "(\0132\017.MathQuaternion\022\025\n\rstopSceneTime\030\n \001" +
-      "(\r\022\032\n\tposOffset\030\013 \001(\0132\007.Vector\022\"\n\trotOff" +
-      "set\030\014 \001(\0132\017.MathQuaternion\022/\n\022movingPlat" +
-      "formType\030\r \001(\0162\023.MovingPlatformType\022\020\n\010i" +
-      "sActive\030\016 \001(\010\022\025\n\005route\030\017 \001(\0132\006.Route\022\017\n\007" +
-      "pointId\030\020 \001(\rB\033\n\031emu.grasscutter.net.pro" +
-      "tob\006proto3"
+      "to\032\030MovingPlatformType.proto\032\013Route.prot" +
+      "o\032\014Vector.proto\"\370\002\n\014PlatformInfo\022\017\n\007rout" +
+      "eId\030\001 \001(\r\022\022\n\nstartIndex\030\002 \001(\005\022\026\n\016startRo" +
+      "uteTime\030\003 \001(\r\022\026\n\016startSceneTime\030\004 \001(\r\022\031\n" +
+      "\010startPos\030\007 \001(\0132\007.Vector\022\021\n\tisStarted\030\010 " +
+      "\001(\010\022\"\n\tstart_rot\030\t \001(\0132\017.MathQuaternion\022" +
+      "\025\n\rstopSceneTime\030\n \001(\r\022\032\n\tposOffset\030\013 \001(" +
+      "\0132\007.Vector\022#\n\nrot_offset\030\014 \001(\0132\017.MathQua" +
+      "ternion\022/\n\022movingPlatformType\030\r \001(\0162\023.Mo" +
+      "vingPlatformType\022\020\n\010isActive\030\016 \001(\010\022\025\n\005ro" +
+      "ute\030\017 \001(\0132\006.Route\022\017\n\007pointId\030\020 \001(\rB\033\n\031em" +
+      "u.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           emu.grasscutter.net.proto.MathQuaternionOuterClass.getDescriptor(),
-          emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
-          emu.grasscutter.net.proto.RotationSpeed.getDescriptor(),
           emu.grasscutter.net.proto.MovingPlatformTypeOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.RouteOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
         });
     internal_static_PlatformInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2161,10 +2167,9 @@ public final class PlatformInfoOuterClass {
         internal_static_PlatformInfo_descriptor,
         new java.lang.String[] { "RouteId", "StartIndex", "StartRouteTime", "StartSceneTime", "StartPos", "IsStarted", "StartRot", "StopSceneTime", "PosOffset", "RotOffset", "MovingPlatformType", "IsActive", "Route", "PointId", });
     emu.grasscutter.net.proto.MathQuaternionOuterClass.getDescriptor();
-    emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
-    emu.grasscutter.net.proto.RotationSpeed.getDescriptor();
     emu.grasscutter.net.proto.MovingPlatformTypeOuterClass.getDescriptor();
     emu.grasscutter.net.proto.RouteOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

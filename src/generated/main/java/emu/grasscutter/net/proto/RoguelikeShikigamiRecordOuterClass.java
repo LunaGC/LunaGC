@@ -19,18 +19,22 @@ public final class RoguelikeShikigamiRecordOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 id = 8;</code>
-     * @return The id.
-     */
-    int getId();
-
-    /**
      * <code>uint32 level = 4;</code>
      * @return The level.
      */
     int getLevel();
+
+    /**
+     * <code>uint32 id = 13;</code>
+     * @return The id.
+     */
+    int getId();
   }
   /**
+   * <pre>
+   * Name: ODKNHPHCDCG
+   * </pre>
+   *
    * Protobuf type {@code RoguelikeShikigamiRecord}
    */
   public static final class RoguelikeShikigamiRecord extends
@@ -57,53 +61,6 @@ public final class RoguelikeShikigamiRecordOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private RoguelikeShikigamiRecord(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 32: {
-
-              level_ = input.readUInt32();
-              break;
-            }
-            case 64: {
-
-              id_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.RoguelikeShikigamiRecordOuterClass.internal_static_RoguelikeShikigamiRecord_descriptor;
@@ -117,19 +74,8 @@ public final class RoguelikeShikigamiRecordOuterClass {
               emu.grasscutter.net.proto.RoguelikeShikigamiRecordOuterClass.RoguelikeShikigamiRecord.class, emu.grasscutter.net.proto.RoguelikeShikigamiRecordOuterClass.RoguelikeShikigamiRecord.Builder.class);
     }
 
-    public static final int ID_FIELD_NUMBER = 8;
-    private int id_;
-    /**
-     * <code>uint32 id = 8;</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public int getId() {
-      return id_;
-    }
-
     public static final int LEVEL_FIELD_NUMBER = 4;
-    private int level_;
+    private int level_ = 0;
     /**
      * <code>uint32 level = 4;</code>
      * @return The level.
@@ -137,6 +83,17 @@ public final class RoguelikeShikigamiRecordOuterClass {
     @java.lang.Override
     public int getLevel() {
       return level_;
+    }
+
+    public static final int ID_FIELD_NUMBER = 13;
+    private int id_ = 0;
+    /**
+     * <code>uint32 id = 13;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public int getId() {
+      return id_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -157,9 +114,9 @@ public final class RoguelikeShikigamiRecordOuterClass {
         output.writeUInt32(4, level_);
       }
       if (id_ != 0) {
-        output.writeUInt32(8, id_);
+        output.writeUInt32(13, id_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -174,9 +131,9 @@ public final class RoguelikeShikigamiRecordOuterClass {
       }
       if (id_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, id_);
+          .computeUInt32Size(13, id_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -191,11 +148,11 @@ public final class RoguelikeShikigamiRecordOuterClass {
       }
       emu.grasscutter.net.proto.RoguelikeShikigamiRecordOuterClass.RoguelikeShikigamiRecord other = (emu.grasscutter.net.proto.RoguelikeShikigamiRecordOuterClass.RoguelikeShikigamiRecord) obj;
 
-      if (getId()
-          != other.getId()) return false;
       if (getLevel()
           != other.getLevel()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -206,11 +163,11 @@ public final class RoguelikeShikigamiRecordOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId();
       hash = (37 * hash) + LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + getLevel();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -306,6 +263,10 @@ public final class RoguelikeShikigamiRecordOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: ODKNHPHCDCG
+     * </pre>
+     *
      * Protobuf type {@code RoguelikeShikigamiRecord}
      */
     public static final class Builder extends
@@ -327,26 +288,20 @@ public final class RoguelikeShikigamiRecordOuterClass {
 
       // Construct using emu.grasscutter.net.proto.RoguelikeShikigamiRecordOuterClass.RoguelikeShikigamiRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = 0;
-
+        bitField0_ = 0;
         level_ = 0;
-
+        id_ = 0;
         return this;
       }
 
@@ -373,10 +328,19 @@ public final class RoguelikeShikigamiRecordOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.RoguelikeShikigamiRecordOuterClass.RoguelikeShikigamiRecord buildPartial() {
         emu.grasscutter.net.proto.RoguelikeShikigamiRecordOuterClass.RoguelikeShikigamiRecord result = new emu.grasscutter.net.proto.RoguelikeShikigamiRecordOuterClass.RoguelikeShikigamiRecord(this);
-        result.id_ = id_;
-        result.level_ = level_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.RoguelikeShikigamiRecordOuterClass.RoguelikeShikigamiRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.level_ = level_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
       }
 
       @java.lang.Override
@@ -423,13 +387,13 @@ public final class RoguelikeShikigamiRecordOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.RoguelikeShikigamiRecordOuterClass.RoguelikeShikigamiRecord other) {
         if (other == emu.grasscutter.net.proto.RoguelikeShikigamiRecordOuterClass.RoguelikeShikigamiRecord.getDefaultInstance()) return this;
-        if (other.getId() != 0) {
-          setId(other.getId());
-        }
         if (other.getLevel() != 0) {
           setLevel(other.getLevel());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.getId() != 0) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -444,50 +408,43 @@ public final class RoguelikeShikigamiRecordOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.RoguelikeShikigamiRecordOuterClass.RoguelikeShikigamiRecord parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 32: {
+                level_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 32
+              case 104: {
+                id_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 104
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.RoguelikeShikigamiRecordOuterClass.RoguelikeShikigamiRecord) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
-
-      private int id_ ;
-      /**
-       * <code>uint32 id = 8;</code>
-       * @return The id.
-       */
-      @java.lang.Override
-      public int getId() {
-        return id_;
-      }
-      /**
-       * <code>uint32 id = 8;</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(int value) {
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 id = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        
-        id_ = 0;
-        onChanged();
-        return this;
-      }
+      private int bitField0_;
 
       private int level_ ;
       /**
@@ -506,6 +463,7 @@ public final class RoguelikeShikigamiRecordOuterClass {
       public Builder setLevel(int value) {
         
         level_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -514,8 +472,40 @@ public final class RoguelikeShikigamiRecordOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLevel() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         level_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int id_ ;
+      /**
+       * <code>uint32 id = 13;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>uint32 id = 13;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(int value) {
+        
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 id = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0;
         onChanged();
         return this;
       }
@@ -552,7 +542,18 @@ public final class RoguelikeShikigamiRecordOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RoguelikeShikigamiRecord(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -587,8 +588,8 @@ public final class RoguelikeShikigamiRecordOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\036RoguelikeShikigamiRecord.proto\"5\n\030Rogu" +
-      "elikeShikigamiRecord\022\n\n\002id\030\010 \001(\r\022\r\n\005leve" +
-      "l\030\004 \001(\rB\033\n\031emu.grasscutter.net.protob\006pr" +
+      "elikeShikigamiRecord\022\r\n\005level\030\004 \001(\r\022\n\n\002i" +
+      "d\030\r \001(\rB\033\n\031emu.grasscutter.net.protob\006pr" +
       "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -600,7 +601,7 @@ public final class RoguelikeShikigamiRecordOuterClass {
     internal_static_RoguelikeShikigamiRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RoguelikeShikigamiRecord_descriptor,
-        new java.lang.String[] { "Id", "Level", });
+        new java.lang.String[] { "Level", "Id", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

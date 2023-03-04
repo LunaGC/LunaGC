@@ -81,14 +81,12 @@ public final class VintageMarketInfoOuterClass {
     /**
      * <code>map&lt;uint32, bool&gt; bargainInfoMap = 9;</code>
      */
-
     boolean getBargainInfoMapOrDefault(
         int key,
         boolean defaultValue);
     /**
      * <code>map&lt;uint32, bool&gt; bargainInfoMap = 9;</code>
      */
-
     boolean getBargainInfoMapOrThrow(
         int key);
 
@@ -293,272 +291,6 @@ public final class VintageMarketInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private VintageMarketInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                unk3300EDBJLBICEJF_ = newIntList();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              unk3300EDBJLBICEJF_.addInt(input.readUInt32());
-              break;
-            }
-            case 10: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000010) != 0) && input.getBytesUntilLimit() > 0) {
-                unk3300EDBJLBICEJF_ = newIntList();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unk3300EDBJLBICEJF_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 16: {
-
-              storeRound_ = input.readUInt32();
-              break;
-            }
-            case 24: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                unk3300ABHHACBDCFI_ = newIntList();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              unk3300ABHHACBDCFI_.addInt(input.readUInt32());
-              break;
-            }
-            case 26: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
-                unk3300ABHHACBDCFI_ = newIntList();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unk3300ABHHACBDCFI_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 32: {
-
-              unk3300PAMKPAOCJJJ_ = input.readBool();
-              break;
-            }
-            case 40: {
-
-              unk3300KJDEFIBKBPE_ = input.readBool();
-              break;
-            }
-            case 48: {
-
-              unk3300NDFHAGHBCFN_ = input.readBool();
-              break;
-            }
-            case 58: {
-              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-                openStoreList_ = new java.util.ArrayList<emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo>();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              openStoreList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 64: {
-
-              unk3300FJDIMCJEAOB_ = input.readBool();
-              break;
-            }
-            case 74: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                bargainInfoMap_ = com.google.protobuf.MapField.newMapField(
-                    BargainInfoMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Boolean>
-              bargainInfoMap__ = input.readMessage(
-                  BargainInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              bargainInfoMap_.getMutableMap().put(
-                  bargainInfoMap__.getKey(), bargainInfoMap__.getValue());
-              break;
-            }
-            case 80: {
-
-              unk3300ICJOCDGLFFD_ = input.readBool();
-              break;
-            }
-            case 88: {
-
-              unk3300HHKKEDDIGLA_ = input.readUInt32();
-              break;
-            }
-            case 96: {
-
-              unk3300LMNLHHPMAMN_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
-                unk3300AIAMBBODLBO_ = newIntList();
-                mutable_bitField0_ |= 0x00000040;
-              }
-              unk3300AIAMBBODLBO_.addInt(input.readUInt32());
-              break;
-            }
-            case 106: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000040) != 0) && input.getBytesUntilLimit() > 0) {
-                unk3300AIAMBBODLBO_ = newIntList();
-                mutable_bitField0_ |= 0x00000040;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unk3300AIAMBBODLBO_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 114: {
-              emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo.Builder subBuilder = null;
-              if (dealInfo_ != null) {
-                subBuilder = dealInfo_.toBuilder();
-              }
-              dealInfo_ = input.readMessage(emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(dealInfo_);
-                dealInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 120: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                unlockStrategyList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              unlockStrategyList_.addInt(input.readUInt32());
-              break;
-            }
-            case 122: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                unlockStrategyList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unlockStrategyList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 2040: {
-
-              unk3300FOPKAIIAMFM_ = input.readUInt32();
-              break;
-            }
-            case 3664: {
-
-              unk3300ACJLANLBCGK_ = input.readUInt32();
-              break;
-            }
-            case 8280: {
-
-              unk3300ALHLENELIEO_ = input.readBool();
-              break;
-            }
-            case 9312: {
-
-              unk3300NMHHGNPKBEL_ = input.readBool();
-              break;
-            }
-            case 9520: {
-
-              unk3300NBNOJJBNJPB_ = input.readBool();
-              break;
-            }
-            case 9728: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                unk3300COKBOKAOCNJ_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              unk3300COKBOKAOCNJ_.addInt(input.readUInt32());
-              break;
-            }
-            case 9730: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                unk3300COKBOKAOCNJ_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unk3300COKBOKAOCNJ_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 9776: {
-
-              helpSkillId_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
-          unk3300EDBJLBICEJF_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          unk3300ABHHACBDCFI_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000020) != 0)) {
-          openStoreList_ = java.util.Collections.unmodifiableList(openStoreList_);
-        }
-        if (((mutable_bitField0_ & 0x00000040) != 0)) {
-          unk3300AIAMBBODLBO_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          unlockStrategyList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          unk3300COKBOKAOCNJ_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.VintageMarketInfoOuterClass.internal_static_VintageMarketInfo_descriptor;
@@ -585,6 +317,7 @@ public final class VintageMarketInfoOuterClass {
     }
 
     public static final int UNLOCKSTRATEGYLIST_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList unlockStrategyList_;
     /**
      * <code>repeated uint32 unlockStrategyList = 15;</code>
@@ -613,7 +346,7 @@ public final class VintageMarketInfoOuterClass {
     private int unlockStrategyListMemoizedSerializedSize = -1;
 
     public static final int STOREROUND_FIELD_NUMBER = 2;
-    private int storeRound_;
+    private int storeRound_ = 0;
     /**
      * <code>uint32 storeRound = 2;</code>
      * @return The storeRound.
@@ -624,6 +357,7 @@ public final class VintageMarketInfoOuterClass {
     }
 
     public static final int UNK3300_COKBOKAOCNJ_FIELD_NUMBER = 1216;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList unk3300COKBOKAOCNJ_;
     /**
      * <code>repeated uint32 Unk3300_COKBOKAOCNJ = 1216;</code>
@@ -663,6 +397,7 @@ public final class VintageMarketInfoOuterClass {
                   com.google.protobuf.WireFormat.FieldType.BOOL,
                   false);
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, java.lang.Boolean> bargainInfoMap_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Boolean>
@@ -673,14 +408,12 @@ public final class VintageMarketInfoOuterClass {
       }
       return bargainInfoMap_;
     }
-
     public int getBargainInfoMapCount() {
       return internalGetBargainInfoMap().getMap().size();
     }
     /**
      * <code>map&lt;uint32, bool&gt; bargainInfoMap = 9;</code>
      */
-
     @java.lang.Override
     public boolean containsBargainInfoMap(
         int key) {
@@ -699,7 +432,6 @@ public final class VintageMarketInfoOuterClass {
      * <code>map&lt;uint32, bool&gt; bargainInfoMap = 9;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.Integer, java.lang.Boolean> getBargainInfoMapMap() {
       return internalGetBargainInfoMap().getMap();
     }
@@ -707,7 +439,6 @@ public final class VintageMarketInfoOuterClass {
      * <code>map&lt;uint32, bool&gt; bargainInfoMap = 9;</code>
      */
     @java.lang.Override
-
     public boolean getBargainInfoMapOrDefault(
         int key,
         boolean defaultValue) {
@@ -720,7 +451,6 @@ public final class VintageMarketInfoOuterClass {
      * <code>map&lt;uint32, bool&gt; bargainInfoMap = 9;</code>
      */
     @java.lang.Override
-
     public boolean getBargainInfoMapOrThrow(
         int key) {
       
@@ -733,6 +463,7 @@ public final class VintageMarketInfoOuterClass {
     }
 
     public static final int UNK3300_ABHHACBDCFI_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList unk3300ABHHACBDCFI_;
     /**
      * <code>repeated uint32 Unk3300_ABHHACBDCFI = 3;</code>
@@ -761,6 +492,7 @@ public final class VintageMarketInfoOuterClass {
     private int unk3300ABHHACBDCFIMemoizedSerializedSize = -1;
 
     public static final int UNK3300_EDBJLBICEJF_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList unk3300EDBJLBICEJF_;
     /**
      * <code>repeated uint32 Unk3300_EDBJLBICEJF = 1;</code>
@@ -789,7 +521,7 @@ public final class VintageMarketInfoOuterClass {
     private int unk3300EDBJLBICEJFMemoizedSerializedSize = -1;
 
     public static final int UNK3300_KJDEFIBKBPE_FIELD_NUMBER = 5;
-    private boolean unk3300KJDEFIBKBPE_;
+    private boolean unk3300KJDEFIBKBPE_ = false;
     /**
      * <code>bool Unk3300_KJDEFIBKBPE = 5;</code>
      * @return The unk3300KJDEFIBKBPE.
@@ -800,7 +532,7 @@ public final class VintageMarketInfoOuterClass {
     }
 
     public static final int UNK3300_NMHHGNPKBEL_FIELD_NUMBER = 1164;
-    private boolean unk3300NMHHGNPKBEL_;
+    private boolean unk3300NMHHGNPKBEL_ = false;
     /**
      * <code>bool Unk3300_NMHHGNPKBEL = 1164;</code>
      * @return The unk3300NMHHGNPKBEL.
@@ -811,7 +543,7 @@ public final class VintageMarketInfoOuterClass {
     }
 
     public static final int UNK3300_FOPKAIIAMFM_FIELD_NUMBER = 255;
-    private int unk3300FOPKAIIAMFM_;
+    private int unk3300FOPKAIIAMFM_ = 0;
     /**
      * <code>uint32 Unk3300_FOPKAIIAMFM = 255;</code>
      * @return The unk3300FOPKAIIAMFM.
@@ -822,7 +554,7 @@ public final class VintageMarketInfoOuterClass {
     }
 
     public static final int UNK3300_LMNLHHPMAMN_FIELD_NUMBER = 12;
-    private int unk3300LMNLHHPMAMN_;
+    private int unk3300LMNLHHPMAMN_ = 0;
     /**
      * <code>uint32 Unk3300_LMNLHHPMAMN = 12;</code>
      * @return The unk3300LMNLHHPMAMN.
@@ -833,7 +565,7 @@ public final class VintageMarketInfoOuterClass {
     }
 
     public static final int UNK3300_ALHLENELIEO_FIELD_NUMBER = 1035;
-    private boolean unk3300ALHLENELIEO_;
+    private boolean unk3300ALHLENELIEO_ = false;
     /**
      * <code>bool Unk3300_ALHLENELIEO = 1035;</code>
      * @return The unk3300ALHLENELIEO.
@@ -844,7 +576,7 @@ public final class VintageMarketInfoOuterClass {
     }
 
     public static final int UNK3300_PAMKPAOCJJJ_FIELD_NUMBER = 4;
-    private boolean unk3300PAMKPAOCJJJ_;
+    private boolean unk3300PAMKPAOCJJJ_ = false;
     /**
      * <code>bool Unk3300_PAMKPAOCJJJ = 4;</code>
      * @return The unk3300PAMKPAOCJJJ.
@@ -855,7 +587,7 @@ public final class VintageMarketInfoOuterClass {
     }
 
     public static final int UNK3300_ICJOCDGLFFD_FIELD_NUMBER = 10;
-    private boolean unk3300ICJOCDGLFFD_;
+    private boolean unk3300ICJOCDGLFFD_ = false;
     /**
      * <code>bool Unk3300_ICJOCDGLFFD = 10;</code>
      * @return The unk3300ICJOCDGLFFD.
@@ -888,11 +620,11 @@ public final class VintageMarketInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfoOrBuilder getDealInfoOrBuilder() {
-      return getDealInfo();
+      return dealInfo_ == null ? emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo.getDefaultInstance() : dealInfo_;
     }
 
     public static final int UNK3300_NDFHAGHBCFN_FIELD_NUMBER = 6;
-    private boolean unk3300NDFHAGHBCFN_;
+    private boolean unk3300NDFHAGHBCFN_ = false;
     /**
      * <code>bool Unk3300_NDFHAGHBCFN = 6;</code>
      * @return The unk3300NDFHAGHBCFN.
@@ -903,6 +635,7 @@ public final class VintageMarketInfoOuterClass {
     }
 
     public static final int OPENSTORELIST_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo> openStoreList_;
     /**
      * <code>repeated .VintageMarketStoreInfo openStoreList = 7;</code>
@@ -943,6 +676,7 @@ public final class VintageMarketInfoOuterClass {
     }
 
     public static final int UNK3300_AIAMBBODLBO_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList unk3300AIAMBBODLBO_;
     /**
      * <code>repeated uint32 Unk3300_AIAMBBODLBO = 13;</code>
@@ -971,7 +705,7 @@ public final class VintageMarketInfoOuterClass {
     private int unk3300AIAMBBODLBOMemoizedSerializedSize = -1;
 
     public static final int HELPSKILLID_FIELD_NUMBER = 1222;
-    private int helpSkillId_;
+    private int helpSkillId_ = 0;
     /**
      * <code>uint32 helpSkillId = 1222;</code>
      * @return The helpSkillId.
@@ -982,7 +716,7 @@ public final class VintageMarketInfoOuterClass {
     }
 
     public static final int UNK3300_FJDIMCJEAOB_FIELD_NUMBER = 8;
-    private boolean unk3300FJDIMCJEAOB_;
+    private boolean unk3300FJDIMCJEAOB_ = false;
     /**
      * <code>bool Unk3300_FJDIMCJEAOB = 8;</code>
      * @return The unk3300FJDIMCJEAOB.
@@ -993,7 +727,7 @@ public final class VintageMarketInfoOuterClass {
     }
 
     public static final int UNK3300_HHKKEDDIGLA_FIELD_NUMBER = 11;
-    private int unk3300HHKKEDDIGLA_;
+    private int unk3300HHKKEDDIGLA_ = 0;
     /**
      * <code>uint32 Unk3300_HHKKEDDIGLA = 11;</code>
      * @return The unk3300HHKKEDDIGLA.
@@ -1004,7 +738,7 @@ public final class VintageMarketInfoOuterClass {
     }
 
     public static final int UNK3300_ACJLANLBCGK_FIELD_NUMBER = 458;
-    private int unk3300ACJLANLBCGK_;
+    private int unk3300ACJLANLBCGK_ = 0;
     /**
      * <code>uint32 Unk3300_ACJLANLBCGK = 458;</code>
      * @return The unk3300ACJLANLBCGK.
@@ -1015,7 +749,7 @@ public final class VintageMarketInfoOuterClass {
     }
 
     public static final int UNK3300_NBNOJJBNJPB_FIELD_NUMBER = 1190;
-    private boolean unk3300NBNOJJBNJPB_;
+    private boolean unk3300NBNOJJBNJPB_ = false;
     /**
      * <code>bool Unk3300_NBNOJJBNJPB = 1190;</code>
      * @return The unk3300NBNOJJBNJPB.
@@ -1129,7 +863,7 @@ public final class VintageMarketInfoOuterClass {
       if (helpSkillId_ != 0) {
         output.writeUInt32(1222, helpSkillId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1282,7 +1016,7 @@ public final class VintageMarketInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1222, helpSkillId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1344,7 +1078,7 @@ public final class VintageMarketInfoOuterClass {
           != other.getUnk3300ACJLANLBCGK()) return false;
       if (getUnk3300NBNOJJBNJPB()
           != other.getUnk3300NBNOJJBNJPB()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1423,7 +1157,7 @@ public final class VintageMarketInfoOuterClass {
       hash = (37 * hash) + UNK3300_NBNOJJBNJPB_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getUnk3300NBNOJJBNJPB());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1562,74 +1296,50 @@ public final class VintageMarketInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.VintageMarketInfoOuterClass.VintageMarketInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOpenStoreListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         unlockStrategyList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
         storeRound_ = 0;
-
         unk3300COKBOKAOCNJ_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
         internalGetMutableBargainInfoMap().clear();
         unk3300ABHHACBDCFI_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000008);
         unk3300EDBJLBICEJF_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000010);
         unk3300KJDEFIBKBPE_ = false;
-
         unk3300NMHHGNPKBEL_ = false;
-
         unk3300FOPKAIIAMFM_ = 0;
-
         unk3300LMNLHHPMAMN_ = 0;
-
         unk3300ALHLENELIEO_ = false;
-
         unk3300PAMKPAOCJJJ_ = false;
-
         unk3300ICJOCDGLFFD_ = false;
-
-        if (dealInfoBuilder_ == null) {
-          dealInfo_ = null;
-        } else {
-          dealInfo_ = null;
+        dealInfo_ = null;
+        if (dealInfoBuilder_ != null) {
+          dealInfoBuilder_.dispose();
           dealInfoBuilder_ = null;
         }
         unk3300NDFHAGHBCFN_ = false;
-
         if (openStoreListBuilder_ == null) {
           openStoreList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
+          openStoreList_ = null;
           openStoreListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00008000);
         unk3300AIAMBBODLBO_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000040);
         helpSkillId_ = 0;
-
         unk3300FJDIMCJEAOB_ = false;
-
         unk3300HHKKEDDIGLA_ = 0;
-
         unk3300ACJLANLBCGK_ = 0;
-
         unk3300NBNOJJBNJPB_ = false;
-
         return this;
       }
 
@@ -1656,64 +1366,102 @@ public final class VintageMarketInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.VintageMarketInfoOuterClass.VintageMarketInfo buildPartial() {
         emu.grasscutter.net.proto.VintageMarketInfoOuterClass.VintageMarketInfo result = new emu.grasscutter.net.proto.VintageMarketInfoOuterClass.VintageMarketInfo(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.VintageMarketInfoOuterClass.VintageMarketInfo result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           unlockStrategyList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.unlockStrategyList_ = unlockStrategyList_;
-        result.storeRound_ = storeRound_;
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           unk3300COKBOKAOCNJ_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.unk3300COKBOKAOCNJ_ = unk3300COKBOKAOCNJ_;
-        result.bargainInfoMap_ = internalGetBargainInfoMap();
-        result.bargainInfoMap_.makeImmutable();
-        if (((bitField0_ & 0x00000008) != 0)) {
-          unk3300ABHHACBDCFI_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.unk3300ABHHACBDCFI_ = unk3300ABHHACBDCFI_;
         if (((bitField0_ & 0x00000010) != 0)) {
-          unk3300EDBJLBICEJF_.makeImmutable();
+          unk3300ABHHACBDCFI_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000010);
         }
-        result.unk3300EDBJLBICEJF_ = unk3300EDBJLBICEJF_;
-        result.unk3300KJDEFIBKBPE_ = unk3300KJDEFIBKBPE_;
-        result.unk3300NMHHGNPKBEL_ = unk3300NMHHGNPKBEL_;
-        result.unk3300FOPKAIIAMFM_ = unk3300FOPKAIIAMFM_;
-        result.unk3300LMNLHHPMAMN_ = unk3300LMNLHHPMAMN_;
-        result.unk3300ALHLENELIEO_ = unk3300ALHLENELIEO_;
-        result.unk3300PAMKPAOCJJJ_ = unk3300PAMKPAOCJJJ_;
-        result.unk3300ICJOCDGLFFD_ = unk3300ICJOCDGLFFD_;
-        if (dealInfoBuilder_ == null) {
-          result.dealInfo_ = dealInfo_;
-        } else {
-          result.dealInfo_ = dealInfoBuilder_.build();
+        result.unk3300ABHHACBDCFI_ = unk3300ABHHACBDCFI_;
+        if (((bitField0_ & 0x00000020) != 0)) {
+          unk3300EDBJLBICEJF_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
-        result.unk3300NDFHAGHBCFN_ = unk3300NDFHAGHBCFN_;
+        result.unk3300EDBJLBICEJF_ = unk3300EDBJLBICEJF_;
         if (openStoreListBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0)) {
+          if (((bitField0_ & 0x00008000) != 0)) {
             openStoreList_ = java.util.Collections.unmodifiableList(openStoreList_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00008000);
           }
           result.openStoreList_ = openStoreList_;
         } else {
           result.openStoreList_ = openStoreListBuilder_.build();
         }
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00010000) != 0)) {
           unk3300AIAMBBODLBO_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00010000);
         }
         result.unk3300AIAMBBODLBO_ = unk3300AIAMBBODLBO_;
-        result.helpSkillId_ = helpSkillId_;
-        result.unk3300FJDIMCJEAOB_ = unk3300FJDIMCJEAOB_;
-        result.unk3300HHKKEDDIGLA_ = unk3300HHKKEDDIGLA_;
-        result.unk3300ACJLANLBCGK_ = unk3300ACJLANLBCGK_;
-        result.unk3300NBNOJJBNJPB_ = unk3300NBNOJJBNJPB_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.VintageMarketInfoOuterClass.VintageMarketInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.storeRound_ = storeRound_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.bargainInfoMap_ = internalGetBargainInfoMap();
+          result.bargainInfoMap_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.unk3300KJDEFIBKBPE_ = unk3300KJDEFIBKBPE_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.unk3300NMHHGNPKBEL_ = unk3300NMHHGNPKBEL_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.unk3300FOPKAIIAMFM_ = unk3300FOPKAIIAMFM_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.unk3300LMNLHHPMAMN_ = unk3300LMNLHHPMAMN_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.unk3300ALHLENELIEO_ = unk3300ALHLENELIEO_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.unk3300PAMKPAOCJJJ_ = unk3300PAMKPAOCJJJ_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.unk3300ICJOCDGLFFD_ = unk3300ICJOCDGLFFD_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.dealInfo_ = dealInfoBuilder_ == null
+              ? dealInfo_
+              : dealInfoBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.unk3300NDFHAGHBCFN_ = unk3300NDFHAGHBCFN_;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.helpSkillId_ = helpSkillId_;
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.unk3300FJDIMCJEAOB_ = unk3300FJDIMCJEAOB_;
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.unk3300HHKKEDDIGLA_ = unk3300HHKKEDDIGLA_;
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.unk3300ACJLANLBCGK_ = unk3300ACJLANLBCGK_;
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.unk3300NBNOJJBNJPB_ = unk3300NBNOJJBNJPB_;
+        }
       }
 
       @java.lang.Override
@@ -1776,7 +1524,7 @@ public final class VintageMarketInfoOuterClass {
         if (!other.unk3300COKBOKAOCNJ_.isEmpty()) {
           if (unk3300COKBOKAOCNJ_.isEmpty()) {
             unk3300COKBOKAOCNJ_ = other.unk3300COKBOKAOCNJ_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureUnk3300COKBOKAOCNJIsMutable();
             unk3300COKBOKAOCNJ_.addAll(other.unk3300COKBOKAOCNJ_);
@@ -1785,10 +1533,11 @@ public final class VintageMarketInfoOuterClass {
         }
         internalGetMutableBargainInfoMap().mergeFrom(
             other.internalGetBargainInfoMap());
+        bitField0_ |= 0x00000008;
         if (!other.unk3300ABHHACBDCFI_.isEmpty()) {
           if (unk3300ABHHACBDCFI_.isEmpty()) {
             unk3300ABHHACBDCFI_ = other.unk3300ABHHACBDCFI_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureUnk3300ABHHACBDCFIIsMutable();
             unk3300ABHHACBDCFI_.addAll(other.unk3300ABHHACBDCFI_);
@@ -1798,7 +1547,7 @@ public final class VintageMarketInfoOuterClass {
         if (!other.unk3300EDBJLBICEJF_.isEmpty()) {
           if (unk3300EDBJLBICEJF_.isEmpty()) {
             unk3300EDBJLBICEJF_ = other.unk3300EDBJLBICEJF_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureUnk3300EDBJLBICEJFIsMutable();
             unk3300EDBJLBICEJF_.addAll(other.unk3300EDBJLBICEJF_);
@@ -1836,7 +1585,7 @@ public final class VintageMarketInfoOuterClass {
           if (!other.openStoreList_.isEmpty()) {
             if (openStoreList_.isEmpty()) {
               openStoreList_ = other.openStoreList_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00008000);
             } else {
               ensureOpenStoreListIsMutable();
               openStoreList_.addAll(other.openStoreList_);
@@ -1849,7 +1598,7 @@ public final class VintageMarketInfoOuterClass {
               openStoreListBuilder_.dispose();
               openStoreListBuilder_ = null;
               openStoreList_ = other.openStoreList_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00008000);
               openStoreListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOpenStoreListFieldBuilder() : null;
@@ -1861,7 +1610,7 @@ public final class VintageMarketInfoOuterClass {
         if (!other.unk3300AIAMBBODLBO_.isEmpty()) {
           if (unk3300AIAMBBODLBO_.isEmpty()) {
             unk3300AIAMBBODLBO_ = other.unk3300AIAMBBODLBO_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00010000);
           } else {
             ensureUnk3300AIAMBBODLBOIsMutable();
             unk3300AIAMBBODLBO_.addAll(other.unk3300AIAMBBODLBO_);
@@ -1883,7 +1632,7 @@ public final class VintageMarketInfoOuterClass {
         if (other.getUnk3300NBNOJJBNJPB() != false) {
           setUnk3300NBNOJJBNJPB(other.getUnk3300NBNOJJBNJPB());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1898,17 +1647,209 @@ public final class VintageMarketInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.VintageMarketInfoOuterClass.VintageMarketInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int v = input.readUInt32();
+                ensureUnk3300EDBJLBICEJFIsMutable();
+                unk3300EDBJLBICEJF_.addInt(v);
+                break;
+              } // case 8
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureUnk3300EDBJLBICEJFIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  unk3300EDBJLBICEJF_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 10
+              case 16: {
+                storeRound_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                int v = input.readUInt32();
+                ensureUnk3300ABHHACBDCFIIsMutable();
+                unk3300ABHHACBDCFI_.addInt(v);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureUnk3300ABHHACBDCFIIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  unk3300ABHHACBDCFI_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 26
+              case 32: {
+                unk3300PAMKPAOCJJJ_ = input.readBool();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 32
+              case 40: {
+                unk3300KJDEFIBKBPE_ = input.readBool();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 40
+              case 48: {
+                unk3300NDFHAGHBCFN_ = input.readBool();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 48
+              case 58: {
+                emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo.parser(),
+                        extensionRegistry);
+                if (openStoreListBuilder_ == null) {
+                  ensureOpenStoreListIsMutable();
+                  openStoreList_.add(m);
+                } else {
+                  openStoreListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 64: {
+                unk3300FJDIMCJEAOB_ = input.readBool();
+                bitField0_ |= 0x00040000;
+                break;
+              } // case 64
+              case 74: {
+                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Boolean>
+                bargainInfoMap__ = input.readMessage(
+                    BargainInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableBargainInfoMap().getMutableMap().put(
+                    bargainInfoMap__.getKey(), bargainInfoMap__.getValue());
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 74
+              case 80: {
+                unk3300ICJOCDGLFFD_ = input.readBool();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 80
+              case 88: {
+                unk3300HHKKEDDIGLA_ = input.readUInt32();
+                bitField0_ |= 0x00080000;
+                break;
+              } // case 88
+              case 96: {
+                unk3300LMNLHHPMAMN_ = input.readUInt32();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 96
+              case 104: {
+                int v = input.readUInt32();
+                ensureUnk3300AIAMBBODLBOIsMutable();
+                unk3300AIAMBBODLBO_.addInt(v);
+                break;
+              } // case 104
+              case 106: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureUnk3300AIAMBBODLBOIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  unk3300AIAMBBODLBO_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 106
+              case 114: {
+                input.readMessage(
+                    getDealInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
+              case 120: {
+                int v = input.readUInt32();
+                ensureUnlockStrategyListIsMutable();
+                unlockStrategyList_.addInt(v);
+                break;
+              } // case 120
+              case 122: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureUnlockStrategyListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  unlockStrategyList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 122
+              case 2040: {
+                unk3300FOPKAIIAMFM_ = input.readUInt32();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 2040
+              case 3664: {
+                unk3300ACJLANLBCGK_ = input.readUInt32();
+                bitField0_ |= 0x00100000;
+                break;
+              } // case 3664
+              case 8280: {
+                unk3300ALHLENELIEO_ = input.readBool();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 8280
+              case 9312: {
+                unk3300NMHHGNPKBEL_ = input.readBool();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 9312
+              case 9520: {
+                unk3300NBNOJJBNJPB_ = input.readBool();
+                bitField0_ |= 0x00200000;
+                break;
+              } // case 9520
+              case 9728: {
+                int v = input.readUInt32();
+                ensureUnk3300COKBOKAOCNJIsMutable();
+                unk3300COKBOKAOCNJ_.addInt(v);
+                break;
+              } // case 9728
+              case 9730: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureUnk3300COKBOKAOCNJIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  unk3300COKBOKAOCNJ_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 9730
+              case 9776: {
+                helpSkillId_ = input.readUInt32();
+                bitField0_ |= 0x00020000;
+                break;
+              } // case 9776
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.VintageMarketInfoOuterClass.VintageMarketInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1918,7 +1859,7 @@ public final class VintageMarketInfoOuterClass {
         if (!((bitField0_ & 0x00000001) != 0)) {
           unlockStrategyList_ = mutableCopy(unlockStrategyList_);
           bitField0_ |= 0x00000001;
-         }
+        }
       }
       /**
        * <code>repeated uint32 unlockStrategyList = 15;</code>
@@ -1952,6 +1893,7 @@ public final class VintageMarketInfoOuterClass {
        */
       public Builder setUnlockStrategyList(
           int index, int value) {
+        
         ensureUnlockStrategyListIsMutable();
         unlockStrategyList_.setInt(index, value);
         onChanged();
@@ -1963,6 +1905,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addUnlockStrategyList(int value) {
+        
         ensureUnlockStrategyListIsMutable();
         unlockStrategyList_.addInt(value);
         onChanged();
@@ -2009,6 +1952,7 @@ public final class VintageMarketInfoOuterClass {
       public Builder setStoreRound(int value) {
         
         storeRound_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2017,7 +1961,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStoreRound() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         storeRound_ = 0;
         onChanged();
         return this;
@@ -2025,10 +1969,10 @@ public final class VintageMarketInfoOuterClass {
 
       private com.google.protobuf.Internal.IntList unk3300COKBOKAOCNJ_ = emptyIntList();
       private void ensureUnk3300COKBOKAOCNJIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           unk3300COKBOKAOCNJ_ = mutableCopy(unk3300COKBOKAOCNJ_);
-          bitField0_ |= 0x00000002;
-         }
+          bitField0_ |= 0x00000004;
+        }
       }
       /**
        * <code>repeated uint32 Unk3300_COKBOKAOCNJ = 1216;</code>
@@ -2036,7 +1980,7 @@ public final class VintageMarketInfoOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getUnk3300COKBOKAOCNJList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
+        return ((bitField0_ & 0x00000004) != 0) ?
                  java.util.Collections.unmodifiableList(unk3300COKBOKAOCNJ_) : unk3300COKBOKAOCNJ_;
       }
       /**
@@ -2062,6 +2006,7 @@ public final class VintageMarketInfoOuterClass {
        */
       public Builder setUnk3300COKBOKAOCNJ(
           int index, int value) {
+        
         ensureUnk3300COKBOKAOCNJIsMutable();
         unk3300COKBOKAOCNJ_.setInt(index, value);
         onChanged();
@@ -2073,6 +2018,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addUnk3300COKBOKAOCNJ(int value) {
+        
         ensureUnk3300COKBOKAOCNJIsMutable();
         unk3300COKBOKAOCNJ_.addInt(value);
         onChanged();
@@ -2097,7 +2043,7 @@ public final class VintageMarketInfoOuterClass {
        */
       public Builder clearUnk3300COKBOKAOCNJ() {
         unk3300COKBOKAOCNJ_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -2105,7 +2051,7 @@ public final class VintageMarketInfoOuterClass {
       private com.google.protobuf.MapField<
           java.lang.Integer, java.lang.Boolean> bargainInfoMap_;
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Boolean>
-      internalGetBargainInfoMap() {
+          internalGetBargainInfoMap() {
         if (bargainInfoMap_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               BargainInfoMapDefaultEntryHolder.defaultEntry);
@@ -2113,8 +2059,7 @@ public final class VintageMarketInfoOuterClass {
         return bargainInfoMap_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Boolean>
-      internalGetMutableBargainInfoMap() {
-        onChanged();;
+          internalGetMutableBargainInfoMap() {
         if (bargainInfoMap_ == null) {
           bargainInfoMap_ = com.google.protobuf.MapField.newMapField(
               BargainInfoMapDefaultEntryHolder.defaultEntry);
@@ -2122,16 +2067,16 @@ public final class VintageMarketInfoOuterClass {
         if (!bargainInfoMap_.isMutable()) {
           bargainInfoMap_ = bargainInfoMap_.copy();
         }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return bargainInfoMap_;
       }
-
       public int getBargainInfoMapCount() {
         return internalGetBargainInfoMap().getMap().size();
       }
       /**
        * <code>map&lt;uint32, bool&gt; bargainInfoMap = 9;</code>
        */
-
       @java.lang.Override
       public boolean containsBargainInfoMap(
           int key) {
@@ -2150,7 +2095,6 @@ public final class VintageMarketInfoOuterClass {
        * <code>map&lt;uint32, bool&gt; bargainInfoMap = 9;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.Integer, java.lang.Boolean> getBargainInfoMapMap() {
         return internalGetBargainInfoMap().getMap();
       }
@@ -2158,7 +2102,6 @@ public final class VintageMarketInfoOuterClass {
        * <code>map&lt;uint32, bool&gt; bargainInfoMap = 9;</code>
        */
       @java.lang.Override
-
       public boolean getBargainInfoMapOrDefault(
           int key,
           boolean defaultValue) {
@@ -2171,7 +2114,6 @@ public final class VintageMarketInfoOuterClass {
        * <code>map&lt;uint32, bool&gt; bargainInfoMap = 9;</code>
        */
       @java.lang.Override
-
       public boolean getBargainInfoMapOrThrow(
           int key) {
         
@@ -2182,8 +2124,8 @@ public final class VintageMarketInfoOuterClass {
         }
         return map.get(key);
       }
-
       public Builder clearBargainInfoMap() {
+        bitField0_ = (bitField0_ & ~0x00000008);
         internalGetMutableBargainInfoMap().getMutableMap()
             .clear();
         return this;
@@ -2191,7 +2133,6 @@ public final class VintageMarketInfoOuterClass {
       /**
        * <code>map&lt;uint32, bool&gt; bargainInfoMap = 9;</code>
        */
-
       public Builder removeBargainInfoMap(
           int key) {
         
@@ -2204,7 +2145,8 @@ public final class VintageMarketInfoOuterClass {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, java.lang.Boolean>
-      getMutableBargainInfoMap() {
+          getMutableBargainInfoMap() {
+        bitField0_ |= 0x00000008;
         return internalGetMutableBargainInfoMap().getMutableMap();
       }
       /**
@@ -2217,25 +2159,26 @@ public final class VintageMarketInfoOuterClass {
         
         internalGetMutableBargainInfoMap().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
        * <code>map&lt;uint32, bool&gt; bargainInfoMap = 9;</code>
        */
-
       public Builder putAllBargainInfoMap(
           java.util.Map<java.lang.Integer, java.lang.Boolean> values) {
         internalGetMutableBargainInfoMap().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000008;
         return this;
       }
 
       private com.google.protobuf.Internal.IntList unk3300ABHHACBDCFI_ = emptyIntList();
       private void ensureUnk3300ABHHACBDCFIIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           unk3300ABHHACBDCFI_ = mutableCopy(unk3300ABHHACBDCFI_);
-          bitField0_ |= 0x00000008;
-         }
+          bitField0_ |= 0x00000010;
+        }
       }
       /**
        * <code>repeated uint32 Unk3300_ABHHACBDCFI = 3;</code>
@@ -2243,7 +2186,7 @@ public final class VintageMarketInfoOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getUnk3300ABHHACBDCFIList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
+        return ((bitField0_ & 0x00000010) != 0) ?
                  java.util.Collections.unmodifiableList(unk3300ABHHACBDCFI_) : unk3300ABHHACBDCFI_;
       }
       /**
@@ -2269,6 +2212,7 @@ public final class VintageMarketInfoOuterClass {
        */
       public Builder setUnk3300ABHHACBDCFI(
           int index, int value) {
+        
         ensureUnk3300ABHHACBDCFIIsMutable();
         unk3300ABHHACBDCFI_.setInt(index, value);
         onChanged();
@@ -2280,6 +2224,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addUnk3300ABHHACBDCFI(int value) {
+        
         ensureUnk3300ABHHACBDCFIIsMutable();
         unk3300ABHHACBDCFI_.addInt(value);
         onChanged();
@@ -2304,17 +2249,17 @@ public final class VintageMarketInfoOuterClass {
        */
       public Builder clearUnk3300ABHHACBDCFI() {
         unk3300ABHHACBDCFI_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
 
       private com.google.protobuf.Internal.IntList unk3300EDBJLBICEJF_ = emptyIntList();
       private void ensureUnk3300EDBJLBICEJFIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           unk3300EDBJLBICEJF_ = mutableCopy(unk3300EDBJLBICEJF_);
-          bitField0_ |= 0x00000010;
-         }
+          bitField0_ |= 0x00000020;
+        }
       }
       /**
        * <code>repeated uint32 Unk3300_EDBJLBICEJF = 1;</code>
@@ -2322,7 +2267,7 @@ public final class VintageMarketInfoOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getUnk3300EDBJLBICEJFList() {
-        return ((bitField0_ & 0x00000010) != 0) ?
+        return ((bitField0_ & 0x00000020) != 0) ?
                  java.util.Collections.unmodifiableList(unk3300EDBJLBICEJF_) : unk3300EDBJLBICEJF_;
       }
       /**
@@ -2348,6 +2293,7 @@ public final class VintageMarketInfoOuterClass {
        */
       public Builder setUnk3300EDBJLBICEJF(
           int index, int value) {
+        
         ensureUnk3300EDBJLBICEJFIsMutable();
         unk3300EDBJLBICEJF_.setInt(index, value);
         onChanged();
@@ -2359,6 +2305,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addUnk3300EDBJLBICEJF(int value) {
+        
         ensureUnk3300EDBJLBICEJFIsMutable();
         unk3300EDBJLBICEJF_.addInt(value);
         onChanged();
@@ -2383,7 +2330,7 @@ public final class VintageMarketInfoOuterClass {
        */
       public Builder clearUnk3300EDBJLBICEJF() {
         unk3300EDBJLBICEJF_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -2405,6 +2352,7 @@ public final class VintageMarketInfoOuterClass {
       public Builder setUnk3300KJDEFIBKBPE(boolean value) {
         
         unk3300KJDEFIBKBPE_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2413,7 +2361,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300KJDEFIBKBPE() {
-        
+        bitField0_ = (bitField0_ & ~0x00000040);
         unk3300KJDEFIBKBPE_ = false;
         onChanged();
         return this;
@@ -2436,6 +2384,7 @@ public final class VintageMarketInfoOuterClass {
       public Builder setUnk3300NMHHGNPKBEL(boolean value) {
         
         unk3300NMHHGNPKBEL_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2444,7 +2393,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300NMHHGNPKBEL() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         unk3300NMHHGNPKBEL_ = false;
         onChanged();
         return this;
@@ -2467,6 +2416,7 @@ public final class VintageMarketInfoOuterClass {
       public Builder setUnk3300FOPKAIIAMFM(int value) {
         
         unk3300FOPKAIIAMFM_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2475,7 +2425,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300FOPKAIIAMFM() {
-        
+        bitField0_ = (bitField0_ & ~0x00000100);
         unk3300FOPKAIIAMFM_ = 0;
         onChanged();
         return this;
@@ -2498,6 +2448,7 @@ public final class VintageMarketInfoOuterClass {
       public Builder setUnk3300LMNLHHPMAMN(int value) {
         
         unk3300LMNLHHPMAMN_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -2506,7 +2457,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300LMNLHHPMAMN() {
-        
+        bitField0_ = (bitField0_ & ~0x00000200);
         unk3300LMNLHHPMAMN_ = 0;
         onChanged();
         return this;
@@ -2529,6 +2480,7 @@ public final class VintageMarketInfoOuterClass {
       public Builder setUnk3300ALHLENELIEO(boolean value) {
         
         unk3300ALHLENELIEO_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -2537,7 +2489,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300ALHLENELIEO() {
-        
+        bitField0_ = (bitField0_ & ~0x00000400);
         unk3300ALHLENELIEO_ = false;
         onChanged();
         return this;
@@ -2560,6 +2512,7 @@ public final class VintageMarketInfoOuterClass {
       public Builder setUnk3300PAMKPAOCJJJ(boolean value) {
         
         unk3300PAMKPAOCJJJ_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -2568,7 +2521,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300PAMKPAOCJJJ() {
-        
+        bitField0_ = (bitField0_ & ~0x00000800);
         unk3300PAMKPAOCJJJ_ = false;
         onChanged();
         return this;
@@ -2591,6 +2544,7 @@ public final class VintageMarketInfoOuterClass {
       public Builder setUnk3300ICJOCDGLFFD(boolean value) {
         
         unk3300ICJOCDGLFFD_ = value;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -2599,7 +2553,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300ICJOCDGLFFD() {
-        
+        bitField0_ = (bitField0_ & ~0x00001000);
         unk3300ICJOCDGLFFD_ = false;
         onChanged();
         return this;
@@ -2613,7 +2567,7 @@ public final class VintageMarketInfoOuterClass {
        * @return Whether the dealInfo field is set.
        */
       public boolean hasDealInfo() {
-        return dealInfoBuilder_ != null || dealInfo_ != null;
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
        * <code>.VintageMarketDealInfo dealInfo = 14;</code>
@@ -2635,11 +2589,11 @@ public final class VintageMarketInfoOuterClass {
             throw new NullPointerException();
           }
           dealInfo_ = value;
-          onChanged();
         } else {
           dealInfoBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -2649,11 +2603,11 @@ public final class VintageMarketInfoOuterClass {
           emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo.Builder builderForValue) {
         if (dealInfoBuilder_ == null) {
           dealInfo_ = builderForValue.build();
-          onChanged();
         } else {
           dealInfoBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -2661,38 +2615,38 @@ public final class VintageMarketInfoOuterClass {
        */
       public Builder mergeDealInfo(emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo value) {
         if (dealInfoBuilder_ == null) {
-          if (dealInfo_ != null) {
-            dealInfo_ =
-              emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo.newBuilder(dealInfo_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00002000) != 0) &&
+            dealInfo_ != null &&
+            dealInfo_ != emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo.getDefaultInstance()) {
+            getDealInfoBuilder().mergeFrom(value);
           } else {
             dealInfo_ = value;
           }
-          onChanged();
         } else {
           dealInfoBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
        * <code>.VintageMarketDealInfo dealInfo = 14;</code>
        */
       public Builder clearDealInfo() {
-        if (dealInfoBuilder_ == null) {
-          dealInfo_ = null;
-          onChanged();
-        } else {
-          dealInfo_ = null;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        dealInfo_ = null;
+        if (dealInfoBuilder_ != null) {
+          dealInfoBuilder_.dispose();
           dealInfoBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.VintageMarketDealInfo dealInfo = 14;</code>
        */
       public emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo.Builder getDealInfoBuilder() {
-        
+        bitField0_ |= 0x00002000;
         onChanged();
         return getDealInfoFieldBuilder().getBuilder();
       }
@@ -2741,6 +2695,7 @@ public final class VintageMarketInfoOuterClass {
       public Builder setUnk3300NDFHAGHBCFN(boolean value) {
         
         unk3300NDFHAGHBCFN_ = value;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -2749,7 +2704,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300NDFHAGHBCFN() {
-        
+        bitField0_ = (bitField0_ & ~0x00004000);
         unk3300NDFHAGHBCFN_ = false;
         onChanged();
         return this;
@@ -2758,9 +2713,9 @@ public final class VintageMarketInfoOuterClass {
       private java.util.List<emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo> openStoreList_ =
         java.util.Collections.emptyList();
       private void ensureOpenStoreListIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
+        if (!((bitField0_ & 0x00008000) != 0)) {
           openStoreList_ = new java.util.ArrayList<emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo>(openStoreList_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00008000;
          }
       }
 
@@ -2910,7 +2865,7 @@ public final class VintageMarketInfoOuterClass {
       public Builder clearOpenStoreList() {
         if (openStoreListBuilder_ == null) {
           openStoreList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00008000);
           onChanged();
         } else {
           openStoreListBuilder_.clear();
@@ -2987,7 +2942,7 @@ public final class VintageMarketInfoOuterClass {
           openStoreListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo, emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo.Builder, emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfoOrBuilder>(
                   openStoreList_,
-                  ((bitField0_ & 0x00000020) != 0),
+                  ((bitField0_ & 0x00008000) != 0),
                   getParentForChildren(),
                   isClean());
           openStoreList_ = null;
@@ -2997,10 +2952,10 @@ public final class VintageMarketInfoOuterClass {
 
       private com.google.protobuf.Internal.IntList unk3300AIAMBBODLBO_ = emptyIntList();
       private void ensureUnk3300AIAMBBODLBOIsMutable() {
-        if (!((bitField0_ & 0x00000040) != 0)) {
+        if (!((bitField0_ & 0x00010000) != 0)) {
           unk3300AIAMBBODLBO_ = mutableCopy(unk3300AIAMBBODLBO_);
-          bitField0_ |= 0x00000040;
-         }
+          bitField0_ |= 0x00010000;
+        }
       }
       /**
        * <code>repeated uint32 Unk3300_AIAMBBODLBO = 13;</code>
@@ -3008,7 +2963,7 @@ public final class VintageMarketInfoOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getUnk3300AIAMBBODLBOList() {
-        return ((bitField0_ & 0x00000040) != 0) ?
+        return ((bitField0_ & 0x00010000) != 0) ?
                  java.util.Collections.unmodifiableList(unk3300AIAMBBODLBO_) : unk3300AIAMBBODLBO_;
       }
       /**
@@ -3034,6 +2989,7 @@ public final class VintageMarketInfoOuterClass {
        */
       public Builder setUnk3300AIAMBBODLBO(
           int index, int value) {
+        
         ensureUnk3300AIAMBBODLBOIsMutable();
         unk3300AIAMBBODLBO_.setInt(index, value);
         onChanged();
@@ -3045,6 +3001,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addUnk3300AIAMBBODLBO(int value) {
+        
         ensureUnk3300AIAMBBODLBOIsMutable();
         unk3300AIAMBBODLBO_.addInt(value);
         onChanged();
@@ -3069,7 +3026,7 @@ public final class VintageMarketInfoOuterClass {
        */
       public Builder clearUnk3300AIAMBBODLBO() {
         unk3300AIAMBBODLBO_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00010000);
         onChanged();
         return this;
       }
@@ -3091,6 +3048,7 @@ public final class VintageMarketInfoOuterClass {
       public Builder setHelpSkillId(int value) {
         
         helpSkillId_ = value;
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -3099,7 +3057,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearHelpSkillId() {
-        
+        bitField0_ = (bitField0_ & ~0x00020000);
         helpSkillId_ = 0;
         onChanged();
         return this;
@@ -3122,6 +3080,7 @@ public final class VintageMarketInfoOuterClass {
       public Builder setUnk3300FJDIMCJEAOB(boolean value) {
         
         unk3300FJDIMCJEAOB_ = value;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -3130,7 +3089,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300FJDIMCJEAOB() {
-        
+        bitField0_ = (bitField0_ & ~0x00040000);
         unk3300FJDIMCJEAOB_ = false;
         onChanged();
         return this;
@@ -3153,6 +3112,7 @@ public final class VintageMarketInfoOuterClass {
       public Builder setUnk3300HHKKEDDIGLA(int value) {
         
         unk3300HHKKEDDIGLA_ = value;
+        bitField0_ |= 0x00080000;
         onChanged();
         return this;
       }
@@ -3161,7 +3121,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300HHKKEDDIGLA() {
-        
+        bitField0_ = (bitField0_ & ~0x00080000);
         unk3300HHKKEDDIGLA_ = 0;
         onChanged();
         return this;
@@ -3184,6 +3144,7 @@ public final class VintageMarketInfoOuterClass {
       public Builder setUnk3300ACJLANLBCGK(int value) {
         
         unk3300ACJLANLBCGK_ = value;
+        bitField0_ |= 0x00100000;
         onChanged();
         return this;
       }
@@ -3192,7 +3153,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300ACJLANLBCGK() {
-        
+        bitField0_ = (bitField0_ & ~0x00100000);
         unk3300ACJLANLBCGK_ = 0;
         onChanged();
         return this;
@@ -3215,6 +3176,7 @@ public final class VintageMarketInfoOuterClass {
       public Builder setUnk3300NBNOJJBNJPB(boolean value) {
         
         unk3300NBNOJJBNJPB_ = value;
+        bitField0_ |= 0x00200000;
         onChanged();
         return this;
       }
@@ -3223,7 +3185,7 @@ public final class VintageMarketInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300NBNOJJBNJPB() {
-        
+        bitField0_ = (bitField0_ & ~0x00200000);
         unk3300NBNOJJBNJPB_ = false;
         onChanged();
         return this;
@@ -3261,7 +3223,18 @@ public final class VintageMarketInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new VintageMarketInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

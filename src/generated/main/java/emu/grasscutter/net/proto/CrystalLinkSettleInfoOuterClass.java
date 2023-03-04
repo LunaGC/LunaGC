@@ -81,73 +81,6 @@ public final class CrystalLinkSettleInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CrystalLinkSettleInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-
-              difficultyId_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-
-              isNewRecord_ = input.readBool();
-              break;
-            }
-            case 80: {
-
-              levelId_ = input.readUInt32();
-              break;
-            }
-            case 88: {
-
-              killNormalMonsterNum_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              finalScore_ = input.readUInt32();
-              break;
-            }
-            case 120: {
-
-              killEliteMonsterNum_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.internal_static_CrystalLinkSettleInfo_descriptor;
@@ -162,7 +95,7 @@ public final class CrystalLinkSettleInfoOuterClass {
     }
 
     public static final int KILLNORMALMONSTERNUM_FIELD_NUMBER = 11;
-    private int killNormalMonsterNum_;
+    private int killNormalMonsterNum_ = 0;
     /**
      * <code>uint32 killNormalMonsterNum = 11;</code>
      * @return The killNormalMonsterNum.
@@ -173,7 +106,7 @@ public final class CrystalLinkSettleInfoOuterClass {
     }
 
     public static final int ISNEWRECORD_FIELD_NUMBER = 6;
-    private boolean isNewRecord_;
+    private boolean isNewRecord_ = false;
     /**
      * <code>bool isNewRecord = 6;</code>
      * @return The isNewRecord.
@@ -184,7 +117,7 @@ public final class CrystalLinkSettleInfoOuterClass {
     }
 
     public static final int FINALSCORE_FIELD_NUMBER = 13;
-    private int finalScore_;
+    private int finalScore_ = 0;
     /**
      * <code>uint32 finalScore = 13;</code>
      * @return The finalScore.
@@ -195,7 +128,7 @@ public final class CrystalLinkSettleInfoOuterClass {
     }
 
     public static final int KILLELITEMONSTERNUM_FIELD_NUMBER = 15;
-    private int killEliteMonsterNum_;
+    private int killEliteMonsterNum_ = 0;
     /**
      * <code>uint32 killEliteMonsterNum = 15;</code>
      * @return The killEliteMonsterNum.
@@ -206,7 +139,7 @@ public final class CrystalLinkSettleInfoOuterClass {
     }
 
     public static final int DIFFICULTYID_FIELD_NUMBER = 3;
-    private int difficultyId_;
+    private int difficultyId_ = 0;
     /**
      * <code>uint32 difficultyId = 3;</code>
      * @return The difficultyId.
@@ -217,7 +150,7 @@ public final class CrystalLinkSettleInfoOuterClass {
     }
 
     public static final int LEVELID_FIELD_NUMBER = 10;
-    private int levelId_;
+    private int levelId_ = 0;
     /**
      * <code>uint32 levelId = 10;</code>
      * @return The levelId.
@@ -259,7 +192,7 @@ public final class CrystalLinkSettleInfoOuterClass {
       if (killEliteMonsterNum_ != 0) {
         output.writeUInt32(15, killEliteMonsterNum_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -292,7 +225,7 @@ public final class CrystalLinkSettleInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(15, killEliteMonsterNum_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -319,7 +252,7 @@ public final class CrystalLinkSettleInfoOuterClass {
           != other.getDifficultyId()) return false;
       if (getLevelId()
           != other.getLevelId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -343,7 +276,7 @@ public final class CrystalLinkSettleInfoOuterClass {
       hash = (53 * hash) + getDifficultyId();
       hash = (37 * hash) + LEVELID_FIELD_NUMBER;
       hash = (53 * hash) + getLevelId();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -460,34 +393,24 @@ public final class CrystalLinkSettleInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         killNormalMonsterNum_ = 0;
-
         isNewRecord_ = false;
-
         finalScore_ = 0;
-
         killEliteMonsterNum_ = 0;
-
         difficultyId_ = 0;
-
         levelId_ = 0;
-
         return this;
       }
 
@@ -514,14 +437,31 @@ public final class CrystalLinkSettleInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo buildPartial() {
         emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo result = new emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo(this);
-        result.killNormalMonsterNum_ = killNormalMonsterNum_;
-        result.isNewRecord_ = isNewRecord_;
-        result.finalScore_ = finalScore_;
-        result.killEliteMonsterNum_ = killEliteMonsterNum_;
-        result.difficultyId_ = difficultyId_;
-        result.levelId_ = levelId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.killNormalMonsterNum_ = killNormalMonsterNum_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.isNewRecord_ = isNewRecord_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.finalScore_ = finalScore_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.killEliteMonsterNum_ = killEliteMonsterNum_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.difficultyId_ = difficultyId_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.levelId_ = levelId_;
+        }
       }
 
       @java.lang.Override
@@ -586,7 +526,7 @@ public final class CrystalLinkSettleInfoOuterClass {
         if (other.getLevelId() != 0) {
           setLevelId(other.getLevelId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -601,19 +541,63 @@ public final class CrystalLinkSettleInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 24: {
+                difficultyId_ = input.readUInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 24
+              case 48: {
+                isNewRecord_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 48
+              case 80: {
+                levelId_ = input.readUInt32();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 80
+              case 88: {
+                killNormalMonsterNum_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 88
+              case 104: {
+                finalScore_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 104
+              case 120: {
+                killEliteMonsterNum_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private int killNormalMonsterNum_ ;
       /**
@@ -632,6 +616,7 @@ public final class CrystalLinkSettleInfoOuterClass {
       public Builder setKillNormalMonsterNum(int value) {
         
         killNormalMonsterNum_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -640,7 +625,7 @@ public final class CrystalLinkSettleInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearKillNormalMonsterNum() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         killNormalMonsterNum_ = 0;
         onChanged();
         return this;
@@ -663,6 +648,7 @@ public final class CrystalLinkSettleInfoOuterClass {
       public Builder setIsNewRecord(boolean value) {
         
         isNewRecord_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -671,7 +657,7 @@ public final class CrystalLinkSettleInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsNewRecord() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         isNewRecord_ = false;
         onChanged();
         return this;
@@ -694,6 +680,7 @@ public final class CrystalLinkSettleInfoOuterClass {
       public Builder setFinalScore(int value) {
         
         finalScore_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -702,7 +689,7 @@ public final class CrystalLinkSettleInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFinalScore() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         finalScore_ = 0;
         onChanged();
         return this;
@@ -725,6 +712,7 @@ public final class CrystalLinkSettleInfoOuterClass {
       public Builder setKillEliteMonsterNum(int value) {
         
         killEliteMonsterNum_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -733,7 +721,7 @@ public final class CrystalLinkSettleInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearKillEliteMonsterNum() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         killEliteMonsterNum_ = 0;
         onChanged();
         return this;
@@ -756,6 +744,7 @@ public final class CrystalLinkSettleInfoOuterClass {
       public Builder setDifficultyId(int value) {
         
         difficultyId_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -764,7 +753,7 @@ public final class CrystalLinkSettleInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDifficultyId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         difficultyId_ = 0;
         onChanged();
         return this;
@@ -787,6 +776,7 @@ public final class CrystalLinkSettleInfoOuterClass {
       public Builder setLevelId(int value) {
         
         levelId_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -795,7 +785,7 @@ public final class CrystalLinkSettleInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLevelId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         levelId_ = 0;
         onChanged();
         return this;
@@ -833,7 +823,18 @@ public final class CrystalLinkSettleInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CrystalLinkSettleInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

@@ -70,56 +70,6 @@ public final class GravenInnocenceCampInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GravenInnocenceCampInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                stageInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.GravenInnocenceCampStageInfoOuterClass.GravenInnocenceCampStageInfo>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              stageInfoList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.GravenInnocenceCampStageInfoOuterClass.GravenInnocenceCampStageInfo.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          stageInfoList_ = java.util.Collections.unmodifiableList(stageInfoList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GravenInnocenceCampInfoOuterClass.internal_static_GravenInnocenceCampInfo_descriptor;
@@ -134,6 +84,7 @@ public final class GravenInnocenceCampInfoOuterClass {
     }
 
     public static final int STAGEINFOLIST_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.GravenInnocenceCampStageInfoOuterClass.GravenInnocenceCampStageInfo> stageInfoList_;
     /**
      * <code>repeated .GravenInnocenceCampStageInfo stageInfoList = 4;</code>
@@ -190,7 +141,7 @@ public final class GravenInnocenceCampInfoOuterClass {
       for (int i = 0; i < stageInfoList_.size(); i++) {
         output.writeMessage(4, stageInfoList_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -203,7 +154,7 @@ public final class GravenInnocenceCampInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, stageInfoList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -220,7 +171,7 @@ public final class GravenInnocenceCampInfoOuterClass {
 
       if (!getStageInfoListList()
           .equals(other.getStageInfoListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -235,7 +186,7 @@ public final class GravenInnocenceCampInfoOuterClass {
         hash = (37 * hash) + STAGEINFOLIST_FIELD_NUMBER;
         hash = (53 * hash) + getStageInfoListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -352,29 +303,25 @@ public final class GravenInnocenceCampInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GravenInnocenceCampInfoOuterClass.GravenInnocenceCampInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStageInfoListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (stageInfoListBuilder_ == null) {
           stageInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          stageInfoList_ = null;
           stageInfoListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -401,7 +348,13 @@ public final class GravenInnocenceCampInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.GravenInnocenceCampInfoOuterClass.GravenInnocenceCampInfo buildPartial() {
         emu.grasscutter.net.proto.GravenInnocenceCampInfoOuterClass.GravenInnocenceCampInfo result = new emu.grasscutter.net.proto.GravenInnocenceCampInfoOuterClass.GravenInnocenceCampInfo(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.GravenInnocenceCampInfoOuterClass.GravenInnocenceCampInfo result) {
         if (stageInfoListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             stageInfoList_ = java.util.Collections.unmodifiableList(stageInfoList_);
@@ -411,8 +364,10 @@ public final class GravenInnocenceCampInfoOuterClass {
         } else {
           result.stageInfoList_ = stageInfoListBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.GravenInnocenceCampInfoOuterClass.GravenInnocenceCampInfo result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -485,7 +440,7 @@ public final class GravenInnocenceCampInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -500,17 +455,43 @@ public final class GravenInnocenceCampInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.GravenInnocenceCampInfoOuterClass.GravenInnocenceCampInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 34: {
+                emu.grasscutter.net.proto.GravenInnocenceCampStageInfoOuterClass.GravenInnocenceCampStageInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.GravenInnocenceCampStageInfoOuterClass.GravenInnocenceCampStageInfo.parser(),
+                        extensionRegistry);
+                if (stageInfoListBuilder_ == null) {
+                  ensureStageInfoListIsMutable();
+                  stageInfoList_.add(m);
+                } else {
+                  stageInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.GravenInnocenceCampInfoOuterClass.GravenInnocenceCampInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -787,7 +768,18 @@ public final class GravenInnocenceCampInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GravenInnocenceCampInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

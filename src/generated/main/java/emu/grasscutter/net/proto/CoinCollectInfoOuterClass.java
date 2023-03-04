@@ -57,53 +57,6 @@ public final class CoinCollectInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CoinCollectInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 72: {
-
-              unk3300DKBJMLJGLIB_ = input.readUInt32();
-              break;
-            }
-            case 88: {
-
-              unk3300CPLDPCMBHOE_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CoinCollectInfoOuterClass.internal_static_CoinCollectInfo_descriptor;
@@ -118,7 +71,7 @@ public final class CoinCollectInfoOuterClass {
     }
 
     public static final int UNK3300_CPLDPCMBHOE_FIELD_NUMBER = 11;
-    private int unk3300CPLDPCMBHOE_;
+    private int unk3300CPLDPCMBHOE_ = 0;
     /**
      * <code>uint32 Unk3300_CPLDPCMBHOE = 11;</code>
      * @return The unk3300CPLDPCMBHOE.
@@ -129,7 +82,7 @@ public final class CoinCollectInfoOuterClass {
     }
 
     public static final int UNK3300_DKBJMLJGLIB_FIELD_NUMBER = 9;
-    private int unk3300DKBJMLJGLIB_;
+    private int unk3300DKBJMLJGLIB_ = 0;
     /**
      * <code>uint32 Unk3300_DKBJMLJGLIB = 9;</code>
      * @return The unk3300DKBJMLJGLIB.
@@ -159,7 +112,7 @@ public final class CoinCollectInfoOuterClass {
       if (unk3300CPLDPCMBHOE_ != 0) {
         output.writeUInt32(11, unk3300CPLDPCMBHOE_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -176,7 +129,7 @@ public final class CoinCollectInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(11, unk3300CPLDPCMBHOE_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -195,7 +148,7 @@ public final class CoinCollectInfoOuterClass {
           != other.getUnk3300CPLDPCMBHOE()) return false;
       if (getUnk3300DKBJMLJGLIB()
           != other.getUnk3300DKBJMLJGLIB()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -210,7 +163,7 @@ public final class CoinCollectInfoOuterClass {
       hash = (53 * hash) + getUnk3300CPLDPCMBHOE();
       hash = (37 * hash) + UNK3300_DKBJMLJGLIB_FIELD_NUMBER;
       hash = (53 * hash) + getUnk3300DKBJMLJGLIB();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -327,26 +280,20 @@ public final class CoinCollectInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CoinCollectInfoOuterClass.CoinCollectInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         unk3300CPLDPCMBHOE_ = 0;
-
         unk3300DKBJMLJGLIB_ = 0;
-
         return this;
       }
 
@@ -373,10 +320,19 @@ public final class CoinCollectInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.CoinCollectInfoOuterClass.CoinCollectInfo buildPartial() {
         emu.grasscutter.net.proto.CoinCollectInfoOuterClass.CoinCollectInfo result = new emu.grasscutter.net.proto.CoinCollectInfoOuterClass.CoinCollectInfo(this);
-        result.unk3300CPLDPCMBHOE_ = unk3300CPLDPCMBHOE_;
-        result.unk3300DKBJMLJGLIB_ = unk3300DKBJMLJGLIB_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.CoinCollectInfoOuterClass.CoinCollectInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.unk3300CPLDPCMBHOE_ = unk3300CPLDPCMBHOE_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.unk3300DKBJMLJGLIB_ = unk3300DKBJMLJGLIB_;
+        }
       }
 
       @java.lang.Override
@@ -429,7 +385,7 @@ public final class CoinCollectInfoOuterClass {
         if (other.getUnk3300DKBJMLJGLIB() != 0) {
           setUnk3300DKBJMLJGLIB(other.getUnk3300DKBJMLJGLIB());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -444,19 +400,43 @@ public final class CoinCollectInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.CoinCollectInfoOuterClass.CoinCollectInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 72: {
+                unk3300DKBJMLJGLIB_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 72
+              case 88: {
+                unk3300CPLDPCMBHOE_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 88
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.CoinCollectInfoOuterClass.CoinCollectInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private int unk3300CPLDPCMBHOE_ ;
       /**
@@ -475,6 +455,7 @@ public final class CoinCollectInfoOuterClass {
       public Builder setUnk3300CPLDPCMBHOE(int value) {
         
         unk3300CPLDPCMBHOE_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -483,7 +464,7 @@ public final class CoinCollectInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300CPLDPCMBHOE() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         unk3300CPLDPCMBHOE_ = 0;
         onChanged();
         return this;
@@ -506,6 +487,7 @@ public final class CoinCollectInfoOuterClass {
       public Builder setUnk3300DKBJMLJGLIB(int value) {
         
         unk3300DKBJMLJGLIB_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -514,7 +496,7 @@ public final class CoinCollectInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300DKBJMLJGLIB() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         unk3300DKBJMLJGLIB_ = 0;
         onChanged();
         return this;
@@ -552,7 +534,18 @@ public final class CoinCollectInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CoinCollectInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

@@ -199,164 +199,6 @@ public final class FungusFighterInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private FungusFighterInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 16: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                unk3300HPDOJOBPFMJ_ = newIntList();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              unk3300HPDOJOBPFMJ_.addInt(input.readUInt32());
-              break;
-            }
-            case 18: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
-                unk3300HPDOJOBPFMJ_ = newIntList();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unk3300HPDOJOBPFMJ_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                fungusDetailList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              fungusDetailList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail.parser(), extensionRegistry));
-              break;
-            }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                trainingDungeonProgressDetailList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FungusTrainingProgressDetailOuterClass.FungusTrainingProgressDetail>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              trainingDungeonProgressDetailList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.FungusTrainingProgressDetailOuterClass.FungusTrainingProgressDetail.parser(), extensionRegistry));
-              break;
-            }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-                plotStageDetailList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail>();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              plotStageDetailList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail.parser(), extensionRegistry));
-              break;
-            }
-            case 72: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                unk3300GIHAKKAJHDH_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              unk3300GIHAKKAJHDH_.addInt(input.readUInt32());
-              break;
-            }
-            case 74: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                unk3300GIHAKKAJHDH_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unk3300GIHAKKAJHDH_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 98: {
-              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
-                trainingDungeonDetailList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FungusTrainingDungeonDetailOuterClass.FungusTrainingDungeonDetail>();
-                mutable_bitField0_ |= 0x00000040;
-              }
-              trainingDungeonDetailList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.FungusTrainingDungeonDetailOuterClass.FungusTrainingDungeonDetail.parser(), extensionRegistry));
-              break;
-            }
-            case 104: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                unk3300KGKFJJHFHAB_ = newIntList();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              unk3300KGKFJJHFHAB_.addInt(input.readUInt32());
-              break;
-            }
-            case 106: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000010) != 0) && input.getBytesUntilLimit() > 0) {
-                unk3300KGKFJJHFHAB_ = newIntList();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unk3300KGKFJJHFHAB_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          unk3300HPDOJOBPFMJ_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          fungusDetailList_ = java.util.Collections.unmodifiableList(fungusDetailList_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          trainingDungeonProgressDetailList_ = java.util.Collections.unmodifiableList(trainingDungeonProgressDetailList_);
-        }
-        if (((mutable_bitField0_ & 0x00000020) != 0)) {
-          plotStageDetailList_ = java.util.Collections.unmodifiableList(plotStageDetailList_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          unk3300GIHAKKAJHDH_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000040) != 0)) {
-          trainingDungeonDetailList_ = java.util.Collections.unmodifiableList(trainingDungeonDetailList_);
-        }
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
-          unk3300KGKFJJHFHAB_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FungusFighterInfoOuterClass.internal_static_FungusFighterInfo_descriptor;
@@ -371,6 +213,7 @@ public final class FungusFighterInfoOuterClass {
     }
 
     public static final int FUNGUSDETAILLIST_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail> fungusDetailList_;
     /**
      * <code>repeated .FungusDetail fungusDetailList = 3;</code>
@@ -411,6 +254,7 @@ public final class FungusFighterInfoOuterClass {
     }
 
     public static final int UNK3300_GIHAKKAJHDH_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList unk3300GIHAKKAJHDH_;
     /**
      * <code>repeated uint32 Unk3300_GIHAKKAJHDH = 9;</code>
@@ -439,6 +283,7 @@ public final class FungusFighterInfoOuterClass {
     private int unk3300GIHAKKAJHDHMemoizedSerializedSize = -1;
 
     public static final int TRAININGDUNGEONPROGRESSDETAILLIST_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.FungusTrainingProgressDetailOuterClass.FungusTrainingProgressDetail> trainingDungeonProgressDetailList_;
     /**
      * <code>repeated .FungusTrainingProgressDetail trainingDungeonProgressDetailList = 4;</code>
@@ -479,6 +324,7 @@ public final class FungusFighterInfoOuterClass {
     }
 
     public static final int UNK3300_HPDOJOBPFMJ_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList unk3300HPDOJOBPFMJ_;
     /**
      * <code>repeated uint32 Unk3300_HPDOJOBPFMJ = 2;</code>
@@ -507,6 +353,7 @@ public final class FungusFighterInfoOuterClass {
     private int unk3300HPDOJOBPFMJMemoizedSerializedSize = -1;
 
     public static final int UNK3300_KGKFJJHFHAB_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList unk3300KGKFJJHFHAB_;
     /**
      * <code>repeated uint32 Unk3300_KGKFJJHFHAB = 13;</code>
@@ -535,6 +382,7 @@ public final class FungusFighterInfoOuterClass {
     private int unk3300KGKFJJHFHABMemoizedSerializedSize = -1;
 
     public static final int PLOTSTAGEDETAILLIST_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail> plotStageDetailList_;
     /**
      * <code>repeated .FungusPlotStageDetail plotStageDetailList = 6;</code>
@@ -575,6 +423,7 @@ public final class FungusFighterInfoOuterClass {
     }
 
     public static final int TRAININGDUNGEONDETAILLIST_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.FungusTrainingDungeonDetailOuterClass.FungusTrainingDungeonDetail> trainingDungeonDetailList_;
     /**
      * <code>repeated .FungusTrainingDungeonDetail trainingDungeonDetailList = 12;</code>
@@ -662,7 +511,7 @@ public final class FungusFighterInfoOuterClass {
       for (int i = 0; i < unk3300KGKFJJHFHAB_.size(); i++) {
         output.writeUInt32NoTag(unk3300KGKFJJHFHAB_.getInt(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -729,7 +578,7 @@ public final class FungusFighterInfoOuterClass {
         }
         unk3300KGKFJJHFHABMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -758,7 +607,7 @@ public final class FungusFighterInfoOuterClass {
           .equals(other.getPlotStageDetailListList())) return false;
       if (!getTrainingDungeonDetailListList()
           .equals(other.getTrainingDungeonDetailListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -797,7 +646,7 @@ public final class FungusFighterInfoOuterClass {
         hash = (37 * hash) + TRAININGDUNGEONDETAILLIST_FIELD_NUMBER;
         hash = (53 * hash) + getTrainingDungeonDetailListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -914,56 +763,49 @@ public final class FungusFighterInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.FungusFighterInfoOuterClass.FungusFighterInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFungusDetailListFieldBuilder();
-          getTrainingDungeonProgressDetailListFieldBuilder();
-          getPlotStageDetailListFieldBuilder();
-          getTrainingDungeonDetailListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (fungusDetailListBuilder_ == null) {
           fungusDetailList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          fungusDetailList_ = null;
           fungusDetailListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         unk3300GIHAKKAJHDH_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
         if (trainingDungeonProgressDetailListBuilder_ == null) {
           trainingDungeonProgressDetailList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
+          trainingDungeonProgressDetailList_ = null;
           trainingDungeonProgressDetailListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         unk3300HPDOJOBPFMJ_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000008);
         unk3300KGKFJJHFHAB_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000010);
         if (plotStageDetailListBuilder_ == null) {
           plotStageDetailList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
+          plotStageDetailList_ = null;
           plotStageDetailListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (trainingDungeonDetailListBuilder_ == null) {
           trainingDungeonDetailList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
+          trainingDungeonDetailList_ = null;
           trainingDungeonDetailListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -990,7 +832,13 @@ public final class FungusFighterInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.FungusFighterInfoOuterClass.FungusFighterInfo buildPartial() {
         emu.grasscutter.net.proto.FungusFighterInfoOuterClass.FungusFighterInfo result = new emu.grasscutter.net.proto.FungusFighterInfoOuterClass.FungusFighterInfo(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.FungusFighterInfoOuterClass.FungusFighterInfo result) {
         if (fungusDetailListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             fungusDetailList_ = java.util.Collections.unmodifiableList(fungusDetailList_);
@@ -1042,8 +890,10 @@ public final class FungusFighterInfoOuterClass {
         } else {
           result.trainingDungeonDetailList_ = trainingDungeonDetailListBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.FungusFighterInfoOuterClass.FungusFighterInfo result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -1224,7 +1074,7 @@ public final class FungusFighterInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1239,17 +1089,130 @@ public final class FungusFighterInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.FungusFighterInfoOuterClass.FungusFighterInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                int v = input.readUInt32();
+                ensureUnk3300HPDOJOBPFMJIsMutable();
+                unk3300HPDOJOBPFMJ_.addInt(v);
+                break;
+              } // case 16
+              case 18: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureUnk3300HPDOJOBPFMJIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  unk3300HPDOJOBPFMJ_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 18
+              case 26: {
+                emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail.parser(),
+                        extensionRegistry);
+                if (fungusDetailListBuilder_ == null) {
+                  ensureFungusDetailListIsMutable();
+                  fungusDetailList_.add(m);
+                } else {
+                  fungusDetailListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                emu.grasscutter.net.proto.FungusTrainingProgressDetailOuterClass.FungusTrainingProgressDetail m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.FungusTrainingProgressDetailOuterClass.FungusTrainingProgressDetail.parser(),
+                        extensionRegistry);
+                if (trainingDungeonProgressDetailListBuilder_ == null) {
+                  ensureTrainingDungeonProgressDetailListIsMutable();
+                  trainingDungeonProgressDetailList_.add(m);
+                } else {
+                  trainingDungeonProgressDetailListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 50: {
+                emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail.parser(),
+                        extensionRegistry);
+                if (plotStageDetailListBuilder_ == null) {
+                  ensurePlotStageDetailListIsMutable();
+                  plotStageDetailList_.add(m);
+                } else {
+                  plotStageDetailListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 72: {
+                int v = input.readUInt32();
+                ensureUnk3300GIHAKKAJHDHIsMutable();
+                unk3300GIHAKKAJHDH_.addInt(v);
+                break;
+              } // case 72
+              case 74: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureUnk3300GIHAKKAJHDHIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  unk3300GIHAKKAJHDH_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 74
+              case 98: {
+                emu.grasscutter.net.proto.FungusTrainingDungeonDetailOuterClass.FungusTrainingDungeonDetail m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.FungusTrainingDungeonDetailOuterClass.FungusTrainingDungeonDetail.parser(),
+                        extensionRegistry);
+                if (trainingDungeonDetailListBuilder_ == null) {
+                  ensureTrainingDungeonDetailListIsMutable();
+                  trainingDungeonDetailList_.add(m);
+                } else {
+                  trainingDungeonDetailListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
+              case 104: {
+                int v = input.readUInt32();
+                ensureUnk3300KGKFJJHFHABIsMutable();
+                unk3300KGKFJJHFHAB_.addInt(v);
+                break;
+              } // case 104
+              case 106: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureUnk3300KGKFJJHFHABIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  unk3300KGKFJJHFHAB_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 106
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.FungusFighterInfoOuterClass.FungusFighterInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1499,7 +1462,7 @@ public final class FungusFighterInfoOuterClass {
         if (!((bitField0_ & 0x00000002) != 0)) {
           unk3300GIHAKKAJHDH_ = mutableCopy(unk3300GIHAKKAJHDH_);
           bitField0_ |= 0x00000002;
-         }
+        }
       }
       /**
        * <code>repeated uint32 Unk3300_GIHAKKAJHDH = 9;</code>
@@ -1533,6 +1496,7 @@ public final class FungusFighterInfoOuterClass {
        */
       public Builder setUnk3300GIHAKKAJHDH(
           int index, int value) {
+        
         ensureUnk3300GIHAKKAJHDHIsMutable();
         unk3300GIHAKKAJHDH_.setInt(index, value);
         onChanged();
@@ -1544,6 +1508,7 @@ public final class FungusFighterInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addUnk3300GIHAKKAJHDH(int value) {
+        
         ensureUnk3300GIHAKKAJHDHIsMutable();
         unk3300GIHAKKAJHDH_.addInt(value);
         onChanged();
@@ -1818,7 +1783,7 @@ public final class FungusFighterInfoOuterClass {
         if (!((bitField0_ & 0x00000008) != 0)) {
           unk3300HPDOJOBPFMJ_ = mutableCopy(unk3300HPDOJOBPFMJ_);
           bitField0_ |= 0x00000008;
-         }
+        }
       }
       /**
        * <code>repeated uint32 Unk3300_HPDOJOBPFMJ = 2;</code>
@@ -1852,6 +1817,7 @@ public final class FungusFighterInfoOuterClass {
        */
       public Builder setUnk3300HPDOJOBPFMJ(
           int index, int value) {
+        
         ensureUnk3300HPDOJOBPFMJIsMutable();
         unk3300HPDOJOBPFMJ_.setInt(index, value);
         onChanged();
@@ -1863,6 +1829,7 @@ public final class FungusFighterInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addUnk3300HPDOJOBPFMJ(int value) {
+        
         ensureUnk3300HPDOJOBPFMJIsMutable();
         unk3300HPDOJOBPFMJ_.addInt(value);
         onChanged();
@@ -1897,7 +1864,7 @@ public final class FungusFighterInfoOuterClass {
         if (!((bitField0_ & 0x00000010) != 0)) {
           unk3300KGKFJJHFHAB_ = mutableCopy(unk3300KGKFJJHFHAB_);
           bitField0_ |= 0x00000010;
-         }
+        }
       }
       /**
        * <code>repeated uint32 Unk3300_KGKFJJHFHAB = 13;</code>
@@ -1931,6 +1898,7 @@ public final class FungusFighterInfoOuterClass {
        */
       public Builder setUnk3300KGKFJJHFHAB(
           int index, int value) {
+        
         ensureUnk3300KGKFJJHFHABIsMutable();
         unk3300KGKFJJHFHAB_.setInt(index, value);
         onChanged();
@@ -1942,6 +1910,7 @@ public final class FungusFighterInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addUnk3300KGKFJJHFHAB(int value) {
+        
         ensureUnk3300KGKFJJHFHABIsMutable();
         unk3300KGKFJJHFHAB_.addInt(value);
         onChanged();
@@ -2483,7 +2452,18 @@ public final class FungusFighterInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FungusFighterInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

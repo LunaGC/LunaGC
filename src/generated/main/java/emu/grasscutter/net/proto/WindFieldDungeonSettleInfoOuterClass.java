@@ -19,51 +19,55 @@ public final class WindFieldDungeonSettleInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 Unk3300_EMCOILGACOC = 6;</code>
-     * @return A list containing the unk3300EMCOILGACOC.
-     */
-    java.util.List<java.lang.Integer> getUnk3300EMCOILGACOCList();
-    /**
-     * <code>repeated uint32 Unk3300_EMCOILGACOC = 6;</code>
-     * @return The count of unk3300EMCOILGACOC.
-     */
-    int getUnk3300EMCOILGACOCCount();
-    /**
-     * <code>repeated uint32 Unk3300_EMCOILGACOC = 6;</code>
-     * @param index The index of the element to return.
-     * @return The unk3300EMCOILGACOC at the given index.
-     */
-    int getUnk3300EMCOILGACOC(int index);
-
-    /**
-     * <code>.WindFieldDungeonFailReason failReason = 12;</code>
+     * <code>.WindFieldDungeonFailReason fail_reason = 3;</code>
      * @return The enum numeric value on the wire for failReason.
      */
     int getFailReasonValue();
     /**
-     * <code>.WindFieldDungeonFailReason failReason = 12;</code>
+     * <code>.WindFieldDungeonFailReason fail_reason = 3;</code>
      * @return The failReason.
      */
     emu.grasscutter.net.proto.WindFieldDungeonFailReasonOuterClass.WindFieldDungeonFailReason getFailReason();
 
     /**
-     * <code>repeated uint32 Unk3300_FJGFOJBGBKM = 3;</code>
-     * @return A list containing the unk3300FJGFOJBGBKM.
+     * <code>repeated uint32 OCAANIJGLBH = 6;</code>
+     * @return A list containing the oCAANIJGLBH.
      */
-    java.util.List<java.lang.Integer> getUnk3300FJGFOJBGBKMList();
+    java.util.List<java.lang.Integer> getOCAANIJGLBHList();
     /**
-     * <code>repeated uint32 Unk3300_FJGFOJBGBKM = 3;</code>
-     * @return The count of unk3300FJGFOJBGBKM.
+     * <code>repeated uint32 OCAANIJGLBH = 6;</code>
+     * @return The count of oCAANIJGLBH.
      */
-    int getUnk3300FJGFOJBGBKMCount();
+    int getOCAANIJGLBHCount();
     /**
-     * <code>repeated uint32 Unk3300_FJGFOJBGBKM = 3;</code>
+     * <code>repeated uint32 OCAANIJGLBH = 6;</code>
      * @param index The index of the element to return.
-     * @return The unk3300FJGFOJBGBKM at the given index.
+     * @return The oCAANIJGLBH at the given index.
      */
-    int getUnk3300FJGFOJBGBKM(int index);
+    int getOCAANIJGLBH(int index);
+
+    /**
+     * <code>repeated uint32 MFIDCJGMDKF = 4;</code>
+     * @return A list containing the mFIDCJGMDKF.
+     */
+    java.util.List<java.lang.Integer> getMFIDCJGMDKFList();
+    /**
+     * <code>repeated uint32 MFIDCJGMDKF = 4;</code>
+     * @return The count of mFIDCJGMDKF.
+     */
+    int getMFIDCJGMDKFCount();
+    /**
+     * <code>repeated uint32 MFIDCJGMDKF = 4;</code>
+     * @param index The index of the element to return.
+     * @return The mFIDCJGMDKF at the given index.
+     */
+    int getMFIDCJGMDKF(int index);
   }
   /**
+   * <pre>
+   * Name: DKPIGJECCHK
+   * </pre>
+   *
    * Protobuf type {@code WindFieldDungeonSettleInfo}
    */
   public static final class WindFieldDungeonSettleInfo extends
@@ -76,9 +80,9 @@ public final class WindFieldDungeonSettleInfoOuterClass {
       super(builder);
     }
     private WindFieldDungeonSettleInfo() {
-      unk3300EMCOILGACOC_ = emptyIntList();
       failReason_ = 0;
-      unk3300FJGFOJBGBKM_ = emptyIntList();
+      oCAANIJGLBH_ = emptyIntList();
+      mFIDCJGMDKF_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -113,51 +117,51 @@ public final class WindFieldDungeonSettleInfoOuterClass {
               done = true;
               break;
             case 24: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                unk3300FJGFOJBGBKM_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              unk3300FJGFOJBGBKM_.addInt(input.readUInt32());
+              int rawValue = input.readEnum();
+
+              failReason_ = rawValue;
               break;
             }
-            case 26: {
+            case 32: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                mFIDCJGMDKF_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              mFIDCJGMDKF_.addInt(input.readUInt32());
+              break;
+            }
+            case 34: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                unk3300FJGFOJBGBKM_ = newIntList();
+                mFIDCJGMDKF_ = newIntList();
                 mutable_bitField0_ |= 0x00000002;
               }
               while (input.getBytesUntilLimit() > 0) {
-                unk3300FJGFOJBGBKM_.addInt(input.readUInt32());
+                mFIDCJGMDKF_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
               break;
             }
             case 48: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                unk3300EMCOILGACOC_ = newIntList();
+                oCAANIJGLBH_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              unk3300EMCOILGACOC_.addInt(input.readUInt32());
+              oCAANIJGLBH_.addInt(input.readUInt32());
               break;
             }
             case 50: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                unk3300EMCOILGACOC_ = newIntList();
+                oCAANIJGLBH_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
               }
               while (input.getBytesUntilLimit() > 0) {
-                unk3300EMCOILGACOC_.addInt(input.readUInt32());
+                oCAANIJGLBH_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
-              break;
-            }
-            case 96: {
-              int rawValue = input.readEnum();
-
-              failReason_ = rawValue;
               break;
             }
             default: {
@@ -176,10 +180,10 @@ public final class WindFieldDungeonSettleInfoOuterClass {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          unk3300FJGFOJBGBKM_.makeImmutable(); // C
+          mFIDCJGMDKF_.makeImmutable(); // C
         }
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          unk3300EMCOILGACOC_.makeImmutable(); // C
+          oCAANIJGLBH_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -198,45 +202,17 @@ public final class WindFieldDungeonSettleInfoOuterClass {
               emu.grasscutter.net.proto.WindFieldDungeonSettleInfoOuterClass.WindFieldDungeonSettleInfo.class, emu.grasscutter.net.proto.WindFieldDungeonSettleInfoOuterClass.WindFieldDungeonSettleInfo.Builder.class);
     }
 
-    public static final int UNK3300_EMCOILGACOC_FIELD_NUMBER = 6;
-    private com.google.protobuf.Internal.IntList unk3300EMCOILGACOC_;
-    /**
-     * <code>repeated uint32 Unk3300_EMCOILGACOC = 6;</code>
-     * @return A list containing the unk3300EMCOILGACOC.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.Integer>
-        getUnk3300EMCOILGACOCList() {
-      return unk3300EMCOILGACOC_;
-    }
-    /**
-     * <code>repeated uint32 Unk3300_EMCOILGACOC = 6;</code>
-     * @return The count of unk3300EMCOILGACOC.
-     */
-    public int getUnk3300EMCOILGACOCCount() {
-      return unk3300EMCOILGACOC_.size();
-    }
-    /**
-     * <code>repeated uint32 Unk3300_EMCOILGACOC = 6;</code>
-     * @param index The index of the element to return.
-     * @return The unk3300EMCOILGACOC at the given index.
-     */
-    public int getUnk3300EMCOILGACOC(int index) {
-      return unk3300EMCOILGACOC_.getInt(index);
-    }
-    private int unk3300EMCOILGACOCMemoizedSerializedSize = -1;
-
-    public static final int FAILREASON_FIELD_NUMBER = 12;
+    public static final int FAIL_REASON_FIELD_NUMBER = 3;
     private int failReason_;
     /**
-     * <code>.WindFieldDungeonFailReason failReason = 12;</code>
+     * <code>.WindFieldDungeonFailReason fail_reason = 3;</code>
      * @return The enum numeric value on the wire for failReason.
      */
     @java.lang.Override public int getFailReasonValue() {
       return failReason_;
     }
     /**
-     * <code>.WindFieldDungeonFailReason failReason = 12;</code>
+     * <code>.WindFieldDungeonFailReason fail_reason = 3;</code>
      * @return The failReason.
      */
     @java.lang.Override public emu.grasscutter.net.proto.WindFieldDungeonFailReasonOuterClass.WindFieldDungeonFailReason getFailReason() {
@@ -245,33 +221,61 @@ public final class WindFieldDungeonSettleInfoOuterClass {
       return result == null ? emu.grasscutter.net.proto.WindFieldDungeonFailReasonOuterClass.WindFieldDungeonFailReason.UNRECOGNIZED : result;
     }
 
-    public static final int UNK3300_FJGFOJBGBKM_FIELD_NUMBER = 3;
-    private com.google.protobuf.Internal.IntList unk3300FJGFOJBGBKM_;
+    public static final int OCAANIJGLBH_FIELD_NUMBER = 6;
+    private com.google.protobuf.Internal.IntList oCAANIJGLBH_;
     /**
-     * <code>repeated uint32 Unk3300_FJGFOJBGBKM = 3;</code>
-     * @return A list containing the unk3300FJGFOJBGBKM.
+     * <code>repeated uint32 OCAANIJGLBH = 6;</code>
+     * @return A list containing the oCAANIJGLBH.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getUnk3300FJGFOJBGBKMList() {
-      return unk3300FJGFOJBGBKM_;
+        getOCAANIJGLBHList() {
+      return oCAANIJGLBH_;
     }
     /**
-     * <code>repeated uint32 Unk3300_FJGFOJBGBKM = 3;</code>
-     * @return The count of unk3300FJGFOJBGBKM.
+     * <code>repeated uint32 OCAANIJGLBH = 6;</code>
+     * @return The count of oCAANIJGLBH.
      */
-    public int getUnk3300FJGFOJBGBKMCount() {
-      return unk3300FJGFOJBGBKM_.size();
+    public int getOCAANIJGLBHCount() {
+      return oCAANIJGLBH_.size();
     }
     /**
-     * <code>repeated uint32 Unk3300_FJGFOJBGBKM = 3;</code>
+     * <code>repeated uint32 OCAANIJGLBH = 6;</code>
      * @param index The index of the element to return.
-     * @return The unk3300FJGFOJBGBKM at the given index.
+     * @return The oCAANIJGLBH at the given index.
      */
-    public int getUnk3300FJGFOJBGBKM(int index) {
-      return unk3300FJGFOJBGBKM_.getInt(index);
+    public int getOCAANIJGLBH(int index) {
+      return oCAANIJGLBH_.getInt(index);
     }
-    private int unk3300FJGFOJBGBKMMemoizedSerializedSize = -1;
+    private int oCAANIJGLBHMemoizedSerializedSize = -1;
+
+    public static final int MFIDCJGMDKF_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.IntList mFIDCJGMDKF_;
+    /**
+     * <code>repeated uint32 MFIDCJGMDKF = 4;</code>
+     * @return A list containing the mFIDCJGMDKF.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getMFIDCJGMDKFList() {
+      return mFIDCJGMDKF_;
+    }
+    /**
+     * <code>repeated uint32 MFIDCJGMDKF = 4;</code>
+     * @return The count of mFIDCJGMDKF.
+     */
+    public int getMFIDCJGMDKFCount() {
+      return mFIDCJGMDKF_.size();
+    }
+    /**
+     * <code>repeated uint32 MFIDCJGMDKF = 4;</code>
+     * @param index The index of the element to return.
+     * @return The mFIDCJGMDKF at the given index.
+     */
+    public int getMFIDCJGMDKF(int index) {
+      return mFIDCJGMDKF_.getInt(index);
+    }
+    private int mFIDCJGMDKFMemoizedSerializedSize = -1;
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -288,22 +292,22 @@ public final class WindFieldDungeonSettleInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (getUnk3300FJGFOJBGBKMList().size() > 0) {
-        output.writeUInt32NoTag(26);
-        output.writeUInt32NoTag(unk3300FJGFOJBGBKMMemoizedSerializedSize);
+      if (failReason_ != emu.grasscutter.net.proto.WindFieldDungeonFailReasonOuterClass.WindFieldDungeonFailReason.WIND_FIELD_DUNGEON_FAIL_NONE.getNumber()) {
+        output.writeEnum(3, failReason_);
       }
-      for (int i = 0; i < unk3300FJGFOJBGBKM_.size(); i++) {
-        output.writeUInt32NoTag(unk3300FJGFOJBGBKM_.getInt(i));
+      if (getMFIDCJGMDKFList().size() > 0) {
+        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(mFIDCJGMDKFMemoizedSerializedSize);
       }
-      if (getUnk3300EMCOILGACOCList().size() > 0) {
+      for (int i = 0; i < mFIDCJGMDKF_.size(); i++) {
+        output.writeUInt32NoTag(mFIDCJGMDKF_.getInt(i));
+      }
+      if (getOCAANIJGLBHList().size() > 0) {
         output.writeUInt32NoTag(50);
-        output.writeUInt32NoTag(unk3300EMCOILGACOCMemoizedSerializedSize);
+        output.writeUInt32NoTag(oCAANIJGLBHMemoizedSerializedSize);
       }
-      for (int i = 0; i < unk3300EMCOILGACOC_.size(); i++) {
-        output.writeUInt32NoTag(unk3300EMCOILGACOC_.getInt(i));
-      }
-      if (failReason_ != emu.grasscutter.net.proto.WindFieldDungeonFailReasonOuterClass.WindFieldDungeonFailReason.WIND_FIELD_DUNGEON_FAIL_REASON_NONE.getNumber()) {
-        output.writeEnum(12, failReason_);
+      for (int i = 0; i < oCAANIJGLBH_.size(); i++) {
+        output.writeUInt32NoTag(oCAANIJGLBH_.getInt(i));
       }
       unknownFields.writeTo(output);
     }
@@ -314,37 +318,37 @@ public final class WindFieldDungeonSettleInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < unk3300FJGFOJBGBKM_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(unk3300FJGFOJBGBKM_.getInt(i));
-        }
-        size += dataSize;
-        if (!getUnk3300FJGFOJBGBKMList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        unk3300FJGFOJBGBKMMemoizedSerializedSize = dataSize;
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < unk3300EMCOILGACOC_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(unk3300EMCOILGACOC_.getInt(i));
-        }
-        size += dataSize;
-        if (!getUnk3300EMCOILGACOCList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        unk3300EMCOILGACOCMemoizedSerializedSize = dataSize;
-      }
-      if (failReason_ != emu.grasscutter.net.proto.WindFieldDungeonFailReasonOuterClass.WindFieldDungeonFailReason.WIND_FIELD_DUNGEON_FAIL_REASON_NONE.getNumber()) {
+      if (failReason_ != emu.grasscutter.net.proto.WindFieldDungeonFailReasonOuterClass.WindFieldDungeonFailReason.WIND_FIELD_DUNGEON_FAIL_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(12, failReason_);
+          .computeEnumSize(3, failReason_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < mFIDCJGMDKF_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(mFIDCJGMDKF_.getInt(i));
+        }
+        size += dataSize;
+        if (!getMFIDCJGMDKFList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        mFIDCJGMDKFMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < oCAANIJGLBH_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(oCAANIJGLBH_.getInt(i));
+        }
+        size += dataSize;
+        if (!getOCAANIJGLBHList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        oCAANIJGLBHMemoizedSerializedSize = dataSize;
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -361,11 +365,11 @@ public final class WindFieldDungeonSettleInfoOuterClass {
       }
       emu.grasscutter.net.proto.WindFieldDungeonSettleInfoOuterClass.WindFieldDungeonSettleInfo other = (emu.grasscutter.net.proto.WindFieldDungeonSettleInfoOuterClass.WindFieldDungeonSettleInfo) obj;
 
-      if (!getUnk3300EMCOILGACOCList()
-          .equals(other.getUnk3300EMCOILGACOCList())) return false;
       if (failReason_ != other.failReason_) return false;
-      if (!getUnk3300FJGFOJBGBKMList()
-          .equals(other.getUnk3300FJGFOJBGBKMList())) return false;
+      if (!getOCAANIJGLBHList()
+          .equals(other.getOCAANIJGLBHList())) return false;
+      if (!getMFIDCJGMDKFList()
+          .equals(other.getMFIDCJGMDKFList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -377,15 +381,15 @@ public final class WindFieldDungeonSettleInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getUnk3300EMCOILGACOCCount() > 0) {
-        hash = (37 * hash) + UNK3300_EMCOILGACOC_FIELD_NUMBER;
-        hash = (53 * hash) + getUnk3300EMCOILGACOCList().hashCode();
-      }
-      hash = (37 * hash) + FAILREASON_FIELD_NUMBER;
+      hash = (37 * hash) + FAIL_REASON_FIELD_NUMBER;
       hash = (53 * hash) + failReason_;
-      if (getUnk3300FJGFOJBGBKMCount() > 0) {
-        hash = (37 * hash) + UNK3300_FJGFOJBGBKM_FIELD_NUMBER;
-        hash = (53 * hash) + getUnk3300FJGFOJBGBKMList().hashCode();
+      if (getOCAANIJGLBHCount() > 0) {
+        hash = (37 * hash) + OCAANIJGLBH_FIELD_NUMBER;
+        hash = (53 * hash) + getOCAANIJGLBHList().hashCode();
+      }
+      if (getMFIDCJGMDKFCount() > 0) {
+        hash = (37 * hash) + MFIDCJGMDKF_FIELD_NUMBER;
+        hash = (53 * hash) + getMFIDCJGMDKFList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -483,6 +487,10 @@ public final class WindFieldDungeonSettleInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: DKPIGJECCHK
+     * </pre>
+     *
      * Protobuf type {@code WindFieldDungeonSettleInfo}
      */
     public static final class Builder extends
@@ -520,11 +528,11 @@ public final class WindFieldDungeonSettleInfoOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        unk3300EMCOILGACOC_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
         failReason_ = 0;
 
-        unk3300FJGFOJBGBKM_ = emptyIntList();
+        oCAANIJGLBH_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        mFIDCJGMDKF_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
@@ -553,17 +561,17 @@ public final class WindFieldDungeonSettleInfoOuterClass {
       public emu.grasscutter.net.proto.WindFieldDungeonSettleInfoOuterClass.WindFieldDungeonSettleInfo buildPartial() {
         emu.grasscutter.net.proto.WindFieldDungeonSettleInfoOuterClass.WindFieldDungeonSettleInfo result = new emu.grasscutter.net.proto.WindFieldDungeonSettleInfoOuterClass.WindFieldDungeonSettleInfo(this);
         int from_bitField0_ = bitField0_;
+        result.failReason_ = failReason_;
         if (((bitField0_ & 0x00000001) != 0)) {
-          unk3300EMCOILGACOC_.makeImmutable();
+          oCAANIJGLBH_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.unk3300EMCOILGACOC_ = unk3300EMCOILGACOC_;
-        result.failReason_ = failReason_;
+        result.oCAANIJGLBH_ = oCAANIJGLBH_;
         if (((bitField0_ & 0x00000002) != 0)) {
-          unk3300FJGFOJBGBKM_.makeImmutable();
+          mFIDCJGMDKF_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.unk3300FJGFOJBGBKM_ = unk3300FJGFOJBGBKM_;
+        result.mFIDCJGMDKF_ = mFIDCJGMDKF_;
         onBuilt();
         return result;
       }
@@ -612,26 +620,26 @@ public final class WindFieldDungeonSettleInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.WindFieldDungeonSettleInfoOuterClass.WindFieldDungeonSettleInfo other) {
         if (other == emu.grasscutter.net.proto.WindFieldDungeonSettleInfoOuterClass.WindFieldDungeonSettleInfo.getDefaultInstance()) return this;
-        if (!other.unk3300EMCOILGACOC_.isEmpty()) {
-          if (unk3300EMCOILGACOC_.isEmpty()) {
-            unk3300EMCOILGACOC_ = other.unk3300EMCOILGACOC_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureUnk3300EMCOILGACOCIsMutable();
-            unk3300EMCOILGACOC_.addAll(other.unk3300EMCOILGACOC_);
-          }
-          onChanged();
-        }
         if (other.failReason_ != 0) {
           setFailReasonValue(other.getFailReasonValue());
         }
-        if (!other.unk3300FJGFOJBGBKM_.isEmpty()) {
-          if (unk3300FJGFOJBGBKM_.isEmpty()) {
-            unk3300FJGFOJBGBKM_ = other.unk3300FJGFOJBGBKM_;
+        if (!other.oCAANIJGLBH_.isEmpty()) {
+          if (oCAANIJGLBH_.isEmpty()) {
+            oCAANIJGLBH_ = other.oCAANIJGLBH_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureOCAANIJGLBHIsMutable();
+            oCAANIJGLBH_.addAll(other.oCAANIJGLBH_);
+          }
+          onChanged();
+        }
+        if (!other.mFIDCJGMDKF_.isEmpty()) {
+          if (mFIDCJGMDKF_.isEmpty()) {
+            mFIDCJGMDKF_ = other.mFIDCJGMDKF_;
             bitField0_ = (bitField0_ & ~0x00000002);
           } else {
-            ensureUnk3300FJGFOJBGBKMIsMutable();
-            unk3300FJGFOJBGBKM_.addAll(other.unk3300FJGFOJBGBKM_);
+            ensureMFIDCJGMDKFIsMutable();
+            mFIDCJGMDKF_.addAll(other.mFIDCJGMDKF_);
           }
           onChanged();
         }
@@ -665,95 +673,16 @@ public final class WindFieldDungeonSettleInfoOuterClass {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Internal.IntList unk3300EMCOILGACOC_ = emptyIntList();
-      private void ensureUnk3300EMCOILGACOCIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          unk3300EMCOILGACOC_ = mutableCopy(unk3300EMCOILGACOC_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated uint32 Unk3300_EMCOILGACOC = 6;</code>
-       * @return A list containing the unk3300EMCOILGACOC.
-       */
-      public java.util.List<java.lang.Integer>
-          getUnk3300EMCOILGACOCList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(unk3300EMCOILGACOC_) : unk3300EMCOILGACOC_;
-      }
-      /**
-       * <code>repeated uint32 Unk3300_EMCOILGACOC = 6;</code>
-       * @return The count of unk3300EMCOILGACOC.
-       */
-      public int getUnk3300EMCOILGACOCCount() {
-        return unk3300EMCOILGACOC_.size();
-      }
-      /**
-       * <code>repeated uint32 Unk3300_EMCOILGACOC = 6;</code>
-       * @param index The index of the element to return.
-       * @return The unk3300EMCOILGACOC at the given index.
-       */
-      public int getUnk3300EMCOILGACOC(int index) {
-        return unk3300EMCOILGACOC_.getInt(index);
-      }
-      /**
-       * <code>repeated uint32 Unk3300_EMCOILGACOC = 6;</code>
-       * @param index The index to set the value at.
-       * @param value The unk3300EMCOILGACOC to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUnk3300EMCOILGACOC(
-          int index, int value) {
-        ensureUnk3300EMCOILGACOCIsMutable();
-        unk3300EMCOILGACOC_.setInt(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 Unk3300_EMCOILGACOC = 6;</code>
-       * @param value The unk3300EMCOILGACOC to add.
-       * @return This builder for chaining.
-       */
-      public Builder addUnk3300EMCOILGACOC(int value) {
-        ensureUnk3300EMCOILGACOCIsMutable();
-        unk3300EMCOILGACOC_.addInt(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 Unk3300_EMCOILGACOC = 6;</code>
-       * @param values The unk3300EMCOILGACOC to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllUnk3300EMCOILGACOC(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureUnk3300EMCOILGACOCIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, unk3300EMCOILGACOC_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 Unk3300_EMCOILGACOC = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUnk3300EMCOILGACOC() {
-        unk3300EMCOILGACOC_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-
       private int failReason_ = 0;
       /**
-       * <code>.WindFieldDungeonFailReason failReason = 12;</code>
+       * <code>.WindFieldDungeonFailReason fail_reason = 3;</code>
        * @return The enum numeric value on the wire for failReason.
        */
       @java.lang.Override public int getFailReasonValue() {
         return failReason_;
       }
       /**
-       * <code>.WindFieldDungeonFailReason failReason = 12;</code>
+       * <code>.WindFieldDungeonFailReason fail_reason = 3;</code>
        * @param value The enum numeric value on the wire for failReason to set.
        * @return This builder for chaining.
        */
@@ -764,7 +693,7 @@ public final class WindFieldDungeonSettleInfoOuterClass {
         return this;
       }
       /**
-       * <code>.WindFieldDungeonFailReason failReason = 12;</code>
+       * <code>.WindFieldDungeonFailReason fail_reason = 3;</code>
        * @return The failReason.
        */
       @java.lang.Override
@@ -774,7 +703,7 @@ public final class WindFieldDungeonSettleInfoOuterClass {
         return result == null ? emu.grasscutter.net.proto.WindFieldDungeonFailReasonOuterClass.WindFieldDungeonFailReason.UNRECOGNIZED : result;
       }
       /**
-       * <code>.WindFieldDungeonFailReason failReason = 12;</code>
+       * <code>.WindFieldDungeonFailReason fail_reason = 3;</code>
        * @param value The failReason to set.
        * @return This builder for chaining.
        */
@@ -788,7 +717,7 @@ public final class WindFieldDungeonSettleInfoOuterClass {
         return this;
       }
       /**
-       * <code>.WindFieldDungeonFailReason failReason = 12;</code>
+       * <code>.WindFieldDungeonFailReason fail_reason = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearFailReason() {
@@ -798,80 +727,159 @@ public final class WindFieldDungeonSettleInfoOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList unk3300FJGFOJBGBKM_ = emptyIntList();
-      private void ensureUnk3300FJGFOJBGBKMIsMutable() {
+      private com.google.protobuf.Internal.IntList oCAANIJGLBH_ = emptyIntList();
+      private void ensureOCAANIJGLBHIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          oCAANIJGLBH_ = mutableCopy(oCAANIJGLBH_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated uint32 OCAANIJGLBH = 6;</code>
+       * @return A list containing the oCAANIJGLBH.
+       */
+      public java.util.List<java.lang.Integer>
+          getOCAANIJGLBHList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(oCAANIJGLBH_) : oCAANIJGLBH_;
+      }
+      /**
+       * <code>repeated uint32 OCAANIJGLBH = 6;</code>
+       * @return The count of oCAANIJGLBH.
+       */
+      public int getOCAANIJGLBHCount() {
+        return oCAANIJGLBH_.size();
+      }
+      /**
+       * <code>repeated uint32 OCAANIJGLBH = 6;</code>
+       * @param index The index of the element to return.
+       * @return The oCAANIJGLBH at the given index.
+       */
+      public int getOCAANIJGLBH(int index) {
+        return oCAANIJGLBH_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 OCAANIJGLBH = 6;</code>
+       * @param index The index to set the value at.
+       * @param value The oCAANIJGLBH to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOCAANIJGLBH(
+          int index, int value) {
+        ensureOCAANIJGLBHIsMutable();
+        oCAANIJGLBH_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 OCAANIJGLBH = 6;</code>
+       * @param value The oCAANIJGLBH to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOCAANIJGLBH(int value) {
+        ensureOCAANIJGLBHIsMutable();
+        oCAANIJGLBH_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 OCAANIJGLBH = 6;</code>
+       * @param values The oCAANIJGLBH to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOCAANIJGLBH(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureOCAANIJGLBHIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, oCAANIJGLBH_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 OCAANIJGLBH = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOCAANIJGLBH() {
+        oCAANIJGLBH_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList mFIDCJGMDKF_ = emptyIntList();
+      private void ensureMFIDCJGMDKFIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          unk3300FJGFOJBGBKM_ = mutableCopy(unk3300FJGFOJBGBKM_);
+          mFIDCJGMDKF_ = mutableCopy(mFIDCJGMDKF_);
           bitField0_ |= 0x00000002;
          }
       }
       /**
-       * <code>repeated uint32 Unk3300_FJGFOJBGBKM = 3;</code>
-       * @return A list containing the unk3300FJGFOJBGBKM.
+       * <code>repeated uint32 MFIDCJGMDKF = 4;</code>
+       * @return A list containing the mFIDCJGMDKF.
        */
       public java.util.List<java.lang.Integer>
-          getUnk3300FJGFOJBGBKMList() {
+          getMFIDCJGMDKFList() {
         return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(unk3300FJGFOJBGBKM_) : unk3300FJGFOJBGBKM_;
+                 java.util.Collections.unmodifiableList(mFIDCJGMDKF_) : mFIDCJGMDKF_;
       }
       /**
-       * <code>repeated uint32 Unk3300_FJGFOJBGBKM = 3;</code>
-       * @return The count of unk3300FJGFOJBGBKM.
+       * <code>repeated uint32 MFIDCJGMDKF = 4;</code>
+       * @return The count of mFIDCJGMDKF.
        */
-      public int getUnk3300FJGFOJBGBKMCount() {
-        return unk3300FJGFOJBGBKM_.size();
+      public int getMFIDCJGMDKFCount() {
+        return mFIDCJGMDKF_.size();
       }
       /**
-       * <code>repeated uint32 Unk3300_FJGFOJBGBKM = 3;</code>
+       * <code>repeated uint32 MFIDCJGMDKF = 4;</code>
        * @param index The index of the element to return.
-       * @return The unk3300FJGFOJBGBKM at the given index.
+       * @return The mFIDCJGMDKF at the given index.
        */
-      public int getUnk3300FJGFOJBGBKM(int index) {
-        return unk3300FJGFOJBGBKM_.getInt(index);
+      public int getMFIDCJGMDKF(int index) {
+        return mFIDCJGMDKF_.getInt(index);
       }
       /**
-       * <code>repeated uint32 Unk3300_FJGFOJBGBKM = 3;</code>
+       * <code>repeated uint32 MFIDCJGMDKF = 4;</code>
        * @param index The index to set the value at.
-       * @param value The unk3300FJGFOJBGBKM to set.
+       * @param value The mFIDCJGMDKF to set.
        * @return This builder for chaining.
        */
-      public Builder setUnk3300FJGFOJBGBKM(
+      public Builder setMFIDCJGMDKF(
           int index, int value) {
-        ensureUnk3300FJGFOJBGBKMIsMutable();
-        unk3300FJGFOJBGBKM_.setInt(index, value);
+        ensureMFIDCJGMDKFIsMutable();
+        mFIDCJGMDKF_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 Unk3300_FJGFOJBGBKM = 3;</code>
-       * @param value The unk3300FJGFOJBGBKM to add.
+       * <code>repeated uint32 MFIDCJGMDKF = 4;</code>
+       * @param value The mFIDCJGMDKF to add.
        * @return This builder for chaining.
        */
-      public Builder addUnk3300FJGFOJBGBKM(int value) {
-        ensureUnk3300FJGFOJBGBKMIsMutable();
-        unk3300FJGFOJBGBKM_.addInt(value);
+      public Builder addMFIDCJGMDKF(int value) {
+        ensureMFIDCJGMDKFIsMutable();
+        mFIDCJGMDKF_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 Unk3300_FJGFOJBGBKM = 3;</code>
-       * @param values The unk3300FJGFOJBGBKM to add.
+       * <code>repeated uint32 MFIDCJGMDKF = 4;</code>
+       * @param values The mFIDCJGMDKF to add.
        * @return This builder for chaining.
        */
-      public Builder addAllUnk3300FJGFOJBGBKM(
+      public Builder addAllMFIDCJGMDKF(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureUnk3300FJGFOJBGBKMIsMutable();
+        ensureMFIDCJGMDKFIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, unk3300FJGFOJBGBKM_);
+            values, mFIDCJGMDKF_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 Unk3300_FJGFOJBGBKM = 3;</code>
+       * <code>repeated uint32 MFIDCJGMDKF = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearUnk3300FJGFOJBGBKM() {
-        unk3300FJGFOJBGBKM_ = emptyIntList();
+      public Builder clearMFIDCJGMDKF() {
+        mFIDCJGMDKF_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
@@ -944,12 +952,11 @@ public final class WindFieldDungeonSettleInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n WindFieldDungeonSettleInfo.proto\032 Wind" +
-      "FieldDungeonFailReason.proto\"\207\001\n\032WindFie" +
-      "ldDungeonSettleInfo\022\033\n\023Unk3300_EMCOILGAC" +
-      "OC\030\006 \003(\r\022/\n\nfailReason\030\014 \001(\0162\033.WindField" +
-      "DungeonFailReason\022\033\n\023Unk3300_FJGFOJBGBKM" +
-      "\030\003 \003(\rB\033\n\031emu.grasscutter.net.protob\006pro" +
-      "to3"
+      "FieldDungeonFailReason.proto\"x\n\032WindFiel" +
+      "dDungeonSettleInfo\0220\n\013fail_reason\030\003 \001(\0162" +
+      "\033.WindFieldDungeonFailReason\022\023\n\013OCAANIJG" +
+      "LBH\030\006 \003(\r\022\023\n\013MFIDCJGMDKF\030\004 \003(\rB\033\n\031emu.gr" +
+      "asscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -961,7 +968,7 @@ public final class WindFieldDungeonSettleInfoOuterClass {
     internal_static_WindFieldDungeonSettleInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WindFieldDungeonSettleInfo_descriptor,
-        new java.lang.String[] { "Unk3300EMCOILGACOC", "FailReason", "Unk3300FJGFOJBGBKM", });
+        new java.lang.String[] { "FailReason", "OCAANIJGLBH", "MFIDCJGMDKF", });
     emu.grasscutter.net.proto.WindFieldDungeonFailReasonOuterClass.getDescriptor();
   }
 

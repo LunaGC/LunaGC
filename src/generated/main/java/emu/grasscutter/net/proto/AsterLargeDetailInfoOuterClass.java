@@ -19,18 +19,22 @@ public final class AsterLargeDetailInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool isOpen = 3;</code>
+     * <code>bool is_open = 10;</code>
      * @return The isOpen.
      */
     boolean getIsOpen();
 
     /**
-     * <code>uint32 beginTime = 7;</code>
+     * <code>uint32 begin_time = 2;</code>
      * @return The beginTime.
      */
     int getBeginTime();
   }
   /**
+   * <pre>
+   * Name: CEHNJAMIMFN
+   * </pre>
+   *
    * Protobuf type {@code AsterLargeDetailInfo}
    */
   public static final class AsterLargeDetailInfo extends
@@ -57,53 +61,6 @@ public final class AsterLargeDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AsterLargeDetailInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-
-              isOpen_ = input.readBool();
-              break;
-            }
-            case 56: {
-
-              beginTime_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AsterLargeDetailInfoOuterClass.internal_static_AsterLargeDetailInfo_descriptor;
@@ -117,10 +74,10 @@ public final class AsterLargeDetailInfoOuterClass {
               emu.grasscutter.net.proto.AsterLargeDetailInfoOuterClass.AsterLargeDetailInfo.class, emu.grasscutter.net.proto.AsterLargeDetailInfoOuterClass.AsterLargeDetailInfo.Builder.class);
     }
 
-    public static final int ISOPEN_FIELD_NUMBER = 3;
-    private boolean isOpen_;
+    public static final int IS_OPEN_FIELD_NUMBER = 10;
+    private boolean isOpen_ = false;
     /**
-     * <code>bool isOpen = 3;</code>
+     * <code>bool is_open = 10;</code>
      * @return The isOpen.
      */
     @java.lang.Override
@@ -128,10 +85,10 @@ public final class AsterLargeDetailInfoOuterClass {
       return isOpen_;
     }
 
-    public static final int BEGINTIME_FIELD_NUMBER = 7;
-    private int beginTime_;
+    public static final int BEGIN_TIME_FIELD_NUMBER = 2;
+    private int beginTime_ = 0;
     /**
-     * <code>uint32 beginTime = 7;</code>
+     * <code>uint32 begin_time = 2;</code>
      * @return The beginTime.
      */
     @java.lang.Override
@@ -153,13 +110,13 @@ public final class AsterLargeDetailInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (isOpen_ != false) {
-        output.writeBool(3, isOpen_);
-      }
       if (beginTime_ != 0) {
-        output.writeUInt32(7, beginTime_);
+        output.writeUInt32(2, beginTime_);
       }
-      unknownFields.writeTo(output);
+      if (isOpen_ != false) {
+        output.writeBool(10, isOpen_);
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -168,15 +125,15 @@ public final class AsterLargeDetailInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (isOpen_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isOpen_);
-      }
       if (beginTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, beginTime_);
+          .computeUInt32Size(2, beginTime_);
       }
-      size += unknownFields.getSerializedSize();
+      if (isOpen_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, isOpen_);
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -195,7 +152,7 @@ public final class AsterLargeDetailInfoOuterClass {
           != other.getIsOpen()) return false;
       if (getBeginTime()
           != other.getBeginTime()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -206,12 +163,12 @@ public final class AsterLargeDetailInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ISOPEN_FIELD_NUMBER;
+      hash = (37 * hash) + IS_OPEN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsOpen());
-      hash = (37 * hash) + BEGINTIME_FIELD_NUMBER;
+      hash = (37 * hash) + BEGIN_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getBeginTime();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -307,6 +264,10 @@ public final class AsterLargeDetailInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: CEHNJAMIMFN
+     * </pre>
+     *
      * Protobuf type {@code AsterLargeDetailInfo}
      */
     public static final class Builder extends
@@ -328,26 +289,20 @@ public final class AsterLargeDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AsterLargeDetailInfoOuterClass.AsterLargeDetailInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         isOpen_ = false;
-
         beginTime_ = 0;
-
         return this;
       }
 
@@ -374,10 +329,19 @@ public final class AsterLargeDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.AsterLargeDetailInfoOuterClass.AsterLargeDetailInfo buildPartial() {
         emu.grasscutter.net.proto.AsterLargeDetailInfoOuterClass.AsterLargeDetailInfo result = new emu.grasscutter.net.proto.AsterLargeDetailInfoOuterClass.AsterLargeDetailInfo(this);
-        result.isOpen_ = isOpen_;
-        result.beginTime_ = beginTime_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.AsterLargeDetailInfoOuterClass.AsterLargeDetailInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.isOpen_ = isOpen_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.beginTime_ = beginTime_;
+        }
       }
 
       @java.lang.Override
@@ -430,7 +394,7 @@ public final class AsterLargeDetailInfoOuterClass {
         if (other.getBeginTime() != 0) {
           setBeginTime(other.getBeginTime());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -445,23 +409,47 @@ public final class AsterLargeDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.AsterLargeDetailInfoOuterClass.AsterLargeDetailInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                beginTime_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 80: {
+                isOpen_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 80
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.AsterLargeDetailInfoOuterClass.AsterLargeDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private boolean isOpen_ ;
       /**
-       * <code>bool isOpen = 3;</code>
+       * <code>bool is_open = 10;</code>
        * @return The isOpen.
        */
       @java.lang.Override
@@ -469,22 +457,23 @@ public final class AsterLargeDetailInfoOuterClass {
         return isOpen_;
       }
       /**
-       * <code>bool isOpen = 3;</code>
+       * <code>bool is_open = 10;</code>
        * @param value The isOpen to set.
        * @return This builder for chaining.
        */
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>bool isOpen = 3;</code>
+       * <code>bool is_open = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         isOpen_ = false;
         onChanged();
         return this;
@@ -492,7 +481,7 @@ public final class AsterLargeDetailInfoOuterClass {
 
       private int beginTime_ ;
       /**
-       * <code>uint32 beginTime = 7;</code>
+       * <code>uint32 begin_time = 2;</code>
        * @return The beginTime.
        */
       @java.lang.Override
@@ -500,22 +489,23 @@ public final class AsterLargeDetailInfoOuterClass {
         return beginTime_;
       }
       /**
-       * <code>uint32 beginTime = 7;</code>
+       * <code>uint32 begin_time = 2;</code>
        * @param value The beginTime to set.
        * @return This builder for chaining.
        */
       public Builder setBeginTime(int value) {
         
         beginTime_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 beginTime = 7;</code>
+       * <code>uint32 begin_time = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearBeginTime() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         beginTime_ = 0;
         onChanged();
         return this;
@@ -553,7 +543,18 @@ public final class AsterLargeDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AsterLargeDetailInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -587,10 +588,10 @@ public final class AsterLargeDetailInfoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032AsterLargeDetailInfo.proto\"9\n\024AsterLar" +
-      "geDetailInfo\022\016\n\006isOpen\030\003 \001(\010\022\021\n\tbeginTim" +
-      "e\030\007 \001(\rB\033\n\031emu.grasscutter.net.protob\006pr" +
-      "oto3"
+      "\n\032AsterLargeDetailInfo.proto\";\n\024AsterLar" +
+      "geDetailInfo\022\017\n\007is_open\030\n \001(\010\022\022\n\nbegin_t" +
+      "ime\030\002 \001(\rB\033\n\031emu.grasscutter.net.protob\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

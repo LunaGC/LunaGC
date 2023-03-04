@@ -57,53 +57,6 @@ public final class ScoreChallengeInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ScoreChallengeInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 32: {
-
-              maxScore_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              oichdaoampp_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ScoreChallengeInfoOuterClass.internal_static_ScoreChallengeInfo_descriptor;
@@ -118,7 +71,7 @@ public final class ScoreChallengeInfoOuterClass {
     }
 
     public static final int OICHDAOAMPP_FIELD_NUMBER = 13;
-    private int oichdaoampp_;
+    private int oichdaoampp_ = 0;
     /**
      * <code>uint32 oichdaoampp = 13;</code>
      * @return The oichdaoampp.
@@ -129,7 +82,7 @@ public final class ScoreChallengeInfoOuterClass {
     }
 
     public static final int MAXSCORE_FIELD_NUMBER = 4;
-    private int maxScore_;
+    private int maxScore_ = 0;
     /**
      * <code>uint32 maxScore = 4;</code>
      * @return The maxScore.
@@ -159,7 +112,7 @@ public final class ScoreChallengeInfoOuterClass {
       if (oichdaoampp_ != 0) {
         output.writeUInt32(13, oichdaoampp_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -176,7 +129,7 @@ public final class ScoreChallengeInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, oichdaoampp_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -195,7 +148,7 @@ public final class ScoreChallengeInfoOuterClass {
           != other.getOichdaoampp()) return false;
       if (getMaxScore()
           != other.getMaxScore()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -210,7 +163,7 @@ public final class ScoreChallengeInfoOuterClass {
       hash = (53 * hash) + getOichdaoampp();
       hash = (37 * hash) + MAXSCORE_FIELD_NUMBER;
       hash = (53 * hash) + getMaxScore();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -327,26 +280,20 @@ public final class ScoreChallengeInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ScoreChallengeInfoOuterClass.ScoreChallengeInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         oichdaoampp_ = 0;
-
         maxScore_ = 0;
-
         return this;
       }
 
@@ -373,10 +320,19 @@ public final class ScoreChallengeInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ScoreChallengeInfoOuterClass.ScoreChallengeInfo buildPartial() {
         emu.grasscutter.net.proto.ScoreChallengeInfoOuterClass.ScoreChallengeInfo result = new emu.grasscutter.net.proto.ScoreChallengeInfoOuterClass.ScoreChallengeInfo(this);
-        result.oichdaoampp_ = oichdaoampp_;
-        result.maxScore_ = maxScore_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.ScoreChallengeInfoOuterClass.ScoreChallengeInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.oichdaoampp_ = oichdaoampp_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.maxScore_ = maxScore_;
+        }
       }
 
       @java.lang.Override
@@ -429,7 +385,7 @@ public final class ScoreChallengeInfoOuterClass {
         if (other.getMaxScore() != 0) {
           setMaxScore(other.getMaxScore());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -444,19 +400,43 @@ public final class ScoreChallengeInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.ScoreChallengeInfoOuterClass.ScoreChallengeInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 32: {
+                maxScore_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 32
+              case 104: {
+                oichdaoampp_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 104
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.ScoreChallengeInfoOuterClass.ScoreChallengeInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private int oichdaoampp_ ;
       /**
@@ -475,6 +455,7 @@ public final class ScoreChallengeInfoOuterClass {
       public Builder setOichdaoampp(int value) {
         
         oichdaoampp_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -483,7 +464,7 @@ public final class ScoreChallengeInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOichdaoampp() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         oichdaoampp_ = 0;
         onChanged();
         return this;
@@ -506,6 +487,7 @@ public final class ScoreChallengeInfoOuterClass {
       public Builder setMaxScore(int value) {
         
         maxScore_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -514,7 +496,7 @@ public final class ScoreChallengeInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMaxScore() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         maxScore_ = 0;
         onChanged();
         return this;
@@ -552,7 +534,18 @@ public final class ScoreChallengeInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ScoreChallengeInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

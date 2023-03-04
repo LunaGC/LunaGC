@@ -19,12 +19,16 @@ public final class FindHilichurlDayContentInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 startTime = 5;</code>
+     * <code>uint32 start_time = 2;</code>
      * @return The startTime.
      */
     int getStartTime();
   }
   /**
+   * <pre>
+   * Name: GFOMJJIEKBM
+   * </pre>
+   *
    * Protobuf type {@code FindHilichurlDayContentInfo}
    */
   public static final class FindHilichurlDayContentInfo extends
@@ -51,48 +55,6 @@ public final class FindHilichurlDayContentInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private FindHilichurlDayContentInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 40: {
-
-              startTime_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FindHilichurlDayContentInfoOuterClass.internal_static_FindHilichurlDayContentInfo_descriptor;
@@ -106,10 +68,10 @@ public final class FindHilichurlDayContentInfoOuterClass {
               emu.grasscutter.net.proto.FindHilichurlDayContentInfoOuterClass.FindHilichurlDayContentInfo.class, emu.grasscutter.net.proto.FindHilichurlDayContentInfoOuterClass.FindHilichurlDayContentInfo.Builder.class);
     }
 
-    public static final int STARTTIME_FIELD_NUMBER = 5;
-    private int startTime_;
+    public static final int START_TIME_FIELD_NUMBER = 2;
+    private int startTime_ = 0;
     /**
-     * <code>uint32 startTime = 5;</code>
+     * <code>uint32 start_time = 2;</code>
      * @return The startTime.
      */
     @java.lang.Override
@@ -132,9 +94,9 @@ public final class FindHilichurlDayContentInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (startTime_ != 0) {
-        output.writeUInt32(5, startTime_);
+        output.writeUInt32(2, startTime_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -145,9 +107,9 @@ public final class FindHilichurlDayContentInfoOuterClass {
       size = 0;
       if (startTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, startTime_);
+          .computeUInt32Size(2, startTime_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -164,7 +126,7 @@ public final class FindHilichurlDayContentInfoOuterClass {
 
       if (getStartTime()
           != other.getStartTime()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -175,9 +137,9 @@ public final class FindHilichurlDayContentInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + STARTTIME_FIELD_NUMBER;
+      hash = (37 * hash) + START_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getStartTime();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -273,6 +235,10 @@ public final class FindHilichurlDayContentInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: GFOMJJIEKBM
+     * </pre>
+     *
      * Protobuf type {@code FindHilichurlDayContentInfo}
      */
     public static final class Builder extends
@@ -294,24 +260,19 @@ public final class FindHilichurlDayContentInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.FindHilichurlDayContentInfoOuterClass.FindHilichurlDayContentInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         startTime_ = 0;
-
         return this;
       }
 
@@ -338,9 +299,16 @@ public final class FindHilichurlDayContentInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.FindHilichurlDayContentInfoOuterClass.FindHilichurlDayContentInfo buildPartial() {
         emu.grasscutter.net.proto.FindHilichurlDayContentInfoOuterClass.FindHilichurlDayContentInfo result = new emu.grasscutter.net.proto.FindHilichurlDayContentInfoOuterClass.FindHilichurlDayContentInfo(this);
-        result.startTime_ = startTime_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.FindHilichurlDayContentInfoOuterClass.FindHilichurlDayContentInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.startTime_ = startTime_;
+        }
       }
 
       @java.lang.Override
@@ -390,7 +358,7 @@ public final class FindHilichurlDayContentInfoOuterClass {
         if (other.getStartTime() != 0) {
           setStartTime(other.getStartTime());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -405,23 +373,42 @@ public final class FindHilichurlDayContentInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.FindHilichurlDayContentInfoOuterClass.FindHilichurlDayContentInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                startTime_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.FindHilichurlDayContentInfoOuterClass.FindHilichurlDayContentInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private int startTime_ ;
       /**
-       * <code>uint32 startTime = 5;</code>
+       * <code>uint32 start_time = 2;</code>
        * @return The startTime.
        */
       @java.lang.Override
@@ -429,22 +416,23 @@ public final class FindHilichurlDayContentInfoOuterClass {
         return startTime_;
       }
       /**
-       * <code>uint32 startTime = 5;</code>
+       * <code>uint32 start_time = 2;</code>
        * @param value The startTime to set.
        * @return This builder for chaining.
        */
       public Builder setStartTime(int value) {
         
         startTime_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 startTime = 5;</code>
+       * <code>uint32 start_time = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearStartTime() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         startTime_ = 0;
         onChanged();
         return this;
@@ -482,7 +470,18 @@ public final class FindHilichurlDayContentInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FindHilichurlDayContentInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -516,10 +515,10 @@ public final class FindHilichurlDayContentInfoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n!FindHilichurlDayContentInfo.proto\"0\n\033F" +
-      "indHilichurlDayContentInfo\022\021\n\tstartTime\030" +
-      "\005 \001(\rB\033\n\031emu.grasscutter.net.protob\006prot" +
-      "o3"
+      "\n!FindHilichurlDayContentInfo.proto\"1\n\033F" +
+      "indHilichurlDayContentInfo\022\022\n\nstart_time" +
+      "\030\002 \001(\rB\033\n\031emu.grasscutter.net.protob\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

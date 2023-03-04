@@ -19,30 +19,34 @@ public final class MistTrialActivityDetailInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+     * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
      */
     java.util.List<emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData> 
         getTrialLevelDataListList();
     /**
-     * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+     * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
      */
     emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData getTrialLevelDataList(int index);
     /**
-     * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+     * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
      */
     int getTrialLevelDataListCount();
     /**
-     * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+     * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelDataOrBuilder> 
         getTrialLevelDataListOrBuilderList();
     /**
-     * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+     * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
      */
     emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelDataOrBuilder getTrialLevelDataListOrBuilder(
         int index);
   }
   /**
+   * <pre>
+   * Name: JEGJGGKPPKA
+   * </pre>
+   *
    * Protobuf type {@code MistTrialActivityDetailInfo}
    */
   public static final class MistTrialActivityDetailInfo extends
@@ -70,56 +74,6 @@ public final class MistTrialActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private MistTrialActivityDetailInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                trialLevelDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              trialLevelDataList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          trialLevelDataList_ = java.util.Collections.unmodifiableList(trialLevelDataList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.MistTrialActivityDetailInfoOuterClass.internal_static_MistTrialActivityDetailInfo_descriptor;
@@ -133,17 +87,18 @@ public final class MistTrialActivityDetailInfoOuterClass {
               emu.grasscutter.net.proto.MistTrialActivityDetailInfoOuterClass.MistTrialActivityDetailInfo.class, emu.grasscutter.net.proto.MistTrialActivityDetailInfoOuterClass.MistTrialActivityDetailInfo.Builder.class);
     }
 
-    public static final int TRIAL_LEVEL_DATA_LIST_FIELD_NUMBER = 1;
+    public static final int TRIAL_LEVEL_DATA_LIST_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData> trialLevelDataList_;
     /**
-     * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+     * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData> getTrialLevelDataListList() {
       return trialLevelDataList_;
     }
     /**
-     * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+     * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelDataOrBuilder> 
@@ -151,21 +106,21 @@ public final class MistTrialActivityDetailInfoOuterClass {
       return trialLevelDataList_;
     }
     /**
-     * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+     * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
      */
     @java.lang.Override
     public int getTrialLevelDataListCount() {
       return trialLevelDataList_.size();
     }
     /**
-     * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+     * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData getTrialLevelDataList(int index) {
       return trialLevelDataList_.get(index);
     }
     /**
-     * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+     * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelDataOrBuilder getTrialLevelDataListOrBuilder(
@@ -188,9 +143,9 @@ public final class MistTrialActivityDetailInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < trialLevelDataList_.size(); i++) {
-        output.writeMessage(1, trialLevelDataList_.get(i));
+        output.writeMessage(8, trialLevelDataList_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -201,9 +156,9 @@ public final class MistTrialActivityDetailInfoOuterClass {
       size = 0;
       for (int i = 0; i < trialLevelDataList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, trialLevelDataList_.get(i));
+          .computeMessageSize(8, trialLevelDataList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -220,7 +175,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
 
       if (!getTrialLevelDataListList()
           .equals(other.getTrialLevelDataListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -235,7 +190,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
         hash = (37 * hash) + TRIAL_LEVEL_DATA_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getTrialLevelDataListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -331,6 +286,10 @@ public final class MistTrialActivityDetailInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: JEGJGGKPPKA
+     * </pre>
+     *
      * Protobuf type {@code MistTrialActivityDetailInfo}
      */
     public static final class Builder extends
@@ -352,29 +311,25 @@ public final class MistTrialActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MistTrialActivityDetailInfoOuterClass.MistTrialActivityDetailInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTrialLevelDataListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (trialLevelDataListBuilder_ == null) {
           trialLevelDataList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          trialLevelDataList_ = null;
           trialLevelDataListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -401,7 +356,13 @@ public final class MistTrialActivityDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.MistTrialActivityDetailInfoOuterClass.MistTrialActivityDetailInfo buildPartial() {
         emu.grasscutter.net.proto.MistTrialActivityDetailInfoOuterClass.MistTrialActivityDetailInfo result = new emu.grasscutter.net.proto.MistTrialActivityDetailInfoOuterClass.MistTrialActivityDetailInfo(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.MistTrialActivityDetailInfoOuterClass.MistTrialActivityDetailInfo result) {
         if (trialLevelDataListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             trialLevelDataList_ = java.util.Collections.unmodifiableList(trialLevelDataList_);
@@ -411,8 +372,10 @@ public final class MistTrialActivityDetailInfoOuterClass {
         } else {
           result.trialLevelDataList_ = trialLevelDataListBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.MistTrialActivityDetailInfoOuterClass.MistTrialActivityDetailInfo result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -485,7 +448,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -500,17 +463,43 @@ public final class MistTrialActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.MistTrialActivityDetailInfoOuterClass.MistTrialActivityDetailInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 66: {
+                emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData.parser(),
+                        extensionRegistry);
+                if (trialLevelDataListBuilder_ == null) {
+                  ensureTrialLevelDataListIsMutable();
+                  trialLevelDataList_.add(m);
+                } else {
+                  trialLevelDataListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.MistTrialActivityDetailInfoOuterClass.MistTrialActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -528,7 +517,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
           emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData, emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData.Builder, emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelDataOrBuilder> trialLevelDataListBuilder_;
 
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData> getTrialLevelDataListList() {
         if (trialLevelDataListBuilder_ == null) {
@@ -538,7 +527,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public int getTrialLevelDataListCount() {
         if (trialLevelDataListBuilder_ == null) {
@@ -548,7 +537,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData getTrialLevelDataList(int index) {
         if (trialLevelDataListBuilder_ == null) {
@@ -558,7 +547,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public Builder setTrialLevelDataList(
           int index, emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData value) {
@@ -575,7 +564,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public Builder setTrialLevelDataList(
           int index, emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData.Builder builderForValue) {
@@ -589,7 +578,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public Builder addTrialLevelDataList(emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData value) {
         if (trialLevelDataListBuilder_ == null) {
@@ -605,7 +594,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public Builder addTrialLevelDataList(
           int index, emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData value) {
@@ -622,7 +611,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public Builder addTrialLevelDataList(
           emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData.Builder builderForValue) {
@@ -636,7 +625,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public Builder addTrialLevelDataList(
           int index, emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData.Builder builderForValue) {
@@ -650,7 +639,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public Builder addAllTrialLevelDataList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData> values) {
@@ -665,7 +654,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public Builder clearTrialLevelDataList() {
         if (trialLevelDataListBuilder_ == null) {
@@ -678,7 +667,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public Builder removeTrialLevelDataList(int index) {
         if (trialLevelDataListBuilder_ == null) {
@@ -691,14 +680,14 @@ public final class MistTrialActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData.Builder getTrialLevelDataListBuilder(
           int index) {
         return getTrialLevelDataListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelDataOrBuilder getTrialLevelDataListOrBuilder(
           int index) {
@@ -708,7 +697,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelDataOrBuilder> 
            getTrialLevelDataListOrBuilderList() {
@@ -719,14 +708,14 @@ public final class MistTrialActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData.Builder addTrialLevelDataListBuilder() {
         return getTrialLevelDataListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData.getDefaultInstance());
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData.Builder addTrialLevelDataListBuilder(
           int index) {
@@ -734,7 +723,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
             index, emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData.getDefaultInstance());
       }
       /**
-       * <code>repeated .MistTrialLevelData trial_level_data_list = 1;</code>
+       * <code>repeated .MistTrialLevelData trial_level_data_list = 8;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.MistTrialLevelDataOuterClass.MistTrialLevelData.Builder> 
            getTrialLevelDataListBuilderList() {
@@ -787,7 +776,18 @@ public final class MistTrialActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MistTrialActivityDetailInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -823,7 +823,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
     java.lang.String[] descriptorData = {
       "\n!MistTrialActivityDetailInfo.proto\032\030Mis" +
       "tTrialLevelData.proto\"Q\n\033MistTrialActivi" +
-      "tyDetailInfo\0222\n\025trial_level_data_list\030\001 " +
+      "tyDetailInfo\0222\n\025trial_level_data_list\030\010 " +
       "\003(\0132\023.MistTrialLevelDataB\033\n\031emu.grasscut" +
       "ter.net.protob\006proto3"
     };

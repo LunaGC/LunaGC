@@ -82,66 +82,6 @@ public final class DMMAGIEOPDGOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private DMMAGIEOPDG(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                levelInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.DKOBFHFONLMOuterClass.DKOBFHFONLM>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              levelInfoList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.DKOBFHFONLMOuterClass.DKOBFHFONLM.parser(), extensionRegistry));
-              break;
-            }
-            case 40: {
-
-              stageId_ = input.readUInt32();
-              break;
-            }
-            case 88: {
-
-              isOpen_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          levelInfoList_ = java.util.Collections.unmodifiableList(levelInfoList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.DMMAGIEOPDGOuterClass.internal_static_DMMAGIEOPDG_descriptor;
@@ -156,7 +96,7 @@ public final class DMMAGIEOPDGOuterClass {
     }
 
     public static final int STAGEID_FIELD_NUMBER = 5;
-    private int stageId_;
+    private int stageId_ = 0;
     /**
      * <code>uint32 stageId = 5;</code>
      * @return The stageId.
@@ -167,6 +107,7 @@ public final class DMMAGIEOPDGOuterClass {
     }
 
     public static final int LEVELINFOLIST_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.DKOBFHFONLMOuterClass.DKOBFHFONLM> levelInfoList_;
     /**
      * <code>repeated .DKOBFHFONLM levelInfoList = 4;</code>
@@ -207,7 +148,7 @@ public final class DMMAGIEOPDGOuterClass {
     }
 
     public static final int ISOPEN_FIELD_NUMBER = 11;
-    private boolean isOpen_;
+    private boolean isOpen_ = false;
     /**
      * <code>bool isOpen = 11;</code>
      * @return The isOpen.
@@ -240,7 +181,7 @@ public final class DMMAGIEOPDGOuterClass {
       if (isOpen_ != false) {
         output.writeBool(11, isOpen_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -261,7 +202,7 @@ public final class DMMAGIEOPDGOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(11, isOpen_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -282,7 +223,7 @@ public final class DMMAGIEOPDGOuterClass {
           .equals(other.getLevelInfoListList())) return false;
       if (getIsOpen()
           != other.getIsOpen()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -302,7 +243,7 @@ public final class DMMAGIEOPDGOuterClass {
       hash = (37 * hash) + ISOPEN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsOpen());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -419,33 +360,27 @@ public final class DMMAGIEOPDGOuterClass {
 
       // Construct using emu.grasscutter.net.proto.DMMAGIEOPDGOuterClass.DMMAGIEOPDG.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLevelInfoListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         stageId_ = 0;
-
         if (levelInfoListBuilder_ == null) {
           levelInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          levelInfoList_ = null;
           levelInfoListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         isOpen_ = false;
-
         return this;
       }
 
@@ -472,20 +407,32 @@ public final class DMMAGIEOPDGOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.DMMAGIEOPDGOuterClass.DMMAGIEOPDG buildPartial() {
         emu.grasscutter.net.proto.DMMAGIEOPDGOuterClass.DMMAGIEOPDG result = new emu.grasscutter.net.proto.DMMAGIEOPDGOuterClass.DMMAGIEOPDG(this);
-        int from_bitField0_ = bitField0_;
-        result.stageId_ = stageId_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.DMMAGIEOPDGOuterClass.DMMAGIEOPDG result) {
         if (levelInfoListBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             levelInfoList_ = java.util.Collections.unmodifiableList(levelInfoList_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.levelInfoList_ = levelInfoList_;
         } else {
           result.levelInfoList_ = levelInfoListBuilder_.build();
         }
-        result.isOpen_ = isOpen_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.DMMAGIEOPDGOuterClass.DMMAGIEOPDG result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stageId_ = stageId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.isOpen_ = isOpen_;
+        }
       }
 
       @java.lang.Override
@@ -539,7 +486,7 @@ public final class DMMAGIEOPDGOuterClass {
           if (!other.levelInfoList_.isEmpty()) {
             if (levelInfoList_.isEmpty()) {
               levelInfoList_ = other.levelInfoList_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureLevelInfoListIsMutable();
               levelInfoList_.addAll(other.levelInfoList_);
@@ -552,7 +499,7 @@ public final class DMMAGIEOPDGOuterClass {
               levelInfoListBuilder_.dispose();
               levelInfoListBuilder_ = null;
               levelInfoList_ = other.levelInfoList_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               levelInfoListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLevelInfoListFieldBuilder() : null;
@@ -564,7 +511,7 @@ public final class DMMAGIEOPDGOuterClass {
         if (other.getIsOpen() != false) {
           setIsOpen(other.getIsOpen());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -579,17 +526,53 @@ public final class DMMAGIEOPDGOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.DMMAGIEOPDGOuterClass.DMMAGIEOPDG parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 34: {
+                emu.grasscutter.net.proto.DKOBFHFONLMOuterClass.DKOBFHFONLM m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.DKOBFHFONLMOuterClass.DKOBFHFONLM.parser(),
+                        extensionRegistry);
+                if (levelInfoListBuilder_ == null) {
+                  ensureLevelInfoListIsMutable();
+                  levelInfoList_.add(m);
+                } else {
+                  levelInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 40: {
+                stageId_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 40
+              case 88: {
+                isOpen_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 88
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.DMMAGIEOPDGOuterClass.DMMAGIEOPDG) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -611,6 +594,7 @@ public final class DMMAGIEOPDGOuterClass {
       public Builder setStageId(int value) {
         
         stageId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -619,7 +603,7 @@ public final class DMMAGIEOPDGOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStageId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         stageId_ = 0;
         onChanged();
         return this;
@@ -628,9 +612,9 @@ public final class DMMAGIEOPDGOuterClass {
       private java.util.List<emu.grasscutter.net.proto.DKOBFHFONLMOuterClass.DKOBFHFONLM> levelInfoList_ =
         java.util.Collections.emptyList();
       private void ensureLevelInfoListIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           levelInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.DKOBFHFONLMOuterClass.DKOBFHFONLM>(levelInfoList_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -780,7 +764,7 @@ public final class DMMAGIEOPDGOuterClass {
       public Builder clearLevelInfoList() {
         if (levelInfoListBuilder_ == null) {
           levelInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           levelInfoListBuilder_.clear();
@@ -857,7 +841,7 @@ public final class DMMAGIEOPDGOuterClass {
           levelInfoListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.DKOBFHFONLMOuterClass.DKOBFHFONLM, emu.grasscutter.net.proto.DKOBFHFONLMOuterClass.DKOBFHFONLM.Builder, emu.grasscutter.net.proto.DKOBFHFONLMOuterClass.DKOBFHFONLMOrBuilder>(
                   levelInfoList_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           levelInfoList_ = null;
@@ -882,6 +866,7 @@ public final class DMMAGIEOPDGOuterClass {
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -890,7 +875,7 @@ public final class DMMAGIEOPDGOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         isOpen_ = false;
         onChanged();
         return this;
@@ -928,7 +913,18 @@ public final class DMMAGIEOPDGOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DMMAGIEOPDG(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

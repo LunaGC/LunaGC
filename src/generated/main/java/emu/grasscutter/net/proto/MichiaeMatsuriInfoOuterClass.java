@@ -144,109 +144,6 @@ public final class MichiaeMatsuriInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private MichiaeMatsuriInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 32: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                unlockedCrystalSkillList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              unlockedCrystalSkillList_.addInt(input.readUInt32());
-              break;
-            }
-            case 34: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                unlockedCrystalSkillList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                unlockedCrystalSkillList_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 40: {
-
-              gainCrystalExp_ = input.readUInt32();
-              break;
-            }
-            case 58: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                stageList_ = new java.util.ArrayList<emu.grasscutter.net.proto.MichiaeMatsuriStageOuterClass.MichiaeMatsuriStage>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              stageList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.MichiaeMatsuriStageOuterClass.MichiaeMatsuriStage.parser(), extensionRegistry));
-              break;
-            }
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                challengePosList_ = new java.util.ArrayList<emu.grasscutter.net.proto.MichiaeMatsuriChallengePositionInfoOuterClass.MichiaeMatsuriChallengePositionInfo>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              challengePosList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.MichiaeMatsuriChallengePositionInfoOuterClass.MichiaeMatsuriChallengePositionInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 90: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                chestPosList_ = new java.util.ArrayList<emu.grasscutter.net.proto.MichiaeMatsuriChestPositionInfoOuterClass.MichiaeMatsuriChestPositionInfo>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              chestPosList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.MichiaeMatsuriChestPositionInfoOuterClass.MichiaeMatsuriChestPositionInfo.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          unlockedCrystalSkillList_.makeImmutable(); // C
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          stageList_ = java.util.Collections.unmodifiableList(stageList_);
-        }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          challengePosList_ = java.util.Collections.unmodifiableList(challengePosList_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          chestPosList_ = java.util.Collections.unmodifiableList(chestPosList_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.MichiaeMatsuriInfoOuterClass.internal_static_MichiaeMatsuriInfo_descriptor;
@@ -261,6 +158,7 @@ public final class MichiaeMatsuriInfoOuterClass {
     }
 
     public static final int CHALLENGEPOSLIST_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.MichiaeMatsuriChallengePositionInfoOuterClass.MichiaeMatsuriChallengePositionInfo> challengePosList_;
     /**
      * <code>repeated .MichiaeMatsuriChallengePositionInfo challengePosList = 8;</code>
@@ -301,6 +199,7 @@ public final class MichiaeMatsuriInfoOuterClass {
     }
 
     public static final int UNLOCKEDCRYSTALSKILLLIST_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList unlockedCrystalSkillList_;
     /**
      * <code>repeated uint32 unlockedCrystalSkillList = 4;</code>
@@ -329,7 +228,7 @@ public final class MichiaeMatsuriInfoOuterClass {
     private int unlockedCrystalSkillListMemoizedSerializedSize = -1;
 
     public static final int GAINCRYSTALEXP_FIELD_NUMBER = 5;
-    private int gainCrystalExp_;
+    private int gainCrystalExp_ = 0;
     /**
      * <code>uint32 gainCrystalExp = 5;</code>
      * @return The gainCrystalExp.
@@ -340,6 +239,7 @@ public final class MichiaeMatsuriInfoOuterClass {
     }
 
     public static final int CHESTPOSLIST_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.MichiaeMatsuriChestPositionInfoOuterClass.MichiaeMatsuriChestPositionInfo> chestPosList_;
     /**
      * <code>repeated .MichiaeMatsuriChestPositionInfo chestPosList = 11;</code>
@@ -380,6 +280,7 @@ public final class MichiaeMatsuriInfoOuterClass {
     }
 
     public static final int STAGELIST_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.MichiaeMatsuriStageOuterClass.MichiaeMatsuriStage> stageList_;
     /**
      * <code>repeated .MichiaeMatsuriStage stageList = 7;</code>
@@ -453,7 +354,7 @@ public final class MichiaeMatsuriInfoOuterClass {
       for (int i = 0; i < chestPosList_.size(); i++) {
         output.writeMessage(11, chestPosList_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -492,7 +393,7 @@ public final class MichiaeMatsuriInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, chestPosList_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -517,7 +418,7 @@ public final class MichiaeMatsuriInfoOuterClass {
           .equals(other.getChestPosListList())) return false;
       if (!getStageListList()
           .equals(other.getStageListList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -546,7 +447,7 @@ public final class MichiaeMatsuriInfoOuterClass {
         hash = (37 * hash) + STAGELIST_FIELD_NUMBER;
         hash = (53 * hash) + getStageListList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -663,47 +564,41 @@ public final class MichiaeMatsuriInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MichiaeMatsuriInfoOuterClass.MichiaeMatsuriInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getChallengePosListFieldBuilder();
-          getChestPosListFieldBuilder();
-          getStageListFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (challengePosListBuilder_ == null) {
           challengePosList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          challengePosList_ = null;
           challengePosListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         unlockedCrystalSkillList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
         gainCrystalExp_ = 0;
-
         if (chestPosListBuilder_ == null) {
           chestPosList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
+          chestPosList_ = null;
           chestPosListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (stageListBuilder_ == null) {
           stageList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
+          stageList_ = null;
           stageListBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -730,7 +625,13 @@ public final class MichiaeMatsuriInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.MichiaeMatsuriInfoOuterClass.MichiaeMatsuriInfo buildPartial() {
         emu.grasscutter.net.proto.MichiaeMatsuriInfoOuterClass.MichiaeMatsuriInfo result = new emu.grasscutter.net.proto.MichiaeMatsuriInfoOuterClass.MichiaeMatsuriInfo(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.MichiaeMatsuriInfoOuterClass.MichiaeMatsuriInfo result) {
         if (challengePosListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             challengePosList_ = java.util.Collections.unmodifiableList(challengePosList_);
@@ -745,27 +646,31 @@ public final class MichiaeMatsuriInfoOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.unlockedCrystalSkillList_ = unlockedCrystalSkillList_;
-        result.gainCrystalExp_ = gainCrystalExp_;
         if (chestPosListBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             chestPosList_ = java.util.Collections.unmodifiableList(chestPosList_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.chestPosList_ = chestPosList_;
         } else {
           result.chestPosList_ = chestPosListBuilder_.build();
         }
         if (stageListBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             stageList_ = java.util.Collections.unmodifiableList(stageList_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.stageList_ = stageList_;
         } else {
           result.stageList_ = stageListBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.MichiaeMatsuriInfoOuterClass.MichiaeMatsuriInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.gainCrystalExp_ = gainCrystalExp_;
+        }
       }
 
       @java.lang.Override
@@ -855,7 +760,7 @@ public final class MichiaeMatsuriInfoOuterClass {
           if (!other.chestPosList_.isEmpty()) {
             if (chestPosList_.isEmpty()) {
               chestPosList_ = other.chestPosList_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureChestPosListIsMutable();
               chestPosList_.addAll(other.chestPosList_);
@@ -868,7 +773,7 @@ public final class MichiaeMatsuriInfoOuterClass {
               chestPosListBuilder_.dispose();
               chestPosListBuilder_ = null;
               chestPosList_ = other.chestPosList_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               chestPosListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getChestPosListFieldBuilder() : null;
@@ -881,7 +786,7 @@ public final class MichiaeMatsuriInfoOuterClass {
           if (!other.stageList_.isEmpty()) {
             if (stageList_.isEmpty()) {
               stageList_ = other.stageList_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureStageListIsMutable();
               stageList_.addAll(other.stageList_);
@@ -894,7 +799,7 @@ public final class MichiaeMatsuriInfoOuterClass {
               stageListBuilder_.dispose();
               stageListBuilder_ = null;
               stageList_ = other.stageList_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
               stageListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getStageListFieldBuilder() : null;
@@ -903,7 +808,7 @@ public final class MichiaeMatsuriInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -918,17 +823,90 @@ public final class MichiaeMatsuriInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.MichiaeMatsuriInfoOuterClass.MichiaeMatsuriInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 32: {
+                int v = input.readUInt32();
+                ensureUnlockedCrystalSkillListIsMutable();
+                unlockedCrystalSkillList_.addInt(v);
+                break;
+              } // case 32
+              case 34: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureUnlockedCrystalSkillListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  unlockedCrystalSkillList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 34
+              case 40: {
+                gainCrystalExp_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 40
+              case 58: {
+                emu.grasscutter.net.proto.MichiaeMatsuriStageOuterClass.MichiaeMatsuriStage m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.MichiaeMatsuriStageOuterClass.MichiaeMatsuriStage.parser(),
+                        extensionRegistry);
+                if (stageListBuilder_ == null) {
+                  ensureStageListIsMutable();
+                  stageList_.add(m);
+                } else {
+                  stageListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                emu.grasscutter.net.proto.MichiaeMatsuriChallengePositionInfoOuterClass.MichiaeMatsuriChallengePositionInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.MichiaeMatsuriChallengePositionInfoOuterClass.MichiaeMatsuriChallengePositionInfo.parser(),
+                        extensionRegistry);
+                if (challengePosListBuilder_ == null) {
+                  ensureChallengePosListIsMutable();
+                  challengePosList_.add(m);
+                } else {
+                  challengePosListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 90: {
+                emu.grasscutter.net.proto.MichiaeMatsuriChestPositionInfoOuterClass.MichiaeMatsuriChestPositionInfo m =
+                    input.readMessage(
+                        emu.grasscutter.net.proto.MichiaeMatsuriChestPositionInfoOuterClass.MichiaeMatsuriChestPositionInfo.parser(),
+                        extensionRegistry);
+                if (chestPosListBuilder_ == null) {
+                  ensureChestPosListIsMutable();
+                  chestPosList_.add(m);
+                } else {
+                  chestPosListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 90
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.MichiaeMatsuriInfoOuterClass.MichiaeMatsuriInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1178,7 +1156,7 @@ public final class MichiaeMatsuriInfoOuterClass {
         if (!((bitField0_ & 0x00000002) != 0)) {
           unlockedCrystalSkillList_ = mutableCopy(unlockedCrystalSkillList_);
           bitField0_ |= 0x00000002;
-         }
+        }
       }
       /**
        * <code>repeated uint32 unlockedCrystalSkillList = 4;</code>
@@ -1212,6 +1190,7 @@ public final class MichiaeMatsuriInfoOuterClass {
        */
       public Builder setUnlockedCrystalSkillList(
           int index, int value) {
+        
         ensureUnlockedCrystalSkillListIsMutable();
         unlockedCrystalSkillList_.setInt(index, value);
         onChanged();
@@ -1223,6 +1202,7 @@ public final class MichiaeMatsuriInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addUnlockedCrystalSkillList(int value) {
+        
         ensureUnlockedCrystalSkillListIsMutable();
         unlockedCrystalSkillList_.addInt(value);
         onChanged();
@@ -1269,6 +1249,7 @@ public final class MichiaeMatsuriInfoOuterClass {
       public Builder setGainCrystalExp(int value) {
         
         gainCrystalExp_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1277,7 +1258,7 @@ public final class MichiaeMatsuriInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearGainCrystalExp() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         gainCrystalExp_ = 0;
         onChanged();
         return this;
@@ -1286,9 +1267,9 @@ public final class MichiaeMatsuriInfoOuterClass {
       private java.util.List<emu.grasscutter.net.proto.MichiaeMatsuriChestPositionInfoOuterClass.MichiaeMatsuriChestPositionInfo> chestPosList_ =
         java.util.Collections.emptyList();
       private void ensureChestPosListIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           chestPosList_ = new java.util.ArrayList<emu.grasscutter.net.proto.MichiaeMatsuriChestPositionInfoOuterClass.MichiaeMatsuriChestPositionInfo>(chestPosList_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -1438,7 +1419,7 @@ public final class MichiaeMatsuriInfoOuterClass {
       public Builder clearChestPosList() {
         if (chestPosListBuilder_ == null) {
           chestPosList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           chestPosListBuilder_.clear();
@@ -1515,7 +1496,7 @@ public final class MichiaeMatsuriInfoOuterClass {
           chestPosListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.MichiaeMatsuriChestPositionInfoOuterClass.MichiaeMatsuriChestPositionInfo, emu.grasscutter.net.proto.MichiaeMatsuriChestPositionInfoOuterClass.MichiaeMatsuriChestPositionInfo.Builder, emu.grasscutter.net.proto.MichiaeMatsuriChestPositionInfoOuterClass.MichiaeMatsuriChestPositionInfoOrBuilder>(
                   chestPosList_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           chestPosList_ = null;
@@ -1526,9 +1507,9 @@ public final class MichiaeMatsuriInfoOuterClass {
       private java.util.List<emu.grasscutter.net.proto.MichiaeMatsuriStageOuterClass.MichiaeMatsuriStage> stageList_ =
         java.util.Collections.emptyList();
       private void ensureStageListIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           stageList_ = new java.util.ArrayList<emu.grasscutter.net.proto.MichiaeMatsuriStageOuterClass.MichiaeMatsuriStage>(stageList_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -1678,7 +1659,7 @@ public final class MichiaeMatsuriInfoOuterClass {
       public Builder clearStageList() {
         if (stageListBuilder_ == null) {
           stageList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           stageListBuilder_.clear();
@@ -1755,7 +1736,7 @@ public final class MichiaeMatsuriInfoOuterClass {
           stageListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.MichiaeMatsuriStageOuterClass.MichiaeMatsuriStage, emu.grasscutter.net.proto.MichiaeMatsuriStageOuterClass.MichiaeMatsuriStage.Builder, emu.grasscutter.net.proto.MichiaeMatsuriStageOuterClass.MichiaeMatsuriStageOrBuilder>(
                   stageList_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           stageList_ = null;
@@ -1795,7 +1776,18 @@ public final class MichiaeMatsuriInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MichiaeMatsuriInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

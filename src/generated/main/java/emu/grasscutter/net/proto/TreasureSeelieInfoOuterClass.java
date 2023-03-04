@@ -57,53 +57,6 @@ public final class TreasureSeelieInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TreasureSeelieInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 16: {
-
-              goal_ = input.readUInt32();
-              break;
-            }
-            case 88: {
-
-              progress_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TreasureSeelieInfoOuterClass.internal_static_TreasureSeelieInfo_descriptor;
@@ -118,7 +71,7 @@ public final class TreasureSeelieInfoOuterClass {
     }
 
     public static final int PROGRESS_FIELD_NUMBER = 11;
-    private int progress_;
+    private int progress_ = 0;
     /**
      * <code>uint32 progress = 11;</code>
      * @return The progress.
@@ -129,7 +82,7 @@ public final class TreasureSeelieInfoOuterClass {
     }
 
     public static final int GOAL_FIELD_NUMBER = 2;
-    private int goal_;
+    private int goal_ = 0;
     /**
      * <code>uint32 goal = 2;</code>
      * @return The goal.
@@ -159,7 +112,7 @@ public final class TreasureSeelieInfoOuterClass {
       if (progress_ != 0) {
         output.writeUInt32(11, progress_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -176,7 +129,7 @@ public final class TreasureSeelieInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(11, progress_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -195,7 +148,7 @@ public final class TreasureSeelieInfoOuterClass {
           != other.getProgress()) return false;
       if (getGoal()
           != other.getGoal()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -210,7 +163,7 @@ public final class TreasureSeelieInfoOuterClass {
       hash = (53 * hash) + getProgress();
       hash = (37 * hash) + GOAL_FIELD_NUMBER;
       hash = (53 * hash) + getGoal();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -327,26 +280,20 @@ public final class TreasureSeelieInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TreasureSeelieInfoOuterClass.TreasureSeelieInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         progress_ = 0;
-
         goal_ = 0;
-
         return this;
       }
 
@@ -373,10 +320,19 @@ public final class TreasureSeelieInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.TreasureSeelieInfoOuterClass.TreasureSeelieInfo buildPartial() {
         emu.grasscutter.net.proto.TreasureSeelieInfoOuterClass.TreasureSeelieInfo result = new emu.grasscutter.net.proto.TreasureSeelieInfoOuterClass.TreasureSeelieInfo(this);
-        result.progress_ = progress_;
-        result.goal_ = goal_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.TreasureSeelieInfoOuterClass.TreasureSeelieInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.progress_ = progress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.goal_ = goal_;
+        }
       }
 
       @java.lang.Override
@@ -429,7 +385,7 @@ public final class TreasureSeelieInfoOuterClass {
         if (other.getGoal() != 0) {
           setGoal(other.getGoal());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -444,19 +400,43 @@ public final class TreasureSeelieInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.TreasureSeelieInfoOuterClass.TreasureSeelieInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                goal_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 88: {
+                progress_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 88
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.TreasureSeelieInfoOuterClass.TreasureSeelieInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private int progress_ ;
       /**
@@ -475,6 +455,7 @@ public final class TreasureSeelieInfoOuterClass {
       public Builder setProgress(int value) {
         
         progress_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -483,7 +464,7 @@ public final class TreasureSeelieInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearProgress() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         progress_ = 0;
         onChanged();
         return this;
@@ -506,6 +487,7 @@ public final class TreasureSeelieInfoOuterClass {
       public Builder setGoal(int value) {
         
         goal_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -514,7 +496,7 @@ public final class TreasureSeelieInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearGoal() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         goal_ = 0;
         onChanged();
         return this;
@@ -552,7 +534,18 @@ public final class TreasureSeelieInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TreasureSeelieInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

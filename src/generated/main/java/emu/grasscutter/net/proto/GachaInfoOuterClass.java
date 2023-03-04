@@ -257,6 +257,10 @@ public final class GachaInfoOuterClass {
     int getEndTime();
   }
   /**
+   * <pre>
+   * Name: LIBILADMDKG (3.3)
+   * </pre>
+   *
    * Protobuf type {@code GachaInfo}
    */
   public static final class GachaInfo extends
@@ -1524,6 +1528,10 @@ public final class GachaInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: LIBILADMDKG (3.3)
+     * </pre>
+     *
      * Protobuf type {@code GachaInfo}
      */
     public static final class Builder extends

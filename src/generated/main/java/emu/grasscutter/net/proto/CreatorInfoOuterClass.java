@@ -78,67 +78,6 @@ public final class CreatorInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CreatorInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 40: {
-              int rawValue = input.readEnum();
-
-              opType_ = rawValue;
-              break;
-            }
-            case 72: {
-
-              entityId_ = input.readUInt32();
-              break;
-            }
-            case 98: {
-              emu.grasscutter.net.proto.LocationInfoOuterClass.LocationInfo.Builder subBuilder = null;
-              if (locationInfo_ != null) {
-                subBuilder = locationInfo_.toBuilder();
-              }
-              locationInfo_ = input.readMessage(emu.grasscutter.net.proto.LocationInfoOuterClass.LocationInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(locationInfo_);
-                locationInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CreatorInfoOuterClass.internal_static_CreatorInfo_descriptor;
@@ -153,7 +92,7 @@ public final class CreatorInfoOuterClass {
     }
 
     public static final int ENTITYID_FIELD_NUMBER = 9;
-    private int entityId_;
+    private int entityId_ = 0;
     /**
      * <code>uint32 entityId = 9;</code>
      * @return The entityId.
@@ -186,11 +125,11 @@ public final class CreatorInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.LocationInfoOuterClass.LocationInfoOrBuilder getLocationInfoOrBuilder() {
-      return getLocationInfo();
+      return locationInfo_ == null ? emu.grasscutter.net.proto.LocationInfoOuterClass.LocationInfo.getDefaultInstance() : locationInfo_;
     }
 
     public static final int OPTYPE_FIELD_NUMBER = 5;
-    private int opType_;
+    private int opType_ = 0;
     /**
      * <code>.WidgetCreatorOpType opType = 5;</code>
      * @return The enum numeric value on the wire for opType.
@@ -203,8 +142,7 @@ public final class CreatorInfoOuterClass {
      * @return The opType.
      */
     @java.lang.Override public emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType getOpType() {
-      @SuppressWarnings("deprecation")
-      emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType result = emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType.valueOf(opType_);
+      emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType result = emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType.forNumber(opType_);
       return result == null ? emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType.UNRECOGNIZED : result;
     }
 
@@ -222,7 +160,7 @@ public final class CreatorInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (opType_ != emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType.WIDGET_CREATOR_OP_TYPE_NONE.getNumber()) {
+      if (opType_ != emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType.WIDGET_CREATOR_TYPE_NONE.getNumber()) {
         output.writeEnum(5, opType_);
       }
       if (entityId_ != 0) {
@@ -231,7 +169,7 @@ public final class CreatorInfoOuterClass {
       if (locationInfo_ != null) {
         output.writeMessage(12, getLocationInfo());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -240,7 +178,7 @@ public final class CreatorInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (opType_ != emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType.WIDGET_CREATOR_OP_TYPE_NONE.getNumber()) {
+      if (opType_ != emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType.WIDGET_CREATOR_TYPE_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, opType_);
       }
@@ -252,7 +190,7 @@ public final class CreatorInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getLocationInfo());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -275,7 +213,7 @@ public final class CreatorInfoOuterClass {
             .equals(other.getLocationInfo())) return false;
       }
       if (opType_ != other.opType_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -294,7 +232,7 @@ public final class CreatorInfoOuterClass {
       }
       hash = (37 * hash) + OPTYPE_FIELD_NUMBER;
       hash = (53 * hash) + opType_;
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -411,32 +349,25 @@ public final class CreatorInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CreatorInfoOuterClass.CreatorInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         entityId_ = 0;
-
-        if (locationInfoBuilder_ == null) {
-          locationInfo_ = null;
-        } else {
-          locationInfo_ = null;
+        locationInfo_ = null;
+        if (locationInfoBuilder_ != null) {
+          locationInfoBuilder_.dispose();
           locationInfoBuilder_ = null;
         }
         opType_ = 0;
-
         return this;
       }
 
@@ -463,15 +394,24 @@ public final class CreatorInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.CreatorInfoOuterClass.CreatorInfo buildPartial() {
         emu.grasscutter.net.proto.CreatorInfoOuterClass.CreatorInfo result = new emu.grasscutter.net.proto.CreatorInfoOuterClass.CreatorInfo(this);
-        result.entityId_ = entityId_;
-        if (locationInfoBuilder_ == null) {
-          result.locationInfo_ = locationInfo_;
-        } else {
-          result.locationInfo_ = locationInfoBuilder_.build();
-        }
-        result.opType_ = opType_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.CreatorInfoOuterClass.CreatorInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.entityId_ = entityId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.locationInfo_ = locationInfoBuilder_ == null
+              ? locationInfo_
+              : locationInfoBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.opType_ = opType_;
+        }
       }
 
       @java.lang.Override
@@ -527,7 +467,7 @@ public final class CreatorInfoOuterClass {
         if (other.opType_ != 0) {
           setOpTypeValue(other.getOpTypeValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -542,19 +482,50 @@ public final class CreatorInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.CreatorInfoOuterClass.CreatorInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 40: {
+                opType_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 40
+              case 72: {
+                entityId_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 72
+              case 98: {
+                input.readMessage(
+                    getLocationInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.CreatorInfoOuterClass.CreatorInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private int entityId_ ;
       /**
@@ -573,6 +544,7 @@ public final class CreatorInfoOuterClass {
       public Builder setEntityId(int value) {
         
         entityId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -581,7 +553,7 @@ public final class CreatorInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearEntityId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         entityId_ = 0;
         onChanged();
         return this;
@@ -595,7 +567,7 @@ public final class CreatorInfoOuterClass {
        * @return Whether the locationInfo field is set.
        */
       public boolean hasLocationInfo() {
-        return locationInfoBuilder_ != null || locationInfo_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.LocationInfo locationInfo = 12;</code>
@@ -617,11 +589,11 @@ public final class CreatorInfoOuterClass {
             throw new NullPointerException();
           }
           locationInfo_ = value;
-          onChanged();
         } else {
           locationInfoBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -631,11 +603,11 @@ public final class CreatorInfoOuterClass {
           emu.grasscutter.net.proto.LocationInfoOuterClass.LocationInfo.Builder builderForValue) {
         if (locationInfoBuilder_ == null) {
           locationInfo_ = builderForValue.build();
-          onChanged();
         } else {
           locationInfoBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -643,38 +615,38 @@ public final class CreatorInfoOuterClass {
        */
       public Builder mergeLocationInfo(emu.grasscutter.net.proto.LocationInfoOuterClass.LocationInfo value) {
         if (locationInfoBuilder_ == null) {
-          if (locationInfo_ != null) {
-            locationInfo_ =
-              emu.grasscutter.net.proto.LocationInfoOuterClass.LocationInfo.newBuilder(locationInfo_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            locationInfo_ != null &&
+            locationInfo_ != emu.grasscutter.net.proto.LocationInfoOuterClass.LocationInfo.getDefaultInstance()) {
+            getLocationInfoBuilder().mergeFrom(value);
           } else {
             locationInfo_ = value;
           }
-          onChanged();
         } else {
           locationInfoBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.LocationInfo locationInfo = 12;</code>
        */
       public Builder clearLocationInfo() {
-        if (locationInfoBuilder_ == null) {
-          locationInfo_ = null;
-          onChanged();
-        } else {
-          locationInfo_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        locationInfo_ = null;
+        if (locationInfoBuilder_ != null) {
+          locationInfoBuilder_.dispose();
           locationInfoBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.LocationInfo locationInfo = 12;</code>
        */
       public emu.grasscutter.net.proto.LocationInfoOuterClass.LocationInfo.Builder getLocationInfoBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getLocationInfoFieldBuilder().getBuilder();
       }
@@ -720,8 +692,8 @@ public final class CreatorInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder setOpTypeValue(int value) {
-        
         opType_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -731,8 +703,7 @@ public final class CreatorInfoOuterClass {
        */
       @java.lang.Override
       public emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType getOpType() {
-        @SuppressWarnings("deprecation")
-        emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType result = emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType.valueOf(opType_);
+        emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType result = emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType.forNumber(opType_);
         return result == null ? emu.grasscutter.net.proto.WidgetCreatorOpTypeOuterClass.WidgetCreatorOpType.UNRECOGNIZED : result;
       }
       /**
@@ -744,7 +715,7 @@ public final class CreatorInfoOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000004;
         opType_ = value.getNumber();
         onChanged();
         return this;
@@ -754,7 +725,7 @@ public final class CreatorInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOpType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         opType_ = 0;
         onChanged();
         return this;
@@ -792,7 +763,18 @@ public final class CreatorInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CreatorInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

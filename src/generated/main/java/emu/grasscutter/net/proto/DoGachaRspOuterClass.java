@@ -151,6 +151,11 @@ public final class DoGachaRspOuterClass {
     int getCostItemId();
   }
   /**
+   * <pre>
+   * Name: LEFDKOLFJKL (3.4)
+   * CmdId: 1564
+   * </pre>
+   *
    * Protobuf type {@code DoGachaRsp}
    */
   public static final class DoGachaRsp extends
@@ -329,137 +334,6 @@ public final class DoGachaRspOuterClass {
       return emu.grasscutter.net.proto.DoGachaRspOuterClass.internal_static_DoGachaRsp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               emu.grasscutter.net.proto.DoGachaRspOuterClass.DoGachaRsp.class, emu.grasscutter.net.proto.DoGachaRspOuterClass.DoGachaRsp.Builder.class);
-    }
-
-    /**
-     * Protobuf enum {@code DoGachaRsp.HBDCDLMKCPD}
-     */
-    public enum HBDCDLMKCPD
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>NONE = 0;</code>
-       */
-      NONE(0, 0),
-      /**
-       * <code>PEPPOHPHJOJ = 1598;</code>
-       */
-      PEPPOHPHJOJ(1, 1598),
-      /**
-       * <code>NNBKOLMPOEA = 1;</code>
-       */
-      NNBKOLMPOEA(3, 1),
-      UNRECOGNIZED(-1, -1),
-      ;
-
-      /**
-       * <code>DCDNILFDFLB = 0;</code>
-       */
-      public static final HBDCDLMKCPD DCDNILFDFLB = NONE;
-      /**
-       * <code>NONE = 0;</code>
-       */
-      public static final int NONE_VALUE = 0;
-      /**
-       * <code>PEPPOHPHJOJ = 1598;</code>
-       */
-      public static final int PEPPOHPHJOJ_VALUE = 1598;
-      /**
-       * <code>DCDNILFDFLB = 0;</code>
-       */
-      public static final int DCDNILFDFLB_VALUE = 0;
-      /**
-       * <code>NNBKOLMPOEA = 1;</code>
-       */
-      public static final int NNBKOLMPOEA_VALUE = 1;
-
-
-      public final int getNumber() {
-        if (index == -1) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static HBDCDLMKCPD valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static HBDCDLMKCPD forNumber(int value) {
-        switch (value) {
-          case 0: return NONE;
-          case 1598: return PEPPOHPHJOJ;
-          case 1: return NNBKOLMPOEA;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<HBDCDLMKCPD>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          HBDCDLMKCPD> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<HBDCDLMKCPD>() {
-              public HBDCDLMKCPD findValueByNumber(int number) {
-                return HBDCDLMKCPD.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        if (index == -1) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return emu.grasscutter.net.proto.DoGachaRspOuterClass.DoGachaRsp.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final HBDCDLMKCPD[] VALUES = getStaticValuesArray();
-      private static HBDCDLMKCPD[] getStaticValuesArray() {
-        return new HBDCDLMKCPD[] {
-          NONE, PEPPOHPHJOJ, DCDNILFDFLB, NNBKOLMPOEA, 
-        };
-      }
-      public static HBDCDLMKCPD valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int index;
-      private final int value;
-
-      private HBDCDLMKCPD(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:DoGachaRsp.HBDCDLMKCPD)
     }
 
     public static final int LEFTGACHATIMES_FIELD_NUMBER = 7;
@@ -1058,6 +932,11 @@ public final class DoGachaRspOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: LEFDKOLFJKL (3.4)
+     * CmdId: 1564
+     * </pre>
+     *
      * Protobuf type {@code DoGachaRsp}
      */
     public static final class Builder extends
@@ -2214,7 +2093,7 @@ public final class DoGachaRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020DoGachaRsp.proto\032\017GachaItem.proto\"\257\004\n\n" +
+      "\n\020DoGachaRsp.proto\032\017GachaItem.proto\"\336\003\n\n" +
       "DoGachaRsp\022\026\n\016leftGachaTimes\030\007 \001(\r\022\026\n\016ne" +
       "wGachaRandom\030\t \001(\r\022\021\n\tgachaType\030\r \001(\r\022\027\n" +
       "\017gachaTimesLimit\030\004 \001(\r\022\023\n\013costItemNum\030\010 " +
@@ -2226,10 +2105,8 @@ public final class DoGachaRspOuterClass {
       "\030\016 \001(\005\022\022\n\ngachaTimes\030\017 \001(\r\022\034\n\023Unk3300_HB" +
       "ILIAEIHNK\030\271\016 \001(\010\022\034\n\023Unk3300_OHFMHIHJHPJ\030" +
       "\215\003 \001(\010\022\027\n\017gachaScheduleId\030\002 \001(\r\022\027\n\017wishM" +
-      "axProgress\030\001 \001(\r\022\022\n\ncostItemId\030\006 \001(\r\"O\n\013" +
-      "HBDCDLMKCPD\022\010\n\004NONE\020\000\022\020\n\013PEPPOHPHJOJ\020\276\014\022" +
-      "\017\n\013DCDNILFDFLB\020\000\022\017\n\013NNBKOLMPOEA\020\001\032\002\020\001B\033\n" +
-      "\031emu.grasscutter.net.protob\006proto3"
+      "axProgress\030\001 \001(\r\022\022\n\ncostItemId\030\006 \001(\rB\033\n\031" +
+      "emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -47,14 +47,14 @@ public final class FallInfoOuterClass {
     /**
      * <code>map&lt;uint32, .FallPlayerInfo&gt; scenePlayerFallInfoMap = 9;</code>
      */
-
-    emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo getScenePlayerFallInfoMapOrDefault(
+    /* nullable */
+emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo getScenePlayerFallInfoMapOrDefault(
         int key,
-        emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo defaultValue);
+        /* nullable */
+emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo defaultValue);
     /**
      * <code>map&lt;uint32, .FallPlayerInfo&gt; scenePlayerFallInfoMap = 9;</code>
      */
-
     emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo getScenePlayerFallInfoMapOrThrow(
         int key);
   }
@@ -85,62 +85,6 @@ public final class FallInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private FallInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 48: {
-
-              endTime_ = input.readUInt32();
-              break;
-            }
-            case 74: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                scenePlayerFallInfoMap_ = com.google.protobuf.MapField.newMapField(
-                    ScenePlayerFallInfoMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo>
-              scenePlayerFallInfoMap__ = input.readMessage(
-                  ScenePlayerFallInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              scenePlayerFallInfoMap_.getMutableMap().put(
-                  scenePlayerFallInfoMap__.getKey(), scenePlayerFallInfoMap__.getValue());
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FallInfoOuterClass.internal_static_FallInfo_descriptor;
@@ -167,7 +111,7 @@ public final class FallInfoOuterClass {
     }
 
     public static final int ENDTIME_FIELD_NUMBER = 6;
-    private int endTime_;
+    private int endTime_ = 0;
     /**
      * <code>uint32 endTime = 6;</code>
      * @return The endTime.
@@ -189,6 +133,7 @@ public final class FallInfoOuterClass {
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo> scenePlayerFallInfoMap_;
     private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo>
@@ -199,14 +144,12 @@ public final class FallInfoOuterClass {
       }
       return scenePlayerFallInfoMap_;
     }
-
     public int getScenePlayerFallInfoMapCount() {
       return internalGetScenePlayerFallInfoMap().getMap().size();
     }
     /**
      * <code>map&lt;uint32, .FallPlayerInfo&gt; scenePlayerFallInfoMap = 9;</code>
      */
-
     @java.lang.Override
     public boolean containsScenePlayerFallInfoMap(
         int key) {
@@ -225,7 +168,6 @@ public final class FallInfoOuterClass {
      * <code>map&lt;uint32, .FallPlayerInfo&gt; scenePlayerFallInfoMap = 9;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo> getScenePlayerFallInfoMapMap() {
       return internalGetScenePlayerFallInfoMap().getMap();
     }
@@ -233,10 +175,11 @@ public final class FallInfoOuterClass {
      * <code>map&lt;uint32, .FallPlayerInfo&gt; scenePlayerFallInfoMap = 9;</code>
      */
     @java.lang.Override
-
-    public emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo getScenePlayerFallInfoMapOrDefault(
+    public /* nullable */
+emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo getScenePlayerFallInfoMapOrDefault(
         int key,
-        emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo defaultValue) {
+        /* nullable */
+emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo defaultValue) {
       
       java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo> map =
           internalGetScenePlayerFallInfoMap().getMap();
@@ -246,7 +189,6 @@ public final class FallInfoOuterClass {
      * <code>map&lt;uint32, .FallPlayerInfo&gt; scenePlayerFallInfoMap = 9;</code>
      */
     @java.lang.Override
-
     public emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo getScenePlayerFallInfoMapOrThrow(
         int key) {
       
@@ -281,7 +223,7 @@ public final class FallInfoOuterClass {
           internalGetScenePlayerFallInfoMap(),
           ScenePlayerFallInfoMapDefaultEntryHolder.defaultEntry,
           9);
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -304,7 +246,7 @@ public final class FallInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(9, scenePlayerFallInfoMap__);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -323,7 +265,7 @@ public final class FallInfoOuterClass {
           != other.getEndTime()) return false;
       if (!internalGetScenePlayerFallInfoMap().equals(
           other.internalGetScenePlayerFallInfoMap())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -340,7 +282,7 @@ public final class FallInfoOuterClass {
         hash = (37 * hash) + SCENEPLAYERFALLINFOMAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetScenePlayerFallInfoMap().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -479,24 +421,19 @@ public final class FallInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.FallInfoOuterClass.FallInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         endTime_ = 0;
-
         internalGetMutableScenePlayerFallInfoMap().clear();
         return this;
       }
@@ -524,12 +461,20 @@ public final class FallInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.FallInfoOuterClass.FallInfo buildPartial() {
         emu.grasscutter.net.proto.FallInfoOuterClass.FallInfo result = new emu.grasscutter.net.proto.FallInfoOuterClass.FallInfo(this);
-        int from_bitField0_ = bitField0_;
-        result.endTime_ = endTime_;
-        result.scenePlayerFallInfoMap_ = internalGetScenePlayerFallInfoMap();
-        result.scenePlayerFallInfoMap_.makeImmutable();
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(emu.grasscutter.net.proto.FallInfoOuterClass.FallInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.endTime_ = endTime_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.scenePlayerFallInfoMap_ = internalGetScenePlayerFallInfoMap();
+          result.scenePlayerFallInfoMap_.makeImmutable();
+        }
       }
 
       @java.lang.Override
@@ -581,7 +526,8 @@ public final class FallInfoOuterClass {
         }
         internalGetMutableScenePlayerFallInfoMap().mergeFrom(
             other.internalGetScenePlayerFallInfoMap());
-        this.mergeUnknownFields(other.unknownFields);
+        bitField0_ |= 0x00000002;
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -596,17 +542,44 @@ public final class FallInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        emu.grasscutter.net.proto.FallInfoOuterClass.FallInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 48: {
+                endTime_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 48
+              case 74: {
+                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo>
+                scenePlayerFallInfoMap__ = input.readMessage(
+                    ScenePlayerFallInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableScenePlayerFallInfoMap().getMutableMap().put(
+                    scenePlayerFallInfoMap__.getKey(), scenePlayerFallInfoMap__.getValue());
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (emu.grasscutter.net.proto.FallInfoOuterClass.FallInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -628,6 +601,7 @@ public final class FallInfoOuterClass {
       public Builder setEndTime(int value) {
         
         endTime_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -636,7 +610,7 @@ public final class FallInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearEndTime() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         endTime_ = 0;
         onChanged();
         return this;
@@ -645,7 +619,7 @@ public final class FallInfoOuterClass {
       private com.google.protobuf.MapField<
           java.lang.Integer, emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo> scenePlayerFallInfoMap_;
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo>
-      internalGetScenePlayerFallInfoMap() {
+          internalGetScenePlayerFallInfoMap() {
         if (scenePlayerFallInfoMap_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               ScenePlayerFallInfoMapDefaultEntryHolder.defaultEntry);
@@ -653,8 +627,7 @@ public final class FallInfoOuterClass {
         return scenePlayerFallInfoMap_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo>
-      internalGetMutableScenePlayerFallInfoMap() {
-        onChanged();;
+          internalGetMutableScenePlayerFallInfoMap() {
         if (scenePlayerFallInfoMap_ == null) {
           scenePlayerFallInfoMap_ = com.google.protobuf.MapField.newMapField(
               ScenePlayerFallInfoMapDefaultEntryHolder.defaultEntry);
@@ -662,16 +635,16 @@ public final class FallInfoOuterClass {
         if (!scenePlayerFallInfoMap_.isMutable()) {
           scenePlayerFallInfoMap_ = scenePlayerFallInfoMap_.copy();
         }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return scenePlayerFallInfoMap_;
       }
-
       public int getScenePlayerFallInfoMapCount() {
         return internalGetScenePlayerFallInfoMap().getMap().size();
       }
       /**
        * <code>map&lt;uint32, .FallPlayerInfo&gt; scenePlayerFallInfoMap = 9;</code>
        */
-
       @java.lang.Override
       public boolean containsScenePlayerFallInfoMap(
           int key) {
@@ -690,7 +663,6 @@ public final class FallInfoOuterClass {
        * <code>map&lt;uint32, .FallPlayerInfo&gt; scenePlayerFallInfoMap = 9;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo> getScenePlayerFallInfoMapMap() {
         return internalGetScenePlayerFallInfoMap().getMap();
       }
@@ -698,10 +670,11 @@ public final class FallInfoOuterClass {
        * <code>map&lt;uint32, .FallPlayerInfo&gt; scenePlayerFallInfoMap = 9;</code>
        */
       @java.lang.Override
-
-      public emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo getScenePlayerFallInfoMapOrDefault(
+      public /* nullable */
+emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo getScenePlayerFallInfoMapOrDefault(
           int key,
-          emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo defaultValue) {
+          /* nullable */
+emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo defaultValue) {
         
         java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo> map =
             internalGetScenePlayerFallInfoMap().getMap();
@@ -711,7 +684,6 @@ public final class FallInfoOuterClass {
        * <code>map&lt;uint32, .FallPlayerInfo&gt; scenePlayerFallInfoMap = 9;</code>
        */
       @java.lang.Override
-
       public emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo getScenePlayerFallInfoMapOrThrow(
           int key) {
         
@@ -722,8 +694,8 @@ public final class FallInfoOuterClass {
         }
         return map.get(key);
       }
-
       public Builder clearScenePlayerFallInfoMap() {
+        bitField0_ = (bitField0_ & ~0x00000002);
         internalGetMutableScenePlayerFallInfoMap().getMutableMap()
             .clear();
         return this;
@@ -731,7 +703,6 @@ public final class FallInfoOuterClass {
       /**
        * <code>map&lt;uint32, .FallPlayerInfo&gt; scenePlayerFallInfoMap = 9;</code>
        */
-
       public Builder removeScenePlayerFallInfoMap(
           int key) {
         
@@ -744,7 +715,8 @@ public final class FallInfoOuterClass {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo>
-      getMutableScenePlayerFallInfoMap() {
+          getMutableScenePlayerFallInfoMap() {
+        bitField0_ |= 0x00000002;
         return internalGetMutableScenePlayerFallInfoMap().getMutableMap();
       }
       /**
@@ -754,19 +726,20 @@ public final class FallInfoOuterClass {
           int key,
           emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo value) {
         
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableScenePlayerFallInfoMap().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
        * <code>map&lt;uint32, .FallPlayerInfo&gt; scenePlayerFallInfoMap = 9;</code>
        */
-
       public Builder putAllScenePlayerFallInfoMap(
           java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FallPlayerInfoOuterClass.FallPlayerInfo> values) {
         internalGetMutableScenePlayerFallInfoMap().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000002;
         return this;
       }
       @java.lang.Override
@@ -802,7 +775,18 @@ public final class FallInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FallInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

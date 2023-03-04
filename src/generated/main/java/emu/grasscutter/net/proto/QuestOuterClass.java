@@ -203,6 +203,10 @@ public final class QuestOuterClass {
         int key);
   }
   /**
+   * <pre>
+   * Name: IBPHKCENHNF
+   * </pre>
+   *
    * Protobuf type {@code Quest}
    */
   public static final class Quest extends
@@ -1209,6 +1213,10 @@ public final class QuestOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: IBPHKCENHNF
+     * </pre>
+     *
      * Protobuf type {@code Quest}
      */
     public static final class Builder extends
