@@ -2,7 +2,7 @@
 
 ###動作要件
 
-*[Java SE - 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) (17以上であればいいです)
+* [Java SE - 17](https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html) (17以上であればいいです)
 
 * [MongoDB](https://www.mongodb.com/try/download/community)  (バージョン4.0以上を推奨)
 
