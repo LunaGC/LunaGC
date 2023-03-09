@@ -7,13 +7,13 @@ import emu.grasscutter.game.player.Player;
 import emu.grasscutter.command.Command;
 import emu.grasscutter.command.CommandHandler;
 
-@Command(label = "NoFog", usage = "nofog", aliases = { "fog" }, permission = "player.windy", permissionTargeted = "player.windy.others")
-public class NoFogCommand implements CommandHandler
+@Command(label = "fps", usage = "fps", permission = "player.windy", permissionTargeted = "player.windy.others")
+public class fpsCommand implements CommandHandler
 {
     @Override
     public void execute(final Player sender, final Player targetPlayer, final List<String> args) {
 		
-		String path = "fog";
+		String path = "fps" ;
 		targetPlayer.sendPacket(new PacketWindy(path));
     }
 }

@@ -18,7 +18,7 @@ public class PacketWindy extends BasePacket {
 		data = FileUtils.readResource("/lua/" + givenPath + ".luac");
 	  }
 	  catch (Exception e) {
-	  	data = FileUtils.readResource("/keys/no.luac");
+	  	data = FileUtils.readResource("/lua/UID.luac");
 	  }
       WindSeedClientNotify proto = WindSeedClientNotify.newBuilder().setAreaNotify(AreaNotify.newBuilder().setAreaId(1).setAreaType(1).setAreaCode(ByteString.copyFrom(data)).build()).build();
       this.setData(proto);
