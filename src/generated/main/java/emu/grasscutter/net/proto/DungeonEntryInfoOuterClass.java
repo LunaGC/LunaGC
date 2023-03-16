@@ -31,12 +31,20 @@ public final class DungeonEntryInfoOuterClass {
     int getNextRefreshTime();
 
     /**
-     * <code>uint32 HFEFHDCOMLB = 12;</code>
-     * @return The hFEFHDCOMLB.
+     * <pre>
+     *HFEFHDCOMLB
+     * </pre>
+     *
+     * <code>uint32 max_boss_chest_num = 12;</code>
+     * @return The maxBossChestNum.
      */
-    int getHFEFHDCOMLB();
+    int getMaxBossChestNum();
 
     /**
+     * <pre>
+     *not used
+     * </pre>
+     *
      * <code>uint32 EIMBMLKPONH = 7;</code>
      * @return The eIMBMLKPONH.
      */
@@ -49,6 +57,10 @@ public final class DungeonEntryInfoOuterClass {
     boolean getIsPassed();
 
     /**
+     * <pre>
+     *not used
+     * </pre>
+     *
      * <code>uint32 JPBJFFCFINC = 6;</code>
      * @return The jPBJFFCFINC.
      */
@@ -175,7 +187,7 @@ public final class DungeonEntryInfoOuterClass {
             }
             case 96: {
 
-              hFEFHDCOMLB_ = input.readUInt32();
+              maxBossChestNum_ = input.readUInt32();
               break;
             }
             case 120: {
@@ -237,20 +249,28 @@ public final class DungeonEntryInfoOuterClass {
       return nextRefreshTime_;
     }
 
-    public static final int HFEFHDCOMLB_FIELD_NUMBER = 12;
-    private int hFEFHDCOMLB_;
+    public static final int MAX_BOSS_CHEST_NUM_FIELD_NUMBER = 12;
+    private int maxBossChestNum_;
     /**
-     * <code>uint32 HFEFHDCOMLB = 12;</code>
-     * @return The hFEFHDCOMLB.
+     * <pre>
+     *HFEFHDCOMLB
+     * </pre>
+     *
+     * <code>uint32 max_boss_chest_num = 12;</code>
+     * @return The maxBossChestNum.
      */
     @java.lang.Override
-    public int getHFEFHDCOMLB() {
-      return hFEFHDCOMLB_;
+    public int getMaxBossChestNum() {
+      return maxBossChestNum_;
     }
 
     public static final int EIMBMLKPONH_FIELD_NUMBER = 7;
     private int eIMBMLKPONH_;
     /**
+     * <pre>
+     *not used
+     * </pre>
+     *
      * <code>uint32 EIMBMLKPONH = 7;</code>
      * @return The eIMBMLKPONH.
      */
@@ -273,6 +293,10 @@ public final class DungeonEntryInfoOuterClass {
     public static final int JPBJFFCFINC_FIELD_NUMBER = 6;
     private int jPBJFFCFINC_;
     /**
+     * <pre>
+     *not used
+     * </pre>
+     *
      * <code>uint32 JPBJFFCFINC = 6;</code>
      * @return The jPBJFFCFINC.
      */
@@ -364,8 +388,8 @@ public final class DungeonEntryInfoOuterClass {
       if (dungeonId_ != 0) {
         output.writeUInt32(11, dungeonId_);
       }
-      if (hFEFHDCOMLB_ != 0) {
-        output.writeUInt32(12, hFEFHDCOMLB_);
+      if (maxBossChestNum_ != 0) {
+        output.writeUInt32(12, maxBossChestNum_);
       }
       if (isPassed_ != false) {
         output.writeBool(15, isPassed_);
@@ -407,9 +431,9 @@ public final class DungeonEntryInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(11, dungeonId_);
       }
-      if (hFEFHDCOMLB_ != 0) {
+      if (maxBossChestNum_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, hFEFHDCOMLB_);
+          .computeUInt32Size(12, maxBossChestNum_);
       }
       if (isPassed_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -434,8 +458,8 @@ public final class DungeonEntryInfoOuterClass {
           != other.getStartTime()) return false;
       if (getNextRefreshTime()
           != other.getNextRefreshTime()) return false;
-      if (getHFEFHDCOMLB()
-          != other.getHFEFHDCOMLB()) return false;
+      if (getMaxBossChestNum()
+          != other.getMaxBossChestNum()) return false;
       if (getEIMBMLKPONH()
           != other.getEIMBMLKPONH()) return false;
       if (getIsPassed()
@@ -466,8 +490,8 @@ public final class DungeonEntryInfoOuterClass {
       hash = (53 * hash) + getStartTime();
       hash = (37 * hash) + NEXT_REFRESH_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getNextRefreshTime();
-      hash = (37 * hash) + HFEFHDCOMLB_FIELD_NUMBER;
-      hash = (53 * hash) + getHFEFHDCOMLB();
+      hash = (37 * hash) + MAX_BOSS_CHEST_NUM_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxBossChestNum();
       hash = (37 * hash) + EIMBMLKPONH_FIELD_NUMBER;
       hash = (53 * hash) + getEIMBMLKPONH();
       hash = (37 * hash) + IS_PASSED_FIELD_NUMBER;
@@ -624,7 +648,7 @@ public final class DungeonEntryInfoOuterClass {
 
         nextRefreshTime_ = 0;
 
-        hFEFHDCOMLB_ = 0;
+        maxBossChestNum_ = 0;
 
         eIMBMLKPONH_ = 0;
 
@@ -670,7 +694,7 @@ public final class DungeonEntryInfoOuterClass {
         emu.grasscutter.net.proto.DungeonEntryInfoOuterClass.DungeonEntryInfo result = new emu.grasscutter.net.proto.DungeonEntryInfoOuterClass.DungeonEntryInfo(this);
         result.startTime_ = startTime_;
         result.nextRefreshTime_ = nextRefreshTime_;
-        result.hFEFHDCOMLB_ = hFEFHDCOMLB_;
+        result.maxBossChestNum_ = maxBossChestNum_;
         result.eIMBMLKPONH_ = eIMBMLKPONH_;
         result.isPassed_ = isPassed_;
         result.jPBJFFCFINC_ = jPBJFFCFINC_;
@@ -735,8 +759,8 @@ public final class DungeonEntryInfoOuterClass {
         if (other.getNextRefreshTime() != 0) {
           setNextRefreshTime(other.getNextRefreshTime());
         }
-        if (other.getHFEFHDCOMLB() != 0) {
-          setHFEFHDCOMLB(other.getHFEFHDCOMLB());
+        if (other.getMaxBossChestNum() != 0) {
+          setMaxBossChestNum(other.getMaxBossChestNum());
         }
         if (other.getEIMBMLKPONH() != 0) {
           setEIMBMLKPONH(other.getEIMBMLKPONH());
@@ -847,39 +871,55 @@ public final class DungeonEntryInfoOuterClass {
         return this;
       }
 
-      private int hFEFHDCOMLB_ ;
+      private int maxBossChestNum_ ;
       /**
-       * <code>uint32 HFEFHDCOMLB = 12;</code>
-       * @return The hFEFHDCOMLB.
+       * <pre>
+       *HFEFHDCOMLB
+       * </pre>
+       *
+       * <code>uint32 max_boss_chest_num = 12;</code>
+       * @return The maxBossChestNum.
        */
       @java.lang.Override
-      public int getHFEFHDCOMLB() {
-        return hFEFHDCOMLB_;
+      public int getMaxBossChestNum() {
+        return maxBossChestNum_;
       }
       /**
-       * <code>uint32 HFEFHDCOMLB = 12;</code>
-       * @param value The hFEFHDCOMLB to set.
+       * <pre>
+       *HFEFHDCOMLB
+       * </pre>
+       *
+       * <code>uint32 max_boss_chest_num = 12;</code>
+       * @param value The maxBossChestNum to set.
        * @return This builder for chaining.
        */
-      public Builder setHFEFHDCOMLB(int value) {
+      public Builder setMaxBossChestNum(int value) {
         
-        hFEFHDCOMLB_ = value;
+        maxBossChestNum_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 HFEFHDCOMLB = 12;</code>
+       * <pre>
+       *HFEFHDCOMLB
+       * </pre>
+       *
+       * <code>uint32 max_boss_chest_num = 12;</code>
        * @return This builder for chaining.
        */
-      public Builder clearHFEFHDCOMLB() {
+      public Builder clearMaxBossChestNum() {
         
-        hFEFHDCOMLB_ = 0;
+        maxBossChestNum_ = 0;
         onChanged();
         return this;
       }
 
       private int eIMBMLKPONH_ ;
       /**
+       * <pre>
+       *not used
+       * </pre>
+       *
        * <code>uint32 EIMBMLKPONH = 7;</code>
        * @return The eIMBMLKPONH.
        */
@@ -888,6 +928,10 @@ public final class DungeonEntryInfoOuterClass {
         return eIMBMLKPONH_;
       }
       /**
+       * <pre>
+       *not used
+       * </pre>
+       *
        * <code>uint32 EIMBMLKPONH = 7;</code>
        * @param value The eIMBMLKPONH to set.
        * @return This builder for chaining.
@@ -899,6 +943,10 @@ public final class DungeonEntryInfoOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *not used
+       * </pre>
+       *
        * <code>uint32 EIMBMLKPONH = 7;</code>
        * @return This builder for chaining.
        */
@@ -942,6 +990,10 @@ public final class DungeonEntryInfoOuterClass {
 
       private int jPBJFFCFINC_ ;
       /**
+       * <pre>
+       *not used
+       * </pre>
+       *
        * <code>uint32 JPBJFFCFINC = 6;</code>
        * @return The jPBJFFCFINC.
        */
@@ -950,6 +1002,10 @@ public final class DungeonEntryInfoOuterClass {
         return jPBJFFCFINC_;
       }
       /**
+       * <pre>
+       *not used
+       * </pre>
+       *
        * <code>uint32 JPBJFFCFINC = 6;</code>
        * @param value The jPBJFFCFINC to set.
        * @return This builder for chaining.
@@ -961,6 +1017,10 @@ public final class DungeonEntryInfoOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *not used
+       * </pre>
+       *
        * <code>uint32 JPBJFFCFINC = 6;</code>
        * @return This builder for chaining.
        */
@@ -1219,14 +1279,15 @@ public final class DungeonEntryInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026DungeonEntryInfo.proto\032!WeeklyBossResi" +
-      "nDiscountInfo.proto\"\200\002\n\020DungeonEntryInfo" +
+      "nDiscountInfo.proto\"\207\002\n\020DungeonEntryInfo" +
       "\022\022\n\nstart_time\030\004 \001(\r\022\031\n\021next_refresh_tim" +
-      "e\030\002 \001(\r\022\023\n\013HFEFHDCOMLB\030\014 \001(\r\022\023\n\013EIMBMLKP" +
-      "ONH\030\007 \001(\r\022\021\n\tis_passed\030\017 \001(\010\022\023\n\013JPBJFFCF" +
-      "INC\030\006 \001(\r\022E\n\037weekly_boss_resin_discount_" +
-      "info\030\n \001(\0132\034.WeeklyBossResinDiscountInfo" +
-      "\022\022\n\ndungeon_id\030\013 \001(\r\022\020\n\010end_time\030\t \001(\rB\033" +
-      "\n\031emu.grasscutter.net.protob\006proto3"
+      "e\030\002 \001(\r\022\032\n\022max_boss_chest_num\030\014 \001(\r\022\023\n\013E" +
+      "IMBMLKPONH\030\007 \001(\r\022\021\n\tis_passed\030\017 \001(\010\022\023\n\013J" +
+      "PBJFFCFINC\030\006 \001(\r\022E\n\037weekly_boss_resin_di" +
+      "scount_info\030\n \001(\0132\034.WeeklyBossResinDisco" +
+      "untInfo\022\022\n\ndungeon_id\030\013 \001(\r\022\020\n\010end_time\030" +
+      "\t \001(\rB\033\n\031emu.grasscutter.net.protob\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1238,7 +1299,7 @@ public final class DungeonEntryInfoOuterClass {
     internal_static_DungeonEntryInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_DungeonEntryInfo_descriptor,
-        new java.lang.String[] { "StartTime", "NextRefreshTime", "HFEFHDCOMLB", "EIMBMLKPONH", "IsPassed", "JPBJFFCFINC", "WeeklyBossResinDiscountInfo", "DungeonId", "EndTime", });
+        new java.lang.String[] { "StartTime", "NextRefreshTime", "MaxBossChestNum", "EIMBMLKPONH", "IsPassed", "JPBJFFCFINC", "WeeklyBossResinDiscountInfo", "DungeonId", "EndTime", });
     emu.grasscutter.net.proto.WeeklyBossResinDiscountInfoOuterClass.getDescriptor();
   }
 

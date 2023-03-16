@@ -67,7 +67,11 @@ public final class PlayerCookRspOuterClass {
         int index);
 
     /**
-     * <code>uint32 cookCount = 10;</code>
+     * <pre>
+     * HHKAPMHMHFI
+     * </pre>
+     *
+     * <code>uint32 cook_count = 10;</code>
      * @return The cookCount.
      */
     int getCookCount();
@@ -94,7 +98,11 @@ public final class PlayerCookRspOuterClass {
     int getRetcode();
 
     /**
-     * <code>uint32 qteQuality = 6;</code>
+     * <pre>
+     * IFLJGHHBGMP
+     * </pre>
+     *
+     * <code>uint32 qte_quality = 6;</code>
      * @return The qteQuality.
      */
     int getQteQuality();
@@ -316,10 +324,14 @@ public final class PlayerCookRspOuterClass {
       return itemList_.get(index);
     }
 
-    public static final int COOKCOUNT_FIELD_NUMBER = 10;
+    public static final int COOK_COUNT_FIELD_NUMBER = 10;
     private int cookCount_;
     /**
-     * <code>uint32 cookCount = 10;</code>
+     * <pre>
+     * HHKAPMHMHFI
+     * </pre>
+     *
+     * <code>uint32 cook_count = 10;</code>
      * @return The cookCount.
      */
     @java.lang.Override
@@ -364,10 +376,14 @@ public final class PlayerCookRspOuterClass {
       return retcode_;
     }
 
-    public static final int QTEQUALITY_FIELD_NUMBER = 6;
+    public static final int QTE_QUALITY_FIELD_NUMBER = 6;
     private int qteQuality_;
     /**
-     * <code>uint32 qteQuality = 6;</code>
+     * <pre>
+     * IFLJGHHBGMP
+     * </pre>
+     *
+     * <code>uint32 qte_quality = 6;</code>
      * @return The qteQuality.
      */
     @java.lang.Override
@@ -489,7 +505,7 @@ public final class PlayerCookRspOuterClass {
         hash = (37 * hash) + ITEM_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getItemListList().hashCode();
       }
-      hash = (37 * hash) + COOKCOUNT_FIELD_NUMBER;
+      hash = (37 * hash) + COOK_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + getCookCount();
       if (hasRecipeData()) {
         hash = (37 * hash) + RECIPE_DATA_FIELD_NUMBER;
@@ -497,7 +513,7 @@ public final class PlayerCookRspOuterClass {
       }
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      hash = (37 * hash) + QTEQUALITY_FIELD_NUMBER;
+      hash = (37 * hash) + QTE_QUALITY_FIELD_NUMBER;
       hash = (53 * hash) + getQteQuality();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1340,7 +1356,11 @@ public final class PlayerCookRspOuterClass {
 
       private int cookCount_ ;
       /**
-       * <code>uint32 cookCount = 10;</code>
+       * <pre>
+       * HHKAPMHMHFI
+       * </pre>
+       *
+       * <code>uint32 cook_count = 10;</code>
        * @return The cookCount.
        */
       @java.lang.Override
@@ -1348,7 +1368,11 @@ public final class PlayerCookRspOuterClass {
         return cookCount_;
       }
       /**
-       * <code>uint32 cookCount = 10;</code>
+       * <pre>
+       * HHKAPMHMHFI
+       * </pre>
+       *
+       * <code>uint32 cook_count = 10;</code>
        * @param value The cookCount to set.
        * @return This builder for chaining.
        */
@@ -1359,7 +1383,11 @@ public final class PlayerCookRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 cookCount = 10;</code>
+       * <pre>
+       * HHKAPMHMHFI
+       * </pre>
+       *
+       * <code>uint32 cook_count = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearCookCount() {
@@ -1521,7 +1549,11 @@ public final class PlayerCookRspOuterClass {
 
       private int qteQuality_ ;
       /**
-       * <code>uint32 qteQuality = 6;</code>
+       * <pre>
+       * IFLJGHHBGMP
+       * </pre>
+       *
+       * <code>uint32 qte_quality = 6;</code>
        * @return The qteQuality.
        */
       @java.lang.Override
@@ -1529,7 +1561,11 @@ public final class PlayerCookRspOuterClass {
         return qteQuality_;
       }
       /**
-       * <code>uint32 qteQuality = 6;</code>
+       * <pre>
+       * IFLJGHHBGMP
+       * </pre>
+       *
+       * <code>uint32 qte_quality = 6;</code>
        * @param value The qteQuality to set.
        * @return This builder for chaining.
        */
@@ -1540,7 +1576,11 @@ public final class PlayerCookRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 qteQuality = 6;</code>
+       * <pre>
+       * IFLJGHHBGMP
+       * </pre>
+       *
+       * <code>uint32 qte_quality = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearQteQuality() {
@@ -1617,12 +1657,12 @@ public final class PlayerCookRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\023PlayerCookRsp.proto\032\024CookRecipeData.pr" +
-      "oto\032\017ItemParam.proto\"\262\001\n\rPlayerCookRsp\022$" +
+      "oto\032\017ItemParam.proto\"\264\001\n\rPlayerCookRsp\022$" +
       "\n\020extral_item_list\030\014 \003(\0132\n.ItemParam\022\035\n\t" +
-      "item_list\030\t \003(\0132\n.ItemParam\022\021\n\tcookCount" +
-      "\030\n \001(\r\022$\n\013recipe_data\030\013 \001(\0132\017.CookRecipe" +
-      "Data\022\017\n\007retcode\030\017 \001(\005\022\022\n\nqteQuality\030\006 \001(" +
-      "\rB\033\n\031emu.grasscutter.net.protob\006proto3"
+      "item_list\030\t \003(\0132\n.ItemParam\022\022\n\ncook_coun" +
+      "t\030\n \001(\r\022$\n\013recipe_data\030\013 \001(\0132\017.CookRecip" +
+      "eData\022\017\n\007retcode\030\017 \001(\005\022\023\n\013qte_quality\030\006 " +
+      "\001(\rB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

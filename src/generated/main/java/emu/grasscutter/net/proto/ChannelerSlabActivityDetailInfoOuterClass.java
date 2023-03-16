@@ -110,6 +110,87 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private ChannelerSlabActivityDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH.Builder subBuilder = null;
+              if (gLGFLPCODAB_ != null) {
+                subBuilder = gLGFLPCODAB_.toBuilder();
+              }
+              gLGFLPCODAB_ = input.readMessage(emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gLGFLPCODAB_);
+                gLGFLPCODAB_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                stageList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              stageList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage.parser(), extensionRegistry));
+              break;
+            }
+            case 24: {
+
+              playEndTime_ = input.readUInt32();
+              break;
+            }
+            case 122: {
+              emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL.Builder subBuilder = null;
+              if (bNGGDPMFDDH_ != null) {
+                subBuilder = bNGGDPMFDDH_.toBuilder();
+              }
+              bNGGDPMFDDH_ = input.readMessage(emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(bNGGDPMFDDH_);
+                bNGGDPMFDDH_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          stageList_ = java.util.Collections.unmodifiableList(stageList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ChannelerSlabActivityDetailInfoOuterClass.internal_static_ChannelerSlabActivityDetailInfo_descriptor;
@@ -124,7 +205,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
     }
 
     public static final int PLAY_END_TIME_FIELD_NUMBER = 3;
-    private int playEndTime_ = 0;
+    private int playEndTime_;
     /**
      * <code>uint32 play_end_time = 3;</code>
      * @return The playEndTime.
@@ -135,7 +216,6 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
     }
 
     public static final int STAGE_LIST_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage> stageList_;
     /**
      * <code>repeated .ChannelerSlabChallengeStage stage_list = 2;</code>
@@ -198,7 +278,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNILOrBuilder getBNGGDPMFDDHOrBuilder() {
-      return bNGGDPMFDDH_ == null ? emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL.getDefaultInstance() : bNGGDPMFDDH_;
+      return getBNGGDPMFDDH();
     }
 
     public static final int GLGFLPCODAB_FIELD_NUMBER = 1;
@@ -224,7 +304,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLHOrBuilder getGLGFLPCODABOrBuilder() {
-      return gLGFLPCODAB_ == null ? emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH.getDefaultInstance() : gLGFLPCODAB_;
+      return getGLGFLPCODAB();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -253,7 +333,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
       if (bNGGDPMFDDH_ != null) {
         output.writeMessage(15, getBNGGDPMFDDH());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -278,7 +358,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getBNGGDPMFDDH());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -307,7 +387,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
         if (!getGLGFLPCODAB()
             .equals(other.getGLGFLPCODAB())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -332,7 +412,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
         hash = (37 * hash) + GLGFLPCODAB_FIELD_NUMBER;
         hash = (53 * hash) + getGLGFLPCODAB().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -453,34 +533,41 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ChannelerSlabActivityDetailInfoOuterClass.ChannelerSlabActivityDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStageListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         playEndTime_ = 0;
+
         if (stageListBuilder_ == null) {
           stageList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          stageList_ = null;
           stageListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        bNGGDPMFDDH_ = null;
-        if (bNGGDPMFDDHBuilder_ != null) {
-          bNGGDPMFDDHBuilder_.dispose();
+        if (bNGGDPMFDDHBuilder_ == null) {
+          bNGGDPMFDDH_ = null;
+        } else {
+          bNGGDPMFDDH_ = null;
           bNGGDPMFDDHBuilder_ = null;
         }
-        gLGFLPCODAB_ = null;
-        if (gLGFLPCODABBuilder_ != null) {
-          gLGFLPCODABBuilder_.dispose();
+        if (gLGFLPCODABBuilder_ == null) {
+          gLGFLPCODAB_ = null;
+        } else {
+          gLGFLPCODAB_ = null;
           gLGFLPCODABBuilder_ = null;
         }
         return this;
@@ -509,39 +596,29 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ChannelerSlabActivityDetailInfoOuterClass.ChannelerSlabActivityDetailInfo buildPartial() {
         emu.grasscutter.net.proto.ChannelerSlabActivityDetailInfoOuterClass.ChannelerSlabActivityDetailInfo result = new emu.grasscutter.net.proto.ChannelerSlabActivityDetailInfoOuterClass.ChannelerSlabActivityDetailInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.ChannelerSlabActivityDetailInfoOuterClass.ChannelerSlabActivityDetailInfo result) {
+        int from_bitField0_ = bitField0_;
+        result.playEndTime_ = playEndTime_;
         if (stageListBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             stageList_ = java.util.Collections.unmodifiableList(stageList_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.stageList_ = stageList_;
         } else {
           result.stageList_ = stageListBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.ChannelerSlabActivityDetailInfoOuterClass.ChannelerSlabActivityDetailInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.playEndTime_ = playEndTime_;
+        if (bNGGDPMFDDHBuilder_ == null) {
+          result.bNGGDPMFDDH_ = bNGGDPMFDDH_;
+        } else {
+          result.bNGGDPMFDDH_ = bNGGDPMFDDHBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.bNGGDPMFDDH_ = bNGGDPMFDDHBuilder_ == null
-              ? bNGGDPMFDDH_
-              : bNGGDPMFDDHBuilder_.build();
+        if (gLGFLPCODABBuilder_ == null) {
+          result.gLGFLPCODAB_ = gLGFLPCODAB_;
+        } else {
+          result.gLGFLPCODAB_ = gLGFLPCODABBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.gLGFLPCODAB_ = gLGFLPCODABBuilder_ == null
-              ? gLGFLPCODAB_
-              : gLGFLPCODABBuilder_.build();
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -595,7 +672,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
           if (!other.stageList_.isEmpty()) {
             if (stageList_.isEmpty()) {
               stageList_ = other.stageList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureStageListIsMutable();
               stageList_.addAll(other.stageList_);
@@ -608,7 +685,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
               stageListBuilder_.dispose();
               stageListBuilder_ = null;
               stageList_ = other.stageList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               stageListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getStageListFieldBuilder() : null;
@@ -623,7 +700,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
         if (other.hasGLGFLPCODAB()) {
           mergeGLGFLPCODAB(other.getGLGFLPCODAB());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -638,62 +715,17 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.ChannelerSlabActivityDetailInfoOuterClass.ChannelerSlabActivityDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getGLGFLPCODABFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 10
-              case 18: {
-                emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage.parser(),
-                        extensionRegistry);
-                if (stageListBuilder_ == null) {
-                  ensureStageListIsMutable();
-                  stageList_.add(m);
-                } else {
-                  stageListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 18
-              case 24: {
-                playEndTime_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 24
-              case 122: {
-                input.readMessage(
-                    getBNGGDPMFDDHFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.ChannelerSlabActivityDetailInfoOuterClass.ChannelerSlabActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -715,7 +747,6 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
       public Builder setPlayEndTime(int value) {
         
         playEndTime_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -724,7 +755,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPlayEndTime() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         playEndTime_ = 0;
         onChanged();
         return this;
@@ -733,9 +764,9 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
       private java.util.List<emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage> stageList_ =
         java.util.Collections.emptyList();
       private void ensureStageListIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           stageList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage>(stageList_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -885,7 +916,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
       public Builder clearStageList() {
         if (stageListBuilder_ == null) {
           stageList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           stageListBuilder_.clear();
@@ -962,7 +993,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
           stageListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage, emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage.Builder, emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStageOrBuilder>(
                   stageList_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           stageList_ = null;
@@ -978,7 +1009,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
        * @return Whether the bNGGDPMFDDH field is set.
        */
       public boolean hasBNGGDPMFDDH() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return bNGGDPMFDDHBuilder_ != null || bNGGDPMFDDH_ != null;
       }
       /**
        * <code>.AIGHOMHDNIL BNGGDPMFDDH = 15;</code>
@@ -1000,11 +1031,11 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
             throw new NullPointerException();
           }
           bNGGDPMFDDH_ = value;
+          onChanged();
         } else {
           bNGGDPMFDDHBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -1014,11 +1045,11 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
           emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL.Builder builderForValue) {
         if (bNGGDPMFDDHBuilder_ == null) {
           bNGGDPMFDDH_ = builderForValue.build();
+          onChanged();
         } else {
           bNGGDPMFDDHBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -1026,38 +1057,38 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
        */
       public Builder mergeBNGGDPMFDDH(emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL value) {
         if (bNGGDPMFDDHBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            bNGGDPMFDDH_ != null &&
-            bNGGDPMFDDH_ != emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL.getDefaultInstance()) {
-            getBNGGDPMFDDHBuilder().mergeFrom(value);
+          if (bNGGDPMFDDH_ != null) {
+            bNGGDPMFDDH_ =
+              emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL.newBuilder(bNGGDPMFDDH_).mergeFrom(value).buildPartial();
           } else {
             bNGGDPMFDDH_ = value;
           }
+          onChanged();
         } else {
           bNGGDPMFDDHBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.AIGHOMHDNIL BNGGDPMFDDH = 15;</code>
        */
       public Builder clearBNGGDPMFDDH() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        bNGGDPMFDDH_ = null;
-        if (bNGGDPMFDDHBuilder_ != null) {
-          bNGGDPMFDDHBuilder_.dispose();
+        if (bNGGDPMFDDHBuilder_ == null) {
+          bNGGDPMFDDH_ = null;
+          onChanged();
+        } else {
+          bNGGDPMFDDH_ = null;
           bNGGDPMFDDHBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.AIGHOMHDNIL BNGGDPMFDDH = 15;</code>
        */
       public emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL.Builder getBNGGDPMFDDHBuilder() {
-        bitField0_ |= 0x00000004;
+        
         onChanged();
         return getBNGGDPMFDDHFieldBuilder().getBuilder();
       }
@@ -1097,7 +1128,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
        * @return Whether the gLGFLPCODAB field is set.
        */
       public boolean hasGLGFLPCODAB() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return gLGFLPCODABBuilder_ != null || gLGFLPCODAB_ != null;
       }
       /**
        * <code>.HALOLKMILLH GLGFLPCODAB = 1;</code>
@@ -1119,11 +1150,11 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
             throw new NullPointerException();
           }
           gLGFLPCODAB_ = value;
+          onChanged();
         } else {
           gLGFLPCODABBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+
         return this;
       }
       /**
@@ -1133,11 +1164,11 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
           emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH.Builder builderForValue) {
         if (gLGFLPCODABBuilder_ == null) {
           gLGFLPCODAB_ = builderForValue.build();
+          onChanged();
         } else {
           gLGFLPCODABBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+
         return this;
       }
       /**
@@ -1145,38 +1176,38 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
        */
       public Builder mergeGLGFLPCODAB(emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH value) {
         if (gLGFLPCODABBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
-            gLGFLPCODAB_ != null &&
-            gLGFLPCODAB_ != emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH.getDefaultInstance()) {
-            getGLGFLPCODABBuilder().mergeFrom(value);
+          if (gLGFLPCODAB_ != null) {
+            gLGFLPCODAB_ =
+              emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH.newBuilder(gLGFLPCODAB_).mergeFrom(value).buildPartial();
           } else {
             gLGFLPCODAB_ = value;
           }
+          onChanged();
         } else {
           gLGFLPCODABBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.HALOLKMILLH GLGFLPCODAB = 1;</code>
        */
       public Builder clearGLGFLPCODAB() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        gLGFLPCODAB_ = null;
-        if (gLGFLPCODABBuilder_ != null) {
-          gLGFLPCODABBuilder_.dispose();
+        if (gLGFLPCODABBuilder_ == null) {
+          gLGFLPCODAB_ = null;
+          onChanged();
+        } else {
+          gLGFLPCODAB_ = null;
           gLGFLPCODABBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.HALOLKMILLH GLGFLPCODAB = 1;</code>
        */
       public emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH.Builder getGLGFLPCODABBuilder() {
-        bitField0_ |= 0x00000008;
+        
         onChanged();
         return getGLGFLPCODABFieldBuilder().getBuilder();
       }
@@ -1240,18 +1271,7 @@ public final class ChannelerSlabActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ChannelerSlabActivityDetailInfo(input, extensionRegistry);
       }
     };
 

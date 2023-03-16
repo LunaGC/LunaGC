@@ -115,6 +115,126 @@ public final class DDFMGAHMONAOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private DDFMGAHMONA(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                pMPOGCLAKKP_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              pMPOGCLAKKP_.addInt(input.readUInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                pMPOGCLAKKP_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                pMPOGCLAKKP_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 40: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                gOAALPLLBOA_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              gOAALPLLBOA_.addInt(input.readUInt32());
+              break;
+            }
+            case 42: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                gOAALPLLBOA_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                gOAALPLLBOA_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 48: {
+
+              storeId_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              slotCount_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                strategyList_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              strategyList_.addInt(input.readUInt32());
+              break;
+            }
+            case 90: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                strategyList_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                strategyList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          pMPOGCLAKKP_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          gOAALPLLBOA_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          strategyList_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.internal_static_DDFMGAHMONA_descriptor;
@@ -129,7 +249,7 @@ public final class DDFMGAHMONAOuterClass {
     }
 
     public static final int SLOT_COUNT_FIELD_NUMBER = 7;
-    private int slotCount_ = 0;
+    private int slotCount_;
     /**
      * <code>uint32 slot_count = 7;</code>
      * @return The slotCount.
@@ -140,7 +260,6 @@ public final class DDFMGAHMONAOuterClass {
     }
 
     public static final int GOAALPLLBOA_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList gOAALPLLBOA_;
     /**
      * <code>repeated uint32 GOAALPLLBOA = 5;</code>
@@ -169,7 +288,7 @@ public final class DDFMGAHMONAOuterClass {
     private int gOAALPLLBOAMemoizedSerializedSize = -1;
 
     public static final int STORE_ID_FIELD_NUMBER = 6;
-    private int storeId_ = 0;
+    private int storeId_;
     /**
      * <code>uint32 store_id = 6;</code>
      * @return The storeId.
@@ -180,7 +299,6 @@ public final class DDFMGAHMONAOuterClass {
     }
 
     public static final int PMPOGCLAKKP_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList pMPOGCLAKKP_;
     /**
      * <code>repeated uint32 PMPOGCLAKKP = 2;</code>
@@ -209,7 +327,6 @@ public final class DDFMGAHMONAOuterClass {
     private int pMPOGCLAKKPMemoizedSerializedSize = -1;
 
     public static final int STRATEGY_LIST_FIELD_NUMBER = 11;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList strategyList_;
     /**
      * <code>repeated uint32 strategy_list = 11;</code>
@@ -279,7 +396,7 @@ public final class DDFMGAHMONAOuterClass {
       for (int i = 0; i < strategyList_.size(); i++) {
         output.writeUInt32NoTag(strategyList_.getInt(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -338,7 +455,7 @@ public final class DDFMGAHMONAOuterClass {
         }
         strategyListMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -363,7 +480,7 @@ public final class DDFMGAHMONAOuterClass {
           .equals(other.getPMPOGCLAKKPList())) return false;
       if (!getStrategyListList()
           .equals(other.getStrategyListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -390,7 +507,7 @@ public final class DDFMGAHMONAOuterClass {
         hash = (37 * hash) + STRATEGY_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getStrategyListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -511,23 +628,32 @@ public final class DDFMGAHMONAOuterClass {
 
       // Construct using emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         slotCount_ = 0;
+
         gOAALPLLBOA_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         storeId_ = 0;
+
         pMPOGCLAKKP_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         strategyList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -554,38 +680,26 @@ public final class DDFMGAHMONAOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA buildPartial() {
         emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA result = new emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        int from_bitField0_ = bitField0_;
+        result.slotCount_ = slotCount_;
+        if (((bitField0_ & 0x00000001) != 0)) {
           gOAALPLLBOA_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.gOAALPLLBOA_ = gOAALPLLBOA_;
-        if (((bitField0_ & 0x00000008) != 0)) {
+        result.storeId_ = storeId_;
+        if (((bitField0_ & 0x00000002) != 0)) {
           pMPOGCLAKKP_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.pMPOGCLAKKP_ = pMPOGCLAKKP_;
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           strategyList_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.strategyList_ = strategyList_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.slotCount_ = slotCount_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.storeId_ = storeId_;
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -638,7 +752,7 @@ public final class DDFMGAHMONAOuterClass {
         if (!other.gOAALPLLBOA_.isEmpty()) {
           if (gOAALPLLBOA_.isEmpty()) {
             gOAALPLLBOA_ = other.gOAALPLLBOA_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureGOAALPLLBOAIsMutable();
             gOAALPLLBOA_.addAll(other.gOAALPLLBOA_);
@@ -651,7 +765,7 @@ public final class DDFMGAHMONAOuterClass {
         if (!other.pMPOGCLAKKP_.isEmpty()) {
           if (pMPOGCLAKKP_.isEmpty()) {
             pMPOGCLAKKP_ = other.pMPOGCLAKKP_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensurePMPOGCLAKKPIsMutable();
             pMPOGCLAKKP_.addAll(other.pMPOGCLAKKP_);
@@ -661,14 +775,14 @@ public final class DDFMGAHMONAOuterClass {
         if (!other.strategyList_.isEmpty()) {
           if (strategyList_.isEmpty()) {
             strategyList_ = other.strategyList_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureStrategyListIsMutable();
             strategyList_.addAll(other.strategyList_);
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -683,88 +797,17 @@ public final class DDFMGAHMONAOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                int v = input.readUInt32();
-                ensurePMPOGCLAKKPIsMutable();
-                pMPOGCLAKKP_.addInt(v);
-                break;
-              } // case 16
-              case 18: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensurePMPOGCLAKKPIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  pMPOGCLAKKP_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 18
-              case 40: {
-                int v = input.readUInt32();
-                ensureGOAALPLLBOAIsMutable();
-                gOAALPLLBOA_.addInt(v);
-                break;
-              } // case 40
-              case 42: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureGOAALPLLBOAIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  gOAALPLLBOA_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 42
-              case 48: {
-                storeId_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 48
-              case 56: {
-                slotCount_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 56
-              case 88: {
-                int v = input.readUInt32();
-                ensureStrategyListIsMutable();
-                strategyList_.addInt(v);
-                break;
-              } // case 88
-              case 90: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureStrategyListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  strategyList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 90
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -786,7 +829,6 @@ public final class DDFMGAHMONAOuterClass {
       public Builder setSlotCount(int value) {
         
         slotCount_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -795,7 +837,7 @@ public final class DDFMGAHMONAOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSlotCount() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         slotCount_ = 0;
         onChanged();
         return this;
@@ -803,10 +845,10 @@ public final class DDFMGAHMONAOuterClass {
 
       private com.google.protobuf.Internal.IntList gOAALPLLBOA_ = emptyIntList();
       private void ensureGOAALPLLBOAIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           gOAALPLLBOA_ = mutableCopy(gOAALPLLBOA_);
-          bitField0_ |= 0x00000002;
-        }
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
        * <code>repeated uint32 GOAALPLLBOA = 5;</code>
@@ -814,7 +856,7 @@ public final class DDFMGAHMONAOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getGOAALPLLBOAList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
+        return ((bitField0_ & 0x00000001) != 0) ?
                  java.util.Collections.unmodifiableList(gOAALPLLBOA_) : gOAALPLLBOA_;
       }
       /**
@@ -840,7 +882,6 @@ public final class DDFMGAHMONAOuterClass {
        */
       public Builder setGOAALPLLBOA(
           int index, int value) {
-        
         ensureGOAALPLLBOAIsMutable();
         gOAALPLLBOA_.setInt(index, value);
         onChanged();
@@ -852,7 +893,6 @@ public final class DDFMGAHMONAOuterClass {
        * @return This builder for chaining.
        */
       public Builder addGOAALPLLBOA(int value) {
-        
         ensureGOAALPLLBOAIsMutable();
         gOAALPLLBOA_.addInt(value);
         onChanged();
@@ -877,7 +917,7 @@ public final class DDFMGAHMONAOuterClass {
        */
       public Builder clearGOAALPLLBOA() {
         gOAALPLLBOA_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -899,7 +939,6 @@ public final class DDFMGAHMONAOuterClass {
       public Builder setStoreId(int value) {
         
         storeId_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -908,7 +947,7 @@ public final class DDFMGAHMONAOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStoreId() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         storeId_ = 0;
         onChanged();
         return this;
@@ -916,10 +955,10 @@ public final class DDFMGAHMONAOuterClass {
 
       private com.google.protobuf.Internal.IntList pMPOGCLAKKP_ = emptyIntList();
       private void ensurePMPOGCLAKKPIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           pMPOGCLAKKP_ = mutableCopy(pMPOGCLAKKP_);
-          bitField0_ |= 0x00000008;
-        }
+          bitField0_ |= 0x00000002;
+         }
       }
       /**
        * <code>repeated uint32 PMPOGCLAKKP = 2;</code>
@@ -927,7 +966,7 @@ public final class DDFMGAHMONAOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getPMPOGCLAKKPList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
+        return ((bitField0_ & 0x00000002) != 0) ?
                  java.util.Collections.unmodifiableList(pMPOGCLAKKP_) : pMPOGCLAKKP_;
       }
       /**
@@ -953,7 +992,6 @@ public final class DDFMGAHMONAOuterClass {
        */
       public Builder setPMPOGCLAKKP(
           int index, int value) {
-        
         ensurePMPOGCLAKKPIsMutable();
         pMPOGCLAKKP_.setInt(index, value);
         onChanged();
@@ -965,7 +1003,6 @@ public final class DDFMGAHMONAOuterClass {
        * @return This builder for chaining.
        */
       public Builder addPMPOGCLAKKP(int value) {
-        
         ensurePMPOGCLAKKPIsMutable();
         pMPOGCLAKKP_.addInt(value);
         onChanged();
@@ -990,17 +1027,17 @@ public final class DDFMGAHMONAOuterClass {
        */
       public Builder clearPMPOGCLAKKP() {
         pMPOGCLAKKP_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
 
       private com.google.protobuf.Internal.IntList strategyList_ = emptyIntList();
       private void ensureStrategyListIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           strategyList_ = mutableCopy(strategyList_);
-          bitField0_ |= 0x00000010;
-        }
+          bitField0_ |= 0x00000004;
+         }
       }
       /**
        * <code>repeated uint32 strategy_list = 11;</code>
@@ -1008,7 +1045,7 @@ public final class DDFMGAHMONAOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getStrategyListList() {
-        return ((bitField0_ & 0x00000010) != 0) ?
+        return ((bitField0_ & 0x00000004) != 0) ?
                  java.util.Collections.unmodifiableList(strategyList_) : strategyList_;
       }
       /**
@@ -1034,7 +1071,6 @@ public final class DDFMGAHMONAOuterClass {
        */
       public Builder setStrategyList(
           int index, int value) {
-        
         ensureStrategyListIsMutable();
         strategyList_.setInt(index, value);
         onChanged();
@@ -1046,7 +1082,6 @@ public final class DDFMGAHMONAOuterClass {
        * @return This builder for chaining.
        */
       public Builder addStrategyList(int value) {
-        
         ensureStrategyListIsMutable();
         strategyList_.addInt(value);
         onChanged();
@@ -1071,7 +1106,7 @@ public final class DDFMGAHMONAOuterClass {
        */
       public Builder clearStrategyList() {
         strategyList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1108,18 +1143,7 @@ public final class DDFMGAHMONAOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new DDFMGAHMONA(input, extensionRegistry);
       }
     };
 

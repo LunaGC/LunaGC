@@ -73,6 +73,63 @@ public final class JONHAPLJANIOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private JONHAPLJANI(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 32: {
+
+              minFinishTime_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+
+              lEDKDCJIDNE_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              isHaveTry_ = input.readBool();
+              break;
+            }
+            case 96: {
+
+              isFinish_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.JONHAPLJANIOuterClass.internal_static_JONHAPLJANI_descriptor;
@@ -87,7 +144,7 @@ public final class JONHAPLJANIOuterClass {
     }
 
     public static final int IS_FINISH_FIELD_NUMBER = 12;
-    private boolean isFinish_ = false;
+    private boolean isFinish_;
     /**
      * <code>bool is_finish = 12;</code>
      * @return The isFinish.
@@ -98,7 +155,7 @@ public final class JONHAPLJANIOuterClass {
     }
 
     public static final int MIN_FINISH_TIME_FIELD_NUMBER = 4;
-    private int minFinishTime_ = 0;
+    private int minFinishTime_;
     /**
      * <code>uint32 min_finish_time = 4;</code>
      * @return The minFinishTime.
@@ -109,7 +166,7 @@ public final class JONHAPLJANIOuterClass {
     }
 
     public static final int LEDKDCJIDNE_FIELD_NUMBER = 5;
-    private int lEDKDCJIDNE_ = 0;
+    private int lEDKDCJIDNE_;
     /**
      * <code>uint32 LEDKDCJIDNE = 5;</code>
      * @return The lEDKDCJIDNE.
@@ -120,7 +177,7 @@ public final class JONHAPLJANIOuterClass {
     }
 
     public static final int IS_HAVE_TRY_FIELD_NUMBER = 8;
-    private boolean isHaveTry_ = false;
+    private boolean isHaveTry_;
     /**
      * <code>bool is_have_try = 8;</code>
      * @return The isHaveTry.
@@ -156,7 +213,7 @@ public final class JONHAPLJANIOuterClass {
       if (isFinish_ != false) {
         output.writeBool(12, isFinish_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -181,7 +238,7 @@ public final class JONHAPLJANIOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, isFinish_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -204,7 +261,7 @@ public final class JONHAPLJANIOuterClass {
           != other.getLEDKDCJIDNE()) return false;
       if (getIsHaveTry()
           != other.getIsHaveTry()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -225,7 +282,7 @@ public final class JONHAPLJANIOuterClass {
       hash = (37 * hash) + IS_HAVE_TRY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsHaveTry());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -346,22 +403,30 @@ public final class JONHAPLJANIOuterClass {
 
       // Construct using emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         isFinish_ = false;
+
         minFinishTime_ = 0;
+
         lEDKDCJIDNE_ = 0;
+
         isHaveTry_ = false;
+
         return this;
       }
 
@@ -388,25 +453,12 @@ public final class JONHAPLJANIOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI buildPartial() {
         emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI result = new emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.isFinish_ = isFinish_;
+        result.minFinishTime_ = minFinishTime_;
+        result.lEDKDCJIDNE_ = lEDKDCJIDNE_;
+        result.isHaveTry_ = isHaveTry_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isFinish_ = isFinish_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.minFinishTime_ = minFinishTime_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.lEDKDCJIDNE_ = lEDKDCJIDNE_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.isHaveTry_ = isHaveTry_;
-        }
       }
 
       @java.lang.Override
@@ -465,7 +517,7 @@ public final class JONHAPLJANIOuterClass {
         if (other.getIsHaveTry() != false) {
           setIsHaveTry(other.getIsHaveTry());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -480,53 +532,19 @@ public final class JONHAPLJANIOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 32: {
-                minFinishTime_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 32
-              case 40: {
-                lEDKDCJIDNE_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 40
-              case 64: {
-                isHaveTry_ = input.readBool();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 64
-              case 96: {
-                isFinish_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 96
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private boolean isFinish_ ;
       /**
@@ -545,7 +563,6 @@ public final class JONHAPLJANIOuterClass {
       public Builder setIsFinish(boolean value) {
         
         isFinish_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -554,7 +571,7 @@ public final class JONHAPLJANIOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsFinish() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         isFinish_ = false;
         onChanged();
         return this;
@@ -577,7 +594,6 @@ public final class JONHAPLJANIOuterClass {
       public Builder setMinFinishTime(int value) {
         
         minFinishTime_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -586,7 +602,7 @@ public final class JONHAPLJANIOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMinFinishTime() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         minFinishTime_ = 0;
         onChanged();
         return this;
@@ -609,7 +625,6 @@ public final class JONHAPLJANIOuterClass {
       public Builder setLEDKDCJIDNE(int value) {
         
         lEDKDCJIDNE_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -618,7 +633,7 @@ public final class JONHAPLJANIOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLEDKDCJIDNE() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         lEDKDCJIDNE_ = 0;
         onChanged();
         return this;
@@ -641,7 +656,6 @@ public final class JONHAPLJANIOuterClass {
       public Builder setIsHaveTry(boolean value) {
         
         isHaveTry_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -650,7 +664,7 @@ public final class JONHAPLJANIOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsHaveTry() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         isHaveTry_ = false;
         onChanged();
         return this;
@@ -688,18 +702,7 @@ public final class JONHAPLJANIOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new JONHAPLJANI(input, extensionRegistry);
       }
     };
 

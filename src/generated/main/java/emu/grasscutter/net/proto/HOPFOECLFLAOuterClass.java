@@ -59,14 +59,14 @@ public final class HOPFOECLFLAOuterClass {
     /**
      * <code>map&lt;uint32, .VintageCampChallengeLevelData&gt; DPHMHBLJDNG = 7;</code>
      */
-    /* nullable */
-emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData getDPHMHBLJDNGOrDefault(
+
+    emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData getDPHMHBLJDNGOrDefault(
         int key,
-        /* nullable */
-emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData defaultValue);
+        emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData defaultValue);
     /**
      * <code>map&lt;uint32, .VintageCampChallengeLevelData&gt; DPHMHBLJDNG = 7;</code>
      */
+
     emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData getDPHMHBLJDNGOrThrow(
         int key);
 
@@ -113,6 +113,82 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
     getUnknownFields() {
       return this.unknownFields;
     }
+    private HOPFOECLFLA(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              isFinish_ = input.readBool();
+              break;
+            }
+            case 40: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                dPHMHBLJDNG_ = com.google.protobuf.MapField.newMapField(
+                    DPHMHBLJDNGDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData>
+              dPHMHBLJDNG__ = input.readMessage(
+                  DPHMHBLJDNGDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              dPHMHBLJDNG_.getMutableMap().put(
+                  dPHMHBLJDNG__.getKey(), dPHMHBLJDNG__.getValue());
+              break;
+            }
+            case 80: {
+
+              bCKONCKLJAD_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+
+              stageId_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+
+              openTime_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.HOPFOECLFLAOuterClass.internal_static_HOPFOECLFLA_descriptor;
@@ -139,7 +215,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
     }
 
     public static final int OPEN_TIME_FIELD_NUMBER = 12;
-    private int openTime_ = 0;
+    private int openTime_;
     /**
      * <code>uint32 open_time = 12;</code>
      * @return The openTime.
@@ -150,7 +226,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
     }
 
     public static final int IS_OPEN_FIELD_NUMBER = 5;
-    private boolean isOpen_ = false;
+    private boolean isOpen_;
     /**
      * <code>bool is_open = 5;</code>
      * @return The isOpen.
@@ -161,7 +237,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
     }
 
     public static final int IS_FINISH_FIELD_NUMBER = 1;
-    private boolean isFinish_ = false;
+    private boolean isFinish_;
     /**
      * <code>bool is_finish = 1;</code>
      * @return The isFinish.
@@ -183,7 +259,6 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData.getDefaultInstance());
     }
-    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData> dPHMHBLJDNG_;
     private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData>
@@ -194,12 +269,14 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
       }
       return dPHMHBLJDNG_;
     }
+
     public int getDPHMHBLJDNGCount() {
       return internalGetDPHMHBLJDNG().getMap().size();
     }
     /**
      * <code>map&lt;uint32, .VintageCampChallengeLevelData&gt; DPHMHBLJDNG = 7;</code>
      */
+
     @java.lang.Override
     public boolean containsDPHMHBLJDNG(
         int key) {
@@ -218,6 +295,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
      * <code>map&lt;uint32, .VintageCampChallengeLevelData&gt; DPHMHBLJDNG = 7;</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData> getDPHMHBLJDNGMap() {
       return internalGetDPHMHBLJDNG().getMap();
     }
@@ -225,11 +303,10 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
      * <code>map&lt;uint32, .VintageCampChallengeLevelData&gt; DPHMHBLJDNG = 7;</code>
      */
     @java.lang.Override
-    public /* nullable */
-emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData getDPHMHBLJDNGOrDefault(
+
+    public emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData getDPHMHBLJDNGOrDefault(
         int key,
-        /* nullable */
-emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData defaultValue) {
+        emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData defaultValue) {
       
       java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData> map =
           internalGetDPHMHBLJDNG().getMap();
@@ -239,6 +316,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
      * <code>map&lt;uint32, .VintageCampChallengeLevelData&gt; DPHMHBLJDNG = 7;</code>
      */
     @java.lang.Override
+
     public emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData getDPHMHBLJDNGOrThrow(
         int key) {
       
@@ -251,7 +329,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
     }
 
     public static final int BCKONCKLJAD_FIELD_NUMBER = 10;
-    private int bCKONCKLJAD_ = 0;
+    private int bCKONCKLJAD_;
     /**
      * <code>uint32 BCKONCKLJAD = 10;</code>
      * @return The bCKONCKLJAD.
@@ -262,7 +340,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
     }
 
     public static final int STAGE_ID_FIELD_NUMBER = 11;
-    private int stageId_ = 0;
+    private int stageId_;
     /**
      * <code>uint32 stage_id = 11;</code>
      * @return The stageId.
@@ -307,7 +385,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
       if (openTime_ != 0) {
         output.writeUInt32(12, openTime_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -346,7 +424,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(12, openTime_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -373,7 +451,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
           != other.getBCKONCKLJAD()) return false;
       if (getStageId()
           != other.getStageId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -400,7 +478,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
       hash = (53 * hash) + getBCKONCKLJAD();
       hash = (37 * hash) + STAGE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getStageId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -543,24 +621,33 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
 
       // Construct using emu.grasscutter.net.proto.HOPFOECLFLAOuterClass.HOPFOECLFLA.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         openTime_ = 0;
+
         isOpen_ = false;
+
         isFinish_ = false;
+
         internalGetMutableDPHMHBLJDNG().clear();
         bCKONCKLJAD_ = 0;
+
         stageId_ = 0;
+
         return this;
       }
 
@@ -587,32 +674,16 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
       @java.lang.Override
       public emu.grasscutter.net.proto.HOPFOECLFLAOuterClass.HOPFOECLFLA buildPartial() {
         emu.grasscutter.net.proto.HOPFOECLFLAOuterClass.HOPFOECLFLA result = new emu.grasscutter.net.proto.HOPFOECLFLAOuterClass.HOPFOECLFLA(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        int from_bitField0_ = bitField0_;
+        result.openTime_ = openTime_;
+        result.isOpen_ = isOpen_;
+        result.isFinish_ = isFinish_;
+        result.dPHMHBLJDNG_ = internalGetDPHMHBLJDNG();
+        result.dPHMHBLJDNG_.makeImmutable();
+        result.bCKONCKLJAD_ = bCKONCKLJAD_;
+        result.stageId_ = stageId_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.HOPFOECLFLAOuterClass.HOPFOECLFLA result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.openTime_ = openTime_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.isOpen_ = isOpen_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.isFinish_ = isFinish_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.dPHMHBLJDNG_ = internalGetDPHMHBLJDNG();
-          result.dPHMHBLJDNG_.makeImmutable();
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.bCKONCKLJAD_ = bCKONCKLJAD_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.stageId_ = stageId_;
-        }
       }
 
       @java.lang.Override
@@ -670,14 +741,13 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
         }
         internalGetMutableDPHMHBLJDNG().mergeFrom(
             other.internalGetDPHMHBLJDNG());
-        bitField0_ |= 0x00000008;
         if (other.getBCKONCKLJAD() != 0) {
           setBCKONCKLJAD(other.getBCKONCKLJAD());
         }
         if (other.getStageId() != 0) {
           setStageId(other.getStageId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -692,64 +762,17 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.HOPFOECLFLAOuterClass.HOPFOECLFLA parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                isFinish_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 8
-              case 40: {
-                isOpen_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 40
-              case 58: {
-                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData>
-                dPHMHBLJDNG__ = input.readMessage(
-                    DPHMHBLJDNGDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableDPHMHBLJDNG().getMutableMap().put(
-                    dPHMHBLJDNG__.getKey(), dPHMHBLJDNG__.getValue());
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 58
-              case 80: {
-                bCKONCKLJAD_ = input.readUInt32();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 80
-              case 88: {
-                stageId_ = input.readUInt32();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 88
-              case 96: {
-                openTime_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 96
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.HOPFOECLFLAOuterClass.HOPFOECLFLA) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -771,7 +794,6 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
       public Builder setOpenTime(int value) {
         
         openTime_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -780,7 +802,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
        * @return This builder for chaining.
        */
       public Builder clearOpenTime() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         openTime_ = 0;
         onChanged();
         return this;
@@ -803,7 +825,6 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -812,7 +833,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         isOpen_ = false;
         onChanged();
         return this;
@@ -835,7 +856,6 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
       public Builder setIsFinish(boolean value) {
         
         isFinish_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -844,7 +864,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
        * @return This builder for chaining.
        */
       public Builder clearIsFinish() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         isFinish_ = false;
         onChanged();
         return this;
@@ -853,7 +873,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
       private com.google.protobuf.MapField<
           java.lang.Integer, emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData> dPHMHBLJDNG_;
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData>
-          internalGetDPHMHBLJDNG() {
+      internalGetDPHMHBLJDNG() {
         if (dPHMHBLJDNG_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               DPHMHBLJDNGDefaultEntryHolder.defaultEntry);
@@ -861,7 +881,8 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
         return dPHMHBLJDNG_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData>
-          internalGetMutableDPHMHBLJDNG() {
+      internalGetMutableDPHMHBLJDNG() {
+        onChanged();;
         if (dPHMHBLJDNG_ == null) {
           dPHMHBLJDNG_ = com.google.protobuf.MapField.newMapField(
               DPHMHBLJDNGDefaultEntryHolder.defaultEntry);
@@ -869,16 +890,16 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
         if (!dPHMHBLJDNG_.isMutable()) {
           dPHMHBLJDNG_ = dPHMHBLJDNG_.copy();
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
         return dPHMHBLJDNG_;
       }
+
       public int getDPHMHBLJDNGCount() {
         return internalGetDPHMHBLJDNG().getMap().size();
       }
       /**
        * <code>map&lt;uint32, .VintageCampChallengeLevelData&gt; DPHMHBLJDNG = 7;</code>
        */
+
       @java.lang.Override
       public boolean containsDPHMHBLJDNG(
           int key) {
@@ -897,6 +918,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
        * <code>map&lt;uint32, .VintageCampChallengeLevelData&gt; DPHMHBLJDNG = 7;</code>
        */
       @java.lang.Override
+
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData> getDPHMHBLJDNGMap() {
         return internalGetDPHMHBLJDNG().getMap();
       }
@@ -904,11 +926,10 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
        * <code>map&lt;uint32, .VintageCampChallengeLevelData&gt; DPHMHBLJDNG = 7;</code>
        */
       @java.lang.Override
-      public /* nullable */
-emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData getDPHMHBLJDNGOrDefault(
+
+      public emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData getDPHMHBLJDNGOrDefault(
           int key,
-          /* nullable */
-emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData defaultValue) {
+          emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData defaultValue) {
         
         java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData> map =
             internalGetDPHMHBLJDNG().getMap();
@@ -918,6 +939,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
        * <code>map&lt;uint32, .VintageCampChallengeLevelData&gt; DPHMHBLJDNG = 7;</code>
        */
       @java.lang.Override
+
       public emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData getDPHMHBLJDNGOrThrow(
           int key) {
         
@@ -928,8 +950,8 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
         }
         return map.get(key);
       }
+
       public Builder clearDPHMHBLJDNG() {
-        bitField0_ = (bitField0_ & ~0x00000008);
         internalGetMutableDPHMHBLJDNG().getMutableMap()
             .clear();
         return this;
@@ -937,6 +959,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
       /**
        * <code>map&lt;uint32, .VintageCampChallengeLevelData&gt; DPHMHBLJDNG = 7;</code>
        */
+
       public Builder removeDPHMHBLJDNG(
           int key) {
         
@@ -949,8 +972,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData>
-          getMutableDPHMHBLJDNG() {
-        bitField0_ |= 0x00000008;
+      getMutableDPHMHBLJDNG() {
         return internalGetMutableDPHMHBLJDNG().getMutableMap();
       }
       /**
@@ -960,20 +982,19 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
           int key,
           emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData value) {
         
-        if (value == null) { throw new NullPointerException("map value"); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableDPHMHBLJDNG().getMutableMap()
             .put(key, value);
-        bitField0_ |= 0x00000008;
         return this;
       }
       /**
        * <code>map&lt;uint32, .VintageCampChallengeLevelData&gt; DPHMHBLJDNG = 7;</code>
        */
+
       public Builder putAllDPHMHBLJDNG(
           java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData> values) {
         internalGetMutableDPHMHBLJDNG().getMutableMap()
             .putAll(values);
-        bitField0_ |= 0x00000008;
         return this;
       }
 
@@ -994,7 +1015,6 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
       public Builder setBCKONCKLJAD(int value) {
         
         bCKONCKLJAD_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1003,7 +1023,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
        * @return This builder for chaining.
        */
       public Builder clearBCKONCKLJAD() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         bCKONCKLJAD_ = 0;
         onChanged();
         return this;
@@ -1026,7 +1046,6 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
       public Builder setStageId(int value) {
         
         stageId_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1035,7 +1054,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
        * @return This builder for chaining.
        */
       public Builder clearStageId() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        
         stageId_ = 0;
         onChanged();
         return this;
@@ -1073,18 +1092,7 @@ emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampCha
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new HOPFOECLFLA(input, extensionRegistry);
       }
     };
 

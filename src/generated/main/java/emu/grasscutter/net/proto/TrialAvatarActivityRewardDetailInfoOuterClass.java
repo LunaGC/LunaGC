@@ -73,6 +73,63 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private TrialAvatarActivityRewardDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 64: {
+
+              rewardId_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+
+              mCCAEONNHPH_ = input.readBool();
+              break;
+            }
+            case 104: {
+
+              trialAvatarIndexId_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+
+              jNEMHMEMNEB_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TrialAvatarActivityRewardDetailInfoOuterClass.internal_static_TrialAvatarActivityRewardDetailInfo_descriptor;
@@ -87,7 +144,7 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
     }
 
     public static final int MCCAEONNHPH_FIELD_NUMBER = 12;
-    private boolean mCCAEONNHPH_ = false;
+    private boolean mCCAEONNHPH_;
     /**
      * <code>bool MCCAEONNHPH = 12;</code>
      * @return The mCCAEONNHPH.
@@ -98,7 +155,7 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
     }
 
     public static final int REWARD_ID_FIELD_NUMBER = 8;
-    private int rewardId_ = 0;
+    private int rewardId_;
     /**
      * <code>uint32 reward_id = 8;</code>
      * @return The rewardId.
@@ -109,7 +166,7 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
     }
 
     public static final int JNEMHMEMNEB_FIELD_NUMBER = 14;
-    private boolean jNEMHMEMNEB_ = false;
+    private boolean jNEMHMEMNEB_;
     /**
      * <code>bool JNEMHMEMNEB = 14;</code>
      * @return The jNEMHMEMNEB.
@@ -120,7 +177,7 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
     }
 
     public static final int TRIAL_AVATAR_INDEX_ID_FIELD_NUMBER = 13;
-    private int trialAvatarIndexId_ = 0;
+    private int trialAvatarIndexId_;
     /**
      * <code>uint32 trial_avatar_index_id = 13;</code>
      * @return The trialAvatarIndexId.
@@ -156,7 +213,7 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
       if (jNEMHMEMNEB_ != false) {
         output.writeBool(14, jNEMHMEMNEB_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -181,7 +238,7 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(14, jNEMHMEMNEB_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -204,7 +261,7 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
           != other.getJNEMHMEMNEB()) return false;
       if (getTrialAvatarIndexId()
           != other.getTrialAvatarIndexId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -225,7 +282,7 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
           getJNEMHMEMNEB());
       hash = (37 * hash) + TRIAL_AVATAR_INDEX_ID_FIELD_NUMBER;
       hash = (53 * hash) + getTrialAvatarIndexId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -346,22 +403,30 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TrialAvatarActivityRewardDetailInfoOuterClass.TrialAvatarActivityRewardDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         mCCAEONNHPH_ = false;
+
         rewardId_ = 0;
+
         jNEMHMEMNEB_ = false;
+
         trialAvatarIndexId_ = 0;
+
         return this;
       }
 
@@ -388,25 +453,12 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.TrialAvatarActivityRewardDetailInfoOuterClass.TrialAvatarActivityRewardDetailInfo buildPartial() {
         emu.grasscutter.net.proto.TrialAvatarActivityRewardDetailInfoOuterClass.TrialAvatarActivityRewardDetailInfo result = new emu.grasscutter.net.proto.TrialAvatarActivityRewardDetailInfoOuterClass.TrialAvatarActivityRewardDetailInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.mCCAEONNHPH_ = mCCAEONNHPH_;
+        result.rewardId_ = rewardId_;
+        result.jNEMHMEMNEB_ = jNEMHMEMNEB_;
+        result.trialAvatarIndexId_ = trialAvatarIndexId_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.TrialAvatarActivityRewardDetailInfoOuterClass.TrialAvatarActivityRewardDetailInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.mCCAEONNHPH_ = mCCAEONNHPH_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.rewardId_ = rewardId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.jNEMHMEMNEB_ = jNEMHMEMNEB_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.trialAvatarIndexId_ = trialAvatarIndexId_;
-        }
       }
 
       @java.lang.Override
@@ -465,7 +517,7 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
         if (other.getTrialAvatarIndexId() != 0) {
           setTrialAvatarIndexId(other.getTrialAvatarIndexId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -480,53 +532,19 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.TrialAvatarActivityRewardDetailInfoOuterClass.TrialAvatarActivityRewardDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 64: {
-                rewardId_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 64
-              case 96: {
-                mCCAEONNHPH_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 96
-              case 104: {
-                trialAvatarIndexId_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 104
-              case 112: {
-                jNEMHMEMNEB_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.TrialAvatarActivityRewardDetailInfoOuterClass.TrialAvatarActivityRewardDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private boolean mCCAEONNHPH_ ;
       /**
@@ -545,7 +563,6 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
       public Builder setMCCAEONNHPH(boolean value) {
         
         mCCAEONNHPH_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -554,7 +571,7 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMCCAEONNHPH() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         mCCAEONNHPH_ = false;
         onChanged();
         return this;
@@ -577,7 +594,6 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
       public Builder setRewardId(int value) {
         
         rewardId_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -586,7 +602,7 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearRewardId() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         rewardId_ = 0;
         onChanged();
         return this;
@@ -609,7 +625,6 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
       public Builder setJNEMHMEMNEB(boolean value) {
         
         jNEMHMEMNEB_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -618,7 +633,7 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearJNEMHMEMNEB() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         jNEMHMEMNEB_ = false;
         onChanged();
         return this;
@@ -641,7 +656,6 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
       public Builder setTrialAvatarIndexId(int value) {
         
         trialAvatarIndexId_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -650,7 +664,7 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTrialAvatarIndexId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         trialAvatarIndexId_ = 0;
         onChanged();
         return this;
@@ -688,18 +702,7 @@ public final class TrialAvatarActivityRewardDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new TrialAvatarActivityRewardDetailInfo(input, extensionRegistry);
       }
     };
 

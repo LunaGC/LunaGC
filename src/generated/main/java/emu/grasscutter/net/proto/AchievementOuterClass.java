@@ -19,6 +19,10 @@ public final class AchievementOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name: JPGOFPINCMO &gt; Status
+     * </pre>
+     *
      * <code>uint32 cur_progress = 2;</code>
      * @return The curProgress.
      */
@@ -164,6 +168,10 @@ public final class AchievementOuterClass {
     public static final int CUR_PROGRESS_FIELD_NUMBER = 2;
     private int curProgress_;
     /**
+     * <pre>
+     * Name: JPGOFPINCMO &gt; Status
+     * </pre>
+     *
      * <code>uint32 cur_progress = 2;</code>
      * @return The curProgress.
      */
@@ -599,6 +607,10 @@ public final class AchievementOuterClass {
 
       private int curProgress_ ;
       /**
+       * <pre>
+       * Name: JPGOFPINCMO &gt; Status
+       * </pre>
+       *
        * <code>uint32 cur_progress = 2;</code>
        * @return The curProgress.
        */
@@ -607,6 +619,10 @@ public final class AchievementOuterClass {
         return curProgress_;
       }
       /**
+       * <pre>
+       * Name: JPGOFPINCMO &gt; Status
+       * </pre>
+       *
        * <code>uint32 cur_progress = 2;</code>
        * @param value The curProgress to set.
        * @return This builder for chaining.
@@ -618,6 +634,10 @@ public final class AchievementOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name: JPGOFPINCMO &gt; Status
+       * </pre>
+       *
        * <code>uint32 cur_progress = 2;</code>
        * @return This builder for chaining.
        */

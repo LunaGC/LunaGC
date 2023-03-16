@@ -121,6 +121,131 @@ public final class OMGFECMPJFAOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private OMGFECMPJFA(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+
+              chooseSkillNo_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                gHNFNOGNKJN_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              gHNFNOGNKJN_.addInt(input.readUInt32());
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                gHNFNOGNKJN_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                gHNFNOGNKJN_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 40: {
+
+              jGBBIPCIMHN_ = input.readBool();
+              break;
+            }
+            case 56: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                nHFIIJNMKGB_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              nHFIIJNMKGB_.addInt(input.readUInt32());
+              break;
+            }
+            case 58: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                nHFIIJNMKGB_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                nHFIIJNMKGB_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 72: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                avatarIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              avatarIdList_.addInt(input.readUInt32());
+              break;
+            }
+            case 74: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                avatarIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                avatarIdList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 88: {
+
+              playerUid_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          gHNFNOGNKJN_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          nHFIIJNMKGB_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          avatarIdList_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.internal_static_OMGFECMPJFA_descriptor;
@@ -135,7 +260,7 @@ public final class OMGFECMPJFAOuterClass {
     }
 
     public static final int PLAYER_UID_FIELD_NUMBER = 11;
-    private int playerUid_ = 0;
+    private int playerUid_;
     /**
      * <code>uint32 player_uid = 11;</code>
      * @return The playerUid.
@@ -146,7 +271,6 @@ public final class OMGFECMPJFAOuterClass {
     }
 
     public static final int GHNFNOGNKJN_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList gHNFNOGNKJN_;
     /**
      * <code>repeated uint32 GHNFNOGNKJN = 3;</code>
@@ -175,7 +299,7 @@ public final class OMGFECMPJFAOuterClass {
     private int gHNFNOGNKJNMemoizedSerializedSize = -1;
 
     public static final int CHOOSE_SKILL_NO_FIELD_NUMBER = 2;
-    private int chooseSkillNo_ = 0;
+    private int chooseSkillNo_;
     /**
      * <code>uint32 choose_skill_no = 2;</code>
      * @return The chooseSkillNo.
@@ -186,7 +310,6 @@ public final class OMGFECMPJFAOuterClass {
     }
 
     public static final int AVATAR_ID_LIST_FIELD_NUMBER = 9;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList avatarIdList_;
     /**
      * <code>repeated uint32 avatar_id_list = 9;</code>
@@ -215,7 +338,6 @@ public final class OMGFECMPJFAOuterClass {
     private int avatarIdListMemoizedSerializedSize = -1;
 
     public static final int NHFIIJNMKGB_FIELD_NUMBER = 7;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList nHFIIJNMKGB_;
     /**
      * <code>repeated uint32 NHFIIJNMKGB = 7;</code>
@@ -244,7 +366,7 @@ public final class OMGFECMPJFAOuterClass {
     private int nHFIIJNMKGBMemoizedSerializedSize = -1;
 
     public static final int JGBBIPCIMHN_FIELD_NUMBER = 5;
-    private boolean jGBBIPCIMHN_ = false;
+    private boolean jGBBIPCIMHN_;
     /**
      * <code>bool JGBBIPCIMHN = 5;</code>
      * @return The jGBBIPCIMHN.
@@ -299,7 +421,7 @@ public final class OMGFECMPJFAOuterClass {
       if (playerUid_ != 0) {
         output.writeUInt32(11, playerUid_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -362,7 +484,7 @@ public final class OMGFECMPJFAOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(11, playerUid_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -389,7 +511,7 @@ public final class OMGFECMPJFAOuterClass {
           .equals(other.getNHFIIJNMKGBList())) return false;
       if (getJGBBIPCIMHN()
           != other.getJGBBIPCIMHN()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -419,7 +541,7 @@ public final class OMGFECMPJFAOuterClass {
       hash = (37 * hash) + JGBBIPCIMHN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getJGBBIPCIMHN());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -540,24 +662,34 @@ public final class OMGFECMPJFAOuterClass {
 
       // Construct using emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         playerUid_ = 0;
+
         gHNFNOGNKJN_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         chooseSkillNo_ = 0;
+
         avatarIdList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         nHFIIJNMKGB_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         jGBBIPCIMHN_ = false;
+
         return this;
       }
 
@@ -584,41 +716,27 @@ public final class OMGFECMPJFAOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA buildPartial() {
         emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA result = new emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        int from_bitField0_ = bitField0_;
+        result.playerUid_ = playerUid_;
+        if (((bitField0_ & 0x00000001) != 0)) {
           gHNFNOGNKJN_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.gHNFNOGNKJN_ = gHNFNOGNKJN_;
-        if (((bitField0_ & 0x00000008) != 0)) {
+        result.chooseSkillNo_ = chooseSkillNo_;
+        if (((bitField0_ & 0x00000002) != 0)) {
           avatarIdList_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.avatarIdList_ = avatarIdList_;
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           nHFIIJNMKGB_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.nHFIIJNMKGB_ = nHFIIJNMKGB_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.playerUid_ = playerUid_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.chooseSkillNo_ = chooseSkillNo_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.jGBBIPCIMHN_ = jGBBIPCIMHN_;
-        }
+        result.jGBBIPCIMHN_ = jGBBIPCIMHN_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -671,7 +789,7 @@ public final class OMGFECMPJFAOuterClass {
         if (!other.gHNFNOGNKJN_.isEmpty()) {
           if (gHNFNOGNKJN_.isEmpty()) {
             gHNFNOGNKJN_ = other.gHNFNOGNKJN_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureGHNFNOGNKJNIsMutable();
             gHNFNOGNKJN_.addAll(other.gHNFNOGNKJN_);
@@ -684,7 +802,7 @@ public final class OMGFECMPJFAOuterClass {
         if (!other.avatarIdList_.isEmpty()) {
           if (avatarIdList_.isEmpty()) {
             avatarIdList_ = other.avatarIdList_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureAvatarIdListIsMutable();
             avatarIdList_.addAll(other.avatarIdList_);
@@ -694,7 +812,7 @@ public final class OMGFECMPJFAOuterClass {
         if (!other.nHFIIJNMKGB_.isEmpty()) {
           if (nHFIIJNMKGB_.isEmpty()) {
             nHFIIJNMKGB_ = other.nHFIIJNMKGB_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureNHFIIJNMKGBIsMutable();
             nHFIIJNMKGB_.addAll(other.nHFIIJNMKGB_);
@@ -704,7 +822,7 @@ public final class OMGFECMPJFAOuterClass {
         if (other.getJGBBIPCIMHN() != false) {
           setJGBBIPCIMHN(other.getJGBBIPCIMHN());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -719,93 +837,17 @@ public final class OMGFECMPJFAOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                chooseSkillNo_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 16
-              case 24: {
-                int v = input.readUInt32();
-                ensureGHNFNOGNKJNIsMutable();
-                gHNFNOGNKJN_.addInt(v);
-                break;
-              } // case 24
-              case 26: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureGHNFNOGNKJNIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  gHNFNOGNKJN_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 26
-              case 40: {
-                jGBBIPCIMHN_ = input.readBool();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 40
-              case 56: {
-                int v = input.readUInt32();
-                ensureNHFIIJNMKGBIsMutable();
-                nHFIIJNMKGB_.addInt(v);
-                break;
-              } // case 56
-              case 58: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureNHFIIJNMKGBIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  nHFIIJNMKGB_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 58
-              case 72: {
-                int v = input.readUInt32();
-                ensureAvatarIdListIsMutable();
-                avatarIdList_.addInt(v);
-                break;
-              } // case 72
-              case 74: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureAvatarIdListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  avatarIdList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 74
-              case 88: {
-                playerUid_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 88
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -827,7 +869,6 @@ public final class OMGFECMPJFAOuterClass {
       public Builder setPlayerUid(int value) {
         
         playerUid_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -836,7 +877,7 @@ public final class OMGFECMPJFAOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPlayerUid() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         playerUid_ = 0;
         onChanged();
         return this;
@@ -844,10 +885,10 @@ public final class OMGFECMPJFAOuterClass {
 
       private com.google.protobuf.Internal.IntList gHNFNOGNKJN_ = emptyIntList();
       private void ensureGHNFNOGNKJNIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           gHNFNOGNKJN_ = mutableCopy(gHNFNOGNKJN_);
-          bitField0_ |= 0x00000002;
-        }
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
        * <code>repeated uint32 GHNFNOGNKJN = 3;</code>
@@ -855,7 +896,7 @@ public final class OMGFECMPJFAOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getGHNFNOGNKJNList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
+        return ((bitField0_ & 0x00000001) != 0) ?
                  java.util.Collections.unmodifiableList(gHNFNOGNKJN_) : gHNFNOGNKJN_;
       }
       /**
@@ -881,7 +922,6 @@ public final class OMGFECMPJFAOuterClass {
        */
       public Builder setGHNFNOGNKJN(
           int index, int value) {
-        
         ensureGHNFNOGNKJNIsMutable();
         gHNFNOGNKJN_.setInt(index, value);
         onChanged();
@@ -893,7 +933,6 @@ public final class OMGFECMPJFAOuterClass {
        * @return This builder for chaining.
        */
       public Builder addGHNFNOGNKJN(int value) {
-        
         ensureGHNFNOGNKJNIsMutable();
         gHNFNOGNKJN_.addInt(value);
         onChanged();
@@ -918,7 +957,7 @@ public final class OMGFECMPJFAOuterClass {
        */
       public Builder clearGHNFNOGNKJN() {
         gHNFNOGNKJN_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -940,7 +979,6 @@ public final class OMGFECMPJFAOuterClass {
       public Builder setChooseSkillNo(int value) {
         
         chooseSkillNo_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -949,7 +987,7 @@ public final class OMGFECMPJFAOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearChooseSkillNo() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         chooseSkillNo_ = 0;
         onChanged();
         return this;
@@ -957,10 +995,10 @@ public final class OMGFECMPJFAOuterClass {
 
       private com.google.protobuf.Internal.IntList avatarIdList_ = emptyIntList();
       private void ensureAvatarIdListIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           avatarIdList_ = mutableCopy(avatarIdList_);
-          bitField0_ |= 0x00000008;
-        }
+          bitField0_ |= 0x00000002;
+         }
       }
       /**
        * <code>repeated uint32 avatar_id_list = 9;</code>
@@ -968,7 +1006,7 @@ public final class OMGFECMPJFAOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getAvatarIdListList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
+        return ((bitField0_ & 0x00000002) != 0) ?
                  java.util.Collections.unmodifiableList(avatarIdList_) : avatarIdList_;
       }
       /**
@@ -994,7 +1032,6 @@ public final class OMGFECMPJFAOuterClass {
        */
       public Builder setAvatarIdList(
           int index, int value) {
-        
         ensureAvatarIdListIsMutable();
         avatarIdList_.setInt(index, value);
         onChanged();
@@ -1006,7 +1043,6 @@ public final class OMGFECMPJFAOuterClass {
        * @return This builder for chaining.
        */
       public Builder addAvatarIdList(int value) {
-        
         ensureAvatarIdListIsMutable();
         avatarIdList_.addInt(value);
         onChanged();
@@ -1031,17 +1067,17 @@ public final class OMGFECMPJFAOuterClass {
        */
       public Builder clearAvatarIdList() {
         avatarIdList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
 
       private com.google.protobuf.Internal.IntList nHFIIJNMKGB_ = emptyIntList();
       private void ensureNHFIIJNMKGBIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           nHFIIJNMKGB_ = mutableCopy(nHFIIJNMKGB_);
-          bitField0_ |= 0x00000010;
-        }
+          bitField0_ |= 0x00000004;
+         }
       }
       /**
        * <code>repeated uint32 NHFIIJNMKGB = 7;</code>
@@ -1049,7 +1085,7 @@ public final class OMGFECMPJFAOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getNHFIIJNMKGBList() {
-        return ((bitField0_ & 0x00000010) != 0) ?
+        return ((bitField0_ & 0x00000004) != 0) ?
                  java.util.Collections.unmodifiableList(nHFIIJNMKGB_) : nHFIIJNMKGB_;
       }
       /**
@@ -1075,7 +1111,6 @@ public final class OMGFECMPJFAOuterClass {
        */
       public Builder setNHFIIJNMKGB(
           int index, int value) {
-        
         ensureNHFIIJNMKGBIsMutable();
         nHFIIJNMKGB_.setInt(index, value);
         onChanged();
@@ -1087,7 +1122,6 @@ public final class OMGFECMPJFAOuterClass {
        * @return This builder for chaining.
        */
       public Builder addNHFIIJNMKGB(int value) {
-        
         ensureNHFIIJNMKGBIsMutable();
         nHFIIJNMKGB_.addInt(value);
         onChanged();
@@ -1112,7 +1146,7 @@ public final class OMGFECMPJFAOuterClass {
        */
       public Builder clearNHFIIJNMKGB() {
         nHFIIJNMKGB_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1134,7 +1168,6 @@ public final class OMGFECMPJFAOuterClass {
       public Builder setJGBBIPCIMHN(boolean value) {
         
         jGBBIPCIMHN_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1143,7 +1176,7 @@ public final class OMGFECMPJFAOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearJGBBIPCIMHN() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        
         jGBBIPCIMHN_ = false;
         onChanged();
         return this;
@@ -1181,18 +1214,7 @@ public final class OMGFECMPJFAOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new OMGFECMPJFA(input, extensionRegistry);
       }
     };
 

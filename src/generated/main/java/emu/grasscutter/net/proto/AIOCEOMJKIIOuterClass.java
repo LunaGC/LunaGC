@@ -92,6 +92,80 @@ public final class AIOCEOMJKIIOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private AIOCEOMJKII(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                kHFBDFLDPKM_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              kHFBDFLDPKM_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry));
+              break;
+            }
+            case 88: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                oIIEOJDNKJG_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              oIIEOJDNKJG_.addInt(input.readUInt32());
+              break;
+            }
+            case 90: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                oIIEOJDNKJG_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                oIIEOJDNKJG_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          kHFBDFLDPKM_ = java.util.Collections.unmodifiableList(kHFBDFLDPKM_);
+        }
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          oIIEOJDNKJG_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.internal_static_AIOCEOMJKII_descriptor;
@@ -106,7 +180,6 @@ public final class AIOCEOMJKIIOuterClass {
     }
 
     public static final int OIIEOJDNKJG_FIELD_NUMBER = 11;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList oIIEOJDNKJG_;
     /**
      * <code>repeated uint32 OIIEOJDNKJG = 11;</code>
@@ -135,7 +208,6 @@ public final class AIOCEOMJKIIOuterClass {
     private int oIIEOJDNKJGMemoizedSerializedSize = -1;
 
     public static final int KHFBDFLDPKM_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> kHFBDFLDPKM_;
     /**
      * <code>repeated .ItemParam KHFBDFLDPKM = 4;</code>
@@ -200,7 +272,7 @@ public final class AIOCEOMJKIIOuterClass {
       for (int i = 0; i < oIIEOJDNKJG_.size(); i++) {
         output.writeUInt32NoTag(oIIEOJDNKJG_.getInt(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -227,7 +299,7 @@ public final class AIOCEOMJKIIOuterClass {
         }
         oIIEOJDNKJGMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -246,7 +318,7 @@ public final class AIOCEOMJKIIOuterClass {
           .equals(other.getOIIEOJDNKJGList())) return false;
       if (!getKHFBDFLDPKMList()
           .equals(other.getKHFBDFLDPKMList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -265,7 +337,7 @@ public final class AIOCEOMJKIIOuterClass {
         hash = (37 * hash) + KHFBDFLDPKM_FIELD_NUMBER;
         hash = (53 * hash) + getKHFBDFLDPKMList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -386,26 +458,31 @@ public final class AIOCEOMJKIIOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getKHFBDFLDPKMFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         oIIEOJDNKJG_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (kHFBDFLDPKMBuilder_ == null) {
           kHFBDFLDPKM_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          kHFBDFLDPKM_ = null;
           kHFBDFLDPKMBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -432,13 +509,7 @@ public final class AIOCEOMJKIIOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII buildPartial() {
         emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII result = new emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII result) {
+        int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
           oIIEOJDNKJG_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -453,10 +524,8 @@ public final class AIOCEOMJKIIOuterClass {
         } else {
           result.kHFBDFLDPKM_ = kHFBDFLDPKMBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII result) {
-        int from_bitField0_ = bitField0_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -539,7 +608,7 @@ public final class AIOCEOMJKIIOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -554,59 +623,17 @@ public final class AIOCEOMJKIIOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 34: {
-                emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(),
-                        extensionRegistry);
-                if (kHFBDFLDPKMBuilder_ == null) {
-                  ensureKHFBDFLDPKMIsMutable();
-                  kHFBDFLDPKM_.add(m);
-                } else {
-                  kHFBDFLDPKMBuilder_.addMessage(m);
-                }
-                break;
-              } // case 34
-              case 88: {
-                int v = input.readUInt32();
-                ensureOIIEOJDNKJGIsMutable();
-                oIIEOJDNKJG_.addInt(v);
-                break;
-              } // case 88
-              case 90: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureOIIEOJDNKJGIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  oIIEOJDNKJG_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 90
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -616,7 +643,7 @@ public final class AIOCEOMJKIIOuterClass {
         if (!((bitField0_ & 0x00000001) != 0)) {
           oIIEOJDNKJG_ = mutableCopy(oIIEOJDNKJG_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
       /**
        * <code>repeated uint32 OIIEOJDNKJG = 11;</code>
@@ -650,7 +677,6 @@ public final class AIOCEOMJKIIOuterClass {
        */
       public Builder setOIIEOJDNKJG(
           int index, int value) {
-        
         ensureOIIEOJDNKJGIsMutable();
         oIIEOJDNKJG_.setInt(index, value);
         onChanged();
@@ -662,7 +688,6 @@ public final class AIOCEOMJKIIOuterClass {
        * @return This builder for chaining.
        */
       public Builder addOIIEOJDNKJG(int value) {
-        
         ensureOIIEOJDNKJGIsMutable();
         oIIEOJDNKJG_.addInt(value);
         onChanged();
@@ -964,18 +989,7 @@ public final class AIOCEOMJKIIOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new AIOCEOMJKII(input, extensionRegistry);
       }
     };
 

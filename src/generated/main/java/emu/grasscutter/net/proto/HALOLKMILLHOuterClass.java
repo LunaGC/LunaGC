@@ -110,6 +110,95 @@ public final class HALOLKMILLHOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private HALOLKMILLH(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                takenRewardIndexList_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              takenRewardIndexList_.addInt(input.readUInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                takenRewardIndexList_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                takenRewardIndexList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                hKPHDELIAPJ_ = new java.util.ArrayList<emu.grasscutter.net.proto.CMILIIPNCIEOuterClass.CMILIIPNCIE>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              hKPHDELIAPJ_.add(
+                  input.readMessage(emu.grasscutter.net.proto.CMILIIPNCIEOuterClass.CMILIIPNCIE.parser(), extensionRegistry));
+              break;
+            }
+            case 64: {
+
+              lastDifficultyId_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            case 112: {
+
+              openTime_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          takenRewardIndexList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          hKPHDELIAPJ_ = java.util.Collections.unmodifiableList(hKPHDELIAPJ_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.HALOLKMILLHOuterClass.internal_static_HALOLKMILLH_descriptor;
@@ -124,7 +213,6 @@ public final class HALOLKMILLHOuterClass {
     }
 
     public static final int HKPHDELIAPJ_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.CMILIIPNCIEOuterClass.CMILIIPNCIE> hKPHDELIAPJ_;
     /**
      * <code>repeated .CMILIIPNCIE HKPHDELIAPJ = 5;</code>
@@ -165,7 +253,7 @@ public final class HALOLKMILLHOuterClass {
     }
 
     public static final int OPEN_TIME_FIELD_NUMBER = 14;
-    private int openTime_ = 0;
+    private int openTime_;
     /**
      * <code>uint32 open_time = 14;</code>
      * @return The openTime.
@@ -176,7 +264,6 @@ public final class HALOLKMILLHOuterClass {
     }
 
     public static final int TAKEN_REWARD_INDEX_LIST_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList takenRewardIndexList_;
     /**
      * <code>repeated uint32 taken_reward_index_list = 2;</code>
@@ -205,7 +292,7 @@ public final class HALOLKMILLHOuterClass {
     private int takenRewardIndexListMemoizedSerializedSize = -1;
 
     public static final int LAST_DIFFICULTY_ID_FIELD_NUMBER = 8;
-    private int lastDifficultyId_ = 0;
+    private int lastDifficultyId_;
     /**
      * <code>uint32 last_difficulty_id = 8;</code>
      * @return The lastDifficultyId.
@@ -216,7 +303,7 @@ public final class HALOLKMILLHOuterClass {
     }
 
     public static final int IS_OPEN_FIELD_NUMBER = 10;
-    private boolean isOpen_ = false;
+    private boolean isOpen_;
     /**
      * <code>bool is_open = 10;</code>
      * @return The isOpen.
@@ -260,7 +347,7 @@ public final class HALOLKMILLHOuterClass {
       if (openTime_ != 0) {
         output.writeUInt32(14, openTime_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -299,7 +386,7 @@ public final class HALOLKMILLHOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(14, openTime_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -324,7 +411,7 @@ public final class HALOLKMILLHOuterClass {
           != other.getLastDifficultyId()) return false;
       if (getIsOpen()
           != other.getIsOpen()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -350,7 +437,7 @@ public final class HALOLKMILLHOuterClass {
       hash = (37 * hash) + IS_OPEN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsOpen());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -471,29 +558,37 @@ public final class HALOLKMILLHOuterClass {
 
       // Construct using emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getHKPHDELIAPJFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         if (hKPHDELIAPJBuilder_ == null) {
           hKPHDELIAPJ_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          hKPHDELIAPJ_ = null;
           hKPHDELIAPJBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         openTime_ = 0;
+
         takenRewardIndexList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         lastDifficultyId_ = 0;
+
         isOpen_ = false;
+
         return this;
       }
 
@@ -520,13 +615,7 @@ public final class HALOLKMILLHOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH buildPartial() {
         emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH result = new emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH result) {
+        int from_bitField0_ = bitField0_;
         if (hKPHDELIAPJBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             hKPHDELIAPJ_ = java.util.Collections.unmodifiableList(hKPHDELIAPJ_);
@@ -536,24 +625,16 @@ public final class HALOLKMILLHOuterClass {
         } else {
           result.hKPHDELIAPJ_ = hKPHDELIAPJBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) != 0)) {
+        result.openTime_ = openTime_;
+        if (((bitField0_ & 0x00000002) != 0)) {
           takenRewardIndexList_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.takenRewardIndexList_ = takenRewardIndexList_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.openTime_ = openTime_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.lastDifficultyId_ = lastDifficultyId_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.isOpen_ = isOpen_;
-        }
+        result.lastDifficultyId_ = lastDifficultyId_;
+        result.isOpen_ = isOpen_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -632,7 +713,7 @@ public final class HALOLKMILLHOuterClass {
         if (!other.takenRewardIndexList_.isEmpty()) {
           if (takenRewardIndexList_.isEmpty()) {
             takenRewardIndexList_ = other.takenRewardIndexList_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureTakenRewardIndexListIsMutable();
             takenRewardIndexList_.addAll(other.takenRewardIndexList_);
@@ -645,7 +726,7 @@ public final class HALOLKMILLHOuterClass {
         if (other.getIsOpen() != false) {
           setIsOpen(other.getIsOpen());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -660,74 +741,17 @@ public final class HALOLKMILLHOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                int v = input.readUInt32();
-                ensureTakenRewardIndexListIsMutable();
-                takenRewardIndexList_.addInt(v);
-                break;
-              } // case 16
-              case 18: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureTakenRewardIndexListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  takenRewardIndexList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 18
-              case 42: {
-                emu.grasscutter.net.proto.CMILIIPNCIEOuterClass.CMILIIPNCIE m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.CMILIIPNCIEOuterClass.CMILIIPNCIE.parser(),
-                        extensionRegistry);
-                if (hKPHDELIAPJBuilder_ == null) {
-                  ensureHKPHDELIAPJIsMutable();
-                  hKPHDELIAPJ_.add(m);
-                } else {
-                  hKPHDELIAPJBuilder_.addMessage(m);
-                }
-                break;
-              } // case 42
-              case 64: {
-                lastDifficultyId_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 64
-              case 80: {
-                isOpen_ = input.readBool();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 80
-              case 112: {
-                openTime_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.HALOLKMILLHOuterClass.HALOLKMILLH) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -989,7 +1013,6 @@ public final class HALOLKMILLHOuterClass {
       public Builder setOpenTime(int value) {
         
         openTime_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -998,7 +1021,7 @@ public final class HALOLKMILLHOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOpenTime() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         openTime_ = 0;
         onChanged();
         return this;
@@ -1006,10 +1029,10 @@ public final class HALOLKMILLHOuterClass {
 
       private com.google.protobuf.Internal.IntList takenRewardIndexList_ = emptyIntList();
       private void ensureTakenRewardIndexListIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           takenRewardIndexList_ = mutableCopy(takenRewardIndexList_);
-          bitField0_ |= 0x00000004;
-        }
+          bitField0_ |= 0x00000002;
+         }
       }
       /**
        * <code>repeated uint32 taken_reward_index_list = 2;</code>
@@ -1017,7 +1040,7 @@ public final class HALOLKMILLHOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getTakenRewardIndexListList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
+        return ((bitField0_ & 0x00000002) != 0) ?
                  java.util.Collections.unmodifiableList(takenRewardIndexList_) : takenRewardIndexList_;
       }
       /**
@@ -1043,7 +1066,6 @@ public final class HALOLKMILLHOuterClass {
        */
       public Builder setTakenRewardIndexList(
           int index, int value) {
-        
         ensureTakenRewardIndexListIsMutable();
         takenRewardIndexList_.setInt(index, value);
         onChanged();
@@ -1055,7 +1077,6 @@ public final class HALOLKMILLHOuterClass {
        * @return This builder for chaining.
        */
       public Builder addTakenRewardIndexList(int value) {
-        
         ensureTakenRewardIndexListIsMutable();
         takenRewardIndexList_.addInt(value);
         onChanged();
@@ -1080,7 +1101,7 @@ public final class HALOLKMILLHOuterClass {
        */
       public Builder clearTakenRewardIndexList() {
         takenRewardIndexList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1102,7 +1123,6 @@ public final class HALOLKMILLHOuterClass {
       public Builder setLastDifficultyId(int value) {
         
         lastDifficultyId_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1111,7 +1131,7 @@ public final class HALOLKMILLHOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLastDifficultyId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         lastDifficultyId_ = 0;
         onChanged();
         return this;
@@ -1134,7 +1154,6 @@ public final class HALOLKMILLHOuterClass {
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1143,7 +1162,7 @@ public final class HALOLKMILLHOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         isOpen_ = false;
         onChanged();
         return this;
@@ -1181,18 +1200,7 @@ public final class HALOLKMILLHOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new HALOLKMILLH(input, extensionRegistry);
       }
     };
 

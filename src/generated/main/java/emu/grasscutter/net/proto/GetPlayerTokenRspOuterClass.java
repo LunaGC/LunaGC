@@ -240,12 +240,20 @@ public final class GetPlayerTokenRspOuterClass {
         getAccountUidBytes();
 
     /**
-     * <code>uint32 BGELCCHCJDG = 1043;</code>
-     * @return The bGELCCHCJDG.
+     * <pre>
+     *BGELCCHCJDG
+     * </pre>
+     *
+     * <code>uint32 cloudClientIp = 1043;</code>
+     * @return The cloudClientIp.
      */
-    int getBGELCCHCJDG();
+    int getCloudClientIp();
 
     /**
+     * <pre>
+     * LBCGKJHALNG
+     * </pre>
+     *
      * <code>uint32 blackUidEndTime = 12;</code>
      * @return The blackUidEndTime.
      */
@@ -514,7 +522,7 @@ public final class GetPlayerTokenRspOuterClass {
             }
             case 8344: {
 
-              bGELCCHCJDG_ = input.readUInt32();
+              cloudClientIp_ = input.readUInt32();
               break;
             }
             case 8904: {
@@ -1137,20 +1145,28 @@ public final class GetPlayerTokenRspOuterClass {
       }
     }
 
-    public static final int BGELCCHCJDG_FIELD_NUMBER = 1043;
-    private int bGELCCHCJDG_;
+    public static final int CLOUDCLIENTIP_FIELD_NUMBER = 1043;
+    private int cloudClientIp_;
     /**
-     * <code>uint32 BGELCCHCJDG = 1043;</code>
-     * @return The bGELCCHCJDG.
+     * <pre>
+     *BGELCCHCJDG
+     * </pre>
+     *
+     * <code>uint32 cloudClientIp = 1043;</code>
+     * @return The cloudClientIp.
      */
     @java.lang.Override
-    public int getBGELCCHCJDG() {
-      return bGELCCHCJDG_;
+    public int getCloudClientIp() {
+      return cloudClientIp_;
     }
 
     public static final int BLACKUIDENDTIME_FIELD_NUMBER = 12;
     private int blackUidEndTime_;
     /**
+     * <pre>
+     * LBCGKJHALNG
+     * </pre>
+     *
      * <code>uint32 blackUidEndTime = 12;</code>
      * @return The blackUidEndTime.
      */
@@ -1363,8 +1379,8 @@ public final class GetPlayerTokenRspOuterClass {
       if (regPlatform_ != 0) {
         output.writeUInt32(751, regPlatform_);
       }
-      if (bGELCCHCJDG_ != 0) {
-        output.writeUInt32(1043, bGELCCHCJDG_);
+      if (cloudClientIp_ != 0) {
+        output.writeUInt32(1043, cloudClientIp_);
       }
       if (bMOLHAGDMHP_ != false) {
         output.writeBool(1113, bMOLHAGDMHP_);
@@ -1495,9 +1511,9 @@ public final class GetPlayerTokenRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(751, regPlatform_);
       }
-      if (bGELCCHCJDG_ != 0) {
+      if (cloudClientIp_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1043, bGELCCHCJDG_);
+          .computeUInt32Size(1043, cloudClientIp_);
       }
       if (bMOLHAGDMHP_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -1590,8 +1606,8 @@ public final class GetPlayerTokenRspOuterClass {
           .equals(other.getSecretKey())) return false;
       if (!getAccountUid()
           .equals(other.getAccountUid())) return false;
-      if (getBGELCCHCJDG()
-          != other.getBGELCCHCJDG()) return false;
+      if (getCloudClientIp()
+          != other.getCloudClientIp()) return false;
       if (getBlackUidEndTime()
           != other.getBlackUidEndTime()) return false;
       if (!getClientIpStr()
@@ -1675,8 +1691,8 @@ public final class GetPlayerTokenRspOuterClass {
       hash = (53 * hash) + getSecretKey().hashCode();
       hash = (37 * hash) + ACCOUNT_UID_FIELD_NUMBER;
       hash = (53 * hash) + getAccountUid().hashCode();
-      hash = (37 * hash) + BGELCCHCJDG_FIELD_NUMBER;
-      hash = (53 * hash) + getBGELCCHCJDG();
+      hash = (37 * hash) + CLOUDCLIENTIP_FIELD_NUMBER;
+      hash = (53 * hash) + getCloudClientIp();
       hash = (37 * hash) + BLACKUIDENDTIME_FIELD_NUMBER;
       hash = (53 * hash) + getBlackUidEndTime();
       hash = (37 * hash) + CLIENT_IP_STR_FIELD_NUMBER;
@@ -1879,7 +1895,7 @@ public final class GetPlayerTokenRspOuterClass {
 
         accountUid_ = "";
 
-        bGELCCHCJDG_ = 0;
+        cloudClientIp_ = 0;
 
         blackUidEndTime_ = 0;
 
@@ -1952,7 +1968,7 @@ public final class GetPlayerTokenRspOuterClass {
         result.retcode_ = retcode_;
         result.secretKey_ = secretKey_;
         result.accountUid_ = accountUid_;
-        result.bGELCCHCJDG_ = bGELCCHCJDG_;
+        result.cloudClientIp_ = cloudClientIp_;
         result.blackUidEndTime_ = blackUidEndTime_;
         result.clientIpStr_ = clientIpStr_;
         result.regPlatform_ = regPlatform_;
@@ -2104,8 +2120,8 @@ public final class GetPlayerTokenRspOuterClass {
           accountUid_ = other.accountUid_;
           onChanged();
         }
-        if (other.getBGELCCHCJDG() != 0) {
-          setBGELCCHCJDG(other.getBGELCCHCJDG());
+        if (other.getCloudClientIp() != 0) {
+          setCloudClientIp(other.getCloudClientIp());
         }
         if (other.getBlackUidEndTime() != 0) {
           setBlackUidEndTime(other.getBlackUidEndTime());
@@ -3419,39 +3435,55 @@ public final class GetPlayerTokenRspOuterClass {
         return this;
       }
 
-      private int bGELCCHCJDG_ ;
+      private int cloudClientIp_ ;
       /**
-       * <code>uint32 BGELCCHCJDG = 1043;</code>
-       * @return The bGELCCHCJDG.
+       * <pre>
+       *BGELCCHCJDG
+       * </pre>
+       *
+       * <code>uint32 cloudClientIp = 1043;</code>
+       * @return The cloudClientIp.
        */
       @java.lang.Override
-      public int getBGELCCHCJDG() {
-        return bGELCCHCJDG_;
+      public int getCloudClientIp() {
+        return cloudClientIp_;
       }
       /**
-       * <code>uint32 BGELCCHCJDG = 1043;</code>
-       * @param value The bGELCCHCJDG to set.
+       * <pre>
+       *BGELCCHCJDG
+       * </pre>
+       *
+       * <code>uint32 cloudClientIp = 1043;</code>
+       * @param value The cloudClientIp to set.
        * @return This builder for chaining.
        */
-      public Builder setBGELCCHCJDG(int value) {
+      public Builder setCloudClientIp(int value) {
         
-        bGELCCHCJDG_ = value;
+        cloudClientIp_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 BGELCCHCJDG = 1043;</code>
+       * <pre>
+       *BGELCCHCJDG
+       * </pre>
+       *
+       * <code>uint32 cloudClientIp = 1043;</code>
        * @return This builder for chaining.
        */
-      public Builder clearBGELCCHCJDG() {
+      public Builder clearCloudClientIp() {
         
-        bGELCCHCJDG_ = 0;
+        cloudClientIp_ = 0;
         onChanged();
         return this;
       }
 
       private int blackUidEndTime_ ;
       /**
+       * <pre>
+       * LBCGKJHALNG
+       * </pre>
+       *
        * <code>uint32 blackUidEndTime = 12;</code>
        * @return The blackUidEndTime.
        */
@@ -3460,6 +3492,10 @@ public final class GetPlayerTokenRspOuterClass {
         return blackUidEndTime_;
       }
       /**
+       * <pre>
+       * LBCGKJHALNG
+       * </pre>
+       *
        * <code>uint32 blackUidEndTime = 12;</code>
        * @param value The blackUidEndTime to set.
        * @return This builder for chaining.
@@ -3471,6 +3507,10 @@ public final class GetPlayerTokenRspOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * LBCGKJHALNG
+       * </pre>
+       *
        * <code>uint32 blackUidEndTime = 12;</code>
        * @return This builder for chaining.
        */
@@ -3850,7 +3890,7 @@ public final class GetPlayerTokenRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\027GetPlayerTokenRsp.proto\032\024StopServerInf" +
-      "o.proto\"\333\005\n\021GetPlayerTokenRsp\022\013\n\003uid\030\017 \001" +
+      "o.proto\"\335\005\n\021GetPlayerTokenRsp\022\013\n\003uid\030\017 \001" +
       "(\r\022\024\n\013BMOLHAGDMHP\030\331\010 \001(\010\022\014\n\003tag\030\213\013 \001(\r\022\033" +
       "\n\023security_cmd_buffer\030\t \001(\014\022\r\n\005token\030\001 \001" +
       "(\t\022\"\n\031client_version_random_key\030\271\001 \001(\t\022\025" +
@@ -3864,12 +3904,12 @@ public final class GetPlayerTokenRspOuterClass {
       "\n\017server_rand_key\030\221\017 \001(\t\022\026\n\016extra_bin_da" +
       "ta\030\004 \001(\014\022\013\n\003msg\030\r \001(\t\022\034\n\024is_proficient_p" +
       "layer\030\n \001(\010\022\017\n\007retcode\030\005 \001(\005\022\022\n\nsecret_k" +
-      "ey\030\007 \001(\t\022\023\n\013account_uid\030\003 \001(\t\022\024\n\013BGELCCH" +
-      "CJDG\030\223\010 \001(\r\022\027\n\017blackUidEndTime\030\014 \001(\r\022\026\n\r" +
-      "client_ip_str\030\233\014 \001(\t\022\025\n\014reg_platform\030\357\005 " +
-      "\001(\r\022\021\n\010birthday\030\366\n \001(\t\022%\n\013stop_server\030\364\004" +
-      " \001(\0132\017.StopServerInfoB\033\n\031emu.grasscutter" +
-      ".net.protob\006proto3"
+      "ey\030\007 \001(\t\022\023\n\013account_uid\030\003 \001(\t\022\026\n\rcloudCl" +
+      "ientIp\030\223\010 \001(\r\022\027\n\017blackUidEndTime\030\014 \001(\r\022\026" +
+      "\n\rclient_ip_str\030\233\014 \001(\t\022\025\n\014reg_platform\030\357" +
+      "\005 \001(\r\022\021\n\010birthday\030\366\n \001(\t\022%\n\013stop_server\030" +
+      "\364\004 \001(\0132\017.StopServerInfoB\033\n\031emu.grasscutt" +
+      "er.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3881,7 +3921,7 @@ public final class GetPlayerTokenRspOuterClass {
     internal_static_GetPlayerTokenRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetPlayerTokenRsp_descriptor,
-        new java.lang.String[] { "Uid", "BMOLHAGDMHP", "Tag", "SecurityCmdBuffer", "Token", "ClientVersionRandomKey", "CountryCode", "GmUid", "KeyId", "FinishCollectionIdList", "SecretKeySeed", "SubChannelId", "ChannelId", "IsGuest", "AccountType", "Sign", "IPMOMIJILHF", "PsnId", "PlatformType", "ServerRandKey", "ExtraBinData", "Msg", "IsProficientPlayer", "Retcode", "SecretKey", "AccountUid", "BGELCCHCJDG", "BlackUidEndTime", "ClientIpStr", "RegPlatform", "Birthday", "StopServer", });
+        new java.lang.String[] { "Uid", "BMOLHAGDMHP", "Tag", "SecurityCmdBuffer", "Token", "ClientVersionRandomKey", "CountryCode", "GmUid", "KeyId", "FinishCollectionIdList", "SecretKeySeed", "SubChannelId", "ChannelId", "IsGuest", "AccountType", "Sign", "IPMOMIJILHF", "PsnId", "PlatformType", "ServerRandKey", "ExtraBinData", "Msg", "IsProficientPlayer", "Retcode", "SecretKey", "AccountUid", "CloudClientIp", "BlackUidEndTime", "ClientIpStr", "RegPlatform", "Birthday", "StopServer", });
     emu.grasscutter.net.proto.StopServerInfoOuterClass.getDescriptor();
   }
 

@@ -111,6 +111,126 @@ public final class VintageMarketStoreInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private VintageMarketStoreInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                strategyList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              strategyList_.addInt(input.readUInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                strategyList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                strategyList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 56: {
+
+              slotCount_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              storeId_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                unk3300HNBGHCCENIA_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              unk3300HNBGHCCENIA_.addInt(input.readUInt32());
+              break;
+            }
+            case 82: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                unk3300HNBGHCCENIA_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                unk3300HNBGHCCENIA_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 96: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                unk3300ODLLANKOEND_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              unk3300ODLLANKOEND_.addInt(input.readUInt32());
+              break;
+            }
+            case 98: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                unk3300ODLLANKOEND_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                unk3300ODLLANKOEND_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          strategyList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          unk3300HNBGHCCENIA_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          unk3300ODLLANKOEND_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.internal_static_VintageMarketStoreInfo_descriptor;
@@ -125,7 +245,6 @@ public final class VintageMarketStoreInfoOuterClass {
     }
 
     public static final int STRATEGYLIST_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList strategyList_;
     /**
      * <code>repeated uint32 strategyList = 2;</code>
@@ -154,7 +273,7 @@ public final class VintageMarketStoreInfoOuterClass {
     private int strategyListMemoizedSerializedSize = -1;
 
     public static final int STOREID_FIELD_NUMBER = 8;
-    private int storeId_ = 0;
+    private int storeId_;
     /**
      * <code>uint32 storeId = 8;</code>
      * @return The storeId.
@@ -165,7 +284,7 @@ public final class VintageMarketStoreInfoOuterClass {
     }
 
     public static final int SLOTCOUNT_FIELD_NUMBER = 7;
-    private int slotCount_ = 0;
+    private int slotCount_;
     /**
      * <code>uint32 slotCount = 7;</code>
      * @return The slotCount.
@@ -176,7 +295,6 @@ public final class VintageMarketStoreInfoOuterClass {
     }
 
     public static final int UNK3300_HNBGHCCENIA_FIELD_NUMBER = 10;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList unk3300HNBGHCCENIA_;
     /**
      * <code>repeated uint32 Unk3300_HNBGHCCENIA = 10;</code>
@@ -205,7 +323,6 @@ public final class VintageMarketStoreInfoOuterClass {
     private int unk3300HNBGHCCENIAMemoizedSerializedSize = -1;
 
     public static final int UNK3300_ODLLANKOEND_FIELD_NUMBER = 12;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList unk3300ODLLANKOEND_;
     /**
      * <code>repeated uint32 Unk3300_ODLLANKOEND = 12;</code>
@@ -275,7 +392,7 @@ public final class VintageMarketStoreInfoOuterClass {
       for (int i = 0; i < unk3300ODLLANKOEND_.size(); i++) {
         output.writeUInt32NoTag(unk3300ODLLANKOEND_.getInt(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -334,7 +451,7 @@ public final class VintageMarketStoreInfoOuterClass {
         }
         unk3300ODLLANKOENDMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -359,7 +476,7 @@ public final class VintageMarketStoreInfoOuterClass {
           .equals(other.getUnk3300HNBGHCCENIAList())) return false;
       if (!getUnk3300ODLLANKOENDList()
           .equals(other.getUnk3300ODLLANKOENDList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -386,7 +503,7 @@ public final class VintageMarketStoreInfoOuterClass {
         hash = (37 * hash) + UNK3300_ODLLANKOEND_FIELD_NUMBER;
         hash = (53 * hash) + getUnk3300ODLLANKOENDList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -503,23 +620,32 @@ public final class VintageMarketStoreInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         strategyList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         storeId_ = 0;
+
         slotCount_ = 0;
+
         unk3300HNBGHCCENIA_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         unk3300ODLLANKOEND_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -546,38 +672,26 @@ public final class VintageMarketStoreInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo buildPartial() {
         emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo result = new emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo result) {
+        int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
           strategyList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.strategyList_ = strategyList_;
-        if (((bitField0_ & 0x00000008) != 0)) {
+        result.storeId_ = storeId_;
+        result.slotCount_ = slotCount_;
+        if (((bitField0_ & 0x00000002) != 0)) {
           unk3300HNBGHCCENIA_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.unk3300HNBGHCCENIA_ = unk3300HNBGHCCENIA_;
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           unk3300ODLLANKOEND_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.unk3300ODLLANKOEND_ = unk3300ODLLANKOEND_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.storeId_ = storeId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.slotCount_ = slotCount_;
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -643,7 +757,7 @@ public final class VintageMarketStoreInfoOuterClass {
         if (!other.unk3300HNBGHCCENIA_.isEmpty()) {
           if (unk3300HNBGHCCENIA_.isEmpty()) {
             unk3300HNBGHCCENIA_ = other.unk3300HNBGHCCENIA_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureUnk3300HNBGHCCENIAIsMutable();
             unk3300HNBGHCCENIA_.addAll(other.unk3300HNBGHCCENIA_);
@@ -653,14 +767,14 @@ public final class VintageMarketStoreInfoOuterClass {
         if (!other.unk3300ODLLANKOEND_.isEmpty()) {
           if (unk3300ODLLANKOEND_.isEmpty()) {
             unk3300ODLLANKOEND_ = other.unk3300ODLLANKOEND_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureUnk3300ODLLANKOENDIsMutable();
             unk3300ODLLANKOEND_.addAll(other.unk3300ODLLANKOEND_);
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -675,88 +789,17 @@ public final class VintageMarketStoreInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                int v = input.readUInt32();
-                ensureStrategyListIsMutable();
-                strategyList_.addInt(v);
-                break;
-              } // case 16
-              case 18: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureStrategyListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  strategyList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 18
-              case 56: {
-                slotCount_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 56
-              case 64: {
-                storeId_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 64
-              case 80: {
-                int v = input.readUInt32();
-                ensureUnk3300HNBGHCCENIAIsMutable();
-                unk3300HNBGHCCENIA_.addInt(v);
-                break;
-              } // case 80
-              case 82: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureUnk3300HNBGHCCENIAIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  unk3300HNBGHCCENIA_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 82
-              case 96: {
-                int v = input.readUInt32();
-                ensureUnk3300ODLLANKOENDIsMutable();
-                unk3300ODLLANKOEND_.addInt(v);
-                break;
-              } // case 96
-              case 98: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureUnk3300ODLLANKOENDIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  unk3300ODLLANKOEND_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 98
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.VintageMarketStoreInfoOuterClass.VintageMarketStoreInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -766,7 +809,7 @@ public final class VintageMarketStoreInfoOuterClass {
         if (!((bitField0_ & 0x00000001) != 0)) {
           strategyList_ = mutableCopy(strategyList_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
       /**
        * <code>repeated uint32 strategyList = 2;</code>
@@ -800,7 +843,6 @@ public final class VintageMarketStoreInfoOuterClass {
        */
       public Builder setStrategyList(
           int index, int value) {
-        
         ensureStrategyListIsMutable();
         strategyList_.setInt(index, value);
         onChanged();
@@ -812,7 +854,6 @@ public final class VintageMarketStoreInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addStrategyList(int value) {
-        
         ensureStrategyListIsMutable();
         strategyList_.addInt(value);
         onChanged();
@@ -859,7 +900,6 @@ public final class VintageMarketStoreInfoOuterClass {
       public Builder setStoreId(int value) {
         
         storeId_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -868,7 +908,7 @@ public final class VintageMarketStoreInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStoreId() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         storeId_ = 0;
         onChanged();
         return this;
@@ -891,7 +931,6 @@ public final class VintageMarketStoreInfoOuterClass {
       public Builder setSlotCount(int value) {
         
         slotCount_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -900,7 +939,7 @@ public final class VintageMarketStoreInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSlotCount() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         slotCount_ = 0;
         onChanged();
         return this;
@@ -908,10 +947,10 @@ public final class VintageMarketStoreInfoOuterClass {
 
       private com.google.protobuf.Internal.IntList unk3300HNBGHCCENIA_ = emptyIntList();
       private void ensureUnk3300HNBGHCCENIAIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           unk3300HNBGHCCENIA_ = mutableCopy(unk3300HNBGHCCENIA_);
-          bitField0_ |= 0x00000008;
-        }
+          bitField0_ |= 0x00000002;
+         }
       }
       /**
        * <code>repeated uint32 Unk3300_HNBGHCCENIA = 10;</code>
@@ -919,7 +958,7 @@ public final class VintageMarketStoreInfoOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getUnk3300HNBGHCCENIAList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
+        return ((bitField0_ & 0x00000002) != 0) ?
                  java.util.Collections.unmodifiableList(unk3300HNBGHCCENIA_) : unk3300HNBGHCCENIA_;
       }
       /**
@@ -945,7 +984,6 @@ public final class VintageMarketStoreInfoOuterClass {
        */
       public Builder setUnk3300HNBGHCCENIA(
           int index, int value) {
-        
         ensureUnk3300HNBGHCCENIAIsMutable();
         unk3300HNBGHCCENIA_.setInt(index, value);
         onChanged();
@@ -957,7 +995,6 @@ public final class VintageMarketStoreInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addUnk3300HNBGHCCENIA(int value) {
-        
         ensureUnk3300HNBGHCCENIAIsMutable();
         unk3300HNBGHCCENIA_.addInt(value);
         onChanged();
@@ -982,17 +1019,17 @@ public final class VintageMarketStoreInfoOuterClass {
        */
       public Builder clearUnk3300HNBGHCCENIA() {
         unk3300HNBGHCCENIA_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
 
       private com.google.protobuf.Internal.IntList unk3300ODLLANKOEND_ = emptyIntList();
       private void ensureUnk3300ODLLANKOENDIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           unk3300ODLLANKOEND_ = mutableCopy(unk3300ODLLANKOEND_);
-          bitField0_ |= 0x00000010;
-        }
+          bitField0_ |= 0x00000004;
+         }
       }
       /**
        * <code>repeated uint32 Unk3300_ODLLANKOEND = 12;</code>
@@ -1000,7 +1037,7 @@ public final class VintageMarketStoreInfoOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getUnk3300ODLLANKOENDList() {
-        return ((bitField0_ & 0x00000010) != 0) ?
+        return ((bitField0_ & 0x00000004) != 0) ?
                  java.util.Collections.unmodifiableList(unk3300ODLLANKOEND_) : unk3300ODLLANKOEND_;
       }
       /**
@@ -1026,7 +1063,6 @@ public final class VintageMarketStoreInfoOuterClass {
        */
       public Builder setUnk3300ODLLANKOEND(
           int index, int value) {
-        
         ensureUnk3300ODLLANKOENDIsMutable();
         unk3300ODLLANKOEND_.setInt(index, value);
         onChanged();
@@ -1038,7 +1074,6 @@ public final class VintageMarketStoreInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addUnk3300ODLLANKOEND(int value) {
-        
         ensureUnk3300ODLLANKOENDIsMutable();
         unk3300ODLLANKOEND_.addInt(value);
         onChanged();
@@ -1063,7 +1098,7 @@ public final class VintageMarketStoreInfoOuterClass {
        */
       public Builder clearUnk3300ODLLANKOEND() {
         unk3300ODLLANKOEND_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1100,18 +1135,7 @@ public final class VintageMarketStoreInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new VintageMarketStoreInfo(input, extensionRegistry);
       }
     };
 

@@ -67,6 +67,68 @@ public final class MBLNIKHFGKNOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private MBLNIKHFGKN(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                iNLGCJEOHJI_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              iNLGCJEOHJI_.addInt(input.readUInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                iNLGCJEOHJI_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                iNLGCJEOHJI_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          iNLGCJEOHJI_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.MBLNIKHFGKNOuterClass.internal_static_MBLNIKHFGKN_descriptor;
@@ -81,7 +143,6 @@ public final class MBLNIKHFGKNOuterClass {
     }
 
     public static final int INLGCJEOHJI_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList iNLGCJEOHJI_;
     /**
      * <code>repeated uint32 INLGCJEOHJI = 1;</code>
@@ -131,7 +192,7 @@ public final class MBLNIKHFGKNOuterClass {
       for (int i = 0; i < iNLGCJEOHJI_.size(); i++) {
         output.writeUInt32NoTag(iNLGCJEOHJI_.getInt(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -154,7 +215,7 @@ public final class MBLNIKHFGKNOuterClass {
         }
         iNLGCJEOHJIMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -171,7 +232,7 @@ public final class MBLNIKHFGKNOuterClass {
 
       if (!getINLGCJEOHJIList()
           .equals(other.getINLGCJEOHJIList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -186,7 +247,7 @@ public final class MBLNIKHFGKNOuterClass {
         hash = (37 * hash) + INLGCJEOHJI_FIELD_NUMBER;
         hash = (53 * hash) + getINLGCJEOHJIList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -307,19 +368,24 @@ public final class MBLNIKHFGKNOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MBLNIKHFGKNOuterClass.MBLNIKHFGKN.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         iNLGCJEOHJI_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -346,22 +412,14 @@ public final class MBLNIKHFGKNOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.MBLNIKHFGKNOuterClass.MBLNIKHFGKN buildPartial() {
         emu.grasscutter.net.proto.MBLNIKHFGKNOuterClass.MBLNIKHFGKN result = new emu.grasscutter.net.proto.MBLNIKHFGKNOuterClass.MBLNIKHFGKN(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.MBLNIKHFGKNOuterClass.MBLNIKHFGKN result) {
+        int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
           iNLGCJEOHJI_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.iNLGCJEOHJI_ = iNLGCJEOHJI_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.MBLNIKHFGKNOuterClass.MBLNIKHFGKN result) {
-        int from_bitField0_ = bitField0_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -418,7 +476,7 @@ public final class MBLNIKHFGKNOuterClass {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -433,46 +491,17 @@ public final class MBLNIKHFGKNOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.MBLNIKHFGKNOuterClass.MBLNIKHFGKN parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                int v = input.readUInt32();
-                ensureINLGCJEOHJIIsMutable();
-                iNLGCJEOHJI_.addInt(v);
-                break;
-              } // case 8
-              case 10: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureINLGCJEOHJIIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  iNLGCJEOHJI_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.MBLNIKHFGKNOuterClass.MBLNIKHFGKN) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -482,7 +511,7 @@ public final class MBLNIKHFGKNOuterClass {
         if (!((bitField0_ & 0x00000001) != 0)) {
           iNLGCJEOHJI_ = mutableCopy(iNLGCJEOHJI_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
       /**
        * <code>repeated uint32 INLGCJEOHJI = 1;</code>
@@ -516,7 +545,6 @@ public final class MBLNIKHFGKNOuterClass {
        */
       public Builder setINLGCJEOHJI(
           int index, int value) {
-        
         ensureINLGCJEOHJIIsMutable();
         iNLGCJEOHJI_.setInt(index, value);
         onChanged();
@@ -528,7 +556,6 @@ public final class MBLNIKHFGKNOuterClass {
        * @return This builder for chaining.
        */
       public Builder addINLGCJEOHJI(int value) {
-        
         ensureINLGCJEOHJIIsMutable();
         iNLGCJEOHJI_.addInt(value);
         onChanged();
@@ -590,18 +617,7 @@ public final class MBLNIKHFGKNOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new MBLNIKHFGKN(input, extensionRegistry);
       }
     };
 

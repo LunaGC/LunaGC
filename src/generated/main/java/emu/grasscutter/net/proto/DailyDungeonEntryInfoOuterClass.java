@@ -25,13 +25,21 @@ public final class DailyDungeonEntryInfoOuterClass {
     int getRecommendDungeonId();
 
     /**
-     * <code>uint32 dungeonEntryConfigId = 1;</code>
+     * <pre>
+     *GGGEMNHNCNJ
+     * </pre>
+     *
+     * <code>uint32 dungeon_entry_config_id = 1;</code>
      * @return The dungeonEntryConfigId.
      */
     int getDungeonEntryConfigId();
 
     /**
-     * <code>uint32 dungeonEntryId = 14;</code>
+     * <pre>
+     *MNDEGGLANGF
+     * </pre>
+     *
+     * <code>uint32 dungeon_entry_id = 14;</code>
      * @return The dungeonEntryId.
      */
     int getDungeonEntryId();
@@ -171,10 +179,14 @@ public final class DailyDungeonEntryInfoOuterClass {
       return recommendDungeonId_;
     }
 
-    public static final int DUNGEONENTRYCONFIGID_FIELD_NUMBER = 1;
+    public static final int DUNGEON_ENTRY_CONFIG_ID_FIELD_NUMBER = 1;
     private int dungeonEntryConfigId_;
     /**
-     * <code>uint32 dungeonEntryConfigId = 1;</code>
+     * <pre>
+     *GGGEMNHNCNJ
+     * </pre>
+     *
+     * <code>uint32 dungeon_entry_config_id = 1;</code>
      * @return The dungeonEntryConfigId.
      */
     @java.lang.Override
@@ -182,10 +194,14 @@ public final class DailyDungeonEntryInfoOuterClass {
       return dungeonEntryConfigId_;
     }
 
-    public static final int DUNGEONENTRYID_FIELD_NUMBER = 14;
+    public static final int DUNGEON_ENTRY_ID_FIELD_NUMBER = 14;
     private int dungeonEntryId_;
     /**
-     * <code>uint32 dungeonEntryId = 14;</code>
+     * <pre>
+     *MNDEGGLANGF
+     * </pre>
+     *
+     * <code>uint32 dungeon_entry_id = 14;</code>
      * @return The dungeonEntryId.
      */
     @java.lang.Override
@@ -309,9 +325,9 @@ public final class DailyDungeonEntryInfoOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + RECOMMEND_DUNGEON_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRecommendDungeonId();
-      hash = (37 * hash) + DUNGEONENTRYCONFIGID_FIELD_NUMBER;
+      hash = (37 * hash) + DUNGEON_ENTRY_CONFIG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDungeonEntryConfigId();
-      hash = (37 * hash) + DUNGEONENTRYID_FIELD_NUMBER;
+      hash = (37 * hash) + DUNGEON_ENTRY_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDungeonEntryId();
       if (hasRecommendDungeonEntryInfo()) {
         hash = (37 * hash) + RECOMMEND_DUNGEON_ENTRY_INFO_FIELD_NUMBER;
@@ -622,7 +638,11 @@ public final class DailyDungeonEntryInfoOuterClass {
 
       private int dungeonEntryConfigId_ ;
       /**
-       * <code>uint32 dungeonEntryConfigId = 1;</code>
+       * <pre>
+       *GGGEMNHNCNJ
+       * </pre>
+       *
+       * <code>uint32 dungeon_entry_config_id = 1;</code>
        * @return The dungeonEntryConfigId.
        */
       @java.lang.Override
@@ -630,7 +650,11 @@ public final class DailyDungeonEntryInfoOuterClass {
         return dungeonEntryConfigId_;
       }
       /**
-       * <code>uint32 dungeonEntryConfigId = 1;</code>
+       * <pre>
+       *GGGEMNHNCNJ
+       * </pre>
+       *
+       * <code>uint32 dungeon_entry_config_id = 1;</code>
        * @param value The dungeonEntryConfigId to set.
        * @return This builder for chaining.
        */
@@ -641,7 +665,11 @@ public final class DailyDungeonEntryInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 dungeonEntryConfigId = 1;</code>
+       * <pre>
+       *GGGEMNHNCNJ
+       * </pre>
+       *
+       * <code>uint32 dungeon_entry_config_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearDungeonEntryConfigId() {
@@ -653,7 +681,11 @@ public final class DailyDungeonEntryInfoOuterClass {
 
       private int dungeonEntryId_ ;
       /**
-       * <code>uint32 dungeonEntryId = 14;</code>
+       * <pre>
+       *MNDEGGLANGF
+       * </pre>
+       *
+       * <code>uint32 dungeon_entry_id = 14;</code>
        * @return The dungeonEntryId.
        */
       @java.lang.Override
@@ -661,7 +693,11 @@ public final class DailyDungeonEntryInfoOuterClass {
         return dungeonEntryId_;
       }
       /**
-       * <code>uint32 dungeonEntryId = 14;</code>
+       * <pre>
+       *MNDEGGLANGF
+       * </pre>
+       *
+       * <code>uint32 dungeon_entry_id = 14;</code>
        * @param value The dungeonEntryId to set.
        * @return This builder for chaining.
        */
@@ -672,7 +708,11 @@ public final class DailyDungeonEntryInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 dungeonEntryId = 14;</code>
+       * <pre>
+       *MNDEGGLANGF
+       * </pre>
+       *
+       * <code>uint32 dungeon_entry_id = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearDungeonEntryId() {
@@ -868,12 +908,12 @@ public final class DailyDungeonEntryInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033DailyDungeonEntryInfo.proto\032\026DungeonEn" +
-      "tryInfo.proto\"\244\001\n\025DailyDungeonEntryInfo\022" +
-      "\034\n\024recommend_dungeon_id\030\003 \001(\r\022\034\n\024dungeon" +
-      "EntryConfigId\030\001 \001(\r\022\026\n\016dungeonEntryId\030\016 " +
-      "\001(\r\0227\n\034recommend_dungeon_entry_info\030\007 \001(" +
-      "\0132\021.DungeonEntryInfoB\033\n\031emu.grasscutter." +
-      "net.protob\006proto3"
+      "tryInfo.proto\"\251\001\n\025DailyDungeonEntryInfo\022" +
+      "\034\n\024recommend_dungeon_id\030\003 \001(\r\022\037\n\027dungeon" +
+      "_entry_config_id\030\001 \001(\r\022\030\n\020dungeon_entry_" +
+      "id\030\016 \001(\r\0227\n\034recommend_dungeon_entry_info" +
+      "\030\007 \001(\0132\021.DungeonEntryInfoB\033\n\031emu.grasscu" +
+      "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

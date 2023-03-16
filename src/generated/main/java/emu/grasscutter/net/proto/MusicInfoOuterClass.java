@@ -41,14 +41,14 @@ public final class MusicInfoOuterClass {
     /**
      * <code>map&lt;uint32, .FleurFairMusicRecord&gt; fbmomkmdima = 9;</code>
      */
-    /* nullable */
-emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord getFbmomkmdimaOrDefault(
+
+    emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord getFbmomkmdimaOrDefault(
         int key,
-        /* nullable */
-emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord defaultValue);
+        emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord defaultValue);
     /**
      * <code>map&lt;uint32, .FleurFairMusicRecord&gt; fbmomkmdima = 9;</code>
      */
+
     emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord getFbmomkmdimaOrThrow(
         int key);
   }
@@ -78,6 +78,57 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private MusicInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                fbmomkmdima_ = com.google.protobuf.MapField.newMapField(
+                    FbmomkmdimaDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord>
+              fbmomkmdima__ = input.readMessage(
+                  FbmomkmdimaDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              fbmomkmdima_.getMutableMap().put(
+                  fbmomkmdima__.getKey(), fbmomkmdima__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -116,7 +167,6 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord.getDefaultInstance());
     }
-    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord> fbmomkmdima_;
     private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord>
@@ -127,12 +177,14 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
       }
       return fbmomkmdima_;
     }
+
     public int getFbmomkmdimaCount() {
       return internalGetFbmomkmdima().getMap().size();
     }
     /**
      * <code>map&lt;uint32, .FleurFairMusicRecord&gt; fbmomkmdima = 9;</code>
      */
+
     @java.lang.Override
     public boolean containsFbmomkmdima(
         int key) {
@@ -151,6 +203,7 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
      * <code>map&lt;uint32, .FleurFairMusicRecord&gt; fbmomkmdima = 9;</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord> getFbmomkmdimaMap() {
       return internalGetFbmomkmdima().getMap();
     }
@@ -158,11 +211,10 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
      * <code>map&lt;uint32, .FleurFairMusicRecord&gt; fbmomkmdima = 9;</code>
      */
     @java.lang.Override
-    public /* nullable */
-emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord getFbmomkmdimaOrDefault(
+
+    public emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord getFbmomkmdimaOrDefault(
         int key,
-        /* nullable */
-emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord defaultValue) {
+        emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord defaultValue) {
       
       java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord> map =
           internalGetFbmomkmdima().getMap();
@@ -172,6 +224,7 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
      * <code>map&lt;uint32, .FleurFairMusicRecord&gt; fbmomkmdima = 9;</code>
      */
     @java.lang.Override
+
     public emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord getFbmomkmdimaOrThrow(
         int key) {
       
@@ -203,7 +256,7 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
           internalGetFbmomkmdima(),
           FbmomkmdimaDefaultEntryHolder.defaultEntry,
           9);
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -222,7 +275,7 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(9, fbmomkmdima__);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -239,7 +292,7 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
 
       if (!internalGetFbmomkmdima().equals(
           other.internalGetFbmomkmdima())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -254,7 +307,7 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
         hash = (37 * hash) + FBMOMKMDIMA_FIELD_NUMBER;
         hash = (53 * hash) + internalGetFbmomkmdima().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -393,18 +446,22 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
 
       // Construct using emu.grasscutter.net.proto.MusicInfoOuterClass.MusicInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         internalGetMutableFbmomkmdima().clear();
         return this;
       }
@@ -432,17 +489,11 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
       @java.lang.Override
       public emu.grasscutter.net.proto.MusicInfoOuterClass.MusicInfo buildPartial() {
         emu.grasscutter.net.proto.MusicInfoOuterClass.MusicInfo result = new emu.grasscutter.net.proto.MusicInfoOuterClass.MusicInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        int from_bitField0_ = bitField0_;
+        result.fbmomkmdima_ = internalGetFbmomkmdima();
+        result.fbmomkmdima_.makeImmutable();
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.MusicInfoOuterClass.MusicInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.fbmomkmdima_ = internalGetFbmomkmdima();
-          result.fbmomkmdima_.makeImmutable();
-        }
       }
 
       @java.lang.Override
@@ -491,8 +542,7 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
         if (other == emu.grasscutter.net.proto.MusicInfoOuterClass.MusicInfo.getDefaultInstance()) return this;
         internalGetMutableFbmomkmdima().mergeFrom(
             other.internalGetFbmomkmdima());
-        bitField0_ |= 0x00000001;
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -507,39 +557,17 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.MusicInfoOuterClass.MusicInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 74: {
-                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord>
-                fbmomkmdima__ = input.readMessage(
-                    FbmomkmdimaDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableFbmomkmdima().getMutableMap().put(
-                    fbmomkmdima__.getKey(), fbmomkmdima__.getValue());
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 74
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.MusicInfoOuterClass.MusicInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -547,7 +575,7 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
       private com.google.protobuf.MapField<
           java.lang.Integer, emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord> fbmomkmdima_;
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord>
-          internalGetFbmomkmdima() {
+      internalGetFbmomkmdima() {
         if (fbmomkmdima_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               FbmomkmdimaDefaultEntryHolder.defaultEntry);
@@ -555,7 +583,8 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
         return fbmomkmdima_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord>
-          internalGetMutableFbmomkmdima() {
+      internalGetMutableFbmomkmdima() {
+        onChanged();;
         if (fbmomkmdima_ == null) {
           fbmomkmdima_ = com.google.protobuf.MapField.newMapField(
               FbmomkmdimaDefaultEntryHolder.defaultEntry);
@@ -563,16 +592,16 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
         if (!fbmomkmdima_.isMutable()) {
           fbmomkmdima_ = fbmomkmdima_.copy();
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
         return fbmomkmdima_;
       }
+
       public int getFbmomkmdimaCount() {
         return internalGetFbmomkmdima().getMap().size();
       }
       /**
        * <code>map&lt;uint32, .FleurFairMusicRecord&gt; fbmomkmdima = 9;</code>
        */
+
       @java.lang.Override
       public boolean containsFbmomkmdima(
           int key) {
@@ -591,6 +620,7 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
        * <code>map&lt;uint32, .FleurFairMusicRecord&gt; fbmomkmdima = 9;</code>
        */
       @java.lang.Override
+
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord> getFbmomkmdimaMap() {
         return internalGetFbmomkmdima().getMap();
       }
@@ -598,11 +628,10 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
        * <code>map&lt;uint32, .FleurFairMusicRecord&gt; fbmomkmdima = 9;</code>
        */
       @java.lang.Override
-      public /* nullable */
-emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord getFbmomkmdimaOrDefault(
+
+      public emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord getFbmomkmdimaOrDefault(
           int key,
-          /* nullable */
-emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord defaultValue) {
+          emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord defaultValue) {
         
         java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord> map =
             internalGetFbmomkmdima().getMap();
@@ -612,6 +641,7 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
        * <code>map&lt;uint32, .FleurFairMusicRecord&gt; fbmomkmdima = 9;</code>
        */
       @java.lang.Override
+
       public emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord getFbmomkmdimaOrThrow(
           int key) {
         
@@ -622,8 +652,8 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
         }
         return map.get(key);
       }
+
       public Builder clearFbmomkmdima() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         internalGetMutableFbmomkmdima().getMutableMap()
             .clear();
         return this;
@@ -631,6 +661,7 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
       /**
        * <code>map&lt;uint32, .FleurFairMusicRecord&gt; fbmomkmdima = 9;</code>
        */
+
       public Builder removeFbmomkmdima(
           int key) {
         
@@ -643,8 +674,7 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord>
-          getMutableFbmomkmdima() {
-        bitField0_ |= 0x00000001;
+      getMutableFbmomkmdima() {
         return internalGetMutableFbmomkmdima().getMutableMap();
       }
       /**
@@ -654,20 +684,19 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
           int key,
           emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord value) {
         
-        if (value == null) { throw new NullPointerException("map value"); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableFbmomkmdima().getMutableMap()
             .put(key, value);
-        bitField0_ |= 0x00000001;
         return this;
       }
       /**
        * <code>map&lt;uint32, .FleurFairMusicRecord&gt; fbmomkmdima = 9;</code>
        */
+
       public Builder putAllFbmomkmdima(
           java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord> values) {
         internalGetMutableFbmomkmdima().getMutableMap()
             .putAll(values);
-        bitField0_ |= 0x00000001;
         return this;
       }
       @java.lang.Override
@@ -703,18 +732,7 @@ emu.grasscutter.net.proto.FleurFairMusicRecordOuterClass.FleurFairMusicRecord de
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new MusicInfo(input, extensionRegistry);
       }
     };
 

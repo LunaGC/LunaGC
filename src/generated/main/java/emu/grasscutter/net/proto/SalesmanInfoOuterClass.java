@@ -76,12 +76,14 @@ public final class SalesmanInfoOuterClass {
     /**
      * <code>map&lt;uint32, uint32&gt; selectedRewardIdMap = 13;</code>
      */
+
     int getSelectedRewardIdMapOrDefault(
         int key,
         int defaultValue);
     /**
      * <code>map&lt;uint32, uint32&gt; selectedRewardIdMap = 13;</code>
      */
+
     int getSelectedRewardIdMapOrThrow(
         int key);
 
@@ -137,6 +139,103 @@ public final class SalesmanInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private SalesmanInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+
+              dayRewardId_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 40: {
+
+              unk3300DJFCEFKGKPI_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              unk3300DIJFOCBGIAM_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              unk3300FOFFAEEBBNP_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              dayIndex_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              unk3300LPABHMOPFCE_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+
+              unk3300KNJCBGFKLFD_ = input.readUInt32();
+              break;
+            }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                selectedRewardIdMap_ = com.google.protobuf.MapField.newMapField(
+                    SelectedRewardIdMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              selectedRewardIdMap__ = input.readMessage(
+                  SelectedRewardIdMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              selectedRewardIdMap_.getMutableMap().put(
+                  selectedRewardIdMap__.getKey(), selectedRewardIdMap__.getValue());
+              break;
+            }
+            case 120: {
+
+              unk3300JNALBACFNFN_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SalesmanInfoOuterClass.internal_static_SalesmanInfo_descriptor;
@@ -163,7 +262,7 @@ public final class SalesmanInfoOuterClass {
     }
 
     public static final int STATUS_FIELD_NUMBER = 4;
-    private int status_ = 0;
+    private int status_;
     /**
      * <code>.SalesmanStatusType status = 4;</code>
      * @return The enum numeric value on the wire for status.
@@ -176,12 +275,13 @@ public final class SalesmanInfoOuterClass {
      * @return The status.
      */
     @java.lang.Override public emu.grasscutter.net.proto.SalesmanStatusTypeOuterClass.SalesmanStatusType getStatus() {
-      emu.grasscutter.net.proto.SalesmanStatusTypeOuterClass.SalesmanStatusType result = emu.grasscutter.net.proto.SalesmanStatusTypeOuterClass.SalesmanStatusType.forNumber(status_);
+      @SuppressWarnings("deprecation")
+      emu.grasscutter.net.proto.SalesmanStatusTypeOuterClass.SalesmanStatusType result = emu.grasscutter.net.proto.SalesmanStatusTypeOuterClass.SalesmanStatusType.valueOf(status_);
       return result == null ? emu.grasscutter.net.proto.SalesmanStatusTypeOuterClass.SalesmanStatusType.UNRECOGNIZED : result;
     }
 
     public static final int UNK3300_FOFFAEEBBNP_FIELD_NUMBER = 7;
-    private int unk3300FOFFAEEBBNP_ = 0;
+    private int unk3300FOFFAEEBBNP_;
     /**
      * <code>uint32 Unk3300_FOFFAEEBBNP = 7;</code>
      * @return The unk3300FOFFAEEBBNP.
@@ -192,7 +292,7 @@ public final class SalesmanInfoOuterClass {
     }
 
     public static final int UNK3300_DIJFOCBGIAM_FIELD_NUMBER = 6;
-    private int unk3300DIJFOCBGIAM_ = 0;
+    private int unk3300DIJFOCBGIAM_;
     /**
      * <code>uint32 Unk3300_DIJFOCBGIAM = 6;</code>
      * @return The unk3300DIJFOCBGIAM.
@@ -203,7 +303,7 @@ public final class SalesmanInfoOuterClass {
     }
 
     public static final int DAYINDEX_FIELD_NUMBER = 8;
-    private int dayIndex_ = 0;
+    private int dayIndex_;
     /**
      * <code>uint32 dayIndex = 8;</code>
      * @return The dayIndex.
@@ -214,7 +314,7 @@ public final class SalesmanInfoOuterClass {
     }
 
     public static final int UNK3300_JNALBACFNFN_FIELD_NUMBER = 15;
-    private boolean unk3300JNALBACFNFN_ = false;
+    private boolean unk3300JNALBACFNFN_;
     /**
      * <code>bool Unk3300_JNALBACFNFN = 15;</code>
      * @return The unk3300JNALBACFNFN.
@@ -230,13 +330,12 @@ public final class SalesmanInfoOuterClass {
           java.lang.Integer, java.lang.Integer> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.Integer, java.lang.Integer>newDefaultInstance(
-                  emu.grasscutter.net.proto.SalesmanInfoOuterClass.internal_static_SalesmanInfo_SelectedRewardIdMapEntry_descriptor, 
+                  emu.grasscutter.net.proto.SalesmanInfoOuterClass.internal_static_SalesmanInfo_SelectedRewardIdMapEntry_descriptor,
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0,
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0);
     }
-    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, java.lang.Integer> selectedRewardIdMap_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
@@ -247,16 +346,18 @@ public final class SalesmanInfoOuterClass {
       }
       return selectedRewardIdMap_;
     }
+
     public int getSelectedRewardIdMapCount() {
       return internalGetSelectedRewardIdMap().getMap().size();
     }
     /**
      * <code>map&lt;uint32, uint32&gt; selectedRewardIdMap = 13;</code>
      */
+
     @java.lang.Override
     public boolean containsSelectedRewardIdMap(
         int key) {
-      
+
       return internalGetSelectedRewardIdMap().getMap().containsKey(key);
     }
     /**
@@ -271,6 +372,7 @@ public final class SalesmanInfoOuterClass {
      * <code>map&lt;uint32, uint32&gt; selectedRewardIdMap = 13;</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.Integer, java.lang.Integer> getSelectedRewardIdMapMap() {
       return internalGetSelectedRewardIdMap().getMap();
     }
@@ -278,10 +380,11 @@ public final class SalesmanInfoOuterClass {
      * <code>map&lt;uint32, uint32&gt; selectedRewardIdMap = 13;</code>
      */
     @java.lang.Override
+
     public int getSelectedRewardIdMapOrDefault(
         int key,
         int defaultValue) {
-      
+
       java.util.Map<java.lang.Integer, java.lang.Integer> map =
           internalGetSelectedRewardIdMap().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -290,9 +393,10 @@ public final class SalesmanInfoOuterClass {
      * <code>map&lt;uint32, uint32&gt; selectedRewardIdMap = 13;</code>
      */
     @java.lang.Override
+
     public int getSelectedRewardIdMapOrThrow(
         int key) {
-      
+
       java.util.Map<java.lang.Integer, java.lang.Integer> map =
           internalGetSelectedRewardIdMap().getMap();
       if (!map.containsKey(key)) {
@@ -302,7 +406,7 @@ public final class SalesmanInfoOuterClass {
     }
 
     public static final int UNK3300_KNJCBGFKLFD_FIELD_NUMBER = 11;
-    private int unk3300KNJCBGFKLFD_ = 0;
+    private int unk3300KNJCBGFKLFD_;
     /**
      * <code>uint32 Unk3300_KNJCBGFKLFD = 11;</code>
      * @return The unk3300KNJCBGFKLFD.
@@ -313,7 +417,7 @@ public final class SalesmanInfoOuterClass {
     }
 
     public static final int UNK3300_DJFCEFKGKPI_FIELD_NUMBER = 5;
-    private boolean unk3300DJFCEFKGKPI_ = false;
+    private boolean unk3300DJFCEFKGKPI_;
     /**
      * <code>bool Unk3300_DJFCEFKGKPI = 5;</code>
      * @return The unk3300DJFCEFKGKPI.
@@ -324,7 +428,7 @@ public final class SalesmanInfoOuterClass {
     }
 
     public static final int DAYREWARDID_FIELD_NUMBER = 2;
-    private int dayRewardId_ = 0;
+    private int dayRewardId_;
     /**
      * <code>uint32 dayRewardId = 2;</code>
      * @return The dayRewardId.
@@ -335,7 +439,7 @@ public final class SalesmanInfoOuterClass {
     }
 
     public static final int UNK3300_LPABHMOPFCE_FIELD_NUMBER = 9;
-    private int unk3300LPABHMOPFCE_ = 0;
+    private int unk3300LPABHMOPFCE_;
     /**
      * <code>uint32 Unk3300_LPABHMOPFCE = 9;</code>
      * @return The unk3300LPABHMOPFCE.
@@ -392,7 +496,7 @@ public final class SalesmanInfoOuterClass {
       if (unk3300JNALBACFNFN_ != false) {
         output.writeBool(15, unk3300JNALBACFNFN_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -447,7 +551,7 @@ public final class SalesmanInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(15, unk3300JNALBACFNFN_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -481,7 +585,7 @@ public final class SalesmanInfoOuterClass {
           != other.getDayRewardId()) return false;
       if (getUnk3300LPABHMOPFCE()
           != other.getUnk3300LPABHMOPFCE()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -516,7 +620,7 @@ public final class SalesmanInfoOuterClass {
       hash = (53 * hash) + getDayRewardId();
       hash = (37 * hash) + UNK3300_LPABHMOPFCE_FIELD_NUMBER;
       hash = (53 * hash) + getUnk3300LPABHMOPFCE();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -655,28 +759,41 @@ public final class SalesmanInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SalesmanInfoOuterClass.SalesmanInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         status_ = 0;
+
         unk3300FOFFAEEBBNP_ = 0;
+
         unk3300DIJFOCBGIAM_ = 0;
+
         dayIndex_ = 0;
+
         unk3300JNALBACFNFN_ = false;
+
         internalGetMutableSelectedRewardIdMap().clear();
         unk3300KNJCBGFKLFD_ = 0;
+
         unk3300DJFCEFKGKPI_ = false;
+
         dayRewardId_ = 0;
+
         unk3300LPABHMOPFCE_ = 0;
+
         return this;
       }
 
@@ -703,44 +820,20 @@ public final class SalesmanInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SalesmanInfoOuterClass.SalesmanInfo buildPartial() {
         emu.grasscutter.net.proto.SalesmanInfoOuterClass.SalesmanInfo result = new emu.grasscutter.net.proto.SalesmanInfoOuterClass.SalesmanInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        int from_bitField0_ = bitField0_;
+        result.status_ = status_;
+        result.unk3300FOFFAEEBBNP_ = unk3300FOFFAEEBBNP_;
+        result.unk3300DIJFOCBGIAM_ = unk3300DIJFOCBGIAM_;
+        result.dayIndex_ = dayIndex_;
+        result.unk3300JNALBACFNFN_ = unk3300JNALBACFNFN_;
+        result.selectedRewardIdMap_ = internalGetSelectedRewardIdMap();
+        result.selectedRewardIdMap_.makeImmutable();
+        result.unk3300KNJCBGFKLFD_ = unk3300KNJCBGFKLFD_;
+        result.unk3300DJFCEFKGKPI_ = unk3300DJFCEFKGKPI_;
+        result.dayRewardId_ = dayRewardId_;
+        result.unk3300LPABHMOPFCE_ = unk3300LPABHMOPFCE_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.SalesmanInfoOuterClass.SalesmanInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.status_ = status_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.unk3300FOFFAEEBBNP_ = unk3300FOFFAEEBBNP_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.unk3300DIJFOCBGIAM_ = unk3300DIJFOCBGIAM_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.dayIndex_ = dayIndex_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.unk3300JNALBACFNFN_ = unk3300JNALBACFNFN_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.selectedRewardIdMap_ = internalGetSelectedRewardIdMap();
-          result.selectedRewardIdMap_.makeImmutable();
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.unk3300KNJCBGFKLFD_ = unk3300KNJCBGFKLFD_;
-        }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.unk3300DJFCEFKGKPI_ = unk3300DJFCEFKGKPI_;
-        }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.dayRewardId_ = dayRewardId_;
-        }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.unk3300LPABHMOPFCE_ = unk3300LPABHMOPFCE_;
-        }
       }
 
       @java.lang.Override
@@ -804,7 +897,6 @@ public final class SalesmanInfoOuterClass {
         }
         internalGetMutableSelectedRewardIdMap().mergeFrom(
             other.internalGetSelectedRewardIdMap());
-        bitField0_ |= 0x00000020;
         if (other.getUnk3300KNJCBGFKLFD() != 0) {
           setUnk3300KNJCBGFKLFD(other.getUnk3300KNJCBGFKLFD());
         }
@@ -817,7 +909,7 @@ public final class SalesmanInfoOuterClass {
         if (other.getUnk3300LPABHMOPFCE() != 0) {
           setUnk3300LPABHMOPFCE(other.getUnk3300LPABHMOPFCE());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -832,84 +924,17 @@ public final class SalesmanInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SalesmanInfoOuterClass.SalesmanInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                dayRewardId_ = input.readUInt32();
-                bitField0_ |= 0x00000100;
-                break;
-              } // case 16
-              case 32: {
-                status_ = input.readEnum();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 32
-              case 40: {
-                unk3300DJFCEFKGKPI_ = input.readBool();
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 40
-              case 48: {
-                unk3300DIJFOCBGIAM_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 48
-              case 56: {
-                unk3300FOFFAEEBBNP_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 56
-              case 64: {
-                dayIndex_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 64
-              case 72: {
-                unk3300LPABHMOPFCE_ = input.readUInt32();
-                bitField0_ |= 0x00000200;
-                break;
-              } // case 72
-              case 88: {
-                unk3300KNJCBGFKLFD_ = input.readUInt32();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 88
-              case 106: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                selectedRewardIdMap__ = input.readMessage(
-                    SelectedRewardIdMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableSelectedRewardIdMap().getMutableMap().put(
-                    selectedRewardIdMap__.getKey(), selectedRewardIdMap__.getValue());
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 106
-              case 120: {
-                unk3300JNALBACFNFN_ = input.readBool();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SalesmanInfoOuterClass.SalesmanInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -928,8 +953,8 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+
         status_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -939,7 +964,8 @@ public final class SalesmanInfoOuterClass {
        */
       @java.lang.Override
       public emu.grasscutter.net.proto.SalesmanStatusTypeOuterClass.SalesmanStatusType getStatus() {
-        emu.grasscutter.net.proto.SalesmanStatusTypeOuterClass.SalesmanStatusType result = emu.grasscutter.net.proto.SalesmanStatusTypeOuterClass.SalesmanStatusType.forNumber(status_);
+        @SuppressWarnings("deprecation")
+        emu.grasscutter.net.proto.SalesmanStatusTypeOuterClass.SalesmanStatusType result = emu.grasscutter.net.proto.SalesmanStatusTypeOuterClass.SalesmanStatusType.valueOf(status_);
         return result == null ? emu.grasscutter.net.proto.SalesmanStatusTypeOuterClass.SalesmanStatusType.UNRECOGNIZED : result;
       }
       /**
@@ -951,7 +977,7 @@ public final class SalesmanInfoOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000001;
+
         status_ = value.getNumber();
         onChanged();
         return this;
@@ -961,7 +987,7 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+
         status_ = 0;
         onChanged();
         return this;
@@ -982,9 +1008,8 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder setUnk3300FOFFAEEBBNP(int value) {
-        
+
         unk3300FOFFAEEBBNP_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -993,7 +1018,7 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300FOFFAEEBBNP() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+
         unk3300FOFFAEEBBNP_ = 0;
         onChanged();
         return this;
@@ -1014,9 +1039,8 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder setUnk3300DIJFOCBGIAM(int value) {
-        
+
         unk3300DIJFOCBGIAM_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1025,7 +1049,7 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300DIJFOCBGIAM() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+
         unk3300DIJFOCBGIAM_ = 0;
         onChanged();
         return this;
@@ -1046,9 +1070,8 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder setDayIndex(int value) {
-        
+
         dayIndex_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1057,7 +1080,7 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDayIndex() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+
         dayIndex_ = 0;
         onChanged();
         return this;
@@ -1078,9 +1101,8 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder setUnk3300JNALBACFNFN(boolean value) {
-        
+
         unk3300JNALBACFNFN_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1089,7 +1111,7 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300JNALBACFNFN() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+
         unk3300JNALBACFNFN_ = false;
         onChanged();
         return this;
@@ -1098,7 +1120,7 @@ public final class SalesmanInfoOuterClass {
       private com.google.protobuf.MapField<
           java.lang.Integer, java.lang.Integer> selectedRewardIdMap_;
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-          internalGetSelectedRewardIdMap() {
+      internalGetSelectedRewardIdMap() {
         if (selectedRewardIdMap_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               SelectedRewardIdMapDefaultEntryHolder.defaultEntry);
@@ -1106,7 +1128,8 @@ public final class SalesmanInfoOuterClass {
         return selectedRewardIdMap_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-          internalGetMutableSelectedRewardIdMap() {
+      internalGetMutableSelectedRewardIdMap() {
+        onChanged();;
         if (selectedRewardIdMap_ == null) {
           selectedRewardIdMap_ = com.google.protobuf.MapField.newMapField(
               SelectedRewardIdMapDefaultEntryHolder.defaultEntry);
@@ -1114,20 +1137,20 @@ public final class SalesmanInfoOuterClass {
         if (!selectedRewardIdMap_.isMutable()) {
           selectedRewardIdMap_ = selectedRewardIdMap_.copy();
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
         return selectedRewardIdMap_;
       }
+
       public int getSelectedRewardIdMapCount() {
         return internalGetSelectedRewardIdMap().getMap().size();
       }
       /**
        * <code>map&lt;uint32, uint32&gt; selectedRewardIdMap = 13;</code>
        */
+
       @java.lang.Override
       public boolean containsSelectedRewardIdMap(
           int key) {
-        
+
         return internalGetSelectedRewardIdMap().getMap().containsKey(key);
       }
       /**
@@ -1142,6 +1165,7 @@ public final class SalesmanInfoOuterClass {
        * <code>map&lt;uint32, uint32&gt; selectedRewardIdMap = 13;</code>
        */
       @java.lang.Override
+
       public java.util.Map<java.lang.Integer, java.lang.Integer> getSelectedRewardIdMapMap() {
         return internalGetSelectedRewardIdMap().getMap();
       }
@@ -1149,10 +1173,11 @@ public final class SalesmanInfoOuterClass {
        * <code>map&lt;uint32, uint32&gt; selectedRewardIdMap = 13;</code>
        */
       @java.lang.Override
+
       public int getSelectedRewardIdMapOrDefault(
           int key,
           int defaultValue) {
-        
+
         java.util.Map<java.lang.Integer, java.lang.Integer> map =
             internalGetSelectedRewardIdMap().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1161,9 +1186,10 @@ public final class SalesmanInfoOuterClass {
        * <code>map&lt;uint32, uint32&gt; selectedRewardIdMap = 13;</code>
        */
       @java.lang.Override
+
       public int getSelectedRewardIdMapOrThrow(
           int key) {
-        
+
         java.util.Map<java.lang.Integer, java.lang.Integer> map =
             internalGetSelectedRewardIdMap().getMap();
         if (!map.containsKey(key)) {
@@ -1171,8 +1197,8 @@ public final class SalesmanInfoOuterClass {
         }
         return map.get(key);
       }
+
       public Builder clearSelectedRewardIdMap() {
-        bitField0_ = (bitField0_ & ~0x00000020);
         internalGetMutableSelectedRewardIdMap().getMutableMap()
             .clear();
         return this;
@@ -1180,9 +1206,10 @@ public final class SalesmanInfoOuterClass {
       /**
        * <code>map&lt;uint32, uint32&gt; selectedRewardIdMap = 13;</code>
        */
+
       public Builder removeSelectedRewardIdMap(
           int key) {
-        
+
         internalGetMutableSelectedRewardIdMap().getMutableMap()
             .remove(key);
         return this;
@@ -1192,8 +1219,7 @@ public final class SalesmanInfoOuterClass {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, java.lang.Integer>
-          getMutableSelectedRewardIdMap() {
-        bitField0_ |= 0x00000020;
+      getMutableSelectedRewardIdMap() {
         return internalGetMutableSelectedRewardIdMap().getMutableMap();
       }
       /**
@@ -1202,21 +1228,20 @@ public final class SalesmanInfoOuterClass {
       public Builder putSelectedRewardIdMap(
           int key,
           int value) {
-        
-        
+
+
         internalGetMutableSelectedRewardIdMap().getMutableMap()
             .put(key, value);
-        bitField0_ |= 0x00000020;
         return this;
       }
       /**
        * <code>map&lt;uint32, uint32&gt; selectedRewardIdMap = 13;</code>
        */
+
       public Builder putAllSelectedRewardIdMap(
           java.util.Map<java.lang.Integer, java.lang.Integer> values) {
         internalGetMutableSelectedRewardIdMap().getMutableMap()
             .putAll(values);
-        bitField0_ |= 0x00000020;
         return this;
       }
 
@@ -1235,9 +1260,8 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder setUnk3300KNJCBGFKLFD(int value) {
-        
+
         unk3300KNJCBGFKLFD_ = value;
-        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1246,7 +1270,7 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300KNJCBGFKLFD() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+
         unk3300KNJCBGFKLFD_ = 0;
         onChanged();
         return this;
@@ -1267,9 +1291,8 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder setUnk3300DJFCEFKGKPI(boolean value) {
-        
+
         unk3300DJFCEFKGKPI_ = value;
-        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -1278,7 +1301,7 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300DJFCEFKGKPI() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+
         unk3300DJFCEFKGKPI_ = false;
         onChanged();
         return this;
@@ -1299,9 +1322,8 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder setDayRewardId(int value) {
-        
+
         dayRewardId_ = value;
-        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -1310,7 +1332,7 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDayRewardId() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+
         dayRewardId_ = 0;
         onChanged();
         return this;
@@ -1331,9 +1353,8 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder setUnk3300LPABHMOPFCE(int value) {
-        
+
         unk3300LPABHMOPFCE_ = value;
-        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -1342,7 +1363,7 @@ public final class SalesmanInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300LPABHMOPFCE() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+
         unk3300LPABHMOPFCE_ = 0;
         onChanged();
         return this;
@@ -1380,18 +1401,7 @@ public final class SalesmanInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SalesmanInfo(input, extensionRegistry);
       }
     };
 
@@ -1413,12 +1423,12 @@ public final class SalesmanInfoOuterClass {
 
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SalesmanInfo_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_SalesmanInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SalesmanInfo_SelectedRewardIdMapEntry_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_SalesmanInfo_SelectedRewardIdMapEntry_fieldAccessorTable;
 

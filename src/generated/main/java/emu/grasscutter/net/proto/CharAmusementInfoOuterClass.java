@@ -94,6 +94,76 @@ public final class CharAmusementInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private CharAmusementInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+
+              emdkpmhihmp_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+
+              inllhgjoaco_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+
+              levelId_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              stageId_ = input.readUInt32();
+              break;
+            }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                avatarInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.CharAmusementAvatarInfoOuterClass.CharAmusementAvatarInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              avatarInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.CharAmusementAvatarInfoOuterClass.CharAmusementAvatarInfo.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          avatarInfoList_ = java.util.Collections.unmodifiableList(avatarInfoList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CharAmusementInfoOuterClass.internal_static_CharAmusementInfo_descriptor;
@@ -108,7 +178,6 @@ public final class CharAmusementInfoOuterClass {
     }
 
     public static final int AVATARINFOLIST_FIELD_NUMBER = 11;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.CharAmusementAvatarInfoOuterClass.CharAmusementAvatarInfo> avatarInfoList_;
     /**
      * <code>repeated .CharAmusementAvatarInfo avatarInfoList = 11;</code>
@@ -149,7 +218,7 @@ public final class CharAmusementInfoOuterClass {
     }
 
     public static final int EMDKPMHIHMP_FIELD_NUMBER = 3;
-    private int emdkpmhihmp_ = 0;
+    private int emdkpmhihmp_;
     /**
      * <code>uint32 emdkpmhihmp = 3;</code>
      * @return The emdkpmhihmp.
@@ -160,7 +229,7 @@ public final class CharAmusementInfoOuterClass {
     }
 
     public static final int LEVELID_FIELD_NUMBER = 6;
-    private int levelId_ = 0;
+    private int levelId_;
     /**
      * <code>uint32 levelId = 6;</code>
      * @return The levelId.
@@ -171,7 +240,7 @@ public final class CharAmusementInfoOuterClass {
     }
 
     public static final int STAGEID_FIELD_NUMBER = 8;
-    private int stageId_ = 0;
+    private int stageId_;
     /**
      * <code>uint32 stageId = 8;</code>
      * @return The stageId.
@@ -182,7 +251,7 @@ public final class CharAmusementInfoOuterClass {
     }
 
     public static final int INLLHGJOACO_FIELD_NUMBER = 5;
-    private int inllhgjoaco_ = 0;
+    private int inllhgjoaco_;
     /**
      * <code>uint32 inllhgjoaco = 5;</code>
      * @return The inllhgjoaco.
@@ -221,7 +290,7 @@ public final class CharAmusementInfoOuterClass {
       for (int i = 0; i < avatarInfoList_.size(); i++) {
         output.writeMessage(11, avatarInfoList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -250,7 +319,7 @@ public final class CharAmusementInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, avatarInfoList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -275,7 +344,7 @@ public final class CharAmusementInfoOuterClass {
           != other.getStageId()) return false;
       if (getInllhgjoaco()
           != other.getInllhgjoaco()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -298,7 +367,7 @@ public final class CharAmusementInfoOuterClass {
       hash = (53 * hash) + getStageId();
       hash = (37 * hash) + INLLHGJOACO_FIELD_NUMBER;
       hash = (53 * hash) + getInllhgjoaco();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -415,29 +484,37 @@ public final class CharAmusementInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CharAmusementInfoOuterClass.CharAmusementInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAvatarInfoListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         if (avatarInfoListBuilder_ == null) {
           avatarInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          avatarInfoList_ = null;
           avatarInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         emdkpmhihmp_ = 0;
+
         levelId_ = 0;
+
         stageId_ = 0;
+
         inllhgjoaco_ = 0;
+
         return this;
       }
 
@@ -464,13 +541,7 @@ public final class CharAmusementInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.CharAmusementInfoOuterClass.CharAmusementInfo buildPartial() {
         emu.grasscutter.net.proto.CharAmusementInfoOuterClass.CharAmusementInfo result = new emu.grasscutter.net.proto.CharAmusementInfoOuterClass.CharAmusementInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.CharAmusementInfoOuterClass.CharAmusementInfo result) {
+        int from_bitField0_ = bitField0_;
         if (avatarInfoListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             avatarInfoList_ = java.util.Collections.unmodifiableList(avatarInfoList_);
@@ -480,22 +551,12 @@ public final class CharAmusementInfoOuterClass {
         } else {
           result.avatarInfoList_ = avatarInfoListBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.CharAmusementInfoOuterClass.CharAmusementInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.emdkpmhihmp_ = emdkpmhihmp_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.levelId_ = levelId_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.stageId_ = stageId_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.inllhgjoaco_ = inllhgjoaco_;
-        }
+        result.emdkpmhihmp_ = emdkpmhihmp_;
+        result.levelId_ = levelId_;
+        result.stageId_ = stageId_;
+        result.inllhgjoaco_ = inllhgjoaco_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -580,7 +641,7 @@ public final class CharAmusementInfoOuterClass {
         if (other.getInllhgjoaco() != 0) {
           setInllhgjoaco(other.getInllhgjoaco());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -595,63 +656,17 @@ public final class CharAmusementInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.CharAmusementInfoOuterClass.CharAmusementInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 24: {
-                emdkpmhihmp_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 24
-              case 40: {
-                inllhgjoaco_ = input.readUInt32();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 40
-              case 48: {
-                levelId_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 48
-              case 64: {
-                stageId_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 64
-              case 90: {
-                emu.grasscutter.net.proto.CharAmusementAvatarInfoOuterClass.CharAmusementAvatarInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.CharAmusementAvatarInfoOuterClass.CharAmusementAvatarInfo.parser(),
-                        extensionRegistry);
-                if (avatarInfoListBuilder_ == null) {
-                  ensureAvatarInfoListIsMutable();
-                  avatarInfoList_.add(m);
-                } else {
-                  avatarInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 90
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.CharAmusementInfoOuterClass.CharAmusementInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -913,7 +928,6 @@ public final class CharAmusementInfoOuterClass {
       public Builder setEmdkpmhihmp(int value) {
         
         emdkpmhihmp_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -922,7 +936,7 @@ public final class CharAmusementInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearEmdkpmhihmp() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         emdkpmhihmp_ = 0;
         onChanged();
         return this;
@@ -945,7 +959,6 @@ public final class CharAmusementInfoOuterClass {
       public Builder setLevelId(int value) {
         
         levelId_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -954,7 +967,7 @@ public final class CharAmusementInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLevelId() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         levelId_ = 0;
         onChanged();
         return this;
@@ -977,7 +990,6 @@ public final class CharAmusementInfoOuterClass {
       public Builder setStageId(int value) {
         
         stageId_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -986,7 +998,7 @@ public final class CharAmusementInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStageId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         stageId_ = 0;
         onChanged();
         return this;
@@ -1009,7 +1021,6 @@ public final class CharAmusementInfoOuterClass {
       public Builder setInllhgjoaco(int value) {
         
         inllhgjoaco_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1018,7 +1029,7 @@ public final class CharAmusementInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearInllhgjoaco() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         inllhgjoaco_ = 0;
         onChanged();
         return this;
@@ -1056,18 +1067,7 @@ public final class CharAmusementInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new CharAmusementInfo(input, extensionRegistry);
       }
     };
 

@@ -79,6 +79,68 @@ public final class GKLODALBJDFOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private GKLODALBJDF(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              stageId_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            case 64: {
+
+              openTime_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+
+              fOPOGKDPFDB_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+
+              isFinish_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GKLODALBJDFOuterClass.internal_static_GKLODALBJDF_descriptor;
@@ -93,7 +155,7 @@ public final class GKLODALBJDFOuterClass {
     }
 
     public static final int IS_FINISH_FIELD_NUMBER = 12;
-    private boolean isFinish_ = false;
+    private boolean isFinish_;
     /**
      * <code>bool is_finish = 12;</code>
      * @return The isFinish.
@@ -104,7 +166,7 @@ public final class GKLODALBJDFOuterClass {
     }
 
     public static final int STAGE_ID_FIELD_NUMBER = 1;
-    private int stageId_ = 0;
+    private int stageId_;
     /**
      * <code>uint32 stage_id = 1;</code>
      * @return The stageId.
@@ -115,7 +177,7 @@ public final class GKLODALBJDFOuterClass {
     }
 
     public static final int IS_OPEN_FIELD_NUMBER = 7;
-    private boolean isOpen_ = false;
+    private boolean isOpen_;
     /**
      * <code>bool is_open = 7;</code>
      * @return The isOpen.
@@ -126,7 +188,7 @@ public final class GKLODALBJDFOuterClass {
     }
 
     public static final int OPEN_TIME_FIELD_NUMBER = 8;
-    private int openTime_ = 0;
+    private int openTime_;
     /**
      * <code>uint32 open_time = 8;</code>
      * @return The openTime.
@@ -137,7 +199,7 @@ public final class GKLODALBJDFOuterClass {
     }
 
     public static final int FOPOGKDPFDB_FIELD_NUMBER = 10;
-    private int fOPOGKDPFDB_ = 0;
+    private int fOPOGKDPFDB_;
     /**
      * <code>uint32 FOPOGKDPFDB = 10;</code>
      * @return The fOPOGKDPFDB.
@@ -176,7 +238,7 @@ public final class GKLODALBJDFOuterClass {
       if (isFinish_ != false) {
         output.writeBool(12, isFinish_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -205,7 +267,7 @@ public final class GKLODALBJDFOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, isFinish_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -230,7 +292,7 @@ public final class GKLODALBJDFOuterClass {
           != other.getOpenTime()) return false;
       if (getFOPOGKDPFDB()
           != other.getFOPOGKDPFDB()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -253,7 +315,7 @@ public final class GKLODALBJDFOuterClass {
       hash = (53 * hash) + getOpenTime();
       hash = (37 * hash) + FOPOGKDPFDB_FIELD_NUMBER;
       hash = (53 * hash) + getFOPOGKDPFDB();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -374,23 +436,32 @@ public final class GKLODALBJDFOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GKLODALBJDFOuterClass.GKLODALBJDF.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         isFinish_ = false;
+
         stageId_ = 0;
+
         isOpen_ = false;
+
         openTime_ = 0;
+
         fOPOGKDPFDB_ = 0;
+
         return this;
       }
 
@@ -417,28 +488,13 @@ public final class GKLODALBJDFOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.GKLODALBJDFOuterClass.GKLODALBJDF buildPartial() {
         emu.grasscutter.net.proto.GKLODALBJDFOuterClass.GKLODALBJDF result = new emu.grasscutter.net.proto.GKLODALBJDFOuterClass.GKLODALBJDF(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.isFinish_ = isFinish_;
+        result.stageId_ = stageId_;
+        result.isOpen_ = isOpen_;
+        result.openTime_ = openTime_;
+        result.fOPOGKDPFDB_ = fOPOGKDPFDB_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.GKLODALBJDFOuterClass.GKLODALBJDF result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isFinish_ = isFinish_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.stageId_ = stageId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.isOpen_ = isOpen_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.openTime_ = openTime_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.fOPOGKDPFDB_ = fOPOGKDPFDB_;
-        }
       }
 
       @java.lang.Override
@@ -500,7 +556,7 @@ public final class GKLODALBJDFOuterClass {
         if (other.getFOPOGKDPFDB() != 0) {
           setFOPOGKDPFDB(other.getFOPOGKDPFDB());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -515,58 +571,19 @@ public final class GKLODALBJDFOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.GKLODALBJDFOuterClass.GKLODALBJDF parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                stageId_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 8
-              case 56: {
-                isOpen_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 56
-              case 64: {
-                openTime_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 64
-              case 80: {
-                fOPOGKDPFDB_ = input.readUInt32();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 80
-              case 96: {
-                isFinish_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 96
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.GKLODALBJDFOuterClass.GKLODALBJDF) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private boolean isFinish_ ;
       /**
@@ -585,7 +602,6 @@ public final class GKLODALBJDFOuterClass {
       public Builder setIsFinish(boolean value) {
         
         isFinish_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -594,7 +610,7 @@ public final class GKLODALBJDFOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsFinish() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         isFinish_ = false;
         onChanged();
         return this;
@@ -617,7 +633,6 @@ public final class GKLODALBJDFOuterClass {
       public Builder setStageId(int value) {
         
         stageId_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -626,7 +641,7 @@ public final class GKLODALBJDFOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStageId() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         stageId_ = 0;
         onChanged();
         return this;
@@ -649,7 +664,6 @@ public final class GKLODALBJDFOuterClass {
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -658,7 +672,7 @@ public final class GKLODALBJDFOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         isOpen_ = false;
         onChanged();
         return this;
@@ -681,7 +695,6 @@ public final class GKLODALBJDFOuterClass {
       public Builder setOpenTime(int value) {
         
         openTime_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -690,7 +703,7 @@ public final class GKLODALBJDFOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOpenTime() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         openTime_ = 0;
         onChanged();
         return this;
@@ -713,7 +726,6 @@ public final class GKLODALBJDFOuterClass {
       public Builder setFOPOGKDPFDB(int value) {
         
         fOPOGKDPFDB_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -722,7 +734,7 @@ public final class GKLODALBJDFOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFOPOGKDPFDB() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         fOPOGKDPFDB_ = 0;
         onChanged();
         return this;
@@ -760,18 +772,7 @@ public final class GKLODALBJDFOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new GKLODALBJDF(input, extensionRegistry);
       }
     };
 

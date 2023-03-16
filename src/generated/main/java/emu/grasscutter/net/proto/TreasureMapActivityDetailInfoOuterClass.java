@@ -141,6 +141,103 @@ public final class TreasureMapActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private TreasureMapActivityDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+
+              mLCDFLBDNHP_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+
+              ePFPMGJEMJH_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+
+              treasureCloseTime_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+
+              activeRegionIndex_ = input.readUInt32();
+              break;
+            }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                bonusChallengeList_ = new java.util.ArrayList<emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              bonusChallengeList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 96: {
+
+              currencyNum_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              pKCNGGOJEJA_ = input.readUInt32();
+              break;
+            }
+            case 114: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                regionInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.TreasureMapRegionInfoOuterClass.TreasureMapRegionInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              regionInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.TreasureMapRegionInfoOuterClass.TreasureMapRegionInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 120: {
+
+              isMpChallengeTouched_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          bonusChallengeList_ = java.util.Collections.unmodifiableList(bonusChallengeList_);
+        }
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          regionInfoList_ = java.util.Collections.unmodifiableList(regionInfoList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TreasureMapActivityDetailInfoOuterClass.internal_static_TreasureMapActivityDetailInfo_descriptor;
@@ -155,7 +252,6 @@ public final class TreasureMapActivityDetailInfoOuterClass {
     }
 
     public static final int REGION_INFO_LIST_FIELD_NUMBER = 14;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.TreasureMapRegionInfoOuterClass.TreasureMapRegionInfo> regionInfoList_;
     /**
      * <code>repeated .TreasureMapRegionInfo region_info_list = 14;</code>
@@ -196,7 +292,6 @@ public final class TreasureMapActivityDetailInfoOuterClass {
     }
 
     public static final int BONUS_CHALLENGE_LIST_FIELD_NUMBER = 11;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo> bonusChallengeList_;
     /**
      * <code>repeated .TreasureMapBonusChallengeInfo bonus_challenge_list = 11;</code>
@@ -237,7 +332,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
     }
 
     public static final int ACTIVE_REGION_INDEX_FIELD_NUMBER = 10;
-    private int activeRegionIndex_ = 0;
+    private int activeRegionIndex_;
     /**
      * <code>uint32 active_region_index = 10;</code>
      * @return The activeRegionIndex.
@@ -248,7 +343,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
     }
 
     public static final int PKCNGGOJEJA_FIELD_NUMBER = 13;
-    private int pKCNGGOJEJA_ = 0;
+    private int pKCNGGOJEJA_;
     /**
      * <code>uint32 PKCNGGOJEJA = 13;</code>
      * @return The pKCNGGOJEJA.
@@ -259,7 +354,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
     }
 
     public static final int MLCDFLBDNHP_FIELD_NUMBER = 3;
-    private int mLCDFLBDNHP_ = 0;
+    private int mLCDFLBDNHP_;
     /**
      * <code>uint32 MLCDFLBDNHP = 3;</code>
      * @return The mLCDFLBDNHP.
@@ -270,7 +365,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
     }
 
     public static final int CURRENCY_NUM_FIELD_NUMBER = 12;
-    private int currencyNum_ = 0;
+    private int currencyNum_;
     /**
      * <code>uint32 currency_num = 12;</code>
      * @return The currencyNum.
@@ -281,7 +376,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
     }
 
     public static final int EPFPMGJEMJH_FIELD_NUMBER = 4;
-    private int ePFPMGJEMJH_ = 0;
+    private int ePFPMGJEMJH_;
     /**
      * <code>uint32 EPFPMGJEMJH = 4;</code>
      * @return The ePFPMGJEMJH.
@@ -292,7 +387,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
     }
 
     public static final int TREASURE_CLOSE_TIME_FIELD_NUMBER = 6;
-    private int treasureCloseTime_ = 0;
+    private int treasureCloseTime_;
     /**
      * <code>uint32 treasure_close_time = 6;</code>
      * @return The treasureCloseTime.
@@ -303,7 +398,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
     }
 
     public static final int IS_MP_CHALLENGE_TOUCHED_FIELD_NUMBER = 15;
-    private boolean isMpChallengeTouched_ = false;
+    private boolean isMpChallengeTouched_;
     /**
      * <code>bool is_mp_challenge_touched = 15;</code>
      * @return The isMpChallengeTouched.
@@ -354,7 +449,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
       if (isMpChallengeTouched_ != false) {
         output.writeBool(15, isMpChallengeTouched_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -399,7 +494,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(15, isMpChallengeTouched_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -432,7 +527,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
           != other.getTreasureCloseTime()) return false;
       if (getIsMpChallengeTouched()
           != other.getIsMpChallengeTouched()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -466,7 +561,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
       hash = (37 * hash) + IS_MP_CHALLENGE_TOUCHED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsMpChallengeTouched());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -587,39 +682,50 @@ public final class TreasureMapActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TreasureMapActivityDetailInfoOuterClass.TreasureMapActivityDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRegionInfoListFieldBuilder();
+          getBonusChallengeListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         if (regionInfoListBuilder_ == null) {
           regionInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          regionInfoList_ = null;
           regionInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         if (bonusChallengeListBuilder_ == null) {
           bonusChallengeList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          bonusChallengeList_ = null;
           bonusChallengeListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         activeRegionIndex_ = 0;
+
         pKCNGGOJEJA_ = 0;
+
         mLCDFLBDNHP_ = 0;
+
         currencyNum_ = 0;
+
         ePFPMGJEMJH_ = 0;
+
         treasureCloseTime_ = 0;
+
         isMpChallengeTouched_ = false;
+
         return this;
       }
 
@@ -646,13 +752,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.TreasureMapActivityDetailInfoOuterClass.TreasureMapActivityDetailInfo buildPartial() {
         emu.grasscutter.net.proto.TreasureMapActivityDetailInfoOuterClass.TreasureMapActivityDetailInfo result = new emu.grasscutter.net.proto.TreasureMapActivityDetailInfoOuterClass.TreasureMapActivityDetailInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.TreasureMapActivityDetailInfoOuterClass.TreasureMapActivityDetailInfo result) {
+        int from_bitField0_ = bitField0_;
         if (regionInfoListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             regionInfoList_ = java.util.Collections.unmodifiableList(regionInfoList_);
@@ -671,31 +771,15 @@ public final class TreasureMapActivityDetailInfoOuterClass {
         } else {
           result.bonusChallengeList_ = bonusChallengeListBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.TreasureMapActivityDetailInfoOuterClass.TreasureMapActivityDetailInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.activeRegionIndex_ = activeRegionIndex_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.pKCNGGOJEJA_ = pKCNGGOJEJA_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.mLCDFLBDNHP_ = mLCDFLBDNHP_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.currencyNum_ = currencyNum_;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.ePFPMGJEMJH_ = ePFPMGJEMJH_;
-        }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.treasureCloseTime_ = treasureCloseTime_;
-        }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.isMpChallengeTouched_ = isMpChallengeTouched_;
-        }
+        result.activeRegionIndex_ = activeRegionIndex_;
+        result.pKCNGGOJEJA_ = pKCNGGOJEJA_;
+        result.mLCDFLBDNHP_ = mLCDFLBDNHP_;
+        result.currencyNum_ = currencyNum_;
+        result.ePFPMGJEMJH_ = ePFPMGJEMJH_;
+        result.treasureCloseTime_ = treasureCloseTime_;
+        result.isMpChallengeTouched_ = isMpChallengeTouched_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -815,7 +899,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
         if (other.getIsMpChallengeTouched() != false) {
           setIsMpChallengeTouched(other.getIsMpChallengeTouched());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -830,91 +914,17 @@ public final class TreasureMapActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.TreasureMapActivityDetailInfoOuterClass.TreasureMapActivityDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 24: {
-                mLCDFLBDNHP_ = input.readUInt32();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 24
-              case 32: {
-                ePFPMGJEMJH_ = input.readUInt32();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 32
-              case 48: {
-                treasureCloseTime_ = input.readUInt32();
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 48
-              case 80: {
-                activeRegionIndex_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 80
-              case 90: {
-                emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo.parser(),
-                        extensionRegistry);
-                if (bonusChallengeListBuilder_ == null) {
-                  ensureBonusChallengeListIsMutable();
-                  bonusChallengeList_.add(m);
-                } else {
-                  bonusChallengeListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 90
-              case 96: {
-                currencyNum_ = input.readUInt32();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 96
-              case 104: {
-                pKCNGGOJEJA_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 104
-              case 114: {
-                emu.grasscutter.net.proto.TreasureMapRegionInfoOuterClass.TreasureMapRegionInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.TreasureMapRegionInfoOuterClass.TreasureMapRegionInfo.parser(),
-                        extensionRegistry);
-                if (regionInfoListBuilder_ == null) {
-                  ensureRegionInfoListIsMutable();
-                  regionInfoList_.add(m);
-                } else {
-                  regionInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 114
-              case 120: {
-                isMpChallengeTouched_ = input.readBool();
-                bitField0_ |= 0x00000100;
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.TreasureMapActivityDetailInfoOuterClass.TreasureMapActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1416,7 +1426,6 @@ public final class TreasureMapActivityDetailInfoOuterClass {
       public Builder setActiveRegionIndex(int value) {
         
         activeRegionIndex_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1425,7 +1434,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearActiveRegionIndex() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         activeRegionIndex_ = 0;
         onChanged();
         return this;
@@ -1448,7 +1457,6 @@ public final class TreasureMapActivityDetailInfoOuterClass {
       public Builder setPKCNGGOJEJA(int value) {
         
         pKCNGGOJEJA_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1457,7 +1465,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPKCNGGOJEJA() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         pKCNGGOJEJA_ = 0;
         onChanged();
         return this;
@@ -1480,7 +1488,6 @@ public final class TreasureMapActivityDetailInfoOuterClass {
       public Builder setMLCDFLBDNHP(int value) {
         
         mLCDFLBDNHP_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1489,7 +1496,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMLCDFLBDNHP() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         mLCDFLBDNHP_ = 0;
         onChanged();
         return this;
@@ -1512,7 +1519,6 @@ public final class TreasureMapActivityDetailInfoOuterClass {
       public Builder setCurrencyNum(int value) {
         
         currencyNum_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1521,7 +1527,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCurrencyNum() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        
         currencyNum_ = 0;
         onChanged();
         return this;
@@ -1544,7 +1550,6 @@ public final class TreasureMapActivityDetailInfoOuterClass {
       public Builder setEPFPMGJEMJH(int value) {
         
         ePFPMGJEMJH_ = value;
-        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1553,7 +1558,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearEPFPMGJEMJH() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        
         ePFPMGJEMJH_ = 0;
         onChanged();
         return this;
@@ -1576,7 +1581,6 @@ public final class TreasureMapActivityDetailInfoOuterClass {
       public Builder setTreasureCloseTime(int value) {
         
         treasureCloseTime_ = value;
-        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -1585,7 +1589,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTreasureCloseTime() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        
         treasureCloseTime_ = 0;
         onChanged();
         return this;
@@ -1608,7 +1612,6 @@ public final class TreasureMapActivityDetailInfoOuterClass {
       public Builder setIsMpChallengeTouched(boolean value) {
         
         isMpChallengeTouched_ = value;
-        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -1617,7 +1620,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsMpChallengeTouched() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        
         isMpChallengeTouched_ = false;
         onChanged();
         return this;
@@ -1655,18 +1658,7 @@ public final class TreasureMapActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new TreasureMapActivityDetailInfo(input, extensionRegistry);
       }
     };
 

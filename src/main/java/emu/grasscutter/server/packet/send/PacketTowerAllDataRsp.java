@@ -37,14 +37,14 @@ public class PacketTowerAllDataRsp extends BasePacket {
                 );
 
         TowerAllDataRsp proto = TowerAllDataRsp.newBuilder()
-                .setTowerScheduleId(towerScheduleManager.getCurrentTowerScheduleData().getScheduleId())
-                .addAllTowerFloorRecordList(recordList)
-                .setCurLevelRecord(TowerCurLevelRecord.newBuilder().setIsEmpty(true))
-                .setScheduleStartTime(DateHelper.getUnixTime(towerScheduleManager.getTowerScheduleConfig()
-                        .getScheduleStartTime()))
-                .setNextScheduleChangeTime(DateHelper.getUnixTime(towerScheduleManager.getTowerScheduleConfig()
-                        .getNextScheduleChangeTime()))
-                .putAllFloorOpenTimeMap(openTimeMap)
+            .setTowerScheduleId(towerScheduleManager.getCurrentTowerScheduleData().getScheduleId())
+            .addAllTowerFloorRecordList(recordList)
+            .setCurLevelRecord(TowerCurLevelRecord.newBuilder().setIsEmpty(true))
+            .setScheduleStartTime(DateHelper.getUnixTime(towerScheduleManager.getTowerScheduleConfig()
+                .getScheduleStartTime()))
+            .setNextScheduleChangeTime(DateHelper.getUnixTime(towerScheduleManager.getTowerScheduleConfig()
+                .getNextScheduleChangeTime()))
+            .putAllFloorOpenTimeMap(openTimeMap)
                 .setIsFinishedEntranceFloor(towerManager.canEnterScheduleFloor())
                 .build();
 

@@ -51,6 +51,48 @@ public final class BonusInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private BonusInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 104: {
+
+              leftBonusCount_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.BonusInfoOuterClass.internal_static_BonusInfo_descriptor;
@@ -65,7 +107,7 @@ public final class BonusInfoOuterClass {
     }
 
     public static final int LEFTBONUSCOUNT_FIELD_NUMBER = 13;
-    private int leftBonusCount_ = 0;
+    private int leftBonusCount_;
     /**
      * <code>uint32 leftBonusCount = 13;</code>
      * @return The leftBonusCount.
@@ -92,7 +134,7 @@ public final class BonusInfoOuterClass {
       if (leftBonusCount_ != 0) {
         output.writeUInt32(13, leftBonusCount_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -105,7 +147,7 @@ public final class BonusInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, leftBonusCount_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -122,7 +164,7 @@ public final class BonusInfoOuterClass {
 
       if (getLeftBonusCount()
           != other.getLeftBonusCount()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -135,7 +177,7 @@ public final class BonusInfoOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + LEFTBONUSCOUNT_FIELD_NUMBER;
       hash = (53 * hash) + getLeftBonusCount();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -252,19 +294,24 @@ public final class BonusInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BonusInfoOuterClass.BonusInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         leftBonusCount_ = 0;
+
         return this;
       }
 
@@ -291,16 +338,9 @@ public final class BonusInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.BonusInfoOuterClass.BonusInfo buildPartial() {
         emu.grasscutter.net.proto.BonusInfoOuterClass.BonusInfo result = new emu.grasscutter.net.proto.BonusInfoOuterClass.BonusInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.leftBonusCount_ = leftBonusCount_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.BonusInfoOuterClass.BonusInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.leftBonusCount_ = leftBonusCount_;
-        }
       }
 
       @java.lang.Override
@@ -350,7 +390,7 @@ public final class BonusInfoOuterClass {
         if (other.getLeftBonusCount() != 0) {
           setLeftBonusCount(other.getLeftBonusCount());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -365,38 +405,19 @@ public final class BonusInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.BonusInfoOuterClass.BonusInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 104: {
-                leftBonusCount_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.BonusInfoOuterClass.BonusInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private int leftBonusCount_ ;
       /**
@@ -415,7 +436,6 @@ public final class BonusInfoOuterClass {
       public Builder setLeftBonusCount(int value) {
         
         leftBonusCount_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -424,7 +444,7 @@ public final class BonusInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLeftBonusCount() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         leftBonusCount_ = 0;
         onChanged();
         return this;
@@ -462,18 +482,7 @@ public final class BonusInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new BonusInfo(input, extensionRegistry);
       }
     };
 

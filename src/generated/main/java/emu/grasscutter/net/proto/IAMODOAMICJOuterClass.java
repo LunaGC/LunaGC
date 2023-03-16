@@ -67,6 +67,58 @@ public final class IAMODOAMICJOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private IAMODOAMICJ(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 40: {
+
+              fLNDBEEKMFN_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              beginTime_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+
+              endTime_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.IAMODOAMICJOuterClass.internal_static_IAMODOAMICJ_descriptor;
@@ -81,7 +133,7 @@ public final class IAMODOAMICJOuterClass {
     }
 
     public static final int BEGIN_TIME_FIELD_NUMBER = 8;
-    private int beginTime_ = 0;
+    private int beginTime_;
     /**
      * <code>uint32 begin_time = 8;</code>
      * @return The beginTime.
@@ -92,7 +144,7 @@ public final class IAMODOAMICJOuterClass {
     }
 
     public static final int FLNDBEEKMFN_FIELD_NUMBER = 5;
-    private int fLNDBEEKMFN_ = 0;
+    private int fLNDBEEKMFN_;
     /**
      * <code>uint32 FLNDBEEKMFN = 5;</code>
      * @return The fLNDBEEKMFN.
@@ -103,7 +155,7 @@ public final class IAMODOAMICJOuterClass {
     }
 
     public static final int END_TIME_FIELD_NUMBER = 12;
-    private int endTime_ = 0;
+    private int endTime_;
     /**
      * <code>uint32 end_time = 12;</code>
      * @return The endTime.
@@ -136,7 +188,7 @@ public final class IAMODOAMICJOuterClass {
       if (endTime_ != 0) {
         output.writeUInt32(12, endTime_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -157,7 +209,7 @@ public final class IAMODOAMICJOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(12, endTime_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -178,7 +230,7 @@ public final class IAMODOAMICJOuterClass {
           != other.getFLNDBEEKMFN()) return false;
       if (getEndTime()
           != other.getEndTime()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -195,7 +247,7 @@ public final class IAMODOAMICJOuterClass {
       hash = (53 * hash) + getFLNDBEEKMFN();
       hash = (37 * hash) + END_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getEndTime();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -316,21 +368,28 @@ public final class IAMODOAMICJOuterClass {
 
       // Construct using emu.grasscutter.net.proto.IAMODOAMICJOuterClass.IAMODOAMICJ.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         beginTime_ = 0;
+
         fLNDBEEKMFN_ = 0;
+
         endTime_ = 0;
+
         return this;
       }
 
@@ -357,22 +416,11 @@ public final class IAMODOAMICJOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.IAMODOAMICJOuterClass.IAMODOAMICJ buildPartial() {
         emu.grasscutter.net.proto.IAMODOAMICJOuterClass.IAMODOAMICJ result = new emu.grasscutter.net.proto.IAMODOAMICJOuterClass.IAMODOAMICJ(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.beginTime_ = beginTime_;
+        result.fLNDBEEKMFN_ = fLNDBEEKMFN_;
+        result.endTime_ = endTime_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.IAMODOAMICJOuterClass.IAMODOAMICJ result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.beginTime_ = beginTime_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.fLNDBEEKMFN_ = fLNDBEEKMFN_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.endTime_ = endTime_;
-        }
       }
 
       @java.lang.Override
@@ -428,7 +476,7 @@ public final class IAMODOAMICJOuterClass {
         if (other.getEndTime() != 0) {
           setEndTime(other.getEndTime());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -443,48 +491,19 @@ public final class IAMODOAMICJOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.IAMODOAMICJOuterClass.IAMODOAMICJ parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 40: {
-                fLNDBEEKMFN_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 40
-              case 64: {
-                beginTime_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 64
-              case 96: {
-                endTime_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 96
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.IAMODOAMICJOuterClass.IAMODOAMICJ) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private int beginTime_ ;
       /**
@@ -503,7 +522,6 @@ public final class IAMODOAMICJOuterClass {
       public Builder setBeginTime(int value) {
         
         beginTime_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -512,7 +530,7 @@ public final class IAMODOAMICJOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBeginTime() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         beginTime_ = 0;
         onChanged();
         return this;
@@ -535,7 +553,6 @@ public final class IAMODOAMICJOuterClass {
       public Builder setFLNDBEEKMFN(int value) {
         
         fLNDBEEKMFN_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -544,7 +561,7 @@ public final class IAMODOAMICJOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFLNDBEEKMFN() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         fLNDBEEKMFN_ = 0;
         onChanged();
         return this;
@@ -567,7 +584,6 @@ public final class IAMODOAMICJOuterClass {
       public Builder setEndTime(int value) {
         
         endTime_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -576,7 +592,7 @@ public final class IAMODOAMICJOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearEndTime() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         endTime_ = 0;
         onChanged();
         return this;
@@ -614,18 +630,7 @@ public final class IAMODOAMICJOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new IAMODOAMICJ(input, extensionRegistry);
       }
     };
 

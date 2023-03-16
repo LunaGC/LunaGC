@@ -1078,8 +1078,8 @@ public final class QueryPathRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022QueryPathRsp.proto\032\014Vector.proto\032\024Path" +
-      "StatusType.proto\"r\n\014QueryPathRsp\022\030\n\007corn" +
+      "\n\022QueryPathRsp.proto\032\024PathStatusType.pro" +
+      "to\032\014Vector.proto\"r\n\014QueryPathRsp\022\030\n\007corn" +
       "ers\030\002 \003(\0132\007.Vector\022%\n\014query_status\030\014 \001(\016" +
       "2\017.PathStatusType\022\020\n\010query_id\030\007 \001(\005\022\017\n\007r" +
       "etcode\030\005 \001(\005B\033\n\031emu.grasscutter.net.prot" +
@@ -1088,8 +1088,8 @@ public final class QueryPathRspOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.PathStatusTypeOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
         });
     internal_static_QueryPathRsp_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1097,8 +1097,8 @@ public final class QueryPathRspOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_QueryPathRsp_descriptor,
         new java.lang.String[] { "Corners", "QueryStatus", "QueryId", "Retcode", });
-    emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
     emu.grasscutter.net.proto.PathStatusTypeOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

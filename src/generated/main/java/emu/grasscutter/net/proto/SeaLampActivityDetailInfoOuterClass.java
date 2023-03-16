@@ -115,6 +115,117 @@ public final class SeaLampActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private SeaLampActivityDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+
+              phaseId_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+
+              oGBFIGHOCIE_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                nLFKHJFABMF_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              nLFKHJFABMF_.addInt(input.readUInt32());
+              break;
+            }
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                nLFKHJFABMF_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                nLFKHJFABMF_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 40: {
+
+              progress_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              mGICPJOFJOA_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                cEOPJHLAEHM_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              cEOPJHLAEHM_.addInt(input.readUInt32());
+              break;
+            }
+            case 74: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                cEOPJHLAEHM_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                cEOPJHLAEHM_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 104: {
+
+              lGJAHFJBMIA_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          nLFKHJFABMF_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          cEOPJHLAEHM_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SeaLampActivityDetailInfoOuterClass.internal_static_SeaLampActivityDetailInfo_descriptor;
@@ -129,7 +240,6 @@ public final class SeaLampActivityDetailInfoOuterClass {
     }
 
     public static final int NLFKHJFABMF_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList nLFKHJFABMF_;
     /**
      * <code>repeated uint32 NLFKHJFABMF = 4;</code>
@@ -158,7 +268,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
     private int nLFKHJFABMFMemoizedSerializedSize = -1;
 
     public static final int LGJAHFJBMIA_FIELD_NUMBER = 13;
-    private int lGJAHFJBMIA_ = 0;
+    private int lGJAHFJBMIA_;
     /**
      * <code>uint32 LGJAHFJBMIA = 13;</code>
      * @return The lGJAHFJBMIA.
@@ -169,7 +279,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
     }
 
     public static final int PROGRESS_FIELD_NUMBER = 5;
-    private int progress_ = 0;
+    private int progress_;
     /**
      * <code>uint32 progress = 5;</code>
      * @return The progress.
@@ -180,7 +290,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
     }
 
     public static final int MGICPJOFJOA_FIELD_NUMBER = 7;
-    private int mGICPJOFJOA_ = 0;
+    private int mGICPJOFJOA_;
     /**
      * <code>uint32 MGICPJOFJOA = 7;</code>
      * @return The mGICPJOFJOA.
@@ -191,7 +301,6 @@ public final class SeaLampActivityDetailInfoOuterClass {
     }
 
     public static final int CEOPJHLAEHM_FIELD_NUMBER = 9;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList cEOPJHLAEHM_;
     /**
      * <code>repeated uint32 CEOPJHLAEHM = 9;</code>
@@ -220,7 +329,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
     private int cEOPJHLAEHMMemoizedSerializedSize = -1;
 
     public static final int PHASE_ID_FIELD_NUMBER = 2;
-    private int phaseId_ = 0;
+    private int phaseId_;
     /**
      * <code>uint32 phase_id = 2;</code>
      * @return The phaseId.
@@ -231,7 +340,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
     }
 
     public static final int OGBFIGHOCIE_FIELD_NUMBER = 3;
-    private int oGBFIGHOCIE_ = 0;
+    private int oGBFIGHOCIE_;
     /**
      * <code>uint32 OGBFIGHOCIE = 3;</code>
      * @return The oGBFIGHOCIE.
@@ -285,7 +394,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
       if (lGJAHFJBMIA_ != 0) {
         output.writeUInt32(13, lGJAHFJBMIA_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -342,7 +451,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, lGJAHFJBMIA_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -371,7 +480,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
           != other.getPhaseId()) return false;
       if (getOGBFIGHOCIE()
           != other.getOGBFIGHOCIE()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -400,7 +509,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
       hash = (53 * hash) + getPhaseId();
       hash = (37 * hash) + OGBFIGHOCIE_FIELD_NUMBER;
       hash = (53 * hash) + getOGBFIGHOCIE();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -521,25 +630,36 @@ public final class SeaLampActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SeaLampActivityDetailInfoOuterClass.SeaLampActivityDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         nLFKHJFABMF_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         lGJAHFJBMIA_ = 0;
+
         progress_ = 0;
+
         mGICPJOFJOA_ = 0;
+
         cEOPJHLAEHM_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         phaseId_ = 0;
+
         oGBFIGHOCIE_ = 0;
+
         return this;
       }
 
@@ -566,42 +686,24 @@ public final class SeaLampActivityDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SeaLampActivityDetailInfoOuterClass.SeaLampActivityDetailInfo buildPartial() {
         emu.grasscutter.net.proto.SeaLampActivityDetailInfoOuterClass.SeaLampActivityDetailInfo result = new emu.grasscutter.net.proto.SeaLampActivityDetailInfoOuterClass.SeaLampActivityDetailInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.SeaLampActivityDetailInfoOuterClass.SeaLampActivityDetailInfo result) {
+        int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
           nLFKHJFABMF_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.nLFKHJFABMF_ = nLFKHJFABMF_;
-        if (((bitField0_ & 0x00000010) != 0)) {
+        result.lGJAHFJBMIA_ = lGJAHFJBMIA_;
+        result.progress_ = progress_;
+        result.mGICPJOFJOA_ = mGICPJOFJOA_;
+        if (((bitField0_ & 0x00000002) != 0)) {
           cEOPJHLAEHM_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.cEOPJHLAEHM_ = cEOPJHLAEHM_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.SeaLampActivityDetailInfoOuterClass.SeaLampActivityDetailInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.lGJAHFJBMIA_ = lGJAHFJBMIA_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.progress_ = progress_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.mGICPJOFJOA_ = mGICPJOFJOA_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.phaseId_ = phaseId_;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.oGBFIGHOCIE_ = oGBFIGHOCIE_;
-        }
+        result.phaseId_ = phaseId_;
+        result.oGBFIGHOCIE_ = oGBFIGHOCIE_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -670,7 +772,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
         if (!other.cEOPJHLAEHM_.isEmpty()) {
           if (cEOPJHLAEHM_.isEmpty()) {
             cEOPJHLAEHM_ = other.cEOPJHLAEHM_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureCEOPJHLAEHMIsMutable();
             cEOPJHLAEHM_.addAll(other.cEOPJHLAEHM_);
@@ -683,7 +785,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
         if (other.getOGBFIGHOCIE() != 0) {
           setOGBFIGHOCIE(other.getOGBFIGHOCIE());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -698,87 +800,17 @@ public final class SeaLampActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SeaLampActivityDetailInfoOuterClass.SeaLampActivityDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                phaseId_ = input.readUInt32();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 16
-              case 24: {
-                oGBFIGHOCIE_ = input.readUInt32();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 24
-              case 32: {
-                int v = input.readUInt32();
-                ensureNLFKHJFABMFIsMutable();
-                nLFKHJFABMF_.addInt(v);
-                break;
-              } // case 32
-              case 34: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureNLFKHJFABMFIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  nLFKHJFABMF_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 34
-              case 40: {
-                progress_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 40
-              case 56: {
-                mGICPJOFJOA_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 56
-              case 72: {
-                int v = input.readUInt32();
-                ensureCEOPJHLAEHMIsMutable();
-                cEOPJHLAEHM_.addInt(v);
-                break;
-              } // case 72
-              case 74: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureCEOPJHLAEHMIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  cEOPJHLAEHM_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 74
-              case 104: {
-                lGJAHFJBMIA_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SeaLampActivityDetailInfoOuterClass.SeaLampActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -788,7 +820,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
         if (!((bitField0_ & 0x00000001) != 0)) {
           nLFKHJFABMF_ = mutableCopy(nLFKHJFABMF_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
       /**
        * <code>repeated uint32 NLFKHJFABMF = 4;</code>
@@ -822,7 +854,6 @@ public final class SeaLampActivityDetailInfoOuterClass {
        */
       public Builder setNLFKHJFABMF(
           int index, int value) {
-        
         ensureNLFKHJFABMFIsMutable();
         nLFKHJFABMF_.setInt(index, value);
         onChanged();
@@ -834,7 +865,6 @@ public final class SeaLampActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addNLFKHJFABMF(int value) {
-        
         ensureNLFKHJFABMFIsMutable();
         nLFKHJFABMF_.addInt(value);
         onChanged();
@@ -881,7 +911,6 @@ public final class SeaLampActivityDetailInfoOuterClass {
       public Builder setLGJAHFJBMIA(int value) {
         
         lGJAHFJBMIA_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -890,7 +919,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLGJAHFJBMIA() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         lGJAHFJBMIA_ = 0;
         onChanged();
         return this;
@@ -913,7 +942,6 @@ public final class SeaLampActivityDetailInfoOuterClass {
       public Builder setProgress(int value) {
         
         progress_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -922,7 +950,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearProgress() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         progress_ = 0;
         onChanged();
         return this;
@@ -945,7 +973,6 @@ public final class SeaLampActivityDetailInfoOuterClass {
       public Builder setMGICPJOFJOA(int value) {
         
         mGICPJOFJOA_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -954,7 +981,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMGICPJOFJOA() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         mGICPJOFJOA_ = 0;
         onChanged();
         return this;
@@ -962,10 +989,10 @@ public final class SeaLampActivityDetailInfoOuterClass {
 
       private com.google.protobuf.Internal.IntList cEOPJHLAEHM_ = emptyIntList();
       private void ensureCEOPJHLAEHMIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           cEOPJHLAEHM_ = mutableCopy(cEOPJHLAEHM_);
-          bitField0_ |= 0x00000010;
-        }
+          bitField0_ |= 0x00000002;
+         }
       }
       /**
        * <code>repeated uint32 CEOPJHLAEHM = 9;</code>
@@ -973,7 +1000,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getCEOPJHLAEHMList() {
-        return ((bitField0_ & 0x00000010) != 0) ?
+        return ((bitField0_ & 0x00000002) != 0) ?
                  java.util.Collections.unmodifiableList(cEOPJHLAEHM_) : cEOPJHLAEHM_;
       }
       /**
@@ -999,7 +1026,6 @@ public final class SeaLampActivityDetailInfoOuterClass {
        */
       public Builder setCEOPJHLAEHM(
           int index, int value) {
-        
         ensureCEOPJHLAEHMIsMutable();
         cEOPJHLAEHM_.setInt(index, value);
         onChanged();
@@ -1011,7 +1037,6 @@ public final class SeaLampActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addCEOPJHLAEHM(int value) {
-        
         ensureCEOPJHLAEHMIsMutable();
         cEOPJHLAEHM_.addInt(value);
         onChanged();
@@ -1036,7 +1061,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
        */
       public Builder clearCEOPJHLAEHM() {
         cEOPJHLAEHM_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1058,7 +1083,6 @@ public final class SeaLampActivityDetailInfoOuterClass {
       public Builder setPhaseId(int value) {
         
         phaseId_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1067,7 +1091,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPhaseId() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        
         phaseId_ = 0;
         onChanged();
         return this;
@@ -1090,7 +1114,6 @@ public final class SeaLampActivityDetailInfoOuterClass {
       public Builder setOGBFIGHOCIE(int value) {
         
         oGBFIGHOCIE_ = value;
-        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1099,7 +1122,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOGBFIGHOCIE() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        
         oGBFIGHOCIE_ = 0;
         onChanged();
         return this;
@@ -1137,18 +1160,7 @@ public final class SeaLampActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SeaLampActivityDetailInfo(input, extensionRegistry);
       }
     };
 

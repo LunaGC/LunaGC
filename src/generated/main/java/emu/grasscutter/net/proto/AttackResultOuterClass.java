@@ -106,19 +106,31 @@ public final class AttackResultOuterClass {
     float getAEIPHPGEFAN();
 
     /**
-     * <code>.HitCollision hitCollision = 10;</code>
-     * @return Whether the hitCollision field is set.
+     * <pre>
+     * Correct
+     * </pre>
+     *
+     * <code>.AttackHitEffectResult hit_eff_result = 7;</code>
+     * @return Whether the hitEffResult field is set.
      */
-    boolean hasHitCollision();
+    boolean hasHitEffResult();
     /**
-     * <code>.HitCollision hitCollision = 10;</code>
-     * @return The hitCollision.
+     * <pre>
+     * Correct
+     * </pre>
+     *
+     * <code>.AttackHitEffectResult hit_eff_result = 7;</code>
+     * @return The hitEffResult.
      */
-    emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision getHitCollision();
+    emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult getHitEffResult();
     /**
-     * <code>.HitCollision hitCollision = 10;</code>
+     * <pre>
+     * Correct
+     * </pre>
+     *
+     * <code>.AttackHitEffectResult hit_eff_result = 7;</code>
      */
-    emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollisionOrBuilder getHitCollisionOrBuilder();
+    emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResultOrBuilder getHitEffResultOrBuilder();
 
     /**
      * <code>uint32 IPPPOLACNMI = 13;</code>
@@ -178,19 +190,31 @@ public final class AttackResultOuterClass {
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getResolvedDirOrBuilder();
 
     /**
-     * <code>.AttackHitEffectResult hitEffResult = 7;</code>
-     * @return Whether the hitEffResult field is set.
+     * <pre>
+     *???
+     * </pre>
+     *
+     * <code>.HitCollision hit_collision = 10;</code>
+     * @return Whether the hitCollision field is set.
      */
-    boolean hasHitEffResult();
+    boolean hasHitCollision();
     /**
-     * <code>.AttackHitEffectResult hitEffResult = 7;</code>
-     * @return The hitEffResult.
+     * <pre>
+     *???
+     * </pre>
+     *
+     * <code>.HitCollision hit_collision = 10;</code>
+     * @return The hitCollision.
      */
-    emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult getHitEffResult();
+    emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision getHitCollision();
     /**
-     * <code>.AttackHitEffectResult hitEffResult = 7;</code>
+     * <pre>
+     *???
+     * </pre>
+     *
+     * <code>.HitCollision hit_collision = 10;</code>
      */
-    emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResultOrBuilder getHitEffResultOrBuilder();
+    emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollisionOrBuilder getHitCollisionOrBuilder();
 
     /**
      * <code>uint32 BIHIHLDIPOK = 6;</code>
@@ -663,30 +687,42 @@ public final class AttackResultOuterClass {
       return aEIPHPGEFAN_;
     }
 
-    public static final int HITCOLLISION_FIELD_NUMBER = 10;
-    private emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision hitCollision_;
+    public static final int HIT_EFF_RESULT_FIELD_NUMBER = 7;
+    private emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult hitEffResult_;
     /**
-     * <code>.HitCollision hitCollision = 10;</code>
-     * @return Whether the hitCollision field is set.
+     * <pre>
+     * Correct
+     * </pre>
+     *
+     * <code>.AttackHitEffectResult hit_eff_result = 7;</code>
+     * @return Whether the hitEffResult field is set.
      */
     @java.lang.Override
-    public boolean hasHitCollision() {
-      return hitCollision_ != null;
+    public boolean hasHitEffResult() {
+      return hitEffResult_ != null;
     }
     /**
-     * <code>.HitCollision hitCollision = 10;</code>
-     * @return The hitCollision.
+     * <pre>
+     * Correct
+     * </pre>
+     *
+     * <code>.AttackHitEffectResult hit_eff_result = 7;</code>
+     * @return The hitEffResult.
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision getHitCollision() {
-      return hitCollision_ == null ? emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.getDefaultInstance() : hitCollision_;
+    public emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult getHitEffResult() {
+      return hitEffResult_ == null ? emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.getDefaultInstance() : hitEffResult_;
     }
     /**
-     * <code>.HitCollision hitCollision = 10;</code>
+     * <pre>
+     * Correct
+     * </pre>
+     *
+     * <code>.AttackHitEffectResult hit_eff_result = 7;</code>
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollisionOrBuilder getHitCollisionOrBuilder() {
-      return getHitCollision();
+    public emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResultOrBuilder getHitEffResultOrBuilder() {
+      return getHitEffResult();
     }
 
     public static final int IPPPOLACNMI_FIELD_NUMBER = 13;
@@ -808,30 +844,42 @@ public final class AttackResultOuterClass {
       return getResolvedDir();
     }
 
-    public static final int HITEFFRESULT_FIELD_NUMBER = 7;
-    private emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult hitEffResult_;
+    public static final int HIT_COLLISION_FIELD_NUMBER = 10;
+    private emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision hitCollision_;
     /**
-     * <code>.AttackHitEffectResult hitEffResult = 7;</code>
-     * @return Whether the hitEffResult field is set.
+     * <pre>
+     *???
+     * </pre>
+     *
+     * <code>.HitCollision hit_collision = 10;</code>
+     * @return Whether the hitCollision field is set.
      */
     @java.lang.Override
-    public boolean hasHitEffResult() {
-      return hitEffResult_ != null;
+    public boolean hasHitCollision() {
+      return hitCollision_ != null;
     }
     /**
-     * <code>.AttackHitEffectResult hitEffResult = 7;</code>
-     * @return The hitEffResult.
+     * <pre>
+     *???
+     * </pre>
+     *
+     * <code>.HitCollision hit_collision = 10;</code>
+     * @return The hitCollision.
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult getHitEffResult() {
-      return hitEffResult_ == null ? emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.getDefaultInstance() : hitEffResult_;
+    public emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision getHitCollision() {
+      return hitCollision_ == null ? emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.getDefaultInstance() : hitCollision_;
     }
     /**
-     * <code>.AttackHitEffectResult hitEffResult = 7;</code>
+     * <pre>
+     *???
+     * </pre>
+     *
+     * <code>.HitCollision hit_collision = 10;</code>
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResultOrBuilder getHitEffResultOrBuilder() {
-      return getHitEffResult();
+    public emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollisionOrBuilder getHitCollisionOrBuilder() {
+      return getHitCollision();
     }
 
     public static final int BIHIHLDIPOK_FIELD_NUMBER = 6;
@@ -1201,10 +1249,10 @@ public final class AttackResultOuterClass {
       if (java.lang.Float.floatToIntBits(getAEIPHPGEFAN())
           != java.lang.Float.floatToIntBits(
               other.getAEIPHPGEFAN())) return false;
-      if (hasHitCollision() != other.hasHitCollision()) return false;
-      if (hasHitCollision()) {
-        if (!getHitCollision()
-            .equals(other.getHitCollision())) return false;
+      if (hasHitEffResult() != other.hasHitEffResult()) return false;
+      if (hasHitEffResult()) {
+        if (!getHitEffResult()
+            .equals(other.getHitEffResult())) return false;
       }
       if (getIPPPOLACNMI()
           != other.getIPPPOLACNMI()) return false;
@@ -1224,10 +1272,10 @@ public final class AttackResultOuterClass {
         if (!getResolvedDir()
             .equals(other.getResolvedDir())) return false;
       }
-      if (hasHitEffResult() != other.hasHitEffResult()) return false;
-      if (hasHitEffResult()) {
-        if (!getHitEffResult()
-            .equals(other.getHitEffResult())) return false;
+      if (hasHitCollision() != other.hasHitCollision()) return false;
+      if (hasHitCollision()) {
+        if (!getHitCollision()
+            .equals(other.getHitCollision())) return false;
       }
       if (getBIHIHLDIPOK()
           != other.getBIHIHLDIPOK()) return false;
@@ -1290,9 +1338,9 @@ public final class AttackResultOuterClass {
       hash = (37 * hash) + AEIPHPGEFAN_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getAEIPHPGEFAN());
-      if (hasHitCollision()) {
-        hash = (37 * hash) + HITCOLLISION_FIELD_NUMBER;
-        hash = (53 * hash) + getHitCollision().hashCode();
+      if (hasHitEffResult()) {
+        hash = (37 * hash) + HIT_EFF_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getHitEffResult().hashCode();
       }
       hash = (37 * hash) + IPPPOLACNMI_FIELD_NUMBER;
       hash = (53 * hash) + getIPPPOLACNMI();
@@ -1313,9 +1361,9 @@ public final class AttackResultOuterClass {
         hash = (37 * hash) + RESOLVED_DIR_FIELD_NUMBER;
         hash = (53 * hash) + getResolvedDir().hashCode();
       }
-      if (hasHitEffResult()) {
-        hash = (37 * hash) + HITEFFRESULT_FIELD_NUMBER;
-        hash = (53 * hash) + getHitEffResult().hashCode();
+      if (hasHitCollision()) {
+        hash = (37 * hash) + HIT_COLLISION_FIELD_NUMBER;
+        hash = (53 * hash) + getHitCollision().hashCode();
       }
       hash = (37 * hash) + BIHIHLDIPOK_FIELD_NUMBER;
       hash = (53 * hash) + getBIHIHLDIPOK();
@@ -1501,11 +1549,11 @@ public final class AttackResultOuterClass {
 
         aEIPHPGEFAN_ = 0F;
 
-        if (hitCollisionBuilder_ == null) {
-          hitCollision_ = null;
+        if (hitEffResultBuilder_ == null) {
+          hitEffResult_ = null;
         } else {
-          hitCollision_ = null;
-          hitCollisionBuilder_ = null;
+          hitEffResult_ = null;
+          hitEffResultBuilder_ = null;
         }
         iPPPOLACNMI_ = 0;
 
@@ -1525,11 +1573,11 @@ public final class AttackResultOuterClass {
           resolvedDir_ = null;
           resolvedDirBuilder_ = null;
         }
-        if (hitEffResultBuilder_ == null) {
-          hitEffResult_ = null;
+        if (hitCollisionBuilder_ == null) {
+          hitCollision_ = null;
         } else {
-          hitEffResult_ = null;
-          hitEffResultBuilder_ = null;
+          hitCollision_ = null;
+          hitCollisionBuilder_ = null;
         }
         bIHIHLDIPOK_ = 0;
 
@@ -1590,10 +1638,10 @@ public final class AttackResultOuterClass {
         result.gCKKIKJLCKG_ = gCKKIKJLCKG_;
         result.gFAODFMIIIB_ = gFAODFMIIIB_;
         result.aEIPHPGEFAN_ = aEIPHPGEFAN_;
-        if (hitCollisionBuilder_ == null) {
-          result.hitCollision_ = hitCollision_;
+        if (hitEffResultBuilder_ == null) {
+          result.hitEffResult_ = hitEffResult_;
         } else {
-          result.hitCollision_ = hitCollisionBuilder_.build();
+          result.hitEffResult_ = hitEffResultBuilder_.build();
         }
         result.iPPPOLACNMI_ = iPPPOLACNMI_;
         result.aNNLKCIDPEC_ = aNNLKCIDPEC_;
@@ -1606,10 +1654,10 @@ public final class AttackResultOuterClass {
         } else {
           result.resolvedDir_ = resolvedDirBuilder_.build();
         }
-        if (hitEffResultBuilder_ == null) {
-          result.hitEffResult_ = hitEffResult_;
+        if (hitCollisionBuilder_ == null) {
+          result.hitCollision_ = hitCollision_;
         } else {
-          result.hitEffResult_ = hitEffResultBuilder_.build();
+          result.hitCollision_ = hitCollisionBuilder_.build();
         }
         result.bIHIHLDIPOK_ = bIHIHLDIPOK_;
         result.elementType_ = elementType_;
@@ -1706,8 +1754,8 @@ public final class AttackResultOuterClass {
         if (other.getAEIPHPGEFAN() != 0F) {
           setAEIPHPGEFAN(other.getAEIPHPGEFAN());
         }
-        if (other.hasHitCollision()) {
-          mergeHitCollision(other.getHitCollision());
+        if (other.hasHitEffResult()) {
+          mergeHitEffResult(other.getHitEffResult());
         }
         if (other.getIPPPOLACNMI() != 0) {
           setIPPPOLACNMI(other.getIPPPOLACNMI());
@@ -1731,8 +1779,8 @@ public final class AttackResultOuterClass {
         if (other.hasResolvedDir()) {
           mergeResolvedDir(other.getResolvedDir());
         }
-        if (other.hasHitEffResult()) {
-          mergeHitEffResult(other.getHitEffResult());
+        if (other.hasHitCollision()) {
+          mergeHitCollision(other.getHitCollision());
         }
         if (other.getBIHIHLDIPOK() != 0) {
           setBIHIHLDIPOK(other.getBIHIHLDIPOK());
@@ -2278,123 +2326,159 @@ public final class AttackResultOuterClass {
         return this;
       }
 
-      private emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision hitCollision_;
+      private emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult hitEffResult_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision, emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.Builder, emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollisionOrBuilder> hitCollisionBuilder_;
+          emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult, emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.Builder, emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResultOrBuilder> hitEffResultBuilder_;
       /**
-       * <code>.HitCollision hitCollision = 10;</code>
-       * @return Whether the hitCollision field is set.
+       * <pre>
+       * Correct
+       * </pre>
+       *
+       * <code>.AttackHitEffectResult hit_eff_result = 7;</code>
+       * @return Whether the hitEffResult field is set.
        */
-      public boolean hasHitCollision() {
-        return hitCollisionBuilder_ != null || hitCollision_ != null;
+      public boolean hasHitEffResult() {
+        return hitEffResultBuilder_ != null || hitEffResult_ != null;
       }
       /**
-       * <code>.HitCollision hitCollision = 10;</code>
-       * @return The hitCollision.
+       * <pre>
+       * Correct
+       * </pre>
+       *
+       * <code>.AttackHitEffectResult hit_eff_result = 7;</code>
+       * @return The hitEffResult.
        */
-      public emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision getHitCollision() {
-        if (hitCollisionBuilder_ == null) {
-          return hitCollision_ == null ? emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.getDefaultInstance() : hitCollision_;
+      public emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult getHitEffResult() {
+        if (hitEffResultBuilder_ == null) {
+          return hitEffResult_ == null ? emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.getDefaultInstance() : hitEffResult_;
         } else {
-          return hitCollisionBuilder_.getMessage();
+          return hitEffResultBuilder_.getMessage();
         }
       }
       /**
-       * <code>.HitCollision hitCollision = 10;</code>
+       * <pre>
+       * Correct
+       * </pre>
+       *
+       * <code>.AttackHitEffectResult hit_eff_result = 7;</code>
        */
-      public Builder setHitCollision(emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision value) {
-        if (hitCollisionBuilder_ == null) {
+      public Builder setHitEffResult(emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult value) {
+        if (hitEffResultBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          hitCollision_ = value;
+          hitEffResult_ = value;
           onChanged();
         } else {
-          hitCollisionBuilder_.setMessage(value);
+          hitEffResultBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.HitCollision hitCollision = 10;</code>
+       * <pre>
+       * Correct
+       * </pre>
+       *
+       * <code>.AttackHitEffectResult hit_eff_result = 7;</code>
        */
-      public Builder setHitCollision(
-          emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.Builder builderForValue) {
-        if (hitCollisionBuilder_ == null) {
-          hitCollision_ = builderForValue.build();
+      public Builder setHitEffResult(
+          emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.Builder builderForValue) {
+        if (hitEffResultBuilder_ == null) {
+          hitEffResult_ = builderForValue.build();
           onChanged();
         } else {
-          hitCollisionBuilder_.setMessage(builderForValue.build());
+          hitEffResultBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.HitCollision hitCollision = 10;</code>
+       * <pre>
+       * Correct
+       * </pre>
+       *
+       * <code>.AttackHitEffectResult hit_eff_result = 7;</code>
        */
-      public Builder mergeHitCollision(emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision value) {
-        if (hitCollisionBuilder_ == null) {
-          if (hitCollision_ != null) {
-            hitCollision_ =
-              emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.newBuilder(hitCollision_).mergeFrom(value).buildPartial();
+      public Builder mergeHitEffResult(emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult value) {
+        if (hitEffResultBuilder_ == null) {
+          if (hitEffResult_ != null) {
+            hitEffResult_ =
+              emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.newBuilder(hitEffResult_).mergeFrom(value).buildPartial();
           } else {
-            hitCollision_ = value;
+            hitEffResult_ = value;
           }
           onChanged();
         } else {
-          hitCollisionBuilder_.mergeFrom(value);
+          hitEffResultBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.HitCollision hitCollision = 10;</code>
+       * <pre>
+       * Correct
+       * </pre>
+       *
+       * <code>.AttackHitEffectResult hit_eff_result = 7;</code>
        */
-      public Builder clearHitCollision() {
-        if (hitCollisionBuilder_ == null) {
-          hitCollision_ = null;
+      public Builder clearHitEffResult() {
+        if (hitEffResultBuilder_ == null) {
+          hitEffResult_ = null;
           onChanged();
         } else {
-          hitCollision_ = null;
-          hitCollisionBuilder_ = null;
+          hitEffResult_ = null;
+          hitEffResultBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.HitCollision hitCollision = 10;</code>
+       * <pre>
+       * Correct
+       * </pre>
+       *
+       * <code>.AttackHitEffectResult hit_eff_result = 7;</code>
        */
-      public emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.Builder getHitCollisionBuilder() {
+      public emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.Builder getHitEffResultBuilder() {
         
         onChanged();
-        return getHitCollisionFieldBuilder().getBuilder();
+        return getHitEffResultFieldBuilder().getBuilder();
       }
       /**
-       * <code>.HitCollision hitCollision = 10;</code>
+       * <pre>
+       * Correct
+       * </pre>
+       *
+       * <code>.AttackHitEffectResult hit_eff_result = 7;</code>
        */
-      public emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollisionOrBuilder getHitCollisionOrBuilder() {
-        if (hitCollisionBuilder_ != null) {
-          return hitCollisionBuilder_.getMessageOrBuilder();
+      public emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResultOrBuilder getHitEffResultOrBuilder() {
+        if (hitEffResultBuilder_ != null) {
+          return hitEffResultBuilder_.getMessageOrBuilder();
         } else {
-          return hitCollision_ == null ?
-              emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.getDefaultInstance() : hitCollision_;
+          return hitEffResult_ == null ?
+              emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.getDefaultInstance() : hitEffResult_;
         }
       }
       /**
-       * <code>.HitCollision hitCollision = 10;</code>
+       * <pre>
+       * Correct
+       * </pre>
+       *
+       * <code>.AttackHitEffectResult hit_eff_result = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision, emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.Builder, emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollisionOrBuilder> 
-          getHitCollisionFieldBuilder() {
-        if (hitCollisionBuilder_ == null) {
-          hitCollisionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision, emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.Builder, emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollisionOrBuilder>(
-                  getHitCollision(),
+          emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult, emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.Builder, emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResultOrBuilder> 
+          getHitEffResultFieldBuilder() {
+        if (hitEffResultBuilder_ == null) {
+          hitEffResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult, emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.Builder, emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResultOrBuilder>(
+                  getHitEffResult(),
                   getParentForChildren(),
                   isClean());
-          hitCollision_ = null;
+          hitEffResult_ = null;
         }
-        return hitCollisionBuilder_;
+        return hitEffResultBuilder_;
       }
 
       private int iPPPOLACNMI_ ;
@@ -2747,123 +2831,159 @@ public final class AttackResultOuterClass {
         return resolvedDirBuilder_;
       }
 
-      private emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult hitEffResult_;
+      private emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision hitCollision_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult, emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.Builder, emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResultOrBuilder> hitEffResultBuilder_;
+          emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision, emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.Builder, emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollisionOrBuilder> hitCollisionBuilder_;
       /**
-       * <code>.AttackHitEffectResult hitEffResult = 7;</code>
-       * @return Whether the hitEffResult field is set.
+       * <pre>
+       *???
+       * </pre>
+       *
+       * <code>.HitCollision hit_collision = 10;</code>
+       * @return Whether the hitCollision field is set.
        */
-      public boolean hasHitEffResult() {
-        return hitEffResultBuilder_ != null || hitEffResult_ != null;
+      public boolean hasHitCollision() {
+        return hitCollisionBuilder_ != null || hitCollision_ != null;
       }
       /**
-       * <code>.AttackHitEffectResult hitEffResult = 7;</code>
-       * @return The hitEffResult.
+       * <pre>
+       *???
+       * </pre>
+       *
+       * <code>.HitCollision hit_collision = 10;</code>
+       * @return The hitCollision.
        */
-      public emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult getHitEffResult() {
-        if (hitEffResultBuilder_ == null) {
-          return hitEffResult_ == null ? emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.getDefaultInstance() : hitEffResult_;
+      public emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision getHitCollision() {
+        if (hitCollisionBuilder_ == null) {
+          return hitCollision_ == null ? emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.getDefaultInstance() : hitCollision_;
         } else {
-          return hitEffResultBuilder_.getMessage();
+          return hitCollisionBuilder_.getMessage();
         }
       }
       /**
-       * <code>.AttackHitEffectResult hitEffResult = 7;</code>
+       * <pre>
+       *???
+       * </pre>
+       *
+       * <code>.HitCollision hit_collision = 10;</code>
        */
-      public Builder setHitEffResult(emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult value) {
-        if (hitEffResultBuilder_ == null) {
+      public Builder setHitCollision(emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision value) {
+        if (hitCollisionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          hitEffResult_ = value;
+          hitCollision_ = value;
           onChanged();
         } else {
-          hitEffResultBuilder_.setMessage(value);
+          hitCollisionBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.AttackHitEffectResult hitEffResult = 7;</code>
+       * <pre>
+       *???
+       * </pre>
+       *
+       * <code>.HitCollision hit_collision = 10;</code>
        */
-      public Builder setHitEffResult(
-          emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.Builder builderForValue) {
-        if (hitEffResultBuilder_ == null) {
-          hitEffResult_ = builderForValue.build();
+      public Builder setHitCollision(
+          emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.Builder builderForValue) {
+        if (hitCollisionBuilder_ == null) {
+          hitCollision_ = builderForValue.build();
           onChanged();
         } else {
-          hitEffResultBuilder_.setMessage(builderForValue.build());
+          hitCollisionBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.AttackHitEffectResult hitEffResult = 7;</code>
+       * <pre>
+       *???
+       * </pre>
+       *
+       * <code>.HitCollision hit_collision = 10;</code>
        */
-      public Builder mergeHitEffResult(emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult value) {
-        if (hitEffResultBuilder_ == null) {
-          if (hitEffResult_ != null) {
-            hitEffResult_ =
-              emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.newBuilder(hitEffResult_).mergeFrom(value).buildPartial();
+      public Builder mergeHitCollision(emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision value) {
+        if (hitCollisionBuilder_ == null) {
+          if (hitCollision_ != null) {
+            hitCollision_ =
+              emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.newBuilder(hitCollision_).mergeFrom(value).buildPartial();
           } else {
-            hitEffResult_ = value;
+            hitCollision_ = value;
           }
           onChanged();
         } else {
-          hitEffResultBuilder_.mergeFrom(value);
+          hitCollisionBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.AttackHitEffectResult hitEffResult = 7;</code>
+       * <pre>
+       *???
+       * </pre>
+       *
+       * <code>.HitCollision hit_collision = 10;</code>
        */
-      public Builder clearHitEffResult() {
-        if (hitEffResultBuilder_ == null) {
-          hitEffResult_ = null;
+      public Builder clearHitCollision() {
+        if (hitCollisionBuilder_ == null) {
+          hitCollision_ = null;
           onChanged();
         } else {
-          hitEffResult_ = null;
-          hitEffResultBuilder_ = null;
+          hitCollision_ = null;
+          hitCollisionBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.AttackHitEffectResult hitEffResult = 7;</code>
+       * <pre>
+       *???
+       * </pre>
+       *
+       * <code>.HitCollision hit_collision = 10;</code>
        */
-      public emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.Builder getHitEffResultBuilder() {
+      public emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.Builder getHitCollisionBuilder() {
         
         onChanged();
-        return getHitEffResultFieldBuilder().getBuilder();
+        return getHitCollisionFieldBuilder().getBuilder();
       }
       /**
-       * <code>.AttackHitEffectResult hitEffResult = 7;</code>
+       * <pre>
+       *???
+       * </pre>
+       *
+       * <code>.HitCollision hit_collision = 10;</code>
        */
-      public emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResultOrBuilder getHitEffResultOrBuilder() {
-        if (hitEffResultBuilder_ != null) {
-          return hitEffResultBuilder_.getMessageOrBuilder();
+      public emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollisionOrBuilder getHitCollisionOrBuilder() {
+        if (hitCollisionBuilder_ != null) {
+          return hitCollisionBuilder_.getMessageOrBuilder();
         } else {
-          return hitEffResult_ == null ?
-              emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.getDefaultInstance() : hitEffResult_;
+          return hitCollision_ == null ?
+              emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.getDefaultInstance() : hitCollision_;
         }
       }
       /**
-       * <code>.AttackHitEffectResult hitEffResult = 7;</code>
+       * <pre>
+       *???
+       * </pre>
+       *
+       * <code>.HitCollision hit_collision = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult, emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.Builder, emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResultOrBuilder> 
-          getHitEffResultFieldBuilder() {
-        if (hitEffResultBuilder_ == null) {
-          hitEffResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult, emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResult.Builder, emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.AttackHitEffectResultOrBuilder>(
-                  getHitEffResult(),
+          emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision, emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.Builder, emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollisionOrBuilder> 
+          getHitCollisionFieldBuilder() {
+        if (hitCollisionBuilder_ == null) {
+          hitCollisionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision, emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollision.Builder, emu.grasscutter.net.proto.HitCollisionOuterClass.HitCollisionOrBuilder>(
+                  getHitCollision(),
                   getParentForChildren(),
                   isClean());
-          hitEffResult_ = null;
+          hitCollision_ = null;
         }
-        return hitEffResultBuilder_;
+        return hitCollisionBuilder_;
       }
 
       private int bIHIHLDIPOK_ ;
@@ -3182,7 +3302,7 @@ public final class AttackResultOuterClass {
     java.lang.String[] descriptorData = {
       "\n\022AttackResult.proto\032\027AbilityIdentifier." +
       "proto\032\033AttackHitEffectResult.proto\032\022HitC" +
-      "ollision.proto\032\014Vector.proto\"\355\005\n\014AttackR" +
+      "ollision.proto\032\014Vector.proto\"\360\005\n\014AttackR" +
       "esult\022\024\n\013LLFAEOGLJEG\030\355\006 \001(\r\022.\n\022ability_i" +
       "dentifier\030\010 \001(\0132\022.AbilityIdentifier\022\024\n\013M" +
       "HBBBOPJCAJ\030\354\004 \001(\r\022\024\n\013NNPPKMOBCJI\030\367\016 \001(\r\022" +
@@ -3190,19 +3310,19 @@ public final class AttackResultOuterClass {
       "\001(\r\022\024\n\013DMPFJNNHEEL\030\273\007 \001(\r\022\024\n\013NMANJCHGKNF" +
       "\030\222\n \001(\010\022\016\n\006damage\030\003 \001(\002\022\023\n\013CDKMJDNAOAC\030\016" +
       " \001(\010\022\024\n\013GCKKIKJLCKG\030\206\010 \001(\002\022\024\n\013GFAODFMIII" +
-      "B\030\226\002 \001(\r\022\024\n\013AEIPHPGEFAN\030\332\003 \001(\002\022#\n\014hitCol" +
-      "lision\030\n \001(\0132\r.HitCollision\022\023\n\013IPPPOLACN" +
-      "MI\030\r \001(\r\022\024\n\013ANNLKCIDPEC\030\376\013 \001(\010\022\023\n\013attack" +
-      "er_id\030\002 \001(\r\022\024\n\013EINPFAMBCJM\030\256\017 \001(\002\022\024\n\013JKJ" +
-      "BOKBIIBI\030\304\001 \001(\010\022\025\n\ranim_event_id\030\005 \001(\t\022\035" +
-      "\n\014resolved_dir\030\017 \001(\0132\007.Vector\022,\n\014hitEffR" +
-      "esult\030\007 \001(\0132\026.AttackHitEffectResult\022\023\n\013B" +
-      "IHIHLDIPOK\030\006 \001(\r\022\024\n\014element_type\030\004 \001(\r\022\024" +
-      "\n\013OOLJHPBLPDL\030\340\002 \001(\r\022\022\n\ndefense_id\030\t \001(\r" +
-      "\022\024\n\013AMBEMOIPJNN\030\332\004 \001(\002\022\024\n\013NGGMGNLMHFO\030\275\016" +
-      " \001(\r\022 \n\030hit_retreat_angle_compat\030\014 \001(\005\022\024" +
-      "\n\013GAPNFLFDBJK\030\272\004 \001(\rB\033\n\031emu.grasscutter." +
-      "net.protob\006proto3"
+      "B\030\226\002 \001(\r\022\024\n\013AEIPHPGEFAN\030\332\003 \001(\002\022.\n\016hit_ef" +
+      "f_result\030\007 \001(\0132\026.AttackHitEffectResult\022\023" +
+      "\n\013IPPPOLACNMI\030\r \001(\r\022\024\n\013ANNLKCIDPEC\030\376\013 \001(" +
+      "\010\022\023\n\013attacker_id\030\002 \001(\r\022\024\n\013EINPFAMBCJM\030\256\017" +
+      " \001(\002\022\024\n\013JKJBOKBIIBI\030\304\001 \001(\010\022\025\n\ranim_event" +
+      "_id\030\005 \001(\t\022\035\n\014resolved_dir\030\017 \001(\0132\007.Vector" +
+      "\022$\n\rhit_collision\030\n \001(\0132\r.HitCollision\022\023" +
+      "\n\013BIHIHLDIPOK\030\006 \001(\r\022\024\n\014element_type\030\004 \001(" +
+      "\r\022\024\n\013OOLJHPBLPDL\030\340\002 \001(\r\022\022\n\ndefense_id\030\t " +
+      "\001(\r\022\024\n\013AMBEMOIPJNN\030\332\004 \001(\002\022\024\n\013NGGMGNLMHFO" +
+      "\030\275\016 \001(\r\022 \n\030hit_retreat_angle_compat\030\014 \001(" +
+      "\005\022\024\n\013GAPNFLFDBJK\030\272\004 \001(\rB\033\n\031emu.grasscutt" +
+      "er.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3217,7 +3337,7 @@ public final class AttackResultOuterClass {
     internal_static_AttackResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AttackResult_descriptor,
-        new java.lang.String[] { "LLFAEOGLJEG", "AbilityIdentifier", "MHBBBOPJCAJ", "NNPPKMOBCJI", "AOOKFAELLCG", "EOGBECEEHIB", "DMPFJNNHEEL", "NMANJCHGKNF", "Damage", "CDKMJDNAOAC", "GCKKIKJLCKG", "GFAODFMIIIB", "AEIPHPGEFAN", "HitCollision", "IPPPOLACNMI", "ANNLKCIDPEC", "AttackerId", "EINPFAMBCJM", "JKJBOKBIIBI", "AnimEventId", "ResolvedDir", "HitEffResult", "BIHIHLDIPOK", "ElementType", "OOLJHPBLPDL", "DefenseId", "AMBEMOIPJNN", "NGGMGNLMHFO", "HitRetreatAngleCompat", "GAPNFLFDBJK", });
+        new java.lang.String[] { "LLFAEOGLJEG", "AbilityIdentifier", "MHBBBOPJCAJ", "NNPPKMOBCJI", "AOOKFAELLCG", "EOGBECEEHIB", "DMPFJNNHEEL", "NMANJCHGKNF", "Damage", "CDKMJDNAOAC", "GCKKIKJLCKG", "GFAODFMIIIB", "AEIPHPGEFAN", "HitEffResult", "IPPPOLACNMI", "ANNLKCIDPEC", "AttackerId", "EINPFAMBCJM", "JKJBOKBIIBI", "AnimEventId", "ResolvedDir", "HitCollision", "BIHIHLDIPOK", "ElementType", "OOLJHPBLPDL", "DefenseId", "AMBEMOIPJNN", "NGGMGNLMHFO", "HitRetreatAngleCompat", "GAPNFLFDBJK", });
     emu.grasscutter.net.proto.AbilityIdentifierOuterClass.getDescriptor();
     emu.grasscutter.net.proto.AttackHitEffectResultOuterClass.getDescriptor();
     emu.grasscutter.net.proto.HitCollisionOuterClass.getDescriptor();

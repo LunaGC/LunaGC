@@ -94,6 +94,91 @@ public final class MCOPOAMEGCPOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private MCOPOAMEGCP(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 32: {
+
+              mapId_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                cNDHCLDMGJP_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              cNDHCLDMGJP_.addInt(input.readUInt32());
+              break;
+            }
+            case 58: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                cNDHCLDMGJP_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                cNDHCLDMGJP_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 72: {
+
+              bestScore_ = input.readUInt32();
+              break;
+            }
+            case 106: {
+              emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.Builder subBuilder = null;
+              if (entranceDetailInfo_ != null) {
+                subBuilder = entranceDetailInfo_.toBuilder();
+              }
+              entranceDetailInfo_ = input.readMessage(emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(entranceDetailInfo_);
+                entranceDetailInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          cNDHCLDMGJP_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.internal_static_MCOPOAMEGCP_descriptor;
@@ -108,7 +193,6 @@ public final class MCOPOAMEGCPOuterClass {
     }
 
     public static final int CNDHCLDMGJP_FIELD_NUMBER = 7;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList cNDHCLDMGJP_;
     /**
      * <code>repeated uint32 CNDHCLDMGJP = 7;</code>
@@ -137,7 +221,7 @@ public final class MCOPOAMEGCPOuterClass {
     private int cNDHCLDMGJPMemoizedSerializedSize = -1;
 
     public static final int MAP_ID_FIELD_NUMBER = 4;
-    private int mapId_ = 0;
+    private int mapId_;
     /**
      * <code>uint32 map_id = 4;</code>
      * @return The mapId.
@@ -148,7 +232,7 @@ public final class MCOPOAMEGCPOuterClass {
     }
 
     public static final int BEST_SCORE_FIELD_NUMBER = 9;
-    private int bestScore_ = 0;
+    private int bestScore_;
     /**
      * <code>uint32 best_score = 9;</code>
      * @return The bestScore.
@@ -181,7 +265,7 @@ public final class MCOPOAMEGCPOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfoOrBuilder getEntranceDetailInfoOrBuilder() {
-      return entranceDetailInfo_ == null ? emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.getDefaultInstance() : entranceDetailInfo_;
+      return getEntranceDetailInfo();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -215,7 +299,7 @@ public final class MCOPOAMEGCPOuterClass {
       if (entranceDetailInfo_ != null) {
         output.writeMessage(13, getEntranceDetailInfo());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -250,7 +334,7 @@ public final class MCOPOAMEGCPOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getEntranceDetailInfo());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -276,7 +360,7 @@ public final class MCOPOAMEGCPOuterClass {
         if (!getEntranceDetailInfo()
             .equals(other.getEntranceDetailInfo())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -299,7 +383,7 @@ public final class MCOPOAMEGCPOuterClass {
         hash = (37 * hash) + ENTRANCE_DETAIL_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getEntranceDetailInfo().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -420,24 +504,32 @@ public final class MCOPOAMEGCPOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         cNDHCLDMGJP_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         mapId_ = 0;
+
         bestScore_ = 0;
-        entranceDetailInfo_ = null;
-        if (entranceDetailInfoBuilder_ != null) {
-          entranceDetailInfoBuilder_.dispose();
+
+        if (entranceDetailInfoBuilder_ == null) {
+          entranceDetailInfo_ = null;
+        } else {
+          entranceDetailInfo_ = null;
           entranceDetailInfoBuilder_ = null;
         }
         return this;
@@ -466,33 +558,21 @@ public final class MCOPOAMEGCPOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP buildPartial() {
         emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP result = new emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP result) {
+        int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
           cNDHCLDMGJP_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.cNDHCLDMGJP_ = cNDHCLDMGJP_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.mapId_ = mapId_;
+        result.mapId_ = mapId_;
+        result.bestScore_ = bestScore_;
+        if (entranceDetailInfoBuilder_ == null) {
+          result.entranceDetailInfo_ = entranceDetailInfo_;
+        } else {
+          result.entranceDetailInfo_ = entranceDetailInfoBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.bestScore_ = bestScore_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.entranceDetailInfo_ = entranceDetailInfoBuilder_ == null
-              ? entranceDetailInfo_
-              : entranceDetailInfoBuilder_.build();
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -558,7 +638,7 @@ public final class MCOPOAMEGCPOuterClass {
         if (other.hasEntranceDetailInfo()) {
           mergeEntranceDetailInfo(other.getEntranceDetailInfo());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -573,63 +653,17 @@ public final class MCOPOAMEGCPOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 32: {
-                mapId_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 32
-              case 56: {
-                int v = input.readUInt32();
-                ensureCNDHCLDMGJPIsMutable();
-                cNDHCLDMGJP_.addInt(v);
-                break;
-              } // case 56
-              case 58: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureCNDHCLDMGJPIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  cNDHCLDMGJP_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 58
-              case 72: {
-                bestScore_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 72
-              case 106: {
-                input.readMessage(
-                    getEntranceDetailInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 106
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -639,7 +673,7 @@ public final class MCOPOAMEGCPOuterClass {
         if (!((bitField0_ & 0x00000001) != 0)) {
           cNDHCLDMGJP_ = mutableCopy(cNDHCLDMGJP_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
       /**
        * <code>repeated uint32 CNDHCLDMGJP = 7;</code>
@@ -673,7 +707,6 @@ public final class MCOPOAMEGCPOuterClass {
        */
       public Builder setCNDHCLDMGJP(
           int index, int value) {
-        
         ensureCNDHCLDMGJPIsMutable();
         cNDHCLDMGJP_.setInt(index, value);
         onChanged();
@@ -685,7 +718,6 @@ public final class MCOPOAMEGCPOuterClass {
        * @return This builder for chaining.
        */
       public Builder addCNDHCLDMGJP(int value) {
-        
         ensureCNDHCLDMGJPIsMutable();
         cNDHCLDMGJP_.addInt(value);
         onChanged();
@@ -732,7 +764,6 @@ public final class MCOPOAMEGCPOuterClass {
       public Builder setMapId(int value) {
         
         mapId_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -741,7 +772,7 @@ public final class MCOPOAMEGCPOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMapId() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         mapId_ = 0;
         onChanged();
         return this;
@@ -764,7 +795,6 @@ public final class MCOPOAMEGCPOuterClass {
       public Builder setBestScore(int value) {
         
         bestScore_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -773,7 +803,7 @@ public final class MCOPOAMEGCPOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBestScore() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         bestScore_ = 0;
         onChanged();
         return this;
@@ -787,7 +817,7 @@ public final class MCOPOAMEGCPOuterClass {
        * @return Whether the entranceDetailInfo field is set.
        */
       public boolean hasEntranceDetailInfo() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return entranceDetailInfoBuilder_ != null || entranceDetailInfo_ != null;
       }
       /**
        * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 13;</code>
@@ -809,11 +839,11 @@ public final class MCOPOAMEGCPOuterClass {
             throw new NullPointerException();
           }
           entranceDetailInfo_ = value;
+          onChanged();
         } else {
           entranceDetailInfoBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+
         return this;
       }
       /**
@@ -823,11 +853,11 @@ public final class MCOPOAMEGCPOuterClass {
           emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.Builder builderForValue) {
         if (entranceDetailInfoBuilder_ == null) {
           entranceDetailInfo_ = builderForValue.build();
+          onChanged();
         } else {
           entranceDetailInfoBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+
         return this;
       }
       /**
@@ -835,38 +865,38 @@ public final class MCOPOAMEGCPOuterClass {
        */
       public Builder mergeEntranceDetailInfo(emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo value) {
         if (entranceDetailInfoBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
-            entranceDetailInfo_ != null &&
-            entranceDetailInfo_ != emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.getDefaultInstance()) {
-            getEntranceDetailInfoBuilder().mergeFrom(value);
+          if (entranceDetailInfo_ != null) {
+            entranceDetailInfo_ =
+              emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.newBuilder(entranceDetailInfo_).mergeFrom(value).buildPartial();
           } else {
             entranceDetailInfo_ = value;
           }
+          onChanged();
         } else {
           entranceDetailInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 13;</code>
        */
       public Builder clearEntranceDetailInfo() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        entranceDetailInfo_ = null;
-        if (entranceDetailInfoBuilder_ != null) {
-          entranceDetailInfoBuilder_.dispose();
+        if (entranceDetailInfoBuilder_ == null) {
+          entranceDetailInfo_ = null;
+          onChanged();
+        } else {
+          entranceDetailInfo_ = null;
           entranceDetailInfoBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 13;</code>
        */
       public emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.Builder getEntranceDetailInfoBuilder() {
-        bitField0_ |= 0x00000008;
+        
         onChanged();
         return getEntranceDetailInfoFieldBuilder().getBuilder();
       }
@@ -930,18 +960,7 @@ public final class MCOPOAMEGCPOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new MCOPOAMEGCP(input, extensionRegistry);
       }
     };
 

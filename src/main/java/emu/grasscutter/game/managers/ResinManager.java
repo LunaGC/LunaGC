@@ -1,16 +1,21 @@
 package emu.grasscutter.game.managers;
 
-import static emu.grasscutter.config.Configuration.GAME_OPTIONS;
-
+import emu.grasscutter.game.inventory.GameItem;
 import emu.grasscutter.game.player.BasePlayerManager;
 import emu.grasscutter.game.player.Player;
+import emu.grasscutter.game.props.ActionReason;
 import emu.grasscutter.game.props.PlayerProperty;
 import emu.grasscutter.game.props.WatcherTriggerType;
-import emu.grasscutter.server.packet.send.PacketPlayerPropNotify;
+import emu.grasscutter.server.packet.send.PacketItemAddHintNotify;
 import emu.grasscutter.server.packet.send.PacketResinChangeNotify;
 import emu.grasscutter.utils.Utils;
 
+import static emu.grasscutter.config.Configuration.GAME_OPTIONS;
+
 public class ResinManager extends BasePlayerManager {
+    public static final int MAX_RESIN_BUYING_COUNT = 6;
+    public static final int AMOUNT_TO_ADD = 60;
+    public static final int[] HCOIN_NUM_TO_BUY_RESIN = new int[]{50, 100, 100, 150, 200, 200};
 
     public ResinManager(Player player) {
         super(player);
@@ -104,7 +109,7 @@ public class ResinManager extends BasePlayerManager {
         // Calculate how much resin we need to refill and update player.
         // Note that this can be more than one in case the player
         // logged off with uncapped resin and is now logging in again.
-        int recharge = 1 + (int)((currentTime - this.player.getNextResinRefresh()) / GAME_OPTIONS.resinOptions.rechargeTime);
+        int recharge = 1 + (int) ((currentTime - this.player.getNextResinRefresh()) / GAME_OPTIONS.resinOptions.rechargeTime);
         int newResin = Math.min(GAME_OPTIONS.resinOptions.cap, currentResin + recharge);
         int resinChange = newResin - currentResin;
 
@@ -114,8 +119,7 @@ public class ResinManager extends BasePlayerManager {
         // Set to zero to disable recharge (because on/over cap.)
         if (newResin >= GAME_OPTIONS.resinOptions.cap) {
             this.player.setNextResinRefresh(0);
-        }
-        else {
+        } else {
             int nextRecharge = this.player.getNextResinRefresh() + resinChange * GAME_OPTIONS.resinOptions.rechargeTime;
             this.player.setNextResinRefresh(nextRecharge);
         }
@@ -145,5 +149,23 @@ public class ResinManager extends BasePlayerManager {
 
         // Send initial notifications on logon.
         this.player.sendPacket(new PacketResinChangeNotify(this.player));
+    }
+
+    public boolean buy() {
+        if (this.player.getResinBuyCount() >= MAX_RESIN_BUYING_COUNT) {
+            return false;
+        }
+
+        var res = this.player.getInventory().payItem(201, HCOIN_NUM_TO_BUY_RESIN[this.player.getResinBuyCount()]);
+        if (!res) {
+            return false;
+        }
+
+        this.player.setResinBuyCount(this.player.getResinBuyCount() + 1);
+        this.player.setProperty(PlayerProperty.PROP_PLAYER_WAIT_SUB_HCOIN, 0);
+        this.addResin(AMOUNT_TO_ADD);
+        this.player.sendPacket(new PacketItemAddHintNotify(new GameItem(106, AMOUNT_TO_ADD), ActionReason.BuyResin));
+
+        return true;
     }
 }

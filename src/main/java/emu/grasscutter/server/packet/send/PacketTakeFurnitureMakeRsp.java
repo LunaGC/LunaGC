@@ -1,6 +1,5 @@
 package emu.grasscutter.server.packet.send;
 
-import emu.grasscutter.data.common.ItemParamData;
 import emu.grasscutter.net.packet.BasePacket;
 import emu.grasscutter.net.packet.PacketOpcodes;
 import emu.grasscutter.net.proto.FurnitureMakeDataOuterClass;
@@ -29,7 +28,7 @@ public class PacketTakeFurnitureMakeRsp extends BasePacket {
 
 		if(others != null){
 			proto.setFurnitureMakeSlot(FurnitureMakeSlotOuterClass.FurnitureMakeSlot.newBuilder()
-					.addAllFurnitureMakeDataList(others)
+                .addAllFurnitureMakeDataList(others)
 					.build());
 		}
 

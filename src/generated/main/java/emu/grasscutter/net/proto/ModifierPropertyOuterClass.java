@@ -19,6 +19,12 @@ public final class ModifierPropertyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <code>float value = 9;</code>
+     * @return The value.
+     */
+    float getValue();
+
+    /**
      * <code>.AbilityString key = 8;</code>
      * @return Whether the key field is set.
      */
@@ -32,14 +38,12 @@ public final class ModifierPropertyOuterClass {
      * <code>.AbilityString key = 8;</code>
      */
     emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityStringOrBuilder getKeyOrBuilder();
-
-    /**
-     * <code>float value = 14;</code>
-     * @return The value.
-     */
-    float getValue();
   }
   /**
+   * <pre>
+   * Name: HBMJGKJKIGL
+   * </pre>
+   *
    * Protobuf type {@code ModifierProperty}
    */
   public static final class ModifierProperty extends
@@ -97,7 +101,7 @@ public final class ModifierPropertyOuterClass {
 
               break;
             }
-            case 117: {
+            case 77: {
 
               value_ = input.readFloat();
               break;
@@ -134,6 +138,17 @@ public final class ModifierPropertyOuterClass {
               emu.grasscutter.net.proto.ModifierPropertyOuterClass.ModifierProperty.class, emu.grasscutter.net.proto.ModifierPropertyOuterClass.ModifierProperty.Builder.class);
     }
 
+    public static final int VALUE_FIELD_NUMBER = 9;
+    private float value_;
+    /**
+     * <code>float value = 9;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public float getValue() {
+      return value_;
+    }
+
     public static final int KEY_FIELD_NUMBER = 8;
     private emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString key_;
     /**
@@ -160,17 +175,6 @@ public final class ModifierPropertyOuterClass {
       return getKey();
     }
 
-    public static final int VALUE_FIELD_NUMBER = 14;
-    private float value_;
-    /**
-     * <code>float value = 14;</code>
-     * @return The value.
-     */
-    @java.lang.Override
-    public float getValue() {
-      return value_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -189,7 +193,7 @@ public final class ModifierPropertyOuterClass {
         output.writeMessage(8, getKey());
       }
       if (value_ != 0F) {
-        output.writeFloat(14, value_);
+        output.writeFloat(9, value_);
       }
       unknownFields.writeTo(output);
     }
@@ -206,7 +210,7 @@ public final class ModifierPropertyOuterClass {
       }
       if (value_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(14, value_);
+          .computeFloatSize(9, value_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -223,14 +227,14 @@ public final class ModifierPropertyOuterClass {
       }
       emu.grasscutter.net.proto.ModifierPropertyOuterClass.ModifierProperty other = (emu.grasscutter.net.proto.ModifierPropertyOuterClass.ModifierProperty) obj;
 
+      if (java.lang.Float.floatToIntBits(getValue())
+          != java.lang.Float.floatToIntBits(
+              other.getValue())) return false;
       if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
         if (!getKey()
             .equals(other.getKey())) return false;
       }
-      if (java.lang.Float.floatToIntBits(getValue())
-          != java.lang.Float.floatToIntBits(
-              other.getValue())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -242,13 +246,13 @@ public final class ModifierPropertyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getValue());
       if (hasKey()) {
         hash = (37 * hash) + KEY_FIELD_NUMBER;
         hash = (53 * hash) + getKey().hashCode();
       }
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getValue());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -345,6 +349,10 @@ public final class ModifierPropertyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: HBMJGKJKIGL
+     * </pre>
+     *
      * Protobuf type {@code ModifierProperty}
      */
     public static final class Builder extends
@@ -382,14 +390,14 @@ public final class ModifierPropertyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        value_ = 0F;
+
         if (keyBuilder_ == null) {
           key_ = null;
         } else {
           key_ = null;
           keyBuilder_ = null;
         }
-        value_ = 0F;
-
         return this;
       }
 
@@ -416,12 +424,12 @@ public final class ModifierPropertyOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ModifierPropertyOuterClass.ModifierProperty buildPartial() {
         emu.grasscutter.net.proto.ModifierPropertyOuterClass.ModifierProperty result = new emu.grasscutter.net.proto.ModifierPropertyOuterClass.ModifierProperty(this);
+        result.value_ = value_;
         if (keyBuilder_ == null) {
           result.key_ = key_;
         } else {
           result.key_ = keyBuilder_.build();
         }
-        result.value_ = value_;
         onBuilt();
         return result;
       }
@@ -470,11 +478,11 @@ public final class ModifierPropertyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.ModifierPropertyOuterClass.ModifierProperty other) {
         if (other == emu.grasscutter.net.proto.ModifierPropertyOuterClass.ModifierProperty.getDefaultInstance()) return this;
-        if (other.hasKey()) {
-          mergeKey(other.getKey());
-        }
         if (other.getValue() != 0F) {
           setValue(other.getValue());
+        }
+        if (other.hasKey()) {
+          mergeKey(other.getKey());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -502,6 +510,37 @@ public final class ModifierPropertyOuterClass {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private float value_ ;
+      /**
+       * <code>float value = 9;</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public float getValue() {
+        return value_;
+      }
+      /**
+       * <code>float value = 9;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(float value) {
+        
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float value = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        
+        value_ = 0F;
+        onChanged();
         return this;
       }
 
@@ -623,37 +662,6 @@ public final class ModifierPropertyOuterClass {
         }
         return keyBuilder_;
       }
-
-      private float value_ ;
-      /**
-       * <code>float value = 14;</code>
-       * @return The value.
-       */
-      @java.lang.Override
-      public float getValue() {
-        return value_;
-      }
-      /**
-       * <code>float value = 14;</code>
-       * @param value The value to set.
-       * @return This builder for chaining.
-       */
-      public Builder setValue(float value) {
-        
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>float value = 14;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearValue() {
-        
-        value_ = 0F;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -722,8 +730,8 @@ public final class ModifierPropertyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026ModifierProperty.proto\032\023AbilityString." +
-      "proto\">\n\020ModifierProperty\022\033\n\003key\030\010 \001(\0132\016" +
-      ".AbilityString\022\r\n\005value\030\016 \001(\002B\033\n\031emu.gra" +
+      "proto\">\n\020ModifierProperty\022\r\n\005value\030\t \001(\002" +
+      "\022\033\n\003key\030\010 \001(\0132\016.AbilityStringB\033\n\031emu.gra" +
       "sscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -736,7 +744,7 @@ public final class ModifierPropertyOuterClass {
     internal_static_ModifierProperty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ModifierProperty_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        new java.lang.String[] { "Value", "Key", });
     emu.grasscutter.net.proto.AbilityStringOuterClass.getDescriptor();
   }
 

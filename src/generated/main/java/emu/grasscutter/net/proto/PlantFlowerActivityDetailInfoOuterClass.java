@@ -47,12 +47,14 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
     /**
      * <code>map&lt;uint32, uint32&gt; KNKPDDKPBBD = 9;</code>
      */
+
     int getKNKPDDKPBBDOrDefault(
         int key,
         int defaultValue);
     /**
      * <code>map&lt;uint32, uint32&gt; KNKPDDKPBBD = 9;</code>
      */
+
     int getKNKPDDKPBBDOrThrow(
         int key);
 
@@ -79,12 +81,14 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
     /**
      * <code>map&lt;uint32, uint32&gt; MBHJNEMIKII = 5;</code>
      */
+
     int getMBHJNEMIKIIOrDefault(
         int key,
         int defaultValue);
     /**
      * <code>map&lt;uint32, uint32&gt; MBHJNEMIKII = 5;</code>
      */
+
     int getMBHJNEMIKIIOrThrow(
         int key);
 
@@ -137,6 +141,90 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private PlantFlowerActivityDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                mBHJNEMIKII_ = com.google.protobuf.MapField.newMapField(
+                    MBHJNEMIKIIDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              mBHJNEMIKII__ = input.readMessage(
+                  MBHJNEMIKIIDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              mBHJNEMIKII_.getMutableMap().put(
+                  mBHJNEMIKII__.getKey(), mBHJNEMIKII__.getValue());
+              break;
+            }
+            case 56: {
+
+              isContentClosed_ = input.readBool();
+              break;
+            }
+            case 64: {
+
+              isTodayHasAwarded_ = input.readBool();
+              break;
+            }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                kNKPDDKPBBD_ = com.google.protobuf.MapField.newMapField(
+                    KNKPDDKPBBDDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              kNKPDDKPBBD__ = input.readMessage(
+                  KNKPDDKPBBDDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              kNKPDDKPBBD_.getMutableMap().put(
+                  kNKPDDKPBBD__.getKey(), kNKPDDKPBBD__.getValue());
+              break;
+            }
+            case 96: {
+
+              dayIndex_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              todaySeedRewardId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.internal_static_PlantFlowerActivityDetailInfo_descriptor;
@@ -165,7 +253,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
     }
 
     public static final int TODAY_SEED_REWARD_ID_FIELD_NUMBER = 15;
-    private int todaySeedRewardId_ = 0;
+    private int todaySeedRewardId_;
     /**
      * <code>uint32 today_seed_reward_id = 15;</code>
      * @return The todaySeedRewardId.
@@ -187,7 +275,6 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0);
     }
-    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, java.lang.Integer> kNKPDDKPBBD_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
@@ -198,12 +285,14 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       }
       return kNKPDDKPBBD_;
     }
+
     public int getKNKPDDKPBBDCount() {
       return internalGetKNKPDDKPBBD().getMap().size();
     }
     /**
      * <code>map&lt;uint32, uint32&gt; KNKPDDKPBBD = 9;</code>
      */
+
     @java.lang.Override
     public boolean containsKNKPDDKPBBD(
         int key) {
@@ -222,6 +311,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
      * <code>map&lt;uint32, uint32&gt; KNKPDDKPBBD = 9;</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.Integer, java.lang.Integer> getKNKPDDKPBBDMap() {
       return internalGetKNKPDDKPBBD().getMap();
     }
@@ -229,6 +319,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
      * <code>map&lt;uint32, uint32&gt; KNKPDDKPBBD = 9;</code>
      */
     @java.lang.Override
+
     public int getKNKPDDKPBBDOrDefault(
         int key,
         int defaultValue) {
@@ -241,6 +332,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
      * <code>map&lt;uint32, uint32&gt; KNKPDDKPBBD = 9;</code>
      */
     @java.lang.Override
+
     public int getKNKPDDKPBBDOrThrow(
         int key) {
       
@@ -264,7 +356,6 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0);
     }
-    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, java.lang.Integer> mBHJNEMIKII_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
@@ -275,12 +366,14 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       }
       return mBHJNEMIKII_;
     }
+
     public int getMBHJNEMIKIICount() {
       return internalGetMBHJNEMIKII().getMap().size();
     }
     /**
      * <code>map&lt;uint32, uint32&gt; MBHJNEMIKII = 5;</code>
      */
+
     @java.lang.Override
     public boolean containsMBHJNEMIKII(
         int key) {
@@ -299,6 +392,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
      * <code>map&lt;uint32, uint32&gt; MBHJNEMIKII = 5;</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.Integer, java.lang.Integer> getMBHJNEMIKIIMap() {
       return internalGetMBHJNEMIKII().getMap();
     }
@@ -306,6 +400,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
      * <code>map&lt;uint32, uint32&gt; MBHJNEMIKII = 5;</code>
      */
     @java.lang.Override
+
     public int getMBHJNEMIKIIOrDefault(
         int key,
         int defaultValue) {
@@ -318,6 +413,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
      * <code>map&lt;uint32, uint32&gt; MBHJNEMIKII = 5;</code>
      */
     @java.lang.Override
+
     public int getMBHJNEMIKIIOrThrow(
         int key) {
       
@@ -330,7 +426,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
     }
 
     public static final int IS_TODAY_HAS_AWARDED_FIELD_NUMBER = 8;
-    private boolean isTodayHasAwarded_ = false;
+    private boolean isTodayHasAwarded_;
     /**
      * <code>bool is_today_has_awarded = 8;</code>
      * @return The isTodayHasAwarded.
@@ -341,7 +437,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
     }
 
     public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 7;
-    private boolean isContentClosed_ = false;
+    private boolean isContentClosed_;
     /**
      * <code>bool is_content_closed = 7;</code>
      * @return The isContentClosed.
@@ -352,7 +448,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
     }
 
     public static final int DAY_INDEX_FIELD_NUMBER = 12;
-    private int dayIndex_ = 0;
+    private int dayIndex_;
     /**
      * <code>uint32 day_index = 12;</code>
      * @return The dayIndex.
@@ -400,7 +496,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       if (todaySeedRewardId_ != 0) {
         output.writeUInt32(15, todaySeedRewardId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -445,7 +541,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(15, todaySeedRewardId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -472,7 +568,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
           != other.getIsContentClosed()) return false;
       if (getDayIndex()
           != other.getDayIndex()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -501,7 +597,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
           getIsContentClosed());
       hash = (37 * hash) + DAY_INDEX_FIELD_NUMBER;
       hash = (53 * hash) + getDayIndex();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -648,24 +744,32 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.PlantFlowerActivityDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         todaySeedRewardId_ = 0;
+
         internalGetMutableKNKPDDKPBBD().clear();
         internalGetMutableMBHJNEMIKII().clear();
         isTodayHasAwarded_ = false;
+
         isContentClosed_ = false;
+
         dayIndex_ = 0;
+
         return this;
       }
 
@@ -692,33 +796,17 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.PlantFlowerActivityDetailInfo buildPartial() {
         emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.PlantFlowerActivityDetailInfo result = new emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.PlantFlowerActivityDetailInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        int from_bitField0_ = bitField0_;
+        result.todaySeedRewardId_ = todaySeedRewardId_;
+        result.kNKPDDKPBBD_ = internalGetKNKPDDKPBBD();
+        result.kNKPDDKPBBD_.makeImmutable();
+        result.mBHJNEMIKII_ = internalGetMBHJNEMIKII();
+        result.mBHJNEMIKII_.makeImmutable();
+        result.isTodayHasAwarded_ = isTodayHasAwarded_;
+        result.isContentClosed_ = isContentClosed_;
+        result.dayIndex_ = dayIndex_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.PlantFlowerActivityDetailInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.todaySeedRewardId_ = todaySeedRewardId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.kNKPDDKPBBD_ = internalGetKNKPDDKPBBD();
-          result.kNKPDDKPBBD_.makeImmutable();
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.mBHJNEMIKII_ = internalGetMBHJNEMIKII();
-          result.mBHJNEMIKII_.makeImmutable();
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.isTodayHasAwarded_ = isTodayHasAwarded_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.isContentClosed_ = isContentClosed_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.dayIndex_ = dayIndex_;
-        }
       }
 
       @java.lang.Override
@@ -770,10 +858,8 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
         }
         internalGetMutableKNKPDDKPBBD().mergeFrom(
             other.internalGetKNKPDDKPBBD());
-        bitField0_ |= 0x00000002;
         internalGetMutableMBHJNEMIKII().mergeFrom(
             other.internalGetMBHJNEMIKII());
-        bitField0_ |= 0x00000004;
         if (other.getIsTodayHasAwarded() != false) {
           setIsTodayHasAwarded(other.getIsTodayHasAwarded());
         }
@@ -783,7 +869,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
         if (other.getDayIndex() != 0) {
           setDayIndex(other.getDayIndex());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -798,68 +884,17 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.PlantFlowerActivityDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 42: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                mBHJNEMIKII__ = input.readMessage(
-                    MBHJNEMIKIIDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableMBHJNEMIKII().getMutableMap().put(
-                    mBHJNEMIKII__.getKey(), mBHJNEMIKII__.getValue());
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 42
-              case 56: {
-                isContentClosed_ = input.readBool();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 56
-              case 64: {
-                isTodayHasAwarded_ = input.readBool();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 64
-              case 74: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                kNKPDDKPBBD__ = input.readMessage(
-                    KNKPDDKPBBDDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableKNKPDDKPBBD().getMutableMap().put(
-                    kNKPDDKPBBD__.getKey(), kNKPDDKPBBD__.getValue());
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 74
-              case 96: {
-                dayIndex_ = input.readUInt32();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 96
-              case 120: {
-                todaySeedRewardId_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PlantFlowerActivityDetailInfoOuterClass.PlantFlowerActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -881,7 +916,6 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       public Builder setTodaySeedRewardId(int value) {
         
         todaySeedRewardId_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -890,7 +924,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTodaySeedRewardId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         todaySeedRewardId_ = 0;
         onChanged();
         return this;
@@ -899,7 +933,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       private com.google.protobuf.MapField<
           java.lang.Integer, java.lang.Integer> kNKPDDKPBBD_;
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-          internalGetKNKPDDKPBBD() {
+      internalGetKNKPDDKPBBD() {
         if (kNKPDDKPBBD_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               KNKPDDKPBBDDefaultEntryHolder.defaultEntry);
@@ -907,7 +941,8 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
         return kNKPDDKPBBD_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-          internalGetMutableKNKPDDKPBBD() {
+      internalGetMutableKNKPDDKPBBD() {
+        onChanged();;
         if (kNKPDDKPBBD_ == null) {
           kNKPDDKPBBD_ = com.google.protobuf.MapField.newMapField(
               KNKPDDKPBBDDefaultEntryHolder.defaultEntry);
@@ -915,16 +950,16 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
         if (!kNKPDDKPBBD_.isMutable()) {
           kNKPDDKPBBD_ = kNKPDDKPBBD_.copy();
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
         return kNKPDDKPBBD_;
       }
+
       public int getKNKPDDKPBBDCount() {
         return internalGetKNKPDDKPBBD().getMap().size();
       }
       /**
        * <code>map&lt;uint32, uint32&gt; KNKPDDKPBBD = 9;</code>
        */
+
       @java.lang.Override
       public boolean containsKNKPDDKPBBD(
           int key) {
@@ -943,6 +978,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
        * <code>map&lt;uint32, uint32&gt; KNKPDDKPBBD = 9;</code>
        */
       @java.lang.Override
+
       public java.util.Map<java.lang.Integer, java.lang.Integer> getKNKPDDKPBBDMap() {
         return internalGetKNKPDDKPBBD().getMap();
       }
@@ -950,6 +986,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
        * <code>map&lt;uint32, uint32&gt; KNKPDDKPBBD = 9;</code>
        */
       @java.lang.Override
+
       public int getKNKPDDKPBBDOrDefault(
           int key,
           int defaultValue) {
@@ -962,6 +999,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
        * <code>map&lt;uint32, uint32&gt; KNKPDDKPBBD = 9;</code>
        */
       @java.lang.Override
+
       public int getKNKPDDKPBBDOrThrow(
           int key) {
         
@@ -972,8 +1010,8 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
         }
         return map.get(key);
       }
+
       public Builder clearKNKPDDKPBBD() {
-        bitField0_ = (bitField0_ & ~0x00000002);
         internalGetMutableKNKPDDKPBBD().getMutableMap()
             .clear();
         return this;
@@ -981,6 +1019,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       /**
        * <code>map&lt;uint32, uint32&gt; KNKPDDKPBBD = 9;</code>
        */
+
       public Builder removeKNKPDDKPBBD(
           int key) {
         
@@ -993,8 +1032,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, java.lang.Integer>
-          getMutableKNKPDDKPBBD() {
-        bitField0_ |= 0x00000002;
+      getMutableKNKPDDKPBBD() {
         return internalGetMutableKNKPDDKPBBD().getMutableMap();
       }
       /**
@@ -1007,24 +1045,23 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
         
         internalGetMutableKNKPDDKPBBD().getMutableMap()
             .put(key, value);
-        bitField0_ |= 0x00000002;
         return this;
       }
       /**
        * <code>map&lt;uint32, uint32&gt; KNKPDDKPBBD = 9;</code>
        */
+
       public Builder putAllKNKPDDKPBBD(
           java.util.Map<java.lang.Integer, java.lang.Integer> values) {
         internalGetMutableKNKPDDKPBBD().getMutableMap()
             .putAll(values);
-        bitField0_ |= 0x00000002;
         return this;
       }
 
       private com.google.protobuf.MapField<
           java.lang.Integer, java.lang.Integer> mBHJNEMIKII_;
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-          internalGetMBHJNEMIKII() {
+      internalGetMBHJNEMIKII() {
         if (mBHJNEMIKII_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               MBHJNEMIKIIDefaultEntryHolder.defaultEntry);
@@ -1032,7 +1069,8 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
         return mBHJNEMIKII_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-          internalGetMutableMBHJNEMIKII() {
+      internalGetMutableMBHJNEMIKII() {
+        onChanged();;
         if (mBHJNEMIKII_ == null) {
           mBHJNEMIKII_ = com.google.protobuf.MapField.newMapField(
               MBHJNEMIKIIDefaultEntryHolder.defaultEntry);
@@ -1040,16 +1078,16 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
         if (!mBHJNEMIKII_.isMutable()) {
           mBHJNEMIKII_ = mBHJNEMIKII_.copy();
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
         return mBHJNEMIKII_;
       }
+
       public int getMBHJNEMIKIICount() {
         return internalGetMBHJNEMIKII().getMap().size();
       }
       /**
        * <code>map&lt;uint32, uint32&gt; MBHJNEMIKII = 5;</code>
        */
+
       @java.lang.Override
       public boolean containsMBHJNEMIKII(
           int key) {
@@ -1068,6 +1106,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
        * <code>map&lt;uint32, uint32&gt; MBHJNEMIKII = 5;</code>
        */
       @java.lang.Override
+
       public java.util.Map<java.lang.Integer, java.lang.Integer> getMBHJNEMIKIIMap() {
         return internalGetMBHJNEMIKII().getMap();
       }
@@ -1075,6 +1114,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
        * <code>map&lt;uint32, uint32&gt; MBHJNEMIKII = 5;</code>
        */
       @java.lang.Override
+
       public int getMBHJNEMIKIIOrDefault(
           int key,
           int defaultValue) {
@@ -1087,6 +1127,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
        * <code>map&lt;uint32, uint32&gt; MBHJNEMIKII = 5;</code>
        */
       @java.lang.Override
+
       public int getMBHJNEMIKIIOrThrow(
           int key) {
         
@@ -1097,8 +1138,8 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
         }
         return map.get(key);
       }
+
       public Builder clearMBHJNEMIKII() {
-        bitField0_ = (bitField0_ & ~0x00000004);
         internalGetMutableMBHJNEMIKII().getMutableMap()
             .clear();
         return this;
@@ -1106,6 +1147,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       /**
        * <code>map&lt;uint32, uint32&gt; MBHJNEMIKII = 5;</code>
        */
+
       public Builder removeMBHJNEMIKII(
           int key) {
         
@@ -1118,8 +1160,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, java.lang.Integer>
-          getMutableMBHJNEMIKII() {
-        bitField0_ |= 0x00000004;
+      getMutableMBHJNEMIKII() {
         return internalGetMutableMBHJNEMIKII().getMutableMap();
       }
       /**
@@ -1132,17 +1173,16 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
         
         internalGetMutableMBHJNEMIKII().getMutableMap()
             .put(key, value);
-        bitField0_ |= 0x00000004;
         return this;
       }
       /**
        * <code>map&lt;uint32, uint32&gt; MBHJNEMIKII = 5;</code>
        */
+
       public Builder putAllMBHJNEMIKII(
           java.util.Map<java.lang.Integer, java.lang.Integer> values) {
         internalGetMutableMBHJNEMIKII().getMutableMap()
             .putAll(values);
-        bitField0_ |= 0x00000004;
         return this;
       }
 
@@ -1163,7 +1203,6 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       public Builder setIsTodayHasAwarded(boolean value) {
         
         isTodayHasAwarded_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1172,7 +1211,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsTodayHasAwarded() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         isTodayHasAwarded_ = false;
         onChanged();
         return this;
@@ -1195,7 +1234,6 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       public Builder setIsContentClosed(boolean value) {
         
         isContentClosed_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1204,7 +1242,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsContentClosed() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         isContentClosed_ = false;
         onChanged();
         return this;
@@ -1227,7 +1265,6 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       public Builder setDayIndex(int value) {
         
         dayIndex_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1236,7 +1273,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDayIndex() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        
         dayIndex_ = 0;
         onChanged();
         return this;
@@ -1274,18 +1311,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PlantFlowerActivityDetailInfo(input, extensionRegistry);
       }
     };
 

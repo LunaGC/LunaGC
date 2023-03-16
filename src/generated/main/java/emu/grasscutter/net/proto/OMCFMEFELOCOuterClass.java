@@ -79,6 +79,68 @@ public final class OMCFMEFELOCOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private OMCFMEFELOC(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+
+              mCMBFGDNCCG_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+
+              bBDIAJGJJMI_ = input.readBool();
+              break;
+            }
+            case 56: {
+
+              fungusId_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              hNEHJAHLJAK_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              nameId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.OMCFMEFELOCOuterClass.internal_static_OMCFMEFELOC_descriptor;
@@ -93,7 +155,7 @@ public final class OMCFMEFELOCOuterClass {
     }
 
     public static final int FUNGUS_ID_FIELD_NUMBER = 7;
-    private int fungusId_ = 0;
+    private int fungusId_;
     /**
      * <code>uint32 fungus_id = 7;</code>
      * @return The fungusId.
@@ -104,7 +166,7 @@ public final class OMCFMEFELOCOuterClass {
     }
 
     public static final int MCMBFGDNCCG_FIELD_NUMBER = 2;
-    private int mCMBFGDNCCG_ = 0;
+    private int mCMBFGDNCCG_;
     /**
      * <code>uint32 MCMBFGDNCCG = 2;</code>
      * @return The mCMBFGDNCCG.
@@ -115,7 +177,7 @@ public final class OMCFMEFELOCOuterClass {
     }
 
     public static final int HNEHJAHLJAK_FIELD_NUMBER = 8;
-    private int hNEHJAHLJAK_ = 0;
+    private int hNEHJAHLJAK_;
     /**
      * <code>uint32 HNEHJAHLJAK = 8;</code>
      * @return The hNEHJAHLJAK.
@@ -126,7 +188,7 @@ public final class OMCFMEFELOCOuterClass {
     }
 
     public static final int BBDIAJGJJMI_FIELD_NUMBER = 4;
-    private boolean bBDIAJGJJMI_ = false;
+    private boolean bBDIAJGJJMI_;
     /**
      * <code>bool BBDIAJGJJMI = 4;</code>
      * @return The bBDIAJGJJMI.
@@ -137,7 +199,7 @@ public final class OMCFMEFELOCOuterClass {
     }
 
     public static final int NAME_ID_FIELD_NUMBER = 13;
-    private int nameId_ = 0;
+    private int nameId_;
     /**
      * <code>uint32 name_id = 13;</code>
      * @return The nameId.
@@ -176,7 +238,7 @@ public final class OMCFMEFELOCOuterClass {
       if (nameId_ != 0) {
         output.writeUInt32(13, nameId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -205,7 +267,7 @@ public final class OMCFMEFELOCOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, nameId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -230,7 +292,7 @@ public final class OMCFMEFELOCOuterClass {
           != other.getBBDIAJGJJMI()) return false;
       if (getNameId()
           != other.getNameId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -252,7 +314,7 @@ public final class OMCFMEFELOCOuterClass {
           getBBDIAJGJJMI());
       hash = (37 * hash) + NAME_ID_FIELD_NUMBER;
       hash = (53 * hash) + getNameId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -373,23 +435,32 @@ public final class OMCFMEFELOCOuterClass {
 
       // Construct using emu.grasscutter.net.proto.OMCFMEFELOCOuterClass.OMCFMEFELOC.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         fungusId_ = 0;
+
         mCMBFGDNCCG_ = 0;
+
         hNEHJAHLJAK_ = 0;
+
         bBDIAJGJJMI_ = false;
+
         nameId_ = 0;
+
         return this;
       }
 
@@ -416,28 +487,13 @@ public final class OMCFMEFELOCOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.OMCFMEFELOCOuterClass.OMCFMEFELOC buildPartial() {
         emu.grasscutter.net.proto.OMCFMEFELOCOuterClass.OMCFMEFELOC result = new emu.grasscutter.net.proto.OMCFMEFELOCOuterClass.OMCFMEFELOC(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.fungusId_ = fungusId_;
+        result.mCMBFGDNCCG_ = mCMBFGDNCCG_;
+        result.hNEHJAHLJAK_ = hNEHJAHLJAK_;
+        result.bBDIAJGJJMI_ = bBDIAJGJJMI_;
+        result.nameId_ = nameId_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.OMCFMEFELOCOuterClass.OMCFMEFELOC result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.fungusId_ = fungusId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.mCMBFGDNCCG_ = mCMBFGDNCCG_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.hNEHJAHLJAK_ = hNEHJAHLJAK_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.bBDIAJGJJMI_ = bBDIAJGJJMI_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.nameId_ = nameId_;
-        }
       }
 
       @java.lang.Override
@@ -499,7 +555,7 @@ public final class OMCFMEFELOCOuterClass {
         if (other.getNameId() != 0) {
           setNameId(other.getNameId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -514,58 +570,19 @@ public final class OMCFMEFELOCOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.OMCFMEFELOCOuterClass.OMCFMEFELOC parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                mCMBFGDNCCG_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 32: {
-                bBDIAJGJJMI_ = input.readBool();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              case 56: {
-                fungusId_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 56
-              case 64: {
-                hNEHJAHLJAK_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 64
-              case 104: {
-                nameId_ = input.readUInt32();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.OMCFMEFELOCOuterClass.OMCFMEFELOC) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private int fungusId_ ;
       /**
@@ -584,7 +601,6 @@ public final class OMCFMEFELOCOuterClass {
       public Builder setFungusId(int value) {
         
         fungusId_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -593,7 +609,7 @@ public final class OMCFMEFELOCOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFungusId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         fungusId_ = 0;
         onChanged();
         return this;
@@ -616,7 +632,6 @@ public final class OMCFMEFELOCOuterClass {
       public Builder setMCMBFGDNCCG(int value) {
         
         mCMBFGDNCCG_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -625,7 +640,7 @@ public final class OMCFMEFELOCOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMCMBFGDNCCG() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         mCMBFGDNCCG_ = 0;
         onChanged();
         return this;
@@ -648,7 +663,6 @@ public final class OMCFMEFELOCOuterClass {
       public Builder setHNEHJAHLJAK(int value) {
         
         hNEHJAHLJAK_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -657,7 +671,7 @@ public final class OMCFMEFELOCOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearHNEHJAHLJAK() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         hNEHJAHLJAK_ = 0;
         onChanged();
         return this;
@@ -680,7 +694,6 @@ public final class OMCFMEFELOCOuterClass {
       public Builder setBBDIAJGJJMI(boolean value) {
         
         bBDIAJGJJMI_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -689,7 +702,7 @@ public final class OMCFMEFELOCOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBBDIAJGJJMI() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         bBDIAJGJJMI_ = false;
         onChanged();
         return this;
@@ -712,7 +725,6 @@ public final class OMCFMEFELOCOuterClass {
       public Builder setNameId(int value) {
         
         nameId_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -721,7 +733,7 @@ public final class OMCFMEFELOCOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearNameId() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         nameId_ = 0;
         onChanged();
         return this;
@@ -759,18 +771,7 @@ public final class OMCFMEFELOCOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new OMCFMEFELOC(input, extensionRegistry);
       }
     };
 

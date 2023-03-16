@@ -74,6 +74,56 @@ public final class IMADEKGFIFAOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private IMADEKGFIFA(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                photoPosDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.DPEAAFLAMINOuterClass.DPEAAFLAMIN>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              photoPosDataList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.DPEAAFLAMINOuterClass.DPEAAFLAMIN.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          photoPosDataList_ = java.util.Collections.unmodifiableList(photoPosDataList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.internal_static_IMADEKGFIFA_descriptor;
@@ -88,7 +138,6 @@ public final class IMADEKGFIFAOuterClass {
     }
 
     public static final int PHOTO_POS_DATA_LIST_FIELD_NUMBER = 9;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.DPEAAFLAMINOuterClass.DPEAAFLAMIN> photoPosDataList_;
     /**
      * <code>repeated .DPEAAFLAMIN photo_pos_data_list = 9;</code>
@@ -145,7 +194,7 @@ public final class IMADEKGFIFAOuterClass {
       for (int i = 0; i < photoPosDataList_.size(); i++) {
         output.writeMessage(9, photoPosDataList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -158,7 +207,7 @@ public final class IMADEKGFIFAOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, photoPosDataList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -175,7 +224,7 @@ public final class IMADEKGFIFAOuterClass {
 
       if (!getPhotoPosDataListList()
           .equals(other.getPhotoPosDataListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -190,7 +239,7 @@ public final class IMADEKGFIFAOuterClass {
         hash = (37 * hash) + PHOTO_POS_DATA_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getPhotoPosDataListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -311,25 +360,29 @@ public final class IMADEKGFIFAOuterClass {
 
       // Construct using emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPhotoPosDataListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         if (photoPosDataListBuilder_ == null) {
           photoPosDataList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          photoPosDataList_ = null;
           photoPosDataListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -356,13 +409,7 @@ public final class IMADEKGFIFAOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA buildPartial() {
         emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA result = new emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA result) {
+        int from_bitField0_ = bitField0_;
         if (photoPosDataListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             photoPosDataList_ = java.util.Collections.unmodifiableList(photoPosDataList_);
@@ -372,10 +419,8 @@ public final class IMADEKGFIFAOuterClass {
         } else {
           result.photoPosDataList_ = photoPosDataListBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA result) {
-        int from_bitField0_ = bitField0_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -448,7 +493,7 @@ public final class IMADEKGFIFAOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -463,43 +508,17 @@ public final class IMADEKGFIFAOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 74: {
-                emu.grasscutter.net.proto.DPEAAFLAMINOuterClass.DPEAAFLAMIN m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.DPEAAFLAMINOuterClass.DPEAAFLAMIN.parser(),
-                        extensionRegistry);
-                if (photoPosDataListBuilder_ == null) {
-                  ensurePhotoPosDataListIsMutable();
-                  photoPosDataList_.add(m);
-                } else {
-                  photoPosDataListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 74
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -776,18 +795,7 @@ public final class IMADEKGFIFAOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new IMADEKGFIFA(input, extensionRegistry);
       }
     };
 

@@ -55,6 +55,48 @@ public final class LHPBALCGMJHOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private LHPBALCGMJH(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 64: {
+
+              cCOOPAOKIGG_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.LHPBALCGMJHOuterClass.internal_static_LHPBALCGMJH_descriptor;
@@ -69,7 +111,7 @@ public final class LHPBALCGMJHOuterClass {
     }
 
     public static final int CCOOPAOKIGG_FIELD_NUMBER = 8;
-    private boolean cCOOPAOKIGG_ = false;
+    private boolean cCOOPAOKIGG_;
     /**
      * <code>bool CCOOPAOKIGG = 8;</code>
      * @return The cCOOPAOKIGG.
@@ -96,7 +138,7 @@ public final class LHPBALCGMJHOuterClass {
       if (cCOOPAOKIGG_ != false) {
         output.writeBool(8, cCOOPAOKIGG_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -109,7 +151,7 @@ public final class LHPBALCGMJHOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, cCOOPAOKIGG_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -126,7 +168,7 @@ public final class LHPBALCGMJHOuterClass {
 
       if (getCCOOPAOKIGG()
           != other.getCCOOPAOKIGG()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -140,7 +182,7 @@ public final class LHPBALCGMJHOuterClass {
       hash = (37 * hash) + CCOOPAOKIGG_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getCCOOPAOKIGG());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -261,19 +303,24 @@ public final class LHPBALCGMJHOuterClass {
 
       // Construct using emu.grasscutter.net.proto.LHPBALCGMJHOuterClass.LHPBALCGMJH.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         cCOOPAOKIGG_ = false;
+
         return this;
       }
 
@@ -300,16 +347,9 @@ public final class LHPBALCGMJHOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.LHPBALCGMJHOuterClass.LHPBALCGMJH buildPartial() {
         emu.grasscutter.net.proto.LHPBALCGMJHOuterClass.LHPBALCGMJH result = new emu.grasscutter.net.proto.LHPBALCGMJHOuterClass.LHPBALCGMJH(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.cCOOPAOKIGG_ = cCOOPAOKIGG_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.LHPBALCGMJHOuterClass.LHPBALCGMJH result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.cCOOPAOKIGG_ = cCOOPAOKIGG_;
-        }
       }
 
       @java.lang.Override
@@ -359,7 +399,7 @@ public final class LHPBALCGMJHOuterClass {
         if (other.getCCOOPAOKIGG() != false) {
           setCCOOPAOKIGG(other.getCCOOPAOKIGG());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -374,38 +414,19 @@ public final class LHPBALCGMJHOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.LHPBALCGMJHOuterClass.LHPBALCGMJH parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 64: {
-                cCOOPAOKIGG_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 64
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.LHPBALCGMJHOuterClass.LHPBALCGMJH) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private boolean cCOOPAOKIGG_ ;
       /**
@@ -424,7 +445,6 @@ public final class LHPBALCGMJHOuterClass {
       public Builder setCCOOPAOKIGG(boolean value) {
         
         cCOOPAOKIGG_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -433,7 +453,7 @@ public final class LHPBALCGMJHOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCCOOPAOKIGG() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         cCOOPAOKIGG_ = false;
         onChanged();
         return this;
@@ -471,18 +491,7 @@ public final class LHPBALCGMJHOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new LHPBALCGMJH(input, extensionRegistry);
       }
     };
 

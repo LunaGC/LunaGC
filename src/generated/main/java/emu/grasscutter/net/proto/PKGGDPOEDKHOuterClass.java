@@ -61,6 +61,53 @@ public final class PKGGDPOEDKHOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private PKGGDPOEDKH(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 32: {
+
+              dGABGOHFAOB_ = input.readInt32();
+              break;
+            }
+            case 104: {
+
+              iMNKIGNBJFG_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PKGGDPOEDKHOuterClass.internal_static_PKGGDPOEDKH_descriptor;
@@ -75,7 +122,7 @@ public final class PKGGDPOEDKHOuterClass {
     }
 
     public static final int IMNKIGNBJFG_FIELD_NUMBER = 13;
-    private int iMNKIGNBJFG_ = 0;
+    private int iMNKIGNBJFG_;
     /**
      * <code>int32 IMNKIGNBJFG = 13;</code>
      * @return The iMNKIGNBJFG.
@@ -86,7 +133,7 @@ public final class PKGGDPOEDKHOuterClass {
     }
 
     public static final int DGABGOHFAOB_FIELD_NUMBER = 4;
-    private int dGABGOHFAOB_ = 0;
+    private int dGABGOHFAOB_;
     /**
      * <code>int32 DGABGOHFAOB = 4;</code>
      * @return The dGABGOHFAOB.
@@ -116,7 +163,7 @@ public final class PKGGDPOEDKHOuterClass {
       if (iMNKIGNBJFG_ != 0) {
         output.writeInt32(13, iMNKIGNBJFG_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -133,7 +180,7 @@ public final class PKGGDPOEDKHOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(13, iMNKIGNBJFG_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -152,7 +199,7 @@ public final class PKGGDPOEDKHOuterClass {
           != other.getIMNKIGNBJFG()) return false;
       if (getDGABGOHFAOB()
           != other.getDGABGOHFAOB()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -167,7 +214,7 @@ public final class PKGGDPOEDKHOuterClass {
       hash = (53 * hash) + getIMNKIGNBJFG();
       hash = (37 * hash) + DGABGOHFAOB_FIELD_NUMBER;
       hash = (53 * hash) + getDGABGOHFAOB();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -288,20 +335,26 @@ public final class PKGGDPOEDKHOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PKGGDPOEDKHOuterClass.PKGGDPOEDKH.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         iMNKIGNBJFG_ = 0;
+
         dGABGOHFAOB_ = 0;
+
         return this;
       }
 
@@ -328,19 +381,10 @@ public final class PKGGDPOEDKHOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.PKGGDPOEDKHOuterClass.PKGGDPOEDKH buildPartial() {
         emu.grasscutter.net.proto.PKGGDPOEDKHOuterClass.PKGGDPOEDKH result = new emu.grasscutter.net.proto.PKGGDPOEDKHOuterClass.PKGGDPOEDKH(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.iMNKIGNBJFG_ = iMNKIGNBJFG_;
+        result.dGABGOHFAOB_ = dGABGOHFAOB_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.PKGGDPOEDKHOuterClass.PKGGDPOEDKH result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.iMNKIGNBJFG_ = iMNKIGNBJFG_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.dGABGOHFAOB_ = dGABGOHFAOB_;
-        }
       }
 
       @java.lang.Override
@@ -393,7 +437,7 @@ public final class PKGGDPOEDKHOuterClass {
         if (other.getDGABGOHFAOB() != 0) {
           setDGABGOHFAOB(other.getDGABGOHFAOB());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -408,43 +452,19 @@ public final class PKGGDPOEDKHOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PKGGDPOEDKHOuterClass.PKGGDPOEDKH parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 32: {
-                dGABGOHFAOB_ = input.readInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 32
-              case 104: {
-                iMNKIGNBJFG_ = input.readInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PKGGDPOEDKHOuterClass.PKGGDPOEDKH) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private int iMNKIGNBJFG_ ;
       /**
@@ -463,7 +483,6 @@ public final class PKGGDPOEDKHOuterClass {
       public Builder setIMNKIGNBJFG(int value) {
         
         iMNKIGNBJFG_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -472,7 +491,7 @@ public final class PKGGDPOEDKHOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIMNKIGNBJFG() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         iMNKIGNBJFG_ = 0;
         onChanged();
         return this;
@@ -495,7 +514,6 @@ public final class PKGGDPOEDKHOuterClass {
       public Builder setDGABGOHFAOB(int value) {
         
         dGABGOHFAOB_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -504,7 +522,7 @@ public final class PKGGDPOEDKHOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDGABGOHFAOB() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         dGABGOHFAOB_ = 0;
         onChanged();
         return this;
@@ -542,18 +560,7 @@ public final class PKGGDPOEDKHOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PKGGDPOEDKH(input, extensionRegistry);
       }
     };
 

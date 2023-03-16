@@ -19,6 +19,10 @@ public final class GachaWishReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     *NMKGGDOKHLF
+     * </pre>
+     *
      * <code>uint32 gachaScheduleId = 9;</code>
      * @return The gachaScheduleId.
      */
@@ -31,6 +35,10 @@ public final class GachaWishReqOuterClass {
     int getItemId();
 
     /**
+     * <pre>
+     *DGIFMDIADJF
+     * </pre>
+     *
      * <code>uint32 gachaType = 5;</code>
      * @return The gachaType.
      */
@@ -136,6 +144,10 @@ public final class GachaWishReqOuterClass {
     public static final int GACHASCHEDULEID_FIELD_NUMBER = 9;
     private int gachaScheduleId_;
     /**
+     * <pre>
+     *NMKGGDOKHLF
+     * </pre>
+     *
      * <code>uint32 gachaScheduleId = 9;</code>
      * @return The gachaScheduleId.
      */
@@ -158,6 +170,10 @@ public final class GachaWishReqOuterClass {
     public static final int GACHATYPE_FIELD_NUMBER = 5;
     private int gachaType_;
     /**
+     * <pre>
+     *DGIFMDIADJF
+     * </pre>
+     *
      * <code>uint32 gachaType = 5;</code>
      * @return The gachaType.
      */
@@ -509,6 +525,10 @@ public final class GachaWishReqOuterClass {
 
       private int gachaScheduleId_ ;
       /**
+       * <pre>
+       *NMKGGDOKHLF
+       * </pre>
+       *
        * <code>uint32 gachaScheduleId = 9;</code>
        * @return The gachaScheduleId.
        */
@@ -517,6 +537,10 @@ public final class GachaWishReqOuterClass {
         return gachaScheduleId_;
       }
       /**
+       * <pre>
+       *NMKGGDOKHLF
+       * </pre>
+       *
        * <code>uint32 gachaScheduleId = 9;</code>
        * @param value The gachaScheduleId to set.
        * @return This builder for chaining.
@@ -528,6 +552,10 @@ public final class GachaWishReqOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *NMKGGDOKHLF
+       * </pre>
+       *
        * <code>uint32 gachaScheduleId = 9;</code>
        * @return This builder for chaining.
        */
@@ -571,6 +599,10 @@ public final class GachaWishReqOuterClass {
 
       private int gachaType_ ;
       /**
+       * <pre>
+       *DGIFMDIADJF
+       * </pre>
+       *
        * <code>uint32 gachaType = 5;</code>
        * @return The gachaType.
        */
@@ -579,6 +611,10 @@ public final class GachaWishReqOuterClass {
         return gachaType_;
       }
       /**
+       * <pre>
+       *DGIFMDIADJF
+       * </pre>
+       *
        * <code>uint32 gachaType = 5;</code>
        * @param value The gachaType to set.
        * @return This builder for chaining.
@@ -590,6 +626,10 @@ public final class GachaWishReqOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *DGIFMDIADJF
+       * </pre>
+       *
        * <code>uint32 gachaType = 5;</code>
        * @return This builder for chaining.
        */

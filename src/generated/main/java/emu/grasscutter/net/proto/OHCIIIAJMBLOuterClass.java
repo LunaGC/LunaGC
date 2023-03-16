@@ -47,12 +47,14 @@ public final class OHCIIIAJMBLOuterClass {
     /**
      * <code>map&lt;uint32, uint32&gt; DOBMECNALEP = 11;</code>
      */
+
     int getDOBMECNALEPOrDefault(
         int key,
         int defaultValue);
     /**
      * <code>map&lt;uint32, uint32&gt; DOBMECNALEP = 11;</code>
      */
+
     int getDOBMECNALEPOrThrow(
         int key);
 
@@ -93,6 +95,67 @@ public final class OHCIIIAJMBLOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private OHCIIIAJMBL(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 56: {
+
+              jKEPCIPFGLD_ = input.readUInt32();
+              break;
+            }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                dOBMECNALEP_ = com.google.protobuf.MapField.newMapField(
+                    DOBMECNALEPDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              dOBMECNALEP__ = input.readMessage(
+                  DOBMECNALEPDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              dOBMECNALEP_.getMutableMap().put(
+                  dOBMECNALEP__.getKey(), dOBMECNALEP__.getValue());
+              break;
+            }
+            case 112: {
+
+              bGNPOHJEBKA_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.internal_static_OHCIIIAJMBL_descriptor;
@@ -119,7 +182,7 @@ public final class OHCIIIAJMBLOuterClass {
     }
 
     public static final int BGNPOHJEBKA_FIELD_NUMBER = 14;
-    private int bGNPOHJEBKA_ = 0;
+    private int bGNPOHJEBKA_;
     /**
      * <code>uint32 BGNPOHJEBKA = 14;</code>
      * @return The bGNPOHJEBKA.
@@ -141,7 +204,6 @@ public final class OHCIIIAJMBLOuterClass {
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0);
     }
-    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, java.lang.Integer> dOBMECNALEP_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
@@ -152,12 +214,14 @@ public final class OHCIIIAJMBLOuterClass {
       }
       return dOBMECNALEP_;
     }
+
     public int getDOBMECNALEPCount() {
       return internalGetDOBMECNALEP().getMap().size();
     }
     /**
      * <code>map&lt;uint32, uint32&gt; DOBMECNALEP = 11;</code>
      */
+
     @java.lang.Override
     public boolean containsDOBMECNALEP(
         int key) {
@@ -176,6 +240,7 @@ public final class OHCIIIAJMBLOuterClass {
      * <code>map&lt;uint32, uint32&gt; DOBMECNALEP = 11;</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.Integer, java.lang.Integer> getDOBMECNALEPMap() {
       return internalGetDOBMECNALEP().getMap();
     }
@@ -183,6 +248,7 @@ public final class OHCIIIAJMBLOuterClass {
      * <code>map&lt;uint32, uint32&gt; DOBMECNALEP = 11;</code>
      */
     @java.lang.Override
+
     public int getDOBMECNALEPOrDefault(
         int key,
         int defaultValue) {
@@ -195,6 +261,7 @@ public final class OHCIIIAJMBLOuterClass {
      * <code>map&lt;uint32, uint32&gt; DOBMECNALEP = 11;</code>
      */
     @java.lang.Override
+
     public int getDOBMECNALEPOrThrow(
         int key) {
       
@@ -207,7 +274,7 @@ public final class OHCIIIAJMBLOuterClass {
     }
 
     public static final int JKEPCIPFGLD_FIELD_NUMBER = 7;
-    private int jKEPCIPFGLD_ = 0;
+    private int jKEPCIPFGLD_;
     /**
      * <code>uint32 JKEPCIPFGLD = 7;</code>
      * @return The jKEPCIPFGLD.
@@ -243,7 +310,7 @@ public final class OHCIIIAJMBLOuterClass {
       if (bGNPOHJEBKA_ != 0) {
         output.writeUInt32(14, bGNPOHJEBKA_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -270,7 +337,7 @@ public final class OHCIIIAJMBLOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(14, bGNPOHJEBKA_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -291,7 +358,7 @@ public final class OHCIIIAJMBLOuterClass {
           other.internalGetDOBMECNALEP())) return false;
       if (getJKEPCIPFGLD()
           != other.getJKEPCIPFGLD()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -310,7 +377,7 @@ public final class OHCIIIAJMBLOuterClass {
       }
       hash = (37 * hash) + JKEPCIPFGLD_FIELD_NUMBER;
       hash = (53 * hash) + getJKEPCIPFGLD();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -453,21 +520,27 @@ public final class OHCIIIAJMBLOuterClass {
 
       // Construct using emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         bGNPOHJEBKA_ = 0;
+
         internalGetMutableDOBMECNALEP().clear();
         jKEPCIPFGLD_ = 0;
+
         return this;
       }
 
@@ -494,23 +567,13 @@ public final class OHCIIIAJMBLOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL buildPartial() {
         emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL result = new emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        int from_bitField0_ = bitField0_;
+        result.bGNPOHJEBKA_ = bGNPOHJEBKA_;
+        result.dOBMECNALEP_ = internalGetDOBMECNALEP();
+        result.dOBMECNALEP_.makeImmutable();
+        result.jKEPCIPFGLD_ = jKEPCIPFGLD_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.bGNPOHJEBKA_ = bGNPOHJEBKA_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.dOBMECNALEP_ = internalGetDOBMECNALEP();
-          result.dOBMECNALEP_.makeImmutable();
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.jKEPCIPFGLD_ = jKEPCIPFGLD_;
-        }
       }
 
       @java.lang.Override
@@ -562,11 +625,10 @@ public final class OHCIIIAJMBLOuterClass {
         }
         internalGetMutableDOBMECNALEP().mergeFrom(
             other.internalGetDOBMECNALEP());
-        bitField0_ |= 0x00000002;
         if (other.getJKEPCIPFGLD() != 0) {
           setJKEPCIPFGLD(other.getJKEPCIPFGLD());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -581,49 +643,17 @@ public final class OHCIIIAJMBLOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 56: {
-                jKEPCIPFGLD_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 56
-              case 90: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                dOBMECNALEP__ = input.readMessage(
-                    DOBMECNALEPDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableDOBMECNALEP().getMutableMap().put(
-                    dOBMECNALEP__.getKey(), dOBMECNALEP__.getValue());
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 90
-              case 112: {
-                bGNPOHJEBKA_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -645,7 +675,6 @@ public final class OHCIIIAJMBLOuterClass {
       public Builder setBGNPOHJEBKA(int value) {
         
         bGNPOHJEBKA_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -654,7 +683,7 @@ public final class OHCIIIAJMBLOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBGNPOHJEBKA() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         bGNPOHJEBKA_ = 0;
         onChanged();
         return this;
@@ -663,7 +692,7 @@ public final class OHCIIIAJMBLOuterClass {
       private com.google.protobuf.MapField<
           java.lang.Integer, java.lang.Integer> dOBMECNALEP_;
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-          internalGetDOBMECNALEP() {
+      internalGetDOBMECNALEP() {
         if (dOBMECNALEP_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               DOBMECNALEPDefaultEntryHolder.defaultEntry);
@@ -671,7 +700,8 @@ public final class OHCIIIAJMBLOuterClass {
         return dOBMECNALEP_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-          internalGetMutableDOBMECNALEP() {
+      internalGetMutableDOBMECNALEP() {
+        onChanged();;
         if (dOBMECNALEP_ == null) {
           dOBMECNALEP_ = com.google.protobuf.MapField.newMapField(
               DOBMECNALEPDefaultEntryHolder.defaultEntry);
@@ -679,16 +709,16 @@ public final class OHCIIIAJMBLOuterClass {
         if (!dOBMECNALEP_.isMutable()) {
           dOBMECNALEP_ = dOBMECNALEP_.copy();
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
         return dOBMECNALEP_;
       }
+
       public int getDOBMECNALEPCount() {
         return internalGetDOBMECNALEP().getMap().size();
       }
       /**
        * <code>map&lt;uint32, uint32&gt; DOBMECNALEP = 11;</code>
        */
+
       @java.lang.Override
       public boolean containsDOBMECNALEP(
           int key) {
@@ -707,6 +737,7 @@ public final class OHCIIIAJMBLOuterClass {
        * <code>map&lt;uint32, uint32&gt; DOBMECNALEP = 11;</code>
        */
       @java.lang.Override
+
       public java.util.Map<java.lang.Integer, java.lang.Integer> getDOBMECNALEPMap() {
         return internalGetDOBMECNALEP().getMap();
       }
@@ -714,6 +745,7 @@ public final class OHCIIIAJMBLOuterClass {
        * <code>map&lt;uint32, uint32&gt; DOBMECNALEP = 11;</code>
        */
       @java.lang.Override
+
       public int getDOBMECNALEPOrDefault(
           int key,
           int defaultValue) {
@@ -726,6 +758,7 @@ public final class OHCIIIAJMBLOuterClass {
        * <code>map&lt;uint32, uint32&gt; DOBMECNALEP = 11;</code>
        */
       @java.lang.Override
+
       public int getDOBMECNALEPOrThrow(
           int key) {
         
@@ -736,8 +769,8 @@ public final class OHCIIIAJMBLOuterClass {
         }
         return map.get(key);
       }
+
       public Builder clearDOBMECNALEP() {
-        bitField0_ = (bitField0_ & ~0x00000002);
         internalGetMutableDOBMECNALEP().getMutableMap()
             .clear();
         return this;
@@ -745,6 +778,7 @@ public final class OHCIIIAJMBLOuterClass {
       /**
        * <code>map&lt;uint32, uint32&gt; DOBMECNALEP = 11;</code>
        */
+
       public Builder removeDOBMECNALEP(
           int key) {
         
@@ -757,8 +791,7 @@ public final class OHCIIIAJMBLOuterClass {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, java.lang.Integer>
-          getMutableDOBMECNALEP() {
-        bitField0_ |= 0x00000002;
+      getMutableDOBMECNALEP() {
         return internalGetMutableDOBMECNALEP().getMutableMap();
       }
       /**
@@ -771,17 +804,16 @@ public final class OHCIIIAJMBLOuterClass {
         
         internalGetMutableDOBMECNALEP().getMutableMap()
             .put(key, value);
-        bitField0_ |= 0x00000002;
         return this;
       }
       /**
        * <code>map&lt;uint32, uint32&gt; DOBMECNALEP = 11;</code>
        */
+
       public Builder putAllDOBMECNALEP(
           java.util.Map<java.lang.Integer, java.lang.Integer> values) {
         internalGetMutableDOBMECNALEP().getMutableMap()
             .putAll(values);
-        bitField0_ |= 0x00000002;
         return this;
       }
 
@@ -802,7 +834,6 @@ public final class OHCIIIAJMBLOuterClass {
       public Builder setJKEPCIPFGLD(int value) {
         
         jKEPCIPFGLD_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -811,7 +842,7 @@ public final class OHCIIIAJMBLOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearJKEPCIPFGLD() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         jKEPCIPFGLD_ = 0;
         onChanged();
         return this;
@@ -849,18 +880,7 @@ public final class OHCIIIAJMBLOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new OHCIIIAJMBL(input, extensionRegistry);
       }
     };
 

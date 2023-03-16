@@ -103,6 +103,89 @@ public final class NICMKPJLHMIOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private NICMKPJLHMI(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              version_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+
+              lHFNIEEFJOP_ = input.readInt32();
+              break;
+            }
+            case 50: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (mGHIMMEFBDI_ != null) {
+                subBuilder = mGHIMMEFBDI_.toBuilder();
+              }
+              mGHIMMEFBDI_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mGHIMMEFBDI_);
+                mGHIMMEFBDI_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 56: {
+
+              furnitureId_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              guid_ = input.readUInt32();
+              break;
+            }
+            case 106: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (spawnPos_ != null) {
+                subBuilder = spawnPos_.toBuilder();
+              }
+              spawnPos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(spawnPos_);
+                spawnPos_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.NICMKPJLHMIOuterClass.internal_static_NICMKPJLHMI_descriptor;
@@ -117,7 +200,7 @@ public final class NICMKPJLHMIOuterClass {
     }
 
     public static final int VERSION_FIELD_NUMBER = 1;
-    private int version_ = 0;
+    private int version_;
     /**
      * <code>uint32 version = 1;</code>
      * @return The version.
@@ -128,7 +211,7 @@ public final class NICMKPJLHMIOuterClass {
     }
 
     public static final int LHFNIEEFJOP_FIELD_NUMBER = 4;
-    private int lHFNIEEFJOP_ = 0;
+    private int lHFNIEEFJOP_;
     /**
      * <code>int32 LHFNIEEFJOP = 4;</code>
      * @return The lHFNIEEFJOP.
@@ -161,11 +244,11 @@ public final class NICMKPJLHMIOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getMGHIMMEFBDIOrBuilder() {
-      return mGHIMMEFBDI_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : mGHIMMEFBDI_;
+      return getMGHIMMEFBDI();
     }
 
     public static final int FURNITURE_ID_FIELD_NUMBER = 7;
-    private int furnitureId_ = 0;
+    private int furnitureId_;
     /**
      * <code>uint32 furniture_id = 7;</code>
      * @return The furnitureId.
@@ -176,7 +259,7 @@ public final class NICMKPJLHMIOuterClass {
     }
 
     public static final int GUID_FIELD_NUMBER = 8;
-    private int guid_ = 0;
+    private int guid_;
     /**
      * <code>uint32 guid = 8;</code>
      * @return The guid.
@@ -209,7 +292,7 @@ public final class NICMKPJLHMIOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSpawnPosOrBuilder() {
-      return spawnPos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : spawnPos_;
+      return getSpawnPos();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -244,7 +327,7 @@ public final class NICMKPJLHMIOuterClass {
       if (spawnPos_ != null) {
         output.writeMessage(13, getSpawnPos());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -277,7 +360,7 @@ public final class NICMKPJLHMIOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getSpawnPos());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -310,7 +393,7 @@ public final class NICMKPJLHMIOuterClass {
         if (!getSpawnPos()
             .equals(other.getSpawnPos())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -337,7 +420,7 @@ public final class NICMKPJLHMIOuterClass {
         hash = (37 * hash) + SPAWN_POS_FIELD_NUMBER;
         hash = (53 * hash) + getSpawnPos().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -458,30 +541,40 @@ public final class NICMKPJLHMIOuterClass {
 
       // Construct using emu.grasscutter.net.proto.NICMKPJLHMIOuterClass.NICMKPJLHMI.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         version_ = 0;
+
         lHFNIEEFJOP_ = 0;
-        mGHIMMEFBDI_ = null;
-        if (mGHIMMEFBDIBuilder_ != null) {
-          mGHIMMEFBDIBuilder_.dispose();
+
+        if (mGHIMMEFBDIBuilder_ == null) {
+          mGHIMMEFBDI_ = null;
+        } else {
+          mGHIMMEFBDI_ = null;
           mGHIMMEFBDIBuilder_ = null;
         }
         furnitureId_ = 0;
+
         guid_ = 0;
-        spawnPos_ = null;
-        if (spawnPosBuilder_ != null) {
-          spawnPosBuilder_.dispose();
+
+        if (spawnPosBuilder_ == null) {
+          spawnPos_ = null;
+        } else {
+          spawnPos_ = null;
           spawnPosBuilder_ = null;
         }
         return this;
@@ -510,35 +603,22 @@ public final class NICMKPJLHMIOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.NICMKPJLHMIOuterClass.NICMKPJLHMI buildPartial() {
         emu.grasscutter.net.proto.NICMKPJLHMIOuterClass.NICMKPJLHMI result = new emu.grasscutter.net.proto.NICMKPJLHMIOuterClass.NICMKPJLHMI(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.version_ = version_;
+        result.lHFNIEEFJOP_ = lHFNIEEFJOP_;
+        if (mGHIMMEFBDIBuilder_ == null) {
+          result.mGHIMMEFBDI_ = mGHIMMEFBDI_;
+        } else {
+          result.mGHIMMEFBDI_ = mGHIMMEFBDIBuilder_.build();
+        }
+        result.furnitureId_ = furnitureId_;
+        result.guid_ = guid_;
+        if (spawnPosBuilder_ == null) {
+          result.spawnPos_ = spawnPos_;
+        } else {
+          result.spawnPos_ = spawnPosBuilder_.build();
+        }
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.NICMKPJLHMIOuterClass.NICMKPJLHMI result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.version_ = version_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.lHFNIEEFJOP_ = lHFNIEEFJOP_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.mGHIMMEFBDI_ = mGHIMMEFBDIBuilder_ == null
-              ? mGHIMMEFBDI_
-              : mGHIMMEFBDIBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.furnitureId_ = furnitureId_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.guid_ = guid_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.spawnPos_ = spawnPosBuilder_ == null
-              ? spawnPos_
-              : spawnPosBuilder_.build();
-        }
       }
 
       @java.lang.Override
@@ -603,7 +683,7 @@ public final class NICMKPJLHMIOuterClass {
         if (other.hasSpawnPos()) {
           mergeSpawnPos(other.getSpawnPos());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -618,67 +698,19 @@ public final class NICMKPJLHMIOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.NICMKPJLHMIOuterClass.NICMKPJLHMI parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                version_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 32: {
-                lHFNIEEFJOP_ = input.readInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 32
-              case 50: {
-                input.readMessage(
-                    getMGHIMMEFBDIFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 50
-              case 56: {
-                furnitureId_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 56
-              case 64: {
-                guid_ = input.readUInt32();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 64
-              case 106: {
-                input.readMessage(
-                    getSpawnPosFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 106
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.NICMKPJLHMIOuterClass.NICMKPJLHMI) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private int version_ ;
       /**
@@ -697,7 +729,6 @@ public final class NICMKPJLHMIOuterClass {
       public Builder setVersion(int value) {
         
         version_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -706,7 +737,7 @@ public final class NICMKPJLHMIOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         version_ = 0;
         onChanged();
         return this;
@@ -729,7 +760,6 @@ public final class NICMKPJLHMIOuterClass {
       public Builder setLHFNIEEFJOP(int value) {
         
         lHFNIEEFJOP_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -738,7 +768,7 @@ public final class NICMKPJLHMIOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLHFNIEEFJOP() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         lHFNIEEFJOP_ = 0;
         onChanged();
         return this;
@@ -752,7 +782,7 @@ public final class NICMKPJLHMIOuterClass {
        * @return Whether the mGHIMMEFBDI field is set.
        */
       public boolean hasMGHIMMEFBDI() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return mGHIMMEFBDIBuilder_ != null || mGHIMMEFBDI_ != null;
       }
       /**
        * <code>.Vector MGHIMMEFBDI = 6;</code>
@@ -774,11 +804,11 @@ public final class NICMKPJLHMIOuterClass {
             throw new NullPointerException();
           }
           mGHIMMEFBDI_ = value;
+          onChanged();
         } else {
           mGHIMMEFBDIBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -788,11 +818,11 @@ public final class NICMKPJLHMIOuterClass {
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (mGHIMMEFBDIBuilder_ == null) {
           mGHIMMEFBDI_ = builderForValue.build();
+          onChanged();
         } else {
           mGHIMMEFBDIBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -800,38 +830,38 @@ public final class NICMKPJLHMIOuterClass {
        */
       public Builder mergeMGHIMMEFBDI(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (mGHIMMEFBDIBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            mGHIMMEFBDI_ != null &&
-            mGHIMMEFBDI_ != emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance()) {
-            getMGHIMMEFBDIBuilder().mergeFrom(value);
+          if (mGHIMMEFBDI_ != null) {
+            mGHIMMEFBDI_ =
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(mGHIMMEFBDI_).mergeFrom(value).buildPartial();
           } else {
             mGHIMMEFBDI_ = value;
           }
+          onChanged();
         } else {
           mGHIMMEFBDIBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.Vector MGHIMMEFBDI = 6;</code>
        */
       public Builder clearMGHIMMEFBDI() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        mGHIMMEFBDI_ = null;
-        if (mGHIMMEFBDIBuilder_ != null) {
-          mGHIMMEFBDIBuilder_.dispose();
+        if (mGHIMMEFBDIBuilder_ == null) {
+          mGHIMMEFBDI_ = null;
+          onChanged();
+        } else {
+          mGHIMMEFBDI_ = null;
           mGHIMMEFBDIBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.Vector MGHIMMEFBDI = 6;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getMGHIMMEFBDIBuilder() {
-        bitField0_ |= 0x00000004;
+        
         onChanged();
         return getMGHIMMEFBDIFieldBuilder().getBuilder();
       }
@@ -880,7 +910,6 @@ public final class NICMKPJLHMIOuterClass {
       public Builder setFurnitureId(int value) {
         
         furnitureId_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -889,7 +918,7 @@ public final class NICMKPJLHMIOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFurnitureId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         furnitureId_ = 0;
         onChanged();
         return this;
@@ -912,7 +941,6 @@ public final class NICMKPJLHMIOuterClass {
       public Builder setGuid(int value) {
         
         guid_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -921,7 +949,7 @@ public final class NICMKPJLHMIOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearGuid() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         guid_ = 0;
         onChanged();
         return this;
@@ -935,7 +963,7 @@ public final class NICMKPJLHMIOuterClass {
        * @return Whether the spawnPos field is set.
        */
       public boolean hasSpawnPos() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return spawnPosBuilder_ != null || spawnPos_ != null;
       }
       /**
        * <code>.Vector spawn_pos = 13;</code>
@@ -957,11 +985,11 @@ public final class NICMKPJLHMIOuterClass {
             throw new NullPointerException();
           }
           spawnPos_ = value;
+          onChanged();
         } else {
           spawnPosBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+
         return this;
       }
       /**
@@ -971,11 +999,11 @@ public final class NICMKPJLHMIOuterClass {
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (spawnPosBuilder_ == null) {
           spawnPos_ = builderForValue.build();
+          onChanged();
         } else {
           spawnPosBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+
         return this;
       }
       /**
@@ -983,38 +1011,38 @@ public final class NICMKPJLHMIOuterClass {
        */
       public Builder mergeSpawnPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (spawnPosBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0) &&
-            spawnPos_ != null &&
-            spawnPos_ != emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance()) {
-            getSpawnPosBuilder().mergeFrom(value);
+          if (spawnPos_ != null) {
+            spawnPos_ =
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(spawnPos_).mergeFrom(value).buildPartial();
           } else {
             spawnPos_ = value;
           }
+          onChanged();
         } else {
           spawnPosBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.Vector spawn_pos = 13;</code>
        */
       public Builder clearSpawnPos() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        spawnPos_ = null;
-        if (spawnPosBuilder_ != null) {
-          spawnPosBuilder_.dispose();
+        if (spawnPosBuilder_ == null) {
+          spawnPos_ = null;
+          onChanged();
+        } else {
+          spawnPos_ = null;
           spawnPosBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.Vector spawn_pos = 13;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getSpawnPosBuilder() {
-        bitField0_ |= 0x00000020;
+        
         onChanged();
         return getSpawnPosFieldBuilder().getBuilder();
       }
@@ -1078,18 +1106,7 @@ public final class NICMKPJLHMIOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new NICMKPJLHMI(input, extensionRegistry);
       }
     };
 

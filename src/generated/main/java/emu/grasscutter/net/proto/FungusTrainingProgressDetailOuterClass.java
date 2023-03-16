@@ -153,6 +153,131 @@ public final class FungusTrainingProgressDetailOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private FungusTrainingProgressDetail(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 40: {
+
+              curRound_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                jACIJBCLOMD_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              jACIJBCLOMD_.addInt(input.readUInt32());
+              break;
+            }
+            case 50: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                jACIJBCLOMD_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                jACIJBCLOMD_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 80: {
+
+              totalUsedTime_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+
+              dungeonId_ = input.readUInt32();
+              break;
+            }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                oKIHACBIMGP_ = new java.util.ArrayList<emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              oKIHACBIMGP_.add(
+                  input.readMessage(emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM.parser(), extensionRegistry));
+              break;
+            }
+            case 114: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                pPJNMMHPAKP_ = new java.util.ArrayList<emu.grasscutter.net.proto.BHKGAINOAONOuterClass.BHKGAINOAON>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              pPJNMMHPAKP_.add(
+                  input.readMessage(emu.grasscutter.net.proto.BHKGAINOAONOuterClass.BHKGAINOAON.parser(), extensionRegistry));
+              break;
+            }
+            case 120: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                oHPPOCHJMHE_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              oHPPOCHJMHE_.addInt(input.readUInt32());
+              break;
+            }
+            case 122: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                oHPPOCHJMHE_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                oHPPOCHJMHE_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          jACIJBCLOMD_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          oKIHACBIMGP_ = java.util.Collections.unmodifiableList(oKIHACBIMGP_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          pPJNMMHPAKP_ = java.util.Collections.unmodifiableList(pPJNMMHPAKP_);
+        }
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          oHPPOCHJMHE_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FungusTrainingProgressDetailOuterClass.internal_static_FungusTrainingProgressDetail_descriptor;
@@ -167,7 +292,6 @@ public final class FungusTrainingProgressDetailOuterClass {
     }
 
     public static final int OHPPOCHJMHE_FIELD_NUMBER = 15;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList oHPPOCHJMHE_;
     /**
      * <code>repeated uint32 OHPPOCHJMHE = 15;</code>
@@ -196,7 +320,7 @@ public final class FungusTrainingProgressDetailOuterClass {
     private int oHPPOCHJMHEMemoizedSerializedSize = -1;
 
     public static final int CUR_ROUND_FIELD_NUMBER = 5;
-    private int curRound_ = 0;
+    private int curRound_;
     /**
      * <code>uint32 cur_round = 5;</code>
      * @return The curRound.
@@ -207,7 +331,7 @@ public final class FungusTrainingProgressDetailOuterClass {
     }
 
     public static final int DUNGEON_ID_FIELD_NUMBER = 11;
-    private int dungeonId_ = 0;
+    private int dungeonId_;
     /**
      * <code>uint32 dungeon_id = 11;</code>
      * @return The dungeonId.
@@ -218,7 +342,7 @@ public final class FungusTrainingProgressDetailOuterClass {
     }
 
     public static final int TOTAL_USED_TIME_FIELD_NUMBER = 10;
-    private int totalUsedTime_ = 0;
+    private int totalUsedTime_;
     /**
      * <code>uint32 total_used_time = 10;</code>
      * @return The totalUsedTime.
@@ -229,7 +353,6 @@ public final class FungusTrainingProgressDetailOuterClass {
     }
 
     public static final int JACIJBCLOMD_FIELD_NUMBER = 6;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList jACIJBCLOMD_;
     /**
      * <code>repeated uint32 JACIJBCLOMD = 6;</code>
@@ -258,7 +381,6 @@ public final class FungusTrainingProgressDetailOuterClass {
     private int jACIJBCLOMDMemoizedSerializedSize = -1;
 
     public static final int OKIHACBIMGP_FIELD_NUMBER = 12;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM> oKIHACBIMGP_;
     /**
      * <code>repeated .OLAHPIKKKOM OKIHACBIMGP = 12;</code>
@@ -299,7 +421,6 @@ public final class FungusTrainingProgressDetailOuterClass {
     }
 
     public static final int PPJNMMHPAKP_FIELD_NUMBER = 14;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.BHKGAINOAONOuterClass.BHKGAINOAON> pPJNMMHPAKP_;
     /**
      * <code>repeated .BHKGAINOAON PPJNMMHPAKP = 14;</code>
@@ -383,7 +504,7 @@ public final class FungusTrainingProgressDetailOuterClass {
       for (int i = 0; i < oHPPOCHJMHE_.size(); i++) {
         output.writeUInt32NoTag(oHPPOCHJMHE_.getInt(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -440,7 +561,7 @@ public final class FungusTrainingProgressDetailOuterClass {
         }
         oHPPOCHJMHEMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -469,7 +590,7 @@ public final class FungusTrainingProgressDetailOuterClass {
           .equals(other.getOKIHACBIMGPList())) return false;
       if (!getPPJNMMHPAKPList()
           .equals(other.getPPJNMMHPAKPList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -502,7 +623,7 @@ public final class FungusTrainingProgressDetailOuterClass {
         hash = (37 * hash) + PPJNMMHPAKP_FIELD_NUMBER;
         hash = (53 * hash) + getPPJNMMHPAKPList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -623,37 +744,46 @@ public final class FungusTrainingProgressDetailOuterClass {
 
       // Construct using emu.grasscutter.net.proto.FungusTrainingProgressDetailOuterClass.FungusTrainingProgressDetail.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOKIHACBIMGPFieldBuilder();
+          getPPJNMMHPAKPFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         oHPPOCHJMHE_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         curRound_ = 0;
+
         dungeonId_ = 0;
+
         totalUsedTime_ = 0;
+
         jACIJBCLOMD_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (oKIHACBIMGPBuilder_ == null) {
           oKIHACBIMGP_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
-          oKIHACBIMGP_ = null;
           oKIHACBIMGPBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000020);
         if (pPJNMMHPAKPBuilder_ == null) {
           pPJNMMHPAKP_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
-          pPJNMMHPAKP_ = null;
           pPJNMMHPAKPBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -680,54 +810,40 @@ public final class FungusTrainingProgressDetailOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.FungusTrainingProgressDetailOuterClass.FungusTrainingProgressDetail buildPartial() {
         emu.grasscutter.net.proto.FungusTrainingProgressDetailOuterClass.FungusTrainingProgressDetail result = new emu.grasscutter.net.proto.FungusTrainingProgressDetailOuterClass.FungusTrainingProgressDetail(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.FungusTrainingProgressDetailOuterClass.FungusTrainingProgressDetail result) {
+        int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
           oHPPOCHJMHE_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.oHPPOCHJMHE_ = oHPPOCHJMHE_;
-        if (((bitField0_ & 0x00000010) != 0)) {
+        result.curRound_ = curRound_;
+        result.dungeonId_ = dungeonId_;
+        result.totalUsedTime_ = totalUsedTime_;
+        if (((bitField0_ & 0x00000002) != 0)) {
           jACIJBCLOMD_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.jACIJBCLOMD_ = jACIJBCLOMD_;
         if (oKIHACBIMGPBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             oKIHACBIMGP_ = java.util.Collections.unmodifiableList(oKIHACBIMGP_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.oKIHACBIMGP_ = oKIHACBIMGP_;
         } else {
           result.oKIHACBIMGP_ = oKIHACBIMGPBuilder_.build();
         }
         if (pPJNMMHPAKPBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             pPJNMMHPAKP_ = java.util.Collections.unmodifiableList(pPJNMMHPAKP_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.pPJNMMHPAKP_ = pPJNMMHPAKP_;
         } else {
           result.pPJNMMHPAKP_ = pPJNMMHPAKPBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.FungusTrainingProgressDetailOuterClass.FungusTrainingProgressDetail result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.curRound_ = curRound_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.dungeonId_ = dungeonId_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.totalUsedTime_ = totalUsedTime_;
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -796,7 +912,7 @@ public final class FungusTrainingProgressDetailOuterClass {
         if (!other.jACIJBCLOMD_.isEmpty()) {
           if (jACIJBCLOMD_.isEmpty()) {
             jACIJBCLOMD_ = other.jACIJBCLOMD_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureJACIJBCLOMDIsMutable();
             jACIJBCLOMD_.addAll(other.jACIJBCLOMD_);
@@ -807,7 +923,7 @@ public final class FungusTrainingProgressDetailOuterClass {
           if (!other.oKIHACBIMGP_.isEmpty()) {
             if (oKIHACBIMGP_.isEmpty()) {
               oKIHACBIMGP_ = other.oKIHACBIMGP_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureOKIHACBIMGPIsMutable();
               oKIHACBIMGP_.addAll(other.oKIHACBIMGP_);
@@ -820,7 +936,7 @@ public final class FungusTrainingProgressDetailOuterClass {
               oKIHACBIMGPBuilder_.dispose();
               oKIHACBIMGPBuilder_ = null;
               oKIHACBIMGP_ = other.oKIHACBIMGP_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000004);
               oKIHACBIMGPBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOKIHACBIMGPFieldBuilder() : null;
@@ -833,7 +949,7 @@ public final class FungusTrainingProgressDetailOuterClass {
           if (!other.pPJNMMHPAKP_.isEmpty()) {
             if (pPJNMMHPAKP_.isEmpty()) {
               pPJNMMHPAKP_ = other.pPJNMMHPAKP_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensurePPJNMMHPAKPIsMutable();
               pPJNMMHPAKP_.addAll(other.pPJNMMHPAKP_);
@@ -846,7 +962,7 @@ public final class FungusTrainingProgressDetailOuterClass {
               pPJNMMHPAKPBuilder_.dispose();
               pPJNMMHPAKPBuilder_ = null;
               pPJNMMHPAKP_ = other.pPJNMMHPAKP_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000008);
               pPJNMMHPAKPBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getPPJNMMHPAKPFieldBuilder() : null;
@@ -855,7 +971,7 @@ public final class FungusTrainingProgressDetailOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -870,103 +986,17 @@ public final class FungusTrainingProgressDetailOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.FungusTrainingProgressDetailOuterClass.FungusTrainingProgressDetail parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 40: {
-                curRound_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 40
-              case 48: {
-                int v = input.readUInt32();
-                ensureJACIJBCLOMDIsMutable();
-                jACIJBCLOMD_.addInt(v);
-                break;
-              } // case 48
-              case 50: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureJACIJBCLOMDIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  jACIJBCLOMD_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 50
-              case 80: {
-                totalUsedTime_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 80
-              case 88: {
-                dungeonId_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 88
-              case 98: {
-                emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM.parser(),
-                        extensionRegistry);
-                if (oKIHACBIMGPBuilder_ == null) {
-                  ensureOKIHACBIMGPIsMutable();
-                  oKIHACBIMGP_.add(m);
-                } else {
-                  oKIHACBIMGPBuilder_.addMessage(m);
-                }
-                break;
-              } // case 98
-              case 114: {
-                emu.grasscutter.net.proto.BHKGAINOAONOuterClass.BHKGAINOAON m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.BHKGAINOAONOuterClass.BHKGAINOAON.parser(),
-                        extensionRegistry);
-                if (pPJNMMHPAKPBuilder_ == null) {
-                  ensurePPJNMMHPAKPIsMutable();
-                  pPJNMMHPAKP_.add(m);
-                } else {
-                  pPJNMMHPAKPBuilder_.addMessage(m);
-                }
-                break;
-              } // case 114
-              case 120: {
-                int v = input.readUInt32();
-                ensureOHPPOCHJMHEIsMutable();
-                oHPPOCHJMHE_.addInt(v);
-                break;
-              } // case 120
-              case 122: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureOHPPOCHJMHEIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  oHPPOCHJMHE_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.FungusTrainingProgressDetailOuterClass.FungusTrainingProgressDetail) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -976,7 +1006,7 @@ public final class FungusTrainingProgressDetailOuterClass {
         if (!((bitField0_ & 0x00000001) != 0)) {
           oHPPOCHJMHE_ = mutableCopy(oHPPOCHJMHE_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
       /**
        * <code>repeated uint32 OHPPOCHJMHE = 15;</code>
@@ -1010,7 +1040,6 @@ public final class FungusTrainingProgressDetailOuterClass {
        */
       public Builder setOHPPOCHJMHE(
           int index, int value) {
-        
         ensureOHPPOCHJMHEIsMutable();
         oHPPOCHJMHE_.setInt(index, value);
         onChanged();
@@ -1022,7 +1051,6 @@ public final class FungusTrainingProgressDetailOuterClass {
        * @return This builder for chaining.
        */
       public Builder addOHPPOCHJMHE(int value) {
-        
         ensureOHPPOCHJMHEIsMutable();
         oHPPOCHJMHE_.addInt(value);
         onChanged();
@@ -1069,7 +1097,6 @@ public final class FungusTrainingProgressDetailOuterClass {
       public Builder setCurRound(int value) {
         
         curRound_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1078,7 +1105,7 @@ public final class FungusTrainingProgressDetailOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCurRound() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         curRound_ = 0;
         onChanged();
         return this;
@@ -1101,7 +1128,6 @@ public final class FungusTrainingProgressDetailOuterClass {
       public Builder setDungeonId(int value) {
         
         dungeonId_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1110,7 +1136,7 @@ public final class FungusTrainingProgressDetailOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDungeonId() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         dungeonId_ = 0;
         onChanged();
         return this;
@@ -1133,7 +1159,6 @@ public final class FungusTrainingProgressDetailOuterClass {
       public Builder setTotalUsedTime(int value) {
         
         totalUsedTime_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1142,7 +1167,7 @@ public final class FungusTrainingProgressDetailOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTotalUsedTime() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         totalUsedTime_ = 0;
         onChanged();
         return this;
@@ -1150,10 +1175,10 @@ public final class FungusTrainingProgressDetailOuterClass {
 
       private com.google.protobuf.Internal.IntList jACIJBCLOMD_ = emptyIntList();
       private void ensureJACIJBCLOMDIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           jACIJBCLOMD_ = mutableCopy(jACIJBCLOMD_);
-          bitField0_ |= 0x00000010;
-        }
+          bitField0_ |= 0x00000002;
+         }
       }
       /**
        * <code>repeated uint32 JACIJBCLOMD = 6;</code>
@@ -1161,7 +1186,7 @@ public final class FungusTrainingProgressDetailOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getJACIJBCLOMDList() {
-        return ((bitField0_ & 0x00000010) != 0) ?
+        return ((bitField0_ & 0x00000002) != 0) ?
                  java.util.Collections.unmodifiableList(jACIJBCLOMD_) : jACIJBCLOMD_;
       }
       /**
@@ -1187,7 +1212,6 @@ public final class FungusTrainingProgressDetailOuterClass {
        */
       public Builder setJACIJBCLOMD(
           int index, int value) {
-        
         ensureJACIJBCLOMDIsMutable();
         jACIJBCLOMD_.setInt(index, value);
         onChanged();
@@ -1199,7 +1223,6 @@ public final class FungusTrainingProgressDetailOuterClass {
        * @return This builder for chaining.
        */
       public Builder addJACIJBCLOMD(int value) {
-        
         ensureJACIJBCLOMDIsMutable();
         jACIJBCLOMD_.addInt(value);
         onChanged();
@@ -1224,7 +1247,7 @@ public final class FungusTrainingProgressDetailOuterClass {
        */
       public Builder clearJACIJBCLOMD() {
         jACIJBCLOMD_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1232,9 +1255,9 @@ public final class FungusTrainingProgressDetailOuterClass {
       private java.util.List<emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM> oKIHACBIMGP_ =
         java.util.Collections.emptyList();
       private void ensureOKIHACBIMGPIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           oKIHACBIMGP_ = new java.util.ArrayList<emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM>(oKIHACBIMGP_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -1384,7 +1407,7 @@ public final class FungusTrainingProgressDetailOuterClass {
       public Builder clearOKIHACBIMGP() {
         if (oKIHACBIMGPBuilder_ == null) {
           oKIHACBIMGP_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           oKIHACBIMGPBuilder_.clear();
@@ -1461,7 +1484,7 @@ public final class FungusTrainingProgressDetailOuterClass {
           oKIHACBIMGPBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM, emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM.Builder, emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOMOrBuilder>(
                   oKIHACBIMGP_,
-                  ((bitField0_ & 0x00000020) != 0),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           oKIHACBIMGP_ = null;
@@ -1472,9 +1495,9 @@ public final class FungusTrainingProgressDetailOuterClass {
       private java.util.List<emu.grasscutter.net.proto.BHKGAINOAONOuterClass.BHKGAINOAON> pPJNMMHPAKP_ =
         java.util.Collections.emptyList();
       private void ensurePPJNMMHPAKPIsMutable() {
-        if (!((bitField0_ & 0x00000040) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           pPJNMMHPAKP_ = new java.util.ArrayList<emu.grasscutter.net.proto.BHKGAINOAONOuterClass.BHKGAINOAON>(pPJNMMHPAKP_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -1624,7 +1647,7 @@ public final class FungusTrainingProgressDetailOuterClass {
       public Builder clearPPJNMMHPAKP() {
         if (pPJNMMHPAKPBuilder_ == null) {
           pPJNMMHPAKP_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           pPJNMMHPAKPBuilder_.clear();
@@ -1701,7 +1724,7 @@ public final class FungusTrainingProgressDetailOuterClass {
           pPJNMMHPAKPBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.BHKGAINOAONOuterClass.BHKGAINOAON, emu.grasscutter.net.proto.BHKGAINOAONOuterClass.BHKGAINOAON.Builder, emu.grasscutter.net.proto.BHKGAINOAONOuterClass.BHKGAINOAONOrBuilder>(
                   pPJNMMHPAKP_,
-                  ((bitField0_ & 0x00000040) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           pPJNMMHPAKP_ = null;
@@ -1741,18 +1764,7 @@ public final class FungusTrainingProgressDetailOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new FungusTrainingProgressDetail(input, extensionRegistry);
       }
     };
 

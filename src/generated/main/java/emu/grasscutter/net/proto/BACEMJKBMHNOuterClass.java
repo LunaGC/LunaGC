@@ -91,6 +91,79 @@ public final class BACEMJKBMHNOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private BACEMJKBMHN(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 48: {
+
+              costumeId_ = input.readUInt32();
+              break;
+            }
+            case 66: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (spawnPos_ != null) {
+                subBuilder = spawnPos_.toBuilder();
+              }
+              spawnPos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(spawnPos_);
+                spawnPos_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (mGHIMMEFBDI_ != null) {
+                subBuilder = mGHIMMEFBDI_.toBuilder();
+              }
+              mGHIMMEFBDI_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mGHIMMEFBDI_);
+                mGHIMMEFBDI_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 104: {
+
+              avatarId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.BACEMJKBMHNOuterClass.internal_static_BACEMJKBMHN_descriptor;
@@ -105,7 +178,7 @@ public final class BACEMJKBMHNOuterClass {
     }
 
     public static final int COSTUME_ID_FIELD_NUMBER = 6;
-    private int costumeId_ = 0;
+    private int costumeId_;
     /**
      * <code>uint32 costume_id = 6;</code>
      * @return The costumeId.
@@ -138,7 +211,7 @@ public final class BACEMJKBMHNOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSpawnPosOrBuilder() {
-      return spawnPos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : spawnPos_;
+      return getSpawnPos();
     }
 
     public static final int MGHIMMEFBDI_FIELD_NUMBER = 12;
@@ -164,11 +237,11 @@ public final class BACEMJKBMHNOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getMGHIMMEFBDIOrBuilder() {
-      return mGHIMMEFBDI_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : mGHIMMEFBDI_;
+      return getMGHIMMEFBDI();
     }
 
     public static final int AVATAR_ID_FIELD_NUMBER = 13;
-    private int avatarId_ = 0;
+    private int avatarId_;
     /**
      * <code>uint32 avatar_id = 13;</code>
      * @return The avatarId.
@@ -204,7 +277,7 @@ public final class BACEMJKBMHNOuterClass {
       if (avatarId_ != 0) {
         output.writeUInt32(13, avatarId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -229,7 +302,7 @@ public final class BACEMJKBMHNOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, avatarId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -258,7 +331,7 @@ public final class BACEMJKBMHNOuterClass {
       }
       if (getAvatarId()
           != other.getAvatarId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -281,7 +354,7 @@ public final class BACEMJKBMHNOuterClass {
       }
       hash = (37 * hash) + AVATAR_ID_FIELD_NUMBER;
       hash = (53 * hash) + getAvatarId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -402,30 +475,38 @@ public final class BACEMJKBMHNOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BACEMJKBMHNOuterClass.BACEMJKBMHN.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         costumeId_ = 0;
-        spawnPos_ = null;
-        if (spawnPosBuilder_ != null) {
-          spawnPosBuilder_.dispose();
+
+        if (spawnPosBuilder_ == null) {
+          spawnPos_ = null;
+        } else {
+          spawnPos_ = null;
           spawnPosBuilder_ = null;
         }
-        mGHIMMEFBDI_ = null;
-        if (mGHIMMEFBDIBuilder_ != null) {
-          mGHIMMEFBDIBuilder_.dispose();
+        if (mGHIMMEFBDIBuilder_ == null) {
+          mGHIMMEFBDI_ = null;
+        } else {
+          mGHIMMEFBDI_ = null;
           mGHIMMEFBDIBuilder_ = null;
         }
         avatarId_ = 0;
+
         return this;
       }
 
@@ -452,29 +533,20 @@ public final class BACEMJKBMHNOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.BACEMJKBMHNOuterClass.BACEMJKBMHN buildPartial() {
         emu.grasscutter.net.proto.BACEMJKBMHNOuterClass.BACEMJKBMHN result = new emu.grasscutter.net.proto.BACEMJKBMHNOuterClass.BACEMJKBMHN(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.costumeId_ = costumeId_;
+        if (spawnPosBuilder_ == null) {
+          result.spawnPos_ = spawnPos_;
+        } else {
+          result.spawnPos_ = spawnPosBuilder_.build();
+        }
+        if (mGHIMMEFBDIBuilder_ == null) {
+          result.mGHIMMEFBDI_ = mGHIMMEFBDI_;
+        } else {
+          result.mGHIMMEFBDI_ = mGHIMMEFBDIBuilder_.build();
+        }
+        result.avatarId_ = avatarId_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.BACEMJKBMHNOuterClass.BACEMJKBMHN result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.costumeId_ = costumeId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.spawnPos_ = spawnPosBuilder_ == null
-              ? spawnPos_
-              : spawnPosBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.mGHIMMEFBDI_ = mGHIMMEFBDIBuilder_ == null
-              ? mGHIMMEFBDI_
-              : mGHIMMEFBDIBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.avatarId_ = avatarId_;
-        }
       }
 
       @java.lang.Override
@@ -533,7 +605,7 @@ public final class BACEMJKBMHNOuterClass {
         if (other.getAvatarId() != 0) {
           setAvatarId(other.getAvatarId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -548,57 +620,19 @@ public final class BACEMJKBMHNOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.BACEMJKBMHNOuterClass.BACEMJKBMHN parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 48: {
-                costumeId_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 48
-              case 66: {
-                input.readMessage(
-                    getSpawnPosFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 66
-              case 98: {
-                input.readMessage(
-                    getMGHIMMEFBDIFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 98
-              case 104: {
-                avatarId_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.BACEMJKBMHNOuterClass.BACEMJKBMHN) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private int costumeId_ ;
       /**
@@ -617,7 +651,6 @@ public final class BACEMJKBMHNOuterClass {
       public Builder setCostumeId(int value) {
         
         costumeId_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -626,7 +659,7 @@ public final class BACEMJKBMHNOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCostumeId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         costumeId_ = 0;
         onChanged();
         return this;
@@ -640,7 +673,7 @@ public final class BACEMJKBMHNOuterClass {
        * @return Whether the spawnPos field is set.
        */
       public boolean hasSpawnPos() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return spawnPosBuilder_ != null || spawnPos_ != null;
       }
       /**
        * <code>.Vector spawn_pos = 8;</code>
@@ -662,11 +695,11 @@ public final class BACEMJKBMHNOuterClass {
             throw new NullPointerException();
           }
           spawnPos_ = value;
+          onChanged();
         } else {
           spawnPosBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+
         return this;
       }
       /**
@@ -676,11 +709,11 @@ public final class BACEMJKBMHNOuterClass {
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (spawnPosBuilder_ == null) {
           spawnPos_ = builderForValue.build();
+          onChanged();
         } else {
           spawnPosBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+
         return this;
       }
       /**
@@ -688,38 +721,38 @@ public final class BACEMJKBMHNOuterClass {
        */
       public Builder mergeSpawnPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (spawnPosBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            spawnPos_ != null &&
-            spawnPos_ != emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance()) {
-            getSpawnPosBuilder().mergeFrom(value);
+          if (spawnPos_ != null) {
+            spawnPos_ =
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(spawnPos_).mergeFrom(value).buildPartial();
           } else {
             spawnPos_ = value;
           }
+          onChanged();
         } else {
           spawnPosBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.Vector spawn_pos = 8;</code>
        */
       public Builder clearSpawnPos() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        spawnPos_ = null;
-        if (spawnPosBuilder_ != null) {
-          spawnPosBuilder_.dispose();
+        if (spawnPosBuilder_ == null) {
+          spawnPos_ = null;
+          onChanged();
+        } else {
+          spawnPos_ = null;
           spawnPosBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.Vector spawn_pos = 8;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getSpawnPosBuilder() {
-        bitField0_ |= 0x00000002;
+        
         onChanged();
         return getSpawnPosFieldBuilder().getBuilder();
       }
@@ -759,7 +792,7 @@ public final class BACEMJKBMHNOuterClass {
        * @return Whether the mGHIMMEFBDI field is set.
        */
       public boolean hasMGHIMMEFBDI() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return mGHIMMEFBDIBuilder_ != null || mGHIMMEFBDI_ != null;
       }
       /**
        * <code>.Vector MGHIMMEFBDI = 12;</code>
@@ -781,11 +814,11 @@ public final class BACEMJKBMHNOuterClass {
             throw new NullPointerException();
           }
           mGHIMMEFBDI_ = value;
+          onChanged();
         } else {
           mGHIMMEFBDIBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -795,11 +828,11 @@ public final class BACEMJKBMHNOuterClass {
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (mGHIMMEFBDIBuilder_ == null) {
           mGHIMMEFBDI_ = builderForValue.build();
+          onChanged();
         } else {
           mGHIMMEFBDIBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -807,38 +840,38 @@ public final class BACEMJKBMHNOuterClass {
        */
       public Builder mergeMGHIMMEFBDI(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (mGHIMMEFBDIBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            mGHIMMEFBDI_ != null &&
-            mGHIMMEFBDI_ != emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance()) {
-            getMGHIMMEFBDIBuilder().mergeFrom(value);
+          if (mGHIMMEFBDI_ != null) {
+            mGHIMMEFBDI_ =
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(mGHIMMEFBDI_).mergeFrom(value).buildPartial();
           } else {
             mGHIMMEFBDI_ = value;
           }
+          onChanged();
         } else {
           mGHIMMEFBDIBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.Vector MGHIMMEFBDI = 12;</code>
        */
       public Builder clearMGHIMMEFBDI() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        mGHIMMEFBDI_ = null;
-        if (mGHIMMEFBDIBuilder_ != null) {
-          mGHIMMEFBDIBuilder_.dispose();
+        if (mGHIMMEFBDIBuilder_ == null) {
+          mGHIMMEFBDI_ = null;
+          onChanged();
+        } else {
+          mGHIMMEFBDI_ = null;
           mGHIMMEFBDIBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.Vector MGHIMMEFBDI = 12;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getMGHIMMEFBDIBuilder() {
-        bitField0_ |= 0x00000004;
+        
         onChanged();
         return getMGHIMMEFBDIFieldBuilder().getBuilder();
       }
@@ -887,7 +920,6 @@ public final class BACEMJKBMHNOuterClass {
       public Builder setAvatarId(int value) {
         
         avatarId_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -896,7 +928,7 @@ public final class BACEMJKBMHNOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAvatarId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         avatarId_ = 0;
         onChanged();
         return this;
@@ -934,18 +966,7 @@ public final class BACEMJKBMHNOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new BACEMJKBMHN(input, extensionRegistry);
       }
     };
 

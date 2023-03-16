@@ -69,6 +69,63 @@ public final class BalloonPlayerInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private BalloonPlayerInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 48: {
+
+              combo_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              comboDisableTime_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+
+              uid_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              curScore_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.BalloonPlayerInfoOuterClass.internal_static_BalloonPlayerInfo_descriptor;
@@ -83,7 +140,7 @@ public final class BalloonPlayerInfoOuterClass {
     }
 
     public static final int COMBODISABLETIME_FIELD_NUMBER = 8;
-    private int comboDisableTime_ = 0;
+    private int comboDisableTime_;
     /**
      * <code>uint32 comboDisableTime = 8;</code>
      * @return The comboDisableTime.
@@ -94,7 +151,7 @@ public final class BalloonPlayerInfoOuterClass {
     }
 
     public static final int CURSCORE_FIELD_NUMBER = 13;
-    private int curScore_ = 0;
+    private int curScore_;
     /**
      * <code>uint32 curScore = 13;</code>
      * @return The curScore.
@@ -105,7 +162,7 @@ public final class BalloonPlayerInfoOuterClass {
     }
 
     public static final int UID_FIELD_NUMBER = 10;
-    private int uid_ = 0;
+    private int uid_;
     /**
      * <code>uint32 uid = 10;</code>
      * @return The uid.
@@ -116,7 +173,7 @@ public final class BalloonPlayerInfoOuterClass {
     }
 
     public static final int COMBO_FIELD_NUMBER = 6;
-    private int combo_ = 0;
+    private int combo_;
     /**
      * <code>uint32 combo = 6;</code>
      * @return The combo.
@@ -152,7 +209,7 @@ public final class BalloonPlayerInfoOuterClass {
       if (curScore_ != 0) {
         output.writeUInt32(13, curScore_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -177,7 +234,7 @@ public final class BalloonPlayerInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, curScore_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -200,7 +257,7 @@ public final class BalloonPlayerInfoOuterClass {
           != other.getUid()) return false;
       if (getCombo()
           != other.getCombo()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -219,7 +276,7 @@ public final class BalloonPlayerInfoOuterClass {
       hash = (53 * hash) + getUid();
       hash = (37 * hash) + COMBO_FIELD_NUMBER;
       hash = (53 * hash) + getCombo();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -336,22 +393,30 @@ public final class BalloonPlayerInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.BalloonPlayerInfoOuterClass.BalloonPlayerInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         comboDisableTime_ = 0;
+
         curScore_ = 0;
+
         uid_ = 0;
+
         combo_ = 0;
+
         return this;
       }
 
@@ -378,25 +443,12 @@ public final class BalloonPlayerInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.BalloonPlayerInfoOuterClass.BalloonPlayerInfo buildPartial() {
         emu.grasscutter.net.proto.BalloonPlayerInfoOuterClass.BalloonPlayerInfo result = new emu.grasscutter.net.proto.BalloonPlayerInfoOuterClass.BalloonPlayerInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.comboDisableTime_ = comboDisableTime_;
+        result.curScore_ = curScore_;
+        result.uid_ = uid_;
+        result.combo_ = combo_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.BalloonPlayerInfoOuterClass.BalloonPlayerInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.comboDisableTime_ = comboDisableTime_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.curScore_ = curScore_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.uid_ = uid_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.combo_ = combo_;
-        }
       }
 
       @java.lang.Override
@@ -455,7 +507,7 @@ public final class BalloonPlayerInfoOuterClass {
         if (other.getCombo() != 0) {
           setCombo(other.getCombo());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -470,53 +522,19 @@ public final class BalloonPlayerInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.BalloonPlayerInfoOuterClass.BalloonPlayerInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 48: {
-                combo_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 48
-              case 64: {
-                comboDisableTime_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 64
-              case 80: {
-                uid_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 80
-              case 104: {
-                curScore_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.BalloonPlayerInfoOuterClass.BalloonPlayerInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private int comboDisableTime_ ;
       /**
@@ -535,7 +553,6 @@ public final class BalloonPlayerInfoOuterClass {
       public Builder setComboDisableTime(int value) {
         
         comboDisableTime_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -544,7 +561,7 @@ public final class BalloonPlayerInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearComboDisableTime() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         comboDisableTime_ = 0;
         onChanged();
         return this;
@@ -567,7 +584,6 @@ public final class BalloonPlayerInfoOuterClass {
       public Builder setCurScore(int value) {
         
         curScore_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -576,7 +592,7 @@ public final class BalloonPlayerInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCurScore() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         curScore_ = 0;
         onChanged();
         return this;
@@ -599,7 +615,6 @@ public final class BalloonPlayerInfoOuterClass {
       public Builder setUid(int value) {
         
         uid_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -608,7 +623,7 @@ public final class BalloonPlayerInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUid() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         uid_ = 0;
         onChanged();
         return this;
@@ -631,7 +646,6 @@ public final class BalloonPlayerInfoOuterClass {
       public Builder setCombo(int value) {
         
         combo_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -640,7 +654,7 @@ public final class BalloonPlayerInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCombo() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         combo_ = 0;
         onChanged();
         return this;
@@ -678,18 +692,7 @@ public final class BalloonPlayerInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new BalloonPlayerInfo(input, extensionRegistry);
       }
     };
 

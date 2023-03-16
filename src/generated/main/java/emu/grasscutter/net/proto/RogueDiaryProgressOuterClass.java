@@ -91,6 +91,88 @@ public final class RogueDiaryProgressOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private RogueDiaryProgress(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                optionalCardList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              optionalCardList_.addInt(input.readUInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                optionalCardList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                optionalCardList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 16: {
+
+              stageId_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              curRound_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              difficulty_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              isEnterDungeon_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          optionalCardList_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.internal_static_RogueDiaryProgress_descriptor;
@@ -105,7 +187,7 @@ public final class RogueDiaryProgressOuterClass {
     }
 
     public static final int IS_ENTER_DUNGEON_FIELD_NUMBER = 15;
-    private boolean isEnterDungeon_ = false;
+    private boolean isEnterDungeon_;
     /**
      * <code>bool is_enter_dungeon = 15;</code>
      * @return The isEnterDungeon.
@@ -116,7 +198,6 @@ public final class RogueDiaryProgressOuterClass {
     }
 
     public static final int OPTIONAL_CARD_LIST_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList optionalCardList_;
     /**
      * <code>repeated uint32 optional_card_list = 1;</code>
@@ -145,7 +226,7 @@ public final class RogueDiaryProgressOuterClass {
     private int optionalCardListMemoizedSerializedSize = -1;
 
     public static final int CUR_ROUND_FIELD_NUMBER = 7;
-    private int curRound_ = 0;
+    private int curRound_;
     /**
      * <code>uint32 cur_round = 7;</code>
      * @return The curRound.
@@ -156,7 +237,7 @@ public final class RogueDiaryProgressOuterClass {
     }
 
     public static final int STAGE_ID_FIELD_NUMBER = 2;
-    private int stageId_ = 0;
+    private int stageId_;
     /**
      * <code>uint32 stage_id = 2;</code>
      * @return The stageId.
@@ -167,7 +248,7 @@ public final class RogueDiaryProgressOuterClass {
     }
 
     public static final int DIFFICULTY_FIELD_NUMBER = 13;
-    private int difficulty_ = 0;
+    private int difficulty_;
     /**
      * <code>uint32 difficulty = 13;</code>
      * @return The difficulty.
@@ -211,7 +292,7 @@ public final class RogueDiaryProgressOuterClass {
       if (isEnterDungeon_ != false) {
         output.writeBool(15, isEnterDungeon_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -250,7 +331,7 @@ public final class RogueDiaryProgressOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(15, isEnterDungeon_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -275,7 +356,7 @@ public final class RogueDiaryProgressOuterClass {
           != other.getStageId()) return false;
       if (getDifficulty()
           != other.getDifficulty()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -299,7 +380,7 @@ public final class RogueDiaryProgressOuterClass {
       hash = (53 * hash) + getStageId();
       hash = (37 * hash) + DIFFICULTY_FIELD_NUMBER;
       hash = (53 * hash) + getDifficulty();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -420,23 +501,32 @@ public final class RogueDiaryProgressOuterClass {
 
       // Construct using emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         isEnterDungeon_ = false;
+
         optionalCardList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         curRound_ = 0;
+
         stageId_ = 0;
+
         difficulty_ = 0;
+
         return this;
       }
 
@@ -463,34 +553,18 @@ public final class RogueDiaryProgressOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress buildPartial() {
         emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress result = new emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        int from_bitField0_ = bitField0_;
+        result.isEnterDungeon_ = isEnterDungeon_;
+        if (((bitField0_ & 0x00000001) != 0)) {
           optionalCardList_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.optionalCardList_ = optionalCardList_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isEnterDungeon_ = isEnterDungeon_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.curRound_ = curRound_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.stageId_ = stageId_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.difficulty_ = difficulty_;
-        }
+        result.curRound_ = curRound_;
+        result.stageId_ = stageId_;
+        result.difficulty_ = difficulty_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -543,7 +617,7 @@ public final class RogueDiaryProgressOuterClass {
         if (!other.optionalCardList_.isEmpty()) {
           if (optionalCardList_.isEmpty()) {
             optionalCardList_ = other.optionalCardList_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureOptionalCardListIsMutable();
             optionalCardList_.addAll(other.optionalCardList_);
@@ -559,7 +633,7 @@ public final class RogueDiaryProgressOuterClass {
         if (other.getDifficulty() != 0) {
           setDifficulty(other.getDifficulty());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -574,66 +648,17 @@ public final class RogueDiaryProgressOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                int v = input.readUInt32();
-                ensureOptionalCardListIsMutable();
-                optionalCardList_.addInt(v);
-                break;
-              } // case 8
-              case 10: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureOptionalCardListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  optionalCardList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10
-              case 16: {
-                stageId_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 16
-              case 56: {
-                curRound_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 56
-              case 104: {
-                difficulty_ = input.readUInt32();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 104
-              case 120: {
-                isEnterDungeon_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -655,7 +680,6 @@ public final class RogueDiaryProgressOuterClass {
       public Builder setIsEnterDungeon(boolean value) {
         
         isEnterDungeon_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -664,7 +688,7 @@ public final class RogueDiaryProgressOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsEnterDungeon() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         isEnterDungeon_ = false;
         onChanged();
         return this;
@@ -672,10 +696,10 @@ public final class RogueDiaryProgressOuterClass {
 
       private com.google.protobuf.Internal.IntList optionalCardList_ = emptyIntList();
       private void ensureOptionalCardListIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           optionalCardList_ = mutableCopy(optionalCardList_);
-          bitField0_ |= 0x00000002;
-        }
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
        * <code>repeated uint32 optional_card_list = 1;</code>
@@ -683,7 +707,7 @@ public final class RogueDiaryProgressOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getOptionalCardListList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
+        return ((bitField0_ & 0x00000001) != 0) ?
                  java.util.Collections.unmodifiableList(optionalCardList_) : optionalCardList_;
       }
       /**
@@ -709,7 +733,6 @@ public final class RogueDiaryProgressOuterClass {
        */
       public Builder setOptionalCardList(
           int index, int value) {
-        
         ensureOptionalCardListIsMutable();
         optionalCardList_.setInt(index, value);
         onChanged();
@@ -721,7 +744,6 @@ public final class RogueDiaryProgressOuterClass {
        * @return This builder for chaining.
        */
       public Builder addOptionalCardList(int value) {
-        
         ensureOptionalCardListIsMutable();
         optionalCardList_.addInt(value);
         onChanged();
@@ -746,7 +768,7 @@ public final class RogueDiaryProgressOuterClass {
        */
       public Builder clearOptionalCardList() {
         optionalCardList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -768,7 +790,6 @@ public final class RogueDiaryProgressOuterClass {
       public Builder setCurRound(int value) {
         
         curRound_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -777,7 +798,7 @@ public final class RogueDiaryProgressOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCurRound() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         curRound_ = 0;
         onChanged();
         return this;
@@ -800,7 +821,6 @@ public final class RogueDiaryProgressOuterClass {
       public Builder setStageId(int value) {
         
         stageId_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -809,7 +829,7 @@ public final class RogueDiaryProgressOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStageId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         stageId_ = 0;
         onChanged();
         return this;
@@ -832,7 +852,6 @@ public final class RogueDiaryProgressOuterClass {
       public Builder setDifficulty(int value) {
         
         difficulty_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -841,7 +860,7 @@ public final class RogueDiaryProgressOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDifficulty() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         difficulty_ = 0;
         onChanged();
         return this;
@@ -879,18 +898,7 @@ public final class RogueDiaryProgressOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new RogueDiaryProgress(input, extensionRegistry);
       }
     };
 

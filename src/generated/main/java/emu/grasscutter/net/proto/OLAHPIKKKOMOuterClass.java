@@ -67,6 +67,58 @@ public final class OLAHPIKKKOMOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private OLAHPIKKKOM(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 13: {
+
+              iHKHEPAGNFD_ = input.readFloat();
+              break;
+            }
+            case 16: {
+
+              aBCENJAFGOF_ = input.readBool();
+              break;
+            }
+            case 64: {
+
+              fungusId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.internal_static_OLAHPIKKKOM_descriptor;
@@ -81,7 +133,7 @@ public final class OLAHPIKKKOMOuterClass {
     }
 
     public static final int IHKHEPAGNFD_FIELD_NUMBER = 1;
-    private float iHKHEPAGNFD_ = 0F;
+    private float iHKHEPAGNFD_;
     /**
      * <code>float IHKHEPAGNFD = 1;</code>
      * @return The iHKHEPAGNFD.
@@ -92,7 +144,7 @@ public final class OLAHPIKKKOMOuterClass {
     }
 
     public static final int ABCENJAFGOF_FIELD_NUMBER = 2;
-    private boolean aBCENJAFGOF_ = false;
+    private boolean aBCENJAFGOF_;
     /**
      * <code>bool ABCENJAFGOF = 2;</code>
      * @return The aBCENJAFGOF.
@@ -103,7 +155,7 @@ public final class OLAHPIKKKOMOuterClass {
     }
 
     public static final int FUNGUS_ID_FIELD_NUMBER = 8;
-    private int fungusId_ = 0;
+    private int fungusId_;
     /**
      * <code>uint32 fungus_id = 8;</code>
      * @return The fungusId.
@@ -127,7 +179,7 @@ public final class OLAHPIKKKOMOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (java.lang.Float.floatToRawIntBits(iHKHEPAGNFD_) != 0) {
+      if (iHKHEPAGNFD_ != 0F) {
         output.writeFloat(1, iHKHEPAGNFD_);
       }
       if (aBCENJAFGOF_ != false) {
@@ -136,7 +188,7 @@ public final class OLAHPIKKKOMOuterClass {
       if (fungusId_ != 0) {
         output.writeUInt32(8, fungusId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -145,7 +197,7 @@ public final class OLAHPIKKKOMOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (java.lang.Float.floatToRawIntBits(iHKHEPAGNFD_) != 0) {
+      if (iHKHEPAGNFD_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(1, iHKHEPAGNFD_);
       }
@@ -157,7 +209,7 @@ public final class OLAHPIKKKOMOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(8, fungusId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -179,7 +231,7 @@ public final class OLAHPIKKKOMOuterClass {
           != other.getABCENJAFGOF()) return false;
       if (getFungusId()
           != other.getFungusId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -198,7 +250,7 @@ public final class OLAHPIKKKOMOuterClass {
           getABCENJAFGOF());
       hash = (37 * hash) + FUNGUS_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFungusId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -319,21 +371,28 @@ public final class OLAHPIKKKOMOuterClass {
 
       // Construct using emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         iHKHEPAGNFD_ = 0F;
+
         aBCENJAFGOF_ = false;
+
         fungusId_ = 0;
+
         return this;
       }
 
@@ -360,22 +419,11 @@ public final class OLAHPIKKKOMOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM buildPartial() {
         emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM result = new emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.iHKHEPAGNFD_ = iHKHEPAGNFD_;
+        result.aBCENJAFGOF_ = aBCENJAFGOF_;
+        result.fungusId_ = fungusId_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.iHKHEPAGNFD_ = iHKHEPAGNFD_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.aBCENJAFGOF_ = aBCENJAFGOF_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.fungusId_ = fungusId_;
-        }
       }
 
       @java.lang.Override
@@ -431,7 +479,7 @@ public final class OLAHPIKKKOMOuterClass {
         if (other.getFungusId() != 0) {
           setFungusId(other.getFungusId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -446,48 +494,19 @@ public final class OLAHPIKKKOMOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 13: {
-                iHKHEPAGNFD_ = input.readFloat();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 13
-              case 16: {
-                aBCENJAFGOF_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 64: {
-                fungusId_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 64
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.OLAHPIKKKOMOuterClass.OLAHPIKKKOM) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private float iHKHEPAGNFD_ ;
       /**
@@ -506,7 +525,6 @@ public final class OLAHPIKKKOMOuterClass {
       public Builder setIHKHEPAGNFD(float value) {
         
         iHKHEPAGNFD_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -515,7 +533,7 @@ public final class OLAHPIKKKOMOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIHKHEPAGNFD() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         iHKHEPAGNFD_ = 0F;
         onChanged();
         return this;
@@ -538,7 +556,6 @@ public final class OLAHPIKKKOMOuterClass {
       public Builder setABCENJAFGOF(boolean value) {
         
         aBCENJAFGOF_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -547,7 +564,7 @@ public final class OLAHPIKKKOMOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearABCENJAFGOF() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         aBCENJAFGOF_ = false;
         onChanged();
         return this;
@@ -570,7 +587,6 @@ public final class OLAHPIKKKOMOuterClass {
       public Builder setFungusId(int value) {
         
         fungusId_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -579,7 +595,7 @@ public final class OLAHPIKKKOMOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFungusId() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         fungusId_ = 0;
         onChanged();
         return this;
@@ -617,18 +633,7 @@ public final class OLAHPIKKKOMOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new OLAHPIKKKOM(input, extensionRegistry);
       }
     };
 

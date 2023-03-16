@@ -85,6 +85,73 @@ public final class KPDGACKMNJAOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private KPDGACKMNJA(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 21: {
+
+              jLEGJBGOHHP_ = input.readFloat();
+              break;
+            }
+            case 24: {
+
+              lDDDDFHEMBA_ = input.readUInt32();
+              break;
+            }
+            case 37: {
+
+              pFNLKOMLOIO_ = input.readFloat();
+              break;
+            }
+            case 61: {
+
+              aKLACKOIKOE_ = input.readFloat();
+              break;
+            }
+            case 80: {
+
+              nCIHLNFLAAF_ = input.readUInt32();
+              break;
+            }
+            case 117: {
+
+              oGEJIAIJMDB_ = input.readFloat();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.KPDGACKMNJAOuterClass.internal_static_KPDGACKMNJA_descriptor;
@@ -99,7 +166,7 @@ public final class KPDGACKMNJAOuterClass {
     }
 
     public static final int OGEJIAIJMDB_FIELD_NUMBER = 14;
-    private float oGEJIAIJMDB_ = 0F;
+    private float oGEJIAIJMDB_;
     /**
      * <code>float OGEJIAIJMDB = 14;</code>
      * @return The oGEJIAIJMDB.
@@ -110,7 +177,7 @@ public final class KPDGACKMNJAOuterClass {
     }
 
     public static final int AKLACKOIKOE_FIELD_NUMBER = 7;
-    private float aKLACKOIKOE_ = 0F;
+    private float aKLACKOIKOE_;
     /**
      * <code>float AKLACKOIKOE = 7;</code>
      * @return The aKLACKOIKOE.
@@ -121,7 +188,7 @@ public final class KPDGACKMNJAOuterClass {
     }
 
     public static final int NCIHLNFLAAF_FIELD_NUMBER = 10;
-    private int nCIHLNFLAAF_ = 0;
+    private int nCIHLNFLAAF_;
     /**
      * <code>uint32 NCIHLNFLAAF = 10;</code>
      * @return The nCIHLNFLAAF.
@@ -132,7 +199,7 @@ public final class KPDGACKMNJAOuterClass {
     }
 
     public static final int PFNLKOMLOIO_FIELD_NUMBER = 4;
-    private float pFNLKOMLOIO_ = 0F;
+    private float pFNLKOMLOIO_;
     /**
      * <code>float PFNLKOMLOIO = 4;</code>
      * @return The pFNLKOMLOIO.
@@ -143,7 +210,7 @@ public final class KPDGACKMNJAOuterClass {
     }
 
     public static final int JLEGJBGOHHP_FIELD_NUMBER = 2;
-    private float jLEGJBGOHHP_ = 0F;
+    private float jLEGJBGOHHP_;
     /**
      * <code>float JLEGJBGOHHP = 2;</code>
      * @return The jLEGJBGOHHP.
@@ -154,7 +221,7 @@ public final class KPDGACKMNJAOuterClass {
     }
 
     public static final int LDDDDFHEMBA_FIELD_NUMBER = 3;
-    private int lDDDDFHEMBA_ = 0;
+    private int lDDDDFHEMBA_;
     /**
      * <code>uint32 LDDDDFHEMBA = 3;</code>
      * @return The lDDDDFHEMBA.
@@ -178,25 +245,25 @@ public final class KPDGACKMNJAOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (java.lang.Float.floatToRawIntBits(jLEGJBGOHHP_) != 0) {
+      if (jLEGJBGOHHP_ != 0F) {
         output.writeFloat(2, jLEGJBGOHHP_);
       }
       if (lDDDDFHEMBA_ != 0) {
         output.writeUInt32(3, lDDDDFHEMBA_);
       }
-      if (java.lang.Float.floatToRawIntBits(pFNLKOMLOIO_) != 0) {
+      if (pFNLKOMLOIO_ != 0F) {
         output.writeFloat(4, pFNLKOMLOIO_);
       }
-      if (java.lang.Float.floatToRawIntBits(aKLACKOIKOE_) != 0) {
+      if (aKLACKOIKOE_ != 0F) {
         output.writeFloat(7, aKLACKOIKOE_);
       }
       if (nCIHLNFLAAF_ != 0) {
         output.writeUInt32(10, nCIHLNFLAAF_);
       }
-      if (java.lang.Float.floatToRawIntBits(oGEJIAIJMDB_) != 0) {
+      if (oGEJIAIJMDB_ != 0F) {
         output.writeFloat(14, oGEJIAIJMDB_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -205,7 +272,7 @@ public final class KPDGACKMNJAOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (java.lang.Float.floatToRawIntBits(jLEGJBGOHHP_) != 0) {
+      if (jLEGJBGOHHP_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(2, jLEGJBGOHHP_);
       }
@@ -213,11 +280,11 @@ public final class KPDGACKMNJAOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(3, lDDDDFHEMBA_);
       }
-      if (java.lang.Float.floatToRawIntBits(pFNLKOMLOIO_) != 0) {
+      if (pFNLKOMLOIO_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(4, pFNLKOMLOIO_);
       }
-      if (java.lang.Float.floatToRawIntBits(aKLACKOIKOE_) != 0) {
+      if (aKLACKOIKOE_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(7, aKLACKOIKOE_);
       }
@@ -225,11 +292,11 @@ public final class KPDGACKMNJAOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(10, nCIHLNFLAAF_);
       }
-      if (java.lang.Float.floatToRawIntBits(oGEJIAIJMDB_) != 0) {
+      if (oGEJIAIJMDB_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(14, oGEJIAIJMDB_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -260,7 +327,7 @@ public final class KPDGACKMNJAOuterClass {
               other.getJLEGJBGOHHP())) return false;
       if (getLDDDDFHEMBA()
           != other.getLDDDDFHEMBA()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -287,7 +354,7 @@ public final class KPDGACKMNJAOuterClass {
           getJLEGJBGOHHP());
       hash = (37 * hash) + LDDDDFHEMBA_FIELD_NUMBER;
       hash = (53 * hash) + getLDDDDFHEMBA();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -408,24 +475,34 @@ public final class KPDGACKMNJAOuterClass {
 
       // Construct using emu.grasscutter.net.proto.KPDGACKMNJAOuterClass.KPDGACKMNJA.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         oGEJIAIJMDB_ = 0F;
+
         aKLACKOIKOE_ = 0F;
+
         nCIHLNFLAAF_ = 0;
+
         pFNLKOMLOIO_ = 0F;
+
         jLEGJBGOHHP_ = 0F;
+
         lDDDDFHEMBA_ = 0;
+
         return this;
       }
 
@@ -452,31 +529,14 @@ public final class KPDGACKMNJAOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.KPDGACKMNJAOuterClass.KPDGACKMNJA buildPartial() {
         emu.grasscutter.net.proto.KPDGACKMNJAOuterClass.KPDGACKMNJA result = new emu.grasscutter.net.proto.KPDGACKMNJAOuterClass.KPDGACKMNJA(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.oGEJIAIJMDB_ = oGEJIAIJMDB_;
+        result.aKLACKOIKOE_ = aKLACKOIKOE_;
+        result.nCIHLNFLAAF_ = nCIHLNFLAAF_;
+        result.pFNLKOMLOIO_ = pFNLKOMLOIO_;
+        result.jLEGJBGOHHP_ = jLEGJBGOHHP_;
+        result.lDDDDFHEMBA_ = lDDDDFHEMBA_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.KPDGACKMNJAOuterClass.KPDGACKMNJA result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.oGEJIAIJMDB_ = oGEJIAIJMDB_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.aKLACKOIKOE_ = aKLACKOIKOE_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.nCIHLNFLAAF_ = nCIHLNFLAAF_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.pFNLKOMLOIO_ = pFNLKOMLOIO_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.jLEGJBGOHHP_ = jLEGJBGOHHP_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.lDDDDFHEMBA_ = lDDDDFHEMBA_;
-        }
       }
 
       @java.lang.Override
@@ -541,7 +601,7 @@ public final class KPDGACKMNJAOuterClass {
         if (other.getLDDDDFHEMBA() != 0) {
           setLDDDDFHEMBA(other.getLDDDDFHEMBA());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -556,63 +616,19 @@ public final class KPDGACKMNJAOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.KPDGACKMNJAOuterClass.KPDGACKMNJA parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 21: {
-                jLEGJBGOHHP_ = input.readFloat();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 21
-              case 24: {
-                lDDDDFHEMBA_ = input.readUInt32();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 24
-              case 37: {
-                pFNLKOMLOIO_ = input.readFloat();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 37
-              case 61: {
-                aKLACKOIKOE_ = input.readFloat();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 61
-              case 80: {
-                nCIHLNFLAAF_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 80
-              case 117: {
-                oGEJIAIJMDB_ = input.readFloat();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 117
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.KPDGACKMNJAOuterClass.KPDGACKMNJA) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private float oGEJIAIJMDB_ ;
       /**
@@ -631,7 +647,6 @@ public final class KPDGACKMNJAOuterClass {
       public Builder setOGEJIAIJMDB(float value) {
         
         oGEJIAIJMDB_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -640,7 +655,7 @@ public final class KPDGACKMNJAOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOGEJIAIJMDB() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         oGEJIAIJMDB_ = 0F;
         onChanged();
         return this;
@@ -663,7 +678,6 @@ public final class KPDGACKMNJAOuterClass {
       public Builder setAKLACKOIKOE(float value) {
         
         aKLACKOIKOE_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -672,7 +686,7 @@ public final class KPDGACKMNJAOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAKLACKOIKOE() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         aKLACKOIKOE_ = 0F;
         onChanged();
         return this;
@@ -695,7 +709,6 @@ public final class KPDGACKMNJAOuterClass {
       public Builder setNCIHLNFLAAF(int value) {
         
         nCIHLNFLAAF_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -704,7 +717,7 @@ public final class KPDGACKMNJAOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearNCIHLNFLAAF() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         nCIHLNFLAAF_ = 0;
         onChanged();
         return this;
@@ -727,7 +740,6 @@ public final class KPDGACKMNJAOuterClass {
       public Builder setPFNLKOMLOIO(float value) {
         
         pFNLKOMLOIO_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -736,7 +748,7 @@ public final class KPDGACKMNJAOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPFNLKOMLOIO() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         pFNLKOMLOIO_ = 0F;
         onChanged();
         return this;
@@ -759,7 +771,6 @@ public final class KPDGACKMNJAOuterClass {
       public Builder setJLEGJBGOHHP(float value) {
         
         jLEGJBGOHHP_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -768,7 +779,7 @@ public final class KPDGACKMNJAOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearJLEGJBGOHHP() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         jLEGJBGOHHP_ = 0F;
         onChanged();
         return this;
@@ -791,7 +802,6 @@ public final class KPDGACKMNJAOuterClass {
       public Builder setLDDDDFHEMBA(int value) {
         
         lDDDDFHEMBA_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -800,7 +810,7 @@ public final class KPDGACKMNJAOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLDDDDFHEMBA() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        
         lDDDDFHEMBA_ = 0;
         onChanged();
         return this;
@@ -838,18 +848,7 @@ public final class KPDGACKMNJAOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new KPDGACKMNJA(input, extensionRegistry);
       }
     };
 

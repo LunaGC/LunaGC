@@ -100,6 +100,96 @@ public final class DJBLPMPKGKOOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private DJBLPMPKGKO(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              lODADOGPBJB_ = input.readBool();
+              break;
+            }
+            case 32: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                fKLNECJNJIN_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              fKLNECJNJIN_.addInt(input.readInt32());
+              break;
+            }
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                fKLNECJNJIN_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                fKLNECJNJIN_.addInt(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 40: {
+
+              guid_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+
+              suiteId_ = input.readUInt32();
+              break;
+            }
+            case 122: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (spawnPos_ != null) {
+                subBuilder = spawnPos_.toBuilder();
+              }
+              spawnPos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(spawnPos_);
+                spawnPos_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          fKLNECJNJIN_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.DJBLPMPKGKOOuterClass.internal_static_DJBLPMPKGKO_descriptor;
@@ -136,11 +226,10 @@ public final class DJBLPMPKGKOOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSpawnPosOrBuilder() {
-      return spawnPos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : spawnPos_;
+      return getSpawnPos();
     }
 
     public static final int FKLNECJNJIN_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList fKLNECJNJIN_;
     /**
      * <code>repeated int32 FKLNECJNJIN = 4;</code>
@@ -169,7 +258,7 @@ public final class DJBLPMPKGKOOuterClass {
     private int fKLNECJNJINMemoizedSerializedSize = -1;
 
     public static final int GUID_FIELD_NUMBER = 5;
-    private int guid_ = 0;
+    private int guid_;
     /**
      * <code>uint32 guid = 5;</code>
      * @return The guid.
@@ -180,7 +269,7 @@ public final class DJBLPMPKGKOOuterClass {
     }
 
     public static final int SUITE_ID_FIELD_NUMBER = 6;
-    private int suiteId_ = 0;
+    private int suiteId_;
     /**
      * <code>uint32 suite_id = 6;</code>
      * @return The suiteId.
@@ -191,7 +280,7 @@ public final class DJBLPMPKGKOOuterClass {
     }
 
     public static final int LODADOGPBJB_FIELD_NUMBER = 1;
-    private boolean lODADOGPBJB_ = false;
+    private boolean lODADOGPBJB_;
     /**
      * <code>bool LODADOGPBJB = 1;</code>
      * @return The lODADOGPBJB.
@@ -235,7 +324,7 @@ public final class DJBLPMPKGKOOuterClass {
       if (spawnPos_ != null) {
         output.writeMessage(15, getSpawnPos());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -274,7 +363,7 @@ public final class DJBLPMPKGKOOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getSpawnPos());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -302,7 +391,7 @@ public final class DJBLPMPKGKOOuterClass {
           != other.getSuiteId()) return false;
       if (getLODADOGPBJB()
           != other.getLODADOGPBJB()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -328,7 +417,7 @@ public final class DJBLPMPKGKOOuterClass {
       hash = (37 * hash) + LODADOGPBJB_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getLODADOGPBJB());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -449,27 +538,36 @@ public final class DJBLPMPKGKOOuterClass {
 
       // Construct using emu.grasscutter.net.proto.DJBLPMPKGKOOuterClass.DJBLPMPKGKO.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        spawnPos_ = null;
-        if (spawnPosBuilder_ != null) {
-          spawnPosBuilder_.dispose();
+        if (spawnPosBuilder_ == null) {
+          spawnPos_ = null;
+        } else {
+          spawnPos_ = null;
           spawnPosBuilder_ = null;
         }
         fKLNECJNJIN_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         guid_ = 0;
+
         suiteId_ = 0;
+
         lODADOGPBJB_ = false;
+
         return this;
       }
 
@@ -496,36 +594,22 @@ public final class DJBLPMPKGKOOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.DJBLPMPKGKOOuterClass.DJBLPMPKGKO buildPartial() {
         emu.grasscutter.net.proto.DJBLPMPKGKOOuterClass.DJBLPMPKGKO result = new emu.grasscutter.net.proto.DJBLPMPKGKOOuterClass.DJBLPMPKGKO(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.DJBLPMPKGKOOuterClass.DJBLPMPKGKO result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        int from_bitField0_ = bitField0_;
+        if (spawnPosBuilder_ == null) {
+          result.spawnPos_ = spawnPos_;
+        } else {
+          result.spawnPos_ = spawnPosBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000001) != 0)) {
           fKLNECJNJIN_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.fKLNECJNJIN_ = fKLNECJNJIN_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.DJBLPMPKGKOOuterClass.DJBLPMPKGKO result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.spawnPos_ = spawnPosBuilder_ == null
-              ? spawnPos_
-              : spawnPosBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.guid_ = guid_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.suiteId_ = suiteId_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.lODADOGPBJB_ = lODADOGPBJB_;
-        }
+        result.guid_ = guid_;
+        result.suiteId_ = suiteId_;
+        result.lODADOGPBJB_ = lODADOGPBJB_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -578,7 +662,7 @@ public final class DJBLPMPKGKOOuterClass {
         if (!other.fKLNECJNJIN_.isEmpty()) {
           if (fKLNECJNJIN_.isEmpty()) {
             fKLNECJNJIN_ = other.fKLNECJNJIN_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureFKLNECJNJINIsMutable();
             fKLNECJNJIN_.addAll(other.fKLNECJNJIN_);
@@ -594,7 +678,7 @@ public final class DJBLPMPKGKOOuterClass {
         if (other.getLODADOGPBJB() != false) {
           setLODADOGPBJB(other.getLODADOGPBJB());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -609,68 +693,17 @@ public final class DJBLPMPKGKOOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.DJBLPMPKGKOOuterClass.DJBLPMPKGKO parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                lODADOGPBJB_ = input.readBool();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 8
-              case 32: {
-                int v = input.readInt32();
-                ensureFKLNECJNJINIsMutable();
-                fKLNECJNJIN_.addInt(v);
-                break;
-              } // case 32
-              case 34: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureFKLNECJNJINIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  fKLNECJNJIN_.addInt(input.readInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 34
-              case 40: {
-                guid_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 40
-              case 48: {
-                suiteId_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 48
-              case 122: {
-                input.readMessage(
-                    getSpawnPosFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.DJBLPMPKGKOOuterClass.DJBLPMPKGKO) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -683,7 +716,7 @@ public final class DJBLPMPKGKOOuterClass {
        * @return Whether the spawnPos field is set.
        */
       public boolean hasSpawnPos() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return spawnPosBuilder_ != null || spawnPos_ != null;
       }
       /**
        * <code>.Vector spawn_pos = 15;</code>
@@ -705,11 +738,11 @@ public final class DJBLPMPKGKOOuterClass {
             throw new NullPointerException();
           }
           spawnPos_ = value;
+          onChanged();
         } else {
           spawnPosBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -719,11 +752,11 @@ public final class DJBLPMPKGKOOuterClass {
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (spawnPosBuilder_ == null) {
           spawnPos_ = builderForValue.build();
+          onChanged();
         } else {
           spawnPosBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -731,38 +764,38 @@ public final class DJBLPMPKGKOOuterClass {
        */
       public Builder mergeSpawnPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (spawnPosBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            spawnPos_ != null &&
-            spawnPos_ != emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance()) {
-            getSpawnPosBuilder().mergeFrom(value);
+          if (spawnPos_ != null) {
+            spawnPos_ =
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(spawnPos_).mergeFrom(value).buildPartial();
           } else {
             spawnPos_ = value;
           }
+          onChanged();
         } else {
           spawnPosBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.Vector spawn_pos = 15;</code>
        */
       public Builder clearSpawnPos() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        spawnPos_ = null;
-        if (spawnPosBuilder_ != null) {
-          spawnPosBuilder_.dispose();
+        if (spawnPosBuilder_ == null) {
+          spawnPos_ = null;
+          onChanged();
+        } else {
+          spawnPos_ = null;
           spawnPosBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.Vector spawn_pos = 15;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getSpawnPosBuilder() {
-        bitField0_ |= 0x00000001;
+        
         onChanged();
         return getSpawnPosFieldBuilder().getBuilder();
       }
@@ -796,10 +829,10 @@ public final class DJBLPMPKGKOOuterClass {
 
       private com.google.protobuf.Internal.IntList fKLNECJNJIN_ = emptyIntList();
       private void ensureFKLNECJNJINIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           fKLNECJNJIN_ = mutableCopy(fKLNECJNJIN_);
-          bitField0_ |= 0x00000002;
-        }
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
        * <code>repeated int32 FKLNECJNJIN = 4;</code>
@@ -807,7 +840,7 @@ public final class DJBLPMPKGKOOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getFKLNECJNJINList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
+        return ((bitField0_ & 0x00000001) != 0) ?
                  java.util.Collections.unmodifiableList(fKLNECJNJIN_) : fKLNECJNJIN_;
       }
       /**
@@ -833,7 +866,6 @@ public final class DJBLPMPKGKOOuterClass {
        */
       public Builder setFKLNECJNJIN(
           int index, int value) {
-        
         ensureFKLNECJNJINIsMutable();
         fKLNECJNJIN_.setInt(index, value);
         onChanged();
@@ -845,7 +877,6 @@ public final class DJBLPMPKGKOOuterClass {
        * @return This builder for chaining.
        */
       public Builder addFKLNECJNJIN(int value) {
-        
         ensureFKLNECJNJINIsMutable();
         fKLNECJNJIN_.addInt(value);
         onChanged();
@@ -870,7 +901,7 @@ public final class DJBLPMPKGKOOuterClass {
        */
       public Builder clearFKLNECJNJIN() {
         fKLNECJNJIN_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -892,7 +923,6 @@ public final class DJBLPMPKGKOOuterClass {
       public Builder setGuid(int value) {
         
         guid_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -901,7 +931,7 @@ public final class DJBLPMPKGKOOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearGuid() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         guid_ = 0;
         onChanged();
         return this;
@@ -924,7 +954,6 @@ public final class DJBLPMPKGKOOuterClass {
       public Builder setSuiteId(int value) {
         
         suiteId_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -933,7 +962,7 @@ public final class DJBLPMPKGKOOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSuiteId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         suiteId_ = 0;
         onChanged();
         return this;
@@ -956,7 +985,6 @@ public final class DJBLPMPKGKOOuterClass {
       public Builder setLODADOGPBJB(boolean value) {
         
         lODADOGPBJB_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -965,7 +993,7 @@ public final class DJBLPMPKGKOOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLODADOGPBJB() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         lODADOGPBJB_ = false;
         onChanged();
         return this;
@@ -1003,18 +1031,7 @@ public final class DJBLPMPKGKOOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new DJBLPMPKGKO(input, extensionRegistry);
       }
     };
 

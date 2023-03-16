@@ -85,6 +85,73 @@ public final class ALAMJIMOCOPOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private ALAMJIMOCOP(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              fELIKNNDJDG_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+
+              openTime_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              isFinished_ = input.readBool();
+              break;
+            }
+            case 88: {
+
+              levelId_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              bHLDOAAKIGA_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ALAMJIMOCOPOuterClass.internal_static_ALAMJIMOCOP_descriptor;
@@ -99,7 +166,7 @@ public final class ALAMJIMOCOPOuterClass {
     }
 
     public static final int OPEN_TIME_FIELD_NUMBER = 6;
-    private int openTime_ = 0;
+    private int openTime_;
     /**
      * <code>uint32 open_time = 6;</code>
      * @return The openTime.
@@ -110,7 +177,7 @@ public final class ALAMJIMOCOPOuterClass {
     }
 
     public static final int IS_OPEN_FIELD_NUMBER = 2;
-    private boolean isOpen_ = false;
+    private boolean isOpen_;
     /**
      * <code>bool is_open = 2;</code>
      * @return The isOpen.
@@ -121,7 +188,7 @@ public final class ALAMJIMOCOPOuterClass {
     }
 
     public static final int BHLDOAAKIGA_FIELD_NUMBER = 13;
-    private int bHLDOAAKIGA_ = 0;
+    private int bHLDOAAKIGA_;
     /**
      * <code>uint32 BHLDOAAKIGA = 13;</code>
      * @return The bHLDOAAKIGA.
@@ -132,7 +199,7 @@ public final class ALAMJIMOCOPOuterClass {
     }
 
     public static final int IS_FINISHED_FIELD_NUMBER = 8;
-    private boolean isFinished_ = false;
+    private boolean isFinished_;
     /**
      * <code>bool is_finished = 8;</code>
      * @return The isFinished.
@@ -143,7 +210,7 @@ public final class ALAMJIMOCOPOuterClass {
     }
 
     public static final int FELIKNNDJDG_FIELD_NUMBER = 3;
-    private int fELIKNNDJDG_ = 0;
+    private int fELIKNNDJDG_;
     /**
      * <code>uint32 FELIKNNDJDG = 3;</code>
      * @return The fELIKNNDJDG.
@@ -154,7 +221,7 @@ public final class ALAMJIMOCOPOuterClass {
     }
 
     public static final int LEVEL_ID_FIELD_NUMBER = 11;
-    private int levelId_ = 0;
+    private int levelId_;
     /**
      * <code>uint32 level_id = 11;</code>
      * @return The levelId.
@@ -196,7 +263,7 @@ public final class ALAMJIMOCOPOuterClass {
       if (bHLDOAAKIGA_ != 0) {
         output.writeUInt32(13, bHLDOAAKIGA_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -229,7 +296,7 @@ public final class ALAMJIMOCOPOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, bHLDOAAKIGA_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -256,7 +323,7 @@ public final class ALAMJIMOCOPOuterClass {
           != other.getFELIKNNDJDG()) return false;
       if (getLevelId()
           != other.getLevelId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -281,7 +348,7 @@ public final class ALAMJIMOCOPOuterClass {
       hash = (53 * hash) + getFELIKNNDJDG();
       hash = (37 * hash) + LEVEL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getLevelId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -402,24 +469,34 @@ public final class ALAMJIMOCOPOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ALAMJIMOCOPOuterClass.ALAMJIMOCOP.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         openTime_ = 0;
+
         isOpen_ = false;
+
         bHLDOAAKIGA_ = 0;
+
         isFinished_ = false;
+
         fELIKNNDJDG_ = 0;
+
         levelId_ = 0;
+
         return this;
       }
 
@@ -446,31 +523,14 @@ public final class ALAMJIMOCOPOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ALAMJIMOCOPOuterClass.ALAMJIMOCOP buildPartial() {
         emu.grasscutter.net.proto.ALAMJIMOCOPOuterClass.ALAMJIMOCOP result = new emu.grasscutter.net.proto.ALAMJIMOCOPOuterClass.ALAMJIMOCOP(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.openTime_ = openTime_;
+        result.isOpen_ = isOpen_;
+        result.bHLDOAAKIGA_ = bHLDOAAKIGA_;
+        result.isFinished_ = isFinished_;
+        result.fELIKNNDJDG_ = fELIKNNDJDG_;
+        result.levelId_ = levelId_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.ALAMJIMOCOPOuterClass.ALAMJIMOCOP result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.openTime_ = openTime_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.isOpen_ = isOpen_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.bHLDOAAKIGA_ = bHLDOAAKIGA_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.isFinished_ = isFinished_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.fELIKNNDJDG_ = fELIKNNDJDG_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.levelId_ = levelId_;
-        }
       }
 
       @java.lang.Override
@@ -535,7 +595,7 @@ public final class ALAMJIMOCOPOuterClass {
         if (other.getLevelId() != 0) {
           setLevelId(other.getLevelId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -550,63 +610,19 @@ public final class ALAMJIMOCOPOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.ALAMJIMOCOPOuterClass.ALAMJIMOCOP parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                isOpen_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 24: {
-                fELIKNNDJDG_ = input.readUInt32();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 24
-              case 48: {
-                openTime_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 48
-              case 64: {
-                isFinished_ = input.readBool();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 64
-              case 88: {
-                levelId_ = input.readUInt32();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 88
-              case 104: {
-                bHLDOAAKIGA_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.ALAMJIMOCOPOuterClass.ALAMJIMOCOP) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private int openTime_ ;
       /**
@@ -625,7 +641,6 @@ public final class ALAMJIMOCOPOuterClass {
       public Builder setOpenTime(int value) {
         
         openTime_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -634,7 +649,7 @@ public final class ALAMJIMOCOPOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOpenTime() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         openTime_ = 0;
         onChanged();
         return this;
@@ -657,7 +672,6 @@ public final class ALAMJIMOCOPOuterClass {
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -666,7 +680,7 @@ public final class ALAMJIMOCOPOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         isOpen_ = false;
         onChanged();
         return this;
@@ -689,7 +703,6 @@ public final class ALAMJIMOCOPOuterClass {
       public Builder setBHLDOAAKIGA(int value) {
         
         bHLDOAAKIGA_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -698,7 +711,7 @@ public final class ALAMJIMOCOPOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBHLDOAAKIGA() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         bHLDOAAKIGA_ = 0;
         onChanged();
         return this;
@@ -721,7 +734,6 @@ public final class ALAMJIMOCOPOuterClass {
       public Builder setIsFinished(boolean value) {
         
         isFinished_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -730,7 +742,7 @@ public final class ALAMJIMOCOPOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsFinished() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         isFinished_ = false;
         onChanged();
         return this;
@@ -753,7 +765,6 @@ public final class ALAMJIMOCOPOuterClass {
       public Builder setFELIKNNDJDG(int value) {
         
         fELIKNNDJDG_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -762,7 +773,7 @@ public final class ALAMJIMOCOPOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFELIKNNDJDG() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         fELIKNNDJDG_ = 0;
         onChanged();
         return this;
@@ -785,7 +796,6 @@ public final class ALAMJIMOCOPOuterClass {
       public Builder setLevelId(int value) {
         
         levelId_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -794,7 +804,7 @@ public final class ALAMJIMOCOPOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLevelId() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        
         levelId_ = 0;
         onChanged();
         return this;
@@ -832,18 +842,7 @@ public final class ALAMJIMOCOPOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ALAMJIMOCOP(input, extensionRegistry);
       }
     };
 

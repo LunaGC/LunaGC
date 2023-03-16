@@ -63,6 +63,58 @@ public final class SumoInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private SumoInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+
+              killEliteMonsterNum_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+
+              score_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+
+              killNormalMonsterNum_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SumoInfoOuterClass.internal_static_SumoInfo_descriptor;
@@ -77,7 +129,7 @@ public final class SumoInfoOuterClass {
     }
 
     public static final int KILLELITEMONSTERNUM_FIELD_NUMBER = 3;
-    private int killEliteMonsterNum_ = 0;
+    private int killEliteMonsterNum_;
     /**
      * <code>uint32 killEliteMonsterNum = 3;</code>
      * @return The killEliteMonsterNum.
@@ -88,7 +140,7 @@ public final class SumoInfoOuterClass {
     }
 
     public static final int KILLNORMALMONSTERNUM_FIELD_NUMBER = 5;
-    private int killNormalMonsterNum_ = 0;
+    private int killNormalMonsterNum_;
     /**
      * <code>uint32 killNormalMonsterNum = 5;</code>
      * @return The killNormalMonsterNum.
@@ -99,7 +151,7 @@ public final class SumoInfoOuterClass {
     }
 
     public static final int SCORE_FIELD_NUMBER = 4;
-    private int score_ = 0;
+    private int score_;
     /**
      * <code>uint32 score = 4;</code>
      * @return The score.
@@ -132,7 +184,7 @@ public final class SumoInfoOuterClass {
       if (killNormalMonsterNum_ != 0) {
         output.writeUInt32(5, killNormalMonsterNum_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -153,7 +205,7 @@ public final class SumoInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(5, killNormalMonsterNum_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -174,7 +226,7 @@ public final class SumoInfoOuterClass {
           != other.getKillNormalMonsterNum()) return false;
       if (getScore()
           != other.getScore()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -191,7 +243,7 @@ public final class SumoInfoOuterClass {
       hash = (53 * hash) + getKillNormalMonsterNum();
       hash = (37 * hash) + SCORE_FIELD_NUMBER;
       hash = (53 * hash) + getScore();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -308,21 +360,28 @@ public final class SumoInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SumoInfoOuterClass.SumoInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         killEliteMonsterNum_ = 0;
+
         killNormalMonsterNum_ = 0;
+
         score_ = 0;
+
         return this;
       }
 
@@ -349,22 +408,11 @@ public final class SumoInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SumoInfoOuterClass.SumoInfo buildPartial() {
         emu.grasscutter.net.proto.SumoInfoOuterClass.SumoInfo result = new emu.grasscutter.net.proto.SumoInfoOuterClass.SumoInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.killEliteMonsterNum_ = killEliteMonsterNum_;
+        result.killNormalMonsterNum_ = killNormalMonsterNum_;
+        result.score_ = score_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.SumoInfoOuterClass.SumoInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.killEliteMonsterNum_ = killEliteMonsterNum_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.killNormalMonsterNum_ = killNormalMonsterNum_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.score_ = score_;
-        }
       }
 
       @java.lang.Override
@@ -420,7 +468,7 @@ public final class SumoInfoOuterClass {
         if (other.getScore() != 0) {
           setScore(other.getScore());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -435,48 +483,19 @@ public final class SumoInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SumoInfoOuterClass.SumoInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 24: {
-                killEliteMonsterNum_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 24
-              case 32: {
-                score_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 32
-              case 40: {
-                killNormalMonsterNum_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 40
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SumoInfoOuterClass.SumoInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private int killEliteMonsterNum_ ;
       /**
@@ -495,7 +514,6 @@ public final class SumoInfoOuterClass {
       public Builder setKillEliteMonsterNum(int value) {
         
         killEliteMonsterNum_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -504,7 +522,7 @@ public final class SumoInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearKillEliteMonsterNum() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         killEliteMonsterNum_ = 0;
         onChanged();
         return this;
@@ -527,7 +545,6 @@ public final class SumoInfoOuterClass {
       public Builder setKillNormalMonsterNum(int value) {
         
         killNormalMonsterNum_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -536,7 +553,7 @@ public final class SumoInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearKillNormalMonsterNum() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         killNormalMonsterNum_ = 0;
         onChanged();
         return this;
@@ -559,7 +576,6 @@ public final class SumoInfoOuterClass {
       public Builder setScore(int value) {
         
         score_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -568,7 +584,7 @@ public final class SumoInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearScore() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         score_ = 0;
         onChanged();
         return this;
@@ -606,18 +622,7 @@ public final class SumoInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SumoInfo(input, extensionRegistry);
       }
     };
 

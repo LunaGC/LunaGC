@@ -55,6 +55,10 @@ public final class FurnitureMakeDataOuterClass {
     int getMakeId();
   }
   /**
+   * <pre>
+   * Name: MIEFECKEOMK
+   * </pre>
+   *
    * Protobuf type {@code FurnitureMakeData}
    */
   public static final class FurnitureMakeData extends
@@ -438,6 +442,10 @@ public final class FurnitureMakeDataOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: MIEFECKEOMK
+     * </pre>
+     *
      * Protobuf type {@code FurnitureMakeData}
      */
     public static final class Builder extends

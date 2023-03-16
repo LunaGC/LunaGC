@@ -1,6 +1,5 @@
 package emu.grasscutter.server.packet.send;
 
-import emu.grasscutter.game.home.GameHome;
 import emu.grasscutter.game.home.HomeBlockItem;
 import emu.grasscutter.game.player.Player;
 import emu.grasscutter.net.packet.BasePacket;
@@ -24,9 +23,9 @@ public class PacketHomeMarkPointNotify extends BasePacket {
 			var homeScene = player.getHome().getHomeSceneItem(moduleId + 2000);
 
 			var markPointData = HomeMarkPointSceneDataOuterClass.HomeMarkPointSceneData.newBuilder()
-					.setModuleId(moduleId)
-					.setSceneId(moduleId + 2000)
-					.setTeapotSpiritPos(homeScene.getDjinnPos().toProto());
+                .setModuleId(moduleId)
+                .setSceneId(moduleId + 2000)
+                .setTeapotSpiritPos(homeScene.getDjinnPos().toProto());
 
 			// Now it only supports the teleport point
 			// TODO add more types

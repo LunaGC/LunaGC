@@ -122,6 +122,114 @@ public final class PotionStageDataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private PotionStageData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                nJEEPCAOMNI_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              nJEEPCAOMNI_.addInt(input.readUInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                nJEEPCAOMNI_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                nJEEPCAOMNI_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 48: {
+
+              stageId_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                eNEFLMCICBB_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              eNEFLMCICBB_.addInt(input.readUInt32());
+              break;
+            }
+            case 66: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                eNEFLMCICBB_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                eNEFLMCICBB_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                levelList_ = new java.util.ArrayList<emu.grasscutter.net.proto.PotionLevelDataOuterClass.PotionLevelData>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              levelList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.PotionLevelDataOuterClass.PotionLevelData.parser(), extensionRegistry));
+              break;
+            }
+            case 88: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          nJEEPCAOMNI_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          eNEFLMCICBB_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          levelList_ = java.util.Collections.unmodifiableList(levelList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.PotionStageDataOuterClass.internal_static_PotionStageData_descriptor;
@@ -136,7 +244,7 @@ public final class PotionStageDataOuterClass {
     }
 
     public static final int IS_OPEN_FIELD_NUMBER = 11;
-    private boolean isOpen_ = false;
+    private boolean isOpen_;
     /**
      * <code>bool is_open = 11;</code>
      * @return The isOpen.
@@ -147,7 +255,6 @@ public final class PotionStageDataOuterClass {
     }
 
     public static final int ENEFLMCICBB_FIELD_NUMBER = 8;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList eNEFLMCICBB_;
     /**
      * <code>repeated uint32 ENEFLMCICBB = 8;</code>
@@ -176,7 +283,6 @@ public final class PotionStageDataOuterClass {
     private int eNEFLMCICBBMemoizedSerializedSize = -1;
 
     public static final int LEVEL_LIST_FIELD_NUMBER = 10;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.PotionLevelDataOuterClass.PotionLevelData> levelList_;
     /**
      * <code>repeated .PotionLevelData level_list = 10;</code>
@@ -217,7 +323,7 @@ public final class PotionStageDataOuterClass {
     }
 
     public static final int STAGE_ID_FIELD_NUMBER = 6;
-    private int stageId_ = 0;
+    private int stageId_;
     /**
      * <code>uint32 stage_id = 6;</code>
      * @return The stageId.
@@ -228,7 +334,6 @@ public final class PotionStageDataOuterClass {
     }
 
     public static final int NJEEPCAOMNI_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList nJEEPCAOMNI_;
     /**
      * <code>repeated uint32 NJEEPCAOMNI = 1;</code>
@@ -294,7 +399,7 @@ public final class PotionStageDataOuterClass {
       if (isOpen_ != false) {
         output.writeBool(11, isOpen_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -343,7 +448,7 @@ public final class PotionStageDataOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(11, isOpen_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -368,7 +473,7 @@ public final class PotionStageDataOuterClass {
           != other.getStageId()) return false;
       if (!getNJEEPCAOMNIList()
           .equals(other.getNJEEPCAOMNIList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -396,7 +501,7 @@ public final class PotionStageDataOuterClass {
         hash = (37 * hash) + NJEEPCAOMNI_FIELD_NUMBER;
         hash = (53 * hash) + getNJEEPCAOMNIList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -517,29 +622,37 @@ public final class PotionStageDataOuterClass {
 
       // Construct using emu.grasscutter.net.proto.PotionStageDataOuterClass.PotionStageData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLevelListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         isOpen_ = false;
+
         eNEFLMCICBB_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (levelListBuilder_ == null) {
           levelList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          levelList_ = null;
           levelListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
         stageId_ = 0;
+
         nJEEPCAOMNI_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -566,42 +679,30 @@ public final class PotionStageDataOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.PotionStageDataOuterClass.PotionStageData buildPartial() {
         emu.grasscutter.net.proto.PotionStageDataOuterClass.PotionStageData result = new emu.grasscutter.net.proto.PotionStageDataOuterClass.PotionStageData(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.PotionStageDataOuterClass.PotionStageData result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        int from_bitField0_ = bitField0_;
+        result.isOpen_ = isOpen_;
+        if (((bitField0_ & 0x00000001) != 0)) {
           eNEFLMCICBB_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.eNEFLMCICBB_ = eNEFLMCICBB_;
         if (levelListBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             levelList_ = java.util.Collections.unmodifiableList(levelList_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.levelList_ = levelList_;
         } else {
           result.levelList_ = levelListBuilder_.build();
         }
-        if (((bitField0_ & 0x00000010) != 0)) {
+        result.stageId_ = stageId_;
+        if (((bitField0_ & 0x00000004) != 0)) {
           nJEEPCAOMNI_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.nJEEPCAOMNI_ = nJEEPCAOMNI_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.PotionStageDataOuterClass.PotionStageData result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isOpen_ = isOpen_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.stageId_ = stageId_;
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -654,7 +755,7 @@ public final class PotionStageDataOuterClass {
         if (!other.eNEFLMCICBB_.isEmpty()) {
           if (eNEFLMCICBB_.isEmpty()) {
             eNEFLMCICBB_ = other.eNEFLMCICBB_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureENEFLMCICBBIsMutable();
             eNEFLMCICBB_.addAll(other.eNEFLMCICBB_);
@@ -665,7 +766,7 @@ public final class PotionStageDataOuterClass {
           if (!other.levelList_.isEmpty()) {
             if (levelList_.isEmpty()) {
               levelList_ = other.levelList_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureLevelListIsMutable();
               levelList_.addAll(other.levelList_);
@@ -678,7 +779,7 @@ public final class PotionStageDataOuterClass {
               levelListBuilder_.dispose();
               levelListBuilder_ = null;
               levelList_ = other.levelList_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
               levelListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLevelListFieldBuilder() : null;
@@ -693,14 +794,14 @@ public final class PotionStageDataOuterClass {
         if (!other.nJEEPCAOMNI_.isEmpty()) {
           if (nJEEPCAOMNI_.isEmpty()) {
             nJEEPCAOMNI_ = other.nJEEPCAOMNI_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureNJEEPCAOMNIIsMutable();
             nJEEPCAOMNI_.addAll(other.nJEEPCAOMNI_);
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -715,85 +816,17 @@ public final class PotionStageDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.PotionStageDataOuterClass.PotionStageData parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                int v = input.readUInt32();
-                ensureNJEEPCAOMNIIsMutable();
-                nJEEPCAOMNI_.addInt(v);
-                break;
-              } // case 8
-              case 10: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureNJEEPCAOMNIIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  nJEEPCAOMNI_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10
-              case 48: {
-                stageId_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 48
-              case 64: {
-                int v = input.readUInt32();
-                ensureENEFLMCICBBIsMutable();
-                eNEFLMCICBB_.addInt(v);
-                break;
-              } // case 64
-              case 66: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureENEFLMCICBBIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  eNEFLMCICBB_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 66
-              case 82: {
-                emu.grasscutter.net.proto.PotionLevelDataOuterClass.PotionLevelData m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.PotionLevelDataOuterClass.PotionLevelData.parser(),
-                        extensionRegistry);
-                if (levelListBuilder_ == null) {
-                  ensureLevelListIsMutable();
-                  levelList_.add(m);
-                } else {
-                  levelListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 82
-              case 88: {
-                isOpen_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 88
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.PotionStageDataOuterClass.PotionStageData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -815,7 +848,6 @@ public final class PotionStageDataOuterClass {
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -824,7 +856,7 @@ public final class PotionStageDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         isOpen_ = false;
         onChanged();
         return this;
@@ -832,10 +864,10 @@ public final class PotionStageDataOuterClass {
 
       private com.google.protobuf.Internal.IntList eNEFLMCICBB_ = emptyIntList();
       private void ensureENEFLMCICBBIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           eNEFLMCICBB_ = mutableCopy(eNEFLMCICBB_);
-          bitField0_ |= 0x00000002;
-        }
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
        * <code>repeated uint32 ENEFLMCICBB = 8;</code>
@@ -843,7 +875,7 @@ public final class PotionStageDataOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getENEFLMCICBBList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
+        return ((bitField0_ & 0x00000001) != 0) ?
                  java.util.Collections.unmodifiableList(eNEFLMCICBB_) : eNEFLMCICBB_;
       }
       /**
@@ -869,7 +901,6 @@ public final class PotionStageDataOuterClass {
        */
       public Builder setENEFLMCICBB(
           int index, int value) {
-        
         ensureENEFLMCICBBIsMutable();
         eNEFLMCICBB_.setInt(index, value);
         onChanged();
@@ -881,7 +912,6 @@ public final class PotionStageDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder addENEFLMCICBB(int value) {
-        
         ensureENEFLMCICBBIsMutable();
         eNEFLMCICBB_.addInt(value);
         onChanged();
@@ -906,7 +936,7 @@ public final class PotionStageDataOuterClass {
        */
       public Builder clearENEFLMCICBB() {
         eNEFLMCICBB_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -914,9 +944,9 @@ public final class PotionStageDataOuterClass {
       private java.util.List<emu.grasscutter.net.proto.PotionLevelDataOuterClass.PotionLevelData> levelList_ =
         java.util.Collections.emptyList();
       private void ensureLevelListIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           levelList_ = new java.util.ArrayList<emu.grasscutter.net.proto.PotionLevelDataOuterClass.PotionLevelData>(levelList_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -1066,7 +1096,7 @@ public final class PotionStageDataOuterClass {
       public Builder clearLevelList() {
         if (levelListBuilder_ == null) {
           levelList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           levelListBuilder_.clear();
@@ -1143,7 +1173,7 @@ public final class PotionStageDataOuterClass {
           levelListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.PotionLevelDataOuterClass.PotionLevelData, emu.grasscutter.net.proto.PotionLevelDataOuterClass.PotionLevelData.Builder, emu.grasscutter.net.proto.PotionLevelDataOuterClass.PotionLevelDataOrBuilder>(
                   levelList_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           levelList_ = null;
@@ -1168,7 +1198,6 @@ public final class PotionStageDataOuterClass {
       public Builder setStageId(int value) {
         
         stageId_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1177,7 +1206,7 @@ public final class PotionStageDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStageId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         stageId_ = 0;
         onChanged();
         return this;
@@ -1185,10 +1214,10 @@ public final class PotionStageDataOuterClass {
 
       private com.google.protobuf.Internal.IntList nJEEPCAOMNI_ = emptyIntList();
       private void ensureNJEEPCAOMNIIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           nJEEPCAOMNI_ = mutableCopy(nJEEPCAOMNI_);
-          bitField0_ |= 0x00000010;
-        }
+          bitField0_ |= 0x00000004;
+         }
       }
       /**
        * <code>repeated uint32 NJEEPCAOMNI = 1;</code>
@@ -1196,7 +1225,7 @@ public final class PotionStageDataOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getNJEEPCAOMNIList() {
-        return ((bitField0_ & 0x00000010) != 0) ?
+        return ((bitField0_ & 0x00000004) != 0) ?
                  java.util.Collections.unmodifiableList(nJEEPCAOMNI_) : nJEEPCAOMNI_;
       }
       /**
@@ -1222,7 +1251,6 @@ public final class PotionStageDataOuterClass {
        */
       public Builder setNJEEPCAOMNI(
           int index, int value) {
-        
         ensureNJEEPCAOMNIIsMutable();
         nJEEPCAOMNI_.setInt(index, value);
         onChanged();
@@ -1234,7 +1262,6 @@ public final class PotionStageDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder addNJEEPCAOMNI(int value) {
-        
         ensureNJEEPCAOMNIIsMutable();
         nJEEPCAOMNI_.addInt(value);
         onChanged();
@@ -1259,7 +1286,7 @@ public final class PotionStageDataOuterClass {
        */
       public Builder clearNJEEPCAOMNI() {
         nJEEPCAOMNI_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1296,18 +1323,7 @@ public final class PotionStageDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new PotionStageData(input, extensionRegistry);
       }
     };
 

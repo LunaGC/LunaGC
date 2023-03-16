@@ -97,6 +97,93 @@ public final class CMILIIPNCIEOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private CMILIIPNCIE(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              openTime_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            case 32: {
+
+              isFirstPassRewardTaken_ = input.readBool();
+              break;
+            }
+            case 40: {
+
+              dungeonIndex_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+
+              score_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                pGFJHIDMAPG_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              pGFJHIDMAPG_.addInt(input.readUInt32());
+              break;
+            }
+            case 122: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                pGFJHIDMAPG_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                pGFJHIDMAPG_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          pGFJHIDMAPG_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CMILIIPNCIEOuterClass.internal_static_CMILIIPNCIE_descriptor;
@@ -111,7 +198,7 @@ public final class CMILIIPNCIEOuterClass {
     }
 
     public static final int SCORE_FIELD_NUMBER = 6;
-    private int score_ = 0;
+    private int score_;
     /**
      * <code>uint32 score = 6;</code>
      * @return The score.
@@ -122,7 +209,7 @@ public final class CMILIIPNCIEOuterClass {
     }
 
     public static final int OPEN_TIME_FIELD_NUMBER = 1;
-    private int openTime_ = 0;
+    private int openTime_;
     /**
      * <code>uint32 open_time = 1;</code>
      * @return The openTime.
@@ -133,7 +220,7 @@ public final class CMILIIPNCIEOuterClass {
     }
 
     public static final int DUNGEON_INDEX_FIELD_NUMBER = 5;
-    private int dungeonIndex_ = 0;
+    private int dungeonIndex_;
     /**
      * <code>uint32 dungeon_index = 5;</code>
      * @return The dungeonIndex.
@@ -144,7 +231,7 @@ public final class CMILIIPNCIEOuterClass {
     }
 
     public static final int IS_OPEN_FIELD_NUMBER = 2;
-    private boolean isOpen_ = false;
+    private boolean isOpen_;
     /**
      * <code>bool is_open = 2;</code>
      * @return The isOpen.
@@ -155,7 +242,6 @@ public final class CMILIIPNCIEOuterClass {
     }
 
     public static final int PGFJHIDMAPG_FIELD_NUMBER = 15;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList pGFJHIDMAPG_;
     /**
      * <code>repeated uint32 PGFJHIDMAPG = 15;</code>
@@ -184,7 +270,7 @@ public final class CMILIIPNCIEOuterClass {
     private int pGFJHIDMAPGMemoizedSerializedSize = -1;
 
     public static final int IS_FIRST_PASS_REWARD_TAKEN_FIELD_NUMBER = 4;
-    private boolean isFirstPassRewardTaken_ = false;
+    private boolean isFirstPassRewardTaken_;
     /**
      * <code>bool is_first_pass_reward_taken = 4;</code>
      * @return The isFirstPassRewardTaken.
@@ -231,7 +317,7 @@ public final class CMILIIPNCIEOuterClass {
       for (int i = 0; i < pGFJHIDMAPG_.size(); i++) {
         output.writeUInt32NoTag(pGFJHIDMAPG_.getInt(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -274,7 +360,7 @@ public final class CMILIIPNCIEOuterClass {
         }
         pGFJHIDMAPGMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -301,7 +387,7 @@ public final class CMILIIPNCIEOuterClass {
           .equals(other.getPGFJHIDMAPGList())) return false;
       if (getIsFirstPassRewardTaken()
           != other.getIsFirstPassRewardTaken()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -328,7 +414,7 @@ public final class CMILIIPNCIEOuterClass {
       hash = (37 * hash) + IS_FIRST_PASS_REWARD_TAKEN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsFirstPassRewardTaken());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -449,24 +535,34 @@ public final class CMILIIPNCIEOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CMILIIPNCIEOuterClass.CMILIIPNCIE.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         score_ = 0;
+
         openTime_ = 0;
+
         dungeonIndex_ = 0;
+
         isOpen_ = false;
+
         pGFJHIDMAPG_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         isFirstPassRewardTaken_ = false;
+
         return this;
       }
 
@@ -493,37 +589,19 @@ public final class CMILIIPNCIEOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.CMILIIPNCIEOuterClass.CMILIIPNCIE buildPartial() {
         emu.grasscutter.net.proto.CMILIIPNCIEOuterClass.CMILIIPNCIE result = new emu.grasscutter.net.proto.CMILIIPNCIEOuterClass.CMILIIPNCIE(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.CMILIIPNCIEOuterClass.CMILIIPNCIE result) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        int from_bitField0_ = bitField0_;
+        result.score_ = score_;
+        result.openTime_ = openTime_;
+        result.dungeonIndex_ = dungeonIndex_;
+        result.isOpen_ = isOpen_;
+        if (((bitField0_ & 0x00000001) != 0)) {
           pGFJHIDMAPG_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.pGFJHIDMAPG_ = pGFJHIDMAPG_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.CMILIIPNCIEOuterClass.CMILIIPNCIE result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.score_ = score_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.openTime_ = openTime_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.dungeonIndex_ = dungeonIndex_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.isOpen_ = isOpen_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.isFirstPassRewardTaken_ = isFirstPassRewardTaken_;
-        }
+        result.isFirstPassRewardTaken_ = isFirstPassRewardTaken_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -585,7 +663,7 @@ public final class CMILIIPNCIEOuterClass {
         if (!other.pGFJHIDMAPG_.isEmpty()) {
           if (pGFJHIDMAPG_.isEmpty()) {
             pGFJHIDMAPG_ = other.pGFJHIDMAPG_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensurePGFJHIDMAPGIsMutable();
             pGFJHIDMAPG_.addAll(other.pGFJHIDMAPG_);
@@ -595,7 +673,7 @@ public final class CMILIIPNCIEOuterClass {
         if (other.getIsFirstPassRewardTaken() != false) {
           setIsFirstPassRewardTaken(other.getIsFirstPassRewardTaken());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -610,71 +688,17 @@ public final class CMILIIPNCIEOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.CMILIIPNCIEOuterClass.CMILIIPNCIE parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                openTime_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 8
-              case 16: {
-                isOpen_ = input.readBool();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 16
-              case 32: {
-                isFirstPassRewardTaken_ = input.readBool();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 32
-              case 40: {
-                dungeonIndex_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 40
-              case 48: {
-                score_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 48
-              case 120: {
-                int v = input.readUInt32();
-                ensurePGFJHIDMAPGIsMutable();
-                pGFJHIDMAPG_.addInt(v);
-                break;
-              } // case 120
-              case 122: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensurePGFJHIDMAPGIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  pGFJHIDMAPG_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.CMILIIPNCIEOuterClass.CMILIIPNCIE) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -696,7 +720,6 @@ public final class CMILIIPNCIEOuterClass {
       public Builder setScore(int value) {
         
         score_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -705,7 +728,7 @@ public final class CMILIIPNCIEOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearScore() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         score_ = 0;
         onChanged();
         return this;
@@ -728,7 +751,6 @@ public final class CMILIIPNCIEOuterClass {
       public Builder setOpenTime(int value) {
         
         openTime_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -737,7 +759,7 @@ public final class CMILIIPNCIEOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOpenTime() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         openTime_ = 0;
         onChanged();
         return this;
@@ -760,7 +782,6 @@ public final class CMILIIPNCIEOuterClass {
       public Builder setDungeonIndex(int value) {
         
         dungeonIndex_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -769,7 +790,7 @@ public final class CMILIIPNCIEOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDungeonIndex() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         dungeonIndex_ = 0;
         onChanged();
         return this;
@@ -792,7 +813,6 @@ public final class CMILIIPNCIEOuterClass {
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -801,7 +821,7 @@ public final class CMILIIPNCIEOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         isOpen_ = false;
         onChanged();
         return this;
@@ -809,10 +829,10 @@ public final class CMILIIPNCIEOuterClass {
 
       private com.google.protobuf.Internal.IntList pGFJHIDMAPG_ = emptyIntList();
       private void ensurePGFJHIDMAPGIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           pGFJHIDMAPG_ = mutableCopy(pGFJHIDMAPG_);
-          bitField0_ |= 0x00000010;
-        }
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
        * <code>repeated uint32 PGFJHIDMAPG = 15;</code>
@@ -820,7 +840,7 @@ public final class CMILIIPNCIEOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getPGFJHIDMAPGList() {
-        return ((bitField0_ & 0x00000010) != 0) ?
+        return ((bitField0_ & 0x00000001) != 0) ?
                  java.util.Collections.unmodifiableList(pGFJHIDMAPG_) : pGFJHIDMAPG_;
       }
       /**
@@ -846,7 +866,6 @@ public final class CMILIIPNCIEOuterClass {
        */
       public Builder setPGFJHIDMAPG(
           int index, int value) {
-        
         ensurePGFJHIDMAPGIsMutable();
         pGFJHIDMAPG_.setInt(index, value);
         onChanged();
@@ -858,7 +877,6 @@ public final class CMILIIPNCIEOuterClass {
        * @return This builder for chaining.
        */
       public Builder addPGFJHIDMAPG(int value) {
-        
         ensurePGFJHIDMAPGIsMutable();
         pGFJHIDMAPG_.addInt(value);
         onChanged();
@@ -883,7 +901,7 @@ public final class CMILIIPNCIEOuterClass {
        */
       public Builder clearPGFJHIDMAPG() {
         pGFJHIDMAPG_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -905,7 +923,6 @@ public final class CMILIIPNCIEOuterClass {
       public Builder setIsFirstPassRewardTaken(boolean value) {
         
         isFirstPassRewardTaken_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -914,7 +931,7 @@ public final class CMILIIPNCIEOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsFirstPassRewardTaken() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        
         isFirstPassRewardTaken_ = false;
         onChanged();
         return this;
@@ -952,18 +969,7 @@ public final class CMILIIPNCIEOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new CMILIIPNCIE(input, extensionRegistry);
       }
     };
 

@@ -86,6 +86,66 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private TanukiTravelActivityDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              finishedLevelIndex_ = input.readUInt32();
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                tanukiTravelLevelDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.TanukiTravelLevelDataOuterClass.TanukiTravelLevelData>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              tanukiTravelLevelDataList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.TanukiTravelLevelDataOuterClass.TanukiTravelLevelData.parser(), extensionRegistry));
+              break;
+            }
+            case 96: {
+
+              isContentClosed_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          tanukiTravelLevelDataList_ = java.util.Collections.unmodifiableList(tanukiTravelLevelDataList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TanukiTravelActivityDetailInfoOuterClass.internal_static_TanukiTravelActivityDetailInfo_descriptor;
@@ -100,7 +160,7 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
     }
 
     public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 12;
-    private boolean isContentClosed_ = false;
+    private boolean isContentClosed_;
     /**
      * <code>bool is_content_closed = 12;</code>
      * @return The isContentClosed.
@@ -111,7 +171,6 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
     }
 
     public static final int TANUKI_TRAVEL_LEVEL_DATA_LIST_FIELD_NUMBER = 6;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.TanukiTravelLevelDataOuterClass.TanukiTravelLevelData> tanukiTravelLevelDataList_;
     /**
      * <code>repeated .TanukiTravelLevelData tanuki_travel_level_data_list = 6;</code>
@@ -152,7 +211,7 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
     }
 
     public static final int FINISHED_LEVEL_INDEX_FIELD_NUMBER = 1;
-    private int finishedLevelIndex_ = 0;
+    private int finishedLevelIndex_;
     /**
      * <code>uint32 finished_level_index = 1;</code>
      * @return The finishedLevelIndex.
@@ -185,7 +244,7 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
       if (isContentClosed_ != false) {
         output.writeBool(12, isContentClosed_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -206,7 +265,7 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, isContentClosed_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -227,7 +286,7 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
           .equals(other.getTanukiTravelLevelDataListList())) return false;
       if (getFinishedLevelIndex()
           != other.getFinishedLevelIndex()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -247,7 +306,7 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
       }
       hash = (37 * hash) + FINISHED_LEVEL_INDEX_FIELD_NUMBER;
       hash = (53 * hash) + getFinishedLevelIndex();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -368,27 +427,33 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TanukiTravelActivityDetailInfoOuterClass.TanukiTravelActivityDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTanukiTravelLevelDataListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         isContentClosed_ = false;
+
         if (tanukiTravelLevelDataListBuilder_ == null) {
           tanukiTravelLevelDataList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          tanukiTravelLevelDataList_ = null;
           tanukiTravelLevelDataListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         finishedLevelIndex_ = 0;
+
         return this;
       }
 
@@ -415,32 +480,20 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.TanukiTravelActivityDetailInfoOuterClass.TanukiTravelActivityDetailInfo buildPartial() {
         emu.grasscutter.net.proto.TanukiTravelActivityDetailInfoOuterClass.TanukiTravelActivityDetailInfo result = new emu.grasscutter.net.proto.TanukiTravelActivityDetailInfoOuterClass.TanukiTravelActivityDetailInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.TanukiTravelActivityDetailInfoOuterClass.TanukiTravelActivityDetailInfo result) {
+        int from_bitField0_ = bitField0_;
+        result.isContentClosed_ = isContentClosed_;
         if (tanukiTravelLevelDataListBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             tanukiTravelLevelDataList_ = java.util.Collections.unmodifiableList(tanukiTravelLevelDataList_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.tanukiTravelLevelDataList_ = tanukiTravelLevelDataList_;
         } else {
           result.tanukiTravelLevelDataList_ = tanukiTravelLevelDataListBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.TanukiTravelActivityDetailInfoOuterClass.TanukiTravelActivityDetailInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isContentClosed_ = isContentClosed_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.finishedLevelIndex_ = finishedLevelIndex_;
-        }
+        result.finishedLevelIndex_ = finishedLevelIndex_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -494,7 +547,7 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
           if (!other.tanukiTravelLevelDataList_.isEmpty()) {
             if (tanukiTravelLevelDataList_.isEmpty()) {
               tanukiTravelLevelDataList_ = other.tanukiTravelLevelDataList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureTanukiTravelLevelDataListIsMutable();
               tanukiTravelLevelDataList_.addAll(other.tanukiTravelLevelDataList_);
@@ -507,7 +560,7 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
               tanukiTravelLevelDataListBuilder_.dispose();
               tanukiTravelLevelDataListBuilder_ = null;
               tanukiTravelLevelDataList_ = other.tanukiTravelLevelDataList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               tanukiTravelLevelDataListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getTanukiTravelLevelDataListFieldBuilder() : null;
@@ -519,7 +572,7 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
         if (other.getFinishedLevelIndex() != 0) {
           setFinishedLevelIndex(other.getFinishedLevelIndex());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -534,53 +587,17 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.TanukiTravelActivityDetailInfoOuterClass.TanukiTravelActivityDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                finishedLevelIndex_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 8
-              case 50: {
-                emu.grasscutter.net.proto.TanukiTravelLevelDataOuterClass.TanukiTravelLevelData m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.TanukiTravelLevelDataOuterClass.TanukiTravelLevelData.parser(),
-                        extensionRegistry);
-                if (tanukiTravelLevelDataListBuilder_ == null) {
-                  ensureTanukiTravelLevelDataListIsMutable();
-                  tanukiTravelLevelDataList_.add(m);
-                } else {
-                  tanukiTravelLevelDataListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 50
-              case 96: {
-                isContentClosed_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 96
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.TanukiTravelActivityDetailInfoOuterClass.TanukiTravelActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -602,7 +619,6 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
       public Builder setIsContentClosed(boolean value) {
         
         isContentClosed_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -611,7 +627,7 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsContentClosed() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         isContentClosed_ = false;
         onChanged();
         return this;
@@ -620,9 +636,9 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
       private java.util.List<emu.grasscutter.net.proto.TanukiTravelLevelDataOuterClass.TanukiTravelLevelData> tanukiTravelLevelDataList_ =
         java.util.Collections.emptyList();
       private void ensureTanukiTravelLevelDataListIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           tanukiTravelLevelDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.TanukiTravelLevelDataOuterClass.TanukiTravelLevelData>(tanukiTravelLevelDataList_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -772,7 +788,7 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
       public Builder clearTanukiTravelLevelDataList() {
         if (tanukiTravelLevelDataListBuilder_ == null) {
           tanukiTravelLevelDataList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           tanukiTravelLevelDataListBuilder_.clear();
@@ -849,7 +865,7 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
           tanukiTravelLevelDataListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.TanukiTravelLevelDataOuterClass.TanukiTravelLevelData, emu.grasscutter.net.proto.TanukiTravelLevelDataOuterClass.TanukiTravelLevelData.Builder, emu.grasscutter.net.proto.TanukiTravelLevelDataOuterClass.TanukiTravelLevelDataOrBuilder>(
                   tanukiTravelLevelDataList_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           tanukiTravelLevelDataList_ = null;
@@ -874,7 +890,6 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
       public Builder setFinishedLevelIndex(int value) {
         
         finishedLevelIndex_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -883,7 +898,7 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFinishedLevelIndex() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         finishedLevelIndex_ = 0;
         onChanged();
         return this;
@@ -921,18 +936,7 @@ public final class TanukiTravelActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new TanukiTravelActivityDetailInfo(input, extensionRegistry);
       }
     };
 

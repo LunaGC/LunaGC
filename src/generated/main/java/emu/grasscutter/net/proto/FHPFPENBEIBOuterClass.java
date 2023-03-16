@@ -80,6 +80,61 @@ public final class FHPFPENBEIBOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private FHPFPENBEIB(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 40: {
+
+              gHMGBHANDLN_ = input.readBool();
+              break;
+            }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                stageInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AGFJDCJANKAOuterClass.AGFJDCJANKA>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              stageInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.AGFJDCJANKAOuterClass.AGFJDCJANKA.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          stageInfoList_ = java.util.Collections.unmodifiableList(stageInfoList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FHPFPENBEIBOuterClass.internal_static_FHPFPENBEIB_descriptor;
@@ -94,7 +149,7 @@ public final class FHPFPENBEIBOuterClass {
     }
 
     public static final int GHMGBHANDLN_FIELD_NUMBER = 5;
-    private boolean gHMGBHANDLN_ = false;
+    private boolean gHMGBHANDLN_;
     /**
      * <code>bool GHMGBHANDLN = 5;</code>
      * @return The gHMGBHANDLN.
@@ -105,7 +160,6 @@ public final class FHPFPENBEIBOuterClass {
     }
 
     public static final int STAGE_INFO_LIST_FIELD_NUMBER = 12;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.AGFJDCJANKAOuterClass.AGFJDCJANKA> stageInfoList_;
     /**
      * <code>repeated .AGFJDCJANKA stage_info_list = 12;</code>
@@ -165,7 +219,7 @@ public final class FHPFPENBEIBOuterClass {
       for (int i = 0; i < stageInfoList_.size(); i++) {
         output.writeMessage(12, stageInfoList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -182,7 +236,7 @@ public final class FHPFPENBEIBOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, stageInfoList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -201,7 +255,7 @@ public final class FHPFPENBEIBOuterClass {
           != other.getGHMGBHANDLN()) return false;
       if (!getStageInfoListList()
           .equals(other.getStageInfoListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -219,7 +273,7 @@ public final class FHPFPENBEIBOuterClass {
         hash = (37 * hash) + STAGE_INFO_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getStageInfoListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -340,26 +394,31 @@ public final class FHPFPENBEIBOuterClass {
 
       // Construct using emu.grasscutter.net.proto.FHPFPENBEIBOuterClass.FHPFPENBEIB.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStageInfoListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         gHMGBHANDLN_ = false;
+
         if (stageInfoListBuilder_ == null) {
           stageInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          stageInfoList_ = null;
           stageInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -386,29 +445,19 @@ public final class FHPFPENBEIBOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.FHPFPENBEIBOuterClass.FHPFPENBEIB buildPartial() {
         emu.grasscutter.net.proto.FHPFPENBEIBOuterClass.FHPFPENBEIB result = new emu.grasscutter.net.proto.FHPFPENBEIBOuterClass.FHPFPENBEIB(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.FHPFPENBEIBOuterClass.FHPFPENBEIB result) {
+        int from_bitField0_ = bitField0_;
+        result.gHMGBHANDLN_ = gHMGBHANDLN_;
         if (stageInfoListBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             stageInfoList_ = java.util.Collections.unmodifiableList(stageInfoList_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.stageInfoList_ = stageInfoList_;
         } else {
           result.stageInfoList_ = stageInfoListBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.FHPFPENBEIBOuterClass.FHPFPENBEIB result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.gHMGBHANDLN_ = gHMGBHANDLN_;
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -462,7 +511,7 @@ public final class FHPFPENBEIBOuterClass {
           if (!other.stageInfoList_.isEmpty()) {
             if (stageInfoList_.isEmpty()) {
               stageInfoList_ = other.stageInfoList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureStageInfoListIsMutable();
               stageInfoList_.addAll(other.stageInfoList_);
@@ -475,7 +524,7 @@ public final class FHPFPENBEIBOuterClass {
               stageInfoListBuilder_.dispose();
               stageInfoListBuilder_ = null;
               stageInfoList_ = other.stageInfoList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               stageInfoListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getStageInfoListFieldBuilder() : null;
@@ -484,7 +533,7 @@ public final class FHPFPENBEIBOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -499,48 +548,17 @@ public final class FHPFPENBEIBOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.FHPFPENBEIBOuterClass.FHPFPENBEIB parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 40: {
-                gHMGBHANDLN_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 40
-              case 98: {
-                emu.grasscutter.net.proto.AGFJDCJANKAOuterClass.AGFJDCJANKA m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.AGFJDCJANKAOuterClass.AGFJDCJANKA.parser(),
-                        extensionRegistry);
-                if (stageInfoListBuilder_ == null) {
-                  ensureStageInfoListIsMutable();
-                  stageInfoList_.add(m);
-                } else {
-                  stageInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 98
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.FHPFPENBEIBOuterClass.FHPFPENBEIB) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -562,7 +580,6 @@ public final class FHPFPENBEIBOuterClass {
       public Builder setGHMGBHANDLN(boolean value) {
         
         gHMGBHANDLN_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -571,7 +588,7 @@ public final class FHPFPENBEIBOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearGHMGBHANDLN() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         gHMGBHANDLN_ = false;
         onChanged();
         return this;
@@ -580,9 +597,9 @@ public final class FHPFPENBEIBOuterClass {
       private java.util.List<emu.grasscutter.net.proto.AGFJDCJANKAOuterClass.AGFJDCJANKA> stageInfoList_ =
         java.util.Collections.emptyList();
       private void ensureStageInfoListIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           stageInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AGFJDCJANKAOuterClass.AGFJDCJANKA>(stageInfoList_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -732,7 +749,7 @@ public final class FHPFPENBEIBOuterClass {
       public Builder clearStageInfoList() {
         if (stageInfoListBuilder_ == null) {
           stageInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           stageInfoListBuilder_.clear();
@@ -809,7 +826,7 @@ public final class FHPFPENBEIBOuterClass {
           stageInfoListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.AGFJDCJANKAOuterClass.AGFJDCJANKA, emu.grasscutter.net.proto.AGFJDCJANKAOuterClass.AGFJDCJANKA.Builder, emu.grasscutter.net.proto.AGFJDCJANKAOuterClass.AGFJDCJANKAOrBuilder>(
                   stageInfoList_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           stageInfoList_ = null;
@@ -849,18 +866,7 @@ public final class FHPFPENBEIBOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new FHPFPENBEIB(input, extensionRegistry);
       }
     };
 

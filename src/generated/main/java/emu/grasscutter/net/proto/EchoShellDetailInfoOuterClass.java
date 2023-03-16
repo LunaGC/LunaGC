@@ -128,6 +128,128 @@ public final class EchoShellDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private EchoShellDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                dDBJAKPEPLC_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              dDBJAKPEPLC_.addInt(input.readUInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                dDBJAKPEPLC_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                dDBJAKPEPLC_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 40: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                aPBIFCEBBOM_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              aPBIFCEBBOM_.addInt(input.readUInt32());
+              break;
+            }
+            case 42: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                aPBIFCEBBOM_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                aPBIFCEBBOM_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                summerTimeDungeonList_ = new java.util.ArrayList<emu.grasscutter.net.proto.SummerTimeDungeonInfoOuterClass.SummerTimeDungeonInfo>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              summerTimeDungeonList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.SummerTimeDungeonInfoOuterClass.SummerTimeDungeonInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 96: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                lMDEDBBNLIF_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              lMDEDBBNLIF_.addInt(input.readUInt32());
+              break;
+            }
+            case 98: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+                lMDEDBBNLIF_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                lMDEDBBNLIF_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          dDBJAKPEPLC_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          aPBIFCEBBOM_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          summerTimeDungeonList_ = java.util.Collections.unmodifiableList(summerTimeDungeonList_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          lMDEDBBNLIF_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.EchoShellDetailInfoOuterClass.internal_static_EchoShellDetailInfo_descriptor;
@@ -142,7 +264,6 @@ public final class EchoShellDetailInfoOuterClass {
     }
 
     public static final int APBIFCEBBOM_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList aPBIFCEBBOM_;
     /**
      * <code>repeated uint32 APBIFCEBBOM = 5;</code>
@@ -171,7 +292,6 @@ public final class EchoShellDetailInfoOuterClass {
     private int aPBIFCEBBOMMemoizedSerializedSize = -1;
 
     public static final int DDBJAKPEPLC_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList dDBJAKPEPLC_;
     /**
      * <code>repeated uint32 DDBJAKPEPLC = 2;</code>
@@ -200,7 +320,6 @@ public final class EchoShellDetailInfoOuterClass {
     private int dDBJAKPEPLCMemoizedSerializedSize = -1;
 
     public static final int SUMMER_TIME_DUNGEON_LIST_FIELD_NUMBER = 11;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.SummerTimeDungeonInfoOuterClass.SummerTimeDungeonInfo> summerTimeDungeonList_;
     /**
      * <code>repeated .SummerTimeDungeonInfo summer_time_dungeon_list = 11;</code>
@@ -241,7 +360,6 @@ public final class EchoShellDetailInfoOuterClass {
     }
 
     public static final int LMDEDBBNLIF_FIELD_NUMBER = 12;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList lMDEDBBNLIF_;
     /**
      * <code>repeated uint32 LMDEDBBNLIF = 12;</code>
@@ -308,7 +426,7 @@ public final class EchoShellDetailInfoOuterClass {
       for (int i = 0; i < lMDEDBBNLIF_.size(); i++) {
         output.writeUInt32NoTag(lMDEDBBNLIF_.getInt(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -363,7 +481,7 @@ public final class EchoShellDetailInfoOuterClass {
         }
         lMDEDBBNLIFMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -386,7 +504,7 @@ public final class EchoShellDetailInfoOuterClass {
           .equals(other.getSummerTimeDungeonListList())) return false;
       if (!getLMDEDBBNLIFList()
           .equals(other.getLMDEDBBNLIFList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -413,7 +531,7 @@ public final class EchoShellDetailInfoOuterClass {
         hash = (37 * hash) + LMDEDBBNLIF_FIELD_NUMBER;
         hash = (53 * hash) + getLMDEDBBNLIFList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -534,28 +652,35 @@ public final class EchoShellDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.EchoShellDetailInfoOuterClass.EchoShellDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSummerTimeDungeonListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         aPBIFCEBBOM_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         dDBJAKPEPLC_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (summerTimeDungeonListBuilder_ == null) {
           summerTimeDungeonList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
-          summerTimeDungeonList_ = null;
           summerTimeDungeonListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
         lMDEDBBNLIF_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -582,13 +707,7 @@ public final class EchoShellDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.EchoShellDetailInfoOuterClass.EchoShellDetailInfo buildPartial() {
         emu.grasscutter.net.proto.EchoShellDetailInfoOuterClass.EchoShellDetailInfo result = new emu.grasscutter.net.proto.EchoShellDetailInfoOuterClass.EchoShellDetailInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.EchoShellDetailInfoOuterClass.EchoShellDetailInfo result) {
+        int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
           aPBIFCEBBOM_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -613,10 +732,8 @@ public final class EchoShellDetailInfoOuterClass {
           bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.lMDEDBBNLIF_ = lMDEDBBNLIF_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.EchoShellDetailInfoOuterClass.EchoShellDetailInfo result) {
-        int from_bitField0_ = bitField0_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -719,7 +836,7 @@ public final class EchoShellDetailInfoOuterClass {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -734,91 +851,17 @@ public final class EchoShellDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.EchoShellDetailInfoOuterClass.EchoShellDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                int v = input.readUInt32();
-                ensureDDBJAKPEPLCIsMutable();
-                dDBJAKPEPLC_.addInt(v);
-                break;
-              } // case 16
-              case 18: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureDDBJAKPEPLCIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  dDBJAKPEPLC_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 18
-              case 40: {
-                int v = input.readUInt32();
-                ensureAPBIFCEBBOMIsMutable();
-                aPBIFCEBBOM_.addInt(v);
-                break;
-              } // case 40
-              case 42: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureAPBIFCEBBOMIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  aPBIFCEBBOM_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 42
-              case 90: {
-                emu.grasscutter.net.proto.SummerTimeDungeonInfoOuterClass.SummerTimeDungeonInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.SummerTimeDungeonInfoOuterClass.SummerTimeDungeonInfo.parser(),
-                        extensionRegistry);
-                if (summerTimeDungeonListBuilder_ == null) {
-                  ensureSummerTimeDungeonListIsMutable();
-                  summerTimeDungeonList_.add(m);
-                } else {
-                  summerTimeDungeonListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 90
-              case 96: {
-                int v = input.readUInt32();
-                ensureLMDEDBBNLIFIsMutable();
-                lMDEDBBNLIF_.addInt(v);
-                break;
-              } // case 96
-              case 98: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureLMDEDBBNLIFIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  lMDEDBBNLIF_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 98
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.EchoShellDetailInfoOuterClass.EchoShellDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -828,7 +871,7 @@ public final class EchoShellDetailInfoOuterClass {
         if (!((bitField0_ & 0x00000001) != 0)) {
           aPBIFCEBBOM_ = mutableCopy(aPBIFCEBBOM_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
       /**
        * <code>repeated uint32 APBIFCEBBOM = 5;</code>
@@ -862,7 +905,6 @@ public final class EchoShellDetailInfoOuterClass {
        */
       public Builder setAPBIFCEBBOM(
           int index, int value) {
-        
         ensureAPBIFCEBBOMIsMutable();
         aPBIFCEBBOM_.setInt(index, value);
         onChanged();
@@ -874,7 +916,6 @@ public final class EchoShellDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addAPBIFCEBBOM(int value) {
-        
         ensureAPBIFCEBBOMIsMutable();
         aPBIFCEBBOM_.addInt(value);
         onChanged();
@@ -909,7 +950,7 @@ public final class EchoShellDetailInfoOuterClass {
         if (!((bitField0_ & 0x00000002) != 0)) {
           dDBJAKPEPLC_ = mutableCopy(dDBJAKPEPLC_);
           bitField0_ |= 0x00000002;
-        }
+         }
       }
       /**
        * <code>repeated uint32 DDBJAKPEPLC = 2;</code>
@@ -943,7 +984,6 @@ public final class EchoShellDetailInfoOuterClass {
        */
       public Builder setDDBJAKPEPLC(
           int index, int value) {
-        
         ensureDDBJAKPEPLCIsMutable();
         dDBJAKPEPLC_.setInt(index, value);
         onChanged();
@@ -955,7 +995,6 @@ public final class EchoShellDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addDDBJAKPEPLC(int value) {
-        
         ensureDDBJAKPEPLCIsMutable();
         dDBJAKPEPLC_.addInt(value);
         onChanged();
@@ -1230,7 +1269,7 @@ public final class EchoShellDetailInfoOuterClass {
         if (!((bitField0_ & 0x00000008) != 0)) {
           lMDEDBBNLIF_ = mutableCopy(lMDEDBBNLIF_);
           bitField0_ |= 0x00000008;
-        }
+         }
       }
       /**
        * <code>repeated uint32 LMDEDBBNLIF = 12;</code>
@@ -1264,7 +1303,6 @@ public final class EchoShellDetailInfoOuterClass {
        */
       public Builder setLMDEDBBNLIF(
           int index, int value) {
-        
         ensureLMDEDBBNLIFIsMutable();
         lMDEDBBNLIF_.setInt(index, value);
         onChanged();
@@ -1276,7 +1314,6 @@ public final class EchoShellDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addLMDEDBBNLIF(int value) {
-        
         ensureLMDEDBBNLIFIsMutable();
         lMDEDBBNLIF_.addInt(value);
         onChanged();
@@ -1338,18 +1375,7 @@ public final class EchoShellDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new EchoShellDetailInfo(input, extensionRegistry);
       }
     };
 

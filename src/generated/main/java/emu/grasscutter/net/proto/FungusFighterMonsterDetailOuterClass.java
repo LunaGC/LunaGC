@@ -63,6 +63,58 @@ public final class FungusFighterMonsterDetailOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private FungusFighterMonsterDetail(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 77: {
+
+              curHpPercentage_ = input.readFloat();
+              break;
+            }
+            case 80: {
+
+              fungusId_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+
+              isAlive_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FungusFighterMonsterDetailOuterClass.internal_static_FungusFighterMonsterDetail_descriptor;
@@ -77,7 +129,7 @@ public final class FungusFighterMonsterDetailOuterClass {
     }
 
     public static final int CURHPPERCENTAGE_FIELD_NUMBER = 9;
-    private float curHpPercentage_ = 0F;
+    private float curHpPercentage_;
     /**
      * <code>float curHpPercentage = 9;</code>
      * @return The curHpPercentage.
@@ -88,7 +140,7 @@ public final class FungusFighterMonsterDetailOuterClass {
     }
 
     public static final int FUNGUSID_FIELD_NUMBER = 10;
-    private int fungusId_ = 0;
+    private int fungusId_;
     /**
      * <code>uint32 fungusId = 10;</code>
      * @return The fungusId.
@@ -99,7 +151,7 @@ public final class FungusFighterMonsterDetailOuterClass {
     }
 
     public static final int ISALIVE_FIELD_NUMBER = 12;
-    private boolean isAlive_ = false;
+    private boolean isAlive_;
     /**
      * <code>bool isAlive = 12;</code>
      * @return The isAlive.
@@ -123,7 +175,7 @@ public final class FungusFighterMonsterDetailOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (java.lang.Float.floatToRawIntBits(curHpPercentage_) != 0) {
+      if (curHpPercentage_ != 0F) {
         output.writeFloat(9, curHpPercentage_);
       }
       if (fungusId_ != 0) {
@@ -132,7 +184,7 @@ public final class FungusFighterMonsterDetailOuterClass {
       if (isAlive_ != false) {
         output.writeBool(12, isAlive_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -141,7 +193,7 @@ public final class FungusFighterMonsterDetailOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (java.lang.Float.floatToRawIntBits(curHpPercentage_) != 0) {
+      if (curHpPercentage_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(9, curHpPercentage_);
       }
@@ -153,7 +205,7 @@ public final class FungusFighterMonsterDetailOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, isAlive_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -175,7 +227,7 @@ public final class FungusFighterMonsterDetailOuterClass {
           != other.getFungusId()) return false;
       if (getIsAlive()
           != other.getIsAlive()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -194,7 +246,7 @@ public final class FungusFighterMonsterDetailOuterClass {
       hash = (37 * hash) + ISALIVE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsAlive());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -311,21 +363,28 @@ public final class FungusFighterMonsterDetailOuterClass {
 
       // Construct using emu.grasscutter.net.proto.FungusFighterMonsterDetailOuterClass.FungusFighterMonsterDetail.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         curHpPercentage_ = 0F;
+
         fungusId_ = 0;
+
         isAlive_ = false;
+
         return this;
       }
 
@@ -352,22 +411,11 @@ public final class FungusFighterMonsterDetailOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.FungusFighterMonsterDetailOuterClass.FungusFighterMonsterDetail buildPartial() {
         emu.grasscutter.net.proto.FungusFighterMonsterDetailOuterClass.FungusFighterMonsterDetail result = new emu.grasscutter.net.proto.FungusFighterMonsterDetailOuterClass.FungusFighterMonsterDetail(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.curHpPercentage_ = curHpPercentage_;
+        result.fungusId_ = fungusId_;
+        result.isAlive_ = isAlive_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.FungusFighterMonsterDetailOuterClass.FungusFighterMonsterDetail result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.curHpPercentage_ = curHpPercentage_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.fungusId_ = fungusId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.isAlive_ = isAlive_;
-        }
       }
 
       @java.lang.Override
@@ -423,7 +471,7 @@ public final class FungusFighterMonsterDetailOuterClass {
         if (other.getIsAlive() != false) {
           setIsAlive(other.getIsAlive());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -438,48 +486,19 @@ public final class FungusFighterMonsterDetailOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.FungusFighterMonsterDetailOuterClass.FungusFighterMonsterDetail parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 77: {
-                curHpPercentage_ = input.readFloat();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 77
-              case 80: {
-                fungusId_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 80
-              case 96: {
-                isAlive_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 96
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.FungusFighterMonsterDetailOuterClass.FungusFighterMonsterDetail) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private float curHpPercentage_ ;
       /**
@@ -498,7 +517,6 @@ public final class FungusFighterMonsterDetailOuterClass {
       public Builder setCurHpPercentage(float value) {
         
         curHpPercentage_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -507,7 +525,7 @@ public final class FungusFighterMonsterDetailOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCurHpPercentage() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         curHpPercentage_ = 0F;
         onChanged();
         return this;
@@ -530,7 +548,6 @@ public final class FungusFighterMonsterDetailOuterClass {
       public Builder setFungusId(int value) {
         
         fungusId_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -539,7 +556,7 @@ public final class FungusFighterMonsterDetailOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFungusId() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         fungusId_ = 0;
         onChanged();
         return this;
@@ -562,7 +579,6 @@ public final class FungusFighterMonsterDetailOuterClass {
       public Builder setIsAlive(boolean value) {
         
         isAlive_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -571,7 +587,7 @@ public final class FungusFighterMonsterDetailOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsAlive() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         isAlive_ = false;
         onChanged();
         return this;
@@ -609,18 +625,7 @@ public final class FungusFighterMonsterDetailOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new FungusFighterMonsterDetail(input, extensionRegistry);
       }
     };
 

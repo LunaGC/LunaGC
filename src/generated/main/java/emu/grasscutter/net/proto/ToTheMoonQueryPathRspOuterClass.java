@@ -19,11 +19,19 @@ public final class ToTheMoonQueryPathRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name: LENHOCLEKHC &gt; PathStatusType
+     * </pre>
+     *
      * <code>.PathStatusType query_status = 6;</code>
      * @return The enum numeric value on the wire for queryStatus.
      */
     int getQueryStatusValue();
     /**
+     * <pre>
+     * Name: LENHOCLEKHC &gt; PathStatusType
+     * </pre>
+     *
      * <code>.PathStatusType query_status = 6;</code>
      * @return The queryStatus.
      */
@@ -265,6 +273,10 @@ public final class ToTheMoonQueryPathRspOuterClass {
     public static final int QUERY_STATUS_FIELD_NUMBER = 6;
     private int queryStatus_;
     /**
+     * <pre>
+     * Name: LENHOCLEKHC &gt; PathStatusType
+     * </pre>
+     *
      * <code>.PathStatusType query_status = 6;</code>
      * @return The enum numeric value on the wire for queryStatus.
      */
@@ -272,6 +284,10 @@ public final class ToTheMoonQueryPathRspOuterClass {
       return queryStatus_;
     }
     /**
+     * <pre>
+     * Name: LENHOCLEKHC &gt; PathStatusType
+     * </pre>
+     *
      * <code>.PathStatusType query_status = 6;</code>
      * @return The queryStatus.
      */
@@ -887,6 +903,10 @@ public final class ToTheMoonQueryPathRspOuterClass {
 
       private int queryStatus_ = 0;
       /**
+       * <pre>
+       * Name: LENHOCLEKHC &gt; PathStatusType
+       * </pre>
+       *
        * <code>.PathStatusType query_status = 6;</code>
        * @return The enum numeric value on the wire for queryStatus.
        */
@@ -894,6 +914,10 @@ public final class ToTheMoonQueryPathRspOuterClass {
         return queryStatus_;
       }
       /**
+       * <pre>
+       * Name: LENHOCLEKHC &gt; PathStatusType
+       * </pre>
+       *
        * <code>.PathStatusType query_status = 6;</code>
        * @param value The enum numeric value on the wire for queryStatus to set.
        * @return This builder for chaining.
@@ -905,6 +929,10 @@ public final class ToTheMoonQueryPathRspOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name: LENHOCLEKHC &gt; PathStatusType
+       * </pre>
+       *
        * <code>.PathStatusType query_status = 6;</code>
        * @return The queryStatus.
        */
@@ -915,6 +943,10 @@ public final class ToTheMoonQueryPathRspOuterClass {
         return result == null ? emu.grasscutter.net.proto.PathStatusTypeOuterClass.PathStatusType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Name: LENHOCLEKHC &gt; PathStatusType
+       * </pre>
+       *
        * <code>.PathStatusType query_status = 6;</code>
        * @param value The queryStatus to set.
        * @return This builder for chaining.
@@ -929,6 +961,10 @@ public final class ToTheMoonQueryPathRspOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name: LENHOCLEKHC &gt; PathStatusType
+       * </pre>
+       *
        * <code>.PathStatusType query_status = 6;</code>
        * @return This builder for chaining.
        */

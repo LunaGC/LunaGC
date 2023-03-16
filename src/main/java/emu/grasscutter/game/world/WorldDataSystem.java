@@ -108,14 +108,14 @@ public class WorldDataSystem extends BaseGameSystem {
         var builder = InvestigationMonsterOuterClass.InvestigationMonster.newBuilder();
 
         builder.setId(imd.getId())
-                .setCityId(imd.getCityId())
-                .setSceneId(imd.getCityData().getSceneId())
-                .setGroupId(groupId)
-                .setMonsterId(monsterId)
-                .setLevel(getMonsterLevel(monster.get(), player.getWorld()))
-                .setIsAlive(true)
-                .setNextRefreshTime(Integer.MAX_VALUE)
-                .setRefreshInterval(Integer.MAX_VALUE)
+            .setCityId(imd.getCityId())
+            .setSceneId(imd.getCityData().getSceneId())
+            .setGroupId(groupId)
+            .setMonsterId(monsterId)
+            .setLevel(getMonsterLevel(monster.get(), player.getWorld()))
+            .setIsAlive(true)
+            .setNextRefreshTime(Integer.MAX_VALUE)
+            .setRefreshInterval(Integer.MAX_VALUE)
                 .setPos(monster.get().pos.toProto());
 
         if ("Boss".equals(imd.getMonsterCategory())) {

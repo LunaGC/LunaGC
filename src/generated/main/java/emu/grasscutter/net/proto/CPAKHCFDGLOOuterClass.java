@@ -109,6 +109,90 @@ public final class CPAKHCFDGLOOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private CPAKHCFDGLO(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+
+              hitBoxIndex_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (nFAFFENBFCH_ != null) {
+                subBuilder = nFAFFENBFCH_.toBuilder();
+              }
+              nFAFFENBFCH_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(nFAFFENBFCH_);
+                nFAFFENBFCH_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (cAHAHBKFCGF_ != null) {
+                subBuilder = cAHAHBKFCGF_.toBuilder();
+              }
+              cAHAHBKFCGF_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cAHAHBKFCGF_);
+                cAHAHBKFCGF_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 61: {
+
+              fCBNNPNJOHM_ = input.readFloat();
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+
+              hitColliderType_ = rawValue;
+              break;
+            }
+            case 77: {
+
+              lFNEGKFGIIE_ = input.readFloat();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CPAKHCFDGLOOuterClass.internal_static_CPAKHCFDGLO_descriptor;
@@ -123,7 +207,7 @@ public final class CPAKHCFDGLOOuterClass {
     }
 
     public static final int FCBNNPNJOHM_FIELD_NUMBER = 7;
-    private float fCBNNPNJOHM_ = 0F;
+    private float fCBNNPNJOHM_;
     /**
      * <code>float FCBNNPNJOHM = 7;</code>
      * @return The fCBNNPNJOHM.
@@ -156,11 +240,11 @@ public final class CPAKHCFDGLOOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getCAHAHBKFCGFOrBuilder() {
-      return cAHAHBKFCGF_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : cAHAHBKFCGF_;
+      return getCAHAHBKFCGF();
     }
 
     public static final int LFNEGKFGIIE_FIELD_NUMBER = 9;
-    private float lFNEGKFGIIE_ = 0F;
+    private float lFNEGKFGIIE_;
     /**
      * <code>float LFNEGKFGIIE = 9;</code>
      * @return The lFNEGKFGIIE.
@@ -171,7 +255,7 @@ public final class CPAKHCFDGLOOuterClass {
     }
 
     public static final int HIT_BOX_INDEX_FIELD_NUMBER = 2;
-    private int hitBoxIndex_ = 0;
+    private int hitBoxIndex_;
     /**
      * <code>int32 hit_box_index = 2;</code>
      * @return The hitBoxIndex.
@@ -204,11 +288,11 @@ public final class CPAKHCFDGLOOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getNFAFFENBFCHOrBuilder() {
-      return nFAFFENBFCH_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : nFAFFENBFCH_;
+      return getNFAFFENBFCH();
     }
 
     public static final int HIT_COLLIDER_TYPE_FIELD_NUMBER = 8;
-    private int hitColliderType_ = 0;
+    private int hitColliderType_;
     /**
      * <code>.HitColliderType hit_collider_type = 8;</code>
      * @return The enum numeric value on the wire for hitColliderType.
@@ -221,7 +305,8 @@ public final class CPAKHCFDGLOOuterClass {
      * @return The hitColliderType.
      */
     @java.lang.Override public emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType getHitColliderType() {
-      emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType result = emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType.forNumber(hitColliderType_);
+      @SuppressWarnings("deprecation")
+      emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType result = emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType.valueOf(hitColliderType_);
       return result == null ? emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType.UNRECOGNIZED : result;
     }
 
@@ -248,16 +333,16 @@ public final class CPAKHCFDGLOOuterClass {
       if (cAHAHBKFCGF_ != null) {
         output.writeMessage(5, getCAHAHBKFCGF());
       }
-      if (java.lang.Float.floatToRawIntBits(fCBNNPNJOHM_) != 0) {
+      if (fCBNNPNJOHM_ != 0F) {
         output.writeFloat(7, fCBNNPNJOHM_);
       }
       if (hitColliderType_ != emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType.HIT_COLLIDER_INVALID.getNumber()) {
         output.writeEnum(8, hitColliderType_);
       }
-      if (java.lang.Float.floatToRawIntBits(lFNEGKFGIIE_) != 0) {
+      if (lFNEGKFGIIE_ != 0F) {
         output.writeFloat(9, lFNEGKFGIIE_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -278,7 +363,7 @@ public final class CPAKHCFDGLOOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getCAHAHBKFCGF());
       }
-      if (java.lang.Float.floatToRawIntBits(fCBNNPNJOHM_) != 0) {
+      if (fCBNNPNJOHM_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(7, fCBNNPNJOHM_);
       }
@@ -286,11 +371,11 @@ public final class CPAKHCFDGLOOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, hitColliderType_);
       }
-      if (java.lang.Float.floatToRawIntBits(lFNEGKFGIIE_) != 0) {
+      if (lFNEGKFGIIE_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(9, lFNEGKFGIIE_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -324,7 +409,7 @@ public final class CPAKHCFDGLOOuterClass {
             .equals(other.getNFAFFENBFCH())) return false;
       }
       if (hitColliderType_ != other.hitColliderType_) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -353,7 +438,7 @@ public final class CPAKHCFDGLOOuterClass {
       }
       hash = (37 * hash) + HIT_COLLIDER_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + hitColliderType_;
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -474,32 +559,42 @@ public final class CPAKHCFDGLOOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CPAKHCFDGLOOuterClass.CPAKHCFDGLO.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         fCBNNPNJOHM_ = 0F;
-        cAHAHBKFCGF_ = null;
-        if (cAHAHBKFCGFBuilder_ != null) {
-          cAHAHBKFCGFBuilder_.dispose();
+
+        if (cAHAHBKFCGFBuilder_ == null) {
+          cAHAHBKFCGF_ = null;
+        } else {
+          cAHAHBKFCGF_ = null;
           cAHAHBKFCGFBuilder_ = null;
         }
         lFNEGKFGIIE_ = 0F;
+
         hitBoxIndex_ = 0;
-        nFAFFENBFCH_ = null;
-        if (nFAFFENBFCHBuilder_ != null) {
-          nFAFFENBFCHBuilder_.dispose();
+
+        if (nFAFFENBFCHBuilder_ == null) {
+          nFAFFENBFCH_ = null;
+        } else {
+          nFAFFENBFCH_ = null;
           nFAFFENBFCHBuilder_ = null;
         }
         hitColliderType_ = 0;
+
         return this;
       }
 
@@ -526,35 +621,22 @@ public final class CPAKHCFDGLOOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.CPAKHCFDGLOOuterClass.CPAKHCFDGLO buildPartial() {
         emu.grasscutter.net.proto.CPAKHCFDGLOOuterClass.CPAKHCFDGLO result = new emu.grasscutter.net.proto.CPAKHCFDGLOOuterClass.CPAKHCFDGLO(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.fCBNNPNJOHM_ = fCBNNPNJOHM_;
+        if (cAHAHBKFCGFBuilder_ == null) {
+          result.cAHAHBKFCGF_ = cAHAHBKFCGF_;
+        } else {
+          result.cAHAHBKFCGF_ = cAHAHBKFCGFBuilder_.build();
+        }
+        result.lFNEGKFGIIE_ = lFNEGKFGIIE_;
+        result.hitBoxIndex_ = hitBoxIndex_;
+        if (nFAFFENBFCHBuilder_ == null) {
+          result.nFAFFENBFCH_ = nFAFFENBFCH_;
+        } else {
+          result.nFAFFENBFCH_ = nFAFFENBFCHBuilder_.build();
+        }
+        result.hitColliderType_ = hitColliderType_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.CPAKHCFDGLOOuterClass.CPAKHCFDGLO result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.fCBNNPNJOHM_ = fCBNNPNJOHM_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.cAHAHBKFCGF_ = cAHAHBKFCGFBuilder_ == null
-              ? cAHAHBKFCGF_
-              : cAHAHBKFCGFBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.lFNEGKFGIIE_ = lFNEGKFGIIE_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.hitBoxIndex_ = hitBoxIndex_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.nFAFFENBFCH_ = nFAFFENBFCHBuilder_ == null
-              ? nFAFFENBFCH_
-              : nFAFFENBFCHBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.hitColliderType_ = hitColliderType_;
-        }
       }
 
       @java.lang.Override
@@ -619,7 +701,7 @@ public final class CPAKHCFDGLOOuterClass {
         if (other.hitColliderType_ != 0) {
           setHitColliderTypeValue(other.getHitColliderTypeValue());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -634,67 +716,19 @@ public final class CPAKHCFDGLOOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.CPAKHCFDGLOOuterClass.CPAKHCFDGLO parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                hitBoxIndex_ = input.readInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 16
-              case 34: {
-                input.readMessage(
-                    getNFAFFENBFCHFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 34
-              case 42: {
-                input.readMessage(
-                    getCAHAHBKFCGFFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 42
-              case 61: {
-                fCBNNPNJOHM_ = input.readFloat();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 61
-              case 64: {
-                hitColliderType_ = input.readEnum();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 64
-              case 77: {
-                lFNEGKFGIIE_ = input.readFloat();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 77
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.CPAKHCFDGLOOuterClass.CPAKHCFDGLO) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private float fCBNNPNJOHM_ ;
       /**
@@ -713,7 +747,6 @@ public final class CPAKHCFDGLOOuterClass {
       public Builder setFCBNNPNJOHM(float value) {
         
         fCBNNPNJOHM_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -722,7 +755,7 @@ public final class CPAKHCFDGLOOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFCBNNPNJOHM() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         fCBNNPNJOHM_ = 0F;
         onChanged();
         return this;
@@ -736,7 +769,7 @@ public final class CPAKHCFDGLOOuterClass {
        * @return Whether the cAHAHBKFCGF field is set.
        */
       public boolean hasCAHAHBKFCGF() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return cAHAHBKFCGFBuilder_ != null || cAHAHBKFCGF_ != null;
       }
       /**
        * <code>.Vector CAHAHBKFCGF = 5;</code>
@@ -758,11 +791,11 @@ public final class CPAKHCFDGLOOuterClass {
             throw new NullPointerException();
           }
           cAHAHBKFCGF_ = value;
+          onChanged();
         } else {
           cAHAHBKFCGFBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+
         return this;
       }
       /**
@@ -772,11 +805,11 @@ public final class CPAKHCFDGLOOuterClass {
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (cAHAHBKFCGFBuilder_ == null) {
           cAHAHBKFCGF_ = builderForValue.build();
+          onChanged();
         } else {
           cAHAHBKFCGFBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+
         return this;
       }
       /**
@@ -784,38 +817,38 @@ public final class CPAKHCFDGLOOuterClass {
        */
       public Builder mergeCAHAHBKFCGF(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (cAHAHBKFCGFBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            cAHAHBKFCGF_ != null &&
-            cAHAHBKFCGF_ != emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance()) {
-            getCAHAHBKFCGFBuilder().mergeFrom(value);
+          if (cAHAHBKFCGF_ != null) {
+            cAHAHBKFCGF_ =
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(cAHAHBKFCGF_).mergeFrom(value).buildPartial();
           } else {
             cAHAHBKFCGF_ = value;
           }
+          onChanged();
         } else {
           cAHAHBKFCGFBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.Vector CAHAHBKFCGF = 5;</code>
        */
       public Builder clearCAHAHBKFCGF() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        cAHAHBKFCGF_ = null;
-        if (cAHAHBKFCGFBuilder_ != null) {
-          cAHAHBKFCGFBuilder_.dispose();
+        if (cAHAHBKFCGFBuilder_ == null) {
+          cAHAHBKFCGF_ = null;
+          onChanged();
+        } else {
+          cAHAHBKFCGF_ = null;
           cAHAHBKFCGFBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.Vector CAHAHBKFCGF = 5;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getCAHAHBKFCGFBuilder() {
-        bitField0_ |= 0x00000002;
+        
         onChanged();
         return getCAHAHBKFCGFFieldBuilder().getBuilder();
       }
@@ -864,7 +897,6 @@ public final class CPAKHCFDGLOOuterClass {
       public Builder setLFNEGKFGIIE(float value) {
         
         lFNEGKFGIIE_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -873,7 +905,7 @@ public final class CPAKHCFDGLOOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLFNEGKFGIIE() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         lFNEGKFGIIE_ = 0F;
         onChanged();
         return this;
@@ -896,7 +928,6 @@ public final class CPAKHCFDGLOOuterClass {
       public Builder setHitBoxIndex(int value) {
         
         hitBoxIndex_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -905,7 +936,7 @@ public final class CPAKHCFDGLOOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearHitBoxIndex() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         hitBoxIndex_ = 0;
         onChanged();
         return this;
@@ -919,7 +950,7 @@ public final class CPAKHCFDGLOOuterClass {
        * @return Whether the nFAFFENBFCH field is set.
        */
       public boolean hasNFAFFENBFCH() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return nFAFFENBFCHBuilder_ != null || nFAFFENBFCH_ != null;
       }
       /**
        * <code>.Vector NFAFFENBFCH = 4;</code>
@@ -941,11 +972,11 @@ public final class CPAKHCFDGLOOuterClass {
             throw new NullPointerException();
           }
           nFAFFENBFCH_ = value;
+          onChanged();
         } else {
           nFAFFENBFCHBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+
         return this;
       }
       /**
@@ -955,11 +986,11 @@ public final class CPAKHCFDGLOOuterClass {
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (nFAFFENBFCHBuilder_ == null) {
           nFAFFENBFCH_ = builderForValue.build();
+          onChanged();
         } else {
           nFAFFENBFCHBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+
         return this;
       }
       /**
@@ -967,38 +998,38 @@ public final class CPAKHCFDGLOOuterClass {
        */
       public Builder mergeNFAFFENBFCH(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (nFAFFENBFCHBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0) &&
-            nFAFFENBFCH_ != null &&
-            nFAFFENBFCH_ != emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance()) {
-            getNFAFFENBFCHBuilder().mergeFrom(value);
+          if (nFAFFENBFCH_ != null) {
+            nFAFFENBFCH_ =
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(nFAFFENBFCH_).mergeFrom(value).buildPartial();
           } else {
             nFAFFENBFCH_ = value;
           }
+          onChanged();
         } else {
           nFAFFENBFCHBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.Vector NFAFFENBFCH = 4;</code>
        */
       public Builder clearNFAFFENBFCH() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        nFAFFENBFCH_ = null;
-        if (nFAFFENBFCHBuilder_ != null) {
-          nFAFFENBFCHBuilder_.dispose();
+        if (nFAFFENBFCHBuilder_ == null) {
+          nFAFFENBFCH_ = null;
+          onChanged();
+        } else {
+          nFAFFENBFCH_ = null;
           nFAFFENBFCHBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.Vector NFAFFENBFCH = 4;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getNFAFFENBFCHBuilder() {
-        bitField0_ |= 0x00000010;
+        
         onChanged();
         return getNFAFFENBFCHFieldBuilder().getBuilder();
       }
@@ -1044,8 +1075,8 @@ public final class CPAKHCFDGLOOuterClass {
        * @return This builder for chaining.
        */
       public Builder setHitColliderTypeValue(int value) {
+        
         hitColliderType_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1055,7 +1086,8 @@ public final class CPAKHCFDGLOOuterClass {
        */
       @java.lang.Override
       public emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType getHitColliderType() {
-        emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType result = emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType.forNumber(hitColliderType_);
+        @SuppressWarnings("deprecation")
+        emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType result = emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType.valueOf(hitColliderType_);
         return result == null ? emu.grasscutter.net.proto.HitColliderTypeOuterClass.HitColliderType.UNRECOGNIZED : result;
       }
       /**
@@ -1067,7 +1099,7 @@ public final class CPAKHCFDGLOOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000020;
+        
         hitColliderType_ = value.getNumber();
         onChanged();
         return this;
@@ -1077,7 +1109,7 @@ public final class CPAKHCFDGLOOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearHitColliderType() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        
         hitColliderType_ = 0;
         onChanged();
         return this;
@@ -1115,18 +1147,7 @@ public final class CPAKHCFDGLOOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new CPAKHCFDGLO(input, extensionRegistry);
       }
     };
 

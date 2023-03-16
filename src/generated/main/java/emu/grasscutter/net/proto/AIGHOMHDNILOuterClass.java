@@ -122,6 +122,106 @@ public final class AIGHOMHDNILOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private AIGHOMHDNIL(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL.Builder subBuilder = null;
+              if (mNGBLEJJNIB_ != null) {
+                subBuilder = mNGBLEJJNIB_.toBuilder();
+              }
+              mNGBLEJJNIB_ = input.readMessage(emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mNGBLEJJNIB_);
+                mNGBLEJJNIB_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 24: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                buffIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              buffIdList_.addInt(input.readUInt32());
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                buffIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                buffIdList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                assistInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ChannellerSlabAssistInfoOuterClass.ChannellerSlabAssistInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              assistInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ChannellerSlabAssistInfoOuterClass.ChannellerSlabAssistInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 114: {
+              emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL.Builder subBuilder = null;
+              if (bCKIOAIABPE_ != null) {
+                subBuilder = bCKIOAIABPE_.toBuilder();
+              }
+              bCKIOAIABPE_ = input.readMessage(emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(bCKIOAIABPE_);
+                bCKIOAIABPE_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          buffIdList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          assistInfoList_ = java.util.Collections.unmodifiableList(assistInfoList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.internal_static_AIGHOMHDNIL_descriptor;
@@ -136,7 +236,6 @@ public final class AIGHOMHDNILOuterClass {
     }
 
     public static final int ASSIST_INFO_LIST_FIELD_NUMBER = 13;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.ChannellerSlabAssistInfoOuterClass.ChannellerSlabAssistInfo> assistInfoList_;
     /**
      * <code>repeated .ChannellerSlabAssistInfo assist_info_list = 13;</code>
@@ -177,7 +276,6 @@ public final class AIGHOMHDNILOuterClass {
     }
 
     public static final int BUFF_ID_LIST_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList buffIdList_;
     /**
      * <code>repeated uint32 buff_id_list = 3;</code>
@@ -228,7 +326,7 @@ public final class AIGHOMHDNILOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBLOrBuilder getBCKIOAIABPEOrBuilder() {
-      return bCKIOAIABPE_ == null ? emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL.getDefaultInstance() : bCKIOAIABPE_;
+      return getBCKIOAIABPE();
     }
 
     public static final int MNGBLEJJNIB_FIELD_NUMBER = 2;
@@ -254,7 +352,7 @@ public final class AIGHOMHDNILOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBLOrBuilder getMNGBLEJJNIBOrBuilder() {
-      return mNGBLEJJNIB_ == null ? emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL.getDefaultInstance() : mNGBLEJJNIB_;
+      return getMNGBLEJJNIB();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -288,7 +386,7 @@ public final class AIGHOMHDNILOuterClass {
       if (bCKIOAIABPE_ != null) {
         output.writeMessage(14, getBCKIOAIABPE());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -323,7 +421,7 @@ public final class AIGHOMHDNILOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getBCKIOAIABPE());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -352,7 +450,7 @@ public final class AIGHOMHDNILOuterClass {
         if (!getMNGBLEJJNIB()
             .equals(other.getMNGBLEJJNIB())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -379,7 +477,7 @@ public final class AIGHOMHDNILOuterClass {
         hash = (37 * hash) + MNGBLEJJNIB_FIELD_NUMBER;
         hash = (53 * hash) + getMNGBLEJJNIB().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -500,34 +598,41 @@ public final class AIGHOMHDNILOuterClass {
 
       // Construct using emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAssistInfoListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         if (assistInfoListBuilder_ == null) {
           assistInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          assistInfoList_ = null;
           assistInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         buffIdList_ = emptyIntList();
-        bCKIOAIABPE_ = null;
-        if (bCKIOAIABPEBuilder_ != null) {
-          bCKIOAIABPEBuilder_.dispose();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (bCKIOAIABPEBuilder_ == null) {
+          bCKIOAIABPE_ = null;
+        } else {
+          bCKIOAIABPE_ = null;
           bCKIOAIABPEBuilder_ = null;
         }
-        mNGBLEJJNIB_ = null;
-        if (mNGBLEJJNIBBuilder_ != null) {
-          mNGBLEJJNIBBuilder_.dispose();
+        if (mNGBLEJJNIBBuilder_ == null) {
+          mNGBLEJJNIB_ = null;
+        } else {
+          mNGBLEJJNIB_ = null;
           mNGBLEJJNIBBuilder_ = null;
         }
         return this;
@@ -556,13 +661,7 @@ public final class AIGHOMHDNILOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL buildPartial() {
         emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL result = new emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL result) {
+        int from_bitField0_ = bitField0_;
         if (assistInfoListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             assistInfoList_ = java.util.Collections.unmodifiableList(assistInfoList_);
@@ -577,20 +676,18 @@ public final class AIGHOMHDNILOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.buffIdList_ = buffIdList_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.bCKIOAIABPE_ = bCKIOAIABPEBuilder_ == null
-              ? bCKIOAIABPE_
-              : bCKIOAIABPEBuilder_.build();
+        if (bCKIOAIABPEBuilder_ == null) {
+          result.bCKIOAIABPE_ = bCKIOAIABPE_;
+        } else {
+          result.bCKIOAIABPE_ = bCKIOAIABPEBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.mNGBLEJJNIB_ = mNGBLEJJNIBBuilder_ == null
-              ? mNGBLEJJNIB_
-              : mNGBLEJJNIBBuilder_.build();
+        if (mNGBLEJJNIBBuilder_ == null) {
+          result.mNGBLEJJNIB_ = mNGBLEJJNIB_;
+        } else {
+          result.mNGBLEJJNIB_ = mNGBLEJJNIBBuilder_.build();
         }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -679,7 +776,7 @@ public final class AIGHOMHDNILOuterClass {
         if (other.hasMNGBLEJJNIB()) {
           mergeMNGBLEJJNIB(other.getMNGBLEJJNIB());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -694,73 +791,17 @@ public final class AIGHOMHDNILOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 18: {
-                input.readMessage(
-                    getMNGBLEJJNIBFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 18
-              case 24: {
-                int v = input.readUInt32();
-                ensureBuffIdListIsMutable();
-                buffIdList_.addInt(v);
-                break;
-              } // case 24
-              case 26: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureBuffIdListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  buffIdList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 26
-              case 106: {
-                emu.grasscutter.net.proto.ChannellerSlabAssistInfoOuterClass.ChannellerSlabAssistInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ChannellerSlabAssistInfoOuterClass.ChannellerSlabAssistInfo.parser(),
-                        extensionRegistry);
-                if (assistInfoListBuilder_ == null) {
-                  ensureAssistInfoListIsMutable();
-                  assistInfoList_.add(m);
-                } else {
-                  assistInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 106
-              case 114: {
-                input.readMessage(
-                    getBCKIOAIABPEFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 114
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.AIGHOMHDNILOuterClass.AIGHOMHDNIL) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1010,7 +1051,7 @@ public final class AIGHOMHDNILOuterClass {
         if (!((bitField0_ & 0x00000002) != 0)) {
           buffIdList_ = mutableCopy(buffIdList_);
           bitField0_ |= 0x00000002;
-        }
+         }
       }
       /**
        * <code>repeated uint32 buff_id_list = 3;</code>
@@ -1044,7 +1085,6 @@ public final class AIGHOMHDNILOuterClass {
        */
       public Builder setBuffIdList(
           int index, int value) {
-        
         ensureBuffIdListIsMutable();
         buffIdList_.setInt(index, value);
         onChanged();
@@ -1056,7 +1096,6 @@ public final class AIGHOMHDNILOuterClass {
        * @return This builder for chaining.
        */
       public Builder addBuffIdList(int value) {
-        
         ensureBuffIdListIsMutable();
         buffIdList_.addInt(value);
         onChanged();
@@ -1094,7 +1133,7 @@ public final class AIGHOMHDNILOuterClass {
        * @return Whether the bCKIOAIABPE field is set.
        */
       public boolean hasBCKIOAIABPE() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return bCKIOAIABPEBuilder_ != null || bCKIOAIABPE_ != null;
       }
       /**
        * <code>.OHCIIIAJMBL BCKIOAIABPE = 14;</code>
@@ -1116,11 +1155,11 @@ public final class AIGHOMHDNILOuterClass {
             throw new NullPointerException();
           }
           bCKIOAIABPE_ = value;
+          onChanged();
         } else {
           bCKIOAIABPEBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -1130,11 +1169,11 @@ public final class AIGHOMHDNILOuterClass {
           emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL.Builder builderForValue) {
         if (bCKIOAIABPEBuilder_ == null) {
           bCKIOAIABPE_ = builderForValue.build();
+          onChanged();
         } else {
           bCKIOAIABPEBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -1142,38 +1181,38 @@ public final class AIGHOMHDNILOuterClass {
        */
       public Builder mergeBCKIOAIABPE(emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL value) {
         if (bCKIOAIABPEBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            bCKIOAIABPE_ != null &&
-            bCKIOAIABPE_ != emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL.getDefaultInstance()) {
-            getBCKIOAIABPEBuilder().mergeFrom(value);
+          if (bCKIOAIABPE_ != null) {
+            bCKIOAIABPE_ =
+              emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL.newBuilder(bCKIOAIABPE_).mergeFrom(value).buildPartial();
           } else {
             bCKIOAIABPE_ = value;
           }
+          onChanged();
         } else {
           bCKIOAIABPEBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.OHCIIIAJMBL BCKIOAIABPE = 14;</code>
        */
       public Builder clearBCKIOAIABPE() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        bCKIOAIABPE_ = null;
-        if (bCKIOAIABPEBuilder_ != null) {
-          bCKIOAIABPEBuilder_.dispose();
+        if (bCKIOAIABPEBuilder_ == null) {
+          bCKIOAIABPE_ = null;
+          onChanged();
+        } else {
+          bCKIOAIABPE_ = null;
           bCKIOAIABPEBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.OHCIIIAJMBL BCKIOAIABPE = 14;</code>
        */
       public emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL.Builder getBCKIOAIABPEBuilder() {
-        bitField0_ |= 0x00000004;
+        
         onChanged();
         return getBCKIOAIABPEFieldBuilder().getBuilder();
       }
@@ -1213,7 +1252,7 @@ public final class AIGHOMHDNILOuterClass {
        * @return Whether the mNGBLEJJNIB field is set.
        */
       public boolean hasMNGBLEJJNIB() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return mNGBLEJJNIBBuilder_ != null || mNGBLEJJNIB_ != null;
       }
       /**
        * <code>.OHCIIIAJMBL MNGBLEJJNIB = 2;</code>
@@ -1235,11 +1274,11 @@ public final class AIGHOMHDNILOuterClass {
             throw new NullPointerException();
           }
           mNGBLEJJNIB_ = value;
+          onChanged();
         } else {
           mNGBLEJJNIBBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+
         return this;
       }
       /**
@@ -1249,11 +1288,11 @@ public final class AIGHOMHDNILOuterClass {
           emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL.Builder builderForValue) {
         if (mNGBLEJJNIBBuilder_ == null) {
           mNGBLEJJNIB_ = builderForValue.build();
+          onChanged();
         } else {
           mNGBLEJJNIBBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+
         return this;
       }
       /**
@@ -1261,38 +1300,38 @@ public final class AIGHOMHDNILOuterClass {
        */
       public Builder mergeMNGBLEJJNIB(emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL value) {
         if (mNGBLEJJNIBBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
-            mNGBLEJJNIB_ != null &&
-            mNGBLEJJNIB_ != emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL.getDefaultInstance()) {
-            getMNGBLEJJNIBBuilder().mergeFrom(value);
+          if (mNGBLEJJNIB_ != null) {
+            mNGBLEJJNIB_ =
+              emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL.newBuilder(mNGBLEJJNIB_).mergeFrom(value).buildPartial();
           } else {
             mNGBLEJJNIB_ = value;
           }
+          onChanged();
         } else {
           mNGBLEJJNIBBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.OHCIIIAJMBL MNGBLEJJNIB = 2;</code>
        */
       public Builder clearMNGBLEJJNIB() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        mNGBLEJJNIB_ = null;
-        if (mNGBLEJJNIBBuilder_ != null) {
-          mNGBLEJJNIBBuilder_.dispose();
+        if (mNGBLEJJNIBBuilder_ == null) {
+          mNGBLEJJNIB_ = null;
+          onChanged();
+        } else {
+          mNGBLEJJNIB_ = null;
           mNGBLEJJNIBBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.OHCIIIAJMBL MNGBLEJJNIB = 2;</code>
        */
       public emu.grasscutter.net.proto.OHCIIIAJMBLOuterClass.OHCIIIAJMBL.Builder getMNGBLEJJNIBBuilder() {
-        bitField0_ |= 0x00000008;
+        
         onChanged();
         return getMNGBLEJJNIBFieldBuilder().getBuilder();
       }
@@ -1356,18 +1395,7 @@ public final class AIGHOMHDNILOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new AIGHOMHDNIL(input, extensionRegistry);
       }
     };
 

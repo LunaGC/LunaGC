@@ -17,11 +17,11 @@ public class PacketEntityFightPropChangeReasonNotify extends BasePacket {
         super(PacketOpcodes.EntityFightPropChangeReasonNotify);
 
         EntityFightPropChangeReasonNotify.Builder proto = EntityFightPropChangeReasonNotify.newBuilder()
-                .setEntityId(entity.getId())
-                .setPropType(prop.getId())
-                .setPropDelta(value)
-                .setReason(reason)
-                .setChangeHpReason(changeHpReason);
+            .setEntityId(entity.getId())
+            .setPropType(prop.getId())
+            .setPropDelta(value)
+            .setReason(reason)
+            .setChangeHpReason(changeHpReason);
 
         for(int p : param){
             proto.addParamList(p);
@@ -34,11 +34,11 @@ public class PacketEntityFightPropChangeReasonNotify extends BasePacket {
         super(PacketOpcodes.EntityFightPropChangeReasonNotify);
 
         EntityFightPropChangeReasonNotify proto = EntityFightPropChangeReasonNotify.newBuilder()
-                .setEntityId(entity.getId())
-                .setPropType(prop.getId())
-                .setPropDelta(value)
-                .setReason(reason)
-                .setChangeHpReason(changeHpReason)
+            .setEntityId(entity.getId())
+            .setPropType(prop.getId())
+            .setPropDelta(value)
+            .setReason(reason)
+            .setChangeHpReason(changeHpReason)
                 .build();
 
         this.setData(proto);
@@ -61,10 +61,10 @@ public class PacketEntityFightPropChangeReasonNotify extends BasePacket {
         super(PacketOpcodes.EntityFightPropChangeReasonNotify);
 
         EntityFightPropChangeReasonNotify proto = EntityFightPropChangeReasonNotify.newBuilder()
-                .setEntityId(entity.getId())
-                .setPropType(prop.getId())
-                .setPropDelta(value)
-                .setChangeEnergyReason(reason)
+            .setEntityId(entity.getId())
+            .setPropType(prop.getId())
+            .setPropDelta(value)
+            .setChangeEnergyReason(reason)
                 .build();
 
         this.setData(proto);

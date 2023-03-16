@@ -80,6 +80,61 @@ public final class ONGFFNHKKIAOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private ONGFFNHKKIA(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                lCBIEAMEBPF_ = new java.util.ArrayList<emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              lCBIEAMEBPF_.add(
+                  input.readMessage(emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI.parser(), extensionRegistry));
+              break;
+            }
+            case 104: {
+
+              levelId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          lCBIEAMEBPF_ = java.util.Collections.unmodifiableList(lCBIEAMEBPF_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.internal_static_ONGFFNHKKIA_descriptor;
@@ -94,7 +149,7 @@ public final class ONGFFNHKKIAOuterClass {
     }
 
     public static final int LEVEL_ID_FIELD_NUMBER = 13;
-    private int levelId_ = 0;
+    private int levelId_;
     /**
      * <code>uint32 level_id = 13;</code>
      * @return The levelId.
@@ -105,7 +160,6 @@ public final class ONGFFNHKKIAOuterClass {
     }
 
     public static final int LCBIEAMEBPF_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI> lCBIEAMEBPF_;
     /**
      * <code>repeated .JONHAPLJANI LCBIEAMEBPF = 4;</code>
@@ -165,7 +219,7 @@ public final class ONGFFNHKKIAOuterClass {
       if (levelId_ != 0) {
         output.writeUInt32(13, levelId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -182,7 +236,7 @@ public final class ONGFFNHKKIAOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, levelId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -201,7 +255,7 @@ public final class ONGFFNHKKIAOuterClass {
           != other.getLevelId()) return false;
       if (!getLCBIEAMEBPFList()
           .equals(other.getLCBIEAMEBPFList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -218,7 +272,7 @@ public final class ONGFFNHKKIAOuterClass {
         hash = (37 * hash) + LCBIEAMEBPF_FIELD_NUMBER;
         hash = (53 * hash) + getLCBIEAMEBPFList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -339,26 +393,31 @@ public final class ONGFFNHKKIAOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLCBIEAMEBPFFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         levelId_ = 0;
+
         if (lCBIEAMEBPFBuilder_ == null) {
           lCBIEAMEBPF_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          lCBIEAMEBPF_ = null;
           lCBIEAMEBPFBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -385,29 +444,19 @@ public final class ONGFFNHKKIAOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA buildPartial() {
         emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA result = new emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA result) {
+        int from_bitField0_ = bitField0_;
+        result.levelId_ = levelId_;
         if (lCBIEAMEBPFBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             lCBIEAMEBPF_ = java.util.Collections.unmodifiableList(lCBIEAMEBPF_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.lCBIEAMEBPF_ = lCBIEAMEBPF_;
         } else {
           result.lCBIEAMEBPF_ = lCBIEAMEBPFBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.levelId_ = levelId_;
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -461,7 +510,7 @@ public final class ONGFFNHKKIAOuterClass {
           if (!other.lCBIEAMEBPF_.isEmpty()) {
             if (lCBIEAMEBPF_.isEmpty()) {
               lCBIEAMEBPF_ = other.lCBIEAMEBPF_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureLCBIEAMEBPFIsMutable();
               lCBIEAMEBPF_.addAll(other.lCBIEAMEBPF_);
@@ -474,7 +523,7 @@ public final class ONGFFNHKKIAOuterClass {
               lCBIEAMEBPFBuilder_.dispose();
               lCBIEAMEBPFBuilder_ = null;
               lCBIEAMEBPF_ = other.lCBIEAMEBPF_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               lCBIEAMEBPFBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLCBIEAMEBPFFieldBuilder() : null;
@@ -483,7 +532,7 @@ public final class ONGFFNHKKIAOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -498,48 +547,17 @@ public final class ONGFFNHKKIAOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 34: {
-                emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI.parser(),
-                        extensionRegistry);
-                if (lCBIEAMEBPFBuilder_ == null) {
-                  ensureLCBIEAMEBPFIsMutable();
-                  lCBIEAMEBPF_.add(m);
-                } else {
-                  lCBIEAMEBPFBuilder_.addMessage(m);
-                }
-                break;
-              } // case 34
-              case 104: {
-                levelId_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -561,7 +579,6 @@ public final class ONGFFNHKKIAOuterClass {
       public Builder setLevelId(int value) {
         
         levelId_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -570,7 +587,7 @@ public final class ONGFFNHKKIAOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLevelId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         levelId_ = 0;
         onChanged();
         return this;
@@ -579,9 +596,9 @@ public final class ONGFFNHKKIAOuterClass {
       private java.util.List<emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI> lCBIEAMEBPF_ =
         java.util.Collections.emptyList();
       private void ensureLCBIEAMEBPFIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           lCBIEAMEBPF_ = new java.util.ArrayList<emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI>(lCBIEAMEBPF_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -731,7 +748,7 @@ public final class ONGFFNHKKIAOuterClass {
       public Builder clearLCBIEAMEBPF() {
         if (lCBIEAMEBPFBuilder_ == null) {
           lCBIEAMEBPF_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           lCBIEAMEBPFBuilder_.clear();
@@ -808,7 +825,7 @@ public final class ONGFFNHKKIAOuterClass {
           lCBIEAMEBPFBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI, emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANI.Builder, emu.grasscutter.net.proto.JONHAPLJANIOuterClass.JONHAPLJANIOrBuilder>(
                   lCBIEAMEBPF_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           lCBIEAMEBPF_ = null;
@@ -848,18 +865,7 @@ public final class ONGFFNHKKIAOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ONGFFNHKKIA(input, extensionRegistry);
       }
     };
 

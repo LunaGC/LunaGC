@@ -8,17 +8,17 @@ import emu.grasscutter.net.proto.ItemParamOuterClass;
 import emu.grasscutter.net.proto.TowerLevelEndNotifyOuterClass.TowerLevelEndNotify;
 
 public class PacketDungeonSettleNotify extends BasePacket {
-	
+
 	public PacketDungeonSettleNotify(WorldChallenge challenge) {
 		super(PacketOpcodes.DungeonSettleNotify);
 
 		DungeonSettleNotify proto = DungeonSettleNotify.newBuilder()
-				.setDungeonId(challenge.getScene().getDungeonData().getId())
-				.setIsSuccess(challenge.isSuccess())
-				.setCloseTime(challenge.getScene().getAutoCloseTime())
-				.setResult(challenge.isSuccess() ? 1 : 0)
+            .setDungeonId(challenge.getScene().getDungeonData().getId())
+            .setIsSuccess(challenge.isSuccess())
+            .setCloseTime(challenge.getScene().getAutoCloseTime())
+            .setResult(challenge.isSuccess() ? 1 : 0)
 				.build();
-		
+
 		this.setData(proto);
 	}
 
@@ -51,10 +51,10 @@ public class PacketDungeonSettleNotify extends BasePacket {
 		}
 
 		DungeonSettleNotify proto = DungeonSettleNotify.newBuilder()
-				.setDungeonId(challenge.getScene().getDungeonData().getId())
-				.setIsSuccess(challenge.isSuccess())
-				.setCloseTime(challenge.getScene().getAutoCloseTime())
-				.setResult(challenge.isSuccess() ? 1 : 0)
+            .setDungeonId(challenge.getScene().getDungeonData().getId())
+            .setIsSuccess(challenge.isSuccess())
+            .setCloseTime(challenge.getScene().getAutoCloseTime())
+            .setResult(challenge.isSuccess() ? 1 : 0)
 				.setTowerLevelEndNotify(towerLevelEndNotify.build())
 				.build();
 

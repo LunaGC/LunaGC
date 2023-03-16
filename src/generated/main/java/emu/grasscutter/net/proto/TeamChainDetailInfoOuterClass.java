@@ -80,6 +80,61 @@ public final class TeamChainDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private TeamChainDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                stageDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.TeamChainStageDataOuterClass.TeamChainStageData>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              stageDataList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.TeamChainStageDataOuterClass.TeamChainStageData.parser(), extensionRegistry));
+              break;
+            }
+            case 80: {
+
+              isTokenCostumeReward_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          stageDataList_ = java.util.Collections.unmodifiableList(stageDataList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.TeamChainDetailInfoOuterClass.internal_static_TeamChainDetailInfo_descriptor;
@@ -94,7 +149,7 @@ public final class TeamChainDetailInfoOuterClass {
     }
 
     public static final int IS_TOKEN_COSTUME_REWARD_FIELD_NUMBER = 10;
-    private boolean isTokenCostumeReward_ = false;
+    private boolean isTokenCostumeReward_;
     /**
      * <code>bool is_token_costume_reward = 10;</code>
      * @return The isTokenCostumeReward.
@@ -105,7 +160,6 @@ public final class TeamChainDetailInfoOuterClass {
     }
 
     public static final int STAGE_DATA_LIST_FIELD_NUMBER = 9;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.TeamChainStageDataOuterClass.TeamChainStageData> stageDataList_;
     /**
      * <code>repeated .TeamChainStageData stage_data_list = 9;</code>
@@ -165,7 +219,7 @@ public final class TeamChainDetailInfoOuterClass {
       if (isTokenCostumeReward_ != false) {
         output.writeBool(10, isTokenCostumeReward_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -182,7 +236,7 @@ public final class TeamChainDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, isTokenCostumeReward_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -201,7 +255,7 @@ public final class TeamChainDetailInfoOuterClass {
           != other.getIsTokenCostumeReward()) return false;
       if (!getStageDataListList()
           .equals(other.getStageDataListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -219,7 +273,7 @@ public final class TeamChainDetailInfoOuterClass {
         hash = (37 * hash) + STAGE_DATA_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getStageDataListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -340,26 +394,31 @@ public final class TeamChainDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.TeamChainDetailInfoOuterClass.TeamChainDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStageDataListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         isTokenCostumeReward_ = false;
+
         if (stageDataListBuilder_ == null) {
           stageDataList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          stageDataList_ = null;
           stageDataListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -386,29 +445,19 @@ public final class TeamChainDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.TeamChainDetailInfoOuterClass.TeamChainDetailInfo buildPartial() {
         emu.grasscutter.net.proto.TeamChainDetailInfoOuterClass.TeamChainDetailInfo result = new emu.grasscutter.net.proto.TeamChainDetailInfoOuterClass.TeamChainDetailInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.TeamChainDetailInfoOuterClass.TeamChainDetailInfo result) {
+        int from_bitField0_ = bitField0_;
+        result.isTokenCostumeReward_ = isTokenCostumeReward_;
         if (stageDataListBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             stageDataList_ = java.util.Collections.unmodifiableList(stageDataList_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.stageDataList_ = stageDataList_;
         } else {
           result.stageDataList_ = stageDataListBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.TeamChainDetailInfoOuterClass.TeamChainDetailInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isTokenCostumeReward_ = isTokenCostumeReward_;
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -462,7 +511,7 @@ public final class TeamChainDetailInfoOuterClass {
           if (!other.stageDataList_.isEmpty()) {
             if (stageDataList_.isEmpty()) {
               stageDataList_ = other.stageDataList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureStageDataListIsMutable();
               stageDataList_.addAll(other.stageDataList_);
@@ -475,7 +524,7 @@ public final class TeamChainDetailInfoOuterClass {
               stageDataListBuilder_.dispose();
               stageDataListBuilder_ = null;
               stageDataList_ = other.stageDataList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               stageDataListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getStageDataListFieldBuilder() : null;
@@ -484,7 +533,7 @@ public final class TeamChainDetailInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -499,48 +548,17 @@ public final class TeamChainDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.TeamChainDetailInfoOuterClass.TeamChainDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 74: {
-                emu.grasscutter.net.proto.TeamChainStageDataOuterClass.TeamChainStageData m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.TeamChainStageDataOuterClass.TeamChainStageData.parser(),
-                        extensionRegistry);
-                if (stageDataListBuilder_ == null) {
-                  ensureStageDataListIsMutable();
-                  stageDataList_.add(m);
-                } else {
-                  stageDataListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 74
-              case 80: {
-                isTokenCostumeReward_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 80
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.TeamChainDetailInfoOuterClass.TeamChainDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -562,7 +580,6 @@ public final class TeamChainDetailInfoOuterClass {
       public Builder setIsTokenCostumeReward(boolean value) {
         
         isTokenCostumeReward_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -571,7 +588,7 @@ public final class TeamChainDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsTokenCostumeReward() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         isTokenCostumeReward_ = false;
         onChanged();
         return this;
@@ -580,9 +597,9 @@ public final class TeamChainDetailInfoOuterClass {
       private java.util.List<emu.grasscutter.net.proto.TeamChainStageDataOuterClass.TeamChainStageData> stageDataList_ =
         java.util.Collections.emptyList();
       private void ensureStageDataListIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           stageDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.TeamChainStageDataOuterClass.TeamChainStageData>(stageDataList_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -732,7 +749,7 @@ public final class TeamChainDetailInfoOuterClass {
       public Builder clearStageDataList() {
         if (stageDataListBuilder_ == null) {
           stageDataList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           stageDataListBuilder_.clear();
@@ -809,7 +826,7 @@ public final class TeamChainDetailInfoOuterClass {
           stageDataListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.TeamChainStageDataOuterClass.TeamChainStageData, emu.grasscutter.net.proto.TeamChainStageDataOuterClass.TeamChainStageData.Builder, emu.grasscutter.net.proto.TeamChainStageDataOuterClass.TeamChainStageDataOrBuilder>(
                   stageDataList_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           stageDataList_ = null;
@@ -849,18 +866,7 @@ public final class TeamChainDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new TeamChainDetailInfo(input, extensionRegistry);
       }
     };
 

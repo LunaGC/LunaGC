@@ -41,14 +41,14 @@ public final class VintageMarketDealInfoOuterClass {
     /**
      * <code>map&lt;uint32, .VintageMarketTraderInfo&gt; traderItemInfoMap = 13;</code>
      */
-    /* nullable */
-emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo getTraderItemInfoMapOrDefault(
+
+    emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo getTraderItemInfoMapOrDefault(
         int key,
-        /* nullable */
-emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo defaultValue);
+        emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo defaultValue);
     /**
      * <code>map&lt;uint32, .VintageMarketTraderInfo&gt; traderItemInfoMap = 13;</code>
      */
+
     emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo getTraderItemInfoMapOrThrow(
         int key);
   }
@@ -78,6 +78,57 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private VintageMarketDealInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                traderItemInfoMap_ = com.google.protobuf.MapField.newMapField(
+                    TraderItemInfoMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo>
+              traderItemInfoMap__ = input.readMessage(
+                  TraderItemInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              traderItemInfoMap_.getMutableMap().put(
+                  traderItemInfoMap__.getKey(), traderItemInfoMap__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -116,7 +167,6 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo.getDefaultInstance());
     }
-    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo> traderItemInfoMap_;
     private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo>
@@ -127,12 +177,14 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
       }
       return traderItemInfoMap_;
     }
+
     public int getTraderItemInfoMapCount() {
       return internalGetTraderItemInfoMap().getMap().size();
     }
     /**
      * <code>map&lt;uint32, .VintageMarketTraderInfo&gt; traderItemInfoMap = 13;</code>
      */
+
     @java.lang.Override
     public boolean containsTraderItemInfoMap(
         int key) {
@@ -151,6 +203,7 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
      * <code>map&lt;uint32, .VintageMarketTraderInfo&gt; traderItemInfoMap = 13;</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo> getTraderItemInfoMapMap() {
       return internalGetTraderItemInfoMap().getMap();
     }
@@ -158,11 +211,10 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
      * <code>map&lt;uint32, .VintageMarketTraderInfo&gt; traderItemInfoMap = 13;</code>
      */
     @java.lang.Override
-    public /* nullable */
-emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo getTraderItemInfoMapOrDefault(
+
+    public emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo getTraderItemInfoMapOrDefault(
         int key,
-        /* nullable */
-emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo defaultValue) {
+        emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo defaultValue) {
       
       java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo> map =
           internalGetTraderItemInfoMap().getMap();
@@ -172,6 +224,7 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
      * <code>map&lt;uint32, .VintageMarketTraderInfo&gt; traderItemInfoMap = 13;</code>
      */
     @java.lang.Override
+
     public emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo getTraderItemInfoMapOrThrow(
         int key) {
       
@@ -203,7 +256,7 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
           internalGetTraderItemInfoMap(),
           TraderItemInfoMapDefaultEntryHolder.defaultEntry,
           13);
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -222,7 +275,7 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(13, traderItemInfoMap__);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -239,7 +292,7 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
 
       if (!internalGetTraderItemInfoMap().equals(
           other.internalGetTraderItemInfoMap())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -254,7 +307,7 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
         hash = (37 * hash) + TRADERITEMINFOMAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetTraderItemInfoMap().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -393,18 +446,22 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
 
       // Construct using emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         internalGetMutableTraderItemInfoMap().clear();
         return this;
       }
@@ -432,17 +489,11 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
       @java.lang.Override
       public emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo buildPartial() {
         emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo result = new emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        int from_bitField0_ = bitField0_;
+        result.traderItemInfoMap_ = internalGetTraderItemInfoMap();
+        result.traderItemInfoMap_.makeImmutable();
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.traderItemInfoMap_ = internalGetTraderItemInfoMap();
-          result.traderItemInfoMap_.makeImmutable();
-        }
       }
 
       @java.lang.Override
@@ -491,8 +542,7 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
         if (other == emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo.getDefaultInstance()) return this;
         internalGetMutableTraderItemInfoMap().mergeFrom(
             other.internalGetTraderItemInfoMap());
-        bitField0_ |= 0x00000001;
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -507,39 +557,17 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 106: {
-                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo>
-                traderItemInfoMap__ = input.readMessage(
-                    TraderItemInfoMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableTraderItemInfoMap().getMutableMap().put(
-                    traderItemInfoMap__.getKey(), traderItemInfoMap__.getValue());
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 106
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.VintageMarketDealInfoOuterClass.VintageMarketDealInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -547,7 +575,7 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
       private com.google.protobuf.MapField<
           java.lang.Integer, emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo> traderItemInfoMap_;
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo>
-          internalGetTraderItemInfoMap() {
+      internalGetTraderItemInfoMap() {
         if (traderItemInfoMap_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               TraderItemInfoMapDefaultEntryHolder.defaultEntry);
@@ -555,7 +583,8 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
         return traderItemInfoMap_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo>
-          internalGetMutableTraderItemInfoMap() {
+      internalGetMutableTraderItemInfoMap() {
+        onChanged();;
         if (traderItemInfoMap_ == null) {
           traderItemInfoMap_ = com.google.protobuf.MapField.newMapField(
               TraderItemInfoMapDefaultEntryHolder.defaultEntry);
@@ -563,16 +592,16 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
         if (!traderItemInfoMap_.isMutable()) {
           traderItemInfoMap_ = traderItemInfoMap_.copy();
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
         return traderItemInfoMap_;
       }
+
       public int getTraderItemInfoMapCount() {
         return internalGetTraderItemInfoMap().getMap().size();
       }
       /**
        * <code>map&lt;uint32, .VintageMarketTraderInfo&gt; traderItemInfoMap = 13;</code>
        */
+
       @java.lang.Override
       public boolean containsTraderItemInfoMap(
           int key) {
@@ -591,6 +620,7 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
        * <code>map&lt;uint32, .VintageMarketTraderInfo&gt; traderItemInfoMap = 13;</code>
        */
       @java.lang.Override
+
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo> getTraderItemInfoMapMap() {
         return internalGetTraderItemInfoMap().getMap();
       }
@@ -598,11 +628,10 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
        * <code>map&lt;uint32, .VintageMarketTraderInfo&gt; traderItemInfoMap = 13;</code>
        */
       @java.lang.Override
-      public /* nullable */
-emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo getTraderItemInfoMapOrDefault(
+
+      public emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo getTraderItemInfoMapOrDefault(
           int key,
-          /* nullable */
-emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo defaultValue) {
+          emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo defaultValue) {
         
         java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo> map =
             internalGetTraderItemInfoMap().getMap();
@@ -612,6 +641,7 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
        * <code>map&lt;uint32, .VintageMarketTraderInfo&gt; traderItemInfoMap = 13;</code>
        */
       @java.lang.Override
+
       public emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo getTraderItemInfoMapOrThrow(
           int key) {
         
@@ -622,8 +652,8 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
         }
         return map.get(key);
       }
+
       public Builder clearTraderItemInfoMap() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         internalGetMutableTraderItemInfoMap().getMutableMap()
             .clear();
         return this;
@@ -631,6 +661,7 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
       /**
        * <code>map&lt;uint32, .VintageMarketTraderInfo&gt; traderItemInfoMap = 13;</code>
        */
+
       public Builder removeTraderItemInfoMap(
           int key) {
         
@@ -643,8 +674,7 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo>
-          getMutableTraderItemInfoMap() {
-        bitField0_ |= 0x00000001;
+      getMutableTraderItemInfoMap() {
         return internalGetMutableTraderItemInfoMap().getMutableMap();
       }
       /**
@@ -654,20 +684,19 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
           int key,
           emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo value) {
         
-        if (value == null) { throw new NullPointerException("map value"); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableTraderItemInfoMap().getMutableMap()
             .put(key, value);
-        bitField0_ |= 0x00000001;
         return this;
       }
       /**
        * <code>map&lt;uint32, .VintageMarketTraderInfo&gt; traderItemInfoMap = 13;</code>
        */
+
       public Builder putAllTraderItemInfoMap(
           java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderInfo> values) {
         internalGetMutableTraderItemInfoMap().getMutableMap()
             .putAll(values);
-        bitField0_ |= 0x00000001;
         return this;
       }
       @java.lang.Override
@@ -703,18 +732,7 @@ emu.grasscutter.net.proto.VintageMarketTraderInfoOuterClass.VintageMarketTraderI
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new VintageMarketDealInfo(input, extensionRegistry);
       }
     };
 

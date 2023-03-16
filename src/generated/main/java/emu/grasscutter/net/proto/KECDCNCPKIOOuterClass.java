@@ -85,6 +85,73 @@ public final class KECDCNCPKIOOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private KECDCNCPKIO(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+
+              fCPEHFBPLAM_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              isNewRecord_ = input.readBool();
+              break;
+            }
+            case 64: {
+
+              costTime_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              levelId_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+
+              nBAIOEKMHJN_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              kAOLADNKIDE_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.KECDCNCPKIOOuterClass.internal_static_KECDCNCPKIO_descriptor;
@@ -99,7 +166,7 @@ public final class KECDCNCPKIOOuterClass {
     }
 
     public static final int LEVEL_ID_FIELD_NUMBER = 9;
-    private int levelId_ = 0;
+    private int levelId_;
     /**
      * <code>uint32 level_id = 9;</code>
      * @return The levelId.
@@ -110,7 +177,7 @@ public final class KECDCNCPKIOOuterClass {
     }
 
     public static final int COST_TIME_FIELD_NUMBER = 8;
-    private int costTime_ = 0;
+    private int costTime_;
     /**
      * <code>uint32 cost_time = 8;</code>
      * @return The costTime.
@@ -121,7 +188,7 @@ public final class KECDCNCPKIOOuterClass {
     }
 
     public static final int IS_NEW_RECORD_FIELD_NUMBER = 7;
-    private boolean isNewRecord_ = false;
+    private boolean isNewRecord_;
     /**
      * <code>bool is_new_record = 7;</code>
      * @return The isNewRecord.
@@ -132,7 +199,7 @@ public final class KECDCNCPKIOOuterClass {
     }
 
     public static final int FCPEHFBPLAM_FIELD_NUMBER = 3;
-    private int fCPEHFBPLAM_ = 0;
+    private int fCPEHFBPLAM_;
     /**
      * <code>uint32 FCPEHFBPLAM = 3;</code>
      * @return The fCPEHFBPLAM.
@@ -143,7 +210,7 @@ public final class KECDCNCPKIOOuterClass {
     }
 
     public static final int KAOLADNKIDE_FIELD_NUMBER = 15;
-    private int kAOLADNKIDE_ = 0;
+    private int kAOLADNKIDE_;
     /**
      * <code>uint32 KAOLADNKIDE = 15;</code>
      * @return The kAOLADNKIDE.
@@ -154,7 +221,7 @@ public final class KECDCNCPKIOOuterClass {
     }
 
     public static final int NBAIOEKMHJN_FIELD_NUMBER = 11;
-    private int nBAIOEKMHJN_ = 0;
+    private int nBAIOEKMHJN_;
     /**
      * <code>uint32 NBAIOEKMHJN = 11;</code>
      * @return The nBAIOEKMHJN.
@@ -196,7 +263,7 @@ public final class KECDCNCPKIOOuterClass {
       if (kAOLADNKIDE_ != 0) {
         output.writeUInt32(15, kAOLADNKIDE_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -229,7 +296,7 @@ public final class KECDCNCPKIOOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(15, kAOLADNKIDE_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -256,7 +323,7 @@ public final class KECDCNCPKIOOuterClass {
           != other.getKAOLADNKIDE()) return false;
       if (getNBAIOEKMHJN()
           != other.getNBAIOEKMHJN()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -280,7 +347,7 @@ public final class KECDCNCPKIOOuterClass {
       hash = (53 * hash) + getKAOLADNKIDE();
       hash = (37 * hash) + NBAIOEKMHJN_FIELD_NUMBER;
       hash = (53 * hash) + getNBAIOEKMHJN();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -401,24 +468,34 @@ public final class KECDCNCPKIOOuterClass {
 
       // Construct using emu.grasscutter.net.proto.KECDCNCPKIOOuterClass.KECDCNCPKIO.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         levelId_ = 0;
+
         costTime_ = 0;
+
         isNewRecord_ = false;
+
         fCPEHFBPLAM_ = 0;
+
         kAOLADNKIDE_ = 0;
+
         nBAIOEKMHJN_ = 0;
+
         return this;
       }
 
@@ -445,31 +522,14 @@ public final class KECDCNCPKIOOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.KECDCNCPKIOOuterClass.KECDCNCPKIO buildPartial() {
         emu.grasscutter.net.proto.KECDCNCPKIOOuterClass.KECDCNCPKIO result = new emu.grasscutter.net.proto.KECDCNCPKIOOuterClass.KECDCNCPKIO(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.levelId_ = levelId_;
+        result.costTime_ = costTime_;
+        result.isNewRecord_ = isNewRecord_;
+        result.fCPEHFBPLAM_ = fCPEHFBPLAM_;
+        result.kAOLADNKIDE_ = kAOLADNKIDE_;
+        result.nBAIOEKMHJN_ = nBAIOEKMHJN_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.KECDCNCPKIOOuterClass.KECDCNCPKIO result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.levelId_ = levelId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.costTime_ = costTime_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.isNewRecord_ = isNewRecord_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.fCPEHFBPLAM_ = fCPEHFBPLAM_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.kAOLADNKIDE_ = kAOLADNKIDE_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.nBAIOEKMHJN_ = nBAIOEKMHJN_;
-        }
       }
 
       @java.lang.Override
@@ -534,7 +594,7 @@ public final class KECDCNCPKIOOuterClass {
         if (other.getNBAIOEKMHJN() != 0) {
           setNBAIOEKMHJN(other.getNBAIOEKMHJN());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -549,63 +609,19 @@ public final class KECDCNCPKIOOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.KECDCNCPKIOOuterClass.KECDCNCPKIO parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 24: {
-                fCPEHFBPLAM_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 24
-              case 56: {
-                isNewRecord_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 56
-              case 64: {
-                costTime_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 64
-              case 72: {
-                levelId_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 72
-              case 88: {
-                nBAIOEKMHJN_ = input.readUInt32();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 88
-              case 120: {
-                kAOLADNKIDE_ = input.readUInt32();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.KECDCNCPKIOOuterClass.KECDCNCPKIO) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private int levelId_ ;
       /**
@@ -624,7 +640,6 @@ public final class KECDCNCPKIOOuterClass {
       public Builder setLevelId(int value) {
         
         levelId_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -633,7 +648,7 @@ public final class KECDCNCPKIOOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLevelId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         levelId_ = 0;
         onChanged();
         return this;
@@ -656,7 +671,6 @@ public final class KECDCNCPKIOOuterClass {
       public Builder setCostTime(int value) {
         
         costTime_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -665,7 +679,7 @@ public final class KECDCNCPKIOOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCostTime() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         costTime_ = 0;
         onChanged();
         return this;
@@ -688,7 +702,6 @@ public final class KECDCNCPKIOOuterClass {
       public Builder setIsNewRecord(boolean value) {
         
         isNewRecord_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -697,7 +710,7 @@ public final class KECDCNCPKIOOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsNewRecord() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         isNewRecord_ = false;
         onChanged();
         return this;
@@ -720,7 +733,6 @@ public final class KECDCNCPKIOOuterClass {
       public Builder setFCPEHFBPLAM(int value) {
         
         fCPEHFBPLAM_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -729,7 +741,7 @@ public final class KECDCNCPKIOOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFCPEHFBPLAM() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         fCPEHFBPLAM_ = 0;
         onChanged();
         return this;
@@ -752,7 +764,6 @@ public final class KECDCNCPKIOOuterClass {
       public Builder setKAOLADNKIDE(int value) {
         
         kAOLADNKIDE_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -761,7 +772,7 @@ public final class KECDCNCPKIOOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearKAOLADNKIDE() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         kAOLADNKIDE_ = 0;
         onChanged();
         return this;
@@ -784,7 +795,6 @@ public final class KECDCNCPKIOOuterClass {
       public Builder setNBAIOEKMHJN(int value) {
         
         nBAIOEKMHJN_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -793,7 +803,7 @@ public final class KECDCNCPKIOOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearNBAIOEKMHJN() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        
         nBAIOEKMHJN_ = 0;
         onChanged();
         return this;
@@ -831,18 +841,7 @@ public final class KECDCNCPKIOOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new KECDCNCPKIO(input, extensionRegistry);
       }
     };
 

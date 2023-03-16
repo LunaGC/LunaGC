@@ -47,12 +47,14 @@ public final class FleurFairInfoOuterClass {
     /**
      * <code>map&lt;uint32, uint32&gt; previewStageIndex = 6;</code>
      */
+
     int getPreviewStageIndexOrDefault(
         int key,
         int defaultValue);
     /**
      * <code>map&lt;uint32, uint32&gt; previewStageIndex = 6;</code>
      */
+
     int getPreviewStageIndexOrThrow(
         int key);
 
@@ -127,14 +129,14 @@ public final class FleurFairInfoOuterClass {
     /**
      * <code>map&lt;uint32, .FleurFairDungeonSectionInfo&gt; pnpcagimleg = 11;</code>
      */
-    /* nullable */
-emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo getPnpcagimlegOrDefault(
+
+    emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo getPnpcagimlegOrDefault(
         int key,
-        /* nullable */
-emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo defaultValue);
+        emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo defaultValue);
     /**
      * <code>map&lt;uint32, .FleurFairDungeonSectionInfo&gt; pnpcagimleg = 11;</code>
      */
+
     emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo getPnpcagimlegOrThrow(
         int key);
   }
@@ -166,6 +168,107 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
     getUnknownFields() {
       return this.unknownFields;
     }
+    private FleurFairInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              ppjmalghkch_ = input.readUInt32();
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                chapterInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              chapterInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                previewStageIndex_ = com.google.protobuf.MapField.newMapField(
+                    PreviewStageIndexDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
+              previewStageIndex__ = input.readMessage(
+                  PreviewStageIndexDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              previewStageIndex_.getMutableMap().put(
+                  previewStageIndex__.getKey(), previewStageIndex__.getValue());
+              break;
+            }
+            case 56: {
+
+              leftMonsters_ = input.readBool();
+              break;
+            }
+            case 72: {
+
+              hpepmphkgml_ = input.readBool();
+              break;
+            }
+            case 80: {
+
+              gpjbakimcgp_ = input.readUInt32();
+              break;
+            }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                pnpcagimleg_ = com.google.protobuf.MapField.newMapField(
+                    PnpcagimlegDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo>
+              pnpcagimleg__ = input.readMessage(
+                  PnpcagimlegDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              pnpcagimleg_.getMutableMap().put(
+                  pnpcagimleg__.getKey(), pnpcagimleg__.getValue());
+              break;
+            }
+            case 120: {
+
+              contentCloseTime_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          chapterInfoList_ = java.util.Collections.unmodifiableList(chapterInfoList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FleurFairInfoOuterClass.internal_static_FleurFairInfo_descriptor;
@@ -194,7 +297,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
     }
 
     public static final int GPJBAKIMCGP_FIELD_NUMBER = 10;
-    private int gpjbakimcgp_ = 0;
+    private int gpjbakimcgp_;
     /**
      * <code>uint32 gpjbakimcgp = 10;</code>
      * @return The gpjbakimcgp.
@@ -216,7 +319,6 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0);
     }
-    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, java.lang.Integer> previewStageIndex_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
@@ -227,12 +329,14 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
       }
       return previewStageIndex_;
     }
+
     public int getPreviewStageIndexCount() {
       return internalGetPreviewStageIndex().getMap().size();
     }
     /**
      * <code>map&lt;uint32, uint32&gt; previewStageIndex = 6;</code>
      */
+
     @java.lang.Override
     public boolean containsPreviewStageIndex(
         int key) {
@@ -251,6 +355,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
      * <code>map&lt;uint32, uint32&gt; previewStageIndex = 6;</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.Integer, java.lang.Integer> getPreviewStageIndexMap() {
       return internalGetPreviewStageIndex().getMap();
     }
@@ -258,6 +363,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
      * <code>map&lt;uint32, uint32&gt; previewStageIndex = 6;</code>
      */
     @java.lang.Override
+
     public int getPreviewStageIndexOrDefault(
         int key,
         int defaultValue) {
@@ -270,6 +376,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
      * <code>map&lt;uint32, uint32&gt; previewStageIndex = 6;</code>
      */
     @java.lang.Override
+
     public int getPreviewStageIndexOrThrow(
         int key) {
       
@@ -282,7 +389,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
     }
 
     public static final int LEFTMONSTERS_FIELD_NUMBER = 7;
-    private boolean leftMonsters_ = false;
+    private boolean leftMonsters_;
     /**
      * <code>bool leftMonsters = 7;</code>
      * @return The leftMonsters.
@@ -293,7 +400,6 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
     }
 
     public static final int CHAPTERINFOLIST_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo> chapterInfoList_;
     /**
      * <code>repeated .FleurFairChapterInfo chapterInfoList = 5;</code>
@@ -334,7 +440,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
     }
 
     public static final int HPEPMPHKGML_FIELD_NUMBER = 9;
-    private boolean hpepmphkgml_ = false;
+    private boolean hpepmphkgml_;
     /**
      * <code>bool hpepmphkgml = 9;</code>
      * @return The hpepmphkgml.
@@ -345,7 +451,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
     }
 
     public static final int CONTENTCLOSETIME_FIELD_NUMBER = 15;
-    private int contentCloseTime_ = 0;
+    private int contentCloseTime_;
     /**
      * <code>uint32 contentCloseTime = 15;</code>
      * @return The contentCloseTime.
@@ -356,7 +462,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
     }
 
     public static final int PPJMALGHKCH_FIELD_NUMBER = 1;
-    private int ppjmalghkch_ = 0;
+    private int ppjmalghkch_;
     /**
      * <code>uint32 ppjmalghkch = 1;</code>
      * @return The ppjmalghkch.
@@ -378,7 +484,6 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo.getDefaultInstance());
     }
-    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo> pnpcagimleg_;
     private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo>
@@ -389,12 +494,14 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
       }
       return pnpcagimleg_;
     }
+
     public int getPnpcagimlegCount() {
       return internalGetPnpcagimleg().getMap().size();
     }
     /**
      * <code>map&lt;uint32, .FleurFairDungeonSectionInfo&gt; pnpcagimleg = 11;</code>
      */
+
     @java.lang.Override
     public boolean containsPnpcagimleg(
         int key) {
@@ -413,6 +520,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
      * <code>map&lt;uint32, .FleurFairDungeonSectionInfo&gt; pnpcagimleg = 11;</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo> getPnpcagimlegMap() {
       return internalGetPnpcagimleg().getMap();
     }
@@ -420,11 +528,10 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
      * <code>map&lt;uint32, .FleurFairDungeonSectionInfo&gt; pnpcagimleg = 11;</code>
      */
     @java.lang.Override
-    public /* nullable */
-emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo getPnpcagimlegOrDefault(
+
+    public emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo getPnpcagimlegOrDefault(
         int key,
-        /* nullable */
-emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo defaultValue) {
+        emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo defaultValue) {
       
       java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo> map =
           internalGetPnpcagimleg().getMap();
@@ -434,6 +541,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
      * <code>map&lt;uint32, .FleurFairDungeonSectionInfo&gt; pnpcagimleg = 11;</code>
      */
     @java.lang.Override
+
     public emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo getPnpcagimlegOrThrow(
         int key) {
       
@@ -489,7 +597,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
       if (contentCloseTime_ != 0) {
         output.writeUInt32(15, contentCloseTime_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -542,7 +650,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(15, contentCloseTime_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -573,7 +681,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
           != other.getPpjmalghkch()) return false;
       if (!internalGetPnpcagimleg().equals(
           other.internalGetPnpcagimleg())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -608,7 +716,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
         hash = (37 * hash) + PNPCAGIMLEG_FIELD_NUMBER;
         hash = (53 * hash) + internalGetPnpcagimleg().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -751,31 +859,40 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
 
       // Construct using emu.grasscutter.net.proto.FleurFairInfoOuterClass.FleurFairInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getChapterInfoListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         gpjbakimcgp_ = 0;
+
         internalGetMutablePreviewStageIndex().clear();
         leftMonsters_ = false;
+
         if (chapterInfoListBuilder_ == null) {
           chapterInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          chapterInfoList_ = null;
           chapterInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000008);
         hpepmphkgml_ = false;
+
         contentCloseTime_ = 0;
+
         ppjmalghkch_ = 0;
+
         internalGetMutablePnpcagimleg().clear();
         return this;
       }
@@ -803,49 +920,27 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
       @java.lang.Override
       public emu.grasscutter.net.proto.FleurFairInfoOuterClass.FleurFairInfo buildPartial() {
         emu.grasscutter.net.proto.FleurFairInfoOuterClass.FleurFairInfo result = new emu.grasscutter.net.proto.FleurFairInfoOuterClass.FleurFairInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.FleurFairInfoOuterClass.FleurFairInfo result) {
+        int from_bitField0_ = bitField0_;
+        result.gpjbakimcgp_ = gpjbakimcgp_;
+        result.previewStageIndex_ = internalGetPreviewStageIndex();
+        result.previewStageIndex_.makeImmutable();
+        result.leftMonsters_ = leftMonsters_;
         if (chapterInfoListBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             chapterInfoList_ = java.util.Collections.unmodifiableList(chapterInfoList_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.chapterInfoList_ = chapterInfoList_;
         } else {
           result.chapterInfoList_ = chapterInfoListBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.FleurFairInfoOuterClass.FleurFairInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.gpjbakimcgp_ = gpjbakimcgp_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.previewStageIndex_ = internalGetPreviewStageIndex();
-          result.previewStageIndex_.makeImmutable();
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.leftMonsters_ = leftMonsters_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.hpepmphkgml_ = hpepmphkgml_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.contentCloseTime_ = contentCloseTime_;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.ppjmalghkch_ = ppjmalghkch_;
-        }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.pnpcagimleg_ = internalGetPnpcagimleg();
-          result.pnpcagimleg_.makeImmutable();
-        }
+        result.hpepmphkgml_ = hpepmphkgml_;
+        result.contentCloseTime_ = contentCloseTime_;
+        result.ppjmalghkch_ = ppjmalghkch_;
+        result.pnpcagimleg_ = internalGetPnpcagimleg();
+        result.pnpcagimleg_.makeImmutable();
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -897,7 +992,6 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
         }
         internalGetMutablePreviewStageIndex().mergeFrom(
             other.internalGetPreviewStageIndex());
-        bitField0_ |= 0x00000002;
         if (other.getLeftMonsters() != false) {
           setLeftMonsters(other.getLeftMonsters());
         }
@@ -905,7 +999,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
           if (!other.chapterInfoList_.isEmpty()) {
             if (chapterInfoList_.isEmpty()) {
               chapterInfoList_ = other.chapterInfoList_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureChapterInfoListIsMutable();
               chapterInfoList_.addAll(other.chapterInfoList_);
@@ -918,7 +1012,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
               chapterInfoListBuilder_.dispose();
               chapterInfoListBuilder_ = null;
               chapterInfoList_ = other.chapterInfoList_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000002);
               chapterInfoListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getChapterInfoListFieldBuilder() : null;
@@ -938,8 +1032,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
         }
         internalGetMutablePnpcagimleg().mergeFrom(
             other.internalGetPnpcagimleg());
-        bitField0_ |= 0x00000080;
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -954,86 +1047,17 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.FleurFairInfoOuterClass.FleurFairInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                ppjmalghkch_ = input.readUInt32();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 8
-              case 42: {
-                emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo.parser(),
-                        extensionRegistry);
-                if (chapterInfoListBuilder_ == null) {
-                  ensureChapterInfoListIsMutable();
-                  chapterInfoList_.add(m);
-                } else {
-                  chapterInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 42
-              case 50: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-                previewStageIndex__ = input.readMessage(
-                    PreviewStageIndexDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutablePreviewStageIndex().getMutableMap().put(
-                    previewStageIndex__.getKey(), previewStageIndex__.getValue());
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 50
-              case 56: {
-                leftMonsters_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 56
-              case 72: {
-                hpepmphkgml_ = input.readBool();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 72
-              case 80: {
-                gpjbakimcgp_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 80
-              case 90: {
-                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo>
-                pnpcagimleg__ = input.readMessage(
-                    PnpcagimlegDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutablePnpcagimleg().getMutableMap().put(
-                    pnpcagimleg__.getKey(), pnpcagimleg__.getValue());
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 90
-              case 120: {
-                contentCloseTime_ = input.readUInt32();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.FleurFairInfoOuterClass.FleurFairInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1055,7 +1079,6 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
       public Builder setGpjbakimcgp(int value) {
         
         gpjbakimcgp_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1064,7 +1087,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
        * @return This builder for chaining.
        */
       public Builder clearGpjbakimcgp() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         gpjbakimcgp_ = 0;
         onChanged();
         return this;
@@ -1073,7 +1096,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
       private com.google.protobuf.MapField<
           java.lang.Integer, java.lang.Integer> previewStageIndex_;
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-          internalGetPreviewStageIndex() {
+      internalGetPreviewStageIndex() {
         if (previewStageIndex_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               PreviewStageIndexDefaultEntryHolder.defaultEntry);
@@ -1081,7 +1104,8 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
         return previewStageIndex_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-          internalGetMutablePreviewStageIndex() {
+      internalGetMutablePreviewStageIndex() {
+        onChanged();;
         if (previewStageIndex_ == null) {
           previewStageIndex_ = com.google.protobuf.MapField.newMapField(
               PreviewStageIndexDefaultEntryHolder.defaultEntry);
@@ -1089,16 +1113,16 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
         if (!previewStageIndex_.isMutable()) {
           previewStageIndex_ = previewStageIndex_.copy();
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
         return previewStageIndex_;
       }
+
       public int getPreviewStageIndexCount() {
         return internalGetPreviewStageIndex().getMap().size();
       }
       /**
        * <code>map&lt;uint32, uint32&gt; previewStageIndex = 6;</code>
        */
+
       @java.lang.Override
       public boolean containsPreviewStageIndex(
           int key) {
@@ -1117,6 +1141,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
        * <code>map&lt;uint32, uint32&gt; previewStageIndex = 6;</code>
        */
       @java.lang.Override
+
       public java.util.Map<java.lang.Integer, java.lang.Integer> getPreviewStageIndexMap() {
         return internalGetPreviewStageIndex().getMap();
       }
@@ -1124,6 +1149,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
        * <code>map&lt;uint32, uint32&gt; previewStageIndex = 6;</code>
        */
       @java.lang.Override
+
       public int getPreviewStageIndexOrDefault(
           int key,
           int defaultValue) {
@@ -1136,6 +1162,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
        * <code>map&lt;uint32, uint32&gt; previewStageIndex = 6;</code>
        */
       @java.lang.Override
+
       public int getPreviewStageIndexOrThrow(
           int key) {
         
@@ -1146,8 +1173,8 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
         }
         return map.get(key);
       }
+
       public Builder clearPreviewStageIndex() {
-        bitField0_ = (bitField0_ & ~0x00000002);
         internalGetMutablePreviewStageIndex().getMutableMap()
             .clear();
         return this;
@@ -1155,6 +1182,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
       /**
        * <code>map&lt;uint32, uint32&gt; previewStageIndex = 6;</code>
        */
+
       public Builder removePreviewStageIndex(
           int key) {
         
@@ -1167,8 +1195,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, java.lang.Integer>
-          getMutablePreviewStageIndex() {
-        bitField0_ |= 0x00000002;
+      getMutablePreviewStageIndex() {
         return internalGetMutablePreviewStageIndex().getMutableMap();
       }
       /**
@@ -1181,17 +1208,16 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
         
         internalGetMutablePreviewStageIndex().getMutableMap()
             .put(key, value);
-        bitField0_ |= 0x00000002;
         return this;
       }
       /**
        * <code>map&lt;uint32, uint32&gt; previewStageIndex = 6;</code>
        */
+
       public Builder putAllPreviewStageIndex(
           java.util.Map<java.lang.Integer, java.lang.Integer> values) {
         internalGetMutablePreviewStageIndex().getMutableMap()
             .putAll(values);
-        bitField0_ |= 0x00000002;
         return this;
       }
 
@@ -1212,7 +1238,6 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
       public Builder setLeftMonsters(boolean value) {
         
         leftMonsters_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1221,7 +1246,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
        * @return This builder for chaining.
        */
       public Builder clearLeftMonsters() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         leftMonsters_ = false;
         onChanged();
         return this;
@@ -1230,9 +1255,9 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
       private java.util.List<emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo> chapterInfoList_ =
         java.util.Collections.emptyList();
       private void ensureChapterInfoListIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           chapterInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo>(chapterInfoList_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -1382,7 +1407,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
       public Builder clearChapterInfoList() {
         if (chapterInfoListBuilder_ == null) {
           chapterInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           chapterInfoListBuilder_.clear();
@@ -1459,7 +1484,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
           chapterInfoListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo, emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfo.Builder, emu.grasscutter.net.proto.FleurFairChapterInfoOuterClass.FleurFairChapterInfoOrBuilder>(
                   chapterInfoList_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           chapterInfoList_ = null;
@@ -1484,7 +1509,6 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
       public Builder setHpepmphkgml(boolean value) {
         
         hpepmphkgml_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1493,7 +1517,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
        * @return This builder for chaining.
        */
       public Builder clearHpepmphkgml() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         hpepmphkgml_ = false;
         onChanged();
         return this;
@@ -1516,7 +1540,6 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
       public Builder setContentCloseTime(int value) {
         
         contentCloseTime_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1525,7 +1548,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
        * @return This builder for chaining.
        */
       public Builder clearContentCloseTime() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        
         contentCloseTime_ = 0;
         onChanged();
         return this;
@@ -1548,7 +1571,6 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
       public Builder setPpjmalghkch(int value) {
         
         ppjmalghkch_ = value;
-        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1557,7 +1579,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
        * @return This builder for chaining.
        */
       public Builder clearPpjmalghkch() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        
         ppjmalghkch_ = 0;
         onChanged();
         return this;
@@ -1566,7 +1588,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
       private com.google.protobuf.MapField<
           java.lang.Integer, emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo> pnpcagimleg_;
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo>
-          internalGetPnpcagimleg() {
+      internalGetPnpcagimleg() {
         if (pnpcagimleg_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               PnpcagimlegDefaultEntryHolder.defaultEntry);
@@ -1574,7 +1596,8 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
         return pnpcagimleg_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo>
-          internalGetMutablePnpcagimleg() {
+      internalGetMutablePnpcagimleg() {
+        onChanged();;
         if (pnpcagimleg_ == null) {
           pnpcagimleg_ = com.google.protobuf.MapField.newMapField(
               PnpcagimlegDefaultEntryHolder.defaultEntry);
@@ -1582,16 +1605,16 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
         if (!pnpcagimleg_.isMutable()) {
           pnpcagimleg_ = pnpcagimleg_.copy();
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
         return pnpcagimleg_;
       }
+
       public int getPnpcagimlegCount() {
         return internalGetPnpcagimleg().getMap().size();
       }
       /**
        * <code>map&lt;uint32, .FleurFairDungeonSectionInfo&gt; pnpcagimleg = 11;</code>
        */
+
       @java.lang.Override
       public boolean containsPnpcagimleg(
           int key) {
@@ -1610,6 +1633,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
        * <code>map&lt;uint32, .FleurFairDungeonSectionInfo&gt; pnpcagimleg = 11;</code>
        */
       @java.lang.Override
+
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo> getPnpcagimlegMap() {
         return internalGetPnpcagimleg().getMap();
       }
@@ -1617,11 +1641,10 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
        * <code>map&lt;uint32, .FleurFairDungeonSectionInfo&gt; pnpcagimleg = 11;</code>
        */
       @java.lang.Override
-      public /* nullable */
-emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo getPnpcagimlegOrDefault(
+
+      public emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo getPnpcagimlegOrDefault(
           int key,
-          /* nullable */
-emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo defaultValue) {
+          emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo defaultValue) {
         
         java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo> map =
             internalGetPnpcagimleg().getMap();
@@ -1631,6 +1654,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
        * <code>map&lt;uint32, .FleurFairDungeonSectionInfo&gt; pnpcagimleg = 11;</code>
        */
       @java.lang.Override
+
       public emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo getPnpcagimlegOrThrow(
           int key) {
         
@@ -1641,8 +1665,8 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
         }
         return map.get(key);
       }
+
       public Builder clearPnpcagimleg() {
-        bitField0_ = (bitField0_ & ~0x00000080);
         internalGetMutablePnpcagimleg().getMutableMap()
             .clear();
         return this;
@@ -1650,6 +1674,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
       /**
        * <code>map&lt;uint32, .FleurFairDungeonSectionInfo&gt; pnpcagimleg = 11;</code>
        */
+
       public Builder removePnpcagimleg(
           int key) {
         
@@ -1662,8 +1687,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo>
-          getMutablePnpcagimleg() {
-        bitField0_ |= 0x00000080;
+      getMutablePnpcagimleg() {
         return internalGetMutablePnpcagimleg().getMutableMap();
       }
       /**
@@ -1673,20 +1697,19 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
           int key,
           emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo value) {
         
-        if (value == null) { throw new NullPointerException("map value"); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutablePnpcagimleg().getMutableMap()
             .put(key, value);
-        bitField0_ |= 0x00000080;
         return this;
       }
       /**
        * <code>map&lt;uint32, .FleurFairDungeonSectionInfo&gt; pnpcagimleg = 11;</code>
        */
+
       public Builder putAllPnpcagimleg(
           java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeonSectionInfo> values) {
         internalGetMutablePnpcagimleg().getMutableMap()
             .putAll(values);
-        bitField0_ |= 0x00000080;
         return this;
       }
       @java.lang.Override
@@ -1722,18 +1745,7 @@ emu.grasscutter.net.proto.FleurFairDungeonSectionInfoOuterClass.FleurFairDungeon
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new FleurFairInfo(input, extensionRegistry);
       }
     };
 

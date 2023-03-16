@@ -73,6 +73,63 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private LuminanceStoneChallengeActivityDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 40: {
+
+              isFinalGalleryComplete_ = input.readBool();
+              break;
+            }
+            case 56: {
+
+              bestScore_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+
+              isContentClosed_ = input.readBool();
+              break;
+            }
+            case 88: {
+
+              currentStageId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.LuminanceStoneChallengeActivityDetailInfoOuterClass.internal_static_LuminanceStoneChallengeActivityDetailInfo_descriptor;
@@ -87,7 +144,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
     }
 
     public static final int IS_FINAL_GALLERY_COMPLETE_FIELD_NUMBER = 5;
-    private boolean isFinalGalleryComplete_ = false;
+    private boolean isFinalGalleryComplete_;
     /**
      * <code>bool is_final_gallery_complete = 5;</code>
      * @return The isFinalGalleryComplete.
@@ -98,7 +155,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
     }
 
     public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 10;
-    private boolean isContentClosed_ = false;
+    private boolean isContentClosed_;
     /**
      * <code>bool is_content_closed = 10;</code>
      * @return The isContentClosed.
@@ -109,7 +166,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
     }
 
     public static final int BEST_SCORE_FIELD_NUMBER = 7;
-    private int bestScore_ = 0;
+    private int bestScore_;
     /**
      * <code>uint32 best_score = 7;</code>
      * @return The bestScore.
@@ -120,7 +177,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
     }
 
     public static final int CURRENT_STAGE_ID_FIELD_NUMBER = 11;
-    private int currentStageId_ = 0;
+    private int currentStageId_;
     /**
      * <code>uint32 current_stage_id = 11;</code>
      * @return The currentStageId.
@@ -156,7 +213,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
       if (currentStageId_ != 0) {
         output.writeUInt32(11, currentStageId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -181,7 +238,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(11, currentStageId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -204,7 +261,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
           != other.getBestScore()) return false;
       if (getCurrentStageId()
           != other.getCurrentStageId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -225,7 +282,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
       hash = (53 * hash) + getBestScore();
       hash = (37 * hash) + CURRENT_STAGE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCurrentStageId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -346,22 +403,30 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.LuminanceStoneChallengeActivityDetailInfoOuterClass.LuminanceStoneChallengeActivityDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         isFinalGalleryComplete_ = false;
+
         isContentClosed_ = false;
+
         bestScore_ = 0;
+
         currentStageId_ = 0;
+
         return this;
       }
 
@@ -388,25 +453,12 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.LuminanceStoneChallengeActivityDetailInfoOuterClass.LuminanceStoneChallengeActivityDetailInfo buildPartial() {
         emu.grasscutter.net.proto.LuminanceStoneChallengeActivityDetailInfoOuterClass.LuminanceStoneChallengeActivityDetailInfo result = new emu.grasscutter.net.proto.LuminanceStoneChallengeActivityDetailInfoOuterClass.LuminanceStoneChallengeActivityDetailInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.isFinalGalleryComplete_ = isFinalGalleryComplete_;
+        result.isContentClosed_ = isContentClosed_;
+        result.bestScore_ = bestScore_;
+        result.currentStageId_ = currentStageId_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.LuminanceStoneChallengeActivityDetailInfoOuterClass.LuminanceStoneChallengeActivityDetailInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isFinalGalleryComplete_ = isFinalGalleryComplete_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.isContentClosed_ = isContentClosed_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.bestScore_ = bestScore_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.currentStageId_ = currentStageId_;
-        }
       }
 
       @java.lang.Override
@@ -465,7 +517,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
         if (other.getCurrentStageId() != 0) {
           setCurrentStageId(other.getCurrentStageId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -480,53 +532,19 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.LuminanceStoneChallengeActivityDetailInfoOuterClass.LuminanceStoneChallengeActivityDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 40: {
-                isFinalGalleryComplete_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 40
-              case 56: {
-                bestScore_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 56
-              case 80: {
-                isContentClosed_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 80
-              case 88: {
-                currentStageId_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 88
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.LuminanceStoneChallengeActivityDetailInfoOuterClass.LuminanceStoneChallengeActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private boolean isFinalGalleryComplete_ ;
       /**
@@ -545,7 +563,6 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
       public Builder setIsFinalGalleryComplete(boolean value) {
         
         isFinalGalleryComplete_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -554,7 +571,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsFinalGalleryComplete() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         isFinalGalleryComplete_ = false;
         onChanged();
         return this;
@@ -577,7 +594,6 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
       public Builder setIsContentClosed(boolean value) {
         
         isContentClosed_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -586,7 +602,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsContentClosed() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         isContentClosed_ = false;
         onChanged();
         return this;
@@ -609,7 +625,6 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
       public Builder setBestScore(int value) {
         
         bestScore_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -618,7 +633,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBestScore() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         bestScore_ = 0;
         onChanged();
         return this;
@@ -641,7 +656,6 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
       public Builder setCurrentStageId(int value) {
         
         currentStageId_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -650,7 +664,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCurrentStageId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         currentStageId_ = 0;
         onChanged();
         return this;
@@ -688,18 +702,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new LuminanceStoneChallengeActivityDetailInfo(input, extensionRegistry);
       }
     };
 

@@ -19,13 +19,13 @@ public final class WorldOwnerDailyTaskNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 finishedDailyTaskNum = 10;</code>
+     * <code>uint32 finished_daily_task_num = 10;</code>
      * @return The finishedDailyTaskNum.
      */
     int getFinishedDailyTaskNum();
 
     /**
-     * <code>uint32 filterCityId = 8;</code>
+     * <code>uint32 filter_city_id = 8;</code>
      * @return The filterCityId.
      */
     int getFilterCityId();
@@ -160,10 +160,10 @@ public final class WorldOwnerDailyTaskNotifyOuterClass {
               emu.grasscutter.net.proto.WorldOwnerDailyTaskNotifyOuterClass.WorldOwnerDailyTaskNotify.class, emu.grasscutter.net.proto.WorldOwnerDailyTaskNotifyOuterClass.WorldOwnerDailyTaskNotify.Builder.class);
     }
 
-    public static final int FINISHEDDAILYTASKNUM_FIELD_NUMBER = 10;
+    public static final int FINISHED_DAILY_TASK_NUM_FIELD_NUMBER = 10;
     private int finishedDailyTaskNum_;
     /**
-     * <code>uint32 finishedDailyTaskNum = 10;</code>
+     * <code>uint32 finished_daily_task_num = 10;</code>
      * @return The finishedDailyTaskNum.
      */
     @java.lang.Override
@@ -171,10 +171,10 @@ public final class WorldOwnerDailyTaskNotifyOuterClass {
       return finishedDailyTaskNum_;
     }
 
-    public static final int FILTERCITYID_FIELD_NUMBER = 8;
+    public static final int FILTER_CITY_ID_FIELD_NUMBER = 8;
     private int filterCityId_;
     /**
-     * <code>uint32 filterCityId = 8;</code>
+     * <code>uint32 filter_city_id = 8;</code>
      * @return The filterCityId.
      */
     @java.lang.Override
@@ -298,9 +298,9 @@ public final class WorldOwnerDailyTaskNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + FINISHEDDAILYTASKNUM_FIELD_NUMBER;
+      hash = (37 * hash) + FINISHED_DAILY_TASK_NUM_FIELD_NUMBER;
       hash = (53 * hash) + getFinishedDailyTaskNum();
-      hash = (37 * hash) + FILTERCITYID_FIELD_NUMBER;
+      hash = (37 * hash) + FILTER_CITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFilterCityId();
       if (getTaskListCount() > 0) {
         hash = (37 * hash) + TASK_LIST_FIELD_NUMBER;
@@ -605,7 +605,7 @@ public final class WorldOwnerDailyTaskNotifyOuterClass {
 
       private int finishedDailyTaskNum_ ;
       /**
-       * <code>uint32 finishedDailyTaskNum = 10;</code>
+       * <code>uint32 finished_daily_task_num = 10;</code>
        * @return The finishedDailyTaskNum.
        */
       @java.lang.Override
@@ -613,7 +613,7 @@ public final class WorldOwnerDailyTaskNotifyOuterClass {
         return finishedDailyTaskNum_;
       }
       /**
-       * <code>uint32 finishedDailyTaskNum = 10;</code>
+       * <code>uint32 finished_daily_task_num = 10;</code>
        * @param value The finishedDailyTaskNum to set.
        * @return This builder for chaining.
        */
@@ -624,7 +624,7 @@ public final class WorldOwnerDailyTaskNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 finishedDailyTaskNum = 10;</code>
+       * <code>uint32 finished_daily_task_num = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearFinishedDailyTaskNum() {
@@ -636,7 +636,7 @@ public final class WorldOwnerDailyTaskNotifyOuterClass {
 
       private int filterCityId_ ;
       /**
-       * <code>uint32 filterCityId = 8;</code>
+       * <code>uint32 filter_city_id = 8;</code>
        * @return The filterCityId.
        */
       @java.lang.Override
@@ -644,7 +644,7 @@ public final class WorldOwnerDailyTaskNotifyOuterClass {
         return filterCityId_;
       }
       /**
-       * <code>uint32 filterCityId = 8;</code>
+       * <code>uint32 filter_city_id = 8;</code>
        * @param value The filterCityId to set.
        * @return This builder for chaining.
        */
@@ -655,7 +655,7 @@ public final class WorldOwnerDailyTaskNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 filterCityId = 8;</code>
+       * <code>uint32 filter_city_id = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearFilterCityId() {
@@ -972,11 +972,11 @@ public final class WorldOwnerDailyTaskNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\037WorldOwnerDailyTaskNotify.proto\032\023Daily" +
-      "TaskInfo.proto\"r\n\031WorldOwnerDailyTaskNot" +
-      "ify\022\034\n\024finishedDailyTaskNum\030\n \001(\r\022\024\n\014fil" +
-      "terCityId\030\010 \001(\r\022!\n\ttask_list\030\006 \003(\0132\016.Dai" +
-      "lyTaskInfoB\033\n\031emu.grasscutter.net.protob" +
-      "\006proto3"
+      "TaskInfo.proto\"w\n\031WorldOwnerDailyTaskNot" +
+      "ify\022\037\n\027finished_daily_task_num\030\n \001(\r\022\026\n\016" +
+      "filter_city_id\030\010 \001(\r\022!\n\ttask_list\030\006 \003(\0132" +
+      "\016.DailyTaskInfoB\033\n\031emu.grasscutter.net.p" +
+      "rotob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

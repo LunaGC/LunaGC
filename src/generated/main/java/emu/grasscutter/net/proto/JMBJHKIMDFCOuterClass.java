@@ -41,14 +41,14 @@ public final class JMBJHKIMDFCOuterClass {
     /**
      * <code>map&lt;uint32, .OJEEKAIOFBO&gt; MHKGBAKJPDP = 3;</code>
      */
-    /* nullable */
-emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO getMHKGBAKJPDPOrDefault(
+
+    emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO getMHKGBAKJPDPOrDefault(
         int key,
-        /* nullable */
-emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue);
+        emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue);
     /**
      * <code>map&lt;uint32, .OJEEKAIOFBO&gt; MHKGBAKJPDP = 3;</code>
      */
+
     emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO getMHKGBAKJPDPOrThrow(
         int key);
   }
@@ -82,6 +82,57 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue);
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private JMBJHKIMDFC(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                mHKGBAKJPDP_ = com.google.protobuf.MapField.newMapField(
+                    MHKGBAKJPDPDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO>
+              mHKGBAKJPDP__ = input.readMessage(
+                  MHKGBAKJPDPDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              mHKGBAKJPDP_.getMutableMap().put(
+                  mHKGBAKJPDP__.getKey(), mHKGBAKJPDP__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -120,7 +171,6 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO.getDefaultInstance());
     }
-    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO> mHKGBAKJPDP_;
     private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO>
@@ -131,12 +181,14 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue);
       }
       return mHKGBAKJPDP_;
     }
+
     public int getMHKGBAKJPDPCount() {
       return internalGetMHKGBAKJPDP().getMap().size();
     }
     /**
      * <code>map&lt;uint32, .OJEEKAIOFBO&gt; MHKGBAKJPDP = 3;</code>
      */
+
     @java.lang.Override
     public boolean containsMHKGBAKJPDP(
         int key) {
@@ -155,6 +207,7 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue);
      * <code>map&lt;uint32, .OJEEKAIOFBO&gt; MHKGBAKJPDP = 3;</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO> getMHKGBAKJPDPMap() {
       return internalGetMHKGBAKJPDP().getMap();
     }
@@ -162,11 +215,10 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue);
      * <code>map&lt;uint32, .OJEEKAIOFBO&gt; MHKGBAKJPDP = 3;</code>
      */
     @java.lang.Override
-    public /* nullable */
-emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO getMHKGBAKJPDPOrDefault(
+
+    public emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO getMHKGBAKJPDPOrDefault(
         int key,
-        /* nullable */
-emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
+        emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
       
       java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO> map =
           internalGetMHKGBAKJPDP().getMap();
@@ -176,6 +228,7 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
      * <code>map&lt;uint32, .OJEEKAIOFBO&gt; MHKGBAKJPDP = 3;</code>
      */
     @java.lang.Override
+
     public emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO getMHKGBAKJPDPOrThrow(
         int key) {
       
@@ -207,7 +260,7 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
           internalGetMHKGBAKJPDP(),
           MHKGBAKJPDPDefaultEntryHolder.defaultEntry,
           3);
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -226,7 +279,7 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, mHKGBAKJPDP__);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -243,7 +296,7 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
 
       if (!internalGetMHKGBAKJPDP().equals(
           other.internalGetMHKGBAKJPDP())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -258,7 +311,7 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
         hash = (37 * hash) + MHKGBAKJPDP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetMHKGBAKJPDP().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -401,18 +454,22 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
 
       // Construct using emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         internalGetMutableMHKGBAKJPDP().clear();
         return this;
       }
@@ -440,17 +497,11 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
       @java.lang.Override
       public emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC buildPartial() {
         emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC result = new emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        int from_bitField0_ = bitField0_;
+        result.mHKGBAKJPDP_ = internalGetMHKGBAKJPDP();
+        result.mHKGBAKJPDP_.makeImmutable();
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.mHKGBAKJPDP_ = internalGetMHKGBAKJPDP();
-          result.mHKGBAKJPDP_.makeImmutable();
-        }
       }
 
       @java.lang.Override
@@ -499,8 +550,7 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
         if (other == emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC.getDefaultInstance()) return this;
         internalGetMutableMHKGBAKJPDP().mergeFrom(
             other.internalGetMHKGBAKJPDP());
-        bitField0_ |= 0x00000001;
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -515,39 +565,17 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 26: {
-                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO>
-                mHKGBAKJPDP__ = input.readMessage(
-                    MHKGBAKJPDPDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableMHKGBAKJPDP().getMutableMap().put(
-                    mHKGBAKJPDP__.getKey(), mHKGBAKJPDP__.getValue());
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 26
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -555,7 +583,7 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
       private com.google.protobuf.MapField<
           java.lang.Integer, emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO> mHKGBAKJPDP_;
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO>
-          internalGetMHKGBAKJPDP() {
+      internalGetMHKGBAKJPDP() {
         if (mHKGBAKJPDP_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               MHKGBAKJPDPDefaultEntryHolder.defaultEntry);
@@ -563,7 +591,8 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
         return mHKGBAKJPDP_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO>
-          internalGetMutableMHKGBAKJPDP() {
+      internalGetMutableMHKGBAKJPDP() {
+        onChanged();;
         if (mHKGBAKJPDP_ == null) {
           mHKGBAKJPDP_ = com.google.protobuf.MapField.newMapField(
               MHKGBAKJPDPDefaultEntryHolder.defaultEntry);
@@ -571,16 +600,16 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
         if (!mHKGBAKJPDP_.isMutable()) {
           mHKGBAKJPDP_ = mHKGBAKJPDP_.copy();
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
         return mHKGBAKJPDP_;
       }
+
       public int getMHKGBAKJPDPCount() {
         return internalGetMHKGBAKJPDP().getMap().size();
       }
       /**
        * <code>map&lt;uint32, .OJEEKAIOFBO&gt; MHKGBAKJPDP = 3;</code>
        */
+
       @java.lang.Override
       public boolean containsMHKGBAKJPDP(
           int key) {
@@ -599,6 +628,7 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
        * <code>map&lt;uint32, .OJEEKAIOFBO&gt; MHKGBAKJPDP = 3;</code>
        */
       @java.lang.Override
+
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO> getMHKGBAKJPDPMap() {
         return internalGetMHKGBAKJPDP().getMap();
       }
@@ -606,11 +636,10 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
        * <code>map&lt;uint32, .OJEEKAIOFBO&gt; MHKGBAKJPDP = 3;</code>
        */
       @java.lang.Override
-      public /* nullable */
-emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO getMHKGBAKJPDPOrDefault(
+
+      public emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO getMHKGBAKJPDPOrDefault(
           int key,
-          /* nullable */
-emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
+          emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
         
         java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO> map =
             internalGetMHKGBAKJPDP().getMap();
@@ -620,6 +649,7 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
        * <code>map&lt;uint32, .OJEEKAIOFBO&gt; MHKGBAKJPDP = 3;</code>
        */
       @java.lang.Override
+
       public emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO getMHKGBAKJPDPOrThrow(
           int key) {
         
@@ -630,8 +660,8 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
         }
         return map.get(key);
       }
+
       public Builder clearMHKGBAKJPDP() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         internalGetMutableMHKGBAKJPDP().getMutableMap()
             .clear();
         return this;
@@ -639,6 +669,7 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
       /**
        * <code>map&lt;uint32, .OJEEKAIOFBO&gt; MHKGBAKJPDP = 3;</code>
        */
+
       public Builder removeMHKGBAKJPDP(
           int key) {
         
@@ -651,8 +682,7 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO>
-          getMutableMHKGBAKJPDP() {
-        bitField0_ |= 0x00000001;
+      getMutableMHKGBAKJPDP() {
         return internalGetMutableMHKGBAKJPDP().getMutableMap();
       }
       /**
@@ -662,20 +692,19 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
           int key,
           emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO value) {
         
-        if (value == null) { throw new NullPointerException("map value"); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableMHKGBAKJPDP().getMutableMap()
             .put(key, value);
-        bitField0_ |= 0x00000001;
         return this;
       }
       /**
        * <code>map&lt;uint32, .OJEEKAIOFBO&gt; MHKGBAKJPDP = 3;</code>
        */
+
       public Builder putAllMHKGBAKJPDP(
           java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO> values) {
         internalGetMutableMHKGBAKJPDP().getMutableMap()
             .putAll(values);
-        bitField0_ |= 0x00000001;
         return this;
       }
       @java.lang.Override
@@ -711,18 +740,7 @@ emu.grasscutter.net.proto.OJEEKAIOFBOOuterClass.OJEEKAIOFBO defaultValue) {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new JMBJHKIMDFC(input, extensionRegistry);
       }
     };
 

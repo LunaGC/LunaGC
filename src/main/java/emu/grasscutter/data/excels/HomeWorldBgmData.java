@@ -11,15 +11,16 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @ResourceType(name = {"HomeWorldBgmExcelConfigData.json"})
 public class HomeWorldBgmData extends GameResource {
-    @SerializedName(value = "homeBgmId", alternate = "MJJENLEBKEF")
+    @SerializedName(value = "homeBgmId", alternate = {"MJJENLEBKEF", "KHCOCKKLNGA"})
     private int homeBgmId;
+    @SerializedName(value = "isDefaultUnlock", alternate = "DMAFAJNKPME")
     private boolean isDefaultUnlock;
-    private boolean NBIDHGOOCKD;
-    private boolean JJMNJMCCOKP;
+    private boolean ALNPIEOANEF;
+    private boolean FOKADLPKMDC;
     private int cityId;
     private int sortOrder;
-    private String GEGHMJBJMGB;
-    @SerializedName(value = "bgmNameTextMapHash", alternate = "LMLNBMJFFML")
+    private String FKPMAKMFAMN;
+    @SerializedName(value = "bgmNameTextMapHash", alternate = {"LMLNBMJFFML", "FJACDCGLBHD"})
     private long bgmNameTextMapHash;
 
     @Override

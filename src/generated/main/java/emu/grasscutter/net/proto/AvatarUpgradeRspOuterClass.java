@@ -19,13 +19,13 @@ public final class AvatarUpgradeRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 oldLevel = 3;</code>
+     * <code>uint32 old_level = 3;</code>
      * @return The oldLevel.
      */
     int getOldLevel();
 
     /**
-     * <code>uint32 curLevel = 15;</code>
+     * <code>uint32 cur_level = 15;</code>
      * @return The curLevel.
      */
     int getCurLevel();
@@ -43,45 +43,19 @@ public final class AvatarUpgradeRspOuterClass {
     long getAvatarGuid();
 
     /**
-     * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-     */
-    int getOldFightPropMapCount();
-    /**
-     * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-     */
-    boolean containsOldFightPropMap(
-        int key);
-    /**
-     * Use {@link #getOldFightPropMapMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.Integer, java.lang.Float>
-    getOldFightPropMap();
-    /**
-     * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-     */
-    java.util.Map<java.lang.Integer, java.lang.Float>
-    getOldFightPropMapMap();
-    /**
-     * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-     */
-
-    float getOldFightPropMapOrDefault(
-        int key,
-        float defaultValue);
-    /**
-     * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-     */
-
-    float getOldFightPropMapOrThrow(
-        int key);
-
-    /**
-     * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+     * <pre>
+     *GEKBLKPMJCG
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
      */
     int getCurFightPropMapCount();
     /**
-     * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+     * <pre>
+     *GEKBLKPMJCG
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
      */
     boolean containsCurFightPropMap(
         int key);
@@ -92,22 +66,88 @@ public final class AvatarUpgradeRspOuterClass {
     java.util.Map<java.lang.Integer, java.lang.Float>
     getCurFightPropMap();
     /**
-     * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+     * <pre>
+     *GEKBLKPMJCG
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Float>
     getCurFightPropMapMap();
     /**
-     * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+     * <pre>
+     *GEKBLKPMJCG
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
      */
 
     float getCurFightPropMapOrDefault(
         int key,
         float defaultValue);
     /**
-     * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+     * <pre>
+     *GEKBLKPMJCG
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
      */
 
     float getCurFightPropMapOrThrow(
+        int key);
+
+    /**
+     * <pre>
+     *AFEDLAOGFOC
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+     */
+    int getOldFightPropMapCount();
+    /**
+     * <pre>
+     *AFEDLAOGFOC
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+     */
+    boolean containsOldFightPropMap(
+        int key);
+    /**
+     * Use {@link #getOldFightPropMapMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Integer, java.lang.Float>
+    getOldFightPropMap();
+    /**
+     * <pre>
+     *AFEDLAOGFOC
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+     */
+    java.util.Map<java.lang.Integer, java.lang.Float>
+    getOldFightPropMapMap();
+    /**
+     * <pre>
+     *AFEDLAOGFOC
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+     */
+
+    float getOldFightPropMapOrDefault(
+        int key,
+        float defaultValue);
+    /**
+     * <pre>
+     *AFEDLAOGFOC
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+     */
+
+    float getOldFightPropMapOrThrow(
         int key);
   }
   /**
@@ -173,28 +213,28 @@ public final class AvatarUpgradeRspOuterClass {
             }
             case 58: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                oldFightPropMap_ = com.google.protobuf.MapField.newMapField(
-                    OldFightPropMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Float>
-              oldFightPropMap__ = input.readMessage(
-                  OldFightPropMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              oldFightPropMap_.getMutableMap().put(
-                  oldFightPropMap__.getKey(), oldFightPropMap__.getValue());
-              break;
-            }
-            case 98: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 curFightPropMap_ = com.google.protobuf.MapField.newMapField(
                     CurFightPropMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Float>
               curFightPropMap__ = input.readMessage(
                   CurFightPropMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               curFightPropMap_.getMutableMap().put(
                   curFightPropMap__.getKey(), curFightPropMap__.getValue());
+              break;
+            }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                oldFightPropMap_ = com.google.protobuf.MapField.newMapField(
+                    OldFightPropMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Float>
+              oldFightPropMap__ = input.readMessage(
+                  OldFightPropMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              oldFightPropMap_.getMutableMap().put(
+                  oldFightPropMap__.getKey(), oldFightPropMap__.getValue());
               break;
             }
             case 104: {
@@ -237,9 +277,9 @@ public final class AvatarUpgradeRspOuterClass {
         int number) {
       switch (number) {
         case 7:
-          return internalGetOldFightPropMap();
-        case 12:
           return internalGetCurFightPropMap();
+        case 12:
+          return internalGetOldFightPropMap();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -253,10 +293,10 @@ public final class AvatarUpgradeRspOuterClass {
               emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.AvatarUpgradeRsp.class, emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.AvatarUpgradeRsp.Builder.class);
     }
 
-    public static final int OLDLEVEL_FIELD_NUMBER = 3;
+    public static final int OLD_LEVEL_FIELD_NUMBER = 3;
     private int oldLevel_;
     /**
-     * <code>uint32 oldLevel = 3;</code>
+     * <code>uint32 old_level = 3;</code>
      * @return The oldLevel.
      */
     @java.lang.Override
@@ -264,10 +304,10 @@ public final class AvatarUpgradeRspOuterClass {
       return oldLevel_;
     }
 
-    public static final int CURLEVEL_FIELD_NUMBER = 15;
+    public static final int CUR_LEVEL_FIELD_NUMBER = 15;
     private int curLevel_;
     /**
-     * <code>uint32 curLevel = 15;</code>
+     * <code>uint32 cur_level = 15;</code>
      * @return The curLevel.
      */
     @java.lang.Override
@@ -297,88 +337,7 @@ public final class AvatarUpgradeRspOuterClass {
       return avatarGuid_;
     }
 
-    public static final int OLDFIGHTPROPMAP_FIELD_NUMBER = 7;
-    private static final class OldFightPropMapDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.Integer, java.lang.Float> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.Integer, java.lang.Float>newDefaultInstance(
-                  emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.internal_static_AvatarUpgradeRsp_OldFightPropMapEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.UINT32,
-                  0,
-                  com.google.protobuf.WireFormat.FieldType.FLOAT,
-                  0F);
-    }
-    private com.google.protobuf.MapField<
-        java.lang.Integer, java.lang.Float> oldFightPropMap_;
-    private com.google.protobuf.MapField<java.lang.Integer, java.lang.Float>
-    internalGetOldFightPropMap() {
-      if (oldFightPropMap_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            OldFightPropMapDefaultEntryHolder.defaultEntry);
-      }
-      return oldFightPropMap_;
-    }
-
-    public int getOldFightPropMapCount() {
-      return internalGetOldFightPropMap().getMap().size();
-    }
-    /**
-     * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-     */
-
-    @java.lang.Override
-    public boolean containsOldFightPropMap(
-        int key) {
-      
-      return internalGetOldFightPropMap().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getOldFightPropMapMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.Integer, java.lang.Float> getOldFightPropMap() {
-      return getOldFightPropMapMap();
-    }
-    /**
-     * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.Integer, java.lang.Float> getOldFightPropMapMap() {
-      return internalGetOldFightPropMap().getMap();
-    }
-    /**
-     * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-     */
-    @java.lang.Override
-
-    public float getOldFightPropMapOrDefault(
-        int key,
-        float defaultValue) {
-      
-      java.util.Map<java.lang.Integer, java.lang.Float> map =
-          internalGetOldFightPropMap().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-     */
-    @java.lang.Override
-
-    public float getOldFightPropMapOrThrow(
-        int key) {
-      
-      java.util.Map<java.lang.Integer, java.lang.Float> map =
-          internalGetOldFightPropMap().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-
-    public static final int CURFIGHTPROPMAP_FIELD_NUMBER = 12;
+    public static final int CUR_FIGHT_PROP_MAP_FIELD_NUMBER = 7;
     private static final class CurFightPropMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Float> defaultEntry =
@@ -405,7 +364,11 @@ public final class AvatarUpgradeRspOuterClass {
       return internalGetCurFightPropMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+     * <pre>
+     *GEKBLKPMJCG
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
      */
 
     @java.lang.Override
@@ -423,7 +386,11 @@ public final class AvatarUpgradeRspOuterClass {
       return getCurFightPropMapMap();
     }
     /**
-     * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+     * <pre>
+     *GEKBLKPMJCG
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
      */
     @java.lang.Override
 
@@ -431,7 +398,11 @@ public final class AvatarUpgradeRspOuterClass {
       return internalGetCurFightPropMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+     * <pre>
+     *GEKBLKPMJCG
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
      */
     @java.lang.Override
 
@@ -444,7 +415,11 @@ public final class AvatarUpgradeRspOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+     * <pre>
+     *GEKBLKPMJCG
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
      */
     @java.lang.Override
 
@@ -453,6 +428,103 @@ public final class AvatarUpgradeRspOuterClass {
       
       java.util.Map<java.lang.Integer, java.lang.Float> map =
           internalGetCurFightPropMap().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int OLD_FIGHT_PROP_MAP_FIELD_NUMBER = 12;
+    private static final class OldFightPropMapDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, java.lang.Float> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, java.lang.Float>newDefaultInstance(
+                  emu.grasscutter.net.proto.AvatarUpgradeRspOuterClass.internal_static_AvatarUpgradeRsp_OldFightPropMapEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.UINT32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.FLOAT,
+                  0F);
+    }
+    private com.google.protobuf.MapField<
+        java.lang.Integer, java.lang.Float> oldFightPropMap_;
+    private com.google.protobuf.MapField<java.lang.Integer, java.lang.Float>
+    internalGetOldFightPropMap() {
+      if (oldFightPropMap_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            OldFightPropMapDefaultEntryHolder.defaultEntry);
+      }
+      return oldFightPropMap_;
+    }
+
+    public int getOldFightPropMapCount() {
+      return internalGetOldFightPropMap().getMap().size();
+    }
+    /**
+     * <pre>
+     *AFEDLAOGFOC
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsOldFightPropMap(
+        int key) {
+      
+      return internalGetOldFightPropMap().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getOldFightPropMapMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, java.lang.Float> getOldFightPropMap() {
+      return getOldFightPropMapMap();
+    }
+    /**
+     * <pre>
+     *AFEDLAOGFOC
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.Integer, java.lang.Float> getOldFightPropMapMap() {
+      return internalGetOldFightPropMap().getMap();
+    }
+    /**
+     * <pre>
+     *AFEDLAOGFOC
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+     */
+    @java.lang.Override
+
+    public float getOldFightPropMapOrDefault(
+        int key,
+        float defaultValue) {
+      
+      java.util.Map<java.lang.Integer, java.lang.Float> map =
+          internalGetOldFightPropMap().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     *AFEDLAOGFOC
+     * </pre>
+     *
+     * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+     */
+    @java.lang.Override
+
+    public float getOldFightPropMapOrThrow(
+        int key) {
+      
+      java.util.Map<java.lang.Integer, java.lang.Float> map =
+          internalGetOldFightPropMap().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
@@ -482,14 +554,14 @@ public final class AvatarUpgradeRspOuterClass {
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
-          internalGetOldFightPropMap(),
-          OldFightPropMapDefaultEntryHolder.defaultEntry,
+          internalGetCurFightPropMap(),
+          CurFightPropMapDefaultEntryHolder.defaultEntry,
           7);
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
-          internalGetCurFightPropMap(),
-          CurFightPropMapDefaultEntryHolder.defaultEntry,
+          internalGetOldFightPropMap(),
+          OldFightPropMapDefaultEntryHolder.defaultEntry,
           12);
       if (avatarGuid_ != 0L) {
         output.writeUInt64(13, avatarGuid_);
@@ -515,16 +587,6 @@ public final class AvatarUpgradeRspOuterClass {
           .computeUInt32Size(3, oldLevel_);
       }
       for (java.util.Map.Entry<java.lang.Integer, java.lang.Float> entry
-           : internalGetOldFightPropMap().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Float>
-        oldFightPropMap__ = OldFightPropMapDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(7, oldFightPropMap__);
-      }
-      for (java.util.Map.Entry<java.lang.Integer, java.lang.Float> entry
            : internalGetCurFightPropMap().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Float>
         curFightPropMap__ = CurFightPropMapDefaultEntryHolder.defaultEntry.newBuilderForType()
@@ -532,7 +594,17 @@ public final class AvatarUpgradeRspOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(12, curFightPropMap__);
+            .computeMessageSize(7, curFightPropMap__);
+      }
+      for (java.util.Map.Entry<java.lang.Integer, java.lang.Float> entry
+           : internalGetOldFightPropMap().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Float>
+        oldFightPropMap__ = OldFightPropMapDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(12, oldFightPropMap__);
       }
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -565,10 +637,10 @@ public final class AvatarUpgradeRspOuterClass {
           != other.getRetcode()) return false;
       if (getAvatarGuid()
           != other.getAvatarGuid()) return false;
-      if (!internalGetOldFightPropMap().equals(
-          other.internalGetOldFightPropMap())) return false;
       if (!internalGetCurFightPropMap().equals(
           other.internalGetCurFightPropMap())) return false;
+      if (!internalGetOldFightPropMap().equals(
+          other.internalGetOldFightPropMap())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -580,22 +652,22 @@ public final class AvatarUpgradeRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + OLDLEVEL_FIELD_NUMBER;
+      hash = (37 * hash) + OLD_LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + getOldLevel();
-      hash = (37 * hash) + CURLEVEL_FIELD_NUMBER;
+      hash = (37 * hash) + CUR_LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + getCurLevel();
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
       hash = (37 * hash) + AVATAR_GUID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getAvatarGuid());
-      if (!internalGetOldFightPropMap().getMap().isEmpty()) {
-        hash = (37 * hash) + OLDFIGHTPROPMAP_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetOldFightPropMap().hashCode();
-      }
       if (!internalGetCurFightPropMap().getMap().isEmpty()) {
-        hash = (37 * hash) + CURFIGHTPROPMAP_FIELD_NUMBER;
+        hash = (37 * hash) + CUR_FIGHT_PROP_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetCurFightPropMap().hashCode();
+      }
+      if (!internalGetOldFightPropMap().getMap().isEmpty()) {
+        hash = (37 * hash) + OLD_FIGHT_PROP_MAP_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetOldFightPropMap().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -714,9 +786,9 @@ public final class AvatarUpgradeRspOuterClass {
           int number) {
         switch (number) {
           case 7:
-            return internalGetOldFightPropMap();
-          case 12:
             return internalGetCurFightPropMap();
+          case 12:
+            return internalGetOldFightPropMap();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -727,9 +799,9 @@ public final class AvatarUpgradeRspOuterClass {
           int number) {
         switch (number) {
           case 7:
-            return internalGetMutableOldFightPropMap();
-          case 12:
             return internalGetMutableCurFightPropMap();
+          case 12:
+            return internalGetMutableOldFightPropMap();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -769,8 +841,8 @@ public final class AvatarUpgradeRspOuterClass {
 
         avatarGuid_ = 0L;
 
-        internalGetMutableOldFightPropMap().clear();
         internalGetMutableCurFightPropMap().clear();
+        internalGetMutableOldFightPropMap().clear();
         return this;
       }
 
@@ -802,10 +874,10 @@ public final class AvatarUpgradeRspOuterClass {
         result.curLevel_ = curLevel_;
         result.retcode_ = retcode_;
         result.avatarGuid_ = avatarGuid_;
-        result.oldFightPropMap_ = internalGetOldFightPropMap();
-        result.oldFightPropMap_.makeImmutable();
         result.curFightPropMap_ = internalGetCurFightPropMap();
         result.curFightPropMap_.makeImmutable();
+        result.oldFightPropMap_ = internalGetOldFightPropMap();
+        result.oldFightPropMap_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -866,10 +938,10 @@ public final class AvatarUpgradeRspOuterClass {
         if (other.getAvatarGuid() != 0L) {
           setAvatarGuid(other.getAvatarGuid());
         }
-        internalGetMutableOldFightPropMap().mergeFrom(
-            other.internalGetOldFightPropMap());
         internalGetMutableCurFightPropMap().mergeFrom(
             other.internalGetCurFightPropMap());
+        internalGetMutableOldFightPropMap().mergeFrom(
+            other.internalGetOldFightPropMap());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -902,7 +974,7 @@ public final class AvatarUpgradeRspOuterClass {
 
       private int oldLevel_ ;
       /**
-       * <code>uint32 oldLevel = 3;</code>
+       * <code>uint32 old_level = 3;</code>
        * @return The oldLevel.
        */
       @java.lang.Override
@@ -910,7 +982,7 @@ public final class AvatarUpgradeRspOuterClass {
         return oldLevel_;
       }
       /**
-       * <code>uint32 oldLevel = 3;</code>
+       * <code>uint32 old_level = 3;</code>
        * @param value The oldLevel to set.
        * @return This builder for chaining.
        */
@@ -921,7 +993,7 @@ public final class AvatarUpgradeRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 oldLevel = 3;</code>
+       * <code>uint32 old_level = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearOldLevel() {
@@ -933,7 +1005,7 @@ public final class AvatarUpgradeRspOuterClass {
 
       private int curLevel_ ;
       /**
-       * <code>uint32 curLevel = 15;</code>
+       * <code>uint32 cur_level = 15;</code>
        * @return The curLevel.
        */
       @java.lang.Override
@@ -941,7 +1013,7 @@ public final class AvatarUpgradeRspOuterClass {
         return curLevel_;
       }
       /**
-       * <code>uint32 curLevel = 15;</code>
+       * <code>uint32 cur_level = 15;</code>
        * @param value The curLevel to set.
        * @return This builder for chaining.
        */
@@ -952,7 +1024,7 @@ public final class AvatarUpgradeRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 curLevel = 15;</code>
+       * <code>uint32 cur_level = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearCurLevel() {
@@ -1025,134 +1097,6 @@ public final class AvatarUpgradeRspOuterClass {
       }
 
       private com.google.protobuf.MapField<
-          java.lang.Integer, java.lang.Float> oldFightPropMap_;
-      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Float>
-      internalGetOldFightPropMap() {
-        if (oldFightPropMap_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              OldFightPropMapDefaultEntryHolder.defaultEntry);
-        }
-        return oldFightPropMap_;
-      }
-      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Float>
-      internalGetMutableOldFightPropMap() {
-        onChanged();;
-        if (oldFightPropMap_ == null) {
-          oldFightPropMap_ = com.google.protobuf.MapField.newMapField(
-              OldFightPropMapDefaultEntryHolder.defaultEntry);
-        }
-        if (!oldFightPropMap_.isMutable()) {
-          oldFightPropMap_ = oldFightPropMap_.copy();
-        }
-        return oldFightPropMap_;
-      }
-
-      public int getOldFightPropMapCount() {
-        return internalGetOldFightPropMap().getMap().size();
-      }
-      /**
-       * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-       */
-
-      @java.lang.Override
-      public boolean containsOldFightPropMap(
-          int key) {
-        
-        return internalGetOldFightPropMap().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getOldFightPropMapMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Float> getOldFightPropMap() {
-        return getOldFightPropMapMap();
-      }
-      /**
-       * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-       */
-      @java.lang.Override
-
-      public java.util.Map<java.lang.Integer, java.lang.Float> getOldFightPropMapMap() {
-        return internalGetOldFightPropMap().getMap();
-      }
-      /**
-       * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-       */
-      @java.lang.Override
-
-      public float getOldFightPropMapOrDefault(
-          int key,
-          float defaultValue) {
-        
-        java.util.Map<java.lang.Integer, java.lang.Float> map =
-            internalGetOldFightPropMap().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-       */
-      @java.lang.Override
-
-      public float getOldFightPropMapOrThrow(
-          int key) {
-        
-        java.util.Map<java.lang.Integer, java.lang.Float> map =
-            internalGetOldFightPropMap().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearOldFightPropMap() {
-        internalGetMutableOldFightPropMap().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-       */
-
-      public Builder removeOldFightPropMap(
-          int key) {
-        
-        internalGetMutableOldFightPropMap().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Float>
-      getMutableOldFightPropMap() {
-        return internalGetMutableOldFightPropMap().getMutableMap();
-      }
-      /**
-       * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-       */
-      public Builder putOldFightPropMap(
-          int key,
-          float value) {
-        
-        
-        internalGetMutableOldFightPropMap().getMutableMap()
-            .put(key, value);
-        return this;
-      }
-      /**
-       * <code>map&lt;uint32, float&gt; oldFightPropMap = 7;</code>
-       */
-
-      public Builder putAllOldFightPropMap(
-          java.util.Map<java.lang.Integer, java.lang.Float> values) {
-        internalGetMutableOldFightPropMap().getMutableMap()
-            .putAll(values);
-        return this;
-      }
-
-      private com.google.protobuf.MapField<
           java.lang.Integer, java.lang.Float> curFightPropMap_;
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Float>
       internalGetCurFightPropMap() {
@@ -1179,7 +1123,11 @@ public final class AvatarUpgradeRspOuterClass {
         return internalGetCurFightPropMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+       * <pre>
+       *GEKBLKPMJCG
+       * </pre>
+       *
+       * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
        */
 
       @java.lang.Override
@@ -1197,7 +1145,11 @@ public final class AvatarUpgradeRspOuterClass {
         return getCurFightPropMapMap();
       }
       /**
-       * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+       * <pre>
+       *GEKBLKPMJCG
+       * </pre>
+       *
+       * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
        */
       @java.lang.Override
 
@@ -1205,7 +1157,11 @@ public final class AvatarUpgradeRspOuterClass {
         return internalGetCurFightPropMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+       * <pre>
+       *GEKBLKPMJCG
+       * </pre>
+       *
+       * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
        */
       @java.lang.Override
 
@@ -1218,7 +1174,11 @@ public final class AvatarUpgradeRspOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+       * <pre>
+       *GEKBLKPMJCG
+       * </pre>
+       *
+       * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
        */
       @java.lang.Override
 
@@ -1239,7 +1199,11 @@ public final class AvatarUpgradeRspOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+       * <pre>
+       *GEKBLKPMJCG
+       * </pre>
+       *
+       * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
        */
 
       public Builder removeCurFightPropMap(
@@ -1258,7 +1222,11 @@ public final class AvatarUpgradeRspOuterClass {
         return internalGetMutableCurFightPropMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+       * <pre>
+       *GEKBLKPMJCG
+       * </pre>
+       *
+       * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
        */
       public Builder putCurFightPropMap(
           int key,
@@ -1270,12 +1238,172 @@ public final class AvatarUpgradeRspOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, float&gt; curFightPropMap = 12;</code>
+       * <pre>
+       *GEKBLKPMJCG
+       * </pre>
+       *
+       * <code>map&lt;uint32, float&gt; cur_fight_prop_map = 7;</code>
        */
 
       public Builder putAllCurFightPropMap(
           java.util.Map<java.lang.Integer, java.lang.Float> values) {
         internalGetMutableCurFightPropMap().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, java.lang.Float> oldFightPropMap_;
+      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Float>
+      internalGetOldFightPropMap() {
+        if (oldFightPropMap_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              OldFightPropMapDefaultEntryHolder.defaultEntry);
+        }
+        return oldFightPropMap_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Float>
+      internalGetMutableOldFightPropMap() {
+        onChanged();;
+        if (oldFightPropMap_ == null) {
+          oldFightPropMap_ = com.google.protobuf.MapField.newMapField(
+              OldFightPropMapDefaultEntryHolder.defaultEntry);
+        }
+        if (!oldFightPropMap_.isMutable()) {
+          oldFightPropMap_ = oldFightPropMap_.copy();
+        }
+        return oldFightPropMap_;
+      }
+
+      public int getOldFightPropMapCount() {
+        return internalGetOldFightPropMap().getMap().size();
+      }
+      /**
+       * <pre>
+       *AFEDLAOGFOC
+       * </pre>
+       *
+       * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsOldFightPropMap(
+          int key) {
+        
+        return internalGetOldFightPropMap().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getOldFightPropMapMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, java.lang.Float> getOldFightPropMap() {
+        return getOldFightPropMapMap();
+      }
+      /**
+       * <pre>
+       *AFEDLAOGFOC
+       * </pre>
+       *
+       * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.Integer, java.lang.Float> getOldFightPropMapMap() {
+        return internalGetOldFightPropMap().getMap();
+      }
+      /**
+       * <pre>
+       *AFEDLAOGFOC
+       * </pre>
+       *
+       * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+       */
+      @java.lang.Override
+
+      public float getOldFightPropMapOrDefault(
+          int key,
+          float defaultValue) {
+        
+        java.util.Map<java.lang.Integer, java.lang.Float> map =
+            internalGetOldFightPropMap().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       *AFEDLAOGFOC
+       * </pre>
+       *
+       * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+       */
+      @java.lang.Override
+
+      public float getOldFightPropMapOrThrow(
+          int key) {
+        
+        java.util.Map<java.lang.Integer, java.lang.Float> map =
+            internalGetOldFightPropMap().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearOldFightPropMap() {
+        internalGetMutableOldFightPropMap().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       *AFEDLAOGFOC
+       * </pre>
+       *
+       * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+       */
+
+      public Builder removeOldFightPropMap(
+          int key) {
+        
+        internalGetMutableOldFightPropMap().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, java.lang.Float>
+      getMutableOldFightPropMap() {
+        return internalGetMutableOldFightPropMap().getMutableMap();
+      }
+      /**
+       * <pre>
+       *AFEDLAOGFOC
+       * </pre>
+       *
+       * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+       */
+      public Builder putOldFightPropMap(
+          int key,
+          float value) {
+        
+        
+        internalGetMutableOldFightPropMap().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       *AFEDLAOGFOC
+       * </pre>
+       *
+       * <code>map&lt;uint32, float&gt; old_fight_prop_map = 12;</code>
+       */
+
+      public Builder putAllOldFightPropMap(
+          java.util.Map<java.lang.Integer, java.lang.Float> values) {
+        internalGetMutableOldFightPropMap().getMutableMap()
             .putAll(values);
         return this;
       }
@@ -1338,15 +1466,15 @@ public final class AvatarUpgradeRspOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_AvatarUpgradeRsp_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_AvatarUpgradeRsp_OldFightPropMapEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_AvatarUpgradeRsp_OldFightPropMapEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_AvatarUpgradeRsp_CurFightPropMapEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_AvatarUpgradeRsp_CurFightPropMapEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_AvatarUpgradeRsp_OldFightPropMapEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_AvatarUpgradeRsp_OldFightPropMapEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1356,16 +1484,17 @@ public final class AvatarUpgradeRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026AvatarUpgradeRsp.proto\"\316\002\n\020AvatarUpgra" +
-      "deRsp\022\020\n\010oldLevel\030\003 \001(\r\022\020\n\010curLevel\030\017 \001(" +
-      "\r\022\017\n\007retcode\030\001 \001(\005\022\023\n\013avatar_guid\030\r \001(\004\022" +
-      "?\n\017oldFightPropMap\030\007 \003(\0132&.AvatarUpgrade" +
-      "Rsp.OldFightPropMapEntry\022?\n\017curFightProp" +
-      "Map\030\014 \003(\0132&.AvatarUpgradeRsp.CurFightPro" +
-      "pMapEntry\0326\n\024OldFightPropMapEntry\022\013\n\003key" +
-      "\030\001 \001(\r\022\r\n\005value\030\002 \001(\002:\0028\001\0326\n\024CurFightPro" +
-      "pMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\002:\0028" +
-      "\001B\033\n\031emu.grasscutter.net.protob\006proto3"
+      "\n\026AvatarUpgradeRsp.proto\"\326\002\n\020AvatarUpgra" +
+      "deRsp\022\021\n\told_level\030\003 \001(\r\022\021\n\tcur_level\030\017 " +
+      "\001(\r\022\017\n\007retcode\030\001 \001(\005\022\023\n\013avatar_guid\030\r \001(" +
+      "\004\022B\n\022cur_fight_prop_map\030\007 \003(\0132&.AvatarUp" +
+      "gradeRsp.CurFightPropMapEntry\022B\n\022old_fig" +
+      "ht_prop_map\030\014 \003(\0132&.AvatarUpgradeRsp.Old" +
+      "FightPropMapEntry\0326\n\024CurFightPropMapEntr" +
+      "y\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\002:\0028\001\0326\n\024Old" +
+      "FightPropMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030" +
+      "\002 \001(\002:\0028\001B\033\n\031emu.grasscutter.net.protob\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1376,18 +1505,18 @@ public final class AvatarUpgradeRspOuterClass {
     internal_static_AvatarUpgradeRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AvatarUpgradeRsp_descriptor,
-        new java.lang.String[] { "OldLevel", "CurLevel", "Retcode", "AvatarGuid", "OldFightPropMap", "CurFightPropMap", });
-    internal_static_AvatarUpgradeRsp_OldFightPropMapEntry_descriptor =
-      internal_static_AvatarUpgradeRsp_descriptor.getNestedTypes().get(0);
-    internal_static_AvatarUpgradeRsp_OldFightPropMapEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_AvatarUpgradeRsp_OldFightPropMapEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        new java.lang.String[] { "OldLevel", "CurLevel", "Retcode", "AvatarGuid", "CurFightPropMap", "OldFightPropMap", });
     internal_static_AvatarUpgradeRsp_CurFightPropMapEntry_descriptor =
-      internal_static_AvatarUpgradeRsp_descriptor.getNestedTypes().get(1);
+      internal_static_AvatarUpgradeRsp_descriptor.getNestedTypes().get(0);
     internal_static_AvatarUpgradeRsp_CurFightPropMapEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AvatarUpgradeRsp_CurFightPropMapEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_AvatarUpgradeRsp_OldFightPropMapEntry_descriptor =
+      internal_static_AvatarUpgradeRsp_descriptor.getNestedTypes().get(1);
+    internal_static_AvatarUpgradeRsp_OldFightPropMapEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_AvatarUpgradeRsp_OldFightPropMapEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
   }
 

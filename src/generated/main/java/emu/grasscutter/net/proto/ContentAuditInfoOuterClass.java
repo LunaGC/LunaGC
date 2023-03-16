@@ -88,6 +88,70 @@ public final class ContentAuditInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private ContentAuditInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              content_ = s;
+              break;
+            }
+            case 24: {
+
+              submitCount_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              auditState_ = rawValue;
+              break;
+            }
+            case 40: {
+
+              submitLimit_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ContentAuditInfoOuterClass.internal_static_ContentAuditInfo_descriptor;
@@ -102,7 +166,7 @@ public final class ContentAuditInfoOuterClass {
     }
 
     public static final int ISOPEN_FIELD_NUMBER = 1;
-    private boolean isOpen_ = false;
+    private boolean isOpen_;
     /**
      * <code>bool isOpen = 1;</code>
      * @return The isOpen.
@@ -113,8 +177,7 @@ public final class ContentAuditInfoOuterClass {
     }
 
     public static final int CONTENT_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object content_ = "";
+    private volatile java.lang.Object content_;
     /**
      * <code>string content = 2;</code>
      * @return The content.
@@ -152,7 +215,7 @@ public final class ContentAuditInfoOuterClass {
     }
 
     public static final int SUBMITCOUNT_FIELD_NUMBER = 3;
-    private int submitCount_ = 0;
+    private int submitCount_;
     /**
      * <code>uint32 submitCount = 3;</code>
      * @return The submitCount.
@@ -163,7 +226,7 @@ public final class ContentAuditInfoOuterClass {
     }
 
     public static final int AUDITSTATE_FIELD_NUMBER = 4;
-    private int auditState_ = 0;
+    private int auditState_;
     /**
      * <code>.AuditState auditState = 4;</code>
      * @return The enum numeric value on the wire for auditState.
@@ -176,12 +239,13 @@ public final class ContentAuditInfoOuterClass {
      * @return The auditState.
      */
     @java.lang.Override public emu.grasscutter.net.proto.AuditStateOuterClass.AuditState getAuditState() {
-      emu.grasscutter.net.proto.AuditStateOuterClass.AuditState result = emu.grasscutter.net.proto.AuditStateOuterClass.AuditState.forNumber(auditState_);
+      @SuppressWarnings("deprecation")
+      emu.grasscutter.net.proto.AuditStateOuterClass.AuditState result = emu.grasscutter.net.proto.AuditStateOuterClass.AuditState.valueOf(auditState_);
       return result == null ? emu.grasscutter.net.proto.AuditStateOuterClass.AuditState.UNRECOGNIZED : result;
     }
 
     public static final int SUBMITLIMIT_FIELD_NUMBER = 5;
-    private int submitLimit_ = 0;
+    private int submitLimit_;
     /**
      * <code>uint32 submitLimit = 5;</code>
      * @return The submitLimit.
@@ -220,7 +284,7 @@ public final class ContentAuditInfoOuterClass {
       if (submitLimit_ != 0) {
         output.writeUInt32(5, submitLimit_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -248,7 +312,7 @@ public final class ContentAuditInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(5, submitLimit_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -272,7 +336,7 @@ public final class ContentAuditInfoOuterClass {
       if (auditState_ != other.auditState_) return false;
       if (getSubmitLimit()
           != other.getSubmitLimit()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -294,7 +358,7 @@ public final class ContentAuditInfoOuterClass {
       hash = (53 * hash) + auditState_;
       hash = (37 * hash) + SUBMITLIMIT_FIELD_NUMBER;
       hash = (53 * hash) + getSubmitLimit();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -411,23 +475,32 @@ public final class ContentAuditInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ContentAuditInfoOuterClass.ContentAuditInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         isOpen_ = false;
+
         content_ = "";
+
         submitCount_ = 0;
+
         auditState_ = 0;
+
         submitLimit_ = 0;
+
         return this;
       }
 
@@ -454,28 +527,13 @@ public final class ContentAuditInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ContentAuditInfoOuterClass.ContentAuditInfo buildPartial() {
         emu.grasscutter.net.proto.ContentAuditInfoOuterClass.ContentAuditInfo result = new emu.grasscutter.net.proto.ContentAuditInfoOuterClass.ContentAuditInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.isOpen_ = isOpen_;
+        result.content_ = content_;
+        result.submitCount_ = submitCount_;
+        result.auditState_ = auditState_;
+        result.submitLimit_ = submitLimit_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.ContentAuditInfoOuterClass.ContentAuditInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isOpen_ = isOpen_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.content_ = content_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.submitCount_ = submitCount_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.auditState_ = auditState_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.submitLimit_ = submitLimit_;
-        }
       }
 
       @java.lang.Override
@@ -527,7 +585,6 @@ public final class ContentAuditInfoOuterClass {
         }
         if (!other.getContent().isEmpty()) {
           content_ = other.content_;
-          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.getSubmitCount() != 0) {
@@ -539,7 +596,7 @@ public final class ContentAuditInfoOuterClass {
         if (other.getSubmitLimit() != 0) {
           setSubmitLimit(other.getSubmitLimit());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -554,58 +611,19 @@ public final class ContentAuditInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.ContentAuditInfoOuterClass.ContentAuditInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                isOpen_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 18: {
-                content_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 24: {
-                submitCount_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              case 32: {
-                auditState_ = input.readEnum();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              case 40: {
-                submitLimit_ = input.readUInt32();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 40
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.ContentAuditInfoOuterClass.ContentAuditInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private boolean isOpen_ ;
       /**
@@ -624,7 +642,6 @@ public final class ContentAuditInfoOuterClass {
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -633,7 +650,7 @@ public final class ContentAuditInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         isOpen_ = false;
         onChanged();
         return this;
@@ -680,9 +697,11 @@ public final class ContentAuditInfoOuterClass {
        */
       public Builder setContent(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         content_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -691,8 +710,8 @@ public final class ContentAuditInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearContent() {
+        
         content_ = getDefaultInstance().getContent();
-        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -703,10 +722,12 @@ public final class ContentAuditInfoOuterClass {
        */
       public Builder setContentBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         content_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -728,7 +749,6 @@ public final class ContentAuditInfoOuterClass {
       public Builder setSubmitCount(int value) {
         
         submitCount_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -737,7 +757,7 @@ public final class ContentAuditInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSubmitCount() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         submitCount_ = 0;
         onChanged();
         return this;
@@ -757,8 +777,8 @@ public final class ContentAuditInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder setAuditStateValue(int value) {
+        
         auditState_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -768,7 +788,8 @@ public final class ContentAuditInfoOuterClass {
        */
       @java.lang.Override
       public emu.grasscutter.net.proto.AuditStateOuterClass.AuditState getAuditState() {
-        emu.grasscutter.net.proto.AuditStateOuterClass.AuditState result = emu.grasscutter.net.proto.AuditStateOuterClass.AuditState.forNumber(auditState_);
+        @SuppressWarnings("deprecation")
+        emu.grasscutter.net.proto.AuditStateOuterClass.AuditState result = emu.grasscutter.net.proto.AuditStateOuterClass.AuditState.valueOf(auditState_);
         return result == null ? emu.grasscutter.net.proto.AuditStateOuterClass.AuditState.UNRECOGNIZED : result;
       }
       /**
@@ -780,7 +801,7 @@ public final class ContentAuditInfoOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000008;
+        
         auditState_ = value.getNumber();
         onChanged();
         return this;
@@ -790,7 +811,7 @@ public final class ContentAuditInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAuditState() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         auditState_ = 0;
         onChanged();
         return this;
@@ -813,7 +834,6 @@ public final class ContentAuditInfoOuterClass {
       public Builder setSubmitLimit(int value) {
         
         submitLimit_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -822,7 +842,7 @@ public final class ContentAuditInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSubmitLimit() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         submitLimit_ = 0;
         onChanged();
         return this;
@@ -860,18 +880,7 @@ public final class ContentAuditInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ContentAuditInfo(input, extensionRegistry);
       }
     };
 

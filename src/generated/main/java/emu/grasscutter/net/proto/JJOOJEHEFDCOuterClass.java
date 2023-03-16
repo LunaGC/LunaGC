@@ -67,6 +67,58 @@ public final class JJOOJEHEFDCOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private JJOOJEHEFDC(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              levelId_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            case 80: {
+
+              maxScore_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.JJOOJEHEFDCOuterClass.internal_static_JJOOJEHEFDC_descriptor;
@@ -81,7 +133,7 @@ public final class JJOOJEHEFDCOuterClass {
     }
 
     public static final int MAX_SCORE_FIELD_NUMBER = 10;
-    private int maxScore_ = 0;
+    private int maxScore_;
     /**
      * <code>uint32 max_score = 10;</code>
      * @return The maxScore.
@@ -92,7 +144,7 @@ public final class JJOOJEHEFDCOuterClass {
     }
 
     public static final int LEVEL_ID_FIELD_NUMBER = 1;
-    private int levelId_ = 0;
+    private int levelId_;
     /**
      * <code>uint32 level_id = 1;</code>
      * @return The levelId.
@@ -103,7 +155,7 @@ public final class JJOOJEHEFDCOuterClass {
     }
 
     public static final int IS_OPEN_FIELD_NUMBER = 8;
-    private boolean isOpen_ = false;
+    private boolean isOpen_;
     /**
      * <code>bool is_open = 8;</code>
      * @return The isOpen.
@@ -136,7 +188,7 @@ public final class JJOOJEHEFDCOuterClass {
       if (maxScore_ != 0) {
         output.writeUInt32(10, maxScore_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -157,7 +209,7 @@ public final class JJOOJEHEFDCOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(10, maxScore_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -178,7 +230,7 @@ public final class JJOOJEHEFDCOuterClass {
           != other.getLevelId()) return false;
       if (getIsOpen()
           != other.getIsOpen()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -196,7 +248,7 @@ public final class JJOOJEHEFDCOuterClass {
       hash = (37 * hash) + IS_OPEN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsOpen());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -317,21 +369,28 @@ public final class JJOOJEHEFDCOuterClass {
 
       // Construct using emu.grasscutter.net.proto.JJOOJEHEFDCOuterClass.JJOOJEHEFDC.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         maxScore_ = 0;
+
         levelId_ = 0;
+
         isOpen_ = false;
+
         return this;
       }
 
@@ -358,22 +417,11 @@ public final class JJOOJEHEFDCOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.JJOOJEHEFDCOuterClass.JJOOJEHEFDC buildPartial() {
         emu.grasscutter.net.proto.JJOOJEHEFDCOuterClass.JJOOJEHEFDC result = new emu.grasscutter.net.proto.JJOOJEHEFDCOuterClass.JJOOJEHEFDC(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.maxScore_ = maxScore_;
+        result.levelId_ = levelId_;
+        result.isOpen_ = isOpen_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.JJOOJEHEFDCOuterClass.JJOOJEHEFDC result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.maxScore_ = maxScore_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.levelId_ = levelId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.isOpen_ = isOpen_;
-        }
       }
 
       @java.lang.Override
@@ -429,7 +477,7 @@ public final class JJOOJEHEFDCOuterClass {
         if (other.getIsOpen() != false) {
           setIsOpen(other.getIsOpen());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -444,48 +492,19 @@ public final class JJOOJEHEFDCOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.JJOOJEHEFDCOuterClass.JJOOJEHEFDC parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                levelId_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 8
-              case 64: {
-                isOpen_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 64
-              case 80: {
-                maxScore_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 80
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.JJOOJEHEFDCOuterClass.JJOOJEHEFDC) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private int maxScore_ ;
       /**
@@ -504,7 +523,6 @@ public final class JJOOJEHEFDCOuterClass {
       public Builder setMaxScore(int value) {
         
         maxScore_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -513,7 +531,7 @@ public final class JJOOJEHEFDCOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMaxScore() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         maxScore_ = 0;
         onChanged();
         return this;
@@ -536,7 +554,6 @@ public final class JJOOJEHEFDCOuterClass {
       public Builder setLevelId(int value) {
         
         levelId_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -545,7 +562,7 @@ public final class JJOOJEHEFDCOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLevelId() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         levelId_ = 0;
         onChanged();
         return this;
@@ -568,7 +585,6 @@ public final class JJOOJEHEFDCOuterClass {
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -577,7 +593,7 @@ public final class JJOOJEHEFDCOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         isOpen_ = false;
         onChanged();
         return this;
@@ -615,18 +631,7 @@ public final class JJOOJEHEFDCOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new JJOOJEHEFDC(input, extensionRegistry);
       }
     };
 

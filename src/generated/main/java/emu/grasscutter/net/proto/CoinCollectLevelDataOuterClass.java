@@ -149,6 +149,119 @@ public final class CoinCollectLevelDataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private CoinCollectLevelData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+
+              isLevelOpen_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              oJJLJBLJLFH_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+
+              hKJLDMFKAOK_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+
+              eEBKEBLJBHP_ = input.readBool();
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                pACMOPNPBKN_ = new java.util.ArrayList<emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              pACMOPNPBKN_.add(
+                  input.readMessage(emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA.parser(), extensionRegistry));
+              break;
+            }
+            case 56: {
+
+              iJPCGGFPHOP_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              dDMCOCPKFAF_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              levelId_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+
+              jNMKLBKBICN_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              kNECNACPDNM_ = input.readBool();
+              break;
+            }
+            case 112: {
+
+              iEDBHNMGJOH_ = input.readBool();
+              break;
+            }
+            case 122: {
+              emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA.Builder subBuilder = null;
+              if (bCDIOAANAAI_ != null) {
+                subBuilder = bCDIOAANAAI_.toBuilder();
+              }
+              bCDIOAANAAI_ = input.readMessage(emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(bCDIOAANAAI_);
+                bCDIOAANAAI_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          pACMOPNPBKN_ = java.util.Collections.unmodifiableList(pACMOPNPBKN_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CoinCollectLevelDataOuterClass.internal_static_CoinCollectLevelData_descriptor;
@@ -163,7 +276,6 @@ public final class CoinCollectLevelDataOuterClass {
     }
 
     public static final int PACMOPNPBKN_FIELD_NUMBER = 6;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA> pACMOPNPBKN_;
     /**
      * <code>repeated .OMGFECMPJFA PACMOPNPBKN = 6;</code>
@@ -204,7 +316,7 @@ public final class CoinCollectLevelDataOuterClass {
     }
 
     public static final int LEVEL_ID_FIELD_NUMBER = 9;
-    private int levelId_ = 0;
+    private int levelId_;
     /**
      * <code>uint32 level_id = 9;</code>
      * @return The levelId.
@@ -237,11 +349,11 @@ public final class CoinCollectLevelDataOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFAOrBuilder getBCDIOAANAAIOrBuilder() {
-      return bCDIOAANAAI_ == null ? emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA.getDefaultInstance() : bCDIOAANAAI_;
+      return getBCDIOAANAAI();
     }
 
     public static final int JNMKLBKBICN_FIELD_NUMBER = 10;
-    private int jNMKLBKBICN_ = 0;
+    private int jNMKLBKBICN_;
     /**
      * <code>uint32 JNMKLBKBICN = 10;</code>
      * @return The jNMKLBKBICN.
@@ -252,7 +364,7 @@ public final class CoinCollectLevelDataOuterClass {
     }
 
     public static final int IEDBHNMGJOH_FIELD_NUMBER = 14;
-    private boolean iEDBHNMGJOH_ = false;
+    private boolean iEDBHNMGJOH_;
     /**
      * <code>bool IEDBHNMGJOH = 14;</code>
      * @return The iEDBHNMGJOH.
@@ -263,7 +375,7 @@ public final class CoinCollectLevelDataOuterClass {
     }
 
     public static final int KNECNACPDNM_FIELD_NUMBER = 13;
-    private boolean kNECNACPDNM_ = false;
+    private boolean kNECNACPDNM_;
     /**
      * <code>bool KNECNACPDNM = 13;</code>
      * @return The kNECNACPDNM.
@@ -274,7 +386,7 @@ public final class CoinCollectLevelDataOuterClass {
     }
 
     public static final int HKJLDMFKAOK_FIELD_NUMBER = 4;
-    private int hKJLDMFKAOK_ = 0;
+    private int hKJLDMFKAOK_;
     /**
      * <code>uint32 HKJLDMFKAOK = 4;</code>
      * @return The hKJLDMFKAOK.
@@ -285,7 +397,7 @@ public final class CoinCollectLevelDataOuterClass {
     }
 
     public static final int IJPCGGFPHOP_FIELD_NUMBER = 7;
-    private int iJPCGGFPHOP_ = 0;
+    private int iJPCGGFPHOP_;
     /**
      * <code>uint32 IJPCGGFPHOP = 7;</code>
      * @return The iJPCGGFPHOP.
@@ -296,7 +408,7 @@ public final class CoinCollectLevelDataOuterClass {
     }
 
     public static final int EEBKEBLJBHP_FIELD_NUMBER = 5;
-    private boolean eEBKEBLJBHP_ = false;
+    private boolean eEBKEBLJBHP_;
     /**
      * <code>bool EEBKEBLJBHP = 5;</code>
      * @return The eEBKEBLJBHP.
@@ -307,7 +419,7 @@ public final class CoinCollectLevelDataOuterClass {
     }
 
     public static final int OJJLJBLJLFH_FIELD_NUMBER = 3;
-    private int oJJLJBLJLFH_ = 0;
+    private int oJJLJBLJLFH_;
     /**
      * <code>uint32 OJJLJBLJLFH = 3;</code>
      * @return The oJJLJBLJLFH.
@@ -318,7 +430,7 @@ public final class CoinCollectLevelDataOuterClass {
     }
 
     public static final int IS_LEVEL_OPEN_FIELD_NUMBER = 2;
-    private boolean isLevelOpen_ = false;
+    private boolean isLevelOpen_;
     /**
      * <code>bool is_level_open = 2;</code>
      * @return The isLevelOpen.
@@ -329,7 +441,7 @@ public final class CoinCollectLevelDataOuterClass {
     }
 
     public static final int DDMCOCPKFAF_FIELD_NUMBER = 8;
-    private int dDMCOCPKFAF_ = 0;
+    private int dDMCOCPKFAF_;
     /**
      * <code>uint32 DDMCOCPKFAF = 8;</code>
      * @return The dDMCOCPKFAF.
@@ -389,7 +501,7 @@ public final class CoinCollectLevelDataOuterClass {
       if (bCDIOAANAAI_ != null) {
         output.writeMessage(15, getBCDIOAANAAI());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -446,7 +558,7 @@ public final class CoinCollectLevelDataOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getBCDIOAANAAI());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -488,7 +600,7 @@ public final class CoinCollectLevelDataOuterClass {
           != other.getIsLevelOpen()) return false;
       if (getDDMCOCPKFAF()
           != other.getDDMCOCPKFAF()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -531,7 +643,7 @@ public final class CoinCollectLevelDataOuterClass {
           getIsLevelOpen());
       hash = (37 * hash) + DDMCOCPKFAF_FIELD_NUMBER;
       hash = (53 * hash) + getDDMCOCPKFAF();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -652,40 +764,55 @@ public final class CoinCollectLevelDataOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CoinCollectLevelDataOuterClass.CoinCollectLevelData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPACMOPNPBKNFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         if (pACMOPNPBKNBuilder_ == null) {
           pACMOPNPBKN_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          pACMOPNPBKN_ = null;
           pACMOPNPBKNBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         levelId_ = 0;
-        bCDIOAANAAI_ = null;
-        if (bCDIOAANAAIBuilder_ != null) {
-          bCDIOAANAAIBuilder_.dispose();
+
+        if (bCDIOAANAAIBuilder_ == null) {
+          bCDIOAANAAI_ = null;
+        } else {
+          bCDIOAANAAI_ = null;
           bCDIOAANAAIBuilder_ = null;
         }
         jNMKLBKBICN_ = 0;
+
         iEDBHNMGJOH_ = false;
+
         kNECNACPDNM_ = false;
+
         hKJLDMFKAOK_ = 0;
+
         iJPCGGFPHOP_ = 0;
+
         eEBKEBLJBHP_ = false;
+
         oJJLJBLJLFH_ = 0;
+
         isLevelOpen_ = false;
+
         dDMCOCPKFAF_ = 0;
+
         return this;
       }
 
@@ -712,13 +839,7 @@ public final class CoinCollectLevelDataOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.CoinCollectLevelDataOuterClass.CoinCollectLevelData buildPartial() {
         emu.grasscutter.net.proto.CoinCollectLevelDataOuterClass.CoinCollectLevelData result = new emu.grasscutter.net.proto.CoinCollectLevelDataOuterClass.CoinCollectLevelData(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.CoinCollectLevelDataOuterClass.CoinCollectLevelData result) {
+        int from_bitField0_ = bitField0_;
         if (pACMOPNPBKNBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             pACMOPNPBKN_ = java.util.Collections.unmodifiableList(pACMOPNPBKN_);
@@ -728,45 +849,23 @@ public final class CoinCollectLevelDataOuterClass {
         } else {
           result.pACMOPNPBKN_ = pACMOPNPBKNBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.CoinCollectLevelDataOuterClass.CoinCollectLevelData result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.levelId_ = levelId_;
+        result.levelId_ = levelId_;
+        if (bCDIOAANAAIBuilder_ == null) {
+          result.bCDIOAANAAI_ = bCDIOAANAAI_;
+        } else {
+          result.bCDIOAANAAI_ = bCDIOAANAAIBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.bCDIOAANAAI_ = bCDIOAANAAIBuilder_ == null
-              ? bCDIOAANAAI_
-              : bCDIOAANAAIBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.jNMKLBKBICN_ = jNMKLBKBICN_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.iEDBHNMGJOH_ = iEDBHNMGJOH_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.kNECNACPDNM_ = kNECNACPDNM_;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.hKJLDMFKAOK_ = hKJLDMFKAOK_;
-        }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.iJPCGGFPHOP_ = iJPCGGFPHOP_;
-        }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.eEBKEBLJBHP_ = eEBKEBLJBHP_;
-        }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.oJJLJBLJLFH_ = oJJLJBLJLFH_;
-        }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
-          result.isLevelOpen_ = isLevelOpen_;
-        }
-        if (((from_bitField0_ & 0x00000800) != 0)) {
-          result.dDMCOCPKFAF_ = dDMCOCPKFAF_;
-        }
+        result.jNMKLBKBICN_ = jNMKLBKBICN_;
+        result.iEDBHNMGJOH_ = iEDBHNMGJOH_;
+        result.kNECNACPDNM_ = kNECNACPDNM_;
+        result.hKJLDMFKAOK_ = hKJLDMFKAOK_;
+        result.iJPCGGFPHOP_ = iJPCGGFPHOP_;
+        result.eEBKEBLJBHP_ = eEBKEBLJBHP_;
+        result.oJJLJBLJLFH_ = oJJLJBLJLFH_;
+        result.isLevelOpen_ = isLevelOpen_;
+        result.dDMCOCPKFAF_ = dDMCOCPKFAF_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -872,7 +971,7 @@ public final class CoinCollectLevelDataOuterClass {
         if (other.getDDMCOCPKFAF() != 0) {
           setDDMCOCPKFAF(other.getDDMCOCPKFAF());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -887,100 +986,17 @@ public final class CoinCollectLevelDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.CoinCollectLevelDataOuterClass.CoinCollectLevelData parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                isLevelOpen_ = input.readBool();
-                bitField0_ |= 0x00000400;
-                break;
-              } // case 16
-              case 24: {
-                oJJLJBLJLFH_ = input.readUInt32();
-                bitField0_ |= 0x00000200;
-                break;
-              } // case 24
-              case 32: {
-                hKJLDMFKAOK_ = input.readUInt32();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 32
-              case 40: {
-                eEBKEBLJBHP_ = input.readBool();
-                bitField0_ |= 0x00000100;
-                break;
-              } // case 40
-              case 50: {
-                emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA.parser(),
-                        extensionRegistry);
-                if (pACMOPNPBKNBuilder_ == null) {
-                  ensurePACMOPNPBKNIsMutable();
-                  pACMOPNPBKN_.add(m);
-                } else {
-                  pACMOPNPBKNBuilder_.addMessage(m);
-                }
-                break;
-              } // case 50
-              case 56: {
-                iJPCGGFPHOP_ = input.readUInt32();
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 56
-              case 64: {
-                dDMCOCPKFAF_ = input.readUInt32();
-                bitField0_ |= 0x00000800;
-                break;
-              } // case 64
-              case 72: {
-                levelId_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 72
-              case 80: {
-                jNMKLBKBICN_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 80
-              case 104: {
-                kNECNACPDNM_ = input.readBool();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 104
-              case 112: {
-                iEDBHNMGJOH_ = input.readBool();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 112
-              case 122: {
-                input.readMessage(
-                    getBCDIOAANAAIFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.CoinCollectLevelDataOuterClass.CoinCollectLevelData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1242,7 +1258,6 @@ public final class CoinCollectLevelDataOuterClass {
       public Builder setLevelId(int value) {
         
         levelId_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1251,7 +1266,7 @@ public final class CoinCollectLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLevelId() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         levelId_ = 0;
         onChanged();
         return this;
@@ -1265,7 +1280,7 @@ public final class CoinCollectLevelDataOuterClass {
        * @return Whether the bCDIOAANAAI field is set.
        */
       public boolean hasBCDIOAANAAI() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return bCDIOAANAAIBuilder_ != null || bCDIOAANAAI_ != null;
       }
       /**
        * <code>.OMGFECMPJFA BCDIOAANAAI = 15;</code>
@@ -1287,11 +1302,11 @@ public final class CoinCollectLevelDataOuterClass {
             throw new NullPointerException();
           }
           bCDIOAANAAI_ = value;
+          onChanged();
         } else {
           bCDIOAANAAIBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -1301,11 +1316,11 @@ public final class CoinCollectLevelDataOuterClass {
           emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA.Builder builderForValue) {
         if (bCDIOAANAAIBuilder_ == null) {
           bCDIOAANAAI_ = builderForValue.build();
+          onChanged();
         } else {
           bCDIOAANAAIBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -1313,38 +1328,38 @@ public final class CoinCollectLevelDataOuterClass {
        */
       public Builder mergeBCDIOAANAAI(emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA value) {
         if (bCDIOAANAAIBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            bCDIOAANAAI_ != null &&
-            bCDIOAANAAI_ != emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA.getDefaultInstance()) {
-            getBCDIOAANAAIBuilder().mergeFrom(value);
+          if (bCDIOAANAAI_ != null) {
+            bCDIOAANAAI_ =
+              emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA.newBuilder(bCDIOAANAAI_).mergeFrom(value).buildPartial();
           } else {
             bCDIOAANAAI_ = value;
           }
+          onChanged();
         } else {
           bCDIOAANAAIBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.OMGFECMPJFA BCDIOAANAAI = 15;</code>
        */
       public Builder clearBCDIOAANAAI() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        bCDIOAANAAI_ = null;
-        if (bCDIOAANAAIBuilder_ != null) {
-          bCDIOAANAAIBuilder_.dispose();
+        if (bCDIOAANAAIBuilder_ == null) {
+          bCDIOAANAAI_ = null;
+          onChanged();
+        } else {
+          bCDIOAANAAI_ = null;
           bCDIOAANAAIBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.OMGFECMPJFA BCDIOAANAAI = 15;</code>
        */
       public emu.grasscutter.net.proto.OMGFECMPJFAOuterClass.OMGFECMPJFA.Builder getBCDIOAANAAIBuilder() {
-        bitField0_ |= 0x00000004;
+        
         onChanged();
         return getBCDIOAANAAIFieldBuilder().getBuilder();
       }
@@ -1393,7 +1408,6 @@ public final class CoinCollectLevelDataOuterClass {
       public Builder setJNMKLBKBICN(int value) {
         
         jNMKLBKBICN_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1402,7 +1416,7 @@ public final class CoinCollectLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearJNMKLBKBICN() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         jNMKLBKBICN_ = 0;
         onChanged();
         return this;
@@ -1425,7 +1439,6 @@ public final class CoinCollectLevelDataOuterClass {
       public Builder setIEDBHNMGJOH(boolean value) {
         
         iEDBHNMGJOH_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1434,7 +1447,7 @@ public final class CoinCollectLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIEDBHNMGJOH() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         iEDBHNMGJOH_ = false;
         onChanged();
         return this;
@@ -1457,7 +1470,6 @@ public final class CoinCollectLevelDataOuterClass {
       public Builder setKNECNACPDNM(boolean value) {
         
         kNECNACPDNM_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1466,7 +1478,7 @@ public final class CoinCollectLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearKNECNACPDNM() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        
         kNECNACPDNM_ = false;
         onChanged();
         return this;
@@ -1489,7 +1501,6 @@ public final class CoinCollectLevelDataOuterClass {
       public Builder setHKJLDMFKAOK(int value) {
         
         hKJLDMFKAOK_ = value;
-        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1498,7 +1509,7 @@ public final class CoinCollectLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearHKJLDMFKAOK() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        
         hKJLDMFKAOK_ = 0;
         onChanged();
         return this;
@@ -1521,7 +1532,6 @@ public final class CoinCollectLevelDataOuterClass {
       public Builder setIJPCGGFPHOP(int value) {
         
         iJPCGGFPHOP_ = value;
-        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -1530,7 +1540,7 @@ public final class CoinCollectLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIJPCGGFPHOP() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        
         iJPCGGFPHOP_ = 0;
         onChanged();
         return this;
@@ -1553,7 +1563,6 @@ public final class CoinCollectLevelDataOuterClass {
       public Builder setEEBKEBLJBHP(boolean value) {
         
         eEBKEBLJBHP_ = value;
-        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -1562,7 +1571,7 @@ public final class CoinCollectLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearEEBKEBLJBHP() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        
         eEBKEBLJBHP_ = false;
         onChanged();
         return this;
@@ -1585,7 +1594,6 @@ public final class CoinCollectLevelDataOuterClass {
       public Builder setOJJLJBLJLFH(int value) {
         
         oJJLJBLJLFH_ = value;
-        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -1594,7 +1602,7 @@ public final class CoinCollectLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOJJLJBLJLFH() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        
         oJJLJBLJLFH_ = 0;
         onChanged();
         return this;
@@ -1617,7 +1625,6 @@ public final class CoinCollectLevelDataOuterClass {
       public Builder setIsLevelOpen(boolean value) {
         
         isLevelOpen_ = value;
-        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -1626,7 +1633,7 @@ public final class CoinCollectLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsLevelOpen() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        
         isLevelOpen_ = false;
         onChanged();
         return this;
@@ -1649,7 +1656,6 @@ public final class CoinCollectLevelDataOuterClass {
       public Builder setDDMCOCPKFAF(int value) {
         
         dDMCOCPKFAF_ = value;
-        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -1658,7 +1664,7 @@ public final class CoinCollectLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDDMCOCPKFAF() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        
         dDMCOCPKFAF_ = 0;
         onChanged();
         return this;
@@ -1696,18 +1702,7 @@ public final class CoinCollectLevelDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new CoinCollectLevelData(input, extensionRegistry);
       }
     };
 

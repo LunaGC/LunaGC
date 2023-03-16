@@ -25,17 +25,17 @@ public final class HomeResourceTakeHomeCoinRspOuterClass {
     int getRetcode();
 
     /**
-     * <code>.HomeResource homeCoin = 9;</code>
+     * <code>.HomeResource home_coin = 9;</code>
      * @return Whether the homeCoin field is set.
      */
     boolean hasHomeCoin();
     /**
-     * <code>.HomeResource homeCoin = 9;</code>
+     * <code>.HomeResource home_coin = 9;</code>
      * @return The homeCoin.
      */
     emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource getHomeCoin();
     /**
-     * <code>.HomeResource homeCoin = 9;</code>
+     * <code>.HomeResource home_coin = 9;</code>
      */
     emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResourceOrBuilder getHomeCoinOrBuilder();
   }
@@ -150,10 +150,10 @@ public final class HomeResourceTakeHomeCoinRspOuterClass {
       return retcode_;
     }
 
-    public static final int HOMECOIN_FIELD_NUMBER = 9;
+    public static final int HOME_COIN_FIELD_NUMBER = 9;
     private emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource homeCoin_;
     /**
-     * <code>.HomeResource homeCoin = 9;</code>
+     * <code>.HomeResource home_coin = 9;</code>
      * @return Whether the homeCoin field is set.
      */
     @java.lang.Override
@@ -161,7 +161,7 @@ public final class HomeResourceTakeHomeCoinRspOuterClass {
       return homeCoin_ != null;
     }
     /**
-     * <code>.HomeResource homeCoin = 9;</code>
+     * <code>.HomeResource home_coin = 9;</code>
      * @return The homeCoin.
      */
     @java.lang.Override
@@ -169,7 +169,7 @@ public final class HomeResourceTakeHomeCoinRspOuterClass {
       return homeCoin_ == null ? emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource.getDefaultInstance() : homeCoin_;
     }
     /**
-     * <code>.HomeResource homeCoin = 9;</code>
+     * <code>.HomeResource home_coin = 9;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResourceOrBuilder getHomeCoinOrBuilder() {
@@ -249,7 +249,7 @@ public final class HomeResourceTakeHomeCoinRspOuterClass {
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
       if (hasHomeCoin()) {
-        hash = (37 * hash) + HOMECOIN_FIELD_NUMBER;
+        hash = (37 * hash) + HOME_COIN_FIELD_NUMBER;
         hash = (53 * hash) + getHomeCoin().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
@@ -548,14 +548,14 @@ public final class HomeResourceTakeHomeCoinRspOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource, emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource.Builder, emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResourceOrBuilder> homeCoinBuilder_;
       /**
-       * <code>.HomeResource homeCoin = 9;</code>
+       * <code>.HomeResource home_coin = 9;</code>
        * @return Whether the homeCoin field is set.
        */
       public boolean hasHomeCoin() {
         return homeCoinBuilder_ != null || homeCoin_ != null;
       }
       /**
-       * <code>.HomeResource homeCoin = 9;</code>
+       * <code>.HomeResource home_coin = 9;</code>
        * @return The homeCoin.
        */
       public emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource getHomeCoin() {
@@ -566,7 +566,7 @@ public final class HomeResourceTakeHomeCoinRspOuterClass {
         }
       }
       /**
-       * <code>.HomeResource homeCoin = 9;</code>
+       * <code>.HomeResource home_coin = 9;</code>
        */
       public Builder setHomeCoin(emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource value) {
         if (homeCoinBuilder_ == null) {
@@ -582,7 +582,7 @@ public final class HomeResourceTakeHomeCoinRspOuterClass {
         return this;
       }
       /**
-       * <code>.HomeResource homeCoin = 9;</code>
+       * <code>.HomeResource home_coin = 9;</code>
        */
       public Builder setHomeCoin(
           emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource.Builder builderForValue) {
@@ -596,7 +596,7 @@ public final class HomeResourceTakeHomeCoinRspOuterClass {
         return this;
       }
       /**
-       * <code>.HomeResource homeCoin = 9;</code>
+       * <code>.HomeResource home_coin = 9;</code>
        */
       public Builder mergeHomeCoin(emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource value) {
         if (homeCoinBuilder_ == null) {
@@ -614,7 +614,7 @@ public final class HomeResourceTakeHomeCoinRspOuterClass {
         return this;
       }
       /**
-       * <code>.HomeResource homeCoin = 9;</code>
+       * <code>.HomeResource home_coin = 9;</code>
        */
       public Builder clearHomeCoin() {
         if (homeCoinBuilder_ == null) {
@@ -628,7 +628,7 @@ public final class HomeResourceTakeHomeCoinRspOuterClass {
         return this;
       }
       /**
-       * <code>.HomeResource homeCoin = 9;</code>
+       * <code>.HomeResource home_coin = 9;</code>
        */
       public emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource.Builder getHomeCoinBuilder() {
         
@@ -636,7 +636,7 @@ public final class HomeResourceTakeHomeCoinRspOuterClass {
         return getHomeCoinFieldBuilder().getBuilder();
       }
       /**
-       * <code>.HomeResource homeCoin = 9;</code>
+       * <code>.HomeResource home_coin = 9;</code>
        */
       public emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResourceOrBuilder getHomeCoinOrBuilder() {
         if (homeCoinBuilder_ != null) {
@@ -647,7 +647,7 @@ public final class HomeResourceTakeHomeCoinRspOuterClass {
         }
       }
       /**
-       * <code>.HomeResource homeCoin = 9;</code>
+       * <code>.HomeResource home_coin = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource, emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource.Builder, emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResourceOrBuilder> 
@@ -730,10 +730,10 @@ public final class HomeResourceTakeHomeCoinRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!HomeResourceTakeHomeCoinRsp.proto\032\022Hom" +
-      "eResource.proto\"O\n\033HomeResourceTakeHomeC" +
-      "oinRsp\022\017\n\007retcode\030\003 \001(\005\022\037\n\010homeCoin\030\t \001(" +
-      "\0132\r.HomeResourceB\033\n\031emu.grasscutter.net." +
-      "protob\006proto3"
+      "eResource.proto\"P\n\033HomeResourceTakeHomeC" +
+      "oinRsp\022\017\n\007retcode\030\003 \001(\005\022 \n\thome_coin\030\t \001" +
+      "(\0132\r.HomeResourceB\033\n\031emu.grasscutter.net" +
+      ".protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

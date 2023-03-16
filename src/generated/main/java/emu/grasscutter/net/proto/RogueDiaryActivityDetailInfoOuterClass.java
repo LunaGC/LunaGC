@@ -101,6 +101,79 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private RogueDiaryActivityDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+
+              isContentClosed_ = input.readBool();
+              break;
+            }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                stageList_ = new java.util.ArrayList<emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              stageList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 112: {
+
+              isHaveProgress_ = input.readBool();
+              break;
+            }
+            case 122: {
+              emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress.Builder subBuilder = null;
+              if (curProgress_ != null) {
+                subBuilder = curProgress_.toBuilder();
+              }
+              curProgress_ = input.readMessage(emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(curProgress_);
+                curProgress_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          stageList_ = java.util.Collections.unmodifiableList(stageList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.RogueDiaryActivityDetailInfoOuterClass.internal_static_RogueDiaryActivityDetailInfo_descriptor;
@@ -137,11 +210,11 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgressOrBuilder getCurProgressOrBuilder() {
-      return curProgress_ == null ? emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress.getDefaultInstance() : curProgress_;
+      return getCurProgress();
     }
 
     public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 3;
-    private boolean isContentClosed_ = false;
+    private boolean isContentClosed_;
     /**
      * <code>bool is_content_closed = 3;</code>
      * @return The isContentClosed.
@@ -152,7 +225,6 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
     }
 
     public static final int STAGE_LIST_FIELD_NUMBER = 13;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo> stageList_;
     /**
      * <code>repeated .RogueDiaryStageInfo stage_list = 13;</code>
@@ -193,7 +265,7 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
     }
 
     public static final int IS_HAVE_PROGRESS_FIELD_NUMBER = 14;
-    private boolean isHaveProgress_ = false;
+    private boolean isHaveProgress_;
     /**
      * <code>bool is_have_progress = 14;</code>
      * @return The isHaveProgress.
@@ -229,7 +301,7 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
       if (curProgress_ != null) {
         output.writeMessage(15, getCurProgress());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -254,7 +326,7 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getCurProgress());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -280,7 +352,7 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
           .equals(other.getStageListList())) return false;
       if (getIsHaveProgress()
           != other.getIsHaveProgress()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -305,7 +377,7 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
       hash = (37 * hash) + IS_HAVE_PROGRESS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsHaveProgress());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -426,32 +498,39 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.RogueDiaryActivityDetailInfoOuterClass.RogueDiaryActivityDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStageListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        curProgress_ = null;
-        if (curProgressBuilder_ != null) {
-          curProgressBuilder_.dispose();
+        if (curProgressBuilder_ == null) {
+          curProgress_ = null;
+        } else {
+          curProgress_ = null;
           curProgressBuilder_ = null;
         }
         isContentClosed_ = false;
+
         if (stageListBuilder_ == null) {
           stageList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          stageList_ = null;
           stageListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
         isHaveProgress_ = false;
+
         return this;
       }
 
@@ -478,37 +557,25 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.RogueDiaryActivityDetailInfoOuterClass.RogueDiaryActivityDetailInfo buildPartial() {
         emu.grasscutter.net.proto.RogueDiaryActivityDetailInfoOuterClass.RogueDiaryActivityDetailInfo result = new emu.grasscutter.net.proto.RogueDiaryActivityDetailInfoOuterClass.RogueDiaryActivityDetailInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.RogueDiaryActivityDetailInfoOuterClass.RogueDiaryActivityDetailInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (curProgressBuilder_ == null) {
+          result.curProgress_ = curProgress_;
+        } else {
+          result.curProgress_ = curProgressBuilder_.build();
+        }
+        result.isContentClosed_ = isContentClosed_;
         if (stageListBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             stageList_ = java.util.Collections.unmodifiableList(stageList_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.stageList_ = stageList_;
         } else {
           result.stageList_ = stageListBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.RogueDiaryActivityDetailInfoOuterClass.RogueDiaryActivityDetailInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.curProgress_ = curProgressBuilder_ == null
-              ? curProgress_
-              : curProgressBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.isContentClosed_ = isContentClosed_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.isHaveProgress_ = isHaveProgress_;
-        }
+        result.isHaveProgress_ = isHaveProgress_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -565,7 +632,7 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
           if (!other.stageList_.isEmpty()) {
             if (stageList_.isEmpty()) {
               stageList_ = other.stageList_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureStageListIsMutable();
               stageList_.addAll(other.stageList_);
@@ -578,7 +645,7 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
               stageListBuilder_.dispose();
               stageListBuilder_ = null;
               stageList_ = other.stageList_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               stageListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getStageListFieldBuilder() : null;
@@ -590,7 +657,7 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
         if (other.getIsHaveProgress() != false) {
           setIsHaveProgress(other.getIsHaveProgress());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -605,60 +672,17 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.RogueDiaryActivityDetailInfoOuterClass.RogueDiaryActivityDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 24: {
-                isContentClosed_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 24
-              case 106: {
-                emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo.parser(),
-                        extensionRegistry);
-                if (stageListBuilder_ == null) {
-                  ensureStageListIsMutable();
-                  stageList_.add(m);
-                } else {
-                  stageListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 106
-              case 112: {
-                isHaveProgress_ = input.readBool();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 112
-              case 122: {
-                input.readMessage(
-                    getCurProgressFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.RogueDiaryActivityDetailInfoOuterClass.RogueDiaryActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -671,7 +695,7 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
        * @return Whether the curProgress field is set.
        */
       public boolean hasCurProgress() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return curProgressBuilder_ != null || curProgress_ != null;
       }
       /**
        * <code>.RogueDiaryProgress cur_progress = 15;</code>
@@ -693,11 +717,11 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
             throw new NullPointerException();
           }
           curProgress_ = value;
+          onChanged();
         } else {
           curProgressBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -707,11 +731,11 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
           emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress.Builder builderForValue) {
         if (curProgressBuilder_ == null) {
           curProgress_ = builderForValue.build();
+          onChanged();
         } else {
           curProgressBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -719,38 +743,38 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
        */
       public Builder mergeCurProgress(emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress value) {
         if (curProgressBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            curProgress_ != null &&
-            curProgress_ != emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress.getDefaultInstance()) {
-            getCurProgressBuilder().mergeFrom(value);
+          if (curProgress_ != null) {
+            curProgress_ =
+              emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress.newBuilder(curProgress_).mergeFrom(value).buildPartial();
           } else {
             curProgress_ = value;
           }
+          onChanged();
         } else {
           curProgressBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.RogueDiaryProgress cur_progress = 15;</code>
        */
       public Builder clearCurProgress() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        curProgress_ = null;
-        if (curProgressBuilder_ != null) {
-          curProgressBuilder_.dispose();
+        if (curProgressBuilder_ == null) {
+          curProgress_ = null;
+          onChanged();
+        } else {
+          curProgress_ = null;
           curProgressBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.RogueDiaryProgress cur_progress = 15;</code>
        */
       public emu.grasscutter.net.proto.RogueDiaryProgressOuterClass.RogueDiaryProgress.Builder getCurProgressBuilder() {
-        bitField0_ |= 0x00000001;
+        
         onChanged();
         return getCurProgressFieldBuilder().getBuilder();
       }
@@ -799,7 +823,6 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
       public Builder setIsContentClosed(boolean value) {
         
         isContentClosed_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -808,7 +831,7 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsContentClosed() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         isContentClosed_ = false;
         onChanged();
         return this;
@@ -817,9 +840,9 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
       private java.util.List<emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo> stageList_ =
         java.util.Collections.emptyList();
       private void ensureStageListIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           stageList_ = new java.util.ArrayList<emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo>(stageList_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -969,7 +992,7 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
       public Builder clearStageList() {
         if (stageListBuilder_ == null) {
           stageList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           stageListBuilder_.clear();
@@ -1046,7 +1069,7 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
           stageListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo, emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfo.Builder, emu.grasscutter.net.proto.RogueDiaryStageInfoOuterClass.RogueDiaryStageInfoOrBuilder>(
                   stageList_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           stageList_ = null;
@@ -1071,7 +1094,6 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
       public Builder setIsHaveProgress(boolean value) {
         
         isHaveProgress_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1080,7 +1102,7 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsHaveProgress() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         isHaveProgress_ = false;
         onChanged();
         return this;
@@ -1118,18 +1140,7 @@ public final class RogueDiaryActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new RogueDiaryActivityDetailInfo(input, extensionRegistry);
       }
     };
 

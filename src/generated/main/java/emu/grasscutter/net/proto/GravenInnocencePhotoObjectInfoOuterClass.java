@@ -67,6 +67,58 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private GravenInnocencePhotoObjectInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 56: {
+
+              finishTime_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              objectId_ = input.readUInt32();
+              break;
+            }
+            case 104: {
+
+              param_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GravenInnocencePhotoObjectInfoOuterClass.internal_static_GravenInnocencePhotoObjectInfo_descriptor;
@@ -81,7 +133,7 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
     }
 
     public static final int FINISH_TIME_FIELD_NUMBER = 7;
-    private int finishTime_ = 0;
+    private int finishTime_;
     /**
      * <code>uint32 finish_time = 7;</code>
      * @return The finishTime.
@@ -92,7 +144,7 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
     }
 
     public static final int PARAM_FIELD_NUMBER = 13;
-    private int param_ = 0;
+    private int param_;
     /**
      * <code>uint32 param = 13;</code>
      * @return The param.
@@ -103,7 +155,7 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
     }
 
     public static final int OBJECT_ID_FIELD_NUMBER = 8;
-    private int objectId_ = 0;
+    private int objectId_;
     /**
      * <code>uint32 object_id = 8;</code>
      * @return The objectId.
@@ -136,7 +188,7 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
       if (param_ != 0) {
         output.writeUInt32(13, param_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -157,7 +209,7 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(13, param_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -178,7 +230,7 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
           != other.getParam()) return false;
       if (getObjectId()
           != other.getObjectId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -195,7 +247,7 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
       hash = (53 * hash) + getParam();
       hash = (37 * hash) + OBJECT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getObjectId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -316,21 +368,28 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GravenInnocencePhotoObjectInfoOuterClass.GravenInnocencePhotoObjectInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         finishTime_ = 0;
+
         param_ = 0;
+
         objectId_ = 0;
+
         return this;
       }
 
@@ -357,22 +416,11 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.GravenInnocencePhotoObjectInfoOuterClass.GravenInnocencePhotoObjectInfo buildPartial() {
         emu.grasscutter.net.proto.GravenInnocencePhotoObjectInfoOuterClass.GravenInnocencePhotoObjectInfo result = new emu.grasscutter.net.proto.GravenInnocencePhotoObjectInfoOuterClass.GravenInnocencePhotoObjectInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.finishTime_ = finishTime_;
+        result.param_ = param_;
+        result.objectId_ = objectId_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.GravenInnocencePhotoObjectInfoOuterClass.GravenInnocencePhotoObjectInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.finishTime_ = finishTime_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.param_ = param_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.objectId_ = objectId_;
-        }
       }
 
       @java.lang.Override
@@ -428,7 +476,7 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
         if (other.getObjectId() != 0) {
           setObjectId(other.getObjectId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -443,48 +491,19 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.GravenInnocencePhotoObjectInfoOuterClass.GravenInnocencePhotoObjectInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 56: {
-                finishTime_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 56
-              case 64: {
-                objectId_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 64
-              case 104: {
-                param_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 104
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.GravenInnocencePhotoObjectInfoOuterClass.GravenInnocencePhotoObjectInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private int finishTime_ ;
       /**
@@ -503,7 +522,6 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
       public Builder setFinishTime(int value) {
         
         finishTime_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -512,7 +530,7 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFinishTime() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         finishTime_ = 0;
         onChanged();
         return this;
@@ -535,7 +553,6 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
       public Builder setParam(int value) {
         
         param_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -544,7 +561,7 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearParam() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         param_ = 0;
         onChanged();
         return this;
@@ -567,7 +584,6 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
       public Builder setObjectId(int value) {
         
         objectId_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -576,7 +592,7 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearObjectId() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         objectId_ = 0;
         onChanged();
         return this;
@@ -614,18 +630,7 @@ public final class GravenInnocencePhotoObjectInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new GravenInnocencePhotoObjectInfo(input, extensionRegistry);
       }
     };
 

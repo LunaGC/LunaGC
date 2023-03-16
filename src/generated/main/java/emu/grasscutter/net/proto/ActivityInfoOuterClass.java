@@ -77,17 +77,29 @@ public final class ActivityInfoOuterClass {
         int key);
 
     /**
-     * <code>repeated uint32 meetCondList = 2;</code>
+     * <pre>
+     *PAGIONJOCJN
+     * </pre>
+     *
+     * <code>repeated uint32 meet_cond_list = 2;</code>
      * @return A list containing the meetCondList.
      */
     java.util.List<java.lang.Integer> getMeetCondListList();
     /**
-     * <code>repeated uint32 meetCondList = 2;</code>
+     * <pre>
+     *PAGIONJOCJN
+     * </pre>
+     *
+     * <code>repeated uint32 meet_cond_list = 2;</code>
      * @return The count of meetCondList.
      */
     int getMeetCondListCount();
     /**
-     * <code>repeated uint32 meetCondList = 2;</code>
+     * <pre>
+     *PAGIONJOCJN
+     * </pre>
+     *
+     * <code>repeated uint32 meet_cond_list = 2;</code>
      * @param index The index of the element to return.
      * @return The meetCondList at the given index.
      */
@@ -130,17 +142,29 @@ public final class ActivityInfoOuterClass {
         int index);
 
     /**
-     * <code>repeated uint32 expireCondList = 13;</code>
+     * <pre>
+     * LGCJBENHFOB
+     * </pre>
+     *
+     * <code>repeated uint32 expire_cond_list = 13;</code>
      * @return A list containing the expireCondList.
      */
     java.util.List<java.lang.Integer> getExpireCondListList();
     /**
-     * <code>repeated uint32 expireCondList = 13;</code>
+     * <pre>
+     * LGCJBENHFOB
+     * </pre>
+     *
+     * <code>repeated uint32 expire_cond_list = 13;</code>
      * @return The count of expireCondList.
      */
     int getExpireCondListCount();
     /**
-     * <code>repeated uint32 expireCondList = 13;</code>
+     * <pre>
+     * LGCJBENHFOB
+     * </pre>
+     *
+     * <code>repeated uint32 expire_cond_list = 13;</code>
      * @param index The index of the element to return.
      * @return The expireCondList at the given index.
      */
@@ -153,21 +177,33 @@ public final class ActivityInfoOuterClass {
     boolean getIsFinished();
 
     /**
-     * <code>repeated uint32 EOPFKDBBOII = 894;</code>
-     * @return A list containing the eOPFKDBBOII.
+     * <pre>
+     *EOPFKDBBOII
+     * </pre>
+     *
+     * <code>repeated uint32 taken_reward_list = 894;</code>
+     * @return A list containing the takenRewardList.
      */
-    java.util.List<java.lang.Integer> getEOPFKDBBOIIList();
+    java.util.List<java.lang.Integer> getTakenRewardListList();
     /**
-     * <code>repeated uint32 EOPFKDBBOII = 894;</code>
-     * @return The count of eOPFKDBBOII.
+     * <pre>
+     *EOPFKDBBOII
+     * </pre>
+     *
+     * <code>repeated uint32 taken_reward_list = 894;</code>
+     * @return The count of takenRewardList.
      */
-    int getEOPFKDBBOIICount();
+    int getTakenRewardListCount();
     /**
-     * <code>repeated uint32 EOPFKDBBOII = 894;</code>
+     * <pre>
+     *EOPFKDBBOII
+     * </pre>
+     *
+     * <code>repeated uint32 taken_reward_list = 894;</code>
      * @param index The index of the element to return.
-     * @return The eOPFKDBBOII at the given index.
+     * @return The takenRewardList at the given index.
      */
-    int getEOPFKDBBOII(int index);
+    int getTakenRewardList(int index);
 
     /**
      * <code>repeated .ActivityWatcherInfo watcher_info_list = 8;</code>
@@ -194,7 +230,11 @@ public final class ActivityInfoOuterClass {
         int index);
 
     /**
-     * <code>uint32 activityType = 5;</code>
+     * <pre>
+     * KMOFHMKLGHD
+     * </pre>
+     *
+     * <code>uint32 activity_type = 5;</code>
      * @return The activityType.
      */
     int getActivityType();
@@ -264,21 +304,21 @@ public final class ActivityInfoOuterClass {
     int getBeginTime();
 
     /**
-     * <code>repeated uint32 takenRewardList = 778;</code>
-     * @return A list containing the takenRewardList.
+     * <code>repeated uint32 DDBJAKPEPLC = 778;</code>
+     * @return A list containing the dDBJAKPEPLC.
      */
-    java.util.List<java.lang.Integer> getTakenRewardListList();
+    java.util.List<java.lang.Integer> getDDBJAKPEPLCList();
     /**
-     * <code>repeated uint32 takenRewardList = 778;</code>
-     * @return The count of takenRewardList.
+     * <code>repeated uint32 DDBJAKPEPLC = 778;</code>
+     * @return The count of dDBJAKPEPLC.
      */
-    int getTakenRewardListCount();
+    int getDDBJAKPEPLCCount();
     /**
-     * <code>repeated uint32 takenRewardList = 778;</code>
+     * <code>repeated uint32 DDBJAKPEPLC = 778;</code>
      * @param index The index of the element to return.
-     * @return The takenRewardList at the given index.
+     * @return The dDBJAKPEPLC at the given index.
      */
-    int getTakenRewardList(int index);
+    int getDDBJAKPEPLC(int index);
 
     /**
      * <code>uint32 first_day_start_time = 1677;</code>
@@ -347,9 +387,9 @@ public final class ActivityInfoOuterClass {
       meetCondList_ = emptyIntList();
       activityPushTipsDataList_ = java.util.Collections.emptyList();
       expireCondList_ = emptyIntList();
-      eOPFKDBBOII_ = emptyIntList();
-      watcherInfoList_ = java.util.Collections.emptyList();
       takenRewardList_ = emptyIntList();
+      watcherInfoList_ = java.util.Collections.emptyList();
+      dDBJAKPEPLC_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -509,42 +549,42 @@ public final class ActivityInfoOuterClass {
             }
             case 6224: {
               if (!((mutable_bitField0_ & 0x00000080) != 0)) {
-                takenRewardList_ = newIntList();
+                dDBJAKPEPLC_ = newIntList();
                 mutable_bitField0_ |= 0x00000080;
               }
-              takenRewardList_.addInt(input.readUInt32());
+              dDBJAKPEPLC_.addInt(input.readUInt32());
               break;
             }
             case 6226: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000080) != 0) && input.getBytesUntilLimit() > 0) {
-                takenRewardList_ = newIntList();
+                dDBJAKPEPLC_ = newIntList();
                 mutable_bitField0_ |= 0x00000080;
               }
               while (input.getBytesUntilLimit() > 0) {
-                takenRewardList_.addInt(input.readUInt32());
+                dDBJAKPEPLC_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
               break;
             }
             case 7152: {
               if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                eOPFKDBBOII_ = newIntList();
+                takenRewardList_ = newIntList();
                 mutable_bitField0_ |= 0x00000010;
               }
-              eOPFKDBBOII_.addInt(input.readUInt32());
+              takenRewardList_.addInt(input.readUInt32());
               break;
             }
             case 7154: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000010) != 0) && input.getBytesUntilLimit() > 0) {
-                eOPFKDBBOII_ = newIntList();
+                takenRewardList_ = newIntList();
                 mutable_bitField0_ |= 0x00000010;
               }
               while (input.getBytesUntilLimit() > 0) {
-                eOPFKDBBOII_.addInt(input.readUInt32());
+                takenRewardList_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
               break;
@@ -630,10 +670,10 @@ public final class ActivityInfoOuterClass {
           expireCondList_.makeImmutable(); // C
         }
         if (((mutable_bitField0_ & 0x00000080) != 0)) {
-          takenRewardList_.makeImmutable(); // C
+          dDBJAKPEPLC_.makeImmutable(); // C
         }
         if (((mutable_bitField0_ & 0x00000010) != 0)) {
-          eOPFKDBBOII_.makeImmutable(); // C
+          takenRewardList_.makeImmutable(); // C
         }
         if (((mutable_bitField0_ & 0x00000004) != 0)) {
           activityPushTipsDataList_ = java.util.Collections.unmodifiableList(activityPushTipsDataList_);
@@ -833,10 +873,14 @@ public final class ActivityInfoOuterClass {
       return map.get(key);
     }
 
-    public static final int MEETCONDLIST_FIELD_NUMBER = 2;
+    public static final int MEET_COND_LIST_FIELD_NUMBER = 2;
     private com.google.protobuf.Internal.IntList meetCondList_;
     /**
-     * <code>repeated uint32 meetCondList = 2;</code>
+     * <pre>
+     *PAGIONJOCJN
+     * </pre>
+     *
+     * <code>repeated uint32 meet_cond_list = 2;</code>
      * @return A list containing the meetCondList.
      */
     @java.lang.Override
@@ -845,14 +889,22 @@ public final class ActivityInfoOuterClass {
       return meetCondList_;
     }
     /**
-     * <code>repeated uint32 meetCondList = 2;</code>
+     * <pre>
+     *PAGIONJOCJN
+     * </pre>
+     *
+     * <code>repeated uint32 meet_cond_list = 2;</code>
      * @return The count of meetCondList.
      */
     public int getMeetCondListCount() {
       return meetCondList_.size();
     }
     /**
-     * <code>repeated uint32 meetCondList = 2;</code>
+     * <pre>
+     *PAGIONJOCJN
+     * </pre>
+     *
+     * <code>repeated uint32 meet_cond_list = 2;</code>
      * @param index The index of the element to return.
      * @return The meetCondList at the given index.
      */
@@ -923,10 +975,14 @@ public final class ActivityInfoOuterClass {
       return activityPushTipsDataList_.get(index);
     }
 
-    public static final int EXPIRECONDLIST_FIELD_NUMBER = 13;
+    public static final int EXPIRE_COND_LIST_FIELD_NUMBER = 13;
     private com.google.protobuf.Internal.IntList expireCondList_;
     /**
-     * <code>repeated uint32 expireCondList = 13;</code>
+     * <pre>
+     * LGCJBENHFOB
+     * </pre>
+     *
+     * <code>repeated uint32 expire_cond_list = 13;</code>
      * @return A list containing the expireCondList.
      */
     @java.lang.Override
@@ -935,14 +991,22 @@ public final class ActivityInfoOuterClass {
       return expireCondList_;
     }
     /**
-     * <code>repeated uint32 expireCondList = 13;</code>
+     * <pre>
+     * LGCJBENHFOB
+     * </pre>
+     *
+     * <code>repeated uint32 expire_cond_list = 13;</code>
      * @return The count of expireCondList.
      */
     public int getExpireCondListCount() {
       return expireCondList_.size();
     }
     /**
-     * <code>repeated uint32 expireCondList = 13;</code>
+     * <pre>
+     * LGCJBENHFOB
+     * </pre>
+     *
+     * <code>repeated uint32 expire_cond_list = 13;</code>
      * @param index The index of the element to return.
      * @return The expireCondList at the given index.
      */
@@ -962,33 +1026,45 @@ public final class ActivityInfoOuterClass {
       return isFinished_;
     }
 
-    public static final int EOPFKDBBOII_FIELD_NUMBER = 894;
-    private com.google.protobuf.Internal.IntList eOPFKDBBOII_;
+    public static final int TAKEN_REWARD_LIST_FIELD_NUMBER = 894;
+    private com.google.protobuf.Internal.IntList takenRewardList_;
     /**
-     * <code>repeated uint32 EOPFKDBBOII = 894;</code>
-     * @return A list containing the eOPFKDBBOII.
+     * <pre>
+     *EOPFKDBBOII
+     * </pre>
+     *
+     * <code>repeated uint32 taken_reward_list = 894;</code>
+     * @return A list containing the takenRewardList.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getEOPFKDBBOIIList() {
-      return eOPFKDBBOII_;
+        getTakenRewardListList() {
+      return takenRewardList_;
     }
     /**
-     * <code>repeated uint32 EOPFKDBBOII = 894;</code>
-     * @return The count of eOPFKDBBOII.
+     * <pre>
+     *EOPFKDBBOII
+     * </pre>
+     *
+     * <code>repeated uint32 taken_reward_list = 894;</code>
+     * @return The count of takenRewardList.
      */
-    public int getEOPFKDBBOIICount() {
-      return eOPFKDBBOII_.size();
+    public int getTakenRewardListCount() {
+      return takenRewardList_.size();
     }
     /**
-     * <code>repeated uint32 EOPFKDBBOII = 894;</code>
+     * <pre>
+     *EOPFKDBBOII
+     * </pre>
+     *
+     * <code>repeated uint32 taken_reward_list = 894;</code>
      * @param index The index of the element to return.
-     * @return The eOPFKDBBOII at the given index.
+     * @return The takenRewardList at the given index.
      */
-    public int getEOPFKDBBOII(int index) {
-      return eOPFKDBBOII_.getInt(index);
+    public int getTakenRewardList(int index) {
+      return takenRewardList_.getInt(index);
     }
-    private int eOPFKDBBOIIMemoizedSerializedSize = -1;
+    private int takenRewardListMemoizedSerializedSize = -1;
 
     public static final int WATCHER_INFO_LIST_FIELD_NUMBER = 8;
     private java.util.List<emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo> watcherInfoList_;
@@ -1030,10 +1106,14 @@ public final class ActivityInfoOuterClass {
       return watcherInfoList_.get(index);
     }
 
-    public static final int ACTIVITYTYPE_FIELD_NUMBER = 5;
+    public static final int ACTIVITY_TYPE_FIELD_NUMBER = 5;
     private int activityType_;
     /**
-     * <code>uint32 activityType = 5;</code>
+     * <pre>
+     * KMOFHMKLGHD
+     * </pre>
+     *
+     * <code>uint32 activity_type = 5;</code>
      * @return The activityType.
      */
     @java.lang.Override
@@ -1177,33 +1257,33 @@ public final class ActivityInfoOuterClass {
       return beginTime_;
     }
 
-    public static final int TAKENREWARDLIST_FIELD_NUMBER = 778;
-    private com.google.protobuf.Internal.IntList takenRewardList_;
+    public static final int DDBJAKPEPLC_FIELD_NUMBER = 778;
+    private com.google.protobuf.Internal.IntList dDBJAKPEPLC_;
     /**
-     * <code>repeated uint32 takenRewardList = 778;</code>
-     * @return A list containing the takenRewardList.
+     * <code>repeated uint32 DDBJAKPEPLC = 778;</code>
+     * @return A list containing the dDBJAKPEPLC.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getTakenRewardListList() {
-      return takenRewardList_;
+        getDDBJAKPEPLCList() {
+      return dDBJAKPEPLC_;
     }
     /**
-     * <code>repeated uint32 takenRewardList = 778;</code>
-     * @return The count of takenRewardList.
+     * <code>repeated uint32 DDBJAKPEPLC = 778;</code>
+     * @return The count of dDBJAKPEPLC.
      */
-    public int getTakenRewardListCount() {
-      return takenRewardList_.size();
+    public int getDDBJAKPEPLCCount() {
+      return dDBJAKPEPLC_.size();
     }
     /**
-     * <code>repeated uint32 takenRewardList = 778;</code>
+     * <code>repeated uint32 DDBJAKPEPLC = 778;</code>
      * @param index The index of the element to return.
-     * @return The takenRewardList at the given index.
+     * @return The dDBJAKPEPLC at the given index.
      */
-    public int getTakenRewardList(int index) {
-      return takenRewardList_.getInt(index);
+    public int getDDBJAKPEPLC(int index) {
+      return dDBJAKPEPLC_.getInt(index);
     }
-    private int takenRewardListMemoizedSerializedSize = -1;
+    private int dDBJAKPEPLCMemoizedSerializedSize = -1;
 
     public static final int FIRST_DAY_START_TIME_FIELD_NUMBER = 1677;
     private int firstDayStartTime_;
@@ -1355,19 +1435,19 @@ public final class ActivityInfoOuterClass {
           internalGetActivityCoinMap(),
           ActivityCoinMapDefaultEntryHolder.defaultEntry,
           703);
-      if (getTakenRewardListList().size() > 0) {
+      if (getDDBJAKPEPLCList().size() > 0) {
         output.writeUInt32NoTag(6226);
+        output.writeUInt32NoTag(dDBJAKPEPLCMemoizedSerializedSize);
+      }
+      for (int i = 0; i < dDBJAKPEPLC_.size(); i++) {
+        output.writeUInt32NoTag(dDBJAKPEPLC_.getInt(i));
+      }
+      if (getTakenRewardListList().size() > 0) {
+        output.writeUInt32NoTag(7154);
         output.writeUInt32NoTag(takenRewardListMemoizedSerializedSize);
       }
       for (int i = 0; i < takenRewardList_.size(); i++) {
         output.writeUInt32NoTag(takenRewardList_.getInt(i));
-      }
-      if (getEOPFKDBBOIIList().size() > 0) {
-        output.writeUInt32NoTag(7154);
-        output.writeUInt32NoTag(eOPFKDBBOIIMemoizedSerializedSize);
-      }
-      for (int i = 0; i < eOPFKDBBOII_.size(); i++) {
-        output.writeUInt32NoTag(eOPFKDBBOII_.getInt(i));
       }
       if (curScore_ != 0) {
         output.writeUInt32(1005, curScore_);
@@ -1494,6 +1574,20 @@ public final class ActivityInfoOuterClass {
       }
       {
         int dataSize = 0;
+        for (int i = 0; i < dDBJAKPEPLC_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dDBJAKPEPLC_.getInt(i));
+        }
+        size += dataSize;
+        if (!getDDBJAKPEPLCList().isEmpty()) {
+          size += 2;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        dDBJAKPEPLCMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
         for (int i = 0; i < takenRewardList_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
             .computeUInt32SizeNoTag(takenRewardList_.getInt(i));
@@ -1505,20 +1599,6 @@ public final class ActivityInfoOuterClass {
               .computeInt32SizeNoTag(dataSize);
         }
         takenRewardListMemoizedSerializedSize = dataSize;
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < eOPFKDBBOII_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(eOPFKDBBOII_.getInt(i));
-        }
-        size += dataSize;
-        if (!getEOPFKDBBOIIList().isEmpty()) {
-          size += 2;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        eOPFKDBBOIIMemoizedSerializedSize = dataSize;
       }
       if (curScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -1591,8 +1671,8 @@ public final class ActivityInfoOuterClass {
           .equals(other.getExpireCondListList())) return false;
       if (getIsFinished()
           != other.getIsFinished()) return false;
-      if (!getEOPFKDBBOIIList()
-          .equals(other.getEOPFKDBBOIIList())) return false;
+      if (!getTakenRewardListList()
+          .equals(other.getTakenRewardListList())) return false;
       if (!getWatcherInfoListList()
           .equals(other.getWatcherInfoListList())) return false;
       if (getActivityType()
@@ -1609,8 +1689,8 @@ public final class ActivityInfoOuterClass {
           != other.getLGKOJCGDGBH()) return false;
       if (getBeginTime()
           != other.getBeginTime()) return false;
-      if (!getTakenRewardListList()
-          .equals(other.getTakenRewardListList())) return false;
+      if (!getDDBJAKPEPLCList()
+          .equals(other.getDDBJAKPEPLCList())) return false;
       if (getFirstDayStartTime()
           != other.getFirstDayStartTime()) return false;
       if (getCurScore()
@@ -1651,7 +1731,7 @@ public final class ActivityInfoOuterClass {
         hash = (53 * hash) + internalGetActivityCoinMap().hashCode();
       }
       if (getMeetCondListCount() > 0) {
-        hash = (37 * hash) + MEETCONDLIST_FIELD_NUMBER;
+        hash = (37 * hash) + MEET_COND_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getMeetCondListList().hashCode();
       }
       hash = (37 * hash) + END_TIME_FIELD_NUMBER;
@@ -1664,21 +1744,21 @@ public final class ActivityInfoOuterClass {
         hash = (53 * hash) + getActivityPushTipsDataListList().hashCode();
       }
       if (getExpireCondListCount() > 0) {
-        hash = (37 * hash) + EXPIRECONDLIST_FIELD_NUMBER;
+        hash = (37 * hash) + EXPIRE_COND_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getExpireCondListList().hashCode();
       }
       hash = (37 * hash) + IS_FINISHED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsFinished());
-      if (getEOPFKDBBOIICount() > 0) {
-        hash = (37 * hash) + EOPFKDBBOII_FIELD_NUMBER;
-        hash = (53 * hash) + getEOPFKDBBOIIList().hashCode();
+      if (getTakenRewardListCount() > 0) {
+        hash = (37 * hash) + TAKEN_REWARD_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getTakenRewardListList().hashCode();
       }
       if (getWatcherInfoListCount() > 0) {
         hash = (37 * hash) + WATCHER_INFO_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getWatcherInfoListList().hashCode();
       }
-      hash = (37 * hash) + ACTIVITYTYPE_FIELD_NUMBER;
+      hash = (37 * hash) + ACTIVITY_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getActivityType();
       hash = (37 * hash) + ACTIVITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + getActivityId();
@@ -1697,9 +1777,9 @@ public final class ActivityInfoOuterClass {
           getLGKOJCGDGBH());
       hash = (37 * hash) + BEGIN_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getBeginTime();
-      if (getTakenRewardListCount() > 0) {
-        hash = (37 * hash) + TAKENREWARDLIST_FIELD_NUMBER;
-        hash = (53 * hash) + getTakenRewardListList().hashCode();
+      if (getDDBJAKPEPLCCount() > 0) {
+        hash = (37 * hash) + DDBJAKPEPLC_FIELD_NUMBER;
+        hash = (53 * hash) + getDDBJAKPEPLCList().hashCode();
       }
       hash = (37 * hash) + FIRST_DAY_START_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getFirstDayStartTime();
@@ -1906,7 +1986,7 @@ public final class ActivityInfoOuterClass {
         bitField0_ = (bitField0_ & ~0x00000008);
         isFinished_ = false;
 
-        eOPFKDBBOII_ = emptyIntList();
+        takenRewardList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000010);
         if (watcherInfoListBuilder_ == null) {
           watcherInfoList_ = java.util.Collections.emptyList();
@@ -1927,7 +2007,7 @@ public final class ActivityInfoOuterClass {
 
         beginTime_ = 0;
 
-        takenRewardList_ = emptyIntList();
+        dDBJAKPEPLC_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000080);
         firstDayStartTime_ = 0;
 
@@ -1993,10 +2073,10 @@ public final class ActivityInfoOuterClass {
         result.expireCondList_ = expireCondList_;
         result.isFinished_ = isFinished_;
         if (((bitField0_ & 0x00000010) != 0)) {
-          eOPFKDBBOII_.makeImmutable();
+          takenRewardList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000010);
         }
-        result.eOPFKDBBOII_ = eOPFKDBBOII_;
+        result.takenRewardList_ = takenRewardList_;
         if (watcherInfoListBuilder_ == null) {
           if (((bitField0_ & 0x00000020) != 0)) {
             watcherInfoList_ = java.util.Collections.unmodifiableList(watcherInfoList_);
@@ -2015,10 +2095,10 @@ public final class ActivityInfoOuterClass {
         result.lGKOJCGDGBH_ = lGKOJCGDGBH_;
         result.beginTime_ = beginTime_;
         if (((bitField0_ & 0x00000080) != 0)) {
-          takenRewardList_.makeImmutable();
+          dDBJAKPEPLC_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000080);
         }
-        result.takenRewardList_ = takenRewardList_;
+        result.dDBJAKPEPLC_ = dDBJAKPEPLC_;
         result.firstDayStartTime_ = firstDayStartTime_;
         result.curScore_ = curScore_;
         result.eFJOLIOFLBG_ = eFJOLIOFLBG_;
@@ -2147,13 +2227,13 @@ public final class ActivityInfoOuterClass {
         if (other.getIsFinished() != false) {
           setIsFinished(other.getIsFinished());
         }
-        if (!other.eOPFKDBBOII_.isEmpty()) {
-          if (eOPFKDBBOII_.isEmpty()) {
-            eOPFKDBBOII_ = other.eOPFKDBBOII_;
+        if (!other.takenRewardList_.isEmpty()) {
+          if (takenRewardList_.isEmpty()) {
+            takenRewardList_ = other.takenRewardList_;
             bitField0_ = (bitField0_ & ~0x00000010);
           } else {
-            ensureEOPFKDBBOIIIsMutable();
-            eOPFKDBBOII_.addAll(other.eOPFKDBBOII_);
+            ensureTakenRewardListIsMutable();
+            takenRewardList_.addAll(other.takenRewardList_);
           }
           onChanged();
         }
@@ -2203,13 +2283,13 @@ public final class ActivityInfoOuterClass {
         if (other.getBeginTime() != 0) {
           setBeginTime(other.getBeginTime());
         }
-        if (!other.takenRewardList_.isEmpty()) {
-          if (takenRewardList_.isEmpty()) {
-            takenRewardList_ = other.takenRewardList_;
+        if (!other.dDBJAKPEPLC_.isEmpty()) {
+          if (dDBJAKPEPLC_.isEmpty()) {
+            dDBJAKPEPLC_ = other.dDBJAKPEPLC_;
             bitField0_ = (bitField0_ & ~0x00000080);
           } else {
-            ensureTakenRewardListIsMutable();
-            takenRewardList_.addAll(other.takenRewardList_);
+            ensureDDBJAKPEPLCIsMutable();
+            dDBJAKPEPLC_.addAll(other.dDBJAKPEPLC_);
           }
           onChanged();
         }
@@ -2536,7 +2616,11 @@ public final class ActivityInfoOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 meetCondList = 2;</code>
+       * <pre>
+       *PAGIONJOCJN
+       * </pre>
+       *
+       * <code>repeated uint32 meet_cond_list = 2;</code>
        * @return A list containing the meetCondList.
        */
       public java.util.List<java.lang.Integer>
@@ -2545,14 +2629,22 @@ public final class ActivityInfoOuterClass {
                  java.util.Collections.unmodifiableList(meetCondList_) : meetCondList_;
       }
       /**
-       * <code>repeated uint32 meetCondList = 2;</code>
+       * <pre>
+       *PAGIONJOCJN
+       * </pre>
+       *
+       * <code>repeated uint32 meet_cond_list = 2;</code>
        * @return The count of meetCondList.
        */
       public int getMeetCondListCount() {
         return meetCondList_.size();
       }
       /**
-       * <code>repeated uint32 meetCondList = 2;</code>
+       * <pre>
+       *PAGIONJOCJN
+       * </pre>
+       *
+       * <code>repeated uint32 meet_cond_list = 2;</code>
        * @param index The index of the element to return.
        * @return The meetCondList at the given index.
        */
@@ -2560,7 +2652,11 @@ public final class ActivityInfoOuterClass {
         return meetCondList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 meetCondList = 2;</code>
+       * <pre>
+       *PAGIONJOCJN
+       * </pre>
+       *
+       * <code>repeated uint32 meet_cond_list = 2;</code>
        * @param index The index to set the value at.
        * @param value The meetCondList to set.
        * @return This builder for chaining.
@@ -2573,7 +2669,11 @@ public final class ActivityInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 meetCondList = 2;</code>
+       * <pre>
+       *PAGIONJOCJN
+       * </pre>
+       *
+       * <code>repeated uint32 meet_cond_list = 2;</code>
        * @param value The meetCondList to add.
        * @return This builder for chaining.
        */
@@ -2584,7 +2684,11 @@ public final class ActivityInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 meetCondList = 2;</code>
+       * <pre>
+       *PAGIONJOCJN
+       * </pre>
+       *
+       * <code>repeated uint32 meet_cond_list = 2;</code>
        * @param values The meetCondList to add.
        * @return This builder for chaining.
        */
@@ -2597,7 +2701,11 @@ public final class ActivityInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 meetCondList = 2;</code>
+       * <pre>
+       *PAGIONJOCJN
+       * </pre>
+       *
+       * <code>repeated uint32 meet_cond_list = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearMeetCondList() {
@@ -2917,7 +3025,11 @@ public final class ActivityInfoOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 expireCondList = 13;</code>
+       * <pre>
+       * LGCJBENHFOB
+       * </pre>
+       *
+       * <code>repeated uint32 expire_cond_list = 13;</code>
        * @return A list containing the expireCondList.
        */
       public java.util.List<java.lang.Integer>
@@ -2926,14 +3038,22 @@ public final class ActivityInfoOuterClass {
                  java.util.Collections.unmodifiableList(expireCondList_) : expireCondList_;
       }
       /**
-       * <code>repeated uint32 expireCondList = 13;</code>
+       * <pre>
+       * LGCJBENHFOB
+       * </pre>
+       *
+       * <code>repeated uint32 expire_cond_list = 13;</code>
        * @return The count of expireCondList.
        */
       public int getExpireCondListCount() {
         return expireCondList_.size();
       }
       /**
-       * <code>repeated uint32 expireCondList = 13;</code>
+       * <pre>
+       * LGCJBENHFOB
+       * </pre>
+       *
+       * <code>repeated uint32 expire_cond_list = 13;</code>
        * @param index The index of the element to return.
        * @return The expireCondList at the given index.
        */
@@ -2941,7 +3061,11 @@ public final class ActivityInfoOuterClass {
         return expireCondList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 expireCondList = 13;</code>
+       * <pre>
+       * LGCJBENHFOB
+       * </pre>
+       *
+       * <code>repeated uint32 expire_cond_list = 13;</code>
        * @param index The index to set the value at.
        * @param value The expireCondList to set.
        * @return This builder for chaining.
@@ -2954,7 +3078,11 @@ public final class ActivityInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 expireCondList = 13;</code>
+       * <pre>
+       * LGCJBENHFOB
+       * </pre>
+       *
+       * <code>repeated uint32 expire_cond_list = 13;</code>
        * @param value The expireCondList to add.
        * @return This builder for chaining.
        */
@@ -2965,7 +3093,11 @@ public final class ActivityInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 expireCondList = 13;</code>
+       * <pre>
+       * LGCJBENHFOB
+       * </pre>
+       *
+       * <code>repeated uint32 expire_cond_list = 13;</code>
        * @param values The expireCondList to add.
        * @return This builder for chaining.
        */
@@ -2978,7 +3110,11 @@ public final class ActivityInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 expireCondList = 13;</code>
+       * <pre>
+       * LGCJBENHFOB
+       * </pre>
+       *
+       * <code>repeated uint32 expire_cond_list = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearExpireCondList() {
@@ -3019,80 +3155,108 @@ public final class ActivityInfoOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList eOPFKDBBOII_ = emptyIntList();
-      private void ensureEOPFKDBBOIIIsMutable() {
+      private com.google.protobuf.Internal.IntList takenRewardList_ = emptyIntList();
+      private void ensureTakenRewardListIsMutable() {
         if (!((bitField0_ & 0x00000010) != 0)) {
-          eOPFKDBBOII_ = mutableCopy(eOPFKDBBOII_);
+          takenRewardList_ = mutableCopy(takenRewardList_);
           bitField0_ |= 0x00000010;
          }
       }
       /**
-       * <code>repeated uint32 EOPFKDBBOII = 894;</code>
-       * @return A list containing the eOPFKDBBOII.
+       * <pre>
+       *EOPFKDBBOII
+       * </pre>
+       *
+       * <code>repeated uint32 taken_reward_list = 894;</code>
+       * @return A list containing the takenRewardList.
        */
       public java.util.List<java.lang.Integer>
-          getEOPFKDBBOIIList() {
+          getTakenRewardListList() {
         return ((bitField0_ & 0x00000010) != 0) ?
-                 java.util.Collections.unmodifiableList(eOPFKDBBOII_) : eOPFKDBBOII_;
+                 java.util.Collections.unmodifiableList(takenRewardList_) : takenRewardList_;
       }
       /**
-       * <code>repeated uint32 EOPFKDBBOII = 894;</code>
-       * @return The count of eOPFKDBBOII.
+       * <pre>
+       *EOPFKDBBOII
+       * </pre>
+       *
+       * <code>repeated uint32 taken_reward_list = 894;</code>
+       * @return The count of takenRewardList.
        */
-      public int getEOPFKDBBOIICount() {
-        return eOPFKDBBOII_.size();
+      public int getTakenRewardListCount() {
+        return takenRewardList_.size();
       }
       /**
-       * <code>repeated uint32 EOPFKDBBOII = 894;</code>
+       * <pre>
+       *EOPFKDBBOII
+       * </pre>
+       *
+       * <code>repeated uint32 taken_reward_list = 894;</code>
        * @param index The index of the element to return.
-       * @return The eOPFKDBBOII at the given index.
+       * @return The takenRewardList at the given index.
        */
-      public int getEOPFKDBBOII(int index) {
-        return eOPFKDBBOII_.getInt(index);
+      public int getTakenRewardList(int index) {
+        return takenRewardList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 EOPFKDBBOII = 894;</code>
+       * <pre>
+       *EOPFKDBBOII
+       * </pre>
+       *
+       * <code>repeated uint32 taken_reward_list = 894;</code>
        * @param index The index to set the value at.
-       * @param value The eOPFKDBBOII to set.
+       * @param value The takenRewardList to set.
        * @return This builder for chaining.
        */
-      public Builder setEOPFKDBBOII(
+      public Builder setTakenRewardList(
           int index, int value) {
-        ensureEOPFKDBBOIIIsMutable();
-        eOPFKDBBOII_.setInt(index, value);
+        ensureTakenRewardListIsMutable();
+        takenRewardList_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 EOPFKDBBOII = 894;</code>
-       * @param value The eOPFKDBBOII to add.
+       * <pre>
+       *EOPFKDBBOII
+       * </pre>
+       *
+       * <code>repeated uint32 taken_reward_list = 894;</code>
+       * @param value The takenRewardList to add.
        * @return This builder for chaining.
        */
-      public Builder addEOPFKDBBOII(int value) {
-        ensureEOPFKDBBOIIIsMutable();
-        eOPFKDBBOII_.addInt(value);
+      public Builder addTakenRewardList(int value) {
+        ensureTakenRewardListIsMutable();
+        takenRewardList_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 EOPFKDBBOII = 894;</code>
-       * @param values The eOPFKDBBOII to add.
+       * <pre>
+       *EOPFKDBBOII
+       * </pre>
+       *
+       * <code>repeated uint32 taken_reward_list = 894;</code>
+       * @param values The takenRewardList to add.
        * @return This builder for chaining.
        */
-      public Builder addAllEOPFKDBBOII(
+      public Builder addAllTakenRewardList(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureEOPFKDBBOIIIsMutable();
+        ensureTakenRewardListIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, eOPFKDBBOII_);
+            values, takenRewardList_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 EOPFKDBBOII = 894;</code>
+       * <pre>
+       *EOPFKDBBOII
+       * </pre>
+       *
+       * <code>repeated uint32 taken_reward_list = 894;</code>
        * @return This builder for chaining.
        */
-      public Builder clearEOPFKDBBOII() {
-        eOPFKDBBOII_ = emptyIntList();
+      public Builder clearTakenRewardList() {
+        takenRewardList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
@@ -3340,7 +3504,11 @@ public final class ActivityInfoOuterClass {
 
       private int activityType_ ;
       /**
-       * <code>uint32 activityType = 5;</code>
+       * <pre>
+       * KMOFHMKLGHD
+       * </pre>
+       *
+       * <code>uint32 activity_type = 5;</code>
        * @return The activityType.
        */
       @java.lang.Override
@@ -3348,7 +3516,11 @@ public final class ActivityInfoOuterClass {
         return activityType_;
       }
       /**
-       * <code>uint32 activityType = 5;</code>
+       * <pre>
+       * KMOFHMKLGHD
+       * </pre>
+       *
+       * <code>uint32 activity_type = 5;</code>
        * @param value The activityType to set.
        * @return This builder for chaining.
        */
@@ -3359,7 +3531,11 @@ public final class ActivityInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 activityType = 5;</code>
+       * <pre>
+       * KMOFHMKLGHD
+       * </pre>
+       *
+       * <code>uint32 activity_type = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearActivityType() {
@@ -3652,80 +3828,80 @@ public final class ActivityInfoOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList takenRewardList_ = emptyIntList();
-      private void ensureTakenRewardListIsMutable() {
+      private com.google.protobuf.Internal.IntList dDBJAKPEPLC_ = emptyIntList();
+      private void ensureDDBJAKPEPLCIsMutable() {
         if (!((bitField0_ & 0x00000080) != 0)) {
-          takenRewardList_ = mutableCopy(takenRewardList_);
+          dDBJAKPEPLC_ = mutableCopy(dDBJAKPEPLC_);
           bitField0_ |= 0x00000080;
          }
       }
       /**
-       * <code>repeated uint32 takenRewardList = 778;</code>
-       * @return A list containing the takenRewardList.
+       * <code>repeated uint32 DDBJAKPEPLC = 778;</code>
+       * @return A list containing the dDBJAKPEPLC.
        */
       public java.util.List<java.lang.Integer>
-          getTakenRewardListList() {
+          getDDBJAKPEPLCList() {
         return ((bitField0_ & 0x00000080) != 0) ?
-                 java.util.Collections.unmodifiableList(takenRewardList_) : takenRewardList_;
+                 java.util.Collections.unmodifiableList(dDBJAKPEPLC_) : dDBJAKPEPLC_;
       }
       /**
-       * <code>repeated uint32 takenRewardList = 778;</code>
-       * @return The count of takenRewardList.
+       * <code>repeated uint32 DDBJAKPEPLC = 778;</code>
+       * @return The count of dDBJAKPEPLC.
        */
-      public int getTakenRewardListCount() {
-        return takenRewardList_.size();
+      public int getDDBJAKPEPLCCount() {
+        return dDBJAKPEPLC_.size();
       }
       /**
-       * <code>repeated uint32 takenRewardList = 778;</code>
+       * <code>repeated uint32 DDBJAKPEPLC = 778;</code>
        * @param index The index of the element to return.
-       * @return The takenRewardList at the given index.
+       * @return The dDBJAKPEPLC at the given index.
        */
-      public int getTakenRewardList(int index) {
-        return takenRewardList_.getInt(index);
+      public int getDDBJAKPEPLC(int index) {
+        return dDBJAKPEPLC_.getInt(index);
       }
       /**
-       * <code>repeated uint32 takenRewardList = 778;</code>
+       * <code>repeated uint32 DDBJAKPEPLC = 778;</code>
        * @param index The index to set the value at.
-       * @param value The takenRewardList to set.
+       * @param value The dDBJAKPEPLC to set.
        * @return This builder for chaining.
        */
-      public Builder setTakenRewardList(
+      public Builder setDDBJAKPEPLC(
           int index, int value) {
-        ensureTakenRewardListIsMutable();
-        takenRewardList_.setInt(index, value);
+        ensureDDBJAKPEPLCIsMutable();
+        dDBJAKPEPLC_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 takenRewardList = 778;</code>
-       * @param value The takenRewardList to add.
+       * <code>repeated uint32 DDBJAKPEPLC = 778;</code>
+       * @param value The dDBJAKPEPLC to add.
        * @return This builder for chaining.
        */
-      public Builder addTakenRewardList(int value) {
-        ensureTakenRewardListIsMutable();
-        takenRewardList_.addInt(value);
+      public Builder addDDBJAKPEPLC(int value) {
+        ensureDDBJAKPEPLCIsMutable();
+        dDBJAKPEPLC_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 takenRewardList = 778;</code>
-       * @param values The takenRewardList to add.
+       * <code>repeated uint32 DDBJAKPEPLC = 778;</code>
+       * @param values The dDBJAKPEPLC to add.
        * @return This builder for chaining.
        */
-      public Builder addAllTakenRewardList(
+      public Builder addAllDDBJAKPEPLC(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureTakenRewardListIsMutable();
+        ensureDDBJAKPEPLCIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, takenRewardList_);
+            values, dDBJAKPEPLC_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 takenRewardList = 778;</code>
+       * <code>repeated uint32 DDBJAKPEPLC = 778;</code>
        * @return This builder for chaining.
        */
-      public Builder clearTakenRewardList() {
-        takenRewardList_ = emptyIntList();
+      public Builder clearDDBJAKPEPLC() {
+        dDBJAKPEPLC_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
@@ -4079,30 +4255,30 @@ public final class ActivityInfoOuterClass {
     java.lang.String[] descriptorData = {
       "\n\022ActivityInfo.proto\032\032ActivityPushTipsDa" +
       "ta.proto\032\031ActivityWatcherInfo.proto\032!Mus" +
-      "icGameActivityDetailInfo.proto\"\351\006\n\014Activ" +
+      "icGameActivityDetailInfo.proto\"\360\006\n\014Activ" +
       "ityInfo\022\024\n\013ANGGLPJEBLE\030\266\003 \001(\r\022\023\n\013schedul" +
       "e_id\030\016 \001(\r\022\023\n\013FLFGIDFALEK\030\017 \001(\010\022\024\n\013LPOCN" +
       "CICJHM\030\345\003 \001(\r\022>\n\021activity_coin_map\030\277\005 \003(" +
-      "\0132\".ActivityInfo.ActivityCoinMapEntry\022\024\n" +
-      "\014meetCondList\030\002 \003(\r\022\020\n\010end_time\030\004 \001(\r\022\024\n" +
-      "\013GLOONPBGOHM\030\263\n \001(\010\022<\n\034activity_push_tip" +
-      "s_data_list\030\243\016 \003(\0132\025.ActivityPushTipsDat" +
-      "a\022\026\n\016expireCondList\030\r \003(\r\022\023\n\013is_finished" +
-      "\030\006 \001(\010\022\024\n\013EOPFKDBBOII\030\376\006 \003(\r\022/\n\021watcher_" +
-      "info_list\030\010 \003(\0132\024.ActivityWatcherInfo\022\024\n" +
-      "\014activityType\030\005 \001(\r\022\023\n\013activity_id\030\007 \001(\r" +
-      "\022\023\n\013CJDFLBKBNPL\030\n \001(\010\022=\n\021wish_gift_num_m" +
-      "ap\030\263\013 \003(\0132!.ActivityInfo.WishGiftNumMapE" +
-      "ntry\022\024\n\013OEBHLKFBCOG\030\270\005 \001(\010\022\024\n\013LGKOJCGDGB" +
-      "H\030\310\r \001(\010\022\022\n\nbegin_time\030\t \001(\r\022\030\n\017takenRew" +
-      "ardList\030\212\006 \003(\r\022\035\n\024first_day_start_time\030\215" +
-      "\r \001(\r\022\022\n\tcur_score\030\355\007 \001(\r\022\024\n\013EFJOLIOFLBG" +
-      "\030\202\004 \001(\010\0228\n\017music_game_info\030\256\017 \001(\0132\034.Musi" +
-      "cGameActivityDetailInfoH\000\0326\n\024ActivityCoi" +
-      "nMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028" +
-      "\001\0325\n\023WishGiftNumMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n" +
-      "\005value\030\002 \001(\r:\0028\001B\010\n\006detailB\033\n\031emu.grassc" +
-      "utter.net.protob\006proto3"
+      "\0132\".ActivityInfo.ActivityCoinMapEntry\022\026\n" +
+      "\016meet_cond_list\030\002 \003(\r\022\020\n\010end_time\030\004 \001(\r\022" +
+      "\024\n\013GLOONPBGOHM\030\263\n \001(\010\022<\n\034activity_push_t" +
+      "ips_data_list\030\243\016 \003(\0132\025.ActivityPushTipsD" +
+      "ata\022\030\n\020expire_cond_list\030\r \003(\r\022\023\n\013is_fini" +
+      "shed\030\006 \001(\010\022\032\n\021taken_reward_list\030\376\006 \003(\r\022/" +
+      "\n\021watcher_info_list\030\010 \003(\0132\024.ActivityWatc" +
+      "herInfo\022\025\n\ractivity_type\030\005 \001(\r\022\023\n\013activi" +
+      "ty_id\030\007 \001(\r\022\023\n\013CJDFLBKBNPL\030\n \001(\010\022=\n\021wish" +
+      "_gift_num_map\030\263\013 \003(\0132!.ActivityInfo.Wish" +
+      "GiftNumMapEntry\022\024\n\013OEBHLKFBCOG\030\270\005 \001(\010\022\024\n" +
+      "\013LGKOJCGDGBH\030\310\r \001(\010\022\022\n\nbegin_time\030\t \001(\r\022" +
+      "\024\n\013DDBJAKPEPLC\030\212\006 \003(\r\022\035\n\024first_day_start" +
+      "_time\030\215\r \001(\r\022\022\n\tcur_score\030\355\007 \001(\r\022\024\n\013EFJO" +
+      "LIOFLBG\030\202\004 \001(\010\0228\n\017music_game_info\030\256\017 \001(\013" +
+      "2\034.MusicGameActivityDetailInfoH\000\0326\n\024Acti" +
+      "vityCoinMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002" +
+      " \001(\r:\0028\001\0325\n\023WishGiftNumMapEntry\022\013\n\003key\030\001" +
+      " \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001B\010\n\006detailB\033\n\031emu" +
+      ".grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4116,7 +4292,7 @@ public final class ActivityInfoOuterClass {
     internal_static_ActivityInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ActivityInfo_descriptor,
-        new java.lang.String[] { "ANGGLPJEBLE", "ScheduleId", "FLFGIDFALEK", "LPOCNCICJHM", "ActivityCoinMap", "MeetCondList", "EndTime", "GLOONPBGOHM", "ActivityPushTipsDataList", "ExpireCondList", "IsFinished", "EOPFKDBBOII", "WatcherInfoList", "ActivityType", "ActivityId", "CJDFLBKBNPL", "WishGiftNumMap", "OEBHLKFBCOG", "LGKOJCGDGBH", "BeginTime", "TakenRewardList", "FirstDayStartTime", "CurScore", "EFJOLIOFLBG", "MusicGameInfo", "Detail", });
+        new java.lang.String[] { "ANGGLPJEBLE", "ScheduleId", "FLFGIDFALEK", "LPOCNCICJHM", "ActivityCoinMap", "MeetCondList", "EndTime", "GLOONPBGOHM", "ActivityPushTipsDataList", "ExpireCondList", "IsFinished", "TakenRewardList", "WatcherInfoList", "ActivityType", "ActivityId", "CJDFLBKBNPL", "WishGiftNumMap", "OEBHLKFBCOG", "LGKOJCGDGBH", "BeginTime", "DDBJAKPEPLC", "FirstDayStartTime", "CurScore", "EFJOLIOFLBG", "MusicGameInfo", "Detail", });
     internal_static_ActivityInfo_ActivityCoinMapEntry_descriptor =
       internal_static_ActivityInfo_descriptor.getNestedTypes().get(0);
     internal_static_ActivityInfo_ActivityCoinMapEntry_fieldAccessorTable = new

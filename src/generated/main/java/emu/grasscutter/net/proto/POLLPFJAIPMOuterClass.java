@@ -86,6 +86,66 @@ public final class POLLPFJAIPMOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private POLLPFJAIPM(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 56: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                challengeInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.MNFJFJANFEHOuterClass.MNFJFJANFEH>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              challengeInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.MNFJFJANFEHOuterClass.MNFJFJANFEH.parser(), extensionRegistry));
+              break;
+            }
+            case 80: {
+
+              stageId_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          challengeInfoList_ = java.util.Collections.unmodifiableList(challengeInfoList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.POLLPFJAIPMOuterClass.internal_static_POLLPFJAIPM_descriptor;
@@ -100,7 +160,7 @@ public final class POLLPFJAIPMOuterClass {
     }
 
     public static final int IS_OPEN_FIELD_NUMBER = 7;
-    private boolean isOpen_ = false;
+    private boolean isOpen_;
     /**
      * <code>bool is_open = 7;</code>
      * @return The isOpen.
@@ -111,7 +171,7 @@ public final class POLLPFJAIPMOuterClass {
     }
 
     public static final int STAGE_ID_FIELD_NUMBER = 10;
-    private int stageId_ = 0;
+    private int stageId_;
     /**
      * <code>uint32 stage_id = 10;</code>
      * @return The stageId.
@@ -122,7 +182,6 @@ public final class POLLPFJAIPMOuterClass {
     }
 
     public static final int CHALLENGE_INFO_LIST_FIELD_NUMBER = 9;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.MNFJFJANFEHOuterClass.MNFJFJANFEH> challengeInfoList_;
     /**
      * <code>repeated .MNFJFJANFEH challenge_info_list = 9;</code>
@@ -185,7 +244,7 @@ public final class POLLPFJAIPMOuterClass {
       if (stageId_ != 0) {
         output.writeUInt32(10, stageId_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -206,7 +265,7 @@ public final class POLLPFJAIPMOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(10, stageId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -227,7 +286,7 @@ public final class POLLPFJAIPMOuterClass {
           != other.getStageId()) return false;
       if (!getChallengeInfoListList()
           .equals(other.getChallengeInfoListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -247,7 +306,7 @@ public final class POLLPFJAIPMOuterClass {
         hash = (37 * hash) + CHALLENGE_INFO_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getChallengeInfoListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -368,27 +427,33 @@ public final class POLLPFJAIPMOuterClass {
 
       // Construct using emu.grasscutter.net.proto.POLLPFJAIPMOuterClass.POLLPFJAIPM.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getChallengeInfoListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         isOpen_ = false;
+
         stageId_ = 0;
+
         if (challengeInfoListBuilder_ == null) {
           challengeInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          challengeInfoList_ = null;
           challengeInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -415,32 +480,20 @@ public final class POLLPFJAIPMOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.POLLPFJAIPMOuterClass.POLLPFJAIPM buildPartial() {
         emu.grasscutter.net.proto.POLLPFJAIPMOuterClass.POLLPFJAIPM result = new emu.grasscutter.net.proto.POLLPFJAIPMOuterClass.POLLPFJAIPM(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.POLLPFJAIPMOuterClass.POLLPFJAIPM result) {
+        int from_bitField0_ = bitField0_;
+        result.isOpen_ = isOpen_;
+        result.stageId_ = stageId_;
         if (challengeInfoListBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             challengeInfoList_ = java.util.Collections.unmodifiableList(challengeInfoList_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.challengeInfoList_ = challengeInfoList_;
         } else {
           result.challengeInfoList_ = challengeInfoListBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.POLLPFJAIPMOuterClass.POLLPFJAIPM result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isOpen_ = isOpen_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.stageId_ = stageId_;
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -497,7 +550,7 @@ public final class POLLPFJAIPMOuterClass {
           if (!other.challengeInfoList_.isEmpty()) {
             if (challengeInfoList_.isEmpty()) {
               challengeInfoList_ = other.challengeInfoList_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureChallengeInfoListIsMutable();
               challengeInfoList_.addAll(other.challengeInfoList_);
@@ -510,7 +563,7 @@ public final class POLLPFJAIPMOuterClass {
               challengeInfoListBuilder_.dispose();
               challengeInfoListBuilder_ = null;
               challengeInfoList_ = other.challengeInfoList_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               challengeInfoListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getChallengeInfoListFieldBuilder() : null;
@@ -519,7 +572,7 @@ public final class POLLPFJAIPMOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -534,53 +587,17 @@ public final class POLLPFJAIPMOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.POLLPFJAIPMOuterClass.POLLPFJAIPM parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 56: {
-                isOpen_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 56
-              case 74: {
-                emu.grasscutter.net.proto.MNFJFJANFEHOuterClass.MNFJFJANFEH m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.MNFJFJANFEHOuterClass.MNFJFJANFEH.parser(),
-                        extensionRegistry);
-                if (challengeInfoListBuilder_ == null) {
-                  ensureChallengeInfoListIsMutable();
-                  challengeInfoList_.add(m);
-                } else {
-                  challengeInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 74
-              case 80: {
-                stageId_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 80
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.POLLPFJAIPMOuterClass.POLLPFJAIPM) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -602,7 +619,6 @@ public final class POLLPFJAIPMOuterClass {
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -611,7 +627,7 @@ public final class POLLPFJAIPMOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         isOpen_ = false;
         onChanged();
         return this;
@@ -634,7 +650,6 @@ public final class POLLPFJAIPMOuterClass {
       public Builder setStageId(int value) {
         
         stageId_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -643,7 +658,7 @@ public final class POLLPFJAIPMOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStageId() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         stageId_ = 0;
         onChanged();
         return this;
@@ -652,9 +667,9 @@ public final class POLLPFJAIPMOuterClass {
       private java.util.List<emu.grasscutter.net.proto.MNFJFJANFEHOuterClass.MNFJFJANFEH> challengeInfoList_ =
         java.util.Collections.emptyList();
       private void ensureChallengeInfoListIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           challengeInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.MNFJFJANFEHOuterClass.MNFJFJANFEH>(challengeInfoList_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -804,7 +819,7 @@ public final class POLLPFJAIPMOuterClass {
       public Builder clearChallengeInfoList() {
         if (challengeInfoListBuilder_ == null) {
           challengeInfoList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           challengeInfoListBuilder_.clear();
@@ -881,7 +896,7 @@ public final class POLLPFJAIPMOuterClass {
           challengeInfoListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.MNFJFJANFEHOuterClass.MNFJFJANFEH, emu.grasscutter.net.proto.MNFJFJANFEHOuterClass.MNFJFJANFEH.Builder, emu.grasscutter.net.proto.MNFJFJANFEHOuterClass.MNFJFJANFEHOrBuilder>(
                   challengeInfoList_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           challengeInfoList_ = null;
@@ -921,18 +936,7 @@ public final class POLLPFJAIPMOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new POLLPFJAIPM(input, extensionRegistry);
       }
     };
 

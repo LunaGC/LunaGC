@@ -119,6 +119,95 @@ public final class IrodoriActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private IrodoriActivityDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 26: {
+              emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO.Builder subBuilder = null;
+              if (bCKHFBJPBHE_ != null) {
+                subBuilder = bCKHFBJPBHE_.toBuilder();
+              }
+              bCKHFBJPBHE_ = input.readMessage(emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(bCKHFBJPBHE_);
+                bCKHFBJPBHE_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                dGPMKMAFKBO_ = new java.util.ArrayList<emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              dGPMKMAFKBO_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA.parser(), extensionRegistry));
+              break;
+            }
+            case 50: {
+              emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII.Builder subBuilder = null;
+              if (dCACNKBIMLD_ != null) {
+                subBuilder = dCACNKBIMLD_.toBuilder();
+              }
+              dCACNKBIMLD_ = input.readMessage(emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dCACNKBIMLD_);
+                dCACNKBIMLD_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              emu.grasscutter.net.proto.IrodoriChessDataOuterClass.IrodoriChessData.Builder subBuilder = null;
+              if (chessData_ != null) {
+                subBuilder = chessData_.toBuilder();
+              }
+              chessData_ = input.readMessage(emu.grasscutter.net.proto.IrodoriChessDataOuterClass.IrodoriChessData.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(chessData_);
+                chessData_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          dGPMKMAFKBO_ = java.util.Collections.unmodifiableList(dGPMKMAFKBO_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.IrodoriActivityDetailInfoOuterClass.internal_static_IrodoriActivityDetailInfo_descriptor;
@@ -155,11 +244,10 @@ public final class IrodoriActivityDetailInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKIIOrBuilder getDCACNKBIMLDOrBuilder() {
-      return dCACNKBIMLD_ == null ? emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII.getDefaultInstance() : dCACNKBIMLD_;
+      return getDCACNKBIMLD();
     }
 
     public static final int DGPMKMAFKBO_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA> dGPMKMAFKBO_;
     /**
      * <code>repeated .ONGFFNHKKIA DGPMKMAFKBO = 4;</code>
@@ -222,7 +310,7 @@ public final class IrodoriActivityDetailInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.IrodoriChessDataOuterClass.IrodoriChessDataOrBuilder getChessDataOrBuilder() {
-      return chessData_ == null ? emu.grasscutter.net.proto.IrodoriChessDataOuterClass.IrodoriChessData.getDefaultInstance() : chessData_;
+      return getChessData();
     }
 
     public static final int BCKHFBJPBHE_FIELD_NUMBER = 3;
@@ -248,7 +336,7 @@ public final class IrodoriActivityDetailInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOOOrBuilder getBCKHFBJPBHEOrBuilder() {
-      return bCKHFBJPBHE_ == null ? emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO.getDefaultInstance() : bCKHFBJPBHE_;
+      return getBCKHFBJPBHE();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -277,7 +365,7 @@ public final class IrodoriActivityDetailInfoOuterClass {
       if (chessData_ != null) {
         output.writeMessage(14, getChessData());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -302,7 +390,7 @@ public final class IrodoriActivityDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getChessData());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -334,7 +422,7 @@ public final class IrodoriActivityDetailInfoOuterClass {
         if (!getBCKHFBJPBHE()
             .equals(other.getBCKHFBJPBHE())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -361,7 +449,7 @@ public final class IrodoriActivityDetailInfoOuterClass {
         hash = (37 * hash) + BCKHFBJPBHE_FIELD_NUMBER;
         hash = (53 * hash) + getBCKHFBJPBHE().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -482,38 +570,45 @@ public final class IrodoriActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.IrodoriActivityDetailInfoOuterClass.IrodoriActivityDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDGPMKMAFKBOFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        dCACNKBIMLD_ = null;
-        if (dCACNKBIMLDBuilder_ != null) {
-          dCACNKBIMLDBuilder_.dispose();
+        if (dCACNKBIMLDBuilder_ == null) {
+          dCACNKBIMLD_ = null;
+        } else {
+          dCACNKBIMLD_ = null;
           dCACNKBIMLDBuilder_ = null;
         }
         if (dGPMKMAFKBOBuilder_ == null) {
           dGPMKMAFKBO_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          dGPMKMAFKBO_ = null;
           dGPMKMAFKBOBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        chessData_ = null;
-        if (chessDataBuilder_ != null) {
-          chessDataBuilder_.dispose();
+        if (chessDataBuilder_ == null) {
+          chessData_ = null;
+        } else {
+          chessData_ = null;
           chessDataBuilder_ = null;
         }
-        bCKHFBJPBHE_ = null;
-        if (bCKHFBJPBHEBuilder_ != null) {
-          bCKHFBJPBHEBuilder_.dispose();
+        if (bCKHFBJPBHEBuilder_ == null) {
+          bCKHFBJPBHE_ = null;
+        } else {
+          bCKHFBJPBHE_ = null;
           bCKHFBJPBHEBuilder_ = null;
         }
         return this;
@@ -542,41 +637,33 @@ public final class IrodoriActivityDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.IrodoriActivityDetailInfoOuterClass.IrodoriActivityDetailInfo buildPartial() {
         emu.grasscutter.net.proto.IrodoriActivityDetailInfoOuterClass.IrodoriActivityDetailInfo result = new emu.grasscutter.net.proto.IrodoriActivityDetailInfoOuterClass.IrodoriActivityDetailInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.IrodoriActivityDetailInfoOuterClass.IrodoriActivityDetailInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (dCACNKBIMLDBuilder_ == null) {
+          result.dCACNKBIMLD_ = dCACNKBIMLD_;
+        } else {
+          result.dCACNKBIMLD_ = dCACNKBIMLDBuilder_.build();
+        }
         if (dGPMKMAFKBOBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             dGPMKMAFKBO_ = java.util.Collections.unmodifiableList(dGPMKMAFKBO_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.dGPMKMAFKBO_ = dGPMKMAFKBO_;
         } else {
           result.dGPMKMAFKBO_ = dGPMKMAFKBOBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.IrodoriActivityDetailInfoOuterClass.IrodoriActivityDetailInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.dCACNKBIMLD_ = dCACNKBIMLDBuilder_ == null
-              ? dCACNKBIMLD_
-              : dCACNKBIMLDBuilder_.build();
+        if (chessDataBuilder_ == null) {
+          result.chessData_ = chessData_;
+        } else {
+          result.chessData_ = chessDataBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.chessData_ = chessDataBuilder_ == null
-              ? chessData_
-              : chessDataBuilder_.build();
+        if (bCKHFBJPBHEBuilder_ == null) {
+          result.bCKHFBJPBHE_ = bCKHFBJPBHE_;
+        } else {
+          result.bCKHFBJPBHE_ = bCKHFBJPBHEBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.bCKHFBJPBHE_ = bCKHFBJPBHEBuilder_ == null
-              ? bCKHFBJPBHE_
-              : bCKHFBJPBHEBuilder_.build();
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -630,7 +717,7 @@ public final class IrodoriActivityDetailInfoOuterClass {
           if (!other.dGPMKMAFKBO_.isEmpty()) {
             if (dGPMKMAFKBO_.isEmpty()) {
               dGPMKMAFKBO_ = other.dGPMKMAFKBO_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureDGPMKMAFKBOIsMutable();
               dGPMKMAFKBO_.addAll(other.dGPMKMAFKBO_);
@@ -643,7 +730,7 @@ public final class IrodoriActivityDetailInfoOuterClass {
               dGPMKMAFKBOBuilder_.dispose();
               dGPMKMAFKBOBuilder_ = null;
               dGPMKMAFKBO_ = other.dGPMKMAFKBO_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               dGPMKMAFKBOBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDGPMKMAFKBOFieldBuilder() : null;
@@ -658,7 +745,7 @@ public final class IrodoriActivityDetailInfoOuterClass {
         if (other.hasBCKHFBJPBHE()) {
           mergeBCKHFBJPBHE(other.getBCKHFBJPBHE());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -673,64 +760,17 @@ public final class IrodoriActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.IrodoriActivityDetailInfoOuterClass.IrodoriActivityDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 26: {
-                input.readMessage(
-                    getBCKHFBJPBHEFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 26
-              case 34: {
-                emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA.parser(),
-                        extensionRegistry);
-                if (dGPMKMAFKBOBuilder_ == null) {
-                  ensureDGPMKMAFKBOIsMutable();
-                  dGPMKMAFKBO_.add(m);
-                } else {
-                  dGPMKMAFKBOBuilder_.addMessage(m);
-                }
-                break;
-              } // case 34
-              case 50: {
-                input.readMessage(
-                    getDCACNKBIMLDFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 50
-              case 114: {
-                input.readMessage(
-                    getChessDataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 114
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.IrodoriActivityDetailInfoOuterClass.IrodoriActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -743,7 +783,7 @@ public final class IrodoriActivityDetailInfoOuterClass {
        * @return Whether the dCACNKBIMLD field is set.
        */
       public boolean hasDCACNKBIMLD() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return dCACNKBIMLDBuilder_ != null || dCACNKBIMLD_ != null;
       }
       /**
        * <code>.AIOCEOMJKII DCACNKBIMLD = 6;</code>
@@ -765,11 +805,11 @@ public final class IrodoriActivityDetailInfoOuterClass {
             throw new NullPointerException();
           }
           dCACNKBIMLD_ = value;
+          onChanged();
         } else {
           dCACNKBIMLDBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -779,11 +819,11 @@ public final class IrodoriActivityDetailInfoOuterClass {
           emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII.Builder builderForValue) {
         if (dCACNKBIMLDBuilder_ == null) {
           dCACNKBIMLD_ = builderForValue.build();
+          onChanged();
         } else {
           dCACNKBIMLDBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -791,38 +831,38 @@ public final class IrodoriActivityDetailInfoOuterClass {
        */
       public Builder mergeDCACNKBIMLD(emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII value) {
         if (dCACNKBIMLDBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            dCACNKBIMLD_ != null &&
-            dCACNKBIMLD_ != emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII.getDefaultInstance()) {
-            getDCACNKBIMLDBuilder().mergeFrom(value);
+          if (dCACNKBIMLD_ != null) {
+            dCACNKBIMLD_ =
+              emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII.newBuilder(dCACNKBIMLD_).mergeFrom(value).buildPartial();
           } else {
             dCACNKBIMLD_ = value;
           }
+          onChanged();
         } else {
           dCACNKBIMLDBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.AIOCEOMJKII DCACNKBIMLD = 6;</code>
        */
       public Builder clearDCACNKBIMLD() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        dCACNKBIMLD_ = null;
-        if (dCACNKBIMLDBuilder_ != null) {
-          dCACNKBIMLDBuilder_.dispose();
+        if (dCACNKBIMLDBuilder_ == null) {
+          dCACNKBIMLD_ = null;
+          onChanged();
+        } else {
+          dCACNKBIMLD_ = null;
           dCACNKBIMLDBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.AIOCEOMJKII DCACNKBIMLD = 6;</code>
        */
       public emu.grasscutter.net.proto.AIOCEOMJKIIOuterClass.AIOCEOMJKII.Builder getDCACNKBIMLDBuilder() {
-        bitField0_ |= 0x00000001;
+        
         onChanged();
         return getDCACNKBIMLDFieldBuilder().getBuilder();
       }
@@ -857,9 +897,9 @@ public final class IrodoriActivityDetailInfoOuterClass {
       private java.util.List<emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA> dGPMKMAFKBO_ =
         java.util.Collections.emptyList();
       private void ensureDGPMKMAFKBOIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           dGPMKMAFKBO_ = new java.util.ArrayList<emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA>(dGPMKMAFKBO_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -1009,7 +1049,7 @@ public final class IrodoriActivityDetailInfoOuterClass {
       public Builder clearDGPMKMAFKBO() {
         if (dGPMKMAFKBOBuilder_ == null) {
           dGPMKMAFKBO_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           dGPMKMAFKBOBuilder_.clear();
@@ -1086,7 +1126,7 @@ public final class IrodoriActivityDetailInfoOuterClass {
           dGPMKMAFKBOBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA, emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIA.Builder, emu.grasscutter.net.proto.ONGFFNHKKIAOuterClass.ONGFFNHKKIAOrBuilder>(
                   dGPMKMAFKBO_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           dGPMKMAFKBO_ = null;
@@ -1102,7 +1142,7 @@ public final class IrodoriActivityDetailInfoOuterClass {
        * @return Whether the chessData field is set.
        */
       public boolean hasChessData() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return chessDataBuilder_ != null || chessData_ != null;
       }
       /**
        * <code>.IrodoriChessData chess_data = 14;</code>
@@ -1124,11 +1164,11 @@ public final class IrodoriActivityDetailInfoOuterClass {
             throw new NullPointerException();
           }
           chessData_ = value;
+          onChanged();
         } else {
           chessDataBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -1138,11 +1178,11 @@ public final class IrodoriActivityDetailInfoOuterClass {
           emu.grasscutter.net.proto.IrodoriChessDataOuterClass.IrodoriChessData.Builder builderForValue) {
         if (chessDataBuilder_ == null) {
           chessData_ = builderForValue.build();
+          onChanged();
         } else {
           chessDataBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -1150,38 +1190,38 @@ public final class IrodoriActivityDetailInfoOuterClass {
        */
       public Builder mergeChessData(emu.grasscutter.net.proto.IrodoriChessDataOuterClass.IrodoriChessData value) {
         if (chessDataBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            chessData_ != null &&
-            chessData_ != emu.grasscutter.net.proto.IrodoriChessDataOuterClass.IrodoriChessData.getDefaultInstance()) {
-            getChessDataBuilder().mergeFrom(value);
+          if (chessData_ != null) {
+            chessData_ =
+              emu.grasscutter.net.proto.IrodoriChessDataOuterClass.IrodoriChessData.newBuilder(chessData_).mergeFrom(value).buildPartial();
           } else {
             chessData_ = value;
           }
+          onChanged();
         } else {
           chessDataBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.IrodoriChessData chess_data = 14;</code>
        */
       public Builder clearChessData() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        chessData_ = null;
-        if (chessDataBuilder_ != null) {
-          chessDataBuilder_.dispose();
+        if (chessDataBuilder_ == null) {
+          chessData_ = null;
+          onChanged();
+        } else {
+          chessData_ = null;
           chessDataBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.IrodoriChessData chess_data = 14;</code>
        */
       public emu.grasscutter.net.proto.IrodoriChessDataOuterClass.IrodoriChessData.Builder getChessDataBuilder() {
-        bitField0_ |= 0x00000004;
+        
         onChanged();
         return getChessDataFieldBuilder().getBuilder();
       }
@@ -1221,7 +1261,7 @@ public final class IrodoriActivityDetailInfoOuterClass {
        * @return Whether the bCKHFBJPBHE field is set.
        */
       public boolean hasBCKHFBJPBHE() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return bCKHFBJPBHEBuilder_ != null || bCKHFBJPBHE_ != null;
       }
       /**
        * <code>.NMJJDGLFAOO BCKHFBJPBHE = 3;</code>
@@ -1243,11 +1283,11 @@ public final class IrodoriActivityDetailInfoOuterClass {
             throw new NullPointerException();
           }
           bCKHFBJPBHE_ = value;
+          onChanged();
         } else {
           bCKHFBJPBHEBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+
         return this;
       }
       /**
@@ -1257,11 +1297,11 @@ public final class IrodoriActivityDetailInfoOuterClass {
           emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO.Builder builderForValue) {
         if (bCKHFBJPBHEBuilder_ == null) {
           bCKHFBJPBHE_ = builderForValue.build();
+          onChanged();
         } else {
           bCKHFBJPBHEBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+
         return this;
       }
       /**
@@ -1269,38 +1309,38 @@ public final class IrodoriActivityDetailInfoOuterClass {
        */
       public Builder mergeBCKHFBJPBHE(emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO value) {
         if (bCKHFBJPBHEBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
-            bCKHFBJPBHE_ != null &&
-            bCKHFBJPBHE_ != emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO.getDefaultInstance()) {
-            getBCKHFBJPBHEBuilder().mergeFrom(value);
+          if (bCKHFBJPBHE_ != null) {
+            bCKHFBJPBHE_ =
+              emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO.newBuilder(bCKHFBJPBHE_).mergeFrom(value).buildPartial();
           } else {
             bCKHFBJPBHE_ = value;
           }
+          onChanged();
         } else {
           bCKHFBJPBHEBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.NMJJDGLFAOO BCKHFBJPBHE = 3;</code>
        */
       public Builder clearBCKHFBJPBHE() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        bCKHFBJPBHE_ = null;
-        if (bCKHFBJPBHEBuilder_ != null) {
-          bCKHFBJPBHEBuilder_.dispose();
+        if (bCKHFBJPBHEBuilder_ == null) {
+          bCKHFBJPBHE_ = null;
+          onChanged();
+        } else {
+          bCKHFBJPBHE_ = null;
           bCKHFBJPBHEBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.NMJJDGLFAOO BCKHFBJPBHE = 3;</code>
        */
       public emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO.Builder getBCKHFBJPBHEBuilder() {
-        bitField0_ |= 0x00000008;
+        
         onChanged();
         return getBCKHFBJPBHEFieldBuilder().getBuilder();
       }
@@ -1364,18 +1404,7 @@ public final class IrodoriActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new IrodoriActivityDetailInfo(input, extensionRegistry);
       }
     };
 

@@ -19,7 +19,11 @@ public final class TowerCurLevelRecordOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 curFloorId = 2;</code>
+     * <pre>
+     *OOBKAHDLNGD 
+     * </pre>
+     *
+     * <code>uint32 cur_floor_id = 2;</code>
      * @return The curFloorId.
      */
     int getCurFloorId();
@@ -72,7 +76,11 @@ public final class TowerCurLevelRecordOuterClass {
     int getBuffIdList(int index);
 
     /**
-     * <code>uint32 curLevelIndex = 15;</code>
+     * <pre>
+     *ECKEFENMNCC 
+     * </pre>
+     *
+     * <code>uint32 cur_level_index = 15;</code>
      * @return The curLevelIndex.
      */
     int getCurLevelIndex();
@@ -223,10 +231,14 @@ public final class TowerCurLevelRecordOuterClass {
               emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord.class, emu.grasscutter.net.proto.TowerCurLevelRecordOuterClass.TowerCurLevelRecord.Builder.class);
     }
 
-    public static final int CURFLOORID_FIELD_NUMBER = 2;
+    public static final int CUR_FLOOR_ID_FIELD_NUMBER = 2;
     private int curFloorId_;
     /**
-     * <code>uint32 curFloorId = 2;</code>
+     * <pre>
+     *OOBKAHDLNGD 
+     * </pre>
+     *
+     * <code>uint32 cur_floor_id = 2;</code>
      * @return The curFloorId.
      */
     @java.lang.Override
@@ -313,10 +325,14 @@ public final class TowerCurLevelRecordOuterClass {
     }
     private int buffIdListMemoizedSerializedSize = -1;
 
-    public static final int CURLEVELINDEX_FIELD_NUMBER = 15;
+    public static final int CUR_LEVEL_INDEX_FIELD_NUMBER = 15;
     private int curLevelIndex_;
     /**
-     * <code>uint32 curLevelIndex = 15;</code>
+     * <pre>
+     *ECKEFENMNCC 
+     * </pre>
+     *
+     * <code>uint32 cur_level_index = 15;</code>
      * @return The curLevelIndex.
      */
     @java.lang.Override
@@ -453,7 +469,7 @@ public final class TowerCurLevelRecordOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CURFLOORID_FIELD_NUMBER;
+      hash = (37 * hash) + CUR_FLOOR_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCurFloorId();
       if (getTowerTeamListCount() > 0) {
         hash = (37 * hash) + TOWER_TEAM_LIST_FIELD_NUMBER;
@@ -466,7 +482,7 @@ public final class TowerCurLevelRecordOuterClass {
         hash = (37 * hash) + BUFF_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getBuffIdListList().hashCode();
       }
-      hash = (37 * hash) + CURLEVELINDEX_FIELD_NUMBER;
+      hash = (37 * hash) + CUR_LEVEL_INDEX_FIELD_NUMBER;
       hash = (53 * hash) + getCurLevelIndex();
       hash = (37 * hash) + IS_EMPTY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
@@ -798,7 +814,11 @@ public final class TowerCurLevelRecordOuterClass {
 
       private int curFloorId_ ;
       /**
-       * <code>uint32 curFloorId = 2;</code>
+       * <pre>
+       *OOBKAHDLNGD 
+       * </pre>
+       *
+       * <code>uint32 cur_floor_id = 2;</code>
        * @return The curFloorId.
        */
       @java.lang.Override
@@ -806,7 +826,11 @@ public final class TowerCurLevelRecordOuterClass {
         return curFloorId_;
       }
       /**
-       * <code>uint32 curFloorId = 2;</code>
+       * <pre>
+       *OOBKAHDLNGD 
+       * </pre>
+       *
+       * <code>uint32 cur_floor_id = 2;</code>
        * @param value The curFloorId to set.
        * @return This builder for chaining.
        */
@@ -817,7 +841,11 @@ public final class TowerCurLevelRecordOuterClass {
         return this;
       }
       /**
-       * <code>uint32 curFloorId = 2;</code>
+       * <pre>
+       *OOBKAHDLNGD 
+       * </pre>
+       *
+       * <code>uint32 cur_floor_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearCurFloorId() {
@@ -1179,7 +1207,11 @@ public final class TowerCurLevelRecordOuterClass {
 
       private int curLevelIndex_ ;
       /**
-       * <code>uint32 curLevelIndex = 15;</code>
+       * <pre>
+       *ECKEFENMNCC 
+       * </pre>
+       *
+       * <code>uint32 cur_level_index = 15;</code>
        * @return The curLevelIndex.
        */
       @java.lang.Override
@@ -1187,7 +1219,11 @@ public final class TowerCurLevelRecordOuterClass {
         return curLevelIndex_;
       }
       /**
-       * <code>uint32 curLevelIndex = 15;</code>
+       * <pre>
+       *ECKEFENMNCC 
+       * </pre>
+       *
+       * <code>uint32 cur_level_index = 15;</code>
        * @param value The curLevelIndex to set.
        * @return This builder for chaining.
        */
@@ -1198,7 +1234,11 @@ public final class TowerCurLevelRecordOuterClass {
         return this;
       }
       /**
-       * <code>uint32 curLevelIndex = 15;</code>
+       * <pre>
+       *ECKEFENMNCC 
+       * </pre>
+       *
+       * <code>uint32 cur_level_index = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearCurLevelIndex() {
@@ -1306,12 +1346,12 @@ public final class TowerCurLevelRecordOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\031TowerCurLevelRecord.proto\032\017TowerTeam.p" +
-      "roto\"\244\001\n\023TowerCurLevelRecord\022\022\n\ncurFloor" +
-      "Id\030\002 \001(\r\022#\n\017tower_team_list\030\013 \003(\0132\n.Towe" +
-      "rTeam\022\025\n\ris_upper_part\030\006 \001(\010\022\024\n\014buff_id_" +
-      "list\030\003 \003(\r\022\025\n\rcurLevelIndex\030\017 \001(\r\022\020\n\010is_" +
-      "empty\030\001 \001(\010B\033\n\031emu.grasscutter.net.proto" +
-      "b\006proto3"
+      "roto\"\250\001\n\023TowerCurLevelRecord\022\024\n\014cur_floo" +
+      "r_id\030\002 \001(\r\022#\n\017tower_team_list\030\013 \003(\0132\n.To" +
+      "werTeam\022\025\n\ris_upper_part\030\006 \001(\010\022\024\n\014buff_i" +
+      "d_list\030\003 \003(\r\022\027\n\017cur_level_index\030\017 \001(\r\022\020\n" +
+      "\010is_empty\030\001 \001(\010B\033\n\031emu.grasscutter.net.p" +
+      "rotob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

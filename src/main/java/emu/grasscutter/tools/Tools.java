@@ -1,21 +1,5 @@
 package emu.grasscutter.tools;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.LongStream;
-
 import emu.grasscutter.GameConstants;
 import emu.grasscutter.Grasscutter;
 import emu.grasscutter.command.CommandHandler;
@@ -30,6 +14,18 @@ import emu.grasscutter.utils.Language.TextStrings;
 import it.unimi.dsi.fastutil.ints.Int2IntRBTreeMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectRBTreeMap;
 import lombok.val;
+
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 
 import static emu.grasscutter.utils.FileUtils.getResourcePath;
 import static emu.grasscutter.utils.Language.getTextMapKey;
@@ -76,13 +72,17 @@ public final class Tools {
             void newTranslatedLine(String template, TextStrings... textstrings) {
                 for (int i = 0; i < TextStrings.NUM_LANGUAGES; i++) {
                     String s = template;
-                    for (int j = 0; j < textstrings.length; j++)
-                        s = s.replace("{"+j+"}", textstrings[j].strings[i]);
+                    for (int j = 0; j < textstrings.length; j++) {
+                        var txtstr = textstrings[j];
+                        if (txtstr != null) {
+                            s = s.replace("{" + j + "}", txtstr.strings[i]);
+                        }
+                    }
                     handbookBuilders.get(i).append(s + "\n");
                 }
             }
             void newTranslatedLine(String template, long... hashes) {
-                newTranslatedLine(template, LongStream.of(hashes).mapToObj(hash -> getTextMapKey(hash)).toArray(TextStrings[]::new));
+                newTranslatedLine(template, LongStream.of(hashes).mapToObj(Language::getTextMapKey).toArray(TextStrings[]::new));
             }
         };
 

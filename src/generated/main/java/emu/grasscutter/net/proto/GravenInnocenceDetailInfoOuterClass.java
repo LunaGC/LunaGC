@@ -115,6 +115,100 @@ public final class GravenInnocenceDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private GravenInnocenceDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 26: {
+              emu.grasscutter.net.proto.FIDBMENLPEPOuterClass.FIDBMENLPEP.Builder subBuilder = null;
+              if (cIGEOIIBPHF_ != null) {
+                subBuilder = cIGEOIIBPHF_.toBuilder();
+              }
+              cIGEOIIBPHF_ = input.readMessage(emu.grasscutter.net.proto.FIDBMENLPEPOuterClass.FIDBMENLPEP.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cIGEOIIBPHF_);
+                cIGEOIIBPHF_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              emu.grasscutter.net.proto.GravenInnocencePhotoInfoOuterClass.GravenInnocencePhotoInfo.Builder subBuilder = null;
+              if (photoInfo_ != null) {
+                subBuilder = photoInfo_.toBuilder();
+              }
+              photoInfo_ = input.readMessage(emu.grasscutter.net.proto.GravenInnocencePhotoInfoOuterClass.GravenInnocencePhotoInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(photoInfo_);
+                photoInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 64: {
+
+              isContentClosed_ = input.readBool();
+              break;
+            }
+            case 90: {
+              emu.grasscutter.net.proto.EJDDAFOGCEFOuterClass.EJDDAFOGCEF.Builder subBuilder = null;
+              if (oMIGMFKNCIK_ != null) {
+                subBuilder = oMIGMFKNCIK_.toBuilder();
+              }
+              oMIGMFKNCIK_ = input.readMessage(emu.grasscutter.net.proto.EJDDAFOGCEFOuterClass.EJDDAFOGCEF.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(oMIGMFKNCIK_);
+                oMIGMFKNCIK_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              emu.grasscutter.net.proto.HKCAHHHHPGLOuterClass.HKCAHHHHPGL.Builder subBuilder = null;
+              if (nLHOPBFKEKD_ != null) {
+                subBuilder = nLHOPBFKEKD_.toBuilder();
+              }
+              nLHOPBFKEKD_ = input.readMessage(emu.grasscutter.net.proto.HKCAHHHHPGLOuterClass.HKCAHHHHPGL.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(nLHOPBFKEKD_);
+                nLHOPBFKEKD_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.GravenInnocenceDetailInfoOuterClass.internal_static_GravenInnocenceDetailInfo_descriptor;
@@ -151,7 +245,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.EJDDAFOGCEFOuterClass.EJDDAFOGCEFOrBuilder getOMIGMFKNCIKOrBuilder() {
-      return oMIGMFKNCIK_ == null ? emu.grasscutter.net.proto.EJDDAFOGCEFOuterClass.EJDDAFOGCEF.getDefaultInstance() : oMIGMFKNCIK_;
+      return getOMIGMFKNCIK();
     }
 
     public static final int CIGEOIIBPHF_FIELD_NUMBER = 3;
@@ -177,7 +271,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.FIDBMENLPEPOuterClass.FIDBMENLPEPOrBuilder getCIGEOIIBPHFOrBuilder() {
-      return cIGEOIIBPHF_ == null ? emu.grasscutter.net.proto.FIDBMENLPEPOuterClass.FIDBMENLPEP.getDefaultInstance() : cIGEOIIBPHF_;
+      return getCIGEOIIBPHF();
     }
 
     public static final int NLHOPBFKEKD_FIELD_NUMBER = 12;
@@ -203,7 +297,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.HKCAHHHHPGLOuterClass.HKCAHHHHPGLOrBuilder getNLHOPBFKEKDOrBuilder() {
-      return nLHOPBFKEKD_ == null ? emu.grasscutter.net.proto.HKCAHHHHPGLOuterClass.HKCAHHHHPGL.getDefaultInstance() : nLHOPBFKEKD_;
+      return getNLHOPBFKEKD();
     }
 
     public static final int PHOTO_INFO_FIELD_NUMBER = 5;
@@ -229,11 +323,11 @@ public final class GravenInnocenceDetailInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.GravenInnocencePhotoInfoOuterClass.GravenInnocencePhotoInfoOrBuilder getPhotoInfoOrBuilder() {
-      return photoInfo_ == null ? emu.grasscutter.net.proto.GravenInnocencePhotoInfoOuterClass.GravenInnocencePhotoInfo.getDefaultInstance() : photoInfo_;
+      return getPhotoInfo();
     }
 
     public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 8;
-    private boolean isContentClosed_ = false;
+    private boolean isContentClosed_;
     /**
      * <code>bool is_content_closed = 8;</code>
      * @return The isContentClosed.
@@ -272,7 +366,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
       if (nLHOPBFKEKD_ != null) {
         output.writeMessage(12, getNLHOPBFKEKD());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -301,7 +395,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getNLHOPBFKEKD());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -338,7 +432,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
       }
       if (getIsContentClosed()
           != other.getIsContentClosed()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -368,7 +462,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
       hash = (37 * hash) + IS_CONTENT_CLOSED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsContentClosed());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -489,39 +583,48 @@ public final class GravenInnocenceDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.GravenInnocenceDetailInfoOuterClass.GravenInnocenceDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        oMIGMFKNCIK_ = null;
-        if (oMIGMFKNCIKBuilder_ != null) {
-          oMIGMFKNCIKBuilder_.dispose();
+        if (oMIGMFKNCIKBuilder_ == null) {
+          oMIGMFKNCIK_ = null;
+        } else {
+          oMIGMFKNCIK_ = null;
           oMIGMFKNCIKBuilder_ = null;
         }
-        cIGEOIIBPHF_ = null;
-        if (cIGEOIIBPHFBuilder_ != null) {
-          cIGEOIIBPHFBuilder_.dispose();
+        if (cIGEOIIBPHFBuilder_ == null) {
+          cIGEOIIBPHF_ = null;
+        } else {
+          cIGEOIIBPHF_ = null;
           cIGEOIIBPHFBuilder_ = null;
         }
-        nLHOPBFKEKD_ = null;
-        if (nLHOPBFKEKDBuilder_ != null) {
-          nLHOPBFKEKDBuilder_.dispose();
+        if (nLHOPBFKEKDBuilder_ == null) {
+          nLHOPBFKEKD_ = null;
+        } else {
+          nLHOPBFKEKD_ = null;
           nLHOPBFKEKDBuilder_ = null;
         }
-        photoInfo_ = null;
-        if (photoInfoBuilder_ != null) {
-          photoInfoBuilder_.dispose();
+        if (photoInfoBuilder_ == null) {
+          photoInfo_ = null;
+        } else {
+          photoInfo_ = null;
           photoInfoBuilder_ = null;
         }
         isContentClosed_ = false;
+
         return this;
       }
 
@@ -548,36 +651,29 @@ public final class GravenInnocenceDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.GravenInnocenceDetailInfoOuterClass.GravenInnocenceDetailInfo buildPartial() {
         emu.grasscutter.net.proto.GravenInnocenceDetailInfoOuterClass.GravenInnocenceDetailInfo result = new emu.grasscutter.net.proto.GravenInnocenceDetailInfoOuterClass.GravenInnocenceDetailInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        if (oMIGMFKNCIKBuilder_ == null) {
+          result.oMIGMFKNCIK_ = oMIGMFKNCIK_;
+        } else {
+          result.oMIGMFKNCIK_ = oMIGMFKNCIKBuilder_.build();
+        }
+        if (cIGEOIIBPHFBuilder_ == null) {
+          result.cIGEOIIBPHF_ = cIGEOIIBPHF_;
+        } else {
+          result.cIGEOIIBPHF_ = cIGEOIIBPHFBuilder_.build();
+        }
+        if (nLHOPBFKEKDBuilder_ == null) {
+          result.nLHOPBFKEKD_ = nLHOPBFKEKD_;
+        } else {
+          result.nLHOPBFKEKD_ = nLHOPBFKEKDBuilder_.build();
+        }
+        if (photoInfoBuilder_ == null) {
+          result.photoInfo_ = photoInfo_;
+        } else {
+          result.photoInfo_ = photoInfoBuilder_.build();
+        }
+        result.isContentClosed_ = isContentClosed_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.GravenInnocenceDetailInfoOuterClass.GravenInnocenceDetailInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.oMIGMFKNCIK_ = oMIGMFKNCIKBuilder_ == null
-              ? oMIGMFKNCIK_
-              : oMIGMFKNCIKBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.cIGEOIIBPHF_ = cIGEOIIBPHFBuilder_ == null
-              ? cIGEOIIBPHF_
-              : cIGEOIIBPHFBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.nLHOPBFKEKD_ = nLHOPBFKEKDBuilder_ == null
-              ? nLHOPBFKEKD_
-              : nLHOPBFKEKDBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.photoInfo_ = photoInfoBuilder_ == null
-              ? photoInfo_
-              : photoInfoBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.isContentClosed_ = isContentClosed_;
-        }
       }
 
       @java.lang.Override
@@ -639,7 +735,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
         if (other.getIsContentClosed() != false) {
           setIsContentClosed(other.getIsContentClosed());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -654,66 +750,19 @@ public final class GravenInnocenceDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.GravenInnocenceDetailInfoOuterClass.GravenInnocenceDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 26: {
-                input.readMessage(
-                    getCIGEOIIBPHFFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 26
-              case 42: {
-                input.readMessage(
-                    getPhotoInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 42
-              case 64: {
-                isContentClosed_ = input.readBool();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 64
-              case 90: {
-                input.readMessage(
-                    getOMIGMFKNCIKFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 90
-              case 98: {
-                input.readMessage(
-                    getNLHOPBFKEKDFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 98
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.GravenInnocenceDetailInfoOuterClass.GravenInnocenceDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private emu.grasscutter.net.proto.EJDDAFOGCEFOuterClass.EJDDAFOGCEF oMIGMFKNCIK_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -723,7 +772,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
        * @return Whether the oMIGMFKNCIK field is set.
        */
       public boolean hasOMIGMFKNCIK() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return oMIGMFKNCIKBuilder_ != null || oMIGMFKNCIK_ != null;
       }
       /**
        * <code>.EJDDAFOGCEF OMIGMFKNCIK = 11;</code>
@@ -745,11 +794,11 @@ public final class GravenInnocenceDetailInfoOuterClass {
             throw new NullPointerException();
           }
           oMIGMFKNCIK_ = value;
+          onChanged();
         } else {
           oMIGMFKNCIKBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -759,11 +808,11 @@ public final class GravenInnocenceDetailInfoOuterClass {
           emu.grasscutter.net.proto.EJDDAFOGCEFOuterClass.EJDDAFOGCEF.Builder builderForValue) {
         if (oMIGMFKNCIKBuilder_ == null) {
           oMIGMFKNCIK_ = builderForValue.build();
+          onChanged();
         } else {
           oMIGMFKNCIKBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -771,38 +820,38 @@ public final class GravenInnocenceDetailInfoOuterClass {
        */
       public Builder mergeOMIGMFKNCIK(emu.grasscutter.net.proto.EJDDAFOGCEFOuterClass.EJDDAFOGCEF value) {
         if (oMIGMFKNCIKBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            oMIGMFKNCIK_ != null &&
-            oMIGMFKNCIK_ != emu.grasscutter.net.proto.EJDDAFOGCEFOuterClass.EJDDAFOGCEF.getDefaultInstance()) {
-            getOMIGMFKNCIKBuilder().mergeFrom(value);
+          if (oMIGMFKNCIK_ != null) {
+            oMIGMFKNCIK_ =
+              emu.grasscutter.net.proto.EJDDAFOGCEFOuterClass.EJDDAFOGCEF.newBuilder(oMIGMFKNCIK_).mergeFrom(value).buildPartial();
           } else {
             oMIGMFKNCIK_ = value;
           }
+          onChanged();
         } else {
           oMIGMFKNCIKBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.EJDDAFOGCEF OMIGMFKNCIK = 11;</code>
        */
       public Builder clearOMIGMFKNCIK() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        oMIGMFKNCIK_ = null;
-        if (oMIGMFKNCIKBuilder_ != null) {
-          oMIGMFKNCIKBuilder_.dispose();
+        if (oMIGMFKNCIKBuilder_ == null) {
+          oMIGMFKNCIK_ = null;
+          onChanged();
+        } else {
+          oMIGMFKNCIK_ = null;
           oMIGMFKNCIKBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.EJDDAFOGCEF OMIGMFKNCIK = 11;</code>
        */
       public emu.grasscutter.net.proto.EJDDAFOGCEFOuterClass.EJDDAFOGCEF.Builder getOMIGMFKNCIKBuilder() {
-        bitField0_ |= 0x00000001;
+        
         onChanged();
         return getOMIGMFKNCIKFieldBuilder().getBuilder();
       }
@@ -842,7 +891,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
        * @return Whether the cIGEOIIBPHF field is set.
        */
       public boolean hasCIGEOIIBPHF() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return cIGEOIIBPHFBuilder_ != null || cIGEOIIBPHF_ != null;
       }
       /**
        * <code>.FIDBMENLPEP CIGEOIIBPHF = 3;</code>
@@ -864,11 +913,11 @@ public final class GravenInnocenceDetailInfoOuterClass {
             throw new NullPointerException();
           }
           cIGEOIIBPHF_ = value;
+          onChanged();
         } else {
           cIGEOIIBPHFBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+
         return this;
       }
       /**
@@ -878,11 +927,11 @@ public final class GravenInnocenceDetailInfoOuterClass {
           emu.grasscutter.net.proto.FIDBMENLPEPOuterClass.FIDBMENLPEP.Builder builderForValue) {
         if (cIGEOIIBPHFBuilder_ == null) {
           cIGEOIIBPHF_ = builderForValue.build();
+          onChanged();
         } else {
           cIGEOIIBPHFBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+
         return this;
       }
       /**
@@ -890,38 +939,38 @@ public final class GravenInnocenceDetailInfoOuterClass {
        */
       public Builder mergeCIGEOIIBPHF(emu.grasscutter.net.proto.FIDBMENLPEPOuterClass.FIDBMENLPEP value) {
         if (cIGEOIIBPHFBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            cIGEOIIBPHF_ != null &&
-            cIGEOIIBPHF_ != emu.grasscutter.net.proto.FIDBMENLPEPOuterClass.FIDBMENLPEP.getDefaultInstance()) {
-            getCIGEOIIBPHFBuilder().mergeFrom(value);
+          if (cIGEOIIBPHF_ != null) {
+            cIGEOIIBPHF_ =
+              emu.grasscutter.net.proto.FIDBMENLPEPOuterClass.FIDBMENLPEP.newBuilder(cIGEOIIBPHF_).mergeFrom(value).buildPartial();
           } else {
             cIGEOIIBPHF_ = value;
           }
+          onChanged();
         } else {
           cIGEOIIBPHFBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.FIDBMENLPEP CIGEOIIBPHF = 3;</code>
        */
       public Builder clearCIGEOIIBPHF() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        cIGEOIIBPHF_ = null;
-        if (cIGEOIIBPHFBuilder_ != null) {
-          cIGEOIIBPHFBuilder_.dispose();
+        if (cIGEOIIBPHFBuilder_ == null) {
+          cIGEOIIBPHF_ = null;
+          onChanged();
+        } else {
+          cIGEOIIBPHF_ = null;
           cIGEOIIBPHFBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.FIDBMENLPEP CIGEOIIBPHF = 3;</code>
        */
       public emu.grasscutter.net.proto.FIDBMENLPEPOuterClass.FIDBMENLPEP.Builder getCIGEOIIBPHFBuilder() {
-        bitField0_ |= 0x00000002;
+        
         onChanged();
         return getCIGEOIIBPHFFieldBuilder().getBuilder();
       }
@@ -961,7 +1010,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
        * @return Whether the nLHOPBFKEKD field is set.
        */
       public boolean hasNLHOPBFKEKD() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return nLHOPBFKEKDBuilder_ != null || nLHOPBFKEKD_ != null;
       }
       /**
        * <code>.HKCAHHHHPGL NLHOPBFKEKD = 12;</code>
@@ -983,11 +1032,11 @@ public final class GravenInnocenceDetailInfoOuterClass {
             throw new NullPointerException();
           }
           nLHOPBFKEKD_ = value;
+          onChanged();
         } else {
           nLHOPBFKEKDBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -997,11 +1046,11 @@ public final class GravenInnocenceDetailInfoOuterClass {
           emu.grasscutter.net.proto.HKCAHHHHPGLOuterClass.HKCAHHHHPGL.Builder builderForValue) {
         if (nLHOPBFKEKDBuilder_ == null) {
           nLHOPBFKEKD_ = builderForValue.build();
+          onChanged();
         } else {
           nLHOPBFKEKDBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -1009,38 +1058,38 @@ public final class GravenInnocenceDetailInfoOuterClass {
        */
       public Builder mergeNLHOPBFKEKD(emu.grasscutter.net.proto.HKCAHHHHPGLOuterClass.HKCAHHHHPGL value) {
         if (nLHOPBFKEKDBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            nLHOPBFKEKD_ != null &&
-            nLHOPBFKEKD_ != emu.grasscutter.net.proto.HKCAHHHHPGLOuterClass.HKCAHHHHPGL.getDefaultInstance()) {
-            getNLHOPBFKEKDBuilder().mergeFrom(value);
+          if (nLHOPBFKEKD_ != null) {
+            nLHOPBFKEKD_ =
+              emu.grasscutter.net.proto.HKCAHHHHPGLOuterClass.HKCAHHHHPGL.newBuilder(nLHOPBFKEKD_).mergeFrom(value).buildPartial();
           } else {
             nLHOPBFKEKD_ = value;
           }
+          onChanged();
         } else {
           nLHOPBFKEKDBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.HKCAHHHHPGL NLHOPBFKEKD = 12;</code>
        */
       public Builder clearNLHOPBFKEKD() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        nLHOPBFKEKD_ = null;
-        if (nLHOPBFKEKDBuilder_ != null) {
-          nLHOPBFKEKDBuilder_.dispose();
+        if (nLHOPBFKEKDBuilder_ == null) {
+          nLHOPBFKEKD_ = null;
+          onChanged();
+        } else {
+          nLHOPBFKEKD_ = null;
           nLHOPBFKEKDBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.HKCAHHHHPGL NLHOPBFKEKD = 12;</code>
        */
       public emu.grasscutter.net.proto.HKCAHHHHPGLOuterClass.HKCAHHHHPGL.Builder getNLHOPBFKEKDBuilder() {
-        bitField0_ |= 0x00000004;
+        
         onChanged();
         return getNLHOPBFKEKDFieldBuilder().getBuilder();
       }
@@ -1080,7 +1129,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
        * @return Whether the photoInfo field is set.
        */
       public boolean hasPhotoInfo() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return photoInfoBuilder_ != null || photoInfo_ != null;
       }
       /**
        * <code>.GravenInnocencePhotoInfo photo_info = 5;</code>
@@ -1102,11 +1151,11 @@ public final class GravenInnocenceDetailInfoOuterClass {
             throw new NullPointerException();
           }
           photoInfo_ = value;
+          onChanged();
         } else {
           photoInfoBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+
         return this;
       }
       /**
@@ -1116,11 +1165,11 @@ public final class GravenInnocenceDetailInfoOuterClass {
           emu.grasscutter.net.proto.GravenInnocencePhotoInfoOuterClass.GravenInnocencePhotoInfo.Builder builderForValue) {
         if (photoInfoBuilder_ == null) {
           photoInfo_ = builderForValue.build();
+          onChanged();
         } else {
           photoInfoBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+
         return this;
       }
       /**
@@ -1128,38 +1177,38 @@ public final class GravenInnocenceDetailInfoOuterClass {
        */
       public Builder mergePhotoInfo(emu.grasscutter.net.proto.GravenInnocencePhotoInfoOuterClass.GravenInnocencePhotoInfo value) {
         if (photoInfoBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
-            photoInfo_ != null &&
-            photoInfo_ != emu.grasscutter.net.proto.GravenInnocencePhotoInfoOuterClass.GravenInnocencePhotoInfo.getDefaultInstance()) {
-            getPhotoInfoBuilder().mergeFrom(value);
+          if (photoInfo_ != null) {
+            photoInfo_ =
+              emu.grasscutter.net.proto.GravenInnocencePhotoInfoOuterClass.GravenInnocencePhotoInfo.newBuilder(photoInfo_).mergeFrom(value).buildPartial();
           } else {
             photoInfo_ = value;
           }
+          onChanged();
         } else {
           photoInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.GravenInnocencePhotoInfo photo_info = 5;</code>
        */
       public Builder clearPhotoInfo() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        photoInfo_ = null;
-        if (photoInfoBuilder_ != null) {
-          photoInfoBuilder_.dispose();
+        if (photoInfoBuilder_ == null) {
+          photoInfo_ = null;
+          onChanged();
+        } else {
+          photoInfo_ = null;
           photoInfoBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.GravenInnocencePhotoInfo photo_info = 5;</code>
        */
       public emu.grasscutter.net.proto.GravenInnocencePhotoInfoOuterClass.GravenInnocencePhotoInfo.Builder getPhotoInfoBuilder() {
-        bitField0_ |= 0x00000008;
+        
         onChanged();
         return getPhotoInfoFieldBuilder().getBuilder();
       }
@@ -1208,7 +1257,6 @@ public final class GravenInnocenceDetailInfoOuterClass {
       public Builder setIsContentClosed(boolean value) {
         
         isContentClosed_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1217,7 +1265,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsContentClosed() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         isContentClosed_ = false;
         onChanged();
         return this;
@@ -1255,18 +1303,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new GravenInnocenceDetailInfo(input, extensionRegistry);
       }
     };
 

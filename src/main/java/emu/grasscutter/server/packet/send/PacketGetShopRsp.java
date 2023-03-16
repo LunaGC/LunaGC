@@ -1,15 +1,19 @@
 package emu.grasscutter.server.packet.send;
 
 import emu.grasscutter.Grasscutter;
+import emu.grasscutter.data.GameData;
+import emu.grasscutter.data.excels.ProductIdData;
 import emu.grasscutter.game.player.Player;
 import emu.grasscutter.game.shop.ShopInfo;
 import emu.grasscutter.game.shop.ShopLimit;
 import emu.grasscutter.game.shop.ShopSystem;
+import emu.grasscutter.game.shop.ShopType;
 import emu.grasscutter.net.packet.BasePacket;
 import emu.grasscutter.net.packet.PacketOpcodes;
 import emu.grasscutter.net.proto.GetShopRspOuterClass;
 import emu.grasscutter.net.proto.ItemParamOuterClass;
 import emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoods;
+import emu.grasscutter.net.proto.ShopMcoinProductOuterClass;
 import emu.grasscutter.net.proto.ShopOuterClass.Shop;
 import emu.grasscutter.utils.Utils;
 
@@ -23,9 +27,9 @@ public class PacketGetShopRsp extends BasePacket {
 
         // TODO: CityReputationLevel
         Shop.Builder shop = Shop.newBuilder()
-                .setShopType(shopType)
-                .setCityId(1) //mock
-                .setCityReputationLevel(10); //mock
+            .setShopType(shopType)
+            .setCityId(1) //mock
+            .setCityReputationLevel(10); //mock
 
         ShopSystem manager = Grasscutter.getGameServer().getShopSystem();
         if (manager.getShopData().get(shopType) != null) {
@@ -33,18 +37,18 @@ public class PacketGetShopRsp extends BasePacket {
             List<ShopGoods> goodsList = new ArrayList<>();
             for (ShopInfo info : list) {
                 ShopGoods.Builder goods = ShopGoods.newBuilder()
-                        .setGoodsId(info.getGoodsId())
-                        .setGoodsItem(ItemParamOuterClass.ItemParam.newBuilder().setItemId(info.getGoodsItem().getId()).setCount(info.getGoodsItem().getCount()).build())
-                        .setScoin(info.getScoin())
-                        .setHcoin(info.getHcoin())
-                        .setBuyLimit(info.getBuyLimit())
-                        .setBeginTime(info.getBeginTime())
-                        .setEndTime(info.getEndTime())
-                        .setMinLevel(info.getMinLevel())
-                        .setMaxLevel(info.getMaxLevel())
-                        .setMcoin(info.getMcoin())
-                        .setDisableType(info.getDisableType())
-                        .setSecondarySheetId(info.getSecondarySheetId());
+                    .setGoodsId(info.getGoodsId())
+                    .setGoodsItem(ItemParamOuterClass.ItemParam.newBuilder().setItemId(info.getGoodsItem().getId()).setCount(info.getGoodsItem().getCount()).build())
+                    .setScoin(info.getScoin())
+                    .setHcoin(info.getHcoin())
+                    .setBuyLimit(info.getBuyLimit())
+                    .setBeginTime(info.getBeginTime())
+                    .setEndTime(info.getEndTime())
+                    .setMinLevel(info.getMinLevel())
+                    .setMaxLevel(info.getMaxLevel())
+                    .setMcoin(info.getMcoin())
+                    .setDisableType(info.getDisableType())
+                    .setSecondarySheetId(info.getSecondarySheetId());
                 if (info.getCostItemList() != null) {
                     goods.addAllCostItemList(info.getCostItemList().stream().map(x -> ItemParamOuterClass.ItemParam.newBuilder().setItemId(x.getId()).setCount(x.getCount()).build()).collect(Collectors.toList()));
                 }
@@ -73,6 +77,35 @@ public class PacketGetShopRsp extends BasePacket {
         }
 
         inv.save();
+        this.setData(GetShopRspOuterClass.GetShopRsp.newBuilder().setShop(shop).build());
+    }
+
+    public PacketGetShopRsp(ShopType type) {
+        super(PacketOpcodes.GetShopRsp);
+
+        var shop = Shop.newBuilder()
+            .setShopType(type.shopTypeId);
+
+        switch (type) {
+            case SHOP_TYPE_MCOIN -> GameData.getProductIdDataMap().values().stream()
+                .filter(ProductIdData::isNotInternal)
+                .filter(d -> d.getProductId().startsWith("ys_glb_primogem"))
+                .forEach(d -> {
+                    var detail = GameData.getProductMcoinDetailDataMap().get(d.getConfigId());
+                    if (detail != null) {
+                        shop.addMcoinProductList(ShopMcoinProductOuterClass.ShopMcoinProduct.newBuilder()
+                            .setProductId(d.getProductId())
+                            .setPriceTier(detail.getPriceTier())
+                            .setMcoinBase(detail.getMcoinNum())
+                            .setMcoinNonFirst(detail.getMcoinNonFirst())
+                            .setMcoinFirst(detail.getMcoinFirst())
+                            .setBoughtNum(0)//mock
+                            .build()
+                        );
+                    }
+                });
+        }
+
         this.setData(GetShopRspOuterClass.GetShopRsp.newBuilder().setShop(shop).build());
     }
 }

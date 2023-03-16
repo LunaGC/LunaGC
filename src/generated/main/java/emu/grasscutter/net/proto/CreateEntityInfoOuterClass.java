@@ -133,7 +133,7 @@ public final class CreateEntityInfoOuterClass {
 
     public emu.grasscutter.net.proto.CreateEntityInfoOuterClass.CreateEntityInfo.EntityCase getEntityCase();
 
-    public emu.grasscutter.net.proto.CreateEntityInfoOuterClass.CreateEntityInfo.MGPBKHBAPPHCase getMGPBKHBAPPHCase();
+    public emu.grasscutter.net.proto.CreateEntityInfoOuterClass.CreateEntityInfo.EntityCreateInfoCase getEntityCreateInfoCase();
   }
   /**
    * <pre>
@@ -252,16 +252,16 @@ public final class CreateEntityInfoOuterClass {
             }
             case 106: {
               emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Builder subBuilder = null;
-              if (mGPBKHBAPPHCase_ == 13) {
-                subBuilder = ((emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) mGPBKHBAPPH_).toBuilder();
+              if (entityCreateInfoCase_ == 13) {
+                subBuilder = ((emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) entityCreateInfo_).toBuilder();
               }
-              mGPBKHBAPPH_ =
+              entityCreateInfo_ =
                   input.readMessage(emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) mGPBKHBAPPH_);
-                mGPBKHBAPPH_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) entityCreateInfo_);
+                entityCreateInfo_ = subBuilder.buildPartial();
               }
-              mGPBKHBAPPHCase_ = 13;
+              entityCreateInfoCase_ = 13;
               break;
             }
             default: {
@@ -341,15 +341,15 @@ public final class CreateEntityInfoOuterClass {
           entityCase_);
     }
 
-    private int mGPBKHBAPPHCase_ = 0;
-    private java.lang.Object mGPBKHBAPPH_;
-    public enum MGPBKHBAPPHCase
+    private int entityCreateInfoCase_ = 0;
+    private java.lang.Object entityCreateInfo_;
+    public enum EntityCreateInfoCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       GADGET(13),
-      MGPBKHBAPPH_NOT_SET(0);
+      ENTITYCREATEINFO_NOT_SET(0);
       private final int value;
-      private MGPBKHBAPPHCase(int value) {
+      private EntityCreateInfoCase(int value) {
         this.value = value;
       }
       /**
@@ -358,14 +358,14 @@ public final class CreateEntityInfoOuterClass {
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
-      public static MGPBKHBAPPHCase valueOf(int value) {
+      public static EntityCreateInfoCase valueOf(int value) {
         return forNumber(value);
       }
 
-      public static MGPBKHBAPPHCase forNumber(int value) {
+      public static EntityCreateInfoCase forNumber(int value) {
         switch (value) {
           case 13: return GADGET;
-          case 0: return MGPBKHBAPPH_NOT_SET;
+          case 0: return ENTITYCREATEINFO_NOT_SET;
           default: return null;
         }
       }
@@ -374,10 +374,10 @@ public final class CreateEntityInfoOuterClass {
       }
     };
 
-    public MGPBKHBAPPHCase
-    getMGPBKHBAPPHCase() {
-      return MGPBKHBAPPHCase.forNumber(
-          mGPBKHBAPPHCase_);
+    public EntityCreateInfoCase
+    getEntityCreateInfoCase() {
+      return EntityCreateInfoCase.forNumber(
+          entityCreateInfoCase_);
     }
 
     public static final int LEVEL_FIELD_NUMBER = 5;
@@ -567,7 +567,7 @@ public final class CreateEntityInfoOuterClass {
      */
     @java.lang.Override
     public boolean hasGadget() {
-      return mGPBKHBAPPHCase_ == 13;
+      return entityCreateInfoCase_ == 13;
     }
     /**
      * <code>.CreateGadgetInfo gadget = 13;</code>
@@ -575,8 +575,8 @@ public final class CreateEntityInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo getGadget() {
-      if (mGPBKHBAPPHCase_ == 13) {
-         return (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) mGPBKHBAPPH_;
+      if (entityCreateInfoCase_ == 13) {
+         return (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) entityCreateInfo_;
       }
       return emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.getDefaultInstance();
     }
@@ -585,8 +585,8 @@ public final class CreateEntityInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfoOrBuilder getGadgetOrBuilder() {
-      if (mGPBKHBAPPHCase_ == 13) {
-         return (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) mGPBKHBAPPH_;
+      if (entityCreateInfoCase_ == 13) {
+         return (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) entityCreateInfo_;
       }
       return emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.getDefaultInstance();
     }
@@ -639,8 +639,8 @@ public final class CreateEntityInfoOuterClass {
       if (clientUniqueId_ != 0) {
         output.writeUInt32(12, clientUniqueId_);
       }
-      if (mGPBKHBAPPHCase_ == 13) {
-        output.writeMessage(13, (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) mGPBKHBAPPH_);
+      if (entityCreateInfoCase_ == 13) {
+        output.writeMessage(13, (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) entityCreateInfo_);
       }
       unknownFields.writeTo(output);
     }
@@ -695,9 +695,9 @@ public final class CreateEntityInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(12, clientUniqueId_);
       }
-      if (mGPBKHBAPPHCase_ == 13) {
+      if (entityCreateInfoCase_ == 13) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) mGPBKHBAPPH_);
+          .computeMessageSize(13, (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) entityCreateInfo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -753,8 +753,8 @@ public final class CreateEntityInfoOuterClass {
         case 0:
         default:
       }
-      if (!getMGPBKHBAPPHCase().equals(other.getMGPBKHBAPPHCase())) return false;
-      switch (mGPBKHBAPPHCase_) {
+      if (!getEntityCreateInfoCase().equals(other.getEntityCreateInfoCase())) return false;
+      switch (entityCreateInfoCase_) {
         case 13:
           if (!getGadget()
               .equals(other.getGadget())) return false;
@@ -809,7 +809,7 @@ public final class CreateEntityInfoOuterClass {
         case 0:
         default:
       }
-      switch (mGPBKHBAPPHCase_) {
+      switch (entityCreateInfoCase_) {
         case 13:
           hash = (37 * hash) + GADGET_FIELD_NUMBER;
           hash = (53 * hash) + getGadget().hashCode();
@@ -976,8 +976,8 @@ public final class CreateEntityInfoOuterClass {
 
         entityCase_ = 0;
         entity_ = null;
-        mGPBKHBAPPHCase_ = 0;
-        mGPBKHBAPPH_ = null;
+        entityCreateInfoCase_ = 0;
+        entityCreateInfo_ = null;
         return this;
       }
 
@@ -1030,15 +1030,15 @@ public final class CreateEntityInfoOuterClass {
         if (entityCase_ == 4) {
           result.entity_ = entity_;
         }
-        if (mGPBKHBAPPHCase_ == 13) {
+        if (entityCreateInfoCase_ == 13) {
           if (gadgetBuilder_ == null) {
-            result.mGPBKHBAPPH_ = mGPBKHBAPPH_;
+            result.entityCreateInfo_ = entityCreateInfo_;
           } else {
-            result.mGPBKHBAPPH_ = gadgetBuilder_.build();
+            result.entityCreateInfo_ = gadgetBuilder_.build();
           }
         }
         result.entityCase_ = entityCase_;
-        result.mGPBKHBAPPHCase_ = mGPBKHBAPPHCase_;
+        result.entityCreateInfoCase_ = entityCreateInfoCase_;
         onBuilt();
         return result;
       }
@@ -1126,12 +1126,12 @@ public final class CreateEntityInfoOuterClass {
             break;
           }
         }
-        switch (other.getMGPBKHBAPPHCase()) {
+        switch (other.getEntityCreateInfoCase()) {
           case GADGET: {
             mergeGadget(other.getGadget());
             break;
           }
-          case MGPBKHBAPPH_NOT_SET: {
+          case ENTITYCREATEINFO_NOT_SET: {
             break;
           }
         }
@@ -1178,17 +1178,17 @@ public final class CreateEntityInfoOuterClass {
         return this;
       }
 
-      private int mGPBKHBAPPHCase_ = 0;
-      private java.lang.Object mGPBKHBAPPH_;
-      public MGPBKHBAPPHCase
-          getMGPBKHBAPPHCase() {
-        return MGPBKHBAPPHCase.forNumber(
-            mGPBKHBAPPHCase_);
+      private int entityCreateInfoCase_ = 0;
+      private java.lang.Object entityCreateInfo_;
+      public EntityCreateInfoCase
+          getEntityCreateInfoCase() {
+        return EntityCreateInfoCase.forNumber(
+            entityCreateInfoCase_);
       }
 
-      public Builder clearMGPBKHBAPPH() {
-        mGPBKHBAPPHCase_ = 0;
-        mGPBKHBAPPH_ = null;
+      public Builder clearEntityCreateInfo() {
+        entityCreateInfoCase_ = 0;
+        entityCreateInfo_ = null;
         onChanged();
         return this;
       }
@@ -1728,7 +1728,7 @@ public final class CreateEntityInfoOuterClass {
        */
       @java.lang.Override
       public boolean hasGadget() {
-        return mGPBKHBAPPHCase_ == 13;
+        return entityCreateInfoCase_ == 13;
       }
       /**
        * <code>.CreateGadgetInfo gadget = 13;</code>
@@ -1737,12 +1737,12 @@ public final class CreateEntityInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo getGadget() {
         if (gadgetBuilder_ == null) {
-          if (mGPBKHBAPPHCase_ == 13) {
-            return (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) mGPBKHBAPPH_;
+          if (entityCreateInfoCase_ == 13) {
+            return (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) entityCreateInfo_;
           }
           return emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.getDefaultInstance();
         } else {
-          if (mGPBKHBAPPHCase_ == 13) {
+          if (entityCreateInfoCase_ == 13) {
             return gadgetBuilder_.getMessage();
           }
           return emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.getDefaultInstance();
@@ -1756,12 +1756,12 @@ public final class CreateEntityInfoOuterClass {
           if (value == null) {
             throw new NullPointerException();
           }
-          mGPBKHBAPPH_ = value;
+          entityCreateInfo_ = value;
           onChanged();
         } else {
           gadgetBuilder_.setMessage(value);
         }
-        mGPBKHBAPPHCase_ = 13;
+        entityCreateInfoCase_ = 13;
         return this;
       }
       /**
@@ -1770,12 +1770,12 @@ public final class CreateEntityInfoOuterClass {
       public Builder setGadget(
           emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Builder builderForValue) {
         if (gadgetBuilder_ == null) {
-          mGPBKHBAPPH_ = builderForValue.build();
+          entityCreateInfo_ = builderForValue.build();
           onChanged();
         } else {
           gadgetBuilder_.setMessage(builderForValue.build());
         }
-        mGPBKHBAPPHCase_ = 13;
+        entityCreateInfoCase_ = 13;
         return this;
       }
       /**
@@ -1783,21 +1783,21 @@ public final class CreateEntityInfoOuterClass {
        */
       public Builder mergeGadget(emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo value) {
         if (gadgetBuilder_ == null) {
-          if (mGPBKHBAPPHCase_ == 13 &&
-              mGPBKHBAPPH_ != emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.getDefaultInstance()) {
-            mGPBKHBAPPH_ = emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.newBuilder((emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) mGPBKHBAPPH_)
+          if (entityCreateInfoCase_ == 13 &&
+              entityCreateInfo_ != emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.getDefaultInstance()) {
+            entityCreateInfo_ = emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.newBuilder((emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) entityCreateInfo_)
                 .mergeFrom(value).buildPartial();
           } else {
-            mGPBKHBAPPH_ = value;
+            entityCreateInfo_ = value;
           }
           onChanged();
         } else {
-          if (mGPBKHBAPPHCase_ == 13) {
+          if (entityCreateInfoCase_ == 13) {
             gadgetBuilder_.mergeFrom(value);
           }
           gadgetBuilder_.setMessage(value);
         }
-        mGPBKHBAPPHCase_ = 13;
+        entityCreateInfoCase_ = 13;
         return this;
       }
       /**
@@ -1805,15 +1805,15 @@ public final class CreateEntityInfoOuterClass {
        */
       public Builder clearGadget() {
         if (gadgetBuilder_ == null) {
-          if (mGPBKHBAPPHCase_ == 13) {
-            mGPBKHBAPPHCase_ = 0;
-            mGPBKHBAPPH_ = null;
+          if (entityCreateInfoCase_ == 13) {
+            entityCreateInfoCase_ = 0;
+            entityCreateInfo_ = null;
             onChanged();
           }
         } else {
-          if (mGPBKHBAPPHCase_ == 13) {
-            mGPBKHBAPPHCase_ = 0;
-            mGPBKHBAPPH_ = null;
+          if (entityCreateInfoCase_ == 13) {
+            entityCreateInfoCase_ = 0;
+            entityCreateInfo_ = null;
           }
           gadgetBuilder_.clear();
         }
@@ -1830,11 +1830,11 @@ public final class CreateEntityInfoOuterClass {
        */
       @java.lang.Override
       public emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfoOrBuilder getGadgetOrBuilder() {
-        if ((mGPBKHBAPPHCase_ == 13) && (gadgetBuilder_ != null)) {
+        if ((entityCreateInfoCase_ == 13) && (gadgetBuilder_ != null)) {
           return gadgetBuilder_.getMessageOrBuilder();
         } else {
-          if (mGPBKHBAPPHCase_ == 13) {
-            return (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) mGPBKHBAPPH_;
+          if (entityCreateInfoCase_ == 13) {
+            return (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) entityCreateInfo_;
           }
           return emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.getDefaultInstance();
         }
@@ -1846,17 +1846,17 @@ public final class CreateEntityInfoOuterClass {
           emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo, emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Builder, emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfoOrBuilder> 
           getGadgetFieldBuilder() {
         if (gadgetBuilder_ == null) {
-          if (!(mGPBKHBAPPHCase_ == 13)) {
-            mGPBKHBAPPH_ = emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.getDefaultInstance();
+          if (!(entityCreateInfoCase_ == 13)) {
+            entityCreateInfo_ = emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.getDefaultInstance();
           }
           gadgetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo, emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Builder, emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfoOrBuilder>(
-                  (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) mGPBKHBAPPH_,
+                  (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo) entityCreateInfo_,
                   getParentForChildren(),
                   isClean());
-          mGPBKHBAPPH_ = null;
+          entityCreateInfo_ = null;
         }
-        mGPBKHBAPPHCase_ = 13;
+        entityCreateInfoCase_ = 13;
         onChanged();;
         return gadgetBuilder_;
       }
@@ -1928,15 +1928,15 @@ public final class CreateEntityInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026CreateEntityInfo.proto\032\026CreateGadgetIn" +
-      "fo.proto\032\014Vector.proto\"\230\002\n\020CreateEntityI" +
+      "fo.proto\032\014Vector.proto\"\237\002\n\020CreateEntityI" +
       "nfo\022\r\n\005level\030\005 \001(\r\022\024\n\003pos\030\006 \001(\0132\007.Vector" +
       "\022\024\n\003rot\030\007 \001(\0132\007.Vector\022\020\n\010scene_id\030\n \001(\r" +
       "\022\017\n\007room_id\030\013 \001(\r\022\030\n\020client_unique_id\030\014 " +
       "\001(\r\022\024\n\nmonster_id\030\001 \001(\rH\000\022\020\n\006npc_id\030\002 \001(" +
       "\rH\000\022\023\n\tgadget_id\030\003 \001(\rH\000\022\021\n\007item_id\030\004 \001(" +
       "\rH\000\022#\n\006gadget\030\r \001(\0132\021.CreateGadgetInfoH\001" +
-      "B\010\n\006entityB\r\n\013MGPBKHBAPPHB\033\n\031emu.grasscu" +
-      "tter.net.protob\006proto3"
+      "B\010\n\006entityB\024\n\022entity_create_infoB\033\n\031emu." +
+      "grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1949,7 +1949,7 @@ public final class CreateEntityInfoOuterClass {
     internal_static_CreateEntityInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CreateEntityInfo_descriptor,
-        new java.lang.String[] { "Level", "Pos", "Rot", "SceneId", "RoomId", "ClientUniqueId", "MonsterId", "NpcId", "GadgetId", "ItemId", "Gadget", "Entity", "MGPBKHBAPPH", });
+        new java.lang.String[] { "Level", "Pos", "Rot", "SceneId", "RoomId", "ClientUniqueId", "MonsterId", "NpcId", "GadgetId", "ItemId", "Gadget", "Entity", "EntityCreateInfo", });
     emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
   }

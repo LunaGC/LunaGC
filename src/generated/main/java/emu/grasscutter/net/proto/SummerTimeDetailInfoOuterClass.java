@@ -62,14 +62,14 @@ public final class SummerTimeDetailInfoOuterClass {
     /**
      * <code>map&lt;uint32, .SummerTimeStageInfo&gt; stage_map = 9;</code>
      */
-    /* nullable */
-emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo getStageMapOrDefault(
+
+    emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo getStageMapOrDefault(
         int key,
-        /* nullable */
-emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defaultValue);
+        emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defaultValue);
     /**
      * <code>map&lt;uint32, .SummerTimeStageInfo&gt; stage_map = 9;</code>
      */
+
     emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo getStageMapOrThrow(
         int key);
 
@@ -109,6 +109,80 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
+    }
+    private SummerTimeDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              emu.grasscutter.net.proto.SummerTimeSprintBoatInfoOuterClass.SummerTimeSprintBoatInfo.Builder subBuilder = null;
+              if (sprintBoatInfo_ != null) {
+                subBuilder = sprintBoatInfo_.toBuilder();
+              }
+              sprintBoatInfo_ = input.readMessage(emu.grasscutter.net.proto.SummerTimeSprintBoatInfoOuterClass.SummerTimeSprintBoatInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(sprintBoatInfo_);
+                sprintBoatInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                stageMap_ = com.google.protobuf.MapField.newMapField(
+                    StageMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo>
+              stageMap__ = input.readMessage(
+                  StageMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              stageMap_.getMutableMap().put(
+                  stageMap__.getKey(), stageMap__.getValue());
+              break;
+            }
+            case 96: {
+
+              contentCloseTime_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              isContentClosed_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -158,11 +232,11 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.SummerTimeSprintBoatInfoOuterClass.SummerTimeSprintBoatInfoOrBuilder getSprintBoatInfoOrBuilder() {
-      return sprintBoatInfo_ == null ? emu.grasscutter.net.proto.SummerTimeSprintBoatInfoOuterClass.SummerTimeSprintBoatInfo.getDefaultInstance() : sprintBoatInfo_;
+      return getSprintBoatInfo();
     }
 
     public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 15;
-    private boolean isContentClosed_ = false;
+    private boolean isContentClosed_;
     /**
      * <code>bool is_content_closed = 15;</code>
      * @return The isContentClosed.
@@ -184,7 +258,6 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo.getDefaultInstance());
     }
-    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo> stageMap_;
     private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo>
@@ -195,12 +268,14 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
       }
       return stageMap_;
     }
+
     public int getStageMapCount() {
       return internalGetStageMap().getMap().size();
     }
     /**
      * <code>map&lt;uint32, .SummerTimeStageInfo&gt; stage_map = 9;</code>
      */
+
     @java.lang.Override
     public boolean containsStageMap(
         int key) {
@@ -219,6 +294,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
      * <code>map&lt;uint32, .SummerTimeStageInfo&gt; stage_map = 9;</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo> getStageMapMap() {
       return internalGetStageMap().getMap();
     }
@@ -226,11 +302,10 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
      * <code>map&lt;uint32, .SummerTimeStageInfo&gt; stage_map = 9;</code>
      */
     @java.lang.Override
-    public /* nullable */
-emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo getStageMapOrDefault(
+
+    public emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo getStageMapOrDefault(
         int key,
-        /* nullable */
-emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defaultValue) {
+        emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defaultValue) {
       
       java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo> map =
           internalGetStageMap().getMap();
@@ -240,6 +315,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
      * <code>map&lt;uint32, .SummerTimeStageInfo&gt; stage_map = 9;</code>
      */
     @java.lang.Override
+
     public emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo getStageMapOrThrow(
         int key) {
       
@@ -252,7 +328,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
     }
 
     public static final int CONTENT_CLOSE_TIME_FIELD_NUMBER = 12;
-    private int contentCloseTime_ = 0;
+    private int contentCloseTime_;
     /**
      * <code>uint32 content_close_time = 12;</code>
      * @return The contentCloseTime.
@@ -291,7 +367,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
       if (isContentClosed_ != false) {
         output.writeBool(15, isContentClosed_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -322,7 +398,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(15, isContentClosed_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -348,7 +424,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
           other.internalGetStageMap())) return false;
       if (getContentCloseTime()
           != other.getContentCloseTime()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -372,7 +448,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
       }
       hash = (37 * hash) + CONTENT_CLOSE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getContentCloseTime();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -515,26 +591,33 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
 
       // Construct using emu.grasscutter.net.proto.SummerTimeDetailInfoOuterClass.SummerTimeDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        sprintBoatInfo_ = null;
-        if (sprintBoatInfoBuilder_ != null) {
-          sprintBoatInfoBuilder_.dispose();
+        if (sprintBoatInfoBuilder_ == null) {
+          sprintBoatInfo_ = null;
+        } else {
+          sprintBoatInfo_ = null;
           sprintBoatInfoBuilder_ = null;
         }
         isContentClosed_ = false;
+
         internalGetMutableStageMap().clear();
         contentCloseTime_ = 0;
+
         return this;
       }
 
@@ -561,28 +644,18 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
       @java.lang.Override
       public emu.grasscutter.net.proto.SummerTimeDetailInfoOuterClass.SummerTimeDetailInfo buildPartial() {
         emu.grasscutter.net.proto.SummerTimeDetailInfoOuterClass.SummerTimeDetailInfo result = new emu.grasscutter.net.proto.SummerTimeDetailInfoOuterClass.SummerTimeDetailInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        int from_bitField0_ = bitField0_;
+        if (sprintBoatInfoBuilder_ == null) {
+          result.sprintBoatInfo_ = sprintBoatInfo_;
+        } else {
+          result.sprintBoatInfo_ = sprintBoatInfoBuilder_.build();
+        }
+        result.isContentClosed_ = isContentClosed_;
+        result.stageMap_ = internalGetStageMap();
+        result.stageMap_.makeImmutable();
+        result.contentCloseTime_ = contentCloseTime_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.SummerTimeDetailInfoOuterClass.SummerTimeDetailInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.sprintBoatInfo_ = sprintBoatInfoBuilder_ == null
-              ? sprintBoatInfo_
-              : sprintBoatInfoBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.isContentClosed_ = isContentClosed_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.stageMap_ = internalGetStageMap();
-          result.stageMap_.makeImmutable();
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.contentCloseTime_ = contentCloseTime_;
-        }
       }
 
       @java.lang.Override
@@ -637,11 +710,10 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
         }
         internalGetMutableStageMap().mergeFrom(
             other.internalGetStageMap());
-        bitField0_ |= 0x00000004;
         if (other.getContentCloseTime() != 0) {
           setContentCloseTime(other.getContentCloseTime());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -656,56 +728,17 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SummerTimeDetailInfoOuterClass.SummerTimeDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getSprintBoatInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 74: {
-                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo>
-                stageMap__ = input.readMessage(
-                    StageMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableStageMap().getMutableMap().put(
-                    stageMap__.getKey(), stageMap__.getValue());
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 74
-              case 96: {
-                contentCloseTime_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 96
-              case 120: {
-                isContentClosed_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SummerTimeDetailInfoOuterClass.SummerTimeDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -718,7 +751,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
        * @return Whether the sprintBoatInfo field is set.
        */
       public boolean hasSprintBoatInfo() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return sprintBoatInfoBuilder_ != null || sprintBoatInfo_ != null;
       }
       /**
        * <code>.SummerTimeSprintBoatInfo sprint_boat_info = 1;</code>
@@ -740,11 +773,11 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
             throw new NullPointerException();
           }
           sprintBoatInfo_ = value;
+          onChanged();
         } else {
           sprintBoatInfoBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -754,11 +787,11 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
           emu.grasscutter.net.proto.SummerTimeSprintBoatInfoOuterClass.SummerTimeSprintBoatInfo.Builder builderForValue) {
         if (sprintBoatInfoBuilder_ == null) {
           sprintBoatInfo_ = builderForValue.build();
+          onChanged();
         } else {
           sprintBoatInfoBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -766,38 +799,38 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
        */
       public Builder mergeSprintBoatInfo(emu.grasscutter.net.proto.SummerTimeSprintBoatInfoOuterClass.SummerTimeSprintBoatInfo value) {
         if (sprintBoatInfoBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            sprintBoatInfo_ != null &&
-            sprintBoatInfo_ != emu.grasscutter.net.proto.SummerTimeSprintBoatInfoOuterClass.SummerTimeSprintBoatInfo.getDefaultInstance()) {
-            getSprintBoatInfoBuilder().mergeFrom(value);
+          if (sprintBoatInfo_ != null) {
+            sprintBoatInfo_ =
+              emu.grasscutter.net.proto.SummerTimeSprintBoatInfoOuterClass.SummerTimeSprintBoatInfo.newBuilder(sprintBoatInfo_).mergeFrom(value).buildPartial();
           } else {
             sprintBoatInfo_ = value;
           }
+          onChanged();
         } else {
           sprintBoatInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.SummerTimeSprintBoatInfo sprint_boat_info = 1;</code>
        */
       public Builder clearSprintBoatInfo() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        sprintBoatInfo_ = null;
-        if (sprintBoatInfoBuilder_ != null) {
-          sprintBoatInfoBuilder_.dispose();
+        if (sprintBoatInfoBuilder_ == null) {
+          sprintBoatInfo_ = null;
+          onChanged();
+        } else {
+          sprintBoatInfo_ = null;
           sprintBoatInfoBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.SummerTimeSprintBoatInfo sprint_boat_info = 1;</code>
        */
       public emu.grasscutter.net.proto.SummerTimeSprintBoatInfoOuterClass.SummerTimeSprintBoatInfo.Builder getSprintBoatInfoBuilder() {
-        bitField0_ |= 0x00000001;
+        
         onChanged();
         return getSprintBoatInfoFieldBuilder().getBuilder();
       }
@@ -846,7 +879,6 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
       public Builder setIsContentClosed(boolean value) {
         
         isContentClosed_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -855,7 +887,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
        * @return This builder for chaining.
        */
       public Builder clearIsContentClosed() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         isContentClosed_ = false;
         onChanged();
         return this;
@@ -864,7 +896,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
       private com.google.protobuf.MapField<
           java.lang.Integer, emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo> stageMap_;
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo>
-          internalGetStageMap() {
+      internalGetStageMap() {
         if (stageMap_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               StageMapDefaultEntryHolder.defaultEntry);
@@ -872,7 +904,8 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
         return stageMap_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo>
-          internalGetMutableStageMap() {
+      internalGetMutableStageMap() {
+        onChanged();;
         if (stageMap_ == null) {
           stageMap_ = com.google.protobuf.MapField.newMapField(
               StageMapDefaultEntryHolder.defaultEntry);
@@ -880,16 +913,16 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
         if (!stageMap_.isMutable()) {
           stageMap_ = stageMap_.copy();
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
         return stageMap_;
       }
+
       public int getStageMapCount() {
         return internalGetStageMap().getMap().size();
       }
       /**
        * <code>map&lt;uint32, .SummerTimeStageInfo&gt; stage_map = 9;</code>
        */
+
       @java.lang.Override
       public boolean containsStageMap(
           int key) {
@@ -908,6 +941,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
        * <code>map&lt;uint32, .SummerTimeStageInfo&gt; stage_map = 9;</code>
        */
       @java.lang.Override
+
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo> getStageMapMap() {
         return internalGetStageMap().getMap();
       }
@@ -915,11 +949,10 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
        * <code>map&lt;uint32, .SummerTimeStageInfo&gt; stage_map = 9;</code>
        */
       @java.lang.Override
-      public /* nullable */
-emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo getStageMapOrDefault(
+
+      public emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo getStageMapOrDefault(
           int key,
-          /* nullable */
-emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defaultValue) {
+          emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defaultValue) {
         
         java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo> map =
             internalGetStageMap().getMap();
@@ -929,6 +962,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
        * <code>map&lt;uint32, .SummerTimeStageInfo&gt; stage_map = 9;</code>
        */
       @java.lang.Override
+
       public emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo getStageMapOrThrow(
           int key) {
         
@@ -939,8 +973,8 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
         }
         return map.get(key);
       }
+
       public Builder clearStageMap() {
-        bitField0_ = (bitField0_ & ~0x00000004);
         internalGetMutableStageMap().getMutableMap()
             .clear();
         return this;
@@ -948,6 +982,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
       /**
        * <code>map&lt;uint32, .SummerTimeStageInfo&gt; stage_map = 9;</code>
        */
+
       public Builder removeStageMap(
           int key) {
         
@@ -960,8 +995,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo>
-          getMutableStageMap() {
-        bitField0_ |= 0x00000004;
+      getMutableStageMap() {
         return internalGetMutableStageMap().getMutableMap();
       }
       /**
@@ -971,20 +1005,19 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
           int key,
           emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo value) {
         
-        if (value == null) { throw new NullPointerException("map value"); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableStageMap().getMutableMap()
             .put(key, value);
-        bitField0_ |= 0x00000004;
         return this;
       }
       /**
        * <code>map&lt;uint32, .SummerTimeStageInfo&gt; stage_map = 9;</code>
        */
+
       public Builder putAllStageMap(
           java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo> values) {
         internalGetMutableStageMap().getMutableMap()
             .putAll(values);
-        bitField0_ |= 0x00000004;
         return this;
       }
 
@@ -1005,7 +1038,6 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
       public Builder setContentCloseTime(int value) {
         
         contentCloseTime_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1014,7 +1046,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
        * @return This builder for chaining.
        */
       public Builder clearContentCloseTime() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         contentCloseTime_ = 0;
         onChanged();
         return this;
@@ -1052,18 +1084,7 @@ emu.grasscutter.net.proto.SummerTimeStageInfoOuterClass.SummerTimeStageInfo defa
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SummerTimeDetailInfo(input, extensionRegistry);
       }
     };
 

@@ -94,6 +94,82 @@ public final class SeaLampV3DetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private SeaLampV3DetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.Builder subBuilder = null;
+              if (nLHOPBFKEKD_ != null) {
+                subBuilder = nLHOPBFKEKD_.toBuilder();
+              }
+              nLHOPBFKEKD_ = input.readMessage(emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(nLHOPBFKEKD_);
+                nLHOPBFKEKD_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.Builder subBuilder = null;
+              if (kJDPMHAHBOA_ != null) {
+                subBuilder = kJDPMHAHBOA_.toBuilder();
+              }
+              kJDPMHAHBOA_ = input.readMessage(emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(kJDPMHAHBOA_);
+                kJDPMHAHBOA_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.Builder subBuilder = null;
+              if (oMIGMFKNCIK_ != null) {
+                subBuilder = oMIGMFKNCIK_.toBuilder();
+              }
+              oMIGMFKNCIK_ = input.readMessage(emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(oMIGMFKNCIK_);
+                oMIGMFKNCIK_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.internal_static_SeaLampV3DetailInfo_descriptor;
@@ -130,7 +206,7 @@ public final class SeaLampV3DetailInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHIOrBuilder getOMIGMFKNCIKOrBuilder() {
-      return oMIGMFKNCIK_ == null ? emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.getDefaultInstance() : oMIGMFKNCIK_;
+      return getOMIGMFKNCIK();
     }
 
     public static final int KJDPMHAHBOA_FIELD_NUMBER = 12;
@@ -156,7 +232,7 @@ public final class SeaLampV3DetailInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCKOrBuilder getKJDPMHAHBOAOrBuilder() {
-      return kJDPMHAHBOA_ == null ? emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.getDefaultInstance() : kJDPMHAHBOA_;
+      return getKJDPMHAHBOA();
     }
 
     public static final int NLHOPBFKEKD_FIELD_NUMBER = 1;
@@ -182,7 +258,7 @@ public final class SeaLampV3DetailInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAEOrBuilder getNLHOPBFKEKDOrBuilder() {
-      return nLHOPBFKEKD_ == null ? emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.getDefaultInstance() : nLHOPBFKEKD_;
+      return getNLHOPBFKEKD();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -208,7 +284,7 @@ public final class SeaLampV3DetailInfoOuterClass {
       if (oMIGMFKNCIK_ != null) {
         output.writeMessage(15, getOMIGMFKNCIK());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -229,7 +305,7 @@ public final class SeaLampV3DetailInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getOMIGMFKNCIK());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -259,7 +335,7 @@ public final class SeaLampV3DetailInfoOuterClass {
         if (!getNLHOPBFKEKD()
             .equals(other.getNLHOPBFKEKD())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -282,7 +358,7 @@ public final class SeaLampV3DetailInfoOuterClass {
         hash = (37 * hash) + NLHOPBFKEKD_FIELD_NUMBER;
         hash = (53 * hash) + getNLHOPBFKEKD().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -403,31 +479,38 @@ public final class SeaLampV3DetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        oMIGMFKNCIK_ = null;
-        if (oMIGMFKNCIKBuilder_ != null) {
-          oMIGMFKNCIKBuilder_.dispose();
+        if (oMIGMFKNCIKBuilder_ == null) {
+          oMIGMFKNCIK_ = null;
+        } else {
+          oMIGMFKNCIK_ = null;
           oMIGMFKNCIKBuilder_ = null;
         }
-        kJDPMHAHBOA_ = null;
-        if (kJDPMHAHBOABuilder_ != null) {
-          kJDPMHAHBOABuilder_.dispose();
+        if (kJDPMHAHBOABuilder_ == null) {
+          kJDPMHAHBOA_ = null;
+        } else {
+          kJDPMHAHBOA_ = null;
           kJDPMHAHBOABuilder_ = null;
         }
-        nLHOPBFKEKD_ = null;
-        if (nLHOPBFKEKDBuilder_ != null) {
-          nLHOPBFKEKDBuilder_.dispose();
+        if (nLHOPBFKEKDBuilder_ == null) {
+          nLHOPBFKEKD_ = null;
+        } else {
+          nLHOPBFKEKD_ = null;
           nLHOPBFKEKDBuilder_ = null;
         }
         return this;
@@ -456,28 +539,23 @@ public final class SeaLampV3DetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo buildPartial() {
         emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo result = new emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        if (oMIGMFKNCIKBuilder_ == null) {
+          result.oMIGMFKNCIK_ = oMIGMFKNCIK_;
+        } else {
+          result.oMIGMFKNCIK_ = oMIGMFKNCIKBuilder_.build();
+        }
+        if (kJDPMHAHBOABuilder_ == null) {
+          result.kJDPMHAHBOA_ = kJDPMHAHBOA_;
+        } else {
+          result.kJDPMHAHBOA_ = kJDPMHAHBOABuilder_.build();
+        }
+        if (nLHOPBFKEKDBuilder_ == null) {
+          result.nLHOPBFKEKD_ = nLHOPBFKEKD_;
+        } else {
+          result.nLHOPBFKEKD_ = nLHOPBFKEKDBuilder_.build();
+        }
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.oMIGMFKNCIK_ = oMIGMFKNCIKBuilder_ == null
-              ? oMIGMFKNCIK_
-              : oMIGMFKNCIKBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.kJDPMHAHBOA_ = kJDPMHAHBOABuilder_ == null
-              ? kJDPMHAHBOA_
-              : kJDPMHAHBOABuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.nLHOPBFKEKD_ = nLHOPBFKEKDBuilder_ == null
-              ? nLHOPBFKEKD_
-              : nLHOPBFKEKDBuilder_.build();
-        }
       }
 
       @java.lang.Override
@@ -533,7 +611,7 @@ public final class SeaLampV3DetailInfoOuterClass {
         if (other.hasNLHOPBFKEKD()) {
           mergeNLHOPBFKEKD(other.getNLHOPBFKEKD());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -548,54 +626,19 @@ public final class SeaLampV3DetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getNLHOPBFKEKDFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 10
-              case 98: {
-                input.readMessage(
-                    getKJDPMHAHBOAFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 98
-              case 122: {
-                input.readMessage(
-                    getOMIGMFKNCIKFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI oMIGMFKNCIK_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -605,7 +648,7 @@ public final class SeaLampV3DetailInfoOuterClass {
        * @return Whether the oMIGMFKNCIK field is set.
        */
       public boolean hasOMIGMFKNCIK() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return oMIGMFKNCIKBuilder_ != null || oMIGMFKNCIK_ != null;
       }
       /**
        * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
@@ -627,11 +670,11 @@ public final class SeaLampV3DetailInfoOuterClass {
             throw new NullPointerException();
           }
           oMIGMFKNCIK_ = value;
+          onChanged();
         } else {
           oMIGMFKNCIKBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -641,11 +684,11 @@ public final class SeaLampV3DetailInfoOuterClass {
           emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.Builder builderForValue) {
         if (oMIGMFKNCIKBuilder_ == null) {
           oMIGMFKNCIK_ = builderForValue.build();
+          onChanged();
         } else {
           oMIGMFKNCIKBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -653,38 +696,38 @@ public final class SeaLampV3DetailInfoOuterClass {
        */
       public Builder mergeOMIGMFKNCIK(emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI value) {
         if (oMIGMFKNCIKBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            oMIGMFKNCIK_ != null &&
-            oMIGMFKNCIK_ != emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.getDefaultInstance()) {
-            getOMIGMFKNCIKBuilder().mergeFrom(value);
+          if (oMIGMFKNCIK_ != null) {
+            oMIGMFKNCIK_ =
+              emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.newBuilder(oMIGMFKNCIK_).mergeFrom(value).buildPartial();
           } else {
             oMIGMFKNCIK_ = value;
           }
+          onChanged();
         } else {
           oMIGMFKNCIKBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
        */
       public Builder clearOMIGMFKNCIK() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        oMIGMFKNCIK_ = null;
-        if (oMIGMFKNCIKBuilder_ != null) {
-          oMIGMFKNCIKBuilder_.dispose();
+        if (oMIGMFKNCIKBuilder_ == null) {
+          oMIGMFKNCIK_ = null;
+          onChanged();
+        } else {
+          oMIGMFKNCIK_ = null;
           oMIGMFKNCIKBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
        */
       public emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.Builder getOMIGMFKNCIKBuilder() {
-        bitField0_ |= 0x00000001;
+        
         onChanged();
         return getOMIGMFKNCIKFieldBuilder().getBuilder();
       }
@@ -724,7 +767,7 @@ public final class SeaLampV3DetailInfoOuterClass {
        * @return Whether the kJDPMHAHBOA field is set.
        */
       public boolean hasKJDPMHAHBOA() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return kJDPMHAHBOABuilder_ != null || kJDPMHAHBOA_ != null;
       }
       /**
        * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
@@ -746,11 +789,11 @@ public final class SeaLampV3DetailInfoOuterClass {
             throw new NullPointerException();
           }
           kJDPMHAHBOA_ = value;
+          onChanged();
         } else {
           kJDPMHAHBOABuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+
         return this;
       }
       /**
@@ -760,11 +803,11 @@ public final class SeaLampV3DetailInfoOuterClass {
           emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.Builder builderForValue) {
         if (kJDPMHAHBOABuilder_ == null) {
           kJDPMHAHBOA_ = builderForValue.build();
+          onChanged();
         } else {
           kJDPMHAHBOABuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+
         return this;
       }
       /**
@@ -772,38 +815,38 @@ public final class SeaLampV3DetailInfoOuterClass {
        */
       public Builder mergeKJDPMHAHBOA(emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK value) {
         if (kJDPMHAHBOABuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            kJDPMHAHBOA_ != null &&
-            kJDPMHAHBOA_ != emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.getDefaultInstance()) {
-            getKJDPMHAHBOABuilder().mergeFrom(value);
+          if (kJDPMHAHBOA_ != null) {
+            kJDPMHAHBOA_ =
+              emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.newBuilder(kJDPMHAHBOA_).mergeFrom(value).buildPartial();
           } else {
             kJDPMHAHBOA_ = value;
           }
+          onChanged();
         } else {
           kJDPMHAHBOABuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
        */
       public Builder clearKJDPMHAHBOA() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        kJDPMHAHBOA_ = null;
-        if (kJDPMHAHBOABuilder_ != null) {
-          kJDPMHAHBOABuilder_.dispose();
+        if (kJDPMHAHBOABuilder_ == null) {
+          kJDPMHAHBOA_ = null;
+          onChanged();
+        } else {
+          kJDPMHAHBOA_ = null;
           kJDPMHAHBOABuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
        */
       public emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.Builder getKJDPMHAHBOABuilder() {
-        bitField0_ |= 0x00000002;
+        
         onChanged();
         return getKJDPMHAHBOAFieldBuilder().getBuilder();
       }
@@ -843,7 +886,7 @@ public final class SeaLampV3DetailInfoOuterClass {
        * @return Whether the nLHOPBFKEKD field is set.
        */
       public boolean hasNLHOPBFKEKD() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return nLHOPBFKEKDBuilder_ != null || nLHOPBFKEKD_ != null;
       }
       /**
        * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
@@ -865,11 +908,11 @@ public final class SeaLampV3DetailInfoOuterClass {
             throw new NullPointerException();
           }
           nLHOPBFKEKD_ = value;
+          onChanged();
         } else {
           nLHOPBFKEKDBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -879,11 +922,11 @@ public final class SeaLampV3DetailInfoOuterClass {
           emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.Builder builderForValue) {
         if (nLHOPBFKEKDBuilder_ == null) {
           nLHOPBFKEKD_ = builderForValue.build();
+          onChanged();
         } else {
           nLHOPBFKEKDBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -891,38 +934,38 @@ public final class SeaLampV3DetailInfoOuterClass {
        */
       public Builder mergeNLHOPBFKEKD(emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE value) {
         if (nLHOPBFKEKDBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            nLHOPBFKEKD_ != null &&
-            nLHOPBFKEKD_ != emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.getDefaultInstance()) {
-            getNLHOPBFKEKDBuilder().mergeFrom(value);
+          if (nLHOPBFKEKD_ != null) {
+            nLHOPBFKEKD_ =
+              emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.newBuilder(nLHOPBFKEKD_).mergeFrom(value).buildPartial();
           } else {
             nLHOPBFKEKD_ = value;
           }
+          onChanged();
         } else {
           nLHOPBFKEKDBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
        */
       public Builder clearNLHOPBFKEKD() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        nLHOPBFKEKD_ = null;
-        if (nLHOPBFKEKDBuilder_ != null) {
-          nLHOPBFKEKDBuilder_.dispose();
+        if (nLHOPBFKEKDBuilder_ == null) {
+          nLHOPBFKEKD_ = null;
+          onChanged();
+        } else {
+          nLHOPBFKEKD_ = null;
           nLHOPBFKEKDBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
        */
       public emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.Builder getNLHOPBFKEKDBuilder() {
-        bitField0_ |= 0x00000004;
+        
         onChanged();
         return getNLHOPBFKEKDFieldBuilder().getBuilder();
       }
@@ -986,18 +1029,7 @@ public final class SeaLampV3DetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SeaLampV3DetailInfo(input, extensionRegistry);
       }
     };
 

@@ -126,66 +126,66 @@ public final class TrialAvatarGrantRecordOuterClass {
      * Name: FJBKKFJNBHD
      * </pre>
      *
-     * Protobuf enum {@code TrialAvatarGrantRecord.FJBKKFJNBHD}
+     * Protobuf enum {@code TrialAvatarGrantRecord.GrantReason}
      */
-    public enum FJBKKFJNBHD
+    public enum GrantReason
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
-       * <code>FJBKKFJNBHD_MLBFMJIBJEP = 0;</code>
+       * <code>GRANT_REASON_INVALID = 0;</code>
        */
-      FJBKKFJNBHD_MLBFMJIBJEP(0),
+      GRANT_REASON_INVALID(0),
       /**
-       * <code>FJBKKFJNBHD_NDIBKKFOJKH = 1;</code>
+       * <code>GRANT_REASON_BY_QUEST = 1;</code>
        */
-      FJBKKFJNBHD_NDIBKKFOJKH(1),
+      GRANT_REASON_BY_QUEST(1),
       /**
-       * <code>FJBKKFJNBHD_CBHCDCFMGJC = 2;</code>
+       * <code>GRANT_REASON_BY_TRIAL_AVATAR_ACTIVITY = 2;</code>
        */
-      FJBKKFJNBHD_CBHCDCFMGJC(2),
+      GRANT_REASON_BY_TRIAL_AVATAR_ACTIVITY(2),
       /**
-       * <code>FJBKKFJNBHD_CJONEJKHGGD = 3;</code>
+       * <code>GRANT_REASON_BY_DUNGEON_ELEMENT_CHALLENGE = 3;</code>
        */
-      FJBKKFJNBHD_CJONEJKHGGD(3),
+      GRANT_REASON_BY_DUNGEON_ELEMENT_CHALLENGE(3),
       /**
-       * <code>FJBKKFJNBHD_LKFLHJBKDAL = 4;</code>
+       * <code>GRANT_REASON_BY_MIST_TRIAL_ACTIVITY = 4;</code>
        */
-      FJBKKFJNBHD_LKFLHJBKDAL(4),
+      GRANT_REASON_BY_MIST_TRIAL_ACTIVITY(4),
       /**
-       * <code>FJBKKFJNBHD_KEDGKBAANHA = 5;</code>
+       * <code>GRANT_REASON_BY_SUMO_ACTIVITY = 5;</code>
        */
-      FJBKKFJNBHD_KEDGKBAANHA(5),
+      GRANT_REASON_BY_SUMO_ACTIVITY(5),
       /**
-       * <code>FJBKKFJNBHD_NGEADLFHLPL = 6;</code>
+       * <code>GRANT_REASON_BY_POTION_ACTIVITY = 6;</code>
        */
-      FJBKKFJNBHD_NGEADLFHLPL(6),
+      GRANT_REASON_BY_POTION_ACTIVITY(6),
       /**
-       * <code>FJBKKFJNBHD_HGIMGKGCPFP = 7;</code>
+       * <code>GRANT_REASON_BY_CRYSTAL_LINK_ACTIVITY = 7;</code>
        */
-      FJBKKFJNBHD_HGIMGKGCPFP(7),
+      GRANT_REASON_BY_CRYSTAL_LINK_ACTIVITY(7),
       /**
-       * <code>FJBKKFJNBHD_IENCKFHOCGO = 8;</code>
+       * <code>GRANT_REASON_BY_IRODORI_MASTER = 8;</code>
        */
-      FJBKKFJNBHD_IENCKFHOCGO(8),
+      GRANT_REASON_BY_IRODORI_MASTER(8),
       /**
-       * <code>FJBKKFJNBHD_JGNOOBCCHGL = 9;</code>
+       * <code>GRANT_REASON_BY_GM = 9;</code>
        */
-      FJBKKFJNBHD_JGNOOBCCHGL(9),
+      GRANT_REASON_BY_GM(9),
       /**
-       * <code>FJBKKFJNBHD_KBOHKIPDMAB = 10;</code>
+       * <code>GRANT_REASON_BY_INSTABLE_SPRAY_ACTIVITY = 10;</code>
        */
-      FJBKKFJNBHD_KBOHKIPDMAB(10),
+      GRANT_REASON_BY_INSTABLE_SPRAY_ACTIVITY(10),
       /**
-       * <code>FJBKKFJNBHD_DKCNBCHPJOA = 11;</code>
+       * <code>GRANT_REASON_BY_MUQADAS_POTION_ACTIVITY = 11;</code>
        */
-      FJBKKFJNBHD_DKCNBCHPJOA(11),
+      GRANT_REASON_BY_MUQADAS_POTION_ACTIVITY(11),
       /**
-       * <code>FJBKKFJNBHD_FKMOBKNNLLK = 12;</code>
+       * <code>GRANT_REASON_BY_VINTAGE_HUNTING = 12;</code>
        */
-      FJBKKFJNBHD_FKMOBKNNLLK(12),
+      GRANT_REASON_BY_VINTAGE_HUNTING(12),
       /**
-       * <code>FJBKKFJNBHD_ENDFNEMHAKM = 13;</code>
+       * <code>GRANT_REASON_BY_CHAR_AMUSEMENT = 13;</code>
        */
-      FJBKKFJNBHD_ENDFNEMHAKM(13),
+      GRANT_REASON_BY_CHAR_AMUSEMENT(13),
       /**
        * <code>FJBKKFJNBHD_HMLDNDBKNFL = 14;</code>
        */
@@ -198,61 +198,61 @@ public final class TrialAvatarGrantRecordOuterClass {
       ;
 
       /**
-       * <code>FJBKKFJNBHD_MLBFMJIBJEP = 0;</code>
+       * <code>GRANT_REASON_INVALID = 0;</code>
        */
-      public static final int FJBKKFJNBHD_MLBFMJIBJEP_VALUE = 0;
+      public static final int GRANT_REASON_INVALID_VALUE = 0;
       /**
-       * <code>FJBKKFJNBHD_NDIBKKFOJKH = 1;</code>
+       * <code>GRANT_REASON_BY_QUEST = 1;</code>
        */
-      public static final int FJBKKFJNBHD_NDIBKKFOJKH_VALUE = 1;
+      public static final int GRANT_REASON_BY_QUEST_VALUE = 1;
       /**
-       * <code>FJBKKFJNBHD_CBHCDCFMGJC = 2;</code>
+       * <code>GRANT_REASON_BY_TRIAL_AVATAR_ACTIVITY = 2;</code>
        */
-      public static final int FJBKKFJNBHD_CBHCDCFMGJC_VALUE = 2;
+      public static final int GRANT_REASON_BY_TRIAL_AVATAR_ACTIVITY_VALUE = 2;
       /**
-       * <code>FJBKKFJNBHD_CJONEJKHGGD = 3;</code>
+       * <code>GRANT_REASON_BY_DUNGEON_ELEMENT_CHALLENGE = 3;</code>
        */
-      public static final int FJBKKFJNBHD_CJONEJKHGGD_VALUE = 3;
+      public static final int GRANT_REASON_BY_DUNGEON_ELEMENT_CHALLENGE_VALUE = 3;
       /**
-       * <code>FJBKKFJNBHD_LKFLHJBKDAL = 4;</code>
+       * <code>GRANT_REASON_BY_MIST_TRIAL_ACTIVITY = 4;</code>
        */
-      public static final int FJBKKFJNBHD_LKFLHJBKDAL_VALUE = 4;
+      public static final int GRANT_REASON_BY_MIST_TRIAL_ACTIVITY_VALUE = 4;
       /**
-       * <code>FJBKKFJNBHD_KEDGKBAANHA = 5;</code>
+       * <code>GRANT_REASON_BY_SUMO_ACTIVITY = 5;</code>
        */
-      public static final int FJBKKFJNBHD_KEDGKBAANHA_VALUE = 5;
+      public static final int GRANT_REASON_BY_SUMO_ACTIVITY_VALUE = 5;
       /**
-       * <code>FJBKKFJNBHD_NGEADLFHLPL = 6;</code>
+       * <code>GRANT_REASON_BY_POTION_ACTIVITY = 6;</code>
        */
-      public static final int FJBKKFJNBHD_NGEADLFHLPL_VALUE = 6;
+      public static final int GRANT_REASON_BY_POTION_ACTIVITY_VALUE = 6;
       /**
-       * <code>FJBKKFJNBHD_HGIMGKGCPFP = 7;</code>
+       * <code>GRANT_REASON_BY_CRYSTAL_LINK_ACTIVITY = 7;</code>
        */
-      public static final int FJBKKFJNBHD_HGIMGKGCPFP_VALUE = 7;
+      public static final int GRANT_REASON_BY_CRYSTAL_LINK_ACTIVITY_VALUE = 7;
       /**
-       * <code>FJBKKFJNBHD_IENCKFHOCGO = 8;</code>
+       * <code>GRANT_REASON_BY_IRODORI_MASTER = 8;</code>
        */
-      public static final int FJBKKFJNBHD_IENCKFHOCGO_VALUE = 8;
+      public static final int GRANT_REASON_BY_IRODORI_MASTER_VALUE = 8;
       /**
-       * <code>FJBKKFJNBHD_JGNOOBCCHGL = 9;</code>
+       * <code>GRANT_REASON_BY_GM = 9;</code>
        */
-      public static final int FJBKKFJNBHD_JGNOOBCCHGL_VALUE = 9;
+      public static final int GRANT_REASON_BY_GM_VALUE = 9;
       /**
-       * <code>FJBKKFJNBHD_KBOHKIPDMAB = 10;</code>
+       * <code>GRANT_REASON_BY_INSTABLE_SPRAY_ACTIVITY = 10;</code>
        */
-      public static final int FJBKKFJNBHD_KBOHKIPDMAB_VALUE = 10;
+      public static final int GRANT_REASON_BY_INSTABLE_SPRAY_ACTIVITY_VALUE = 10;
       /**
-       * <code>FJBKKFJNBHD_DKCNBCHPJOA = 11;</code>
+       * <code>GRANT_REASON_BY_MUQADAS_POTION_ACTIVITY = 11;</code>
        */
-      public static final int FJBKKFJNBHD_DKCNBCHPJOA_VALUE = 11;
+      public static final int GRANT_REASON_BY_MUQADAS_POTION_ACTIVITY_VALUE = 11;
       /**
-       * <code>FJBKKFJNBHD_FKMOBKNNLLK = 12;</code>
+       * <code>GRANT_REASON_BY_VINTAGE_HUNTING = 12;</code>
        */
-      public static final int FJBKKFJNBHD_FKMOBKNNLLK_VALUE = 12;
+      public static final int GRANT_REASON_BY_VINTAGE_HUNTING_VALUE = 12;
       /**
-       * <code>FJBKKFJNBHD_ENDFNEMHAKM = 13;</code>
+       * <code>GRANT_REASON_BY_CHAR_AMUSEMENT = 13;</code>
        */
-      public static final int FJBKKFJNBHD_ENDFNEMHAKM_VALUE = 13;
+      public static final int GRANT_REASON_BY_CHAR_AMUSEMENT_VALUE = 13;
       /**
        * <code>FJBKKFJNBHD_HMLDNDBKNFL = 14;</code>
        */
@@ -277,7 +277,7 @@ public final class TrialAvatarGrantRecordOuterClass {
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
-      public static FJBKKFJNBHD valueOf(int value) {
+      public static GrantReason valueOf(int value) {
         return forNumber(value);
       }
 
@@ -285,37 +285,37 @@ public final class TrialAvatarGrantRecordOuterClass {
        * @param value The numeric wire value of the corresponding enum entry.
        * @return The enum associated with the given numeric wire value.
        */
-      public static FJBKKFJNBHD forNumber(int value) {
+      public static GrantReason forNumber(int value) {
         switch (value) {
-          case 0: return FJBKKFJNBHD_MLBFMJIBJEP;
-          case 1: return FJBKKFJNBHD_NDIBKKFOJKH;
-          case 2: return FJBKKFJNBHD_CBHCDCFMGJC;
-          case 3: return FJBKKFJNBHD_CJONEJKHGGD;
-          case 4: return FJBKKFJNBHD_LKFLHJBKDAL;
-          case 5: return FJBKKFJNBHD_KEDGKBAANHA;
-          case 6: return FJBKKFJNBHD_NGEADLFHLPL;
-          case 7: return FJBKKFJNBHD_HGIMGKGCPFP;
-          case 8: return FJBKKFJNBHD_IENCKFHOCGO;
-          case 9: return FJBKKFJNBHD_JGNOOBCCHGL;
-          case 10: return FJBKKFJNBHD_KBOHKIPDMAB;
-          case 11: return FJBKKFJNBHD_DKCNBCHPJOA;
-          case 12: return FJBKKFJNBHD_FKMOBKNNLLK;
-          case 13: return FJBKKFJNBHD_ENDFNEMHAKM;
+          case 0: return GRANT_REASON_INVALID;
+          case 1: return GRANT_REASON_BY_QUEST;
+          case 2: return GRANT_REASON_BY_TRIAL_AVATAR_ACTIVITY;
+          case 3: return GRANT_REASON_BY_DUNGEON_ELEMENT_CHALLENGE;
+          case 4: return GRANT_REASON_BY_MIST_TRIAL_ACTIVITY;
+          case 5: return GRANT_REASON_BY_SUMO_ACTIVITY;
+          case 6: return GRANT_REASON_BY_POTION_ACTIVITY;
+          case 7: return GRANT_REASON_BY_CRYSTAL_LINK_ACTIVITY;
+          case 8: return GRANT_REASON_BY_IRODORI_MASTER;
+          case 9: return GRANT_REASON_BY_GM;
+          case 10: return GRANT_REASON_BY_INSTABLE_SPRAY_ACTIVITY;
+          case 11: return GRANT_REASON_BY_MUQADAS_POTION_ACTIVITY;
+          case 12: return GRANT_REASON_BY_VINTAGE_HUNTING;
+          case 13: return GRANT_REASON_BY_CHAR_AMUSEMENT;
           case 14: return FJBKKFJNBHD_HMLDNDBKNFL;
           case 15: return FJBKKFJNBHD_PJDEJIHFCPP;
           default: return null;
         }
       }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<FJBKKFJNBHD>
+      public static com.google.protobuf.Internal.EnumLiteMap<GrantReason>
           internalGetValueMap() {
         return internalValueMap;
       }
       private static final com.google.protobuf.Internal.EnumLiteMap<
-          FJBKKFJNBHD> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<FJBKKFJNBHD>() {
-              public FJBKKFJNBHD findValueByNumber(int number) {
-                return FJBKKFJNBHD.forNumber(number);
+          GrantReason> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<GrantReason>() {
+              public GrantReason findValueByNumber(int number) {
+                return GrantReason.forNumber(number);
               }
             };
 
@@ -336,9 +336,9 @@ public final class TrialAvatarGrantRecordOuterClass {
         return emu.grasscutter.net.proto.TrialAvatarGrantRecordOuterClass.TrialAvatarGrantRecord.getDescriptor().getEnumTypes().get(0);
       }
 
-      private static final FJBKKFJNBHD[] VALUES = values();
+      private static final GrantReason[] VALUES = values();
 
-      public static FJBKKFJNBHD valueOf(
+      public static GrantReason valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
           throw new java.lang.IllegalArgumentException(
@@ -352,11 +352,11 @@ public final class TrialAvatarGrantRecordOuterClass {
 
       private final int value;
 
-      private FJBKKFJNBHD(int value) {
+      private GrantReason(int value) {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:TrialAvatarGrantRecord.FJBKKFJNBHD)
+      // @@protoc_insertion_point(enum_scope:TrialAvatarGrantRecord.GrantReason)
     }
 
     public static final int GRANT_REASON_FIELD_NUMBER = 1;
@@ -832,22 +832,25 @@ public final class TrialAvatarGrantRecordOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\034TrialAvatarGrantRecord.proto\"\254\004\n\026Trial" +
+      "\n\034TrialAvatarGrantRecord.proto\"\240\005\n\026Trial" +
       "AvatarGrantRecord\022\024\n\014grant_reason\030\001 \001(\r\022" +
-      "\034\n\024from_parent_quest_id\030\002 \001(\r\"\335\003\n\013FJBKKF" +
-      "JNBHD\022\033\n\027FJBKKFJNBHD_MLBFMJIBJEP\020\000\022\033\n\027FJ" +
-      "BKKFJNBHD_NDIBKKFOJKH\020\001\022\033\n\027FJBKKFJNBHD_C" +
-      "BHCDCFMGJC\020\002\022\033\n\027FJBKKFJNBHD_CJONEJKHGGD\020" +
-      "\003\022\033\n\027FJBKKFJNBHD_LKFLHJBKDAL\020\004\022\033\n\027FJBKKF" +
-      "JNBHD_KEDGKBAANHA\020\005\022\033\n\027FJBKKFJNBHD_NGEAD" +
-      "LFHLPL\020\006\022\033\n\027FJBKKFJNBHD_HGIMGKGCPFP\020\007\022\033\n" +
-      "\027FJBKKFJNBHD_IENCKFHOCGO\020\010\022\033\n\027FJBKKFJNBH" +
-      "D_JGNOOBCCHGL\020\t\022\033\n\027FJBKKFJNBHD_KBOHKIPDM" +
-      "AB\020\n\022\033\n\027FJBKKFJNBHD_DKCNBCHPJOA\020\013\022\033\n\027FJB" +
-      "KKFJNBHD_FKMOBKNNLLK\020\014\022\033\n\027FJBKKFJNBHD_EN" +
-      "DFNEMHAKM\020\r\022\033\n\027FJBKKFJNBHD_HMLDNDBKNFL\020\016" +
-      "\022\033\n\027FJBKKFJNBHD_PJDEJIHFCPP\020\017B\033\n\031emu.gra" +
-      "sscutter.net.protob\006proto3"
+      "\034\n\024from_parent_quest_id\030\002 \001(\r\"\321\004\n\013GrantR" +
+      "eason\022\030\n\024GRANT_REASON_INVALID\020\000\022\031\n\025GRANT" +
+      "_REASON_BY_QUEST\020\001\022)\n%GRANT_REASON_BY_TR" +
+      "IAL_AVATAR_ACTIVITY\020\002\022-\n)GRANT_REASON_BY" +
+      "_DUNGEON_ELEMENT_CHALLENGE\020\003\022\'\n#GRANT_RE" +
+      "ASON_BY_MIST_TRIAL_ACTIVITY\020\004\022!\n\035GRANT_R" +
+      "EASON_BY_SUMO_ACTIVITY\020\005\022#\n\037GRANT_REASON" +
+      "_BY_POTION_ACTIVITY\020\006\022)\n%GRANT_REASON_BY" +
+      "_CRYSTAL_LINK_ACTIVITY\020\007\022\"\n\036GRANT_REASON" +
+      "_BY_IRODORI_MASTER\020\010\022\026\n\022GRANT_REASON_BY_" +
+      "GM\020\t\022+\n\'GRANT_REASON_BY_INSTABLE_SPRAY_A" +
+      "CTIVITY\020\n\022+\n\'GRANT_REASON_BY_MUQADAS_POT" +
+      "ION_ACTIVITY\020\013\022#\n\037GRANT_REASON_BY_VINTAG" +
+      "E_HUNTING\020\014\022\"\n\036GRANT_REASON_BY_CHAR_AMUS" +
+      "EMENT\020\r\022\033\n\027FJBKKFJNBHD_HMLDNDBKNFL\020\016\022\033\n\027" +
+      "FJBKKFJNBHD_PJDEJIHFCPP\020\017B\033\n\031emu.grasscu" +
+      "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -214,6 +214,10 @@ public final class TowerLevelEndNotifyOuterClass {
     }
 
     /**
+     * <pre>
+     * Name: DAMKMDIILDC
+     * </pre>
+     *
      * Protobuf enum {@code TowerLevelEndNotify.ContinueStateType}
      */
     public enum ContinueStateType

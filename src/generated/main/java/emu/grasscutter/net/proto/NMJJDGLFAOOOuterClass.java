@@ -80,6 +80,61 @@ public final class NMJJDGLFAOOOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private NMJJDGLFAOO(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              iNPNIFNEDDL_ = input.readUInt32();
+              break;
+            }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                eNCFNJCMFFK_ = new java.util.ArrayList<emu.grasscutter.net.proto.IrodoriPoetryThemeDataOuterClass.IrodoriPoetryThemeData>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              eNCFNJCMFFK_.add(
+                  input.readMessage(emu.grasscutter.net.proto.IrodoriPoetryThemeDataOuterClass.IrodoriPoetryThemeData.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          eNCFNJCMFFK_ = java.util.Collections.unmodifiableList(eNCFNJCMFFK_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.internal_static_NMJJDGLFAOO_descriptor;
@@ -94,7 +149,6 @@ public final class NMJJDGLFAOOOuterClass {
     }
 
     public static final int ENCFNJCMFFK_FIELD_NUMBER = 13;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.IrodoriPoetryThemeDataOuterClass.IrodoriPoetryThemeData> eNCFNJCMFFK_;
     /**
      * <code>repeated .IrodoriPoetryThemeData ENCFNJCMFFK = 13;</code>
@@ -135,7 +189,7 @@ public final class NMJJDGLFAOOOuterClass {
     }
 
     public static final int INPNIFNEDDL_FIELD_NUMBER = 1;
-    private int iNPNIFNEDDL_ = 0;
+    private int iNPNIFNEDDL_;
     /**
      * <code>uint32 INPNIFNEDDL = 1;</code>
      * @return The iNPNIFNEDDL.
@@ -165,7 +219,7 @@ public final class NMJJDGLFAOOOuterClass {
       for (int i = 0; i < eNCFNJCMFFK_.size(); i++) {
         output.writeMessage(13, eNCFNJCMFFK_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -182,7 +236,7 @@ public final class NMJJDGLFAOOOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, eNCFNJCMFFK_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -201,7 +255,7 @@ public final class NMJJDGLFAOOOuterClass {
           .equals(other.getENCFNJCMFFKList())) return false;
       if (getINPNIFNEDDL()
           != other.getINPNIFNEDDL()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -218,7 +272,7 @@ public final class NMJJDGLFAOOOuterClass {
       }
       hash = (37 * hash) + INPNIFNEDDL_FIELD_NUMBER;
       hash = (53 * hash) + getINPNIFNEDDL();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -339,26 +393,31 @@ public final class NMJJDGLFAOOOuterClass {
 
       // Construct using emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getENCFNJCMFFKFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         if (eNCFNJCMFFKBuilder_ == null) {
           eNCFNJCMFFK_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          eNCFNJCMFFK_ = null;
           eNCFNJCMFFKBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         iNPNIFNEDDL_ = 0;
+
         return this;
       }
 
@@ -385,13 +444,7 @@ public final class NMJJDGLFAOOOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO buildPartial() {
         emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO result = new emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO result) {
+        int from_bitField0_ = bitField0_;
         if (eNCFNJCMFFKBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             eNCFNJCMFFK_ = java.util.Collections.unmodifiableList(eNCFNJCMFFK_);
@@ -401,13 +454,9 @@ public final class NMJJDGLFAOOOuterClass {
         } else {
           result.eNCFNJCMFFK_ = eNCFNJCMFFKBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.iNPNIFNEDDL_ = iNPNIFNEDDL_;
-        }
+        result.iNPNIFNEDDL_ = iNPNIFNEDDL_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -483,7 +532,7 @@ public final class NMJJDGLFAOOOuterClass {
         if (other.getINPNIFNEDDL() != 0) {
           setINPNIFNEDDL(other.getINPNIFNEDDL());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -498,48 +547,17 @@ public final class NMJJDGLFAOOOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                iNPNIFNEDDL_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 8
-              case 106: {
-                emu.grasscutter.net.proto.IrodoriPoetryThemeDataOuterClass.IrodoriPoetryThemeData m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.IrodoriPoetryThemeDataOuterClass.IrodoriPoetryThemeData.parser(),
-                        extensionRegistry);
-                if (eNCFNJCMFFKBuilder_ == null) {
-                  ensureENCFNJCMFFKIsMutable();
-                  eNCFNJCMFFK_.add(m);
-                } else {
-                  eNCFNJCMFFKBuilder_.addMessage(m);
-                }
-                break;
-              } // case 106
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.NMJJDGLFAOOOuterClass.NMJJDGLFAOO) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -801,7 +819,6 @@ public final class NMJJDGLFAOOOuterClass {
       public Builder setINPNIFNEDDL(int value) {
         
         iNPNIFNEDDL_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -810,7 +827,7 @@ public final class NMJJDGLFAOOOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearINPNIFNEDDL() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         iNPNIFNEDDL_ = 0;
         onChanged();
         return this;
@@ -848,18 +865,7 @@ public final class NMJJDGLFAOOOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new NMJJDGLFAOO(input, extensionRegistry);
       }
     };
 

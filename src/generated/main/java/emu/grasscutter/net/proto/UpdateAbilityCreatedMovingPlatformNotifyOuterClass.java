@@ -19,11 +19,19 @@ public final class UpdateAbilityCreatedMovingPlatformNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name: IPLKGKOHDOL &gt; OpType
+     * </pre>
+     *
      * <code>.OpType op_type = 8;</code>
      * @return The enum numeric value on the wire for opType.
      */
     int getOpTypeValue();
     /**
+     * <pre>
+     * Name: IPLKGKOHDOL &gt; OpType
+     * </pre>
+     *
      * <code>.OpType op_type = 8;</code>
      * @return The opType.
      */
@@ -132,6 +140,10 @@ public final class UpdateAbilityCreatedMovingPlatformNotifyOuterClass {
     public static final int OP_TYPE_FIELD_NUMBER = 8;
     private int opType_;
     /**
+     * <pre>
+     * Name: IPLKGKOHDOL &gt; OpType
+     * </pre>
+     *
      * <code>.OpType op_type = 8;</code>
      * @return The enum numeric value on the wire for opType.
      */
@@ -139,6 +151,10 @@ public final class UpdateAbilityCreatedMovingPlatformNotifyOuterClass {
       return opType_;
     }
     /**
+     * <pre>
+     * Name: IPLKGKOHDOL &gt; OpType
+     * </pre>
+     *
      * <code>.OpType op_type = 8;</code>
      * @return The opType.
      */
@@ -484,6 +500,10 @@ public final class UpdateAbilityCreatedMovingPlatformNotifyOuterClass {
 
       private int opType_ = 0;
       /**
+       * <pre>
+       * Name: IPLKGKOHDOL &gt; OpType
+       * </pre>
+       *
        * <code>.OpType op_type = 8;</code>
        * @return The enum numeric value on the wire for opType.
        */
@@ -491,6 +511,10 @@ public final class UpdateAbilityCreatedMovingPlatformNotifyOuterClass {
         return opType_;
       }
       /**
+       * <pre>
+       * Name: IPLKGKOHDOL &gt; OpType
+       * </pre>
+       *
        * <code>.OpType op_type = 8;</code>
        * @param value The enum numeric value on the wire for opType to set.
        * @return This builder for chaining.
@@ -502,6 +526,10 @@ public final class UpdateAbilityCreatedMovingPlatformNotifyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name: IPLKGKOHDOL &gt; OpType
+       * </pre>
+       *
        * <code>.OpType op_type = 8;</code>
        * @return The opType.
        */
@@ -512,6 +540,10 @@ public final class UpdateAbilityCreatedMovingPlatformNotifyOuterClass {
         return result == null ? emu.grasscutter.net.proto.OpTypeOuterClass.OpType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Name: IPLKGKOHDOL &gt; OpType
+       * </pre>
+       *
        * <code>.OpType op_type = 8;</code>
        * @param value The opType to set.
        * @return This builder for chaining.
@@ -526,6 +558,10 @@ public final class UpdateAbilityCreatedMovingPlatformNotifyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name: IPLKGKOHDOL &gt; OpType
+       * </pre>
+       *
        * <code>.OpType op_type = 8;</code>
        * @return This builder for chaining.
        */

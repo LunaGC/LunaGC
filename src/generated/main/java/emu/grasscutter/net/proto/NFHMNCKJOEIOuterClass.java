@@ -94,6 +94,82 @@ public final class NFHMNCKJOEIOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private NFHMNCKJOEI(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 50: {
+              emu.grasscutter.net.proto.GGBMIADMOHHOuterClass.GGBMIADMOHH.Builder subBuilder = null;
+              if (pacmanInfo_ != null) {
+                subBuilder = pacmanInfo_.toBuilder();
+              }
+              pacmanInfo_ = input.readMessage(emu.grasscutter.net.proto.GGBMIADMOHHOuterClass.GGBMIADMOHH.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pacmanInfo_);
+                pacmanInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              emu.grasscutter.net.proto.PDHJBMOMMGJOuterClass.PDHJBMOMMGJ.Builder subBuilder = null;
+              if (musicGameInfo_ != null) {
+                subBuilder = musicGameInfo_.toBuilder();
+              }
+              musicGameInfo_ = input.readMessage(emu.grasscutter.net.proto.PDHJBMOMMGJOuterClass.PDHJBMOMMGJ.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(musicGameInfo_);
+                musicGameInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA.Builder subBuilder = null;
+              if (photoInfo_ != null) {
+                subBuilder = photoInfo_.toBuilder();
+              }
+              photoInfo_ = input.readMessage(emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(photoInfo_);
+                photoInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.NFHMNCKJOEIOuterClass.internal_static_NFHMNCKJOEI_descriptor;
@@ -130,7 +206,7 @@ public final class NFHMNCKJOEIOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.PDHJBMOMMGJOuterClass.PDHJBMOMMGJOrBuilder getMusicGameInfoOrBuilder() {
-      return musicGameInfo_ == null ? emu.grasscutter.net.proto.PDHJBMOMMGJOuterClass.PDHJBMOMMGJ.getDefaultInstance() : musicGameInfo_;
+      return getMusicGameInfo();
     }
 
     public static final int PHOTO_INFO_FIELD_NUMBER = 13;
@@ -156,7 +232,7 @@ public final class NFHMNCKJOEIOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFAOrBuilder getPhotoInfoOrBuilder() {
-      return photoInfo_ == null ? emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA.getDefaultInstance() : photoInfo_;
+      return getPhotoInfo();
     }
 
     public static final int PACMAN_INFO_FIELD_NUMBER = 6;
@@ -182,7 +258,7 @@ public final class NFHMNCKJOEIOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.GGBMIADMOHHOuterClass.GGBMIADMOHHOrBuilder getPacmanInfoOrBuilder() {
-      return pacmanInfo_ == null ? emu.grasscutter.net.proto.GGBMIADMOHHOuterClass.GGBMIADMOHH.getDefaultInstance() : pacmanInfo_;
+      return getPacmanInfo();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -208,7 +284,7 @@ public final class NFHMNCKJOEIOuterClass {
       if (photoInfo_ != null) {
         output.writeMessage(13, getPhotoInfo());
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -229,7 +305,7 @@ public final class NFHMNCKJOEIOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getPhotoInfo());
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -259,7 +335,7 @@ public final class NFHMNCKJOEIOuterClass {
         if (!getPacmanInfo()
             .equals(other.getPacmanInfo())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -282,7 +358,7 @@ public final class NFHMNCKJOEIOuterClass {
         hash = (37 * hash) + PACMAN_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getPacmanInfo().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -403,31 +479,38 @@ public final class NFHMNCKJOEIOuterClass {
 
       // Construct using emu.grasscutter.net.proto.NFHMNCKJOEIOuterClass.NFHMNCKJOEI.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        musicGameInfo_ = null;
-        if (musicGameInfoBuilder_ != null) {
-          musicGameInfoBuilder_.dispose();
+        if (musicGameInfoBuilder_ == null) {
+          musicGameInfo_ = null;
+        } else {
+          musicGameInfo_ = null;
           musicGameInfoBuilder_ = null;
         }
-        photoInfo_ = null;
-        if (photoInfoBuilder_ != null) {
-          photoInfoBuilder_.dispose();
+        if (photoInfoBuilder_ == null) {
+          photoInfo_ = null;
+        } else {
+          photoInfo_ = null;
           photoInfoBuilder_ = null;
         }
-        pacmanInfo_ = null;
-        if (pacmanInfoBuilder_ != null) {
-          pacmanInfoBuilder_.dispose();
+        if (pacmanInfoBuilder_ == null) {
+          pacmanInfo_ = null;
+        } else {
+          pacmanInfo_ = null;
           pacmanInfoBuilder_ = null;
         }
         return this;
@@ -456,28 +539,23 @@ public final class NFHMNCKJOEIOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.NFHMNCKJOEIOuterClass.NFHMNCKJOEI buildPartial() {
         emu.grasscutter.net.proto.NFHMNCKJOEIOuterClass.NFHMNCKJOEI result = new emu.grasscutter.net.proto.NFHMNCKJOEIOuterClass.NFHMNCKJOEI(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        if (musicGameInfoBuilder_ == null) {
+          result.musicGameInfo_ = musicGameInfo_;
+        } else {
+          result.musicGameInfo_ = musicGameInfoBuilder_.build();
+        }
+        if (photoInfoBuilder_ == null) {
+          result.photoInfo_ = photoInfo_;
+        } else {
+          result.photoInfo_ = photoInfoBuilder_.build();
+        }
+        if (pacmanInfoBuilder_ == null) {
+          result.pacmanInfo_ = pacmanInfo_;
+        } else {
+          result.pacmanInfo_ = pacmanInfoBuilder_.build();
+        }
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.NFHMNCKJOEIOuterClass.NFHMNCKJOEI result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.musicGameInfo_ = musicGameInfoBuilder_ == null
-              ? musicGameInfo_
-              : musicGameInfoBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.photoInfo_ = photoInfoBuilder_ == null
-              ? photoInfo_
-              : photoInfoBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.pacmanInfo_ = pacmanInfoBuilder_ == null
-              ? pacmanInfo_
-              : pacmanInfoBuilder_.build();
-        }
       }
 
       @java.lang.Override
@@ -533,7 +611,7 @@ public final class NFHMNCKJOEIOuterClass {
         if (other.hasPacmanInfo()) {
           mergePacmanInfo(other.getPacmanInfo());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -548,54 +626,19 @@ public final class NFHMNCKJOEIOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.NFHMNCKJOEIOuterClass.NFHMNCKJOEI parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 50: {
-                input.readMessage(
-                    getPacmanInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 50
-              case 90: {
-                input.readMessage(
-                    getMusicGameInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 90
-              case 106: {
-                input.readMessage(
-                    getPhotoInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 106
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.NFHMNCKJOEIOuterClass.NFHMNCKJOEI) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private emu.grasscutter.net.proto.PDHJBMOMMGJOuterClass.PDHJBMOMMGJ musicGameInfo_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -605,7 +648,7 @@ public final class NFHMNCKJOEIOuterClass {
        * @return Whether the musicGameInfo field is set.
        */
       public boolean hasMusicGameInfo() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return musicGameInfoBuilder_ != null || musicGameInfo_ != null;
       }
       /**
        * <code>.PDHJBMOMMGJ music_game_info = 11;</code>
@@ -627,11 +670,11 @@ public final class NFHMNCKJOEIOuterClass {
             throw new NullPointerException();
           }
           musicGameInfo_ = value;
+          onChanged();
         } else {
           musicGameInfoBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -641,11 +684,11 @@ public final class NFHMNCKJOEIOuterClass {
           emu.grasscutter.net.proto.PDHJBMOMMGJOuterClass.PDHJBMOMMGJ.Builder builderForValue) {
         if (musicGameInfoBuilder_ == null) {
           musicGameInfo_ = builderForValue.build();
+          onChanged();
         } else {
           musicGameInfoBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -653,38 +696,38 @@ public final class NFHMNCKJOEIOuterClass {
        */
       public Builder mergeMusicGameInfo(emu.grasscutter.net.proto.PDHJBMOMMGJOuterClass.PDHJBMOMMGJ value) {
         if (musicGameInfoBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            musicGameInfo_ != null &&
-            musicGameInfo_ != emu.grasscutter.net.proto.PDHJBMOMMGJOuterClass.PDHJBMOMMGJ.getDefaultInstance()) {
-            getMusicGameInfoBuilder().mergeFrom(value);
+          if (musicGameInfo_ != null) {
+            musicGameInfo_ =
+              emu.grasscutter.net.proto.PDHJBMOMMGJOuterClass.PDHJBMOMMGJ.newBuilder(musicGameInfo_).mergeFrom(value).buildPartial();
           } else {
             musicGameInfo_ = value;
           }
+          onChanged();
         } else {
           musicGameInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.PDHJBMOMMGJ music_game_info = 11;</code>
        */
       public Builder clearMusicGameInfo() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        musicGameInfo_ = null;
-        if (musicGameInfoBuilder_ != null) {
-          musicGameInfoBuilder_.dispose();
+        if (musicGameInfoBuilder_ == null) {
+          musicGameInfo_ = null;
+          onChanged();
+        } else {
+          musicGameInfo_ = null;
           musicGameInfoBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.PDHJBMOMMGJ music_game_info = 11;</code>
        */
       public emu.grasscutter.net.proto.PDHJBMOMMGJOuterClass.PDHJBMOMMGJ.Builder getMusicGameInfoBuilder() {
-        bitField0_ |= 0x00000001;
+        
         onChanged();
         return getMusicGameInfoFieldBuilder().getBuilder();
       }
@@ -724,7 +767,7 @@ public final class NFHMNCKJOEIOuterClass {
        * @return Whether the photoInfo field is set.
        */
       public boolean hasPhotoInfo() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return photoInfoBuilder_ != null || photoInfo_ != null;
       }
       /**
        * <code>.IMADEKGFIFA photo_info = 13;</code>
@@ -746,11 +789,11 @@ public final class NFHMNCKJOEIOuterClass {
             throw new NullPointerException();
           }
           photoInfo_ = value;
+          onChanged();
         } else {
           photoInfoBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+
         return this;
       }
       /**
@@ -760,11 +803,11 @@ public final class NFHMNCKJOEIOuterClass {
           emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA.Builder builderForValue) {
         if (photoInfoBuilder_ == null) {
           photoInfo_ = builderForValue.build();
+          onChanged();
         } else {
           photoInfoBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+
         return this;
       }
       /**
@@ -772,38 +815,38 @@ public final class NFHMNCKJOEIOuterClass {
        */
       public Builder mergePhotoInfo(emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA value) {
         if (photoInfoBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            photoInfo_ != null &&
-            photoInfo_ != emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA.getDefaultInstance()) {
-            getPhotoInfoBuilder().mergeFrom(value);
+          if (photoInfo_ != null) {
+            photoInfo_ =
+              emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA.newBuilder(photoInfo_).mergeFrom(value).buildPartial();
           } else {
             photoInfo_ = value;
           }
+          onChanged();
         } else {
           photoInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.IMADEKGFIFA photo_info = 13;</code>
        */
       public Builder clearPhotoInfo() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        photoInfo_ = null;
-        if (photoInfoBuilder_ != null) {
-          photoInfoBuilder_.dispose();
+        if (photoInfoBuilder_ == null) {
+          photoInfo_ = null;
+          onChanged();
+        } else {
+          photoInfo_ = null;
           photoInfoBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.IMADEKGFIFA photo_info = 13;</code>
        */
       public emu.grasscutter.net.proto.IMADEKGFIFAOuterClass.IMADEKGFIFA.Builder getPhotoInfoBuilder() {
-        bitField0_ |= 0x00000002;
+        
         onChanged();
         return getPhotoInfoFieldBuilder().getBuilder();
       }
@@ -843,7 +886,7 @@ public final class NFHMNCKJOEIOuterClass {
        * @return Whether the pacmanInfo field is set.
        */
       public boolean hasPacmanInfo() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return pacmanInfoBuilder_ != null || pacmanInfo_ != null;
       }
       /**
        * <code>.GGBMIADMOHH pacman_info = 6;</code>
@@ -865,11 +908,11 @@ public final class NFHMNCKJOEIOuterClass {
             throw new NullPointerException();
           }
           pacmanInfo_ = value;
+          onChanged();
         } else {
           pacmanInfoBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -879,11 +922,11 @@ public final class NFHMNCKJOEIOuterClass {
           emu.grasscutter.net.proto.GGBMIADMOHHOuterClass.GGBMIADMOHH.Builder builderForValue) {
         if (pacmanInfoBuilder_ == null) {
           pacmanInfo_ = builderForValue.build();
+          onChanged();
         } else {
           pacmanInfoBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
@@ -891,38 +934,38 @@ public final class NFHMNCKJOEIOuterClass {
        */
       public Builder mergePacmanInfo(emu.grasscutter.net.proto.GGBMIADMOHHOuterClass.GGBMIADMOHH value) {
         if (pacmanInfoBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            pacmanInfo_ != null &&
-            pacmanInfo_ != emu.grasscutter.net.proto.GGBMIADMOHHOuterClass.GGBMIADMOHH.getDefaultInstance()) {
-            getPacmanInfoBuilder().mergeFrom(value);
+          if (pacmanInfo_ != null) {
+            pacmanInfo_ =
+              emu.grasscutter.net.proto.GGBMIADMOHHOuterClass.GGBMIADMOHH.newBuilder(pacmanInfo_).mergeFrom(value).buildPartial();
           } else {
             pacmanInfo_ = value;
           }
+          onChanged();
         } else {
           pacmanInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.GGBMIADMOHH pacman_info = 6;</code>
        */
       public Builder clearPacmanInfo() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        pacmanInfo_ = null;
-        if (pacmanInfoBuilder_ != null) {
-          pacmanInfoBuilder_.dispose();
+        if (pacmanInfoBuilder_ == null) {
+          pacmanInfo_ = null;
+          onChanged();
+        } else {
+          pacmanInfo_ = null;
           pacmanInfoBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.GGBMIADMOHH pacman_info = 6;</code>
        */
       public emu.grasscutter.net.proto.GGBMIADMOHHOuterClass.GGBMIADMOHH.Builder getPacmanInfoBuilder() {
-        bitField0_ |= 0x00000004;
+        
         onChanged();
         return getPacmanInfoFieldBuilder().getBuilder();
       }
@@ -986,18 +1029,7 @@ public final class NFHMNCKJOEIOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new NFHMNCKJOEI(input, extensionRegistry);
       }
     };
 

@@ -92,6 +92,71 @@ public final class DuelHeartLevelInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private DuelHeartLevelInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                difficultyInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.DuelHeartLevelDifficultyInfoOuterClass.DuelHeartLevelDifficultyInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              difficultyInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.DuelHeartLevelDifficultyInfoOuterClass.DuelHeartLevelDifficultyInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 48: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            case 96: {
+
+              levelId_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+
+              isCgViewed_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          difficultyInfoList_ = java.util.Collections.unmodifiableList(difficultyInfoList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.internal_static_DuelHeartLevelInfo_descriptor;
@@ -106,7 +171,6 @@ public final class DuelHeartLevelInfoOuterClass {
     }
 
     public static final int DIFFICULTY_INFO_LIST_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.DuelHeartLevelDifficultyInfoOuterClass.DuelHeartLevelDifficultyInfo> difficultyInfoList_;
     /**
      * <code>repeated .DuelHeartLevelDifficultyInfo difficulty_info_list = 3;</code>
@@ -147,7 +211,7 @@ public final class DuelHeartLevelInfoOuterClass {
     }
 
     public static final int IS_CG_VIEWED_FIELD_NUMBER = 14;
-    private boolean isCgViewed_ = false;
+    private boolean isCgViewed_;
     /**
      * <code>bool is_cg_viewed = 14;</code>
      * @return The isCgViewed.
@@ -158,7 +222,7 @@ public final class DuelHeartLevelInfoOuterClass {
     }
 
     public static final int IS_OPEN_FIELD_NUMBER = 6;
-    private boolean isOpen_ = false;
+    private boolean isOpen_;
     /**
      * <code>bool is_open = 6;</code>
      * @return The isOpen.
@@ -169,7 +233,7 @@ public final class DuelHeartLevelInfoOuterClass {
     }
 
     public static final int LEVEL_ID_FIELD_NUMBER = 12;
-    private int levelId_ = 0;
+    private int levelId_;
     /**
      * <code>uint32 level_id = 12;</code>
      * @return The levelId.
@@ -205,7 +269,7 @@ public final class DuelHeartLevelInfoOuterClass {
       if (isCgViewed_ != false) {
         output.writeBool(14, isCgViewed_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -230,7 +294,7 @@ public final class DuelHeartLevelInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(14, isCgViewed_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -253,7 +317,7 @@ public final class DuelHeartLevelInfoOuterClass {
           != other.getIsOpen()) return false;
       if (getLevelId()
           != other.getLevelId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -276,7 +340,7 @@ public final class DuelHeartLevelInfoOuterClass {
           getIsOpen());
       hash = (37 * hash) + LEVEL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getLevelId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -397,28 +461,35 @@ public final class DuelHeartLevelInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDifficultyInfoListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         if (difficultyInfoListBuilder_ == null) {
           difficultyInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          difficultyInfoList_ = null;
           difficultyInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         isCgViewed_ = false;
+
         isOpen_ = false;
+
         levelId_ = 0;
+
         return this;
       }
 
@@ -445,13 +516,7 @@ public final class DuelHeartLevelInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo buildPartial() {
         emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo result = new emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo result) {
+        int from_bitField0_ = bitField0_;
         if (difficultyInfoListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             difficultyInfoList_ = java.util.Collections.unmodifiableList(difficultyInfoList_);
@@ -461,19 +526,11 @@ public final class DuelHeartLevelInfoOuterClass {
         } else {
           result.difficultyInfoList_ = difficultyInfoListBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.isCgViewed_ = isCgViewed_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.isOpen_ = isOpen_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.levelId_ = levelId_;
-        }
+        result.isCgViewed_ = isCgViewed_;
+        result.isOpen_ = isOpen_;
+        result.levelId_ = levelId_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -555,7 +612,7 @@ public final class DuelHeartLevelInfoOuterClass {
         if (other.getLevelId() != 0) {
           setLevelId(other.getLevelId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -570,58 +627,17 @@ public final class DuelHeartLevelInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 26: {
-                emu.grasscutter.net.proto.DuelHeartLevelDifficultyInfoOuterClass.DuelHeartLevelDifficultyInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.DuelHeartLevelDifficultyInfoOuterClass.DuelHeartLevelDifficultyInfo.parser(),
-                        extensionRegistry);
-                if (difficultyInfoListBuilder_ == null) {
-                  ensureDifficultyInfoListIsMutable();
-                  difficultyInfoList_.add(m);
-                } else {
-                  difficultyInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 26
-              case 48: {
-                isOpen_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 48
-              case 96: {
-                levelId_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 96
-              case 112: {
-                isCgViewed_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -883,7 +899,6 @@ public final class DuelHeartLevelInfoOuterClass {
       public Builder setIsCgViewed(boolean value) {
         
         isCgViewed_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -892,7 +907,7 @@ public final class DuelHeartLevelInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsCgViewed() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         isCgViewed_ = false;
         onChanged();
         return this;
@@ -915,7 +930,6 @@ public final class DuelHeartLevelInfoOuterClass {
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -924,7 +938,7 @@ public final class DuelHeartLevelInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         isOpen_ = false;
         onChanged();
         return this;
@@ -947,7 +961,6 @@ public final class DuelHeartLevelInfoOuterClass {
       public Builder setLevelId(int value) {
         
         levelId_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -956,7 +969,7 @@ public final class DuelHeartLevelInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLevelId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         levelId_ = 0;
         onChanged();
         return this;
@@ -994,18 +1007,7 @@ public final class DuelHeartLevelInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new DuelHeartLevelInfo(input, extensionRegistry);
       }
     };
 

@@ -82,6 +82,66 @@ public final class SpiceInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private SpiceInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 64: {
+
+              unk3300CIHIAJEGCBO_ = input.readUInt32();
+              break;
+            }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                spiceStageDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.SpiceStageDataOuterClass.SpiceStageData>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              spiceStageDataList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.SpiceStageDataOuterClass.SpiceStageData.parser(), extensionRegistry));
+              break;
+            }
+            case 112: {
+
+              unk3300LAKPMMIPBMI_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          spiceStageDataList_ = java.util.Collections.unmodifiableList(spiceStageDataList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.SpiceInfoOuterClass.internal_static_SpiceInfo_descriptor;
@@ -96,7 +156,7 @@ public final class SpiceInfoOuterClass {
     }
 
     public static final int UNK3300_CIHIAJEGCBO_FIELD_NUMBER = 8;
-    private int unk3300CIHIAJEGCBO_ = 0;
+    private int unk3300CIHIAJEGCBO_;
     /**
      * <code>uint32 Unk3300_CIHIAJEGCBO = 8;</code>
      * @return The unk3300CIHIAJEGCBO.
@@ -107,7 +167,6 @@ public final class SpiceInfoOuterClass {
     }
 
     public static final int SPICESTAGEDATALIST_FIELD_NUMBER = 11;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.SpiceStageDataOuterClass.SpiceStageData> spiceStageDataList_;
     /**
      * <code>repeated .SpiceStageData spiceStageDataList = 11;</code>
@@ -148,7 +207,7 @@ public final class SpiceInfoOuterClass {
     }
 
     public static final int UNK3300_LAKPMMIPBMI_FIELD_NUMBER = 14;
-    private int unk3300LAKPMMIPBMI_ = 0;
+    private int unk3300LAKPMMIPBMI_;
     /**
      * <code>uint32 Unk3300_LAKPMMIPBMI = 14;</code>
      * @return The unk3300LAKPMMIPBMI.
@@ -181,7 +240,7 @@ public final class SpiceInfoOuterClass {
       if (unk3300LAKPMMIPBMI_ != 0) {
         output.writeUInt32(14, unk3300LAKPMMIPBMI_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -202,7 +261,7 @@ public final class SpiceInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(14, unk3300LAKPMMIPBMI_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -223,7 +282,7 @@ public final class SpiceInfoOuterClass {
           .equals(other.getSpiceStageDataListList())) return false;
       if (getUnk3300LAKPMMIPBMI()
           != other.getUnk3300LAKPMMIPBMI()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -242,7 +301,7 @@ public final class SpiceInfoOuterClass {
       }
       hash = (37 * hash) + UNK3300_LAKPMMIPBMI_FIELD_NUMBER;
       hash = (53 * hash) + getUnk3300LAKPMMIPBMI();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -359,27 +418,33 @@ public final class SpiceInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.SpiceInfoOuterClass.SpiceInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSpiceStageDataListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         unk3300CIHIAJEGCBO_ = 0;
+
         if (spiceStageDataListBuilder_ == null) {
           spiceStageDataList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          spiceStageDataList_ = null;
           spiceStageDataListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         unk3300LAKPMMIPBMI_ = 0;
+
         return this;
       }
 
@@ -406,32 +471,20 @@ public final class SpiceInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SpiceInfoOuterClass.SpiceInfo buildPartial() {
         emu.grasscutter.net.proto.SpiceInfoOuterClass.SpiceInfo result = new emu.grasscutter.net.proto.SpiceInfoOuterClass.SpiceInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.SpiceInfoOuterClass.SpiceInfo result) {
+        int from_bitField0_ = bitField0_;
+        result.unk3300CIHIAJEGCBO_ = unk3300CIHIAJEGCBO_;
         if (spiceStageDataListBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             spiceStageDataList_ = java.util.Collections.unmodifiableList(spiceStageDataList_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.spiceStageDataList_ = spiceStageDataList_;
         } else {
           result.spiceStageDataList_ = spiceStageDataListBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.SpiceInfoOuterClass.SpiceInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.unk3300CIHIAJEGCBO_ = unk3300CIHIAJEGCBO_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.unk3300LAKPMMIPBMI_ = unk3300LAKPMMIPBMI_;
-        }
+        result.unk3300LAKPMMIPBMI_ = unk3300LAKPMMIPBMI_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -485,7 +538,7 @@ public final class SpiceInfoOuterClass {
           if (!other.spiceStageDataList_.isEmpty()) {
             if (spiceStageDataList_.isEmpty()) {
               spiceStageDataList_ = other.spiceStageDataList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureSpiceStageDataListIsMutable();
               spiceStageDataList_.addAll(other.spiceStageDataList_);
@@ -498,7 +551,7 @@ public final class SpiceInfoOuterClass {
               spiceStageDataListBuilder_.dispose();
               spiceStageDataListBuilder_ = null;
               spiceStageDataList_ = other.spiceStageDataList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               spiceStageDataListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSpiceStageDataListFieldBuilder() : null;
@@ -510,7 +563,7 @@ public final class SpiceInfoOuterClass {
         if (other.getUnk3300LAKPMMIPBMI() != 0) {
           setUnk3300LAKPMMIPBMI(other.getUnk3300LAKPMMIPBMI());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -525,53 +578,17 @@ public final class SpiceInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.SpiceInfoOuterClass.SpiceInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 64: {
-                unk3300CIHIAJEGCBO_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 64
-              case 90: {
-                emu.grasscutter.net.proto.SpiceStageDataOuterClass.SpiceStageData m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.SpiceStageDataOuterClass.SpiceStageData.parser(),
-                        extensionRegistry);
-                if (spiceStageDataListBuilder_ == null) {
-                  ensureSpiceStageDataListIsMutable();
-                  spiceStageDataList_.add(m);
-                } else {
-                  spiceStageDataListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 90
-              case 112: {
-                unk3300LAKPMMIPBMI_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 112
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.SpiceInfoOuterClass.SpiceInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -593,7 +610,6 @@ public final class SpiceInfoOuterClass {
       public Builder setUnk3300CIHIAJEGCBO(int value) {
         
         unk3300CIHIAJEGCBO_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -602,7 +618,7 @@ public final class SpiceInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300CIHIAJEGCBO() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         unk3300CIHIAJEGCBO_ = 0;
         onChanged();
         return this;
@@ -611,9 +627,9 @@ public final class SpiceInfoOuterClass {
       private java.util.List<emu.grasscutter.net.proto.SpiceStageDataOuterClass.SpiceStageData> spiceStageDataList_ =
         java.util.Collections.emptyList();
       private void ensureSpiceStageDataListIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           spiceStageDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.SpiceStageDataOuterClass.SpiceStageData>(spiceStageDataList_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -763,7 +779,7 @@ public final class SpiceInfoOuterClass {
       public Builder clearSpiceStageDataList() {
         if (spiceStageDataListBuilder_ == null) {
           spiceStageDataList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           spiceStageDataListBuilder_.clear();
@@ -840,7 +856,7 @@ public final class SpiceInfoOuterClass {
           spiceStageDataListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.SpiceStageDataOuterClass.SpiceStageData, emu.grasscutter.net.proto.SpiceStageDataOuterClass.SpiceStageData.Builder, emu.grasscutter.net.proto.SpiceStageDataOuterClass.SpiceStageDataOrBuilder>(
                   spiceStageDataList_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           spiceStageDataList_ = null;
@@ -865,7 +881,6 @@ public final class SpiceInfoOuterClass {
       public Builder setUnk3300LAKPMMIPBMI(int value) {
         
         unk3300LAKPMMIPBMI_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -874,7 +889,7 @@ public final class SpiceInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUnk3300LAKPMMIPBMI() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         unk3300LAKPMMIPBMI_ = 0;
         onChanged();
         return this;
@@ -912,18 +927,7 @@ public final class SpiceInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new SpiceInfo(input, extensionRegistry);
       }
     };
 

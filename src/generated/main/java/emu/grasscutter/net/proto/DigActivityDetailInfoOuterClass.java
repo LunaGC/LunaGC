@@ -98,6 +98,85 @@ public final class DigActivityDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private DigActivityDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 64: {
+
+              stageId_ = input.readUInt32();
+              break;
+            }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                digMarkPointList_ = new java.util.ArrayList<emu.grasscutter.net.proto.DigMarkPointOuterClass.DigMarkPoint>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              digMarkPointList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.DigMarkPointOuterClass.DigMarkPoint.parser(), extensionRegistry));
+              break;
+            }
+            case 120: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                stageIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              stageIdList_.addInt(input.readUInt32());
+              break;
+            }
+            case 122: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                stageIdList_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                stageIdList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          digMarkPointList_ = java.util.Collections.unmodifiableList(digMarkPointList_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          stageIdList_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.DigActivityDetailInfoOuterClass.internal_static_DigActivityDetailInfo_descriptor;
@@ -112,7 +191,7 @@ public final class DigActivityDetailInfoOuterClass {
     }
 
     public static final int STAGE_ID_FIELD_NUMBER = 8;
-    private int stageId_ = 0;
+    private int stageId_;
     /**
      * <code>uint32 stage_id = 8;</code>
      * @return The stageId.
@@ -123,7 +202,6 @@ public final class DigActivityDetailInfoOuterClass {
     }
 
     public static final int DIG_MARK_POINT_LIST_FIELD_NUMBER = 10;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.DigMarkPointOuterClass.DigMarkPoint> digMarkPointList_;
     /**
      * <code>repeated .DigMarkPoint dig_mark_point_list = 10;</code>
@@ -164,7 +242,6 @@ public final class DigActivityDetailInfoOuterClass {
     }
 
     public static final int STAGE_ID_LIST_FIELD_NUMBER = 15;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList stageIdList_;
     /**
      * <code>repeated uint32 stage_id_list = 15;</code>
@@ -220,7 +297,7 @@ public final class DigActivityDetailInfoOuterClass {
       for (int i = 0; i < stageIdList_.size(); i++) {
         output.writeUInt32NoTag(stageIdList_.getInt(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -251,7 +328,7 @@ public final class DigActivityDetailInfoOuterClass {
         }
         stageIdListMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -272,7 +349,7 @@ public final class DigActivityDetailInfoOuterClass {
           .equals(other.getDigMarkPointListList())) return false;
       if (!getStageIdListList()
           .equals(other.getStageIdListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -293,7 +370,7 @@ public final class DigActivityDetailInfoOuterClass {
         hash = (37 * hash) + STAGE_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getStageIdListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -414,27 +491,33 @@ public final class DigActivityDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.DigActivityDetailInfoOuterClass.DigActivityDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDigMarkPointListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         stageId_ = 0;
+
         if (digMarkPointListBuilder_ == null) {
           digMarkPointList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          digMarkPointList_ = null;
           digMarkPointListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         stageIdList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -461,34 +544,24 @@ public final class DigActivityDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.DigActivityDetailInfoOuterClass.DigActivityDetailInfo buildPartial() {
         emu.grasscutter.net.proto.DigActivityDetailInfoOuterClass.DigActivityDetailInfo result = new emu.grasscutter.net.proto.DigActivityDetailInfoOuterClass.DigActivityDetailInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.DigActivityDetailInfoOuterClass.DigActivityDetailInfo result) {
+        int from_bitField0_ = bitField0_;
+        result.stageId_ = stageId_;
         if (digMarkPointListBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             digMarkPointList_ = java.util.Collections.unmodifiableList(digMarkPointList_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.digMarkPointList_ = digMarkPointList_;
         } else {
           result.digMarkPointList_ = digMarkPointListBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           stageIdList_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.stageIdList_ = stageIdList_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.DigActivityDetailInfoOuterClass.DigActivityDetailInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.stageId_ = stageId_;
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -542,7 +615,7 @@ public final class DigActivityDetailInfoOuterClass {
           if (!other.digMarkPointList_.isEmpty()) {
             if (digMarkPointList_.isEmpty()) {
               digMarkPointList_ = other.digMarkPointList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureDigMarkPointListIsMutable();
               digMarkPointList_.addAll(other.digMarkPointList_);
@@ -555,7 +628,7 @@ public final class DigActivityDetailInfoOuterClass {
               digMarkPointListBuilder_.dispose();
               digMarkPointListBuilder_ = null;
               digMarkPointList_ = other.digMarkPointList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               digMarkPointListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDigMarkPointListFieldBuilder() : null;
@@ -567,14 +640,14 @@ public final class DigActivityDetailInfoOuterClass {
         if (!other.stageIdList_.isEmpty()) {
           if (stageIdList_.isEmpty()) {
             stageIdList_ = other.stageIdList_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureStageIdListIsMutable();
             stageIdList_.addAll(other.stageIdList_);
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -589,64 +662,17 @@ public final class DigActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.DigActivityDetailInfoOuterClass.DigActivityDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 64: {
-                stageId_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 64
-              case 82: {
-                emu.grasscutter.net.proto.DigMarkPointOuterClass.DigMarkPoint m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.DigMarkPointOuterClass.DigMarkPoint.parser(),
-                        extensionRegistry);
-                if (digMarkPointListBuilder_ == null) {
-                  ensureDigMarkPointListIsMutable();
-                  digMarkPointList_.add(m);
-                } else {
-                  digMarkPointListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 82
-              case 120: {
-                int v = input.readUInt32();
-                ensureStageIdListIsMutable();
-                stageIdList_.addInt(v);
-                break;
-              } // case 120
-              case 122: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureStageIdListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  stageIdList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.DigActivityDetailInfoOuterClass.DigActivityDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -668,7 +694,6 @@ public final class DigActivityDetailInfoOuterClass {
       public Builder setStageId(int value) {
         
         stageId_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -677,7 +702,7 @@ public final class DigActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStageId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         stageId_ = 0;
         onChanged();
         return this;
@@ -686,9 +711,9 @@ public final class DigActivityDetailInfoOuterClass {
       private java.util.List<emu.grasscutter.net.proto.DigMarkPointOuterClass.DigMarkPoint> digMarkPointList_ =
         java.util.Collections.emptyList();
       private void ensureDigMarkPointListIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           digMarkPointList_ = new java.util.ArrayList<emu.grasscutter.net.proto.DigMarkPointOuterClass.DigMarkPoint>(digMarkPointList_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -838,7 +863,7 @@ public final class DigActivityDetailInfoOuterClass {
       public Builder clearDigMarkPointList() {
         if (digMarkPointListBuilder_ == null) {
           digMarkPointList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           digMarkPointListBuilder_.clear();
@@ -915,7 +940,7 @@ public final class DigActivityDetailInfoOuterClass {
           digMarkPointListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.DigMarkPointOuterClass.DigMarkPoint, emu.grasscutter.net.proto.DigMarkPointOuterClass.DigMarkPoint.Builder, emu.grasscutter.net.proto.DigMarkPointOuterClass.DigMarkPointOrBuilder>(
                   digMarkPointList_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           digMarkPointList_ = null;
@@ -925,10 +950,10 @@ public final class DigActivityDetailInfoOuterClass {
 
       private com.google.protobuf.Internal.IntList stageIdList_ = emptyIntList();
       private void ensureStageIdListIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           stageIdList_ = mutableCopy(stageIdList_);
-          bitField0_ |= 0x00000004;
-        }
+          bitField0_ |= 0x00000002;
+         }
       }
       /**
        * <code>repeated uint32 stage_id_list = 15;</code>
@@ -936,7 +961,7 @@ public final class DigActivityDetailInfoOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getStageIdListList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
+        return ((bitField0_ & 0x00000002) != 0) ?
                  java.util.Collections.unmodifiableList(stageIdList_) : stageIdList_;
       }
       /**
@@ -962,7 +987,6 @@ public final class DigActivityDetailInfoOuterClass {
        */
       public Builder setStageIdList(
           int index, int value) {
-        
         ensureStageIdListIsMutable();
         stageIdList_.setInt(index, value);
         onChanged();
@@ -974,7 +998,6 @@ public final class DigActivityDetailInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder addStageIdList(int value) {
-        
         ensureStageIdListIsMutable();
         stageIdList_.addInt(value);
         onChanged();
@@ -999,7 +1022,7 @@ public final class DigActivityDetailInfoOuterClass {
        */
       public Builder clearStageIdList() {
         stageIdList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1036,18 +1059,7 @@ public final class DigActivityDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new DigActivityDetailInfo(input, extensionRegistry);
       }
     };
 

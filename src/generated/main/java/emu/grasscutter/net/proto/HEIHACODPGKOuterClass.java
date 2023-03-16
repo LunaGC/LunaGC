@@ -249,12 +249,14 @@ public final class HEIHACODPGKOuterClass {
     /**
      * <code>map&lt;uint32, bool&gt; NNAOPIMFFNF = 3;</code>
      */
+
     boolean getNNAOPIMFFNFOrDefault(
         int key,
         boolean defaultValue);
     /**
      * <code>map&lt;uint32, bool&gt; NNAOPIMFFNF = 3;</code>
      */
+
     boolean getNNAOPIMFFNFOrThrow(
         int key);
   }
@@ -295,6 +297,272 @@ public final class HEIHACODPGKOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private HEIHACODPGK(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC.Builder subBuilder = null;
+              if (iDPGDFJJMFF_ != null) {
+                subBuilder = iDPGDFJJMFF_.toBuilder();
+              }
+              iDPGDFJJMFF_ = input.readMessage(emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(iDPGDFJJMFF_);
+                iDPGDFJJMFF_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 16: {
+
+              mJIFKEIJGIG_ = input.readBool();
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+                nNAOPIMFFNF_ = com.google.protobuf.MapField.newMapField(
+                    NNAOPIMFFNFDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000040;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Boolean>
+              nNAOPIMFFNF__ = input.readMessage(
+                  NNAOPIMFFNFDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              nNAOPIMFFNF_.getMutableMap().put(
+                  nNAOPIMFFNF__.getKey(), nNAOPIMFFNF__.getValue());
+              break;
+            }
+            case 32: {
+
+              bCMHGOOECGK_ = input.readBool();
+              break;
+            }
+            case 40: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                unlockStrategyList_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              unlockStrategyList_.addInt(input.readUInt32());
+              break;
+            }
+            case 42: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                unlockStrategyList_ = newIntList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                unlockStrategyList_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 48: {
+
+              bNAAILOMLOA_ = input.readBool();
+              break;
+            }
+            case 56: {
+
+              aLKLDMIEONO_ = input.readBool();
+              break;
+            }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                bLDGMNNDGFJ_ = new java.util.ArrayList<emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              bLDGMNNDGFJ_.add(
+                  input.readMessage(emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA.parser(), extensionRegistry));
+              break;
+            }
+            case 72: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                lLLPHCOGFBG_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              lLLPHCOGFBG_.addInt(input.readUInt32());
+              break;
+            }
+            case 74: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+                lLLPHCOGFBG_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                lLLPHCOGFBG_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 80: {
+
+              oKNOAHLOFEL_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                aFILOLELHFA_ = newIntList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              aFILOLELHFA_.addInt(input.readUInt32());
+              break;
+            }
+            case 90: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000010) != 0) && input.getBytesUntilLimit() > 0) {
+                aFILOLELHFA_ = newIntList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                aFILOLELHFA_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 96: {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+                eFLHJPMLAPF_ = newIntList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              eFLHJPMLAPF_.addInt(input.readUInt32());
+              break;
+            }
+            case 98: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000020) != 0) && input.getBytesUntilLimit() > 0) {
+                eFLHJPMLAPF_ = newIntList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                eFLHJPMLAPF_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 104: {
+
+              kJPCJKHINJD_ = input.readBool();
+              break;
+            }
+            case 112: {
+
+              jIIPBLOOFHC_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              storeRound_ = input.readUInt32();
+              break;
+            }
+            case 880: {
+
+              aPFPGJODBFO_ = input.readUInt32();
+              break;
+            }
+            case 6416: {
+
+              dJHFHGKEDHP_ = input.readBool();
+              break;
+            }
+            case 6984: {
+
+              oGOCIGOAJLB_ = input.readBool();
+              break;
+            }
+            case 7904: {
+
+              oIEGFIJOFGL_ = input.readUInt32();
+              break;
+            }
+            case 14248: {
+
+              nCMAKPOPMOM_ = input.readBool();
+              break;
+            }
+            case 14616: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                hNODLJLIHGP_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              hNODLJLIHGP_.addInt(input.readUInt32());
+              break;
+            }
+            case 14618: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                hNODLJLIHGP_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                hNODLJLIHGP_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 15520: {
+
+              fMMECOPACKC_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          unlockStrategyList_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          bLDGMNNDGFJ_ = java.util.Collections.unmodifiableList(bLDGMNNDGFJ_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          lLLPHCOGFBG_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          aFILOLELHFA_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
+          eFLHJPMLAPF_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          hNODLJLIHGP_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.HEIHACODPGKOuterClass.internal_static_HEIHACODPGK_descriptor;
@@ -321,7 +589,7 @@ public final class HEIHACODPGKOuterClass {
     }
 
     public static final int APFPGJODBFO_FIELD_NUMBER = 110;
-    private int aPFPGJODBFO_ = 0;
+    private int aPFPGJODBFO_;
     /**
      * <code>uint32 APFPGJODBFO = 110;</code>
      * @return The aPFPGJODBFO.
@@ -332,7 +600,7 @@ public final class HEIHACODPGKOuterClass {
     }
 
     public static final int BCMHGOOECGK_FIELD_NUMBER = 4;
-    private boolean bCMHGOOECGK_ = false;
+    private boolean bCMHGOOECGK_;
     /**
      * <code>bool BCMHGOOECGK = 4;</code>
      * @return The bCMHGOOECGK.
@@ -343,7 +611,6 @@ public final class HEIHACODPGKOuterClass {
     }
 
     public static final int HNODLJLIHGP_FIELD_NUMBER = 1827;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList hNODLJLIHGP_;
     /**
      * <code>repeated uint32 HNODLJLIHGP = 1827;</code>
@@ -372,7 +639,7 @@ public final class HEIHACODPGKOuterClass {
     private int hNODLJLIHGPMemoizedSerializedSize = -1;
 
     public static final int OGOCIGOAJLB_FIELD_NUMBER = 873;
-    private boolean oGOCIGOAJLB_ = false;
+    private boolean oGOCIGOAJLB_;
     /**
      * <code>bool OGOCIGOAJLB = 873;</code>
      * @return The oGOCIGOAJLB.
@@ -383,7 +650,7 @@ public final class HEIHACODPGKOuterClass {
     }
 
     public static final int KJPCJKHINJD_FIELD_NUMBER = 13;
-    private boolean kJPCJKHINJD_ = false;
+    private boolean kJPCJKHINJD_;
     /**
      * <code>bool KJPCJKHINJD = 13;</code>
      * @return The kJPCJKHINJD.
@@ -394,7 +661,7 @@ public final class HEIHACODPGKOuterClass {
     }
 
     public static final int FMMECOPACKC_FIELD_NUMBER = 1940;
-    private int fMMECOPACKC_ = 0;
+    private int fMMECOPACKC_;
     /**
      * <code>uint32 FMMECOPACKC = 1940;</code>
      * @return The fMMECOPACKC.
@@ -405,7 +672,7 @@ public final class HEIHACODPGKOuterClass {
     }
 
     public static final int OIEGFIJOFGL_FIELD_NUMBER = 988;
-    private int oIEGFIJOFGL_ = 0;
+    private int oIEGFIJOFGL_;
     /**
      * <code>uint32 OIEGFIJOFGL = 988;</code>
      * @return The oIEGFIJOFGL.
@@ -416,7 +683,6 @@ public final class HEIHACODPGKOuterClass {
     }
 
     public static final int BLDGMNNDGFJ_FIELD_NUMBER = 8;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA> bLDGMNNDGFJ_;
     /**
      * <code>repeated .DDFMGAHMONA BLDGMNNDGFJ = 8;</code>
@@ -457,7 +723,7 @@ public final class HEIHACODPGKOuterClass {
     }
 
     public static final int DJHFHGKEDHP_FIELD_NUMBER = 802;
-    private boolean dJHFHGKEDHP_ = false;
+    private boolean dJHFHGKEDHP_;
     /**
      * <code>bool DJHFHGKEDHP = 802;</code>
      * @return The dJHFHGKEDHP.
@@ -468,7 +734,7 @@ public final class HEIHACODPGKOuterClass {
     }
 
     public static final int MJIFKEIJGIG_FIELD_NUMBER = 2;
-    private boolean mJIFKEIJGIG_ = false;
+    private boolean mJIFKEIJGIG_;
     /**
      * <code>bool MJIFKEIJGIG = 2;</code>
      * @return The mJIFKEIJGIG.
@@ -479,7 +745,7 @@ public final class HEIHACODPGKOuterClass {
     }
 
     public static final int OKNOAHLOFEL_FIELD_NUMBER = 10;
-    private int oKNOAHLOFEL_ = 0;
+    private int oKNOAHLOFEL_;
     /**
      * <code>uint32 OKNOAHLOFEL = 10;</code>
      * @return The oKNOAHLOFEL.
@@ -490,7 +756,6 @@ public final class HEIHACODPGKOuterClass {
     }
 
     public static final int UNLOCK_STRATEGY_LIST_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList unlockStrategyList_;
     /**
      * <code>repeated uint32 unlock_strategy_list = 5;</code>
@@ -519,7 +784,6 @@ public final class HEIHACODPGKOuterClass {
     private int unlockStrategyListMemoizedSerializedSize = -1;
 
     public static final int LLLPHCOGFBG_FIELD_NUMBER = 9;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList lLLPHCOGFBG_;
     /**
      * <code>repeated uint32 LLLPHCOGFBG = 9;</code>
@@ -548,7 +812,6 @@ public final class HEIHACODPGKOuterClass {
     private int lLLPHCOGFBGMemoizedSerializedSize = -1;
 
     public static final int AFILOLELHFA_FIELD_NUMBER = 11;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList aFILOLELHFA_;
     /**
      * <code>repeated uint32 AFILOLELHFA = 11;</code>
@@ -577,7 +840,7 @@ public final class HEIHACODPGKOuterClass {
     private int aFILOLELHFAMemoizedSerializedSize = -1;
 
     public static final int JIIPBLOOFHC_FIELD_NUMBER = 14;
-    private int jIIPBLOOFHC_ = 0;
+    private int jIIPBLOOFHC_;
     /**
      * <code>uint32 JIIPBLOOFHC = 14;</code>
      * @return The jIIPBLOOFHC.
@@ -588,7 +851,7 @@ public final class HEIHACODPGKOuterClass {
     }
 
     public static final int STORE_ROUND_FIELD_NUMBER = 15;
-    private int storeRound_ = 0;
+    private int storeRound_;
     /**
      * <code>uint32 store_round = 15;</code>
      * @return The storeRound.
@@ -599,7 +862,7 @@ public final class HEIHACODPGKOuterClass {
     }
 
     public static final int NCMAKPOPMOM_FIELD_NUMBER = 1781;
-    private boolean nCMAKPOPMOM_ = false;
+    private boolean nCMAKPOPMOM_;
     /**
      * <code>bool NCMAKPOPMOM = 1781;</code>
      * @return The nCMAKPOPMOM.
@@ -610,7 +873,6 @@ public final class HEIHACODPGKOuterClass {
     }
 
     public static final int EFLHJPMLAPF_FIELD_NUMBER = 12;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList eFLHJPMLAPF_;
     /**
      * <code>repeated uint32 EFLHJPMLAPF = 12;</code>
@@ -639,7 +901,7 @@ public final class HEIHACODPGKOuterClass {
     private int eFLHJPMLAPFMemoizedSerializedSize = -1;
 
     public static final int BNAAILOMLOA_FIELD_NUMBER = 6;
-    private boolean bNAAILOMLOA_ = false;
+    private boolean bNAAILOMLOA_;
     /**
      * <code>bool BNAAILOMLOA = 6;</code>
      * @return The bNAAILOMLOA.
@@ -672,11 +934,11 @@ public final class HEIHACODPGKOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFCOrBuilder getIDPGDFJJMFFOrBuilder() {
-      return iDPGDFJJMFF_ == null ? emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC.getDefaultInstance() : iDPGDFJJMFF_;
+      return getIDPGDFJJMFF();
     }
 
     public static final int ALKLDMIEONO_FIELD_NUMBER = 7;
-    private boolean aLKLDMIEONO_ = false;
+    private boolean aLKLDMIEONO_;
     /**
      * <code>bool ALKLDMIEONO = 7;</code>
      * @return The aLKLDMIEONO.
@@ -698,7 +960,6 @@ public final class HEIHACODPGKOuterClass {
                   com.google.protobuf.WireFormat.FieldType.BOOL,
                   false);
     }
-    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, java.lang.Boolean> nNAOPIMFFNF_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Boolean>
@@ -709,12 +970,14 @@ public final class HEIHACODPGKOuterClass {
       }
       return nNAOPIMFFNF_;
     }
+
     public int getNNAOPIMFFNFCount() {
       return internalGetNNAOPIMFFNF().getMap().size();
     }
     /**
      * <code>map&lt;uint32, bool&gt; NNAOPIMFFNF = 3;</code>
      */
+
     @java.lang.Override
     public boolean containsNNAOPIMFFNF(
         int key) {
@@ -733,6 +996,7 @@ public final class HEIHACODPGKOuterClass {
      * <code>map&lt;uint32, bool&gt; NNAOPIMFFNF = 3;</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.Integer, java.lang.Boolean> getNNAOPIMFFNFMap() {
       return internalGetNNAOPIMFFNF().getMap();
     }
@@ -740,6 +1004,7 @@ public final class HEIHACODPGKOuterClass {
      * <code>map&lt;uint32, bool&gt; NNAOPIMFFNF = 3;</code>
      */
     @java.lang.Override
+
     public boolean getNNAOPIMFFNFOrDefault(
         int key,
         boolean defaultValue) {
@@ -752,6 +1017,7 @@ public final class HEIHACODPGKOuterClass {
      * <code>map&lt;uint32, bool&gt; NNAOPIMFFNF = 3;</code>
      */
     @java.lang.Override
+
     public boolean getNNAOPIMFFNFOrThrow(
         int key) {
       
@@ -867,7 +1133,7 @@ public final class HEIHACODPGKOuterClass {
       if (fMMECOPACKC_ != 0) {
         output.writeUInt32(1940, fMMECOPACKC_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -1020,7 +1286,7 @@ public final class HEIHACODPGKOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1940, fMMECOPACKC_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1082,7 +1348,7 @@ public final class HEIHACODPGKOuterClass {
           != other.getALKLDMIEONO()) return false;
       if (!internalGetNNAOPIMFFNF().equals(
           other.internalGetNNAOPIMFFNF())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -1161,7 +1427,7 @@ public final class HEIHACODPGKOuterClass {
         hash = (37 * hash) + NNAOPIMFFNF_FIELD_NUMBER;
         hash = (53 * hash) + internalGetNNAOPIMFFNF().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1304,49 +1570,73 @@ public final class HEIHACODPGKOuterClass {
 
       // Construct using emu.grasscutter.net.proto.HEIHACODPGKOuterClass.HEIHACODPGK.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBLDGMNNDGFJFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         aPFPGJODBFO_ = 0;
+
         bCMHGOOECGK_ = false;
+
         hNODLJLIHGP_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         oGOCIGOAJLB_ = false;
+
         kJPCJKHINJD_ = false;
+
         fMMECOPACKC_ = 0;
+
         oIEGFIJOFGL_ = 0;
+
         if (bLDGMNNDGFJBuilder_ == null) {
           bLDGMNNDGFJ_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          bLDGMNNDGFJ_ = null;
           bLDGMNNDGFJBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000080);
         dJHFHGKEDHP_ = false;
+
         mJIFKEIJGIG_ = false;
+
         oKNOAHLOFEL_ = 0;
+
         unlockStrategyList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         lLLPHCOGFBG_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         aFILOLELHFA_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000010);
         jIIPBLOOFHC_ = 0;
+
         storeRound_ = 0;
+
         nCMAKPOPMOM_ = false;
+
         eFLHJPMLAPF_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000020);
         bNAAILOMLOA_ = false;
-        iDPGDFJJMFF_ = null;
-        if (iDPGDFJJMFFBuilder_ != null) {
-          iDPGDFJJMFFBuilder_.dispose();
+
+        if (iDPGDFJJMFFBuilder_ == null) {
+          iDPGDFJJMFF_ = null;
+        } else {
+          iDPGDFJJMFF_ = null;
           iDPGDFJJMFFBuilder_ = null;
         }
         aLKLDMIEONO_ = false;
+
         internalGetMutableNNAOPIMFFNF().clear();
         return this;
       }
@@ -1374,102 +1664,64 @@ public final class HEIHACODPGKOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.HEIHACODPGKOuterClass.HEIHACODPGK buildPartial() {
         emu.grasscutter.net.proto.HEIHACODPGKOuterClass.HEIHACODPGK result = new emu.grasscutter.net.proto.HEIHACODPGKOuterClass.HEIHACODPGK(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.HEIHACODPGKOuterClass.HEIHACODPGK result) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        int from_bitField0_ = bitField0_;
+        result.aPFPGJODBFO_ = aPFPGJODBFO_;
+        result.bCMHGOOECGK_ = bCMHGOOECGK_;
+        if (((bitField0_ & 0x00000001) != 0)) {
           hNODLJLIHGP_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.hNODLJLIHGP_ = hNODLJLIHGP_;
+        result.oGOCIGOAJLB_ = oGOCIGOAJLB_;
+        result.kJPCJKHINJD_ = kJPCJKHINJD_;
+        result.fMMECOPACKC_ = fMMECOPACKC_;
+        result.oIEGFIJOFGL_ = oIEGFIJOFGL_;
         if (bLDGMNNDGFJBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             bLDGMNNDGFJ_ = java.util.Collections.unmodifiableList(bLDGMNNDGFJ_);
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.bLDGMNNDGFJ_ = bLDGMNNDGFJ_;
         } else {
           result.bLDGMNNDGFJ_ = bLDGMNNDGFJBuilder_.build();
         }
-        if (((bitField0_ & 0x00000800) != 0)) {
+        result.dJHFHGKEDHP_ = dJHFHGKEDHP_;
+        result.mJIFKEIJGIG_ = mJIFKEIJGIG_;
+        result.oKNOAHLOFEL_ = oKNOAHLOFEL_;
+        if (((bitField0_ & 0x00000004) != 0)) {
           unlockStrategyList_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.unlockStrategyList_ = unlockStrategyList_;
-        if (((bitField0_ & 0x00001000) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           lLLPHCOGFBG_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.lLLPHCOGFBG_ = lLLPHCOGFBG_;
-        if (((bitField0_ & 0x00002000) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           aFILOLELHFA_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00002000);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.aFILOLELHFA_ = aFILOLELHFA_;
-        if (((bitField0_ & 0x00020000) != 0)) {
+        result.jIIPBLOOFHC_ = jIIPBLOOFHC_;
+        result.storeRound_ = storeRound_;
+        result.nCMAKPOPMOM_ = nCMAKPOPMOM_;
+        if (((bitField0_ & 0x00000020) != 0)) {
           eFLHJPMLAPF_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00020000);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.eFLHJPMLAPF_ = eFLHJPMLAPF_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.HEIHACODPGKOuterClass.HEIHACODPGK result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.aPFPGJODBFO_ = aPFPGJODBFO_;
+        result.bNAAILOMLOA_ = bNAAILOMLOA_;
+        if (iDPGDFJJMFFBuilder_ == null) {
+          result.iDPGDFJJMFF_ = iDPGDFJJMFF_;
+        } else {
+          result.iDPGDFJJMFF_ = iDPGDFJJMFFBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.bCMHGOOECGK_ = bCMHGOOECGK_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.oGOCIGOAJLB_ = oGOCIGOAJLB_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.kJPCJKHINJD_ = kJPCJKHINJD_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.fMMECOPACKC_ = fMMECOPACKC_;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.oIEGFIJOFGL_ = oIEGFIJOFGL_;
-        }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.dJHFHGKEDHP_ = dJHFHGKEDHP_;
-        }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.mJIFKEIJGIG_ = mJIFKEIJGIG_;
-        }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
-          result.oKNOAHLOFEL_ = oKNOAHLOFEL_;
-        }
-        if (((from_bitField0_ & 0x00004000) != 0)) {
-          result.jIIPBLOOFHC_ = jIIPBLOOFHC_;
-        }
-        if (((from_bitField0_ & 0x00008000) != 0)) {
-          result.storeRound_ = storeRound_;
-        }
-        if (((from_bitField0_ & 0x00010000) != 0)) {
-          result.nCMAKPOPMOM_ = nCMAKPOPMOM_;
-        }
-        if (((from_bitField0_ & 0x00040000) != 0)) {
-          result.bNAAILOMLOA_ = bNAAILOMLOA_;
-        }
-        if (((from_bitField0_ & 0x00080000) != 0)) {
-          result.iDPGDFJJMFF_ = iDPGDFJJMFFBuilder_ == null
-              ? iDPGDFJJMFF_
-              : iDPGDFJJMFFBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00100000) != 0)) {
-          result.aLKLDMIEONO_ = aLKLDMIEONO_;
-        }
-        if (((from_bitField0_ & 0x00200000) != 0)) {
-          result.nNAOPIMFFNF_ = internalGetNNAOPIMFFNF();
-          result.nNAOPIMFFNF_.makeImmutable();
-        }
+        result.aLKLDMIEONO_ = aLKLDMIEONO_;
+        result.nNAOPIMFFNF_ = internalGetNNAOPIMFFNF();
+        result.nNAOPIMFFNF_.makeImmutable();
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -1525,7 +1777,7 @@ public final class HEIHACODPGKOuterClass {
         if (!other.hNODLJLIHGP_.isEmpty()) {
           if (hNODLJLIHGP_.isEmpty()) {
             hNODLJLIHGP_ = other.hNODLJLIHGP_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureHNODLJLIHGPIsMutable();
             hNODLJLIHGP_.addAll(other.hNODLJLIHGP_);
@@ -1548,7 +1800,7 @@ public final class HEIHACODPGKOuterClass {
           if (!other.bLDGMNNDGFJ_.isEmpty()) {
             if (bLDGMNNDGFJ_.isEmpty()) {
               bLDGMNNDGFJ_ = other.bLDGMNNDGFJ_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureBLDGMNNDGFJIsMutable();
               bLDGMNNDGFJ_.addAll(other.bLDGMNNDGFJ_);
@@ -1561,7 +1813,7 @@ public final class HEIHACODPGKOuterClass {
               bLDGMNNDGFJBuilder_.dispose();
               bLDGMNNDGFJBuilder_ = null;
               bLDGMNNDGFJ_ = other.bLDGMNNDGFJ_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000002);
               bLDGMNNDGFJBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getBLDGMNNDGFJFieldBuilder() : null;
@@ -1582,7 +1834,7 @@ public final class HEIHACODPGKOuterClass {
         if (!other.unlockStrategyList_.isEmpty()) {
           if (unlockStrategyList_.isEmpty()) {
             unlockStrategyList_ = other.unlockStrategyList_;
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureUnlockStrategyListIsMutable();
             unlockStrategyList_.addAll(other.unlockStrategyList_);
@@ -1592,7 +1844,7 @@ public final class HEIHACODPGKOuterClass {
         if (!other.lLLPHCOGFBG_.isEmpty()) {
           if (lLLPHCOGFBG_.isEmpty()) {
             lLLPHCOGFBG_ = other.lLLPHCOGFBG_;
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureLLLPHCOGFBGIsMutable();
             lLLPHCOGFBG_.addAll(other.lLLPHCOGFBG_);
@@ -1602,7 +1854,7 @@ public final class HEIHACODPGKOuterClass {
         if (!other.aFILOLELHFA_.isEmpty()) {
           if (aFILOLELHFA_.isEmpty()) {
             aFILOLELHFA_ = other.aFILOLELHFA_;
-            bitField0_ = (bitField0_ & ~0x00002000);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureAFILOLELHFAIsMutable();
             aFILOLELHFA_.addAll(other.aFILOLELHFA_);
@@ -1621,7 +1873,7 @@ public final class HEIHACODPGKOuterClass {
         if (!other.eFLHJPMLAPF_.isEmpty()) {
           if (eFLHJPMLAPF_.isEmpty()) {
             eFLHJPMLAPF_ = other.eFLHJPMLAPF_;
-            bitField0_ = (bitField0_ & ~0x00020000);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureEFLHJPMLAPFIsMutable();
             eFLHJPMLAPF_.addAll(other.eFLHJPMLAPF_);
@@ -1639,8 +1891,7 @@ public final class HEIHACODPGKOuterClass {
         }
         internalGetMutableNNAOPIMFFNF().mergeFrom(
             other.internalGetNNAOPIMFFNF());
-        bitField0_ |= 0x00200000;
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1655,209 +1906,17 @@ public final class HEIHACODPGKOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.HEIHACODPGKOuterClass.HEIHACODPGK parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getIDPGDFJJMFFFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00080000;
-                break;
-              } // case 10
-              case 16: {
-                mJIFKEIJGIG_ = input.readBool();
-                bitField0_ |= 0x00000200;
-                break;
-              } // case 16
-              case 26: {
-                com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Boolean>
-                nNAOPIMFFNF__ = input.readMessage(
-                    NNAOPIMFFNFDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableNNAOPIMFFNF().getMutableMap().put(
-                    nNAOPIMFFNF__.getKey(), nNAOPIMFFNF__.getValue());
-                bitField0_ |= 0x00200000;
-                break;
-              } // case 26
-              case 32: {
-                bCMHGOOECGK_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 32
-              case 40: {
-                int v = input.readUInt32();
-                ensureUnlockStrategyListIsMutable();
-                unlockStrategyList_.addInt(v);
-                break;
-              } // case 40
-              case 42: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureUnlockStrategyListIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  unlockStrategyList_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 42
-              case 48: {
-                bNAAILOMLOA_ = input.readBool();
-                bitField0_ |= 0x00040000;
-                break;
-              } // case 48
-              case 56: {
-                aLKLDMIEONO_ = input.readBool();
-                bitField0_ |= 0x00100000;
-                break;
-              } // case 56
-              case 66: {
-                emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA.parser(),
-                        extensionRegistry);
-                if (bLDGMNNDGFJBuilder_ == null) {
-                  ensureBLDGMNNDGFJIsMutable();
-                  bLDGMNNDGFJ_.add(m);
-                } else {
-                  bLDGMNNDGFJBuilder_.addMessage(m);
-                }
-                break;
-              } // case 66
-              case 72: {
-                int v = input.readUInt32();
-                ensureLLLPHCOGFBGIsMutable();
-                lLLPHCOGFBG_.addInt(v);
-                break;
-              } // case 72
-              case 74: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureLLLPHCOGFBGIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  lLLPHCOGFBG_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 74
-              case 80: {
-                oKNOAHLOFEL_ = input.readUInt32();
-                bitField0_ |= 0x00000400;
-                break;
-              } // case 80
-              case 88: {
-                int v = input.readUInt32();
-                ensureAFILOLELHFAIsMutable();
-                aFILOLELHFA_.addInt(v);
-                break;
-              } // case 88
-              case 90: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureAFILOLELHFAIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  aFILOLELHFA_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 90
-              case 96: {
-                int v = input.readUInt32();
-                ensureEFLHJPMLAPFIsMutable();
-                eFLHJPMLAPF_.addInt(v);
-                break;
-              } // case 96
-              case 98: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureEFLHJPMLAPFIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  eFLHJPMLAPF_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 98
-              case 104: {
-                kJPCJKHINJD_ = input.readBool();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 104
-              case 112: {
-                jIIPBLOOFHC_ = input.readUInt32();
-                bitField0_ |= 0x00004000;
-                break;
-              } // case 112
-              case 120: {
-                storeRound_ = input.readUInt32();
-                bitField0_ |= 0x00008000;
-                break;
-              } // case 120
-              case 880: {
-                aPFPGJODBFO_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 880
-              case 6416: {
-                dJHFHGKEDHP_ = input.readBool();
-                bitField0_ |= 0x00000100;
-                break;
-              } // case 6416
-              case 6984: {
-                oGOCIGOAJLB_ = input.readBool();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 6984
-              case 7904: {
-                oIEGFIJOFGL_ = input.readUInt32();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 7904
-              case 14248: {
-                nCMAKPOPMOM_ = input.readBool();
-                bitField0_ |= 0x00010000;
-                break;
-              } // case 14248
-              case 14616: {
-                int v = input.readUInt32();
-                ensureHNODLJLIHGPIsMutable();
-                hNODLJLIHGP_.addInt(v);
-                break;
-              } // case 14616
-              case 14618: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureHNODLJLIHGPIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  hNODLJLIHGP_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 14618
-              case 15520: {
-                fMMECOPACKC_ = input.readUInt32();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 15520
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.HEIHACODPGKOuterClass.HEIHACODPGK) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1879,7 +1938,6 @@ public final class HEIHACODPGKOuterClass {
       public Builder setAPFPGJODBFO(int value) {
         
         aPFPGJODBFO_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1888,7 +1946,7 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAPFPGJODBFO() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         aPFPGJODBFO_ = 0;
         onChanged();
         return this;
@@ -1911,7 +1969,6 @@ public final class HEIHACODPGKOuterClass {
       public Builder setBCMHGOOECGK(boolean value) {
         
         bCMHGOOECGK_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1920,7 +1977,7 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBCMHGOOECGK() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         bCMHGOOECGK_ = false;
         onChanged();
         return this;
@@ -1928,10 +1985,10 @@ public final class HEIHACODPGKOuterClass {
 
       private com.google.protobuf.Internal.IntList hNODLJLIHGP_ = emptyIntList();
       private void ensureHNODLJLIHGPIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           hNODLJLIHGP_ = mutableCopy(hNODLJLIHGP_);
-          bitField0_ |= 0x00000004;
-        }
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
        * <code>repeated uint32 HNODLJLIHGP = 1827;</code>
@@ -1939,7 +1996,7 @@ public final class HEIHACODPGKOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getHNODLJLIHGPList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
+        return ((bitField0_ & 0x00000001) != 0) ?
                  java.util.Collections.unmodifiableList(hNODLJLIHGP_) : hNODLJLIHGP_;
       }
       /**
@@ -1965,7 +2022,6 @@ public final class HEIHACODPGKOuterClass {
        */
       public Builder setHNODLJLIHGP(
           int index, int value) {
-        
         ensureHNODLJLIHGPIsMutable();
         hNODLJLIHGP_.setInt(index, value);
         onChanged();
@@ -1977,7 +2033,6 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder addHNODLJLIHGP(int value) {
-        
         ensureHNODLJLIHGPIsMutable();
         hNODLJLIHGP_.addInt(value);
         onChanged();
@@ -2002,7 +2057,7 @@ public final class HEIHACODPGKOuterClass {
        */
       public Builder clearHNODLJLIHGP() {
         hNODLJLIHGP_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2024,7 +2079,6 @@ public final class HEIHACODPGKOuterClass {
       public Builder setOGOCIGOAJLB(boolean value) {
         
         oGOCIGOAJLB_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2033,7 +2087,7 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOGOCIGOAJLB() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         oGOCIGOAJLB_ = false;
         onChanged();
         return this;
@@ -2056,7 +2110,6 @@ public final class HEIHACODPGKOuterClass {
       public Builder setKJPCJKHINJD(boolean value) {
         
         kJPCJKHINJD_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2065,7 +2118,7 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearKJPCJKHINJD() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        
         kJPCJKHINJD_ = false;
         onChanged();
         return this;
@@ -2088,7 +2141,6 @@ public final class HEIHACODPGKOuterClass {
       public Builder setFMMECOPACKC(int value) {
         
         fMMECOPACKC_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2097,7 +2149,7 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFMMECOPACKC() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        
         fMMECOPACKC_ = 0;
         onChanged();
         return this;
@@ -2120,7 +2172,6 @@ public final class HEIHACODPGKOuterClass {
       public Builder setOIEGFIJOFGL(int value) {
         
         oIEGFIJOFGL_ = value;
-        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2129,7 +2180,7 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOIEGFIJOFGL() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        
         oIEGFIJOFGL_ = 0;
         onChanged();
         return this;
@@ -2138,9 +2189,9 @@ public final class HEIHACODPGKOuterClass {
       private java.util.List<emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA> bLDGMNNDGFJ_ =
         java.util.Collections.emptyList();
       private void ensureBLDGMNNDGFJIsMutable() {
-        if (!((bitField0_ & 0x00000080) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           bLDGMNNDGFJ_ = new java.util.ArrayList<emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA>(bLDGMNNDGFJ_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -2290,7 +2341,7 @@ public final class HEIHACODPGKOuterClass {
       public Builder clearBLDGMNNDGFJ() {
         if (bLDGMNNDGFJBuilder_ == null) {
           bLDGMNNDGFJ_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           bLDGMNNDGFJBuilder_.clear();
@@ -2367,7 +2418,7 @@ public final class HEIHACODPGKOuterClass {
           bLDGMNNDGFJBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA, emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONA.Builder, emu.grasscutter.net.proto.DDFMGAHMONAOuterClass.DDFMGAHMONAOrBuilder>(
                   bLDGMNNDGFJ_,
-                  ((bitField0_ & 0x00000080) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           bLDGMNNDGFJ_ = null;
@@ -2392,7 +2443,6 @@ public final class HEIHACODPGKOuterClass {
       public Builder setDJHFHGKEDHP(boolean value) {
         
         dJHFHGKEDHP_ = value;
-        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2401,7 +2451,7 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDJHFHGKEDHP() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        
         dJHFHGKEDHP_ = false;
         onChanged();
         return this;
@@ -2424,7 +2474,6 @@ public final class HEIHACODPGKOuterClass {
       public Builder setMJIFKEIJGIG(boolean value) {
         
         mJIFKEIJGIG_ = value;
-        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -2433,7 +2482,7 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMJIFKEIJGIG() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        
         mJIFKEIJGIG_ = false;
         onChanged();
         return this;
@@ -2456,7 +2505,6 @@ public final class HEIHACODPGKOuterClass {
       public Builder setOKNOAHLOFEL(int value) {
         
         oKNOAHLOFEL_ = value;
-        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -2465,7 +2513,7 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOKNOAHLOFEL() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        
         oKNOAHLOFEL_ = 0;
         onChanged();
         return this;
@@ -2473,10 +2521,10 @@ public final class HEIHACODPGKOuterClass {
 
       private com.google.protobuf.Internal.IntList unlockStrategyList_ = emptyIntList();
       private void ensureUnlockStrategyListIsMutable() {
-        if (!((bitField0_ & 0x00000800) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           unlockStrategyList_ = mutableCopy(unlockStrategyList_);
-          bitField0_ |= 0x00000800;
-        }
+          bitField0_ |= 0x00000004;
+         }
       }
       /**
        * <code>repeated uint32 unlock_strategy_list = 5;</code>
@@ -2484,7 +2532,7 @@ public final class HEIHACODPGKOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getUnlockStrategyListList() {
-        return ((bitField0_ & 0x00000800) != 0) ?
+        return ((bitField0_ & 0x00000004) != 0) ?
                  java.util.Collections.unmodifiableList(unlockStrategyList_) : unlockStrategyList_;
       }
       /**
@@ -2510,7 +2558,6 @@ public final class HEIHACODPGKOuterClass {
        */
       public Builder setUnlockStrategyList(
           int index, int value) {
-        
         ensureUnlockStrategyListIsMutable();
         unlockStrategyList_.setInt(index, value);
         onChanged();
@@ -2522,7 +2569,6 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder addUnlockStrategyList(int value) {
-        
         ensureUnlockStrategyListIsMutable();
         unlockStrategyList_.addInt(value);
         onChanged();
@@ -2547,17 +2593,17 @@ public final class HEIHACODPGKOuterClass {
        */
       public Builder clearUnlockStrategyList() {
         unlockStrategyList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
 
       private com.google.protobuf.Internal.IntList lLLPHCOGFBG_ = emptyIntList();
       private void ensureLLLPHCOGFBGIsMutable() {
-        if (!((bitField0_ & 0x00001000) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           lLLPHCOGFBG_ = mutableCopy(lLLPHCOGFBG_);
-          bitField0_ |= 0x00001000;
-        }
+          bitField0_ |= 0x00000008;
+         }
       }
       /**
        * <code>repeated uint32 LLLPHCOGFBG = 9;</code>
@@ -2565,7 +2611,7 @@ public final class HEIHACODPGKOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getLLLPHCOGFBGList() {
-        return ((bitField0_ & 0x00001000) != 0) ?
+        return ((bitField0_ & 0x00000008) != 0) ?
                  java.util.Collections.unmodifiableList(lLLPHCOGFBG_) : lLLPHCOGFBG_;
       }
       /**
@@ -2591,7 +2637,6 @@ public final class HEIHACODPGKOuterClass {
        */
       public Builder setLLLPHCOGFBG(
           int index, int value) {
-        
         ensureLLLPHCOGFBGIsMutable();
         lLLPHCOGFBG_.setInt(index, value);
         onChanged();
@@ -2603,7 +2648,6 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder addLLLPHCOGFBG(int value) {
-        
         ensureLLLPHCOGFBGIsMutable();
         lLLPHCOGFBG_.addInt(value);
         onChanged();
@@ -2628,17 +2672,17 @@ public final class HEIHACODPGKOuterClass {
        */
       public Builder clearLLLPHCOGFBG() {
         lLLPHCOGFBG_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
 
       private com.google.protobuf.Internal.IntList aFILOLELHFA_ = emptyIntList();
       private void ensureAFILOLELHFAIsMutable() {
-        if (!((bitField0_ & 0x00002000) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           aFILOLELHFA_ = mutableCopy(aFILOLELHFA_);
-          bitField0_ |= 0x00002000;
-        }
+          bitField0_ |= 0x00000010;
+         }
       }
       /**
        * <code>repeated uint32 AFILOLELHFA = 11;</code>
@@ -2646,7 +2690,7 @@ public final class HEIHACODPGKOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getAFILOLELHFAList() {
-        return ((bitField0_ & 0x00002000) != 0) ?
+        return ((bitField0_ & 0x00000010) != 0) ?
                  java.util.Collections.unmodifiableList(aFILOLELHFA_) : aFILOLELHFA_;
       }
       /**
@@ -2672,7 +2716,6 @@ public final class HEIHACODPGKOuterClass {
        */
       public Builder setAFILOLELHFA(
           int index, int value) {
-        
         ensureAFILOLELHFAIsMutable();
         aFILOLELHFA_.setInt(index, value);
         onChanged();
@@ -2684,7 +2727,6 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder addAFILOLELHFA(int value) {
-        
         ensureAFILOLELHFAIsMutable();
         aFILOLELHFA_.addInt(value);
         onChanged();
@@ -2709,7 +2751,7 @@ public final class HEIHACODPGKOuterClass {
        */
       public Builder clearAFILOLELHFA() {
         aFILOLELHFA_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -2731,7 +2773,6 @@ public final class HEIHACODPGKOuterClass {
       public Builder setJIIPBLOOFHC(int value) {
         
         jIIPBLOOFHC_ = value;
-        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -2740,7 +2781,7 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearJIIPBLOOFHC() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        
         jIIPBLOOFHC_ = 0;
         onChanged();
         return this;
@@ -2763,7 +2804,6 @@ public final class HEIHACODPGKOuterClass {
       public Builder setStoreRound(int value) {
         
         storeRound_ = value;
-        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -2772,7 +2812,7 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStoreRound() {
-        bitField0_ = (bitField0_ & ~0x00008000);
+        
         storeRound_ = 0;
         onChanged();
         return this;
@@ -2795,7 +2835,6 @@ public final class HEIHACODPGKOuterClass {
       public Builder setNCMAKPOPMOM(boolean value) {
         
         nCMAKPOPMOM_ = value;
-        bitField0_ |= 0x00010000;
         onChanged();
         return this;
       }
@@ -2804,7 +2843,7 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearNCMAKPOPMOM() {
-        bitField0_ = (bitField0_ & ~0x00010000);
+        
         nCMAKPOPMOM_ = false;
         onChanged();
         return this;
@@ -2812,10 +2851,10 @@ public final class HEIHACODPGKOuterClass {
 
       private com.google.protobuf.Internal.IntList eFLHJPMLAPF_ = emptyIntList();
       private void ensureEFLHJPMLAPFIsMutable() {
-        if (!((bitField0_ & 0x00020000) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           eFLHJPMLAPF_ = mutableCopy(eFLHJPMLAPF_);
-          bitField0_ |= 0x00020000;
-        }
+          bitField0_ |= 0x00000020;
+         }
       }
       /**
        * <code>repeated uint32 EFLHJPMLAPF = 12;</code>
@@ -2823,7 +2862,7 @@ public final class HEIHACODPGKOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getEFLHJPMLAPFList() {
-        return ((bitField0_ & 0x00020000) != 0) ?
+        return ((bitField0_ & 0x00000020) != 0) ?
                  java.util.Collections.unmodifiableList(eFLHJPMLAPF_) : eFLHJPMLAPF_;
       }
       /**
@@ -2849,7 +2888,6 @@ public final class HEIHACODPGKOuterClass {
        */
       public Builder setEFLHJPMLAPF(
           int index, int value) {
-        
         ensureEFLHJPMLAPFIsMutable();
         eFLHJPMLAPF_.setInt(index, value);
         onChanged();
@@ -2861,7 +2899,6 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder addEFLHJPMLAPF(int value) {
-        
         ensureEFLHJPMLAPFIsMutable();
         eFLHJPMLAPF_.addInt(value);
         onChanged();
@@ -2886,7 +2923,7 @@ public final class HEIHACODPGKOuterClass {
        */
       public Builder clearEFLHJPMLAPF() {
         eFLHJPMLAPF_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -2908,7 +2945,6 @@ public final class HEIHACODPGKOuterClass {
       public Builder setBNAAILOMLOA(boolean value) {
         
         bNAAILOMLOA_ = value;
-        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -2917,7 +2953,7 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBNAAILOMLOA() {
-        bitField0_ = (bitField0_ & ~0x00040000);
+        
         bNAAILOMLOA_ = false;
         onChanged();
         return this;
@@ -2931,7 +2967,7 @@ public final class HEIHACODPGKOuterClass {
        * @return Whether the iDPGDFJJMFF field is set.
        */
       public boolean hasIDPGDFJJMFF() {
-        return ((bitField0_ & 0x00080000) != 0);
+        return iDPGDFJJMFFBuilder_ != null || iDPGDFJJMFF_ != null;
       }
       /**
        * <code>.JMBJHKIMDFC IDPGDFJJMFF = 1;</code>
@@ -2953,11 +2989,11 @@ public final class HEIHACODPGKOuterClass {
             throw new NullPointerException();
           }
           iDPGDFJJMFF_ = value;
+          onChanged();
         } else {
           iDPGDFJJMFFBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00080000;
-        onChanged();
+
         return this;
       }
       /**
@@ -2967,11 +3003,11 @@ public final class HEIHACODPGKOuterClass {
           emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC.Builder builderForValue) {
         if (iDPGDFJJMFFBuilder_ == null) {
           iDPGDFJJMFF_ = builderForValue.build();
+          onChanged();
         } else {
           iDPGDFJJMFFBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00080000;
-        onChanged();
+
         return this;
       }
       /**
@@ -2979,38 +3015,38 @@ public final class HEIHACODPGKOuterClass {
        */
       public Builder mergeIDPGDFJJMFF(emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC value) {
         if (iDPGDFJJMFFBuilder_ == null) {
-          if (((bitField0_ & 0x00080000) != 0) &&
-            iDPGDFJJMFF_ != null &&
-            iDPGDFJJMFF_ != emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC.getDefaultInstance()) {
-            getIDPGDFJJMFFBuilder().mergeFrom(value);
+          if (iDPGDFJJMFF_ != null) {
+            iDPGDFJJMFF_ =
+              emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC.newBuilder(iDPGDFJJMFF_).mergeFrom(value).buildPartial();
           } else {
             iDPGDFJJMFF_ = value;
           }
+          onChanged();
         } else {
           iDPGDFJJMFFBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00080000;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.JMBJHKIMDFC IDPGDFJJMFF = 1;</code>
        */
       public Builder clearIDPGDFJJMFF() {
-        bitField0_ = (bitField0_ & ~0x00080000);
-        iDPGDFJJMFF_ = null;
-        if (iDPGDFJJMFFBuilder_ != null) {
-          iDPGDFJJMFFBuilder_.dispose();
+        if (iDPGDFJJMFFBuilder_ == null) {
+          iDPGDFJJMFF_ = null;
+          onChanged();
+        } else {
+          iDPGDFJJMFF_ = null;
           iDPGDFJJMFFBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.JMBJHKIMDFC IDPGDFJJMFF = 1;</code>
        */
       public emu.grasscutter.net.proto.JMBJHKIMDFCOuterClass.JMBJHKIMDFC.Builder getIDPGDFJJMFFBuilder() {
-        bitField0_ |= 0x00080000;
+        
         onChanged();
         return getIDPGDFJJMFFFieldBuilder().getBuilder();
       }
@@ -3059,7 +3095,6 @@ public final class HEIHACODPGKOuterClass {
       public Builder setALKLDMIEONO(boolean value) {
         
         aLKLDMIEONO_ = value;
-        bitField0_ |= 0x00100000;
         onChanged();
         return this;
       }
@@ -3068,7 +3103,7 @@ public final class HEIHACODPGKOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearALKLDMIEONO() {
-        bitField0_ = (bitField0_ & ~0x00100000);
+        
         aLKLDMIEONO_ = false;
         onChanged();
         return this;
@@ -3077,7 +3112,7 @@ public final class HEIHACODPGKOuterClass {
       private com.google.protobuf.MapField<
           java.lang.Integer, java.lang.Boolean> nNAOPIMFFNF_;
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Boolean>
-          internalGetNNAOPIMFFNF() {
+      internalGetNNAOPIMFFNF() {
         if (nNAOPIMFFNF_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               NNAOPIMFFNFDefaultEntryHolder.defaultEntry);
@@ -3085,7 +3120,8 @@ public final class HEIHACODPGKOuterClass {
         return nNAOPIMFFNF_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Boolean>
-          internalGetMutableNNAOPIMFFNF() {
+      internalGetMutableNNAOPIMFFNF() {
+        onChanged();;
         if (nNAOPIMFFNF_ == null) {
           nNAOPIMFFNF_ = com.google.protobuf.MapField.newMapField(
               NNAOPIMFFNFDefaultEntryHolder.defaultEntry);
@@ -3093,16 +3129,16 @@ public final class HEIHACODPGKOuterClass {
         if (!nNAOPIMFFNF_.isMutable()) {
           nNAOPIMFFNF_ = nNAOPIMFFNF_.copy();
         }
-        bitField0_ |= 0x00200000;
-        onChanged();
         return nNAOPIMFFNF_;
       }
+
       public int getNNAOPIMFFNFCount() {
         return internalGetNNAOPIMFFNF().getMap().size();
       }
       /**
        * <code>map&lt;uint32, bool&gt; NNAOPIMFFNF = 3;</code>
        */
+
       @java.lang.Override
       public boolean containsNNAOPIMFFNF(
           int key) {
@@ -3121,6 +3157,7 @@ public final class HEIHACODPGKOuterClass {
        * <code>map&lt;uint32, bool&gt; NNAOPIMFFNF = 3;</code>
        */
       @java.lang.Override
+
       public java.util.Map<java.lang.Integer, java.lang.Boolean> getNNAOPIMFFNFMap() {
         return internalGetNNAOPIMFFNF().getMap();
       }
@@ -3128,6 +3165,7 @@ public final class HEIHACODPGKOuterClass {
        * <code>map&lt;uint32, bool&gt; NNAOPIMFFNF = 3;</code>
        */
       @java.lang.Override
+
       public boolean getNNAOPIMFFNFOrDefault(
           int key,
           boolean defaultValue) {
@@ -3140,6 +3178,7 @@ public final class HEIHACODPGKOuterClass {
        * <code>map&lt;uint32, bool&gt; NNAOPIMFFNF = 3;</code>
        */
       @java.lang.Override
+
       public boolean getNNAOPIMFFNFOrThrow(
           int key) {
         
@@ -3150,8 +3189,8 @@ public final class HEIHACODPGKOuterClass {
         }
         return map.get(key);
       }
+
       public Builder clearNNAOPIMFFNF() {
-        bitField0_ = (bitField0_ & ~0x00200000);
         internalGetMutableNNAOPIMFFNF().getMutableMap()
             .clear();
         return this;
@@ -3159,6 +3198,7 @@ public final class HEIHACODPGKOuterClass {
       /**
        * <code>map&lt;uint32, bool&gt; NNAOPIMFFNF = 3;</code>
        */
+
       public Builder removeNNAOPIMFFNF(
           int key) {
         
@@ -3171,8 +3211,7 @@ public final class HEIHACODPGKOuterClass {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, java.lang.Boolean>
-          getMutableNNAOPIMFFNF() {
-        bitField0_ |= 0x00200000;
+      getMutableNNAOPIMFFNF() {
         return internalGetMutableNNAOPIMFFNF().getMutableMap();
       }
       /**
@@ -3185,17 +3224,16 @@ public final class HEIHACODPGKOuterClass {
         
         internalGetMutableNNAOPIMFFNF().getMutableMap()
             .put(key, value);
-        bitField0_ |= 0x00200000;
         return this;
       }
       /**
        * <code>map&lt;uint32, bool&gt; NNAOPIMFFNF = 3;</code>
        */
+
       public Builder putAllNNAOPIMFFNF(
           java.util.Map<java.lang.Integer, java.lang.Boolean> values) {
         internalGetMutableNNAOPIMFFNF().getMutableMap()
             .putAll(values);
-        bitField0_ |= 0x00200000;
         return this;
       }
       @java.lang.Override
@@ -3231,18 +3269,7 @@ public final class HEIHACODPGKOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new HEIHACODPGK(input, extensionRegistry);
       }
     };
 

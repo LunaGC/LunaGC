@@ -19,16 +19,28 @@ public final class QueryPathReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name: FFFLJDJCEPL &gt; OptionType
+     * </pre>
+     *
      * <code>.Vector source_pos = 10;</code>
      * @return Whether the sourcePos field is set.
      */
     boolean hasSourcePos();
     /**
+     * <pre>
+     * Name: FFFLJDJCEPL &gt; OptionType
+     * </pre>
+     *
      * <code>.Vector source_pos = 10;</code>
      * @return The sourcePos.
      */
     emu.grasscutter.net.proto.VectorOuterClass.Vector getSourcePos();
     /**
+     * <pre>
+     * Name: FFFLJDJCEPL &gt; OptionType
+     * </pre>
+     *
      * <code>.Vector source_pos = 10;</code>
      */
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSourcePosOrBuilder();
@@ -293,6 +305,10 @@ public final class QueryPathReqOuterClass {
     public static final int SOURCE_POS_FIELD_NUMBER = 10;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector sourcePos_;
     /**
+     * <pre>
+     * Name: FFFLJDJCEPL &gt; OptionType
+     * </pre>
+     *
      * <code>.Vector source_pos = 10;</code>
      * @return Whether the sourcePos field is set.
      */
@@ -301,6 +317,10 @@ public final class QueryPathReqOuterClass {
       return sourcePos_ != null;
     }
     /**
+     * <pre>
+     * Name: FFFLJDJCEPL &gt; OptionType
+     * </pre>
+     *
      * <code>.Vector source_pos = 10;</code>
      * @return The sourcePos.
      */
@@ -309,6 +329,10 @@ public final class QueryPathReqOuterClass {
       return sourcePos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : sourcePos_;
     }
     /**
+     * <pre>
+     * Name: FFFLJDJCEPL &gt; OptionType
+     * </pre>
+     *
      * <code>.Vector source_pos = 10;</code>
      */
     @java.lang.Override
@@ -996,6 +1020,10 @@ public final class QueryPathReqOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> sourcePosBuilder_;
       /**
+       * <pre>
+       * Name: FFFLJDJCEPL &gt; OptionType
+       * </pre>
+       *
        * <code>.Vector source_pos = 10;</code>
        * @return Whether the sourcePos field is set.
        */
@@ -1003,6 +1031,10 @@ public final class QueryPathReqOuterClass {
         return sourcePosBuilder_ != null || sourcePos_ != null;
       }
       /**
+       * <pre>
+       * Name: FFFLJDJCEPL &gt; OptionType
+       * </pre>
+       *
        * <code>.Vector source_pos = 10;</code>
        * @return The sourcePos.
        */
@@ -1014,6 +1046,10 @@ public final class QueryPathReqOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name: FFFLJDJCEPL &gt; OptionType
+       * </pre>
+       *
        * <code>.Vector source_pos = 10;</code>
        */
       public Builder setSourcePos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
@@ -1030,6 +1066,10 @@ public final class QueryPathReqOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name: FFFLJDJCEPL &gt; OptionType
+       * </pre>
+       *
        * <code>.Vector source_pos = 10;</code>
        */
       public Builder setSourcePos(
@@ -1044,6 +1084,10 @@ public final class QueryPathReqOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name: FFFLJDJCEPL &gt; OptionType
+       * </pre>
+       *
        * <code>.Vector source_pos = 10;</code>
        */
       public Builder mergeSourcePos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
@@ -1062,6 +1106,10 @@ public final class QueryPathReqOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name: FFFLJDJCEPL &gt; OptionType
+       * </pre>
+       *
        * <code>.Vector source_pos = 10;</code>
        */
       public Builder clearSourcePos() {
@@ -1076,6 +1124,10 @@ public final class QueryPathReqOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name: FFFLJDJCEPL &gt; OptionType
+       * </pre>
+       *
        * <code>.Vector source_pos = 10;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getSourcePosBuilder() {
@@ -1084,6 +1136,10 @@ public final class QueryPathReqOuterClass {
         return getSourcePosFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Name: FFFLJDJCEPL &gt; OptionType
+       * </pre>
+       *
        * <code>.Vector source_pos = 10;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSourcePosOrBuilder() {
@@ -1095,6 +1151,10 @@ public final class QueryPathReqOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name: FFFLJDJCEPL &gt; OptionType
+       * </pre>
+       *
        * <code>.Vector source_pos = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

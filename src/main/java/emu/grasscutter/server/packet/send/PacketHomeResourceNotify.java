@@ -26,8 +26,8 @@ public class PacketHomeResourceNotify extends BasePacket {
                 .build();
 
         var notify = HomeResourceNotifyOuterClass.HomeResourceNotify.newBuilder()
-                .setFetterExp(fetter)
-                .setHomeCoin(coin)
+            .setFetterExp(fetter)
+            .setHomeCoin(coin)
                 .build();
 
         this.setData(notify);

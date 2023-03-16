@@ -152,6 +152,132 @@ public final class MCJJAJKEOAMOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private MCJJAJKEOAM(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                aDGFILCKAMB_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              aDGFILCKAMB_.add(rawValue);
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                  aDGFILCKAMB_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000004;
+                }
+                aDGFILCKAMB_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                levelList_ = new java.util.ArrayList<emu.grasscutter.net.proto.NPMJFJMFAPPOuterClass.NPMJFJMFAPP>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              levelList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.NPMJFJMFAPPOuterClass.NPMJFJMFAPP.parser(), extensionRegistry));
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                aONMOAFKMLK_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              aONMOAFKMLK_.add(rawValue);
+              break;
+            }
+            case 66: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  aONMOAFKMLK_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                aONMOAFKMLK_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            case 88: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                gONHBOGJBPL_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              gONHBOGJBPL_.addInt(input.readUInt32());
+              break;
+            }
+            case 90: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+                gONHBOGJBPL_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                gONHBOGJBPL_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          aDGFILCKAMB_ = java.util.Collections.unmodifiableList(aDGFILCKAMB_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          levelList_ = java.util.Collections.unmodifiableList(levelList_);
+        }
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          aONMOAFKMLK_ = java.util.Collections.unmodifiableList(aONMOAFKMLK_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          gONHBOGJBPL_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.MCJJAJKEOAMOuterClass.internal_static_MCJJAJKEOAM_descriptor;
@@ -166,14 +292,14 @@ public final class MCJJAJKEOAMOuterClass {
     }
 
     public static final int AONMOAFKMLK_FIELD_NUMBER = 8;
-    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> aONMOAFKMLK_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType> aONMOAFKMLK_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType>() {
               public emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType convert(java.lang.Integer from) {
-                emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType result = emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType.forNumber(from);
+                @SuppressWarnings("deprecation")
+                emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType result = emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType.valueOf(from);
                 return result == null ? emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType.UNRECOGNIZED : result;
               }
             };
@@ -224,7 +350,6 @@ public final class MCJJAJKEOAMOuterClass {
     private int aONMOAFKMLKMemoizedSerializedSize;
 
     public static final int LEVEL_LIST_FIELD_NUMBER = 6;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.NPMJFJMFAPPOuterClass.NPMJFJMFAPP> levelList_;
     /**
      * <code>repeated .NPMJFJMFAPP level_list = 6;</code>
@@ -265,14 +390,14 @@ public final class MCJJAJKEOAMOuterClass {
     }
 
     public static final int ADGFILCKAMB_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> aDGFILCKAMB_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType> aDGFILCKAMB_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType>() {
               public emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType convert(java.lang.Integer from) {
-                emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType result = emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType.forNumber(from);
+                @SuppressWarnings("deprecation")
+                emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType result = emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType.valueOf(from);
                 return result == null ? emu.grasscutter.net.proto.ClientInputTypeOuterClass.ClientInputType.UNRECOGNIZED : result;
               }
             };
@@ -323,7 +448,6 @@ public final class MCJJAJKEOAMOuterClass {
     private int aDGFILCKAMBMemoizedSerializedSize;
 
     public static final int GONHBOGJBPL_FIELD_NUMBER = 11;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList gONHBOGJBPL_;
     /**
      * <code>repeated uint32 GONHBOGJBPL = 11;</code>
@@ -390,7 +514,7 @@ public final class MCJJAJKEOAMOuterClass {
       for (int i = 0; i < gONHBOGJBPL_.size(); i++) {
         output.writeUInt32NoTag(gONHBOGJBPL_.getInt(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -441,7 +565,7 @@ public final class MCJJAJKEOAMOuterClass {
         }
         gONHBOGJBPLMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -462,7 +586,7 @@ public final class MCJJAJKEOAMOuterClass {
       if (!aDGFILCKAMB_.equals(other.aDGFILCKAMB_)) return false;
       if (!getGONHBOGJBPLList()
           .equals(other.getGONHBOGJBPLList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -489,7 +613,7 @@ public final class MCJJAJKEOAMOuterClass {
         hash = (37 * hash) + GONHBOGJBPL_FIELD_NUMBER;
         hash = (53 * hash) + getGONHBOGJBPLList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -610,30 +734,35 @@ public final class MCJJAJKEOAMOuterClass {
 
       // Construct using emu.grasscutter.net.proto.MCJJAJKEOAMOuterClass.MCJJAJKEOAM.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLevelListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         aONMOAFKMLK_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         if (levelListBuilder_ == null) {
           levelList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          levelList_ = null;
           levelListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         aDGFILCKAMB_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
         gONHBOGJBPL_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -660,13 +789,7 @@ public final class MCJJAJKEOAMOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.MCJJAJKEOAMOuterClass.MCJJAJKEOAM buildPartial() {
         emu.grasscutter.net.proto.MCJJAJKEOAMOuterClass.MCJJAJKEOAM result = new emu.grasscutter.net.proto.MCJJAJKEOAMOuterClass.MCJJAJKEOAM(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.MCJJAJKEOAMOuterClass.MCJJAJKEOAM result) {
+        int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
           aONMOAFKMLK_ = java.util.Collections.unmodifiableList(aONMOAFKMLK_);
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -691,10 +814,8 @@ public final class MCJJAJKEOAMOuterClass {
           bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.gONHBOGJBPL_ = gONHBOGJBPL_;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.MCJJAJKEOAMOuterClass.MCJJAJKEOAM result) {
-        int from_bitField0_ = bitField0_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -797,7 +918,7 @@ public final class MCJJAJKEOAMOuterClass {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -812,93 +933,17 @@ public final class MCJJAJKEOAMOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.MCJJAJKEOAMOuterClass.MCJJAJKEOAM parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                int tmpRaw = input.readEnum();
-                ensureADGFILCKAMBIsMutable();
-                aDGFILCKAMB_.add(tmpRaw);
-                break;
-              } // case 8
-              case 10: {
-                int length = input.readRawVarint32();
-                int oldLimit = input.pushLimit(length);
-                while(input.getBytesUntilLimit() > 0) {
-                  int tmpRaw = input.readEnum();
-                  ensureADGFILCKAMBIsMutable();
-                  aDGFILCKAMB_.add(tmpRaw);
-                }
-                input.popLimit(oldLimit);
-                break;
-              } // case 10
-              case 50: {
-                emu.grasscutter.net.proto.NPMJFJMFAPPOuterClass.NPMJFJMFAPP m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.NPMJFJMFAPPOuterClass.NPMJFJMFAPP.parser(),
-                        extensionRegistry);
-                if (levelListBuilder_ == null) {
-                  ensureLevelListIsMutable();
-                  levelList_.add(m);
-                } else {
-                  levelListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 50
-              case 64: {
-                int tmpRaw = input.readEnum();
-                ensureAONMOAFKMLKIsMutable();
-                aONMOAFKMLK_.add(tmpRaw);
-                break;
-              } // case 64
-              case 66: {
-                int length = input.readRawVarint32();
-                int oldLimit = input.pushLimit(length);
-                while(input.getBytesUntilLimit() > 0) {
-                  int tmpRaw = input.readEnum();
-                  ensureAONMOAFKMLKIsMutable();
-                  aONMOAFKMLK_.add(tmpRaw);
-                }
-                input.popLimit(oldLimit);
-                break;
-              } // case 66
-              case 88: {
-                int v = input.readUInt32();
-                ensureGONHBOGJBPLIsMutable();
-                gONHBOGJBPL_.addInt(v);
-                break;
-              } // case 88
-              case 90: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureGONHBOGJBPLIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  gONHBOGJBPL_.addInt(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 90
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.MCJJAJKEOAMOuterClass.MCJJAJKEOAM) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1006,8 +1051,8 @@ public final class MCJJAJKEOAMOuterClass {
       }
       /**
        * <code>repeated .ClientInputType AONMOAFKMLK = 8;</code>
-       * @param index The index to set the value at.
-       * @param value The enum numeric value on the wire for aONMOAFKMLK to set.
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of aONMOAFKMLK at the given index.
        * @return This builder for chaining.
        */
       public Builder setAONMOAFKMLKValue(
@@ -1386,8 +1431,8 @@ public final class MCJJAJKEOAMOuterClass {
       }
       /**
        * <code>repeated .ClientInputType ADGFILCKAMB = 1;</code>
-       * @param index The index to set the value at.
-       * @param value The enum numeric value on the wire for aDGFILCKAMB to set.
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of aDGFILCKAMB at the given index.
        * @return This builder for chaining.
        */
       public Builder setADGFILCKAMBValue(
@@ -1428,7 +1473,7 @@ public final class MCJJAJKEOAMOuterClass {
         if (!((bitField0_ & 0x00000008) != 0)) {
           gONHBOGJBPL_ = mutableCopy(gONHBOGJBPL_);
           bitField0_ |= 0x00000008;
-        }
+         }
       }
       /**
        * <code>repeated uint32 GONHBOGJBPL = 11;</code>
@@ -1462,7 +1507,6 @@ public final class MCJJAJKEOAMOuterClass {
        */
       public Builder setGONHBOGJBPL(
           int index, int value) {
-        
         ensureGONHBOGJBPLIsMutable();
         gONHBOGJBPL_.setInt(index, value);
         onChanged();
@@ -1474,7 +1518,6 @@ public final class MCJJAJKEOAMOuterClass {
        * @return This builder for chaining.
        */
       public Builder addGONHBOGJBPL(int value) {
-        
         ensureGONHBOGJBPLIsMutable();
         gONHBOGJBPL_.addInt(value);
         onChanged();
@@ -1536,18 +1579,7 @@ public final class MCJJAJKEOAMOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new MCJJAJKEOAM(input, extensionRegistry);
       }
     };
 

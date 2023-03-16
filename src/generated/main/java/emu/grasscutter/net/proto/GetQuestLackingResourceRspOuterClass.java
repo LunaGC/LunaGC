@@ -19,37 +19,37 @@ public final class GetQuestLackingResourceRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
      */
-    int getNCPOOIMAKMOCount();
+    int getLackedNpcMapCount();
     /**
-     * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
      */
-    boolean containsNCPOOIMAKMO(
+    boolean containsLackedNpcMap(
         int key);
     /**
-     * Use {@link #getNCPOOIMAKMOMap()} instead.
+     * Use {@link #getLackedNpcMapMap()} instead.
      */
     @java.lang.Deprecated
     java.util.Map<java.lang.Integer, java.lang.Integer>
-    getNCPOOIMAKMO();
+    getLackedNpcMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Integer>
-    getNCPOOIMAKMOMap();
+    getLackedNpcMapMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
      */
 
-    int getNCPOOIMAKMOOrDefault(
+    int getLackedNpcMapOrDefault(
         int key,
         int defaultValue);
     /**
-     * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
      */
 
-    int getNCPOOIMAKMOOrThrow(
+    int getLackedNpcMapOrThrow(
         int key);
 
     /**
@@ -82,37 +82,37 @@ public final class GetQuestLackingResourceRspOuterClass {
     int getRetcode();
 
     /**
-     * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
      */
-    int getOCDJABANKIHCount();
+    int getLackedPlaceMapCount();
     /**
-     * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
      */
-    boolean containsOCDJABANKIH(
+    boolean containsLackedPlaceMap(
         int key);
     /**
-     * Use {@link #getOCDJABANKIHMap()} instead.
+     * Use {@link #getLackedPlaceMapMap()} instead.
      */
     @java.lang.Deprecated
     java.util.Map<java.lang.Integer, java.lang.Integer>
-    getOCDJABANKIH();
+    getLackedPlaceMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Integer>
-    getOCDJABANKIHMap();
+    getLackedPlaceMapMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
      */
 
-    int getOCDJABANKIHOrDefault(
+    int getLackedPlaceMapOrDefault(
         int key,
         int defaultValue);
     /**
-     * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
      */
 
-    int getOCDJABANKIHOrThrow(
+    int getLackedPlaceMapOrThrow(
         int key);
 
     /**
@@ -208,28 +208,28 @@ public final class GetQuestLackingResourceRspOuterClass {
             }
             case 42: {
               if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                oCDJABANKIH_ = com.google.protobuf.MapField.newMapField(
-                    OCDJABANKIHDefaultEntryHolder.defaultEntry);
+                lackedPlaceMap_ = com.google.protobuf.MapField.newMapField(
+                    LackedPlaceMapDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000004;
               }
               com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              oCDJABANKIH__ = input.readMessage(
-                  OCDJABANKIHDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              oCDJABANKIH_.getMutableMap().put(
-                  oCDJABANKIH__.getKey(), oCDJABANKIH__.getValue());
+              lackedPlaceMap__ = input.readMessage(
+                  LackedPlaceMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              lackedPlaceMap_.getMutableMap().put(
+                  lackedPlaceMap__.getKey(), lackedPlaceMap__.getValue());
               break;
             }
             case 50: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                nCPOOIMAKMO_ = com.google.protobuf.MapField.newMapField(
-                    NCPOOIMAKMODefaultEntryHolder.defaultEntry);
+                lackedNpcMap_ = com.google.protobuf.MapField.newMapField(
+                    LackedNpcMapDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              nCPOOIMAKMO__ = input.readMessage(
-                  NCPOOIMAKMODefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              nCPOOIMAKMO_.getMutableMap().put(
-                  nCPOOIMAKMO__.getKey(), nCPOOIMAKMO__.getValue());
+              lackedNpcMap__ = input.readMessage(
+                  LackedNpcMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              lackedNpcMap_.getMutableMap().put(
+                  lackedNpcMap__.getKey(), lackedNpcMap__.getValue());
               break;
             }
             case 64: {
@@ -299,9 +299,9 @@ public final class GetQuestLackingResourceRspOuterClass {
         int number) {
       switch (number) {
         case 6:
-          return internalGetNCPOOIMAKMO();
+          return internalGetLackedNpcMap();
         case 5:
-          return internalGetOCDJABANKIH();
+          return internalGetLackedPlaceMap();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -315,81 +315,81 @@ public final class GetQuestLackingResourceRspOuterClass {
               emu.grasscutter.net.proto.GetQuestLackingResourceRspOuterClass.GetQuestLackingResourceRsp.class, emu.grasscutter.net.proto.GetQuestLackingResourceRspOuterClass.GetQuestLackingResourceRsp.Builder.class);
     }
 
-    public static final int NCPOOIMAKMO_FIELD_NUMBER = 6;
-    private static final class NCPOOIMAKMODefaultEntryHolder {
+    public static final int LACKED_NPC_MAP_FIELD_NUMBER = 6;
+    private static final class LackedNpcMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.Integer, java.lang.Integer>newDefaultInstance(
-                  emu.grasscutter.net.proto.GetQuestLackingResourceRspOuterClass.internal_static_GetQuestLackingResourceRsp_NCPOOIMAKMOEntry_descriptor, 
+                  emu.grasscutter.net.proto.GetQuestLackingResourceRspOuterClass.internal_static_GetQuestLackingResourceRsp_LackedNpcMapEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0,
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0);
     }
     private com.google.protobuf.MapField<
-        java.lang.Integer, java.lang.Integer> nCPOOIMAKMO_;
+        java.lang.Integer, java.lang.Integer> lackedNpcMap_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-    internalGetNCPOOIMAKMO() {
-      if (nCPOOIMAKMO_ == null) {
+    internalGetLackedNpcMap() {
+      if (lackedNpcMap_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
-            NCPOOIMAKMODefaultEntryHolder.defaultEntry);
+            LackedNpcMapDefaultEntryHolder.defaultEntry);
       }
-      return nCPOOIMAKMO_;
+      return lackedNpcMap_;
     }
 
-    public int getNCPOOIMAKMOCount() {
-      return internalGetNCPOOIMAKMO().getMap().size();
+    public int getLackedNpcMapCount() {
+      return internalGetLackedNpcMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
      */
 
     @java.lang.Override
-    public boolean containsNCPOOIMAKMO(
+    public boolean containsLackedNpcMap(
         int key) {
       
-      return internalGetNCPOOIMAKMO().getMap().containsKey(key);
+      return internalGetLackedNpcMap().getMap().containsKey(key);
     }
     /**
-     * Use {@link #getNCPOOIMAKMOMap()} instead.
+     * Use {@link #getLackedNpcMapMap()} instead.
      */
     @java.lang.Override
     @java.lang.Deprecated
-    public java.util.Map<java.lang.Integer, java.lang.Integer> getNCPOOIMAKMO() {
-      return getNCPOOIMAKMOMap();
+    public java.util.Map<java.lang.Integer, java.lang.Integer> getLackedNpcMap() {
+      return getLackedNpcMapMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
      */
     @java.lang.Override
 
-    public java.util.Map<java.lang.Integer, java.lang.Integer> getNCPOOIMAKMOMap() {
-      return internalGetNCPOOIMAKMO().getMap();
+    public java.util.Map<java.lang.Integer, java.lang.Integer> getLackedNpcMapMap() {
+      return internalGetLackedNpcMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
      */
     @java.lang.Override
 
-    public int getNCPOOIMAKMOOrDefault(
+    public int getLackedNpcMapOrDefault(
         int key,
         int defaultValue) {
       
       java.util.Map<java.lang.Integer, java.lang.Integer> map =
-          internalGetNCPOOIMAKMO().getMap();
+          internalGetLackedNpcMap().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
      */
     @java.lang.Override
 
-    public int getNCPOOIMAKMOOrThrow(
+    public int getLackedNpcMapOrThrow(
         int key) {
       
       java.util.Map<java.lang.Integer, java.lang.Integer> map =
-          internalGetNCPOOIMAKMO().getMap();
+          internalGetLackedNpcMap().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
@@ -446,81 +446,81 @@ public final class GetQuestLackingResourceRspOuterClass {
       return retcode_;
     }
 
-    public static final int OCDJABANKIH_FIELD_NUMBER = 5;
-    private static final class OCDJABANKIHDefaultEntryHolder {
+    public static final int LACKED_PLACE_MAP_FIELD_NUMBER = 5;
+    private static final class LackedPlaceMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.Integer, java.lang.Integer>newDefaultInstance(
-                  emu.grasscutter.net.proto.GetQuestLackingResourceRspOuterClass.internal_static_GetQuestLackingResourceRsp_OCDJABANKIHEntry_descriptor, 
+                  emu.grasscutter.net.proto.GetQuestLackingResourceRspOuterClass.internal_static_GetQuestLackingResourceRsp_LackedPlaceMapEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0,
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0);
     }
     private com.google.protobuf.MapField<
-        java.lang.Integer, java.lang.Integer> oCDJABANKIH_;
+        java.lang.Integer, java.lang.Integer> lackedPlaceMap_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-    internalGetOCDJABANKIH() {
-      if (oCDJABANKIH_ == null) {
+    internalGetLackedPlaceMap() {
+      if (lackedPlaceMap_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
-            OCDJABANKIHDefaultEntryHolder.defaultEntry);
+            LackedPlaceMapDefaultEntryHolder.defaultEntry);
       }
-      return oCDJABANKIH_;
+      return lackedPlaceMap_;
     }
 
-    public int getOCDJABANKIHCount() {
-      return internalGetOCDJABANKIH().getMap().size();
+    public int getLackedPlaceMapCount() {
+      return internalGetLackedPlaceMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
      */
 
     @java.lang.Override
-    public boolean containsOCDJABANKIH(
+    public boolean containsLackedPlaceMap(
         int key) {
       
-      return internalGetOCDJABANKIH().getMap().containsKey(key);
+      return internalGetLackedPlaceMap().getMap().containsKey(key);
     }
     /**
-     * Use {@link #getOCDJABANKIHMap()} instead.
+     * Use {@link #getLackedPlaceMapMap()} instead.
      */
     @java.lang.Override
     @java.lang.Deprecated
-    public java.util.Map<java.lang.Integer, java.lang.Integer> getOCDJABANKIH() {
-      return getOCDJABANKIHMap();
+    public java.util.Map<java.lang.Integer, java.lang.Integer> getLackedPlaceMap() {
+      return getLackedPlaceMapMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
      */
     @java.lang.Override
 
-    public java.util.Map<java.lang.Integer, java.lang.Integer> getOCDJABANKIHMap() {
-      return internalGetOCDJABANKIH().getMap();
+    public java.util.Map<java.lang.Integer, java.lang.Integer> getLackedPlaceMapMap() {
+      return internalGetLackedPlaceMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
      */
     @java.lang.Override
 
-    public int getOCDJABANKIHOrDefault(
+    public int getLackedPlaceMapOrDefault(
         int key,
         int defaultValue) {
       
       java.util.Map<java.lang.Integer, java.lang.Integer> map =
-          internalGetOCDJABANKIH().getMap();
+          internalGetLackedPlaceMap().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
      */
     @java.lang.Override
 
-    public int getOCDJABANKIHOrThrow(
+    public int getLackedPlaceMapOrThrow(
         int key) {
       
       java.util.Map<java.lang.Integer, java.lang.Integer> map =
-          internalGetOCDJABANKIH().getMap();
+          internalGetLackedPlaceMap().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
@@ -580,14 +580,14 @@ public final class GetQuestLackingResourceRspOuterClass {
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
-          internalGetOCDJABANKIH(),
-          OCDJABANKIHDefaultEntryHolder.defaultEntry,
+          internalGetLackedPlaceMap(),
+          LackedPlaceMapDefaultEntryHolder.defaultEntry,
           5);
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
-          internalGetNCPOOIMAKMO(),
-          NCPOOIMAKMODefaultEntryHolder.defaultEntry,
+          internalGetLackedNpcMap(),
+          LackedNpcMapDefaultEntryHolder.defaultEntry,
           6);
       if (questId_ != 0) {
         output.writeUInt32(8, questId_);
@@ -626,24 +626,24 @@ public final class GetQuestLackingResourceRspOuterClass {
         dMLOPDKLBMFMemoizedSerializedSize = dataSize;
       }
       for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
-           : internalGetOCDJABANKIH().getMap().entrySet()) {
+           : internalGetLackedPlaceMap().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-        oCDJABANKIH__ = OCDJABANKIHDefaultEntryHolder.defaultEntry.newBuilderForType()
+        lackedPlaceMap__ = LackedPlaceMapDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(5, oCDJABANKIH__);
+            .computeMessageSize(5, lackedPlaceMap__);
       }
       for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
-           : internalGetNCPOOIMAKMO().getMap().entrySet()) {
+           : internalGetLackedNpcMap().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-        nCPOOIMAKMO__ = NCPOOIMAKMODefaultEntryHolder.defaultEntry.newBuilderForType()
+        lackedNpcMap__ = LackedNpcMapDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(6, nCPOOIMAKMO__);
+            .computeMessageSize(6, lackedNpcMap__);
       }
       if (questId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -682,16 +682,16 @@ public final class GetQuestLackingResourceRspOuterClass {
       }
       emu.grasscutter.net.proto.GetQuestLackingResourceRspOuterClass.GetQuestLackingResourceRsp other = (emu.grasscutter.net.proto.GetQuestLackingResourceRspOuterClass.GetQuestLackingResourceRsp) obj;
 
-      if (!internalGetNCPOOIMAKMO().equals(
-          other.internalGetNCPOOIMAKMO())) return false;
+      if (!internalGetLackedNpcMap().equals(
+          other.internalGetLackedNpcMap())) return false;
       if (!getKPIKFCDPMMMList()
           .equals(other.getKPIKFCDPMMMList())) return false;
       if (getQuestId()
           != other.getQuestId()) return false;
       if (getRetcode()
           != other.getRetcode()) return false;
-      if (!internalGetOCDJABANKIH().equals(
-          other.internalGetOCDJABANKIH())) return false;
+      if (!internalGetLackedPlaceMap().equals(
+          other.internalGetLackedPlaceMap())) return false;
       if (!getDMLOPDKLBMFList()
           .equals(other.getDMLOPDKLBMFList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -705,9 +705,9 @@ public final class GetQuestLackingResourceRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (!internalGetNCPOOIMAKMO().getMap().isEmpty()) {
-        hash = (37 * hash) + NCPOOIMAKMO_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetNCPOOIMAKMO().hashCode();
+      if (!internalGetLackedNpcMap().getMap().isEmpty()) {
+        hash = (37 * hash) + LACKED_NPC_MAP_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLackedNpcMap().hashCode();
       }
       if (getKPIKFCDPMMMCount() > 0) {
         hash = (37 * hash) + KPIKFCDPMMM_FIELD_NUMBER;
@@ -717,9 +717,9 @@ public final class GetQuestLackingResourceRspOuterClass {
       hash = (53 * hash) + getQuestId();
       hash = (37 * hash) + RETCODE_FIELD_NUMBER;
       hash = (53 * hash) + getRetcode();
-      if (!internalGetOCDJABANKIH().getMap().isEmpty()) {
-        hash = (37 * hash) + OCDJABANKIH_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetOCDJABANKIH().hashCode();
+      if (!internalGetLackedPlaceMap().getMap().isEmpty()) {
+        hash = (37 * hash) + LACKED_PLACE_MAP_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLackedPlaceMap().hashCode();
       }
       if (getDMLOPDKLBMFCount() > 0) {
         hash = (37 * hash) + DMLOPDKLBMF_FIELD_NUMBER;
@@ -842,9 +842,9 @@ public final class GetQuestLackingResourceRspOuterClass {
           int number) {
         switch (number) {
           case 6:
-            return internalGetNCPOOIMAKMO();
+            return internalGetLackedNpcMap();
           case 5:
-            return internalGetOCDJABANKIH();
+            return internalGetLackedPlaceMap();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -855,9 +855,9 @@ public final class GetQuestLackingResourceRspOuterClass {
           int number) {
         switch (number) {
           case 6:
-            return internalGetMutableNCPOOIMAKMO();
+            return internalGetMutableLackedNpcMap();
           case 5:
-            return internalGetMutableOCDJABANKIH();
+            return internalGetMutableLackedPlaceMap();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -889,14 +889,14 @@ public final class GetQuestLackingResourceRspOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        internalGetMutableNCPOOIMAKMO().clear();
+        internalGetMutableLackedNpcMap().clear();
         kPIKFCDPMMM_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
         questId_ = 0;
 
         retcode_ = 0;
 
-        internalGetMutableOCDJABANKIH().clear();
+        internalGetMutableLackedPlaceMap().clear();
         dMLOPDKLBMF_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
@@ -926,8 +926,8 @@ public final class GetQuestLackingResourceRspOuterClass {
       public emu.grasscutter.net.proto.GetQuestLackingResourceRspOuterClass.GetQuestLackingResourceRsp buildPartial() {
         emu.grasscutter.net.proto.GetQuestLackingResourceRspOuterClass.GetQuestLackingResourceRsp result = new emu.grasscutter.net.proto.GetQuestLackingResourceRspOuterClass.GetQuestLackingResourceRsp(this);
         int from_bitField0_ = bitField0_;
-        result.nCPOOIMAKMO_ = internalGetNCPOOIMAKMO();
-        result.nCPOOIMAKMO_.makeImmutable();
+        result.lackedNpcMap_ = internalGetLackedNpcMap();
+        result.lackedNpcMap_.makeImmutable();
         if (((bitField0_ & 0x00000002) != 0)) {
           kPIKFCDPMMM_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
@@ -935,8 +935,8 @@ public final class GetQuestLackingResourceRspOuterClass {
         result.kPIKFCDPMMM_ = kPIKFCDPMMM_;
         result.questId_ = questId_;
         result.retcode_ = retcode_;
-        result.oCDJABANKIH_ = internalGetOCDJABANKIH();
-        result.oCDJABANKIH_.makeImmutable();
+        result.lackedPlaceMap_ = internalGetLackedPlaceMap();
+        result.lackedPlaceMap_.makeImmutable();
         if (((bitField0_ & 0x00000008) != 0)) {
           dMLOPDKLBMF_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000008);
@@ -990,8 +990,8 @@ public final class GetQuestLackingResourceRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.GetQuestLackingResourceRspOuterClass.GetQuestLackingResourceRsp other) {
         if (other == emu.grasscutter.net.proto.GetQuestLackingResourceRspOuterClass.GetQuestLackingResourceRsp.getDefaultInstance()) return this;
-        internalGetMutableNCPOOIMAKMO().mergeFrom(
-            other.internalGetNCPOOIMAKMO());
+        internalGetMutableLackedNpcMap().mergeFrom(
+            other.internalGetLackedNpcMap());
         if (!other.kPIKFCDPMMM_.isEmpty()) {
           if (kPIKFCDPMMM_.isEmpty()) {
             kPIKFCDPMMM_ = other.kPIKFCDPMMM_;
@@ -1008,8 +1008,8 @@ public final class GetQuestLackingResourceRspOuterClass {
         if (other.getRetcode() != 0) {
           setRetcode(other.getRetcode());
         }
-        internalGetMutableOCDJABANKIH().mergeFrom(
-            other.internalGetOCDJABANKIH());
+        internalGetMutableLackedPlaceMap().mergeFrom(
+            other.internalGetLackedPlaceMap());
         if (!other.dMLOPDKLBMF_.isEmpty()) {
           if (dMLOPDKLBMF_.isEmpty()) {
             dMLOPDKLBMF_ = other.dMLOPDKLBMF_;
@@ -1051,99 +1051,99 @@ public final class GetQuestLackingResourceRspOuterClass {
       private int bitField0_;
 
       private com.google.protobuf.MapField<
-          java.lang.Integer, java.lang.Integer> nCPOOIMAKMO_;
+          java.lang.Integer, java.lang.Integer> lackedNpcMap_;
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetNCPOOIMAKMO() {
-        if (nCPOOIMAKMO_ == null) {
+      internalGetLackedNpcMap() {
+        if (lackedNpcMap_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
-              NCPOOIMAKMODefaultEntryHolder.defaultEntry);
+              LackedNpcMapDefaultEntryHolder.defaultEntry);
         }
-        return nCPOOIMAKMO_;
+        return lackedNpcMap_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetMutableNCPOOIMAKMO() {
+      internalGetMutableLackedNpcMap() {
         onChanged();;
-        if (nCPOOIMAKMO_ == null) {
-          nCPOOIMAKMO_ = com.google.protobuf.MapField.newMapField(
-              NCPOOIMAKMODefaultEntryHolder.defaultEntry);
+        if (lackedNpcMap_ == null) {
+          lackedNpcMap_ = com.google.protobuf.MapField.newMapField(
+              LackedNpcMapDefaultEntryHolder.defaultEntry);
         }
-        if (!nCPOOIMAKMO_.isMutable()) {
-          nCPOOIMAKMO_ = nCPOOIMAKMO_.copy();
+        if (!lackedNpcMap_.isMutable()) {
+          lackedNpcMap_ = lackedNpcMap_.copy();
         }
-        return nCPOOIMAKMO_;
+        return lackedNpcMap_;
       }
 
-      public int getNCPOOIMAKMOCount() {
-        return internalGetNCPOOIMAKMO().getMap().size();
+      public int getLackedNpcMapCount() {
+        return internalGetLackedNpcMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
        */
 
       @java.lang.Override
-      public boolean containsNCPOOIMAKMO(
+      public boolean containsLackedNpcMap(
           int key) {
         
-        return internalGetNCPOOIMAKMO().getMap().containsKey(key);
+        return internalGetLackedNpcMap().getMap().containsKey(key);
       }
       /**
-       * Use {@link #getNCPOOIMAKMOMap()} instead.
+       * Use {@link #getLackedNpcMapMap()} instead.
        */
       @java.lang.Override
       @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getNCPOOIMAKMO() {
-        return getNCPOOIMAKMOMap();
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getLackedNpcMap() {
+        return getLackedNpcMapMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
        */
       @java.lang.Override
 
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getNCPOOIMAKMOMap() {
-        return internalGetNCPOOIMAKMO().getMap();
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getLackedNpcMapMap() {
+        return internalGetLackedNpcMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
        */
       @java.lang.Override
 
-      public int getNCPOOIMAKMOOrDefault(
+      public int getLackedNpcMapOrDefault(
           int key,
           int defaultValue) {
         
         java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetNCPOOIMAKMO().getMap();
+            internalGetLackedNpcMap().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
        */
       @java.lang.Override
 
-      public int getNCPOOIMAKMOOrThrow(
+      public int getLackedNpcMapOrThrow(
           int key) {
         
         java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetNCPOOIMAKMO().getMap();
+            internalGetLackedNpcMap().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
         return map.get(key);
       }
 
-      public Builder clearNCPOOIMAKMO() {
-        internalGetMutableNCPOOIMAKMO().getMutableMap()
+      public Builder clearLackedNpcMap() {
+        internalGetMutableLackedNpcMap().getMutableMap()
             .clear();
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
        */
 
-      public Builder removeNCPOOIMAKMO(
+      public Builder removeLackedNpcMap(
           int key) {
         
-        internalGetMutableNCPOOIMAKMO().getMutableMap()
+        internalGetMutableLackedNpcMap().getMutableMap()
             .remove(key);
         return this;
       }
@@ -1152,28 +1152,28 @@ public final class GetQuestLackingResourceRspOuterClass {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, java.lang.Integer>
-      getMutableNCPOOIMAKMO() {
-        return internalGetMutableNCPOOIMAKMO().getMutableMap();
+      getMutableLackedNpcMap() {
+        return internalGetMutableLackedNpcMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
        */
-      public Builder putNCPOOIMAKMO(
+      public Builder putLackedNpcMap(
           int key,
           int value) {
         
         
-        internalGetMutableNCPOOIMAKMO().getMutableMap()
+        internalGetMutableLackedNpcMap().getMutableMap()
             .put(key, value);
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; NCPOOIMAKMO = 6;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 6;</code>
        */
 
-      public Builder putAllNCPOOIMAKMO(
+      public Builder putAllLackedNpcMap(
           java.util.Map<java.lang.Integer, java.lang.Integer> values) {
-        internalGetMutableNCPOOIMAKMO().getMutableMap()
+        internalGetMutableLackedNpcMap().getMutableMap()
             .putAll(values);
         return this;
       }
@@ -1320,99 +1320,99 @@ public final class GetQuestLackingResourceRspOuterClass {
       }
 
       private com.google.protobuf.MapField<
-          java.lang.Integer, java.lang.Integer> oCDJABANKIH_;
+          java.lang.Integer, java.lang.Integer> lackedPlaceMap_;
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetOCDJABANKIH() {
-        if (oCDJABANKIH_ == null) {
+      internalGetLackedPlaceMap() {
+        if (lackedPlaceMap_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
-              OCDJABANKIHDefaultEntryHolder.defaultEntry);
+              LackedPlaceMapDefaultEntryHolder.defaultEntry);
         }
-        return oCDJABANKIH_;
+        return lackedPlaceMap_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetMutableOCDJABANKIH() {
+      internalGetMutableLackedPlaceMap() {
         onChanged();;
-        if (oCDJABANKIH_ == null) {
-          oCDJABANKIH_ = com.google.protobuf.MapField.newMapField(
-              OCDJABANKIHDefaultEntryHolder.defaultEntry);
+        if (lackedPlaceMap_ == null) {
+          lackedPlaceMap_ = com.google.protobuf.MapField.newMapField(
+              LackedPlaceMapDefaultEntryHolder.defaultEntry);
         }
-        if (!oCDJABANKIH_.isMutable()) {
-          oCDJABANKIH_ = oCDJABANKIH_.copy();
+        if (!lackedPlaceMap_.isMutable()) {
+          lackedPlaceMap_ = lackedPlaceMap_.copy();
         }
-        return oCDJABANKIH_;
+        return lackedPlaceMap_;
       }
 
-      public int getOCDJABANKIHCount() {
-        return internalGetOCDJABANKIH().getMap().size();
+      public int getLackedPlaceMapCount() {
+        return internalGetLackedPlaceMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
        */
 
       @java.lang.Override
-      public boolean containsOCDJABANKIH(
+      public boolean containsLackedPlaceMap(
           int key) {
         
-        return internalGetOCDJABANKIH().getMap().containsKey(key);
+        return internalGetLackedPlaceMap().getMap().containsKey(key);
       }
       /**
-       * Use {@link #getOCDJABANKIHMap()} instead.
+       * Use {@link #getLackedPlaceMapMap()} instead.
        */
       @java.lang.Override
       @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getOCDJABANKIH() {
-        return getOCDJABANKIHMap();
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getLackedPlaceMap() {
+        return getLackedPlaceMapMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
        */
       @java.lang.Override
 
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getOCDJABANKIHMap() {
-        return internalGetOCDJABANKIH().getMap();
+      public java.util.Map<java.lang.Integer, java.lang.Integer> getLackedPlaceMapMap() {
+        return internalGetLackedPlaceMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
        */
       @java.lang.Override
 
-      public int getOCDJABANKIHOrDefault(
+      public int getLackedPlaceMapOrDefault(
           int key,
           int defaultValue) {
         
         java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetOCDJABANKIH().getMap();
+            internalGetLackedPlaceMap().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
        */
       @java.lang.Override
 
-      public int getOCDJABANKIHOrThrow(
+      public int getLackedPlaceMapOrThrow(
           int key) {
         
         java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetOCDJABANKIH().getMap();
+            internalGetLackedPlaceMap().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
         return map.get(key);
       }
 
-      public Builder clearOCDJABANKIH() {
-        internalGetMutableOCDJABANKIH().getMutableMap()
+      public Builder clearLackedPlaceMap() {
+        internalGetMutableLackedPlaceMap().getMutableMap()
             .clear();
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
        */
 
-      public Builder removeOCDJABANKIH(
+      public Builder removeLackedPlaceMap(
           int key) {
         
-        internalGetMutableOCDJABANKIH().getMutableMap()
+        internalGetMutableLackedPlaceMap().getMutableMap()
             .remove(key);
         return this;
       }
@@ -1421,28 +1421,28 @@ public final class GetQuestLackingResourceRspOuterClass {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, java.lang.Integer>
-      getMutableOCDJABANKIH() {
-        return internalGetMutableOCDJABANKIH().getMutableMap();
+      getMutableLackedPlaceMap() {
+        return internalGetMutableLackedPlaceMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
        */
-      public Builder putOCDJABANKIH(
+      public Builder putLackedPlaceMap(
           int key,
           int value) {
         
         
-        internalGetMutableOCDJABANKIH().getMutableMap()
+        internalGetMutableLackedPlaceMap().getMutableMap()
             .put(key, value);
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; OCDJABANKIH = 5;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_place_map = 5;</code>
        */
 
-      public Builder putAllOCDJABANKIH(
+      public Builder putAllLackedPlaceMap(
           java.util.Map<java.lang.Integer, java.lang.Integer> values) {
-        internalGetMutableOCDJABANKIH().getMutableMap()
+        internalGetMutableLackedPlaceMap().getMutableMap()
             .putAll(values);
         return this;
       }
@@ -1584,15 +1584,15 @@ public final class GetQuestLackingResourceRspOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_GetQuestLackingResourceRsp_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_GetQuestLackingResourceRsp_NCPOOIMAKMOEntry_descriptor;
+    internal_static_GetQuestLackingResourceRsp_LackedNpcMapEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_GetQuestLackingResourceRsp_NCPOOIMAKMOEntry_fieldAccessorTable;
+      internal_static_GetQuestLackingResourceRsp_LackedNpcMapEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_GetQuestLackingResourceRsp_OCDJABANKIHEntry_descriptor;
+    internal_static_GetQuestLackingResourceRsp_LackedPlaceMapEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_GetQuestLackingResourceRsp_OCDJABANKIHEntry_fieldAccessorTable;
+      internal_static_GetQuestLackingResourceRsp_LackedPlaceMapEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1602,17 +1602,17 @@ public final class GetQuestLackingResourceRspOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n GetQuestLackingResourceRsp.proto\"\327\002\n\032G" +
-      "etQuestLackingResourceRsp\022A\n\013NCPOOIMAKMO" +
-      "\030\006 \003(\0132,.GetQuestLackingResourceRsp.NCPO" +
-      "OIMAKMOEntry\022\023\n\013KPIKFCDPMMM\030\017 \003(\r\022\020\n\010que" +
-      "st_id\030\010 \001(\r\022\017\n\007retcode\030\016 \001(\005\022A\n\013OCDJABAN" +
-      "KIH\030\005 \003(\0132,.GetQuestLackingResourceRsp.O" +
-      "CDJABANKIHEntry\022\023\n\013DMLOPDKLBMF\030\004 \003(\r\0322\n\020" +
-      "NCPOOIMAKMOEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002" +
-      " \001(\r:\0028\001\0322\n\020OCDJABANKIHEntry\022\013\n\003key\030\001 \001(" +
-      "\r\022\r\n\005value\030\002 \001(\r:\0028\001B\033\n\031emu.grasscutter." +
-      "net.protob\006proto3"
+      "\n GetQuestLackingResourceRsp.proto\"\347\002\n\032G" +
+      "etQuestLackingResourceRsp\022E\n\016lacked_npc_" +
+      "map\030\006 \003(\0132-.GetQuestLackingResourceRsp.L" +
+      "ackedNpcMapEntry\022\023\n\013KPIKFCDPMMM\030\017 \003(\r\022\020\n" +
+      "\010quest_id\030\010 \001(\r\022\017\n\007retcode\030\016 \001(\005\022I\n\020lack" +
+      "ed_place_map\030\005 \003(\0132/.GetQuestLackingReso" +
+      "urceRsp.LackedPlaceMapEntry\022\023\n\013DMLOPDKLB" +
+      "MF\030\004 \003(\r\0323\n\021LackedNpcMapEntry\022\013\n\003key\030\001 \001" +
+      "(\r\022\r\n\005value\030\002 \001(\r:\0028\001\0325\n\023LackedPlaceMapE" +
+      "ntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001B\033\n\031" +
+      "emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1623,18 +1623,18 @@ public final class GetQuestLackingResourceRspOuterClass {
     internal_static_GetQuestLackingResourceRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetQuestLackingResourceRsp_descriptor,
-        new java.lang.String[] { "NCPOOIMAKMO", "KPIKFCDPMMM", "QuestId", "Retcode", "OCDJABANKIH", "DMLOPDKLBMF", });
-    internal_static_GetQuestLackingResourceRsp_NCPOOIMAKMOEntry_descriptor =
+        new java.lang.String[] { "LackedNpcMap", "KPIKFCDPMMM", "QuestId", "Retcode", "LackedPlaceMap", "DMLOPDKLBMF", });
+    internal_static_GetQuestLackingResourceRsp_LackedNpcMapEntry_descriptor =
       internal_static_GetQuestLackingResourceRsp_descriptor.getNestedTypes().get(0);
-    internal_static_GetQuestLackingResourceRsp_NCPOOIMAKMOEntry_fieldAccessorTable = new
+    internal_static_GetQuestLackingResourceRsp_LackedNpcMapEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_GetQuestLackingResourceRsp_NCPOOIMAKMOEntry_descriptor,
+        internal_static_GetQuestLackingResourceRsp_LackedNpcMapEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_GetQuestLackingResourceRsp_OCDJABANKIHEntry_descriptor =
+    internal_static_GetQuestLackingResourceRsp_LackedPlaceMapEntry_descriptor =
       internal_static_GetQuestLackingResourceRsp_descriptor.getNestedTypes().get(1);
-    internal_static_GetQuestLackingResourceRsp_OCDJABANKIHEntry_fieldAccessorTable = new
+    internal_static_GetQuestLackingResourceRsp_LackedPlaceMapEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_GetQuestLackingResourceRsp_OCDJABANKIHEntry_descriptor,
+        internal_static_GetQuestLackingResourceRsp_LackedPlaceMapEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
   }
 

@@ -31,17 +31,29 @@ public final class HomeLimitedShopInfoOuterClass {
     int getNextOpenTime();
 
     /**
-     * <code>.Vector djinnPos = 1;</code>
+     * <pre>
+     *CKJKPEEKOGG
+     * </pre>
+     *
+     * <code>.Vector djinn_pos = 1;</code>
      * @return Whether the djinnPos field is set.
      */
     boolean hasDjinnPos();
     /**
-     * <code>.Vector djinnPos = 1;</code>
+     * <pre>
+     *CKJKPEEKOGG
+     * </pre>
+     *
+     * <code>.Vector djinn_pos = 1;</code>
      * @return The djinnPos.
      */
     emu.grasscutter.net.proto.VectorOuterClass.Vector getDjinnPos();
     /**
-     * <code>.Vector djinnPos = 1;</code>
+     * <pre>
+     *CKJKPEEKOGG
+     * </pre>
+     *
+     * <code>.Vector djinn_pos = 1;</code>
      */
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getDjinnPosOrBuilder();
 
@@ -58,21 +70,37 @@ public final class HomeLimitedShopInfoOuterClass {
     int getUid();
 
     /**
-     * <code>.Vector djinnRot = 9;</code>
+     * <pre>
+     *GMPJFCODOLK
+     * </pre>
+     *
+     * <code>.Vector djinn_rot = 9;</code>
      * @return Whether the djinnRot field is set.
      */
     boolean hasDjinnRot();
     /**
-     * <code>.Vector djinnRot = 9;</code>
+     * <pre>
+     *GMPJFCODOLK
+     * </pre>
+     *
+     * <code>.Vector djinn_rot = 9;</code>
      * @return The djinnRot.
      */
     emu.grasscutter.net.proto.VectorOuterClass.Vector getDjinnRot();
     /**
-     * <code>.Vector djinnRot = 9;</code>
+     * <pre>
+     *GMPJFCODOLK
+     * </pre>
+     *
+     * <code>.Vector djinn_rot = 9;</code>
      */
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getDjinnRotOrBuilder();
   }
   /**
+   * <pre>
+   * Name: ILEIPGLHFAP
+   * </pre>
+   *
    * Protobuf type {@code HomeLimitedShopInfo}
    */
   public static final class HomeLimitedShopInfo extends
@@ -217,10 +245,14 @@ public final class HomeLimitedShopInfoOuterClass {
       return nextOpenTime_;
     }
 
-    public static final int DJINNPOS_FIELD_NUMBER = 1;
+    public static final int DJINN_POS_FIELD_NUMBER = 1;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector djinnPos_;
     /**
-     * <code>.Vector djinnPos = 1;</code>
+     * <pre>
+     *CKJKPEEKOGG
+     * </pre>
+     *
+     * <code>.Vector djinn_pos = 1;</code>
      * @return Whether the djinnPos field is set.
      */
     @java.lang.Override
@@ -228,7 +260,11 @@ public final class HomeLimitedShopInfoOuterClass {
       return djinnPos_ != null;
     }
     /**
-     * <code>.Vector djinnPos = 1;</code>
+     * <pre>
+     *CKJKPEEKOGG
+     * </pre>
+     *
+     * <code>.Vector djinn_pos = 1;</code>
      * @return The djinnPos.
      */
     @java.lang.Override
@@ -236,7 +272,11 @@ public final class HomeLimitedShopInfoOuterClass {
       return djinnPos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : djinnPos_;
     }
     /**
-     * <code>.Vector djinnPos = 1;</code>
+     * <pre>
+     *CKJKPEEKOGG
+     * </pre>
+     *
+     * <code>.Vector djinn_pos = 1;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getDjinnPosOrBuilder() {
@@ -265,10 +305,14 @@ public final class HomeLimitedShopInfoOuterClass {
       return uid_;
     }
 
-    public static final int DJINNROT_FIELD_NUMBER = 9;
+    public static final int DJINN_ROT_FIELD_NUMBER = 9;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector djinnRot_;
     /**
-     * <code>.Vector djinnRot = 9;</code>
+     * <pre>
+     *GMPJFCODOLK
+     * </pre>
+     *
+     * <code>.Vector djinn_rot = 9;</code>
      * @return Whether the djinnRot field is set.
      */
     @java.lang.Override
@@ -276,7 +320,11 @@ public final class HomeLimitedShopInfoOuterClass {
       return djinnRot_ != null;
     }
     /**
-     * <code>.Vector djinnRot = 9;</code>
+     * <pre>
+     *GMPJFCODOLK
+     * </pre>
+     *
+     * <code>.Vector djinn_rot = 9;</code>
      * @return The djinnRot.
      */
     @java.lang.Override
@@ -284,7 +332,11 @@ public final class HomeLimitedShopInfoOuterClass {
       return djinnRot_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : djinnRot_;
     }
     /**
-     * <code>.Vector djinnRot = 9;</code>
+     * <pre>
+     *GMPJFCODOLK
+     * </pre>
+     *
+     * <code>.Vector djinn_rot = 9;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getDjinnRotOrBuilder() {
@@ -405,7 +457,7 @@ public final class HomeLimitedShopInfoOuterClass {
       hash = (37 * hash) + NEXTOPENTIME_FIELD_NUMBER;
       hash = (53 * hash) + getNextOpenTime();
       if (hasDjinnPos()) {
-        hash = (37 * hash) + DJINNPOS_FIELD_NUMBER;
+        hash = (37 * hash) + DJINN_POS_FIELD_NUMBER;
         hash = (53 * hash) + getDjinnPos().hashCode();
       }
       hash = (37 * hash) + NEXTCLOSETIME_FIELD_NUMBER;
@@ -413,7 +465,7 @@ public final class HomeLimitedShopInfoOuterClass {
       hash = (37 * hash) + UID_FIELD_NUMBER;
       hash = (53 * hash) + getUid();
       if (hasDjinnRot()) {
-        hash = (37 * hash) + DJINNROT_FIELD_NUMBER;
+        hash = (37 * hash) + DJINN_ROT_FIELD_NUMBER;
         hash = (53 * hash) + getDjinnRot().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
@@ -512,6 +564,10 @@ public final class HomeLimitedShopInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: ILEIPGLHFAP
+     * </pre>
+     *
      * Protobuf type {@code HomeLimitedShopInfo}
      */
     public static final class Builder extends
@@ -770,14 +826,22 @@ public final class HomeLimitedShopInfoOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> djinnPosBuilder_;
       /**
-       * <code>.Vector djinnPos = 1;</code>
+       * <pre>
+       *CKJKPEEKOGG
+       * </pre>
+       *
+       * <code>.Vector djinn_pos = 1;</code>
        * @return Whether the djinnPos field is set.
        */
       public boolean hasDjinnPos() {
         return djinnPosBuilder_ != null || djinnPos_ != null;
       }
       /**
-       * <code>.Vector djinnPos = 1;</code>
+       * <pre>
+       *CKJKPEEKOGG
+       * </pre>
+       *
+       * <code>.Vector djinn_pos = 1;</code>
        * @return The djinnPos.
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector getDjinnPos() {
@@ -788,7 +852,11 @@ public final class HomeLimitedShopInfoOuterClass {
         }
       }
       /**
-       * <code>.Vector djinnPos = 1;</code>
+       * <pre>
+       *CKJKPEEKOGG
+       * </pre>
+       *
+       * <code>.Vector djinn_pos = 1;</code>
        */
       public Builder setDjinnPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (djinnPosBuilder_ == null) {
@@ -804,7 +872,11 @@ public final class HomeLimitedShopInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector djinnPos = 1;</code>
+       * <pre>
+       *CKJKPEEKOGG
+       * </pre>
+       *
+       * <code>.Vector djinn_pos = 1;</code>
        */
       public Builder setDjinnPos(
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
@@ -818,7 +890,11 @@ public final class HomeLimitedShopInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector djinnPos = 1;</code>
+       * <pre>
+       *CKJKPEEKOGG
+       * </pre>
+       *
+       * <code>.Vector djinn_pos = 1;</code>
        */
       public Builder mergeDjinnPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (djinnPosBuilder_ == null) {
@@ -836,7 +912,11 @@ public final class HomeLimitedShopInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector djinnPos = 1;</code>
+       * <pre>
+       *CKJKPEEKOGG
+       * </pre>
+       *
+       * <code>.Vector djinn_pos = 1;</code>
        */
       public Builder clearDjinnPos() {
         if (djinnPosBuilder_ == null) {
@@ -850,7 +930,11 @@ public final class HomeLimitedShopInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector djinnPos = 1;</code>
+       * <pre>
+       *CKJKPEEKOGG
+       * </pre>
+       *
+       * <code>.Vector djinn_pos = 1;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getDjinnPosBuilder() {
         
@@ -858,7 +942,11 @@ public final class HomeLimitedShopInfoOuterClass {
         return getDjinnPosFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Vector djinnPos = 1;</code>
+       * <pre>
+       *CKJKPEEKOGG
+       * </pre>
+       *
+       * <code>.Vector djinn_pos = 1;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getDjinnPosOrBuilder() {
         if (djinnPosBuilder_ != null) {
@@ -869,7 +957,11 @@ public final class HomeLimitedShopInfoOuterClass {
         }
       }
       /**
-       * <code>.Vector djinnPos = 1;</code>
+       * <pre>
+       *CKJKPEEKOGG
+       * </pre>
+       *
+       * <code>.Vector djinn_pos = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
@@ -951,14 +1043,22 @@ public final class HomeLimitedShopInfoOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> djinnRotBuilder_;
       /**
-       * <code>.Vector djinnRot = 9;</code>
+       * <pre>
+       *GMPJFCODOLK
+       * </pre>
+       *
+       * <code>.Vector djinn_rot = 9;</code>
        * @return Whether the djinnRot field is set.
        */
       public boolean hasDjinnRot() {
         return djinnRotBuilder_ != null || djinnRot_ != null;
       }
       /**
-       * <code>.Vector djinnRot = 9;</code>
+       * <pre>
+       *GMPJFCODOLK
+       * </pre>
+       *
+       * <code>.Vector djinn_rot = 9;</code>
        * @return The djinnRot.
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector getDjinnRot() {
@@ -969,7 +1069,11 @@ public final class HomeLimitedShopInfoOuterClass {
         }
       }
       /**
-       * <code>.Vector djinnRot = 9;</code>
+       * <pre>
+       *GMPJFCODOLK
+       * </pre>
+       *
+       * <code>.Vector djinn_rot = 9;</code>
        */
       public Builder setDjinnRot(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (djinnRotBuilder_ == null) {
@@ -985,7 +1089,11 @@ public final class HomeLimitedShopInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector djinnRot = 9;</code>
+       * <pre>
+       *GMPJFCODOLK
+       * </pre>
+       *
+       * <code>.Vector djinn_rot = 9;</code>
        */
       public Builder setDjinnRot(
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
@@ -999,7 +1107,11 @@ public final class HomeLimitedShopInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector djinnRot = 9;</code>
+       * <pre>
+       *GMPJFCODOLK
+       * </pre>
+       *
+       * <code>.Vector djinn_rot = 9;</code>
        */
       public Builder mergeDjinnRot(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (djinnRotBuilder_ == null) {
@@ -1017,7 +1129,11 @@ public final class HomeLimitedShopInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector djinnRot = 9;</code>
+       * <pre>
+       *GMPJFCODOLK
+       * </pre>
+       *
+       * <code>.Vector djinn_rot = 9;</code>
        */
       public Builder clearDjinnRot() {
         if (djinnRotBuilder_ == null) {
@@ -1031,7 +1147,11 @@ public final class HomeLimitedShopInfoOuterClass {
         return this;
       }
       /**
-       * <code>.Vector djinnRot = 9;</code>
+       * <pre>
+       *GMPJFCODOLK
+       * </pre>
+       *
+       * <code>.Vector djinn_rot = 9;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getDjinnRotBuilder() {
         
@@ -1039,7 +1159,11 @@ public final class HomeLimitedShopInfoOuterClass {
         return getDjinnRotFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Vector djinnRot = 9;</code>
+       * <pre>
+       *GMPJFCODOLK
+       * </pre>
+       *
+       * <code>.Vector djinn_rot = 9;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getDjinnRotOrBuilder() {
         if (djinnRotBuilder_ != null) {
@@ -1050,7 +1174,11 @@ public final class HomeLimitedShopInfoOuterClass {
         }
       }
       /**
-       * <code>.Vector djinnRot = 9;</code>
+       * <pre>
+       *GMPJFCODOLK
+       * </pre>
+       *
+       * <code>.Vector djinn_rot = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
@@ -1133,12 +1261,12 @@ public final class HomeLimitedShopInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\031HomeLimitedShopInfo.proto\032\014Vector.prot" +
-      "o\"\240\001\n\023HomeLimitedShopInfo\022\031\n\021nextGuestOp" +
-      "enTime\030\014 \001(\r\022\024\n\014nextOpenTime\030\013 \001(\r\022\031\n\010dj" +
-      "innPos\030\001 \001(\0132\007.Vector\022\025\n\rnextCloseTime\030\006" +
-      " \001(\r\022\013\n\003uid\030\016 \001(\r\022\031\n\010djinnRot\030\t \001(\0132\007.Ve" +
-      "ctorB\033\n\031emu.grasscutter.net.protob\006proto" +
-      "3"
+      "o\"\242\001\n\023HomeLimitedShopInfo\022\031\n\021nextGuestOp" +
+      "enTime\030\014 \001(\r\022\024\n\014nextOpenTime\030\013 \001(\r\022\032\n\tdj" +
+      "inn_pos\030\001 \001(\0132\007.Vector\022\025\n\rnextCloseTime\030" +
+      "\006 \001(\r\022\013\n\003uid\030\016 \001(\r\022\032\n\tdjinn_rot\030\t \001(\0132\007." +
+      "VectorB\033\n\031emu.grasscutter.net.protob\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
