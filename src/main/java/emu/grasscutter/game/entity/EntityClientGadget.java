@@ -25,7 +25,7 @@ import lombok.Getter;
 public class EntityClientGadget extends EntityBaseGadget {
     @Getter private final Player owner;
 
-    @Getter(onMethod = @__(@Override))
+    @Getter(onMethod_ = @Override)
     private int gadgetId;
 
     @Getter private int campId;
@@ -43,9 +43,9 @@ public class EntityClientGadget extends EntityBaseGadget {
         this.gadgetId = notify.getConfigId();
         this.campId = notify.getCampId();
         this.campType = notify.getCampType();
-        this.ownerEntityId = notify.getJKHNMNELMJL();
+        this.ownerEntityId = notify.getPropOwnerEntityId();
         this.targetEntityId = notify.getTargetEntityId();
-        this.asyncLoad = notify.getIsPeerIdFromPlayer();
+        this.asyncLoad = notify.getIsAsyncLoad();
 
         GameEntity owner = scene.getEntityById(this.ownerEntityId);
         if (owner instanceof EntityClientGadget ownerGadget) {
@@ -100,7 +100,7 @@ public class EntityClientGadget extends EntityBaseGadget {
                 .setOwnerEntityId(this.getOwnerEntityId())
                 .setIsEnableInteract(true)
                 .setClientGadget(clientGadget)
-                //.setPropOwnerEntityId(this.getOwnerEntityId())
+                .setPropOwnerEntityId(this.getOwnerEntityId())
                 .setAuthorityPeerId(this.getOwner().getPeerId());
 
         entityInfo.setGadget(gadgetInfo);

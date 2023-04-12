@@ -19,65 +19,65 @@ public final class LunaRiteAreaInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 area_id = 9;</code>
+     * <code>uint32 area_id = 14;</code>
      * @return The areaId.
      */
     int getAreaId();
 
     /**
-     * <code>repeated uint32 sacrifice_reward_list = 5;</code>
+     * <code>repeated uint32 sacrifice_list = 4;</code>
+     * @return A list containing the sacrificeList.
+     */
+    java.util.List<java.lang.Integer> getSacrificeListList();
+    /**
+     * <code>repeated uint32 sacrifice_list = 4;</code>
+     * @return The count of sacrificeList.
+     */
+    int getSacrificeListCount();
+    /**
+     * <code>repeated uint32 sacrifice_list = 4;</code>
+     * @param index The index of the element to return.
+     * @return The sacrificeList at the given index.
+     */
+    int getSacrificeList(int index);
+
+    /**
+     * <code>.LunaRiteHintStatusType hint_status = 1;</code>
+     * @return The enum numeric value on the wire for hintStatus.
+     */
+    int getHintStatusValue();
+    /**
+     * <code>.LunaRiteHintStatusType hint_status = 1;</code>
+     * @return The hintStatus.
+     */
+    emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.LunaRiteHintStatusType getHintStatus();
+
+    /**
+     * <code>repeated uint32 sacrifice_reward_list = 13;</code>
      * @return A list containing the sacrificeRewardList.
      */
     java.util.List<java.lang.Integer> getSacrificeRewardListList();
     /**
-     * <code>repeated uint32 sacrifice_reward_list = 5;</code>
+     * <code>repeated uint32 sacrifice_reward_list = 13;</code>
      * @return The count of sacrificeRewardList.
      */
     int getSacrificeRewardListCount();
     /**
-     * <code>repeated uint32 sacrifice_reward_list = 5;</code>
+     * <code>repeated uint32 sacrifice_reward_list = 13;</code>
      * @param index The index of the element to return.
      * @return The sacrificeRewardList at the given index.
      */
     int getSacrificeRewardList(int index);
 
     /**
-     * <code>.LunaRiteHintStatusType hint_status = 7;</code>
-     * @return The enum numeric value on the wire for hintStatus.
-     */
-    int getHintStatusValue();
-    /**
-     * <code>.LunaRiteHintStatusType hint_status = 7;</code>
-     * @return The hintStatus.
-     */
-    emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.LunaRiteHintStatusType getHintStatus();
-
-    /**
-     * <code>uint32 challenge_index = 13;</code>
+     * <code>uint32 challenge_index = 15;</code>
      * @return The challengeIndex.
      */
     int getChallengeIndex();
-
-    /**
-     * <code>repeated uint32 sacrifice_list = 3;</code>
-     * @return A list containing the sacrificeList.
-     */
-    java.util.List<java.lang.Integer> getSacrificeListList();
-    /**
-     * <code>repeated uint32 sacrifice_list = 3;</code>
-     * @return The count of sacrificeList.
-     */
-    int getSacrificeListCount();
-    /**
-     * <code>repeated uint32 sacrifice_list = 3;</code>
-     * @param index The index of the element to return.
-     * @return The sacrificeList at the given index.
-     */
-    int getSacrificeList(int index);
   }
   /**
    * <pre>
-   * Name: BOMMBPDKMOH
+   * Name: KGIAEDGPNBH
    * </pre>
    *
    * Protobuf type {@code LunaRiteAreaInfo}
@@ -92,9 +92,9 @@ public final class LunaRiteAreaInfoOuterClass {
       super(builder);
     }
     private LunaRiteAreaInfo() {
-      sacrificeRewardList_ = emptyIntList();
-      hintStatus_ = 0;
       sacrificeList_ = emptyIntList();
+      hintStatus_ = 0;
+      sacrificeRewardList_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -128,20 +128,26 @@ public final class LunaRiteAreaInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 24: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            case 8: {
+              int rawValue = input.readEnum();
+
+              hintStatus_ = rawValue;
+              break;
+            }
+            case 32: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 sacrificeList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               sacrificeList_.addInt(input.readUInt32());
               break;
             }
-            case 26: {
+            case 34: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
                 sacrificeList_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               while (input.getBytesUntilLimit() > 0) {
                 sacrificeList_.addInt(input.readUInt32());
@@ -149,20 +155,20 @@ public final class LunaRiteAreaInfoOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 40: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+            case 104: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 sacrificeRewardList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               sacrificeRewardList_.addInt(input.readUInt32());
               break;
             }
-            case 42: {
+            case 106: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
                 sacrificeRewardList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               while (input.getBytesUntilLimit() > 0) {
                 sacrificeRewardList_.addInt(input.readUInt32());
@@ -170,18 +176,12 @@ public final class LunaRiteAreaInfoOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 56: {
-              int rawValue = input.readEnum();
-
-              hintStatus_ = rawValue;
-              break;
-            }
-            case 72: {
+            case 112: {
 
               areaId_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 120: {
 
               challengeIndex_ = input.readUInt32();
               break;
@@ -201,10 +201,10 @@ public final class LunaRiteAreaInfoOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           sacrificeList_.makeImmutable(); // C
         }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           sacrificeRewardList_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
@@ -224,10 +224,10 @@ public final class LunaRiteAreaInfoOuterClass {
               emu.grasscutter.net.proto.LunaRiteAreaInfoOuterClass.LunaRiteAreaInfo.class, emu.grasscutter.net.proto.LunaRiteAreaInfoOuterClass.LunaRiteAreaInfo.Builder.class);
     }
 
-    public static final int AREA_ID_FIELD_NUMBER = 9;
+    public static final int AREA_ID_FIELD_NUMBER = 14;
     private int areaId_;
     /**
-     * <code>uint32 area_id = 9;</code>
+     * <code>uint32 area_id = 14;</code>
      * @return The areaId.
      */
     @java.lang.Override
@@ -235,68 +235,10 @@ public final class LunaRiteAreaInfoOuterClass {
       return areaId_;
     }
 
-    public static final int SACRIFICE_REWARD_LIST_FIELD_NUMBER = 5;
-    private com.google.protobuf.Internal.IntList sacrificeRewardList_;
-    /**
-     * <code>repeated uint32 sacrifice_reward_list = 5;</code>
-     * @return A list containing the sacrificeRewardList.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.Integer>
-        getSacrificeRewardListList() {
-      return sacrificeRewardList_;
-    }
-    /**
-     * <code>repeated uint32 sacrifice_reward_list = 5;</code>
-     * @return The count of sacrificeRewardList.
-     */
-    public int getSacrificeRewardListCount() {
-      return sacrificeRewardList_.size();
-    }
-    /**
-     * <code>repeated uint32 sacrifice_reward_list = 5;</code>
-     * @param index The index of the element to return.
-     * @return The sacrificeRewardList at the given index.
-     */
-    public int getSacrificeRewardList(int index) {
-      return sacrificeRewardList_.getInt(index);
-    }
-    private int sacrificeRewardListMemoizedSerializedSize = -1;
-
-    public static final int HINT_STATUS_FIELD_NUMBER = 7;
-    private int hintStatus_;
-    /**
-     * <code>.LunaRiteHintStatusType hint_status = 7;</code>
-     * @return The enum numeric value on the wire for hintStatus.
-     */
-    @java.lang.Override public int getHintStatusValue() {
-      return hintStatus_;
-    }
-    /**
-     * <code>.LunaRiteHintStatusType hint_status = 7;</code>
-     * @return The hintStatus.
-     */
-    @java.lang.Override public emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.LunaRiteHintStatusType getHintStatus() {
-      @SuppressWarnings("deprecation")
-      emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.LunaRiteHintStatusType result = emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.LunaRiteHintStatusType.valueOf(hintStatus_);
-      return result == null ? emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.LunaRiteHintStatusType.UNRECOGNIZED : result;
-    }
-
-    public static final int CHALLENGE_INDEX_FIELD_NUMBER = 13;
-    private int challengeIndex_;
-    /**
-     * <code>uint32 challenge_index = 13;</code>
-     * @return The challengeIndex.
-     */
-    @java.lang.Override
-    public int getChallengeIndex() {
-      return challengeIndex_;
-    }
-
-    public static final int SACRIFICE_LIST_FIELD_NUMBER = 3;
+    public static final int SACRIFICE_LIST_FIELD_NUMBER = 4;
     private com.google.protobuf.Internal.IntList sacrificeList_;
     /**
-     * <code>repeated uint32 sacrifice_list = 3;</code>
+     * <code>repeated uint32 sacrifice_list = 4;</code>
      * @return A list containing the sacrificeList.
      */
     @java.lang.Override
@@ -305,14 +247,14 @@ public final class LunaRiteAreaInfoOuterClass {
       return sacrificeList_;
     }
     /**
-     * <code>repeated uint32 sacrifice_list = 3;</code>
+     * <code>repeated uint32 sacrifice_list = 4;</code>
      * @return The count of sacrificeList.
      */
     public int getSacrificeListCount() {
       return sacrificeList_.size();
     }
     /**
-     * <code>repeated uint32 sacrifice_list = 3;</code>
+     * <code>repeated uint32 sacrifice_list = 4;</code>
      * @param index The index of the element to return.
      * @return The sacrificeList at the given index.
      */
@@ -320,6 +262,64 @@ public final class LunaRiteAreaInfoOuterClass {
       return sacrificeList_.getInt(index);
     }
     private int sacrificeListMemoizedSerializedSize = -1;
+
+    public static final int HINT_STATUS_FIELD_NUMBER = 1;
+    private int hintStatus_;
+    /**
+     * <code>.LunaRiteHintStatusType hint_status = 1;</code>
+     * @return The enum numeric value on the wire for hintStatus.
+     */
+    @java.lang.Override public int getHintStatusValue() {
+      return hintStatus_;
+    }
+    /**
+     * <code>.LunaRiteHintStatusType hint_status = 1;</code>
+     * @return The hintStatus.
+     */
+    @java.lang.Override public emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.LunaRiteHintStatusType getHintStatus() {
+      @SuppressWarnings("deprecation")
+      emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.LunaRiteHintStatusType result = emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.LunaRiteHintStatusType.valueOf(hintStatus_);
+      return result == null ? emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.LunaRiteHintStatusType.UNRECOGNIZED : result;
+    }
+
+    public static final int SACRIFICE_REWARD_LIST_FIELD_NUMBER = 13;
+    private com.google.protobuf.Internal.IntList sacrificeRewardList_;
+    /**
+     * <code>repeated uint32 sacrifice_reward_list = 13;</code>
+     * @return A list containing the sacrificeRewardList.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getSacrificeRewardListList() {
+      return sacrificeRewardList_;
+    }
+    /**
+     * <code>repeated uint32 sacrifice_reward_list = 13;</code>
+     * @return The count of sacrificeRewardList.
+     */
+    public int getSacrificeRewardListCount() {
+      return sacrificeRewardList_.size();
+    }
+    /**
+     * <code>repeated uint32 sacrifice_reward_list = 13;</code>
+     * @param index The index of the element to return.
+     * @return The sacrificeRewardList at the given index.
+     */
+    public int getSacrificeRewardList(int index) {
+      return sacrificeRewardList_.getInt(index);
+    }
+    private int sacrificeRewardListMemoizedSerializedSize = -1;
+
+    public static final int CHALLENGE_INDEX_FIELD_NUMBER = 15;
+    private int challengeIndex_;
+    /**
+     * <code>uint32 challenge_index = 15;</code>
+     * @return The challengeIndex.
+     */
+    @java.lang.Override
+    public int getChallengeIndex() {
+      return challengeIndex_;
+    }
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -336,28 +336,28 @@ public final class LunaRiteAreaInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
+      if (hintStatus_ != emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.LunaRiteHintStatusType.LUNA_RITE_HINT_STATUS_DEFAULT.getNumber()) {
+        output.writeEnum(1, hintStatus_);
+      }
       if (getSacrificeListList().size() > 0) {
-        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(34);
         output.writeUInt32NoTag(sacrificeListMemoizedSerializedSize);
       }
       for (int i = 0; i < sacrificeList_.size(); i++) {
         output.writeUInt32NoTag(sacrificeList_.getInt(i));
       }
       if (getSacrificeRewardListList().size() > 0) {
-        output.writeUInt32NoTag(42);
+        output.writeUInt32NoTag(106);
         output.writeUInt32NoTag(sacrificeRewardListMemoizedSerializedSize);
       }
       for (int i = 0; i < sacrificeRewardList_.size(); i++) {
         output.writeUInt32NoTag(sacrificeRewardList_.getInt(i));
       }
-      if (hintStatus_ != emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.LunaRiteHintStatusType.LUNA_RITE_HINT_STATUS_DEFAULT.getNumber()) {
-        output.writeEnum(7, hintStatus_);
-      }
       if (areaId_ != 0) {
-        output.writeUInt32(9, areaId_);
+        output.writeUInt32(14, areaId_);
       }
       if (challengeIndex_ != 0) {
-        output.writeUInt32(13, challengeIndex_);
+        output.writeUInt32(15, challengeIndex_);
       }
       unknownFields.writeTo(output);
     }
@@ -368,6 +368,10 @@ public final class LunaRiteAreaInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (hintStatus_ != emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.LunaRiteHintStatusType.LUNA_RITE_HINT_STATUS_DEFAULT.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, hintStatus_);
+      }
       {
         int dataSize = 0;
         for (int i = 0; i < sacrificeList_.size(); i++) {
@@ -396,17 +400,13 @@ public final class LunaRiteAreaInfoOuterClass {
         }
         sacrificeRewardListMemoizedSerializedSize = dataSize;
       }
-      if (hintStatus_ != emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.LunaRiteHintStatusType.LUNA_RITE_HINT_STATUS_DEFAULT.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(7, hintStatus_);
-      }
       if (areaId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, areaId_);
+          .computeUInt32Size(14, areaId_);
       }
       if (challengeIndex_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, challengeIndex_);
+          .computeUInt32Size(15, challengeIndex_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -425,13 +425,13 @@ public final class LunaRiteAreaInfoOuterClass {
 
       if (getAreaId()
           != other.getAreaId()) return false;
-      if (!getSacrificeRewardListList()
-          .equals(other.getSacrificeRewardListList())) return false;
-      if (hintStatus_ != other.hintStatus_) return false;
-      if (getChallengeIndex()
-          != other.getChallengeIndex()) return false;
       if (!getSacrificeListList()
           .equals(other.getSacrificeListList())) return false;
+      if (hintStatus_ != other.hintStatus_) return false;
+      if (!getSacrificeRewardListList()
+          .equals(other.getSacrificeRewardListList())) return false;
+      if (getChallengeIndex()
+          != other.getChallengeIndex()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -445,18 +445,18 @@ public final class LunaRiteAreaInfoOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + AREA_ID_FIELD_NUMBER;
       hash = (53 * hash) + getAreaId();
-      if (getSacrificeRewardListCount() > 0) {
-        hash = (37 * hash) + SACRIFICE_REWARD_LIST_FIELD_NUMBER;
-        hash = (53 * hash) + getSacrificeRewardListList().hashCode();
-      }
-      hash = (37 * hash) + HINT_STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + hintStatus_;
-      hash = (37 * hash) + CHALLENGE_INDEX_FIELD_NUMBER;
-      hash = (53 * hash) + getChallengeIndex();
       if (getSacrificeListCount() > 0) {
         hash = (37 * hash) + SACRIFICE_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getSacrificeListList().hashCode();
       }
+      hash = (37 * hash) + HINT_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + hintStatus_;
+      if (getSacrificeRewardListCount() > 0) {
+        hash = (37 * hash) + SACRIFICE_REWARD_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getSacrificeRewardListList().hashCode();
+      }
+      hash = (37 * hash) + CHALLENGE_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getChallengeIndex();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -554,7 +554,7 @@ public final class LunaRiteAreaInfoOuterClass {
     }
     /**
      * <pre>
-     * Name: BOMMBPDKMOH
+     * Name: KGIAEDGPNBH
      * </pre>
      *
      * Protobuf type {@code LunaRiteAreaInfo}
@@ -596,14 +596,14 @@ public final class LunaRiteAreaInfoOuterClass {
         super.clear();
         areaId_ = 0;
 
-        sacrificeRewardList_ = emptyIntList();
+        sacrificeList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
         hintStatus_ = 0;
 
+        sacrificeRewardList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         challengeIndex_ = 0;
 
-        sacrificeList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -633,17 +633,17 @@ public final class LunaRiteAreaInfoOuterClass {
         int from_bitField0_ = bitField0_;
         result.areaId_ = areaId_;
         if (((bitField0_ & 0x00000001) != 0)) {
-          sacrificeRewardList_.makeImmutable();
+          sacrificeList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.sacrificeRewardList_ = sacrificeRewardList_;
+        result.sacrificeList_ = sacrificeList_;
         result.hintStatus_ = hintStatus_;
-        result.challengeIndex_ = challengeIndex_;
         if (((bitField0_ & 0x00000002) != 0)) {
-          sacrificeList_.makeImmutable();
+          sacrificeRewardList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.sacrificeList_ = sacrificeList_;
+        result.sacrificeRewardList_ = sacrificeRewardList_;
+        result.challengeIndex_ = challengeIndex_;
         onBuilt();
         return result;
       }
@@ -695,31 +695,31 @@ public final class LunaRiteAreaInfoOuterClass {
         if (other.getAreaId() != 0) {
           setAreaId(other.getAreaId());
         }
-        if (!other.sacrificeRewardList_.isEmpty()) {
-          if (sacrificeRewardList_.isEmpty()) {
-            sacrificeRewardList_ = other.sacrificeRewardList_;
+        if (!other.sacrificeList_.isEmpty()) {
+          if (sacrificeList_.isEmpty()) {
+            sacrificeList_ = other.sacrificeList_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureSacrificeRewardListIsMutable();
-            sacrificeRewardList_.addAll(other.sacrificeRewardList_);
+            ensureSacrificeListIsMutable();
+            sacrificeList_.addAll(other.sacrificeList_);
           }
           onChanged();
         }
         if (other.hintStatus_ != 0) {
           setHintStatusValue(other.getHintStatusValue());
         }
-        if (other.getChallengeIndex() != 0) {
-          setChallengeIndex(other.getChallengeIndex());
-        }
-        if (!other.sacrificeList_.isEmpty()) {
-          if (sacrificeList_.isEmpty()) {
-            sacrificeList_ = other.sacrificeList_;
+        if (!other.sacrificeRewardList_.isEmpty()) {
+          if (sacrificeRewardList_.isEmpty()) {
+            sacrificeRewardList_ = other.sacrificeRewardList_;
             bitField0_ = (bitField0_ & ~0x00000002);
           } else {
-            ensureSacrificeListIsMutable();
-            sacrificeList_.addAll(other.sacrificeList_);
+            ensureSacrificeRewardListIsMutable();
+            sacrificeRewardList_.addAll(other.sacrificeRewardList_);
           }
           onChanged();
+        }
+        if (other.getChallengeIndex() != 0) {
+          setChallengeIndex(other.getChallengeIndex());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -753,7 +753,7 @@ public final class LunaRiteAreaInfoOuterClass {
 
       private int areaId_ ;
       /**
-       * <code>uint32 area_id = 9;</code>
+       * <code>uint32 area_id = 14;</code>
        * @return The areaId.
        */
       @java.lang.Override
@@ -761,7 +761,7 @@ public final class LunaRiteAreaInfoOuterClass {
         return areaId_;
       }
       /**
-       * <code>uint32 area_id = 9;</code>
+       * <code>uint32 area_id = 14;</code>
        * @param value The areaId to set.
        * @return This builder for chaining.
        */
@@ -772,7 +772,7 @@ public final class LunaRiteAreaInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 area_id = 9;</code>
+       * <code>uint32 area_id = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearAreaId() {
@@ -782,80 +782,80 @@ public final class LunaRiteAreaInfoOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList sacrificeRewardList_ = emptyIntList();
-      private void ensureSacrificeRewardListIsMutable() {
+      private com.google.protobuf.Internal.IntList sacrificeList_ = emptyIntList();
+      private void ensureSacrificeListIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          sacrificeRewardList_ = mutableCopy(sacrificeRewardList_);
+          sacrificeList_ = mutableCopy(sacrificeList_);
           bitField0_ |= 0x00000001;
          }
       }
       /**
-       * <code>repeated uint32 sacrifice_reward_list = 5;</code>
-       * @return A list containing the sacrificeRewardList.
+       * <code>repeated uint32 sacrifice_list = 4;</code>
+       * @return A list containing the sacrificeList.
        */
       public java.util.List<java.lang.Integer>
-          getSacrificeRewardListList() {
+          getSacrificeListList() {
         return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(sacrificeRewardList_) : sacrificeRewardList_;
+                 java.util.Collections.unmodifiableList(sacrificeList_) : sacrificeList_;
       }
       /**
-       * <code>repeated uint32 sacrifice_reward_list = 5;</code>
-       * @return The count of sacrificeRewardList.
+       * <code>repeated uint32 sacrifice_list = 4;</code>
+       * @return The count of sacrificeList.
        */
-      public int getSacrificeRewardListCount() {
-        return sacrificeRewardList_.size();
+      public int getSacrificeListCount() {
+        return sacrificeList_.size();
       }
       /**
-       * <code>repeated uint32 sacrifice_reward_list = 5;</code>
+       * <code>repeated uint32 sacrifice_list = 4;</code>
        * @param index The index of the element to return.
-       * @return The sacrificeRewardList at the given index.
+       * @return The sacrificeList at the given index.
        */
-      public int getSacrificeRewardList(int index) {
-        return sacrificeRewardList_.getInt(index);
+      public int getSacrificeList(int index) {
+        return sacrificeList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 sacrifice_reward_list = 5;</code>
+       * <code>repeated uint32 sacrifice_list = 4;</code>
        * @param index The index to set the value at.
-       * @param value The sacrificeRewardList to set.
+       * @param value The sacrificeList to set.
        * @return This builder for chaining.
        */
-      public Builder setSacrificeRewardList(
+      public Builder setSacrificeList(
           int index, int value) {
-        ensureSacrificeRewardListIsMutable();
-        sacrificeRewardList_.setInt(index, value);
+        ensureSacrificeListIsMutable();
+        sacrificeList_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 sacrifice_reward_list = 5;</code>
-       * @param value The sacrificeRewardList to add.
+       * <code>repeated uint32 sacrifice_list = 4;</code>
+       * @param value The sacrificeList to add.
        * @return This builder for chaining.
        */
-      public Builder addSacrificeRewardList(int value) {
-        ensureSacrificeRewardListIsMutable();
-        sacrificeRewardList_.addInt(value);
+      public Builder addSacrificeList(int value) {
+        ensureSacrificeListIsMutable();
+        sacrificeList_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 sacrifice_reward_list = 5;</code>
-       * @param values The sacrificeRewardList to add.
+       * <code>repeated uint32 sacrifice_list = 4;</code>
+       * @param values The sacrificeList to add.
        * @return This builder for chaining.
        */
-      public Builder addAllSacrificeRewardList(
+      public Builder addAllSacrificeList(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureSacrificeRewardListIsMutable();
+        ensureSacrificeListIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, sacrificeRewardList_);
+            values, sacrificeList_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 sacrifice_reward_list = 5;</code>
+       * <code>repeated uint32 sacrifice_list = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearSacrificeRewardList() {
-        sacrificeRewardList_ = emptyIntList();
+      public Builder clearSacrificeList() {
+        sacrificeList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
@@ -863,14 +863,14 @@ public final class LunaRiteAreaInfoOuterClass {
 
       private int hintStatus_ = 0;
       /**
-       * <code>.LunaRiteHintStatusType hint_status = 7;</code>
+       * <code>.LunaRiteHintStatusType hint_status = 1;</code>
        * @return The enum numeric value on the wire for hintStatus.
        */
       @java.lang.Override public int getHintStatusValue() {
         return hintStatus_;
       }
       /**
-       * <code>.LunaRiteHintStatusType hint_status = 7;</code>
+       * <code>.LunaRiteHintStatusType hint_status = 1;</code>
        * @param value The enum numeric value on the wire for hintStatus to set.
        * @return This builder for chaining.
        */
@@ -881,7 +881,7 @@ public final class LunaRiteAreaInfoOuterClass {
         return this;
       }
       /**
-       * <code>.LunaRiteHintStatusType hint_status = 7;</code>
+       * <code>.LunaRiteHintStatusType hint_status = 1;</code>
        * @return The hintStatus.
        */
       @java.lang.Override
@@ -891,7 +891,7 @@ public final class LunaRiteAreaInfoOuterClass {
         return result == null ? emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.LunaRiteHintStatusType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.LunaRiteHintStatusType hint_status = 7;</code>
+       * <code>.LunaRiteHintStatusType hint_status = 1;</code>
        * @param value The hintStatus to set.
        * @return This builder for chaining.
        */
@@ -905,7 +905,7 @@ public final class LunaRiteAreaInfoOuterClass {
         return this;
       }
       /**
-       * <code>.LunaRiteHintStatusType hint_status = 7;</code>
+       * <code>.LunaRiteHintStatusType hint_status = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearHintStatus() {
@@ -915,9 +915,88 @@ public final class LunaRiteAreaInfoOuterClass {
         return this;
       }
 
+      private com.google.protobuf.Internal.IntList sacrificeRewardList_ = emptyIntList();
+      private void ensureSacrificeRewardListIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          sacrificeRewardList_ = mutableCopy(sacrificeRewardList_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated uint32 sacrifice_reward_list = 13;</code>
+       * @return A list containing the sacrificeRewardList.
+       */
+      public java.util.List<java.lang.Integer>
+          getSacrificeRewardListList() {
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(sacrificeRewardList_) : sacrificeRewardList_;
+      }
+      /**
+       * <code>repeated uint32 sacrifice_reward_list = 13;</code>
+       * @return The count of sacrificeRewardList.
+       */
+      public int getSacrificeRewardListCount() {
+        return sacrificeRewardList_.size();
+      }
+      /**
+       * <code>repeated uint32 sacrifice_reward_list = 13;</code>
+       * @param index The index of the element to return.
+       * @return The sacrificeRewardList at the given index.
+       */
+      public int getSacrificeRewardList(int index) {
+        return sacrificeRewardList_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 sacrifice_reward_list = 13;</code>
+       * @param index The index to set the value at.
+       * @param value The sacrificeRewardList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSacrificeRewardList(
+          int index, int value) {
+        ensureSacrificeRewardListIsMutable();
+        sacrificeRewardList_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 sacrifice_reward_list = 13;</code>
+       * @param value The sacrificeRewardList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSacrificeRewardList(int value) {
+        ensureSacrificeRewardListIsMutable();
+        sacrificeRewardList_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 sacrifice_reward_list = 13;</code>
+       * @param values The sacrificeRewardList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSacrificeRewardList(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureSacrificeRewardListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, sacrificeRewardList_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 sacrifice_reward_list = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSacrificeRewardList() {
+        sacrificeRewardList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
       private int challengeIndex_ ;
       /**
-       * <code>uint32 challenge_index = 13;</code>
+       * <code>uint32 challenge_index = 15;</code>
        * @return The challengeIndex.
        */
       @java.lang.Override
@@ -925,7 +1004,7 @@ public final class LunaRiteAreaInfoOuterClass {
         return challengeIndex_;
       }
       /**
-       * <code>uint32 challenge_index = 13;</code>
+       * <code>uint32 challenge_index = 15;</code>
        * @param value The challengeIndex to set.
        * @return This builder for chaining.
        */
@@ -936,91 +1015,12 @@ public final class LunaRiteAreaInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 challenge_index = 13;</code>
+       * <code>uint32 challenge_index = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearChallengeIndex() {
         
         challengeIndex_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Internal.IntList sacrificeList_ = emptyIntList();
-      private void ensureSacrificeListIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          sacrificeList_ = mutableCopy(sacrificeList_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-      /**
-       * <code>repeated uint32 sacrifice_list = 3;</code>
-       * @return A list containing the sacrificeList.
-       */
-      public java.util.List<java.lang.Integer>
-          getSacrificeListList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(sacrificeList_) : sacrificeList_;
-      }
-      /**
-       * <code>repeated uint32 sacrifice_list = 3;</code>
-       * @return The count of sacrificeList.
-       */
-      public int getSacrificeListCount() {
-        return sacrificeList_.size();
-      }
-      /**
-       * <code>repeated uint32 sacrifice_list = 3;</code>
-       * @param index The index of the element to return.
-       * @return The sacrificeList at the given index.
-       */
-      public int getSacrificeList(int index) {
-        return sacrificeList_.getInt(index);
-      }
-      /**
-       * <code>repeated uint32 sacrifice_list = 3;</code>
-       * @param index The index to set the value at.
-       * @param value The sacrificeList to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSacrificeList(
-          int index, int value) {
-        ensureSacrificeListIsMutable();
-        sacrificeList_.setInt(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 sacrifice_list = 3;</code>
-       * @param value The sacrificeList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSacrificeList(int value) {
-        ensureSacrificeListIsMutable();
-        sacrificeList_.addInt(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 sacrifice_list = 3;</code>
-       * @param values The sacrificeList to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllSacrificeList(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureSacrificeListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, sacrificeList_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 sacrifice_list = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSacrificeList() {
-        sacrificeList_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1093,10 +1093,10 @@ public final class LunaRiteAreaInfoOuterClass {
     java.lang.String[] descriptorData = {
       "\n\026LunaRiteAreaInfo.proto\032\034LunaRiteHintSt" +
       "atusType.proto\"\241\001\n\020LunaRiteAreaInfo\022\017\n\007a" +
-      "rea_id\030\t \001(\r\022\035\n\025sacrifice_reward_list\030\005 " +
-      "\003(\r\022,\n\013hint_status\030\007 \001(\0162\027.LunaRiteHintS" +
-      "tatusType\022\027\n\017challenge_index\030\r \001(\r\022\026\n\016sa" +
-      "crifice_list\030\003 \003(\rB\033\n\031emu.grasscutter.ne" +
+      "rea_id\030\016 \001(\r\022\026\n\016sacrifice_list\030\004 \003(\r\022,\n\013" +
+      "hint_status\030\001 \001(\0162\027.LunaRiteHintStatusTy" +
+      "pe\022\035\n\025sacrifice_reward_list\030\r \003(\r\022\027\n\017cha" +
+      "llenge_index\030\017 \001(\rB\033\n\031emu.grasscutter.ne" +
       "t.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -1109,7 +1109,7 @@ public final class LunaRiteAreaInfoOuterClass {
     internal_static_LunaRiteAreaInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_LunaRiteAreaInfo_descriptor,
-        new java.lang.String[] { "AreaId", "SacrificeRewardList", "HintStatus", "ChallengeIndex", "SacrificeList", });
+        new java.lang.String[] { "AreaId", "SacrificeList", "HintStatus", "SacrificeRewardList", "ChallengeIndex", });
     emu.grasscutter.net.proto.LunaRiteHintStatusTypeOuterClass.getDescriptor();
   }
 

@@ -19,38 +19,38 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+     * <code>uint32 difficulty_id = 6;</code>
+     * @return The difficultyId.
+     */
+    int getDifficultyId();
+
+    /**
+     * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
      */
     java.util.List<emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo> 
         getLevelInfoListList();
     /**
-     * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+     * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
      */
     emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo getLevelInfoList(int index);
     /**
-     * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+     * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
      */
     int getLevelInfoListCount();
     /**
-     * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+     * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfoOrBuilder> 
         getLevelInfoListOrBuilderList();
     /**
-     * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+     * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
      */
     emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfoOrBuilder getLevelInfoListOrBuilder(
         int index);
-
-    /**
-     * <code>uint32 difficulty_id = 11;</code>
-     * @return The difficultyId.
-     */
-    int getDifficultyId();
   }
   /**
    * <pre>
-   * Name: AGMMNODNGMD
+   * Name: DGLJAIHGONO
    * </pre>
    *
    * Protobuf type {@code CrystalLinkActivityDetailInfo}
@@ -99,18 +99,18 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 42: {
+            case 48: {
+
+              difficultyId_ = input.readUInt32();
+              break;
+            }
+            case 90: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 levelInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo>();
                 mutable_bitField0_ |= 0x00000001;
               }
               levelInfoList_.add(
                   input.readMessage(emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo.parser(), extensionRegistry));
-              break;
-            }
-            case 88: {
-
-              difficultyId_ = input.readUInt32();
               break;
             }
             default: {
@@ -148,17 +148,28 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
               emu.grasscutter.net.proto.CrystalLinkActivityDetailInfoOuterClass.CrystalLinkActivityDetailInfo.class, emu.grasscutter.net.proto.CrystalLinkActivityDetailInfoOuterClass.CrystalLinkActivityDetailInfo.Builder.class);
     }
 
-    public static final int LEVEL_INFO_LIST_FIELD_NUMBER = 5;
+    public static final int DIFFICULTY_ID_FIELD_NUMBER = 6;
+    private int difficultyId_;
+    /**
+     * <code>uint32 difficulty_id = 6;</code>
+     * @return The difficultyId.
+     */
+    @java.lang.Override
+    public int getDifficultyId() {
+      return difficultyId_;
+    }
+
+    public static final int LEVEL_INFO_LIST_FIELD_NUMBER = 11;
     private java.util.List<emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo> levelInfoList_;
     /**
-     * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+     * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo> getLevelInfoListList() {
       return levelInfoList_;
     }
     /**
-     * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+     * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfoOrBuilder> 
@@ -166,37 +177,26 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
       return levelInfoList_;
     }
     /**
-     * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+     * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
      */
     @java.lang.Override
     public int getLevelInfoListCount() {
       return levelInfoList_.size();
     }
     /**
-     * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+     * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo getLevelInfoList(int index) {
       return levelInfoList_.get(index);
     }
     /**
-     * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+     * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfoOrBuilder getLevelInfoListOrBuilder(
         int index) {
       return levelInfoList_.get(index);
-    }
-
-    public static final int DIFFICULTY_ID_FIELD_NUMBER = 11;
-    private int difficultyId_;
-    /**
-     * <code>uint32 difficulty_id = 11;</code>
-     * @return The difficultyId.
-     */
-    @java.lang.Override
-    public int getDifficultyId() {
-      return difficultyId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -213,11 +213,11 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < levelInfoList_.size(); i++) {
-        output.writeMessage(5, levelInfoList_.get(i));
-      }
       if (difficultyId_ != 0) {
-        output.writeUInt32(11, difficultyId_);
+        output.writeUInt32(6, difficultyId_);
+      }
+      for (int i = 0; i < levelInfoList_.size(); i++) {
+        output.writeMessage(11, levelInfoList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -228,13 +228,13 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < levelInfoList_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, levelInfoList_.get(i));
-      }
       if (difficultyId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, difficultyId_);
+          .computeUInt32Size(6, difficultyId_);
+      }
+      for (int i = 0; i < levelInfoList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, levelInfoList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -251,10 +251,10 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
       }
       emu.grasscutter.net.proto.CrystalLinkActivityDetailInfoOuterClass.CrystalLinkActivityDetailInfo other = (emu.grasscutter.net.proto.CrystalLinkActivityDetailInfoOuterClass.CrystalLinkActivityDetailInfo) obj;
 
-      if (!getLevelInfoListList()
-          .equals(other.getLevelInfoListList())) return false;
       if (getDifficultyId()
           != other.getDifficultyId()) return false;
+      if (!getLevelInfoListList()
+          .equals(other.getLevelInfoListList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -266,12 +266,12 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DIFFICULTY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDifficultyId();
       if (getLevelInfoListCount() > 0) {
         hash = (37 * hash) + LEVEL_INFO_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getLevelInfoListList().hashCode();
       }
-      hash = (37 * hash) + DIFFICULTY_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getDifficultyId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -369,7 +369,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
     }
     /**
      * <pre>
-     * Name: AGMMNODNGMD
+     * Name: DGLJAIHGONO
      * </pre>
      *
      * Protobuf type {@code CrystalLinkActivityDetailInfo}
@@ -410,14 +410,14 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        difficultyId_ = 0;
+
         if (levelInfoListBuilder_ == null) {
           levelInfoList_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           levelInfoListBuilder_.clear();
         }
-        difficultyId_ = 0;
-
         return this;
       }
 
@@ -445,6 +445,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
       public emu.grasscutter.net.proto.CrystalLinkActivityDetailInfoOuterClass.CrystalLinkActivityDetailInfo buildPartial() {
         emu.grasscutter.net.proto.CrystalLinkActivityDetailInfoOuterClass.CrystalLinkActivityDetailInfo result = new emu.grasscutter.net.proto.CrystalLinkActivityDetailInfoOuterClass.CrystalLinkActivityDetailInfo(this);
         int from_bitField0_ = bitField0_;
+        result.difficultyId_ = difficultyId_;
         if (levelInfoListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             levelInfoList_ = java.util.Collections.unmodifiableList(levelInfoList_);
@@ -454,7 +455,6 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
         } else {
           result.levelInfoList_ = levelInfoListBuilder_.build();
         }
-        result.difficultyId_ = difficultyId_;
         onBuilt();
         return result;
       }
@@ -503,6 +503,9 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.CrystalLinkActivityDetailInfoOuterClass.CrystalLinkActivityDetailInfo other) {
         if (other == emu.grasscutter.net.proto.CrystalLinkActivityDetailInfoOuterClass.CrystalLinkActivityDetailInfo.getDefaultInstance()) return this;
+        if (other.getDifficultyId() != 0) {
+          setDifficultyId(other.getDifficultyId());
+        }
         if (levelInfoListBuilder_ == null) {
           if (!other.levelInfoList_.isEmpty()) {
             if (levelInfoList_.isEmpty()) {
@@ -528,9 +531,6 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
               levelInfoListBuilder_.addAllMessages(other.levelInfoList_);
             }
           }
-        }
-        if (other.getDifficultyId() != 0) {
-          setDifficultyId(other.getDifficultyId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -562,6 +562,37 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
       }
       private int bitField0_;
 
+      private int difficultyId_ ;
+      /**
+       * <code>uint32 difficulty_id = 6;</code>
+       * @return The difficultyId.
+       */
+      @java.lang.Override
+      public int getDifficultyId() {
+        return difficultyId_;
+      }
+      /**
+       * <code>uint32 difficulty_id = 6;</code>
+       * @param value The difficultyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDifficultyId(int value) {
+        
+        difficultyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 difficulty_id = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDifficultyId() {
+        
+        difficultyId_ = 0;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo> levelInfoList_ =
         java.util.Collections.emptyList();
       private void ensureLevelInfoListIsMutable() {
@@ -575,7 +606,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
           emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo, emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo.Builder, emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfoOrBuilder> levelInfoListBuilder_;
 
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo> getLevelInfoListList() {
         if (levelInfoListBuilder_ == null) {
@@ -585,7 +616,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public int getLevelInfoListCount() {
         if (levelInfoListBuilder_ == null) {
@@ -595,7 +626,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo getLevelInfoList(int index) {
         if (levelInfoListBuilder_ == null) {
@@ -605,7 +636,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public Builder setLevelInfoList(
           int index, emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo value) {
@@ -622,7 +653,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public Builder setLevelInfoList(
           int index, emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo.Builder builderForValue) {
@@ -636,7 +667,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public Builder addLevelInfoList(emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo value) {
         if (levelInfoListBuilder_ == null) {
@@ -652,7 +683,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public Builder addLevelInfoList(
           int index, emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo value) {
@@ -669,7 +700,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public Builder addLevelInfoList(
           emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo.Builder builderForValue) {
@@ -683,7 +714,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public Builder addLevelInfoList(
           int index, emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo.Builder builderForValue) {
@@ -697,7 +728,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public Builder addAllLevelInfoList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo> values) {
@@ -712,7 +743,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public Builder clearLevelInfoList() {
         if (levelInfoListBuilder_ == null) {
@@ -725,7 +756,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public Builder removeLevelInfoList(int index) {
         if (levelInfoListBuilder_ == null) {
@@ -738,14 +769,14 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo.Builder getLevelInfoListBuilder(
           int index) {
         return getLevelInfoListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfoOrBuilder getLevelInfoListOrBuilder(
           int index) {
@@ -755,7 +786,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfoOrBuilder> 
            getLevelInfoListOrBuilderList() {
@@ -766,14 +797,14 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo.Builder addLevelInfoListBuilder() {
         return getLevelInfoListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo.Builder addLevelInfoListBuilder(
           int index) {
@@ -781,7 +812,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
             index, emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .CrystalLinkLevelInfo level_info_list = 5;</code>
+       * <code>repeated .CrystalLinkLevelInfo level_info_list = 11;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.CrystalLinkLevelInfo.Builder> 
            getLevelInfoListBuilderList() {
@@ -800,37 +831,6 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
           levelInfoList_ = null;
         }
         return levelInfoListBuilder_;
-      }
-
-      private int difficultyId_ ;
-      /**
-       * <code>uint32 difficulty_id = 11;</code>
-       * @return The difficultyId.
-       */
-      @java.lang.Override
-      public int getDifficultyId() {
-        return difficultyId_;
-      }
-      /**
-       * <code>uint32 difficulty_id = 11;</code>
-       * @param value The difficultyId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDifficultyId(int value) {
-        
-        difficultyId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 difficulty_id = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDifficultyId() {
-        
-        difficultyId_ = 0;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -901,9 +901,9 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
     java.lang.String[] descriptorData = {
       "\n#CrystalLinkActivityDetailInfo.proto\032\032C" +
       "rystalLinkLevelInfo.proto\"f\n\035CrystalLink" +
-      "ActivityDetailInfo\022.\n\017level_info_list\030\005 " +
-      "\003(\0132\025.CrystalLinkLevelInfo\022\025\n\rdifficulty" +
-      "_id\030\013 \001(\rB\033\n\031emu.grasscutter.net.protob\006" +
+      "ActivityDetailInfo\022\025\n\rdifficulty_id\030\006 \001(" +
+      "\r\022.\n\017level_info_list\030\013 \003(\0132\025.CrystalLink" +
+      "LevelInfoB\033\n\031emu.grasscutter.net.protob\006" +
       "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -916,7 +916,7 @@ public final class CrystalLinkActivityDetailInfoOuterClass {
     internal_static_CrystalLinkActivityDetailInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CrystalLinkActivityDetailInfo_descriptor,
-        new java.lang.String[] { "LevelInfoList", "DifficultyId", });
+        new java.lang.String[] { "DifficultyId", "LevelInfoList", });
     emu.grasscutter.net.proto.CrystalLinkLevelInfoOuterClass.getDescriptor();
   }
 

@@ -2,9 +2,10 @@ package emu.grasscutter.server.packet.send;
 
 import emu.grasscutter.net.packet.BasePacket;
 import emu.grasscutter.net.packet.PacketOpcodes;
-import emu.grasscutter.net.proto.PathStatusTypeOuterClass;
 import emu.grasscutter.net.proto.QueryPathReqOuterClass;
 import emu.grasscutter.net.proto.QueryPathRspOuterClass;
+import emu.grasscutter.net.proto.PathStatusTypeOuterClass;
+
 
 public class PacketQueryPathRsp extends BasePacket {
 
@@ -17,6 +18,7 @@ public class PacketQueryPathRsp extends BasePacket {
             .addCorners(req.getDestinationPos(0))
             .setQueryId(req.getQueryId())
             .setQueryStatus(PathStatusTypeOuterClass.PathStatusType.PATH_STATUS_TYPE_SUCC);
+            //.setQueryStatus(QueryPathRspOuterClass.QueryPathRsp.PathStatusType.PATH_STATUS_TYPE_SUCC);
 
         this.setData(proto);
 	}

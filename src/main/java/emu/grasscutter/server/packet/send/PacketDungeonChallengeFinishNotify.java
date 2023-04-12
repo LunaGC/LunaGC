@@ -11,9 +11,9 @@ public class PacketDungeonChallengeFinishNotify extends BasePacket {
 		super(PacketOpcodes.DungeonChallengeFinishNotify, true);
 
 		DungeonChallengeFinishNotify proto = DungeonChallengeFinishNotify.newBuilder()
-            .setChallengeIndex(challenge.getChallengeIndex())
-            .setIsSuccess(challenge.isSuccess())
-            .setChallengeRecordType(2)
+				.setChallengeIndex(challenge.getChallengeIndex())
+				.setIsSuccess(challenge.isSuccess())
+				.setChallengeRecordType(2)
 				.build();
 
 		this.setData(proto);

@@ -44,7 +44,7 @@ public final class CharAmusementDetailInfoOuterClass {
   }
   /**
    * <pre>
-   * Name: OIGIFBHGEMF
+   * Name: EKBKJJNMKFN
    * </pre>
    *
    * Protobuf type {@code CharAmusementDetailInfo}
@@ -336,7 +336,7 @@ public final class CharAmusementDetailInfoOuterClass {
     }
     /**
      * <pre>
-     * Name: OIGIFBHGEMF
+     * Name: EKBKJJNMKFN
      * </pre>
      *
      * Protobuf type {@code CharAmusementDetailInfo}

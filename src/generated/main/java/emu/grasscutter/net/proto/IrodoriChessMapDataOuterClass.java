@@ -19,50 +19,54 @@ public final class IrodoriChessMapDataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 mapId = 13;</code>
-     * @return The mapId.
-     */
-    int getMapId();
-
-    /**
-     * <code>uint32 bestScore = 3;</code>
+     * <code>uint32 best_score = 2;</code>
      * @return The bestScore.
      */
     int getBestScore();
 
     /**
-     * <code>repeated uint32 becodaoleil = 4;</code>
-     * @return A list containing the becodaoleil.
+     * <code>repeated uint32 equiped_card_list = 11;</code>
+     * @return A list containing the equipedCardList.
      */
-    java.util.List<java.lang.Integer> getBecodaoleilList();
+    java.util.List<java.lang.Integer> getEquipedCardListList();
     /**
-     * <code>repeated uint32 becodaoleil = 4;</code>
-     * @return The count of becodaoleil.
+     * <code>repeated uint32 equiped_card_list = 11;</code>
+     * @return The count of equipedCardList.
      */
-    int getBecodaoleilCount();
+    int getEquipedCardListCount();
     /**
-     * <code>repeated uint32 becodaoleil = 4;</code>
+     * <code>repeated uint32 equiped_card_list = 11;</code>
      * @param index The index of the element to return.
-     * @return The becodaoleil at the given index.
+     * @return The equipedCardList at the given index.
      */
-    int getBecodaoleil(int index);
+    int getEquipedCardList(int index);
 
     /**
-     * <code>.IrodoriChessEntranceDetailInfo ajcepcgbnfe = 5;</code>
-     * @return Whether the ajcepcgbnfe field is set.
+     * <code>uint32 map_id = 1;</code>
+     * @return The mapId.
      */
-    boolean hasAjcepcgbnfe();
+    int getMapId();
+
     /**
-     * <code>.IrodoriChessEntranceDetailInfo ajcepcgbnfe = 5;</code>
-     * @return The ajcepcgbnfe.
+     * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 14;</code>
+     * @return Whether the entranceDetailInfo field is set.
      */
-    emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo getAjcepcgbnfe();
+    boolean hasEntranceDetailInfo();
     /**
-     * <code>.IrodoriChessEntranceDetailInfo ajcepcgbnfe = 5;</code>
+     * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 14;</code>
+     * @return The entranceDetailInfo.
      */
-    emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfoOrBuilder getAjcepcgbnfeOrBuilder();
+    emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo getEntranceDetailInfo();
+    /**
+     * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 14;</code>
+     */
+    emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfoOrBuilder getEntranceDetailInfoOrBuilder();
   }
   /**
+   * <pre>
+   * Name: KGEBMHPKFMN
+   * </pre>
+   *
    * Protobuf type {@code IrodoriChessMapData}
    */
   public static final class IrodoriChessMapData extends
@@ -75,7 +79,7 @@ public final class IrodoriChessMapDataOuterClass {
       super(builder);
     }
     private IrodoriChessMapData() {
-      becodaoleil_ = emptyIntList();
+      equipedCardList_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -109,48 +113,48 @@ public final class IrodoriChessMapDataOuterClass {
             case 0:
               done = true;
               break;
-            case 24: {
+            case 8: {
+
+              mapId_ = input.readUInt32();
+              break;
+            }
+            case 16: {
 
               bestScore_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 88: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                becodaoleil_ = newIntList();
+                equipedCardList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              becodaoleil_.addInt(input.readUInt32());
+              equipedCardList_.addInt(input.readUInt32());
               break;
             }
-            case 34: {
+            case 90: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                becodaoleil_ = newIntList();
+                equipedCardList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
               }
               while (input.getBytesUntilLimit() > 0) {
-                becodaoleil_.addInt(input.readUInt32());
+                equipedCardList_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
               break;
             }
-            case 42: {
+            case 114: {
               emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.Builder subBuilder = null;
-              if (ajcepcgbnfe_ != null) {
-                subBuilder = ajcepcgbnfe_.toBuilder();
+              if (entranceDetailInfo_ != null) {
+                subBuilder = entranceDetailInfo_.toBuilder();
               }
-              ajcepcgbnfe_ = input.readMessage(emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.parser(), extensionRegistry);
+              entranceDetailInfo_ = input.readMessage(emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(ajcepcgbnfe_);
-                ajcepcgbnfe_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(entranceDetailInfo_);
+                entranceDetailInfo_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 104: {
-
-              mapId_ = input.readUInt32();
               break;
             }
             default: {
@@ -169,7 +173,7 @@ public final class IrodoriChessMapDataOuterClass {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          becodaoleil_.makeImmutable(); // C
+          equipedCardList_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -188,21 +192,10 @@ public final class IrodoriChessMapDataOuterClass {
               emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.class, emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.Builder.class);
     }
 
-    public static final int MAPID_FIELD_NUMBER = 13;
-    private int mapId_;
-    /**
-     * <code>uint32 mapId = 13;</code>
-     * @return The mapId.
-     */
-    @java.lang.Override
-    public int getMapId() {
-      return mapId_;
-    }
-
-    public static final int BESTSCORE_FIELD_NUMBER = 3;
+    public static final int BEST_SCORE_FIELD_NUMBER = 2;
     private int bestScore_;
     /**
-     * <code>uint32 bestScore = 3;</code>
+     * <code>uint32 best_score = 2;</code>
      * @return The bestScore.
      */
     @java.lang.Override
@@ -210,58 +203,69 @@ public final class IrodoriChessMapDataOuterClass {
       return bestScore_;
     }
 
-    public static final int BECODAOLEIL_FIELD_NUMBER = 4;
-    private com.google.protobuf.Internal.IntList becodaoleil_;
+    public static final int EQUIPED_CARD_LIST_FIELD_NUMBER = 11;
+    private com.google.protobuf.Internal.IntList equipedCardList_;
     /**
-     * <code>repeated uint32 becodaoleil = 4;</code>
-     * @return A list containing the becodaoleil.
+     * <code>repeated uint32 equiped_card_list = 11;</code>
+     * @return A list containing the equipedCardList.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getBecodaoleilList() {
-      return becodaoleil_;
+        getEquipedCardListList() {
+      return equipedCardList_;
     }
     /**
-     * <code>repeated uint32 becodaoleil = 4;</code>
-     * @return The count of becodaoleil.
+     * <code>repeated uint32 equiped_card_list = 11;</code>
+     * @return The count of equipedCardList.
      */
-    public int getBecodaoleilCount() {
-      return becodaoleil_.size();
+    public int getEquipedCardListCount() {
+      return equipedCardList_.size();
     }
     /**
-     * <code>repeated uint32 becodaoleil = 4;</code>
+     * <code>repeated uint32 equiped_card_list = 11;</code>
      * @param index The index of the element to return.
-     * @return The becodaoleil at the given index.
+     * @return The equipedCardList at the given index.
      */
-    public int getBecodaoleil(int index) {
-      return becodaoleil_.getInt(index);
+    public int getEquipedCardList(int index) {
+      return equipedCardList_.getInt(index);
     }
-    private int becodaoleilMemoizedSerializedSize = -1;
+    private int equipedCardListMemoizedSerializedSize = -1;
 
-    public static final int AJCEPCGBNFE_FIELD_NUMBER = 5;
-    private emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo ajcepcgbnfe_;
+    public static final int MAP_ID_FIELD_NUMBER = 1;
+    private int mapId_;
     /**
-     * <code>.IrodoriChessEntranceDetailInfo ajcepcgbnfe = 5;</code>
-     * @return Whether the ajcepcgbnfe field is set.
+     * <code>uint32 map_id = 1;</code>
+     * @return The mapId.
      */
     @java.lang.Override
-    public boolean hasAjcepcgbnfe() {
-      return ajcepcgbnfe_ != null;
+    public int getMapId() {
+      return mapId_;
+    }
+
+    public static final int ENTRANCE_DETAIL_INFO_FIELD_NUMBER = 14;
+    private emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo entranceDetailInfo_;
+    /**
+     * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 14;</code>
+     * @return Whether the entranceDetailInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasEntranceDetailInfo() {
+      return entranceDetailInfo_ != null;
     }
     /**
-     * <code>.IrodoriChessEntranceDetailInfo ajcepcgbnfe = 5;</code>
-     * @return The ajcepcgbnfe.
+     * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 14;</code>
+     * @return The entranceDetailInfo.
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo getAjcepcgbnfe() {
-      return ajcepcgbnfe_ == null ? emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.getDefaultInstance() : ajcepcgbnfe_;
+    public emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo getEntranceDetailInfo() {
+      return entranceDetailInfo_ == null ? emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.getDefaultInstance() : entranceDetailInfo_;
     }
     /**
-     * <code>.IrodoriChessEntranceDetailInfo ajcepcgbnfe = 5;</code>
+     * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 14;</code>
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfoOrBuilder getAjcepcgbnfeOrBuilder() {
-      return getAjcepcgbnfe();
+    public emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfoOrBuilder getEntranceDetailInfoOrBuilder() {
+      return getEntranceDetailInfo();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -279,21 +283,21 @@ public final class IrodoriChessMapDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (bestScore_ != 0) {
-        output.writeUInt32(3, bestScore_);
-      }
-      if (getBecodaoleilList().size() > 0) {
-        output.writeUInt32NoTag(34);
-        output.writeUInt32NoTag(becodaoleilMemoizedSerializedSize);
-      }
-      for (int i = 0; i < becodaoleil_.size(); i++) {
-        output.writeUInt32NoTag(becodaoleil_.getInt(i));
-      }
-      if (ajcepcgbnfe_ != null) {
-        output.writeMessage(5, getAjcepcgbnfe());
-      }
       if (mapId_ != 0) {
-        output.writeUInt32(13, mapId_);
+        output.writeUInt32(1, mapId_);
+      }
+      if (bestScore_ != 0) {
+        output.writeUInt32(2, bestScore_);
+      }
+      if (getEquipedCardListList().size() > 0) {
+        output.writeUInt32NoTag(90);
+        output.writeUInt32NoTag(equipedCardListMemoizedSerializedSize);
+      }
+      for (int i = 0; i < equipedCardList_.size(); i++) {
+        output.writeUInt32NoTag(equipedCardList_.getInt(i));
+      }
+      if (entranceDetailInfo_ != null) {
+        output.writeMessage(14, getEntranceDetailInfo());
       }
       unknownFields.writeTo(output);
     }
@@ -304,31 +308,31 @@ public final class IrodoriChessMapDataOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (mapId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, mapId_);
+      }
       if (bestScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, bestScore_);
+          .computeUInt32Size(2, bestScore_);
       }
       {
         int dataSize = 0;
-        for (int i = 0; i < becodaoleil_.size(); i++) {
+        for (int i = 0; i < equipedCardList_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(becodaoleil_.getInt(i));
+            .computeUInt32SizeNoTag(equipedCardList_.getInt(i));
         }
         size += dataSize;
-        if (!getBecodaoleilList().isEmpty()) {
+        if (!getEquipedCardListList().isEmpty()) {
           size += 1;
           size += com.google.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
-        becodaoleilMemoizedSerializedSize = dataSize;
+        equipedCardListMemoizedSerializedSize = dataSize;
       }
-      if (ajcepcgbnfe_ != null) {
+      if (entranceDetailInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getAjcepcgbnfe());
-      }
-      if (mapId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, mapId_);
+          .computeMessageSize(14, getEntranceDetailInfo());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -345,16 +349,16 @@ public final class IrodoriChessMapDataOuterClass {
       }
       emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData other = (emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData) obj;
 
-      if (getMapId()
-          != other.getMapId()) return false;
       if (getBestScore()
           != other.getBestScore()) return false;
-      if (!getBecodaoleilList()
-          .equals(other.getBecodaoleilList())) return false;
-      if (hasAjcepcgbnfe() != other.hasAjcepcgbnfe()) return false;
-      if (hasAjcepcgbnfe()) {
-        if (!getAjcepcgbnfe()
-            .equals(other.getAjcepcgbnfe())) return false;
+      if (!getEquipedCardListList()
+          .equals(other.getEquipedCardListList())) return false;
+      if (getMapId()
+          != other.getMapId()) return false;
+      if (hasEntranceDetailInfo() != other.hasEntranceDetailInfo()) return false;
+      if (hasEntranceDetailInfo()) {
+        if (!getEntranceDetailInfo()
+            .equals(other.getEntranceDetailInfo())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -367,17 +371,17 @@ public final class IrodoriChessMapDataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MAPID_FIELD_NUMBER;
-      hash = (53 * hash) + getMapId();
-      hash = (37 * hash) + BESTSCORE_FIELD_NUMBER;
+      hash = (37 * hash) + BEST_SCORE_FIELD_NUMBER;
       hash = (53 * hash) + getBestScore();
-      if (getBecodaoleilCount() > 0) {
-        hash = (37 * hash) + BECODAOLEIL_FIELD_NUMBER;
-        hash = (53 * hash) + getBecodaoleilList().hashCode();
+      if (getEquipedCardListCount() > 0) {
+        hash = (37 * hash) + EQUIPED_CARD_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getEquipedCardListList().hashCode();
       }
-      if (hasAjcepcgbnfe()) {
-        hash = (37 * hash) + AJCEPCGBNFE_FIELD_NUMBER;
-        hash = (53 * hash) + getAjcepcgbnfe().hashCode();
+      hash = (37 * hash) + MAP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getMapId();
+      if (hasEntranceDetailInfo()) {
+        hash = (37 * hash) + ENTRANCE_DETAIL_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getEntranceDetailInfo().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -475,6 +479,10 @@ public final class IrodoriChessMapDataOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: KGEBMHPKFMN
+     * </pre>
+     *
      * Protobuf type {@code IrodoriChessMapData}
      */
     public static final class Builder extends
@@ -512,17 +520,17 @@ public final class IrodoriChessMapDataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        mapId_ = 0;
-
         bestScore_ = 0;
 
-        becodaoleil_ = emptyIntList();
+        equipedCardList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
-        if (ajcepcgbnfeBuilder_ == null) {
-          ajcepcgbnfe_ = null;
+        mapId_ = 0;
+
+        if (entranceDetailInfoBuilder_ == null) {
+          entranceDetailInfo_ = null;
         } else {
-          ajcepcgbnfe_ = null;
-          ajcepcgbnfeBuilder_ = null;
+          entranceDetailInfo_ = null;
+          entranceDetailInfoBuilder_ = null;
         }
         return this;
       }
@@ -551,17 +559,17 @@ public final class IrodoriChessMapDataOuterClass {
       public emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData buildPartial() {
         emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData result = new emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData(this);
         int from_bitField0_ = bitField0_;
-        result.mapId_ = mapId_;
         result.bestScore_ = bestScore_;
         if (((bitField0_ & 0x00000001) != 0)) {
-          becodaoleil_.makeImmutable();
+          equipedCardList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.becodaoleil_ = becodaoleil_;
-        if (ajcepcgbnfeBuilder_ == null) {
-          result.ajcepcgbnfe_ = ajcepcgbnfe_;
+        result.equipedCardList_ = equipedCardList_;
+        result.mapId_ = mapId_;
+        if (entranceDetailInfoBuilder_ == null) {
+          result.entranceDetailInfo_ = entranceDetailInfo_;
         } else {
-          result.ajcepcgbnfe_ = ajcepcgbnfeBuilder_.build();
+          result.entranceDetailInfo_ = entranceDetailInfoBuilder_.build();
         }
         onBuilt();
         return result;
@@ -611,24 +619,24 @@ public final class IrodoriChessMapDataOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData other) {
         if (other == emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.getDefaultInstance()) return this;
-        if (other.getMapId() != 0) {
-          setMapId(other.getMapId());
-        }
         if (other.getBestScore() != 0) {
           setBestScore(other.getBestScore());
         }
-        if (!other.becodaoleil_.isEmpty()) {
-          if (becodaoleil_.isEmpty()) {
-            becodaoleil_ = other.becodaoleil_;
+        if (!other.equipedCardList_.isEmpty()) {
+          if (equipedCardList_.isEmpty()) {
+            equipedCardList_ = other.equipedCardList_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureBecodaoleilIsMutable();
-            becodaoleil_.addAll(other.becodaoleil_);
+            ensureEquipedCardListIsMutable();
+            equipedCardList_.addAll(other.equipedCardList_);
           }
           onChanged();
         }
-        if (other.hasAjcepcgbnfe()) {
-          mergeAjcepcgbnfe(other.getAjcepcgbnfe());
+        if (other.getMapId() != 0) {
+          setMapId(other.getMapId());
+        }
+        if (other.hasEntranceDetailInfo()) {
+          mergeEntranceDetailInfo(other.getEntranceDetailInfo());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -660,40 +668,9 @@ public final class IrodoriChessMapDataOuterClass {
       }
       private int bitField0_;
 
-      private int mapId_ ;
-      /**
-       * <code>uint32 mapId = 13;</code>
-       * @return The mapId.
-       */
-      @java.lang.Override
-      public int getMapId() {
-        return mapId_;
-      }
-      /**
-       * <code>uint32 mapId = 13;</code>
-       * @param value The mapId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMapId(int value) {
-        
-        mapId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 mapId = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMapId() {
-        
-        mapId_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int bestScore_ ;
       /**
-       * <code>uint32 bestScore = 3;</code>
+       * <code>uint32 best_score = 2;</code>
        * @return The bestScore.
        */
       @java.lang.Override
@@ -701,7 +678,7 @@ public final class IrodoriChessMapDataOuterClass {
         return bestScore_;
       }
       /**
-       * <code>uint32 bestScore = 3;</code>
+       * <code>uint32 best_score = 2;</code>
        * @param value The bestScore to set.
        * @return This builder for chaining.
        */
@@ -712,7 +689,7 @@ public final class IrodoriChessMapDataOuterClass {
         return this;
       }
       /**
-       * <code>uint32 bestScore = 3;</code>
+       * <code>uint32 best_score = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearBestScore() {
@@ -722,202 +699,233 @@ public final class IrodoriChessMapDataOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList becodaoleil_ = emptyIntList();
-      private void ensureBecodaoleilIsMutable() {
+      private com.google.protobuf.Internal.IntList equipedCardList_ = emptyIntList();
+      private void ensureEquipedCardListIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          becodaoleil_ = mutableCopy(becodaoleil_);
+          equipedCardList_ = mutableCopy(equipedCardList_);
           bitField0_ |= 0x00000001;
          }
       }
       /**
-       * <code>repeated uint32 becodaoleil = 4;</code>
-       * @return A list containing the becodaoleil.
+       * <code>repeated uint32 equiped_card_list = 11;</code>
+       * @return A list containing the equipedCardList.
        */
       public java.util.List<java.lang.Integer>
-          getBecodaoleilList() {
+          getEquipedCardListList() {
         return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(becodaoleil_) : becodaoleil_;
+                 java.util.Collections.unmodifiableList(equipedCardList_) : equipedCardList_;
       }
       /**
-       * <code>repeated uint32 becodaoleil = 4;</code>
-       * @return The count of becodaoleil.
+       * <code>repeated uint32 equiped_card_list = 11;</code>
+       * @return The count of equipedCardList.
        */
-      public int getBecodaoleilCount() {
-        return becodaoleil_.size();
+      public int getEquipedCardListCount() {
+        return equipedCardList_.size();
       }
       /**
-       * <code>repeated uint32 becodaoleil = 4;</code>
+       * <code>repeated uint32 equiped_card_list = 11;</code>
        * @param index The index of the element to return.
-       * @return The becodaoleil at the given index.
+       * @return The equipedCardList at the given index.
        */
-      public int getBecodaoleil(int index) {
-        return becodaoleil_.getInt(index);
+      public int getEquipedCardList(int index) {
+        return equipedCardList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 becodaoleil = 4;</code>
+       * <code>repeated uint32 equiped_card_list = 11;</code>
        * @param index The index to set the value at.
-       * @param value The becodaoleil to set.
+       * @param value The equipedCardList to set.
        * @return This builder for chaining.
        */
-      public Builder setBecodaoleil(
+      public Builder setEquipedCardList(
           int index, int value) {
-        ensureBecodaoleilIsMutable();
-        becodaoleil_.setInt(index, value);
+        ensureEquipedCardListIsMutable();
+        equipedCardList_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 becodaoleil = 4;</code>
-       * @param value The becodaoleil to add.
+       * <code>repeated uint32 equiped_card_list = 11;</code>
+       * @param value The equipedCardList to add.
        * @return This builder for chaining.
        */
-      public Builder addBecodaoleil(int value) {
-        ensureBecodaoleilIsMutable();
-        becodaoleil_.addInt(value);
+      public Builder addEquipedCardList(int value) {
+        ensureEquipedCardListIsMutable();
+        equipedCardList_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 becodaoleil = 4;</code>
-       * @param values The becodaoleil to add.
+       * <code>repeated uint32 equiped_card_list = 11;</code>
+       * @param values The equipedCardList to add.
        * @return This builder for chaining.
        */
-      public Builder addAllBecodaoleil(
+      public Builder addAllEquipedCardList(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureBecodaoleilIsMutable();
+        ensureEquipedCardListIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, becodaoleil_);
+            values, equipedCardList_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 becodaoleil = 4;</code>
+       * <code>repeated uint32 equiped_card_list = 11;</code>
        * @return This builder for chaining.
        */
-      public Builder clearBecodaoleil() {
-        becodaoleil_ = emptyIntList();
+      public Builder clearEquipedCardList() {
+        equipedCardList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
 
-      private emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo ajcepcgbnfe_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo, emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.Builder, emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfoOrBuilder> ajcepcgbnfeBuilder_;
+      private int mapId_ ;
       /**
-       * <code>.IrodoriChessEntranceDetailInfo ajcepcgbnfe = 5;</code>
-       * @return Whether the ajcepcgbnfe field is set.
+       * <code>uint32 map_id = 1;</code>
+       * @return The mapId.
        */
-      public boolean hasAjcepcgbnfe() {
-        return ajcepcgbnfeBuilder_ != null || ajcepcgbnfe_ != null;
+      @java.lang.Override
+      public int getMapId() {
+        return mapId_;
       }
       /**
-       * <code>.IrodoriChessEntranceDetailInfo ajcepcgbnfe = 5;</code>
-       * @return The ajcepcgbnfe.
+       * <code>uint32 map_id = 1;</code>
+       * @param value The mapId to set.
+       * @return This builder for chaining.
        */
-      public emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo getAjcepcgbnfe() {
-        if (ajcepcgbnfeBuilder_ == null) {
-          return ajcepcgbnfe_ == null ? emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.getDefaultInstance() : ajcepcgbnfe_;
+      public Builder setMapId(int value) {
+        
+        mapId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 map_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMapId() {
+        
+        mapId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo entranceDetailInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo, emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.Builder, emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfoOrBuilder> entranceDetailInfoBuilder_;
+      /**
+       * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 14;</code>
+       * @return Whether the entranceDetailInfo field is set.
+       */
+      public boolean hasEntranceDetailInfo() {
+        return entranceDetailInfoBuilder_ != null || entranceDetailInfo_ != null;
+      }
+      /**
+       * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 14;</code>
+       * @return The entranceDetailInfo.
+       */
+      public emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo getEntranceDetailInfo() {
+        if (entranceDetailInfoBuilder_ == null) {
+          return entranceDetailInfo_ == null ? emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.getDefaultInstance() : entranceDetailInfo_;
         } else {
-          return ajcepcgbnfeBuilder_.getMessage();
+          return entranceDetailInfoBuilder_.getMessage();
         }
       }
       /**
-       * <code>.IrodoriChessEntranceDetailInfo ajcepcgbnfe = 5;</code>
+       * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 14;</code>
        */
-      public Builder setAjcepcgbnfe(emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo value) {
-        if (ajcepcgbnfeBuilder_ == null) {
+      public Builder setEntranceDetailInfo(emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo value) {
+        if (entranceDetailInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ajcepcgbnfe_ = value;
+          entranceDetailInfo_ = value;
           onChanged();
         } else {
-          ajcepcgbnfeBuilder_.setMessage(value);
+          entranceDetailInfoBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.IrodoriChessEntranceDetailInfo ajcepcgbnfe = 5;</code>
+       * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 14;</code>
        */
-      public Builder setAjcepcgbnfe(
+      public Builder setEntranceDetailInfo(
           emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.Builder builderForValue) {
-        if (ajcepcgbnfeBuilder_ == null) {
-          ajcepcgbnfe_ = builderForValue.build();
+        if (entranceDetailInfoBuilder_ == null) {
+          entranceDetailInfo_ = builderForValue.build();
           onChanged();
         } else {
-          ajcepcgbnfeBuilder_.setMessage(builderForValue.build());
+          entranceDetailInfoBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.IrodoriChessEntranceDetailInfo ajcepcgbnfe = 5;</code>
+       * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 14;</code>
        */
-      public Builder mergeAjcepcgbnfe(emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo value) {
-        if (ajcepcgbnfeBuilder_ == null) {
-          if (ajcepcgbnfe_ != null) {
-            ajcepcgbnfe_ =
-              emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.newBuilder(ajcepcgbnfe_).mergeFrom(value).buildPartial();
+      public Builder mergeEntranceDetailInfo(emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo value) {
+        if (entranceDetailInfoBuilder_ == null) {
+          if (entranceDetailInfo_ != null) {
+            entranceDetailInfo_ =
+              emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.newBuilder(entranceDetailInfo_).mergeFrom(value).buildPartial();
           } else {
-            ajcepcgbnfe_ = value;
+            entranceDetailInfo_ = value;
           }
           onChanged();
         } else {
-          ajcepcgbnfeBuilder_.mergeFrom(value);
+          entranceDetailInfoBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.IrodoriChessEntranceDetailInfo ajcepcgbnfe = 5;</code>
+       * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 14;</code>
        */
-      public Builder clearAjcepcgbnfe() {
-        if (ajcepcgbnfeBuilder_ == null) {
-          ajcepcgbnfe_ = null;
+      public Builder clearEntranceDetailInfo() {
+        if (entranceDetailInfoBuilder_ == null) {
+          entranceDetailInfo_ = null;
           onChanged();
         } else {
-          ajcepcgbnfe_ = null;
-          ajcepcgbnfeBuilder_ = null;
+          entranceDetailInfo_ = null;
+          entranceDetailInfoBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.IrodoriChessEntranceDetailInfo ajcepcgbnfe = 5;</code>
+       * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 14;</code>
        */
-      public emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.Builder getAjcepcgbnfeBuilder() {
+      public emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.Builder getEntranceDetailInfoBuilder() {
         
         onChanged();
-        return getAjcepcgbnfeFieldBuilder().getBuilder();
+        return getEntranceDetailInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.IrodoriChessEntranceDetailInfo ajcepcgbnfe = 5;</code>
+       * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 14;</code>
        */
-      public emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfoOrBuilder getAjcepcgbnfeOrBuilder() {
-        if (ajcepcgbnfeBuilder_ != null) {
-          return ajcepcgbnfeBuilder_.getMessageOrBuilder();
+      public emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfoOrBuilder getEntranceDetailInfoOrBuilder() {
+        if (entranceDetailInfoBuilder_ != null) {
+          return entranceDetailInfoBuilder_.getMessageOrBuilder();
         } else {
-          return ajcepcgbnfe_ == null ?
-              emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.getDefaultInstance() : ajcepcgbnfe_;
+          return entranceDetailInfo_ == null ?
+              emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.getDefaultInstance() : entranceDetailInfo_;
         }
       }
       /**
-       * <code>.IrodoriChessEntranceDetailInfo ajcepcgbnfe = 5;</code>
+       * <code>.IrodoriChessEntranceDetailInfo entrance_detail_info = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo, emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.Builder, emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfoOrBuilder> 
-          getAjcepcgbnfeFieldBuilder() {
-        if (ajcepcgbnfeBuilder_ == null) {
-          ajcepcgbnfeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getEntranceDetailInfoFieldBuilder() {
+        if (entranceDetailInfoBuilder_ == null) {
+          entranceDetailInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo, emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfo.Builder, emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.IrodoriChessEntranceDetailInfoOrBuilder>(
-                  getAjcepcgbnfe(),
+                  getEntranceDetailInfo(),
                   getParentForChildren(),
                   isClean());
-          ajcepcgbnfe_ = null;
+          entranceDetailInfo_ = null;
         }
-        return ajcepcgbnfeBuilder_;
+        return entranceDetailInfoBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -987,11 +995,12 @@ public final class IrodoriChessMapDataOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\031IrodoriChessMapData.proto\032$IrodoriChes" +
-      "sEntranceDetailInfo.proto\"\202\001\n\023IrodoriChe" +
-      "ssMapData\022\r\n\005mapId\030\r \001(\r\022\021\n\tbestScore\030\003 " +
-      "\001(\r\022\023\n\013becodaoleil\030\004 \003(\r\0224\n\013ajcepcgbnfe\030" +
-      "\005 \001(\0132\037.IrodoriChessEntranceDetailInfoB\033" +
-      "\n\031emu.grasscutter.net.protob\006proto3"
+      "sEntranceDetailInfo.proto\"\223\001\n\023IrodoriChe" +
+      "ssMapData\022\022\n\nbest_score\030\002 \001(\r\022\031\n\021equiped" +
+      "_card_list\030\013 \003(\r\022\016\n\006map_id\030\001 \001(\r\022=\n\024entr" +
+      "ance_detail_info\030\016 \001(\0132\037.IrodoriChessEnt" +
+      "ranceDetailInfoB\033\n\031emu.grasscutter.net.p" +
+      "rotob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1003,7 +1012,7 @@ public final class IrodoriChessMapDataOuterClass {
     internal_static_IrodoriChessMapData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_IrodoriChessMapData_descriptor,
-        new java.lang.String[] { "MapId", "BestScore", "Becodaoleil", "Ajcepcgbnfe", });
+        new java.lang.String[] { "BestScore", "EquipedCardList", "MapId", "EntranceDetailInfo", });
     emu.grasscutter.net.proto.IrodoriChessEntranceDetailInfoOuterClass.getDescriptor();
   }
 

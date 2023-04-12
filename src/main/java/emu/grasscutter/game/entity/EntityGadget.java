@@ -33,20 +33,19 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.util.Optional;
-
 import javax.annotation.Nullable;
+import java.util.Optional;
 
 @ToString(callSuper = true)
 public class EntityGadget extends EntityBaseGadget {
     @Getter private final GadgetData gadgetData;
-    @Getter(onMethod = @__(@Override)) @Setter
+    @Getter(onMethod_ = @Override) @Setter
     private int gadgetId;
 
     @Getter @Setter private int state;
     @Getter @Setter private int pointType;
     @Getter private GadgetContent content;
-    @Getter(onMethod = @__(@Override), lazy = true)
+    @Getter(onMethod_ = @Override, lazy = true)
     private final Int2FloatMap fightProperties = new Int2FloatOpenHashMap();
     @Getter @Setter private SceneGadget metaGadget;
     @Nullable @Getter
@@ -88,7 +87,11 @@ public class EntityGadget extends EntityBaseGadget {
         }
 
         this.content = switch (this.getGadgetData().getType()) {
-            case GatherPoint -> new GadgetGatherPoint(this);
+            //FIXME
+            case GatherPoint -> {
+                var gatherData = GameData.getGatherDataMap().get(this.getPointType());
+                yield gatherData == null ? null : new GadgetGatherPoint(this);
+            }
             case GatherObject -> new GadgetGatherObject(this);
             case Worktop -> new GadgetWorktop(this);
             case RewardStatue -> new GadgetRewardStatue(this);

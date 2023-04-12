@@ -19,44 +19,44 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <code>uint32 AAJHMCMOPPK = 6;</code>
+     * @return The aAJHMCMOPPK.
+     */
+    int getAAJHMCMOPPK();
+
+    /**
+     * <code>bool BJEHPHPGLFG = 5;</code>
+     * @return The bJEHPHPGLFG.
+     */
+    boolean getBJEHPHPGLFG();
+
+    /**
      * <code>uint32 challenge_mode_difficulty = 7;</code>
      * @return The challengeModeDifficulty.
      */
     int getChallengeModeDifficulty();
 
     /**
-     * <code>uint32 GBBHFOMPFCF = 8;</code>
-     * @return The gBBHFOMPFCF.
+     * <code>bool PBHJDAKBIDJ = 12;</code>
+     * @return The pBHJDAKBIDJ.
      */
-    int getGBBHFOMPFCF();
+    boolean getPBHJDAKBIDJ();
 
     /**
-     * <code>bool PADHFINHGPK = 2;</code>
-     * @return The pADHFINHGPK.
+     * <code>uint32 DHPALCOAOJL = 14;</code>
+     * @return The dHPALCOAOJL.
      */
-    boolean getPADHFINHGPK();
+    int getDHPALCOAOJL();
 
     /**
-     * <code>uint32 LHKLBOBEICJ = 13;</code>
-     * @return The lHKLBOBEICJ.
+     * <code>uint32 JMPHBGFNOHF = 3;</code>
+     * @return The jMPHBGFNOHF.
      */
-    int getLHKLBOBEICJ();
-
-    /**
-     * <code>uint32 FPBLABLPOPO = 14;</code>
-     * @return The fPBLABLPOPO.
-     */
-    int getFPBLABLPOPO();
-
-    /**
-     * <code>bool NFFENFICGFF = 4;</code>
-     * @return The nFFENFICGFF.
-     */
-    boolean getNFFENFICGFF();
+    int getJMPHBGFNOHF();
   }
   /**
    * <pre>
-   * Name: FCDJFEIIFCP
+   * Name: LEOINEGNPCH
    * </pre>
    *
    * Protobuf type {@code EffigyChallengeV2SettleInfo}
@@ -103,14 +103,19 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
+            case 24: {
 
-              pADHFINHGPK_ = input.readBool();
+              jMPHBGFNOHF_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 40: {
 
-              nFFENFICGFF_ = input.readBool();
+              bJEHPHPGLFG_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              aAJHMCMOPPK_ = input.readUInt32();
               break;
             }
             case 56: {
@@ -118,19 +123,14 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
               challengeModeDifficulty_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 96: {
 
-              gBBHFOMPFCF_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              lHKLBOBEICJ_ = input.readUInt32();
+              pBHJDAKBIDJ_ = input.readBool();
               break;
             }
             case 112: {
 
-              fPBLABLPOPO_ = input.readUInt32();
+              dHPALCOAOJL_ = input.readUInt32();
               break;
             }
             default: {
@@ -165,6 +165,28 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
               emu.grasscutter.net.proto.EffigyChallengeV2SettleInfoOuterClass.EffigyChallengeV2SettleInfo.class, emu.grasscutter.net.proto.EffigyChallengeV2SettleInfoOuterClass.EffigyChallengeV2SettleInfo.Builder.class);
     }
 
+    public static final int AAJHMCMOPPK_FIELD_NUMBER = 6;
+    private int aAJHMCMOPPK_;
+    /**
+     * <code>uint32 AAJHMCMOPPK = 6;</code>
+     * @return The aAJHMCMOPPK.
+     */
+    @java.lang.Override
+    public int getAAJHMCMOPPK() {
+      return aAJHMCMOPPK_;
+    }
+
+    public static final int BJEHPHPGLFG_FIELD_NUMBER = 5;
+    private boolean bJEHPHPGLFG_;
+    /**
+     * <code>bool BJEHPHPGLFG = 5;</code>
+     * @return The bJEHPHPGLFG.
+     */
+    @java.lang.Override
+    public boolean getBJEHPHPGLFG() {
+      return bJEHPHPGLFG_;
+    }
+
     public static final int CHALLENGE_MODE_DIFFICULTY_FIELD_NUMBER = 7;
     private int challengeModeDifficulty_;
     /**
@@ -176,59 +198,37 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
       return challengeModeDifficulty_;
     }
 
-    public static final int GBBHFOMPFCF_FIELD_NUMBER = 8;
-    private int gBBHFOMPFCF_;
+    public static final int PBHJDAKBIDJ_FIELD_NUMBER = 12;
+    private boolean pBHJDAKBIDJ_;
     /**
-     * <code>uint32 GBBHFOMPFCF = 8;</code>
-     * @return The gBBHFOMPFCF.
+     * <code>bool PBHJDAKBIDJ = 12;</code>
+     * @return The pBHJDAKBIDJ.
      */
     @java.lang.Override
-    public int getGBBHFOMPFCF() {
-      return gBBHFOMPFCF_;
+    public boolean getPBHJDAKBIDJ() {
+      return pBHJDAKBIDJ_;
     }
 
-    public static final int PADHFINHGPK_FIELD_NUMBER = 2;
-    private boolean pADHFINHGPK_;
+    public static final int DHPALCOAOJL_FIELD_NUMBER = 14;
+    private int dHPALCOAOJL_;
     /**
-     * <code>bool PADHFINHGPK = 2;</code>
-     * @return The pADHFINHGPK.
+     * <code>uint32 DHPALCOAOJL = 14;</code>
+     * @return The dHPALCOAOJL.
      */
     @java.lang.Override
-    public boolean getPADHFINHGPK() {
-      return pADHFINHGPK_;
+    public int getDHPALCOAOJL() {
+      return dHPALCOAOJL_;
     }
 
-    public static final int LHKLBOBEICJ_FIELD_NUMBER = 13;
-    private int lHKLBOBEICJ_;
+    public static final int JMPHBGFNOHF_FIELD_NUMBER = 3;
+    private int jMPHBGFNOHF_;
     /**
-     * <code>uint32 LHKLBOBEICJ = 13;</code>
-     * @return The lHKLBOBEICJ.
+     * <code>uint32 JMPHBGFNOHF = 3;</code>
+     * @return The jMPHBGFNOHF.
      */
     @java.lang.Override
-    public int getLHKLBOBEICJ() {
-      return lHKLBOBEICJ_;
-    }
-
-    public static final int FPBLABLPOPO_FIELD_NUMBER = 14;
-    private int fPBLABLPOPO_;
-    /**
-     * <code>uint32 FPBLABLPOPO = 14;</code>
-     * @return The fPBLABLPOPO.
-     */
-    @java.lang.Override
-    public int getFPBLABLPOPO() {
-      return fPBLABLPOPO_;
-    }
-
-    public static final int NFFENFICGFF_FIELD_NUMBER = 4;
-    private boolean nFFENFICGFF_;
-    /**
-     * <code>bool NFFENFICGFF = 4;</code>
-     * @return The nFFENFICGFF.
-     */
-    @java.lang.Override
-    public boolean getNFFENFICGFF() {
-      return nFFENFICGFF_;
+    public int getJMPHBGFNOHF() {
+      return jMPHBGFNOHF_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -245,23 +245,23 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pADHFINHGPK_ != false) {
-        output.writeBool(2, pADHFINHGPK_);
+      if (jMPHBGFNOHF_ != 0) {
+        output.writeUInt32(3, jMPHBGFNOHF_);
       }
-      if (nFFENFICGFF_ != false) {
-        output.writeBool(4, nFFENFICGFF_);
+      if (bJEHPHPGLFG_ != false) {
+        output.writeBool(5, bJEHPHPGLFG_);
+      }
+      if (aAJHMCMOPPK_ != 0) {
+        output.writeUInt32(6, aAJHMCMOPPK_);
       }
       if (challengeModeDifficulty_ != 0) {
         output.writeUInt32(7, challengeModeDifficulty_);
       }
-      if (gBBHFOMPFCF_ != 0) {
-        output.writeUInt32(8, gBBHFOMPFCF_);
+      if (pBHJDAKBIDJ_ != false) {
+        output.writeBool(12, pBHJDAKBIDJ_);
       }
-      if (lHKLBOBEICJ_ != 0) {
-        output.writeUInt32(13, lHKLBOBEICJ_);
-      }
-      if (fPBLABLPOPO_ != 0) {
-        output.writeUInt32(14, fPBLABLPOPO_);
+      if (dHPALCOAOJL_ != 0) {
+        output.writeUInt32(14, dHPALCOAOJL_);
       }
       unknownFields.writeTo(output);
     }
@@ -272,29 +272,29 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (pADHFINHGPK_ != false) {
+      if (jMPHBGFNOHF_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, pADHFINHGPK_);
+          .computeUInt32Size(3, jMPHBGFNOHF_);
       }
-      if (nFFENFICGFF_ != false) {
+      if (bJEHPHPGLFG_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, nFFENFICGFF_);
+          .computeBoolSize(5, bJEHPHPGLFG_);
+      }
+      if (aAJHMCMOPPK_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, aAJHMCMOPPK_);
       }
       if (challengeModeDifficulty_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(7, challengeModeDifficulty_);
       }
-      if (gBBHFOMPFCF_ != 0) {
+      if (pBHJDAKBIDJ_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, gBBHFOMPFCF_);
+          .computeBoolSize(12, pBHJDAKBIDJ_);
       }
-      if (lHKLBOBEICJ_ != 0) {
+      if (dHPALCOAOJL_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, lHKLBOBEICJ_);
-      }
-      if (fPBLABLPOPO_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, fPBLABLPOPO_);
+          .computeUInt32Size(14, dHPALCOAOJL_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -311,18 +311,18 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
       }
       emu.grasscutter.net.proto.EffigyChallengeV2SettleInfoOuterClass.EffigyChallengeV2SettleInfo other = (emu.grasscutter.net.proto.EffigyChallengeV2SettleInfoOuterClass.EffigyChallengeV2SettleInfo) obj;
 
+      if (getAAJHMCMOPPK()
+          != other.getAAJHMCMOPPK()) return false;
+      if (getBJEHPHPGLFG()
+          != other.getBJEHPHPGLFG()) return false;
       if (getChallengeModeDifficulty()
           != other.getChallengeModeDifficulty()) return false;
-      if (getGBBHFOMPFCF()
-          != other.getGBBHFOMPFCF()) return false;
-      if (getPADHFINHGPK()
-          != other.getPADHFINHGPK()) return false;
-      if (getLHKLBOBEICJ()
-          != other.getLHKLBOBEICJ()) return false;
-      if (getFPBLABLPOPO()
-          != other.getFPBLABLPOPO()) return false;
-      if (getNFFENFICGFF()
-          != other.getNFFENFICGFF()) return false;
+      if (getPBHJDAKBIDJ()
+          != other.getPBHJDAKBIDJ()) return false;
+      if (getDHPALCOAOJL()
+          != other.getDHPALCOAOJL()) return false;
+      if (getJMPHBGFNOHF()
+          != other.getJMPHBGFNOHF()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -334,20 +334,20 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AAJHMCMOPPK_FIELD_NUMBER;
+      hash = (53 * hash) + getAAJHMCMOPPK();
+      hash = (37 * hash) + BJEHPHPGLFG_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getBJEHPHPGLFG());
       hash = (37 * hash) + CHALLENGE_MODE_DIFFICULTY_FIELD_NUMBER;
       hash = (53 * hash) + getChallengeModeDifficulty();
-      hash = (37 * hash) + GBBHFOMPFCF_FIELD_NUMBER;
-      hash = (53 * hash) + getGBBHFOMPFCF();
-      hash = (37 * hash) + PADHFINHGPK_FIELD_NUMBER;
+      hash = (37 * hash) + PBHJDAKBIDJ_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getPADHFINHGPK());
-      hash = (37 * hash) + LHKLBOBEICJ_FIELD_NUMBER;
-      hash = (53 * hash) + getLHKLBOBEICJ();
-      hash = (37 * hash) + FPBLABLPOPO_FIELD_NUMBER;
-      hash = (53 * hash) + getFPBLABLPOPO();
-      hash = (37 * hash) + NFFENFICGFF_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getNFFENFICGFF());
+          getPBHJDAKBIDJ());
+      hash = (37 * hash) + DHPALCOAOJL_FIELD_NUMBER;
+      hash = (53 * hash) + getDHPALCOAOJL();
+      hash = (37 * hash) + JMPHBGFNOHF_FIELD_NUMBER;
+      hash = (53 * hash) + getJMPHBGFNOHF();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -445,7 +445,7 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
     }
     /**
      * <pre>
-     * Name: FCDJFEIIFCP
+     * Name: LEOINEGNPCH
      * </pre>
      *
      * Protobuf type {@code EffigyChallengeV2SettleInfo}
@@ -485,17 +485,17 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        aAJHMCMOPPK_ = 0;
+
+        bJEHPHPGLFG_ = false;
+
         challengeModeDifficulty_ = 0;
 
-        gBBHFOMPFCF_ = 0;
+        pBHJDAKBIDJ_ = false;
 
-        pADHFINHGPK_ = false;
+        dHPALCOAOJL_ = 0;
 
-        lHKLBOBEICJ_ = 0;
-
-        fPBLABLPOPO_ = 0;
-
-        nFFENFICGFF_ = false;
+        jMPHBGFNOHF_ = 0;
 
         return this;
       }
@@ -523,12 +523,12 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.EffigyChallengeV2SettleInfoOuterClass.EffigyChallengeV2SettleInfo buildPartial() {
         emu.grasscutter.net.proto.EffigyChallengeV2SettleInfoOuterClass.EffigyChallengeV2SettleInfo result = new emu.grasscutter.net.proto.EffigyChallengeV2SettleInfoOuterClass.EffigyChallengeV2SettleInfo(this);
+        result.aAJHMCMOPPK_ = aAJHMCMOPPK_;
+        result.bJEHPHPGLFG_ = bJEHPHPGLFG_;
         result.challengeModeDifficulty_ = challengeModeDifficulty_;
-        result.gBBHFOMPFCF_ = gBBHFOMPFCF_;
-        result.pADHFINHGPK_ = pADHFINHGPK_;
-        result.lHKLBOBEICJ_ = lHKLBOBEICJ_;
-        result.fPBLABLPOPO_ = fPBLABLPOPO_;
-        result.nFFENFICGFF_ = nFFENFICGFF_;
+        result.pBHJDAKBIDJ_ = pBHJDAKBIDJ_;
+        result.dHPALCOAOJL_ = dHPALCOAOJL_;
+        result.jMPHBGFNOHF_ = jMPHBGFNOHF_;
         onBuilt();
         return result;
       }
@@ -577,23 +577,23 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.EffigyChallengeV2SettleInfoOuterClass.EffigyChallengeV2SettleInfo other) {
         if (other == emu.grasscutter.net.proto.EffigyChallengeV2SettleInfoOuterClass.EffigyChallengeV2SettleInfo.getDefaultInstance()) return this;
+        if (other.getAAJHMCMOPPK() != 0) {
+          setAAJHMCMOPPK(other.getAAJHMCMOPPK());
+        }
+        if (other.getBJEHPHPGLFG() != false) {
+          setBJEHPHPGLFG(other.getBJEHPHPGLFG());
+        }
         if (other.getChallengeModeDifficulty() != 0) {
           setChallengeModeDifficulty(other.getChallengeModeDifficulty());
         }
-        if (other.getGBBHFOMPFCF() != 0) {
-          setGBBHFOMPFCF(other.getGBBHFOMPFCF());
+        if (other.getPBHJDAKBIDJ() != false) {
+          setPBHJDAKBIDJ(other.getPBHJDAKBIDJ());
         }
-        if (other.getPADHFINHGPK() != false) {
-          setPADHFINHGPK(other.getPADHFINHGPK());
+        if (other.getDHPALCOAOJL() != 0) {
+          setDHPALCOAOJL(other.getDHPALCOAOJL());
         }
-        if (other.getLHKLBOBEICJ() != 0) {
-          setLHKLBOBEICJ(other.getLHKLBOBEICJ());
-        }
-        if (other.getFPBLABLPOPO() != 0) {
-          setFPBLABLPOPO(other.getFPBLABLPOPO());
-        }
-        if (other.getNFFENFICGFF() != false) {
-          setNFFENFICGFF(other.getNFFENFICGFF());
+        if (other.getJMPHBGFNOHF() != 0) {
+          setJMPHBGFNOHF(other.getJMPHBGFNOHF());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -621,6 +621,68 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private int aAJHMCMOPPK_ ;
+      /**
+       * <code>uint32 AAJHMCMOPPK = 6;</code>
+       * @return The aAJHMCMOPPK.
+       */
+      @java.lang.Override
+      public int getAAJHMCMOPPK() {
+        return aAJHMCMOPPK_;
+      }
+      /**
+       * <code>uint32 AAJHMCMOPPK = 6;</code>
+       * @param value The aAJHMCMOPPK to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAAJHMCMOPPK(int value) {
+        
+        aAJHMCMOPPK_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 AAJHMCMOPPK = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAAJHMCMOPPK() {
+        
+        aAJHMCMOPPK_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean bJEHPHPGLFG_ ;
+      /**
+       * <code>bool BJEHPHPGLFG = 5;</code>
+       * @return The bJEHPHPGLFG.
+       */
+      @java.lang.Override
+      public boolean getBJEHPHPGLFG() {
+        return bJEHPHPGLFG_;
+      }
+      /**
+       * <code>bool BJEHPHPGLFG = 5;</code>
+       * @param value The bJEHPHPGLFG to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBJEHPHPGLFG(boolean value) {
+        
+        bJEHPHPGLFG_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool BJEHPHPGLFG = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBJEHPHPGLFG() {
+        
+        bJEHPHPGLFG_ = false;
+        onChanged();
         return this;
       }
 
@@ -655,157 +717,95 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
         return this;
       }
 
-      private int gBBHFOMPFCF_ ;
+      private boolean pBHJDAKBIDJ_ ;
       /**
-       * <code>uint32 GBBHFOMPFCF = 8;</code>
-       * @return The gBBHFOMPFCF.
+       * <code>bool PBHJDAKBIDJ = 12;</code>
+       * @return The pBHJDAKBIDJ.
        */
       @java.lang.Override
-      public int getGBBHFOMPFCF() {
-        return gBBHFOMPFCF_;
+      public boolean getPBHJDAKBIDJ() {
+        return pBHJDAKBIDJ_;
       }
       /**
-       * <code>uint32 GBBHFOMPFCF = 8;</code>
-       * @param value The gBBHFOMPFCF to set.
+       * <code>bool PBHJDAKBIDJ = 12;</code>
+       * @param value The pBHJDAKBIDJ to set.
        * @return This builder for chaining.
        */
-      public Builder setGBBHFOMPFCF(int value) {
+      public Builder setPBHJDAKBIDJ(boolean value) {
         
-        gBBHFOMPFCF_ = value;
+        pBHJDAKBIDJ_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 GBBHFOMPFCF = 8;</code>
+       * <code>bool PBHJDAKBIDJ = 12;</code>
        * @return This builder for chaining.
        */
-      public Builder clearGBBHFOMPFCF() {
+      public Builder clearPBHJDAKBIDJ() {
         
-        gBBHFOMPFCF_ = 0;
+        pBHJDAKBIDJ_ = false;
         onChanged();
         return this;
       }
 
-      private boolean pADHFINHGPK_ ;
+      private int dHPALCOAOJL_ ;
       /**
-       * <code>bool PADHFINHGPK = 2;</code>
-       * @return The pADHFINHGPK.
+       * <code>uint32 DHPALCOAOJL = 14;</code>
+       * @return The dHPALCOAOJL.
        */
       @java.lang.Override
-      public boolean getPADHFINHGPK() {
-        return pADHFINHGPK_;
+      public int getDHPALCOAOJL() {
+        return dHPALCOAOJL_;
       }
       /**
-       * <code>bool PADHFINHGPK = 2;</code>
-       * @param value The pADHFINHGPK to set.
+       * <code>uint32 DHPALCOAOJL = 14;</code>
+       * @param value The dHPALCOAOJL to set.
        * @return This builder for chaining.
        */
-      public Builder setPADHFINHGPK(boolean value) {
+      public Builder setDHPALCOAOJL(int value) {
         
-        pADHFINHGPK_ = value;
+        dHPALCOAOJL_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool PADHFINHGPK = 2;</code>
+       * <code>uint32 DHPALCOAOJL = 14;</code>
        * @return This builder for chaining.
        */
-      public Builder clearPADHFINHGPK() {
+      public Builder clearDHPALCOAOJL() {
         
-        pADHFINHGPK_ = false;
+        dHPALCOAOJL_ = 0;
         onChanged();
         return this;
       }
 
-      private int lHKLBOBEICJ_ ;
+      private int jMPHBGFNOHF_ ;
       /**
-       * <code>uint32 LHKLBOBEICJ = 13;</code>
-       * @return The lHKLBOBEICJ.
+       * <code>uint32 JMPHBGFNOHF = 3;</code>
+       * @return The jMPHBGFNOHF.
        */
       @java.lang.Override
-      public int getLHKLBOBEICJ() {
-        return lHKLBOBEICJ_;
+      public int getJMPHBGFNOHF() {
+        return jMPHBGFNOHF_;
       }
       /**
-       * <code>uint32 LHKLBOBEICJ = 13;</code>
-       * @param value The lHKLBOBEICJ to set.
+       * <code>uint32 JMPHBGFNOHF = 3;</code>
+       * @param value The jMPHBGFNOHF to set.
        * @return This builder for chaining.
        */
-      public Builder setLHKLBOBEICJ(int value) {
+      public Builder setJMPHBGFNOHF(int value) {
         
-        lHKLBOBEICJ_ = value;
+        jMPHBGFNOHF_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 LHKLBOBEICJ = 13;</code>
+       * <code>uint32 JMPHBGFNOHF = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearLHKLBOBEICJ() {
+      public Builder clearJMPHBGFNOHF() {
         
-        lHKLBOBEICJ_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int fPBLABLPOPO_ ;
-      /**
-       * <code>uint32 FPBLABLPOPO = 14;</code>
-       * @return The fPBLABLPOPO.
-       */
-      @java.lang.Override
-      public int getFPBLABLPOPO() {
-        return fPBLABLPOPO_;
-      }
-      /**
-       * <code>uint32 FPBLABLPOPO = 14;</code>
-       * @param value The fPBLABLPOPO to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFPBLABLPOPO(int value) {
-        
-        fPBLABLPOPO_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 FPBLABLPOPO = 14;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFPBLABLPOPO() {
-        
-        fPBLABLPOPO_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean nFFENFICGFF_ ;
-      /**
-       * <code>bool NFFENFICGFF = 4;</code>
-       * @return The nFFENFICGFF.
-       */
-      @java.lang.Override
-      public boolean getNFFENFICGFF() {
-        return nFFENFICGFF_;
-      }
-      /**
-       * <code>bool NFFENFICGFF = 4;</code>
-       * @param value The nFFENFICGFF to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNFFENFICGFF(boolean value) {
-        
-        nFFENFICGFF_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool NFFENFICGFF = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearNFFENFICGFF() {
-        
-        nFFENFICGFF_ = false;
+        jMPHBGFNOHF_ = 0;
         onChanged();
         return this;
       }
@@ -877,11 +877,11 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!EffigyChallengeV2SettleInfo.proto\"\251\001\n\033" +
-      "EffigyChallengeV2SettleInfo\022!\n\031challenge" +
-      "_mode_difficulty\030\007 \001(\r\022\023\n\013GBBHFOMPFCF\030\010 " +
-      "\001(\r\022\023\n\013PADHFINHGPK\030\002 \001(\010\022\023\n\013LHKLBOBEICJ\030" +
-      "\r \001(\r\022\023\n\013FPBLABLPOPO\030\016 \001(\r\022\023\n\013NFFENFICGF" +
-      "F\030\004 \001(\010B\033\n\031emu.grasscutter.net.protob\006pr" +
+      "EffigyChallengeV2SettleInfo\022\023\n\013AAJHMCMOP" +
+      "PK\030\006 \001(\r\022\023\n\013BJEHPHPGLFG\030\005 \001(\010\022!\n\031challen" +
+      "ge_mode_difficulty\030\007 \001(\r\022\023\n\013PBHJDAKBIDJ\030" +
+      "\014 \001(\010\022\023\n\013DHPALCOAOJL\030\016 \001(\r\022\023\n\013JMPHBGFNOH" +
+      "F\030\003 \001(\rB\033\n\031emu.grasscutter.net.protob\006pr" +
       "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -893,7 +893,7 @@ public final class EffigyChallengeV2SettleInfoOuterClass {
     internal_static_EffigyChallengeV2SettleInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EffigyChallengeV2SettleInfo_descriptor,
-        new java.lang.String[] { "ChallengeModeDifficulty", "GBBHFOMPFCF", "PADHFINHGPK", "LHKLBOBEICJ", "FPBLABLPOPO", "NFFENFICGFF", });
+        new java.lang.String[] { "AAJHMCMOPPK", "BJEHPHPGLFG", "ChallengeModeDifficulty", "PBHJDAKBIDJ", "DHPALCOAOJL", "JMPHBGFNOHF", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

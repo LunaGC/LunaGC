@@ -58,7 +58,13 @@ public final class Tools {
         val questDataMap = new Int2ObjectRBTreeMap<>(GameData.getQuestDataMap());
         val achievementDataMap = new Int2ObjectRBTreeMap<>(GameData.getAchievementDataMap());
 
-        Function<SortedMap<?, ?>, String> getPad = m -> "%" + m.lastKey().toString().length() + "s : ";
+        Function<SortedMap<?, ?>, String> getPad = m -> {
+            try {
+                return "%" + m.lastKey().toString().length() + "s : ";
+            } catch (NoSuchElementException e) {
+                return "N/A";
+            }
+        };
 
         // Create builders and helper functions
         val handbookBuilders = IntStream.range(0, TextStrings.NUM_LANGUAGES).mapToObj(i -> new StringBuilder()).toList();
@@ -72,17 +78,13 @@ public final class Tools {
             void newTranslatedLine(String template, TextStrings... textstrings) {
                 for (int i = 0; i < TextStrings.NUM_LANGUAGES; i++) {
                     String s = template;
-                    for (int j = 0; j < textstrings.length; j++) {
-                        var txtstr = textstrings[j];
-                        if (txtstr != null) {
-                            s = s.replace("{" + j + "}", txtstr.strings[i]);
-                        }
-                    }
+                    for (int j = 0; j < textstrings.length; j++)
+                        s = s.replace("{"+j+"}", textstrings[j].strings[i]);
                     handbookBuilders.get(i).append(s + "\n");
                 }
             }
             void newTranslatedLine(String template, long... hashes) {
-                newTranslatedLine(template, LongStream.of(hashes).mapToObj(Language::getTextMapKey).toArray(TextStrings[]::new));
+                newTranslatedLine(template, LongStream.of(hashes).mapToObj(hash -> getTextMapKey(hash)).toArray(TextStrings[]::new));
             }
         };
 
@@ -269,7 +271,7 @@ public final class Tools {
 
         Files.createDirectories(location.getParent());
         Files.writeString(location, sb);
-        Grasscutter.getLogger().info("Mappings generated to " + location);
+        Grasscutter.getLogger().debug("Mappings generated to " + location);
     }
 
     public static List<String> getAvailableLanguage() {

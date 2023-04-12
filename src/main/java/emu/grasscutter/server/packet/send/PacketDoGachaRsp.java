@@ -1,5 +1,7 @@
 package emu.grasscutter.server.packet.send;
 
+import java.util.List;
+
 import emu.grasscutter.data.common.ItemParamData;
 import emu.grasscutter.game.gacha.GachaBanner;
 import emu.grasscutter.game.gacha.PlayerGachaBannerInfo;
@@ -7,13 +9,11 @@ import emu.grasscutter.net.packet.BasePacket;
 import emu.grasscutter.net.packet.PacketOpcodes;
 import emu.grasscutter.net.proto.DoGachaRspOuterClass.DoGachaRsp;
 import emu.grasscutter.net.proto.GachaItemOuterClass.GachaItem;
-import emu.grasscutter.net.proto.RetcodeOuterClass;
 import emu.grasscutter.net.proto.RetcodeOuterClass.Retcode;
-
-import java.util.List;
+import emu.grasscutter.net.proto.RetcodeOuterClass;
 
 public class PacketDoGachaRsp extends BasePacket {
-
+	
 	public PacketDoGachaRsp(GachaBanner banner, List<GachaItem> list, PlayerGachaBannerInfo gachaInfo) {
 		super(PacketOpcodes.DoGachaRsp);
 
@@ -25,25 +25,24 @@ public class PacketDoGachaRsp extends BasePacket {
 			default -> Math.max(gachaTimesLimit - gachaInfo.getTotalPulls(), 0);
 		};
 		DoGachaRsp.Builder rsp = DoGachaRsp.newBuilder()
-            .setGachaType(banner.getGachaType())
-            .setGachaScheduleId(banner.getScheduleId())
-            .setGachaTimes(list.size())
-            .setNewGachaRandom(12345)
-            .setLeftGachaTimes(leftGachaTimes)
-            .setGachaTimesLimit(gachaTimesLimit)
-            .setCostItemId(costItem.getId())
-            .setCostItemNum(costItem.getCount())
-            .setTenCostItemId(costItem10.getId())
-            .setTenCostItemNum(costItem10.getCount())
+				.setGachaType(banner.getGachaType())
+				.setGachaScheduleId(banner.getScheduleId())
+				.setGachaTimes(list.size())
+				.setNewGachaRandom(12345)
+				.setLeftGachaTimes(leftGachaTimes)
+	            .setGachaTimesLimit(gachaTimesLimit)
+				.setCostItemId(costItem.getId())
+	            .setCostItemNum(costItem.getCount())
+	            .setTenCostItemId(costItem10.getId())
+	            .setTenCostItemNum(costItem10.getCount())
 	            .addAllGachaItemList(list);
 
 		if(banner.hasEpitomized()) {
-            rsp
-                .setWishItemId(gachaInfo.getWishItemId())
-                .setWishProgress(gachaInfo.getFailedChosenItemPulls())
-                .setWishMaxProgress(banner.getWishMaxProgress());
-        }
-
+			rsp.setWishItemId(gachaInfo.getWishItemId())
+				.setWishProgress(gachaInfo.getFailedChosenItemPulls())
+				.setWishMaxProgress(banner.getWishMaxProgress());
+		}
+		
 		this.setData(rsp.build());
 	}
 
@@ -53,7 +52,7 @@ public class PacketDoGachaRsp extends BasePacket {
 		DoGachaRsp p = DoGachaRsp.newBuilder()
 				.setRetcode(RetcodeOuterClass.Retcode.RET_SVR_ERROR_VALUE)
 				.build();
-
+		
 		this.setData(p);
 	}
 

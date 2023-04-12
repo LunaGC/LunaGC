@@ -19,26 +19,26 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <code>uint32 BCAIGBJGEOD = 15;</code>
+     * @return The bCAIGBJGEOD.
+     */
+    int getBCAIGBJGEOD();
+
+    /**
      * <code>bool is_success = 5;</code>
      * @return The isSuccess.
      */
     boolean getIsSuccess();
 
     /**
-     * <code>uint32 IMHBJJAIBFJ = 12;</code>
-     * @return The iMHBJJAIBFJ.
+     * <code>uint32 CFFPNHNDNNI = 3;</code>
+     * @return The cFFPNHNDNNI.
      */
-    int getIMHBJJAIBFJ();
-
-    /**
-     * <code>uint32 JHEBGEDHMLB = 3;</code>
-     * @return The jHEBGEDHMLB.
-     */
-    int getJHEBGEDHMLB();
+    int getCFFPNHNDNNI();
   }
   /**
    * <pre>
-   * Name: IJIFIANJEKJ
+   * Name: LNEDLNCEKDB
    * </pre>
    *
    * Protobuf type {@code SummerTimeV2DungeonSettleInfo}
@@ -87,7 +87,7 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
               break;
             case 24: {
 
-              jHEBGEDHMLB_ = input.readUInt32();
+              cFFPNHNDNNI_ = input.readUInt32();
               break;
             }
             case 40: {
@@ -95,9 +95,9 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
               isSuccess_ = input.readBool();
               break;
             }
-            case 96: {
+            case 120: {
 
-              iMHBJJAIBFJ_ = input.readUInt32();
+              bCAIGBJGEOD_ = input.readUInt32();
               break;
             }
             default: {
@@ -132,6 +132,17 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
               emu.grasscutter.net.proto.SummerTimeV2DungeonSettleInfoOuterClass.SummerTimeV2DungeonSettleInfo.class, emu.grasscutter.net.proto.SummerTimeV2DungeonSettleInfoOuterClass.SummerTimeV2DungeonSettleInfo.Builder.class);
     }
 
+    public static final int BCAIGBJGEOD_FIELD_NUMBER = 15;
+    private int bCAIGBJGEOD_;
+    /**
+     * <code>uint32 BCAIGBJGEOD = 15;</code>
+     * @return The bCAIGBJGEOD.
+     */
+    @java.lang.Override
+    public int getBCAIGBJGEOD() {
+      return bCAIGBJGEOD_;
+    }
+
     public static final int IS_SUCCESS_FIELD_NUMBER = 5;
     private boolean isSuccess_;
     /**
@@ -143,26 +154,15 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
       return isSuccess_;
     }
 
-    public static final int IMHBJJAIBFJ_FIELD_NUMBER = 12;
-    private int iMHBJJAIBFJ_;
+    public static final int CFFPNHNDNNI_FIELD_NUMBER = 3;
+    private int cFFPNHNDNNI_;
     /**
-     * <code>uint32 IMHBJJAIBFJ = 12;</code>
-     * @return The iMHBJJAIBFJ.
+     * <code>uint32 CFFPNHNDNNI = 3;</code>
+     * @return The cFFPNHNDNNI.
      */
     @java.lang.Override
-    public int getIMHBJJAIBFJ() {
-      return iMHBJJAIBFJ_;
-    }
-
-    public static final int JHEBGEDHMLB_FIELD_NUMBER = 3;
-    private int jHEBGEDHMLB_;
-    /**
-     * <code>uint32 JHEBGEDHMLB = 3;</code>
-     * @return The jHEBGEDHMLB.
-     */
-    @java.lang.Override
-    public int getJHEBGEDHMLB() {
-      return jHEBGEDHMLB_;
+    public int getCFFPNHNDNNI() {
+      return cFFPNHNDNNI_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -179,14 +179,14 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (jHEBGEDHMLB_ != 0) {
-        output.writeUInt32(3, jHEBGEDHMLB_);
+      if (cFFPNHNDNNI_ != 0) {
+        output.writeUInt32(3, cFFPNHNDNNI_);
       }
       if (isSuccess_ != false) {
         output.writeBool(5, isSuccess_);
       }
-      if (iMHBJJAIBFJ_ != 0) {
-        output.writeUInt32(12, iMHBJJAIBFJ_);
+      if (bCAIGBJGEOD_ != 0) {
+        output.writeUInt32(15, bCAIGBJGEOD_);
       }
       unknownFields.writeTo(output);
     }
@@ -197,17 +197,17 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (jHEBGEDHMLB_ != 0) {
+      if (cFFPNHNDNNI_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, jHEBGEDHMLB_);
+          .computeUInt32Size(3, cFFPNHNDNNI_);
       }
       if (isSuccess_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, isSuccess_);
       }
-      if (iMHBJJAIBFJ_ != 0) {
+      if (bCAIGBJGEOD_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, iMHBJJAIBFJ_);
+          .computeUInt32Size(15, bCAIGBJGEOD_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -224,12 +224,12 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
       }
       emu.grasscutter.net.proto.SummerTimeV2DungeonSettleInfoOuterClass.SummerTimeV2DungeonSettleInfo other = (emu.grasscutter.net.proto.SummerTimeV2DungeonSettleInfoOuterClass.SummerTimeV2DungeonSettleInfo) obj;
 
+      if (getBCAIGBJGEOD()
+          != other.getBCAIGBJGEOD()) return false;
       if (getIsSuccess()
           != other.getIsSuccess()) return false;
-      if (getIMHBJJAIBFJ()
-          != other.getIMHBJJAIBFJ()) return false;
-      if (getJHEBGEDHMLB()
-          != other.getJHEBGEDHMLB()) return false;
+      if (getCFFPNHNDNNI()
+          != other.getCFFPNHNDNNI()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -241,13 +241,13 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BCAIGBJGEOD_FIELD_NUMBER;
+      hash = (53 * hash) + getBCAIGBJGEOD();
       hash = (37 * hash) + IS_SUCCESS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsSuccess());
-      hash = (37 * hash) + IMHBJJAIBFJ_FIELD_NUMBER;
-      hash = (53 * hash) + getIMHBJJAIBFJ();
-      hash = (37 * hash) + JHEBGEDHMLB_FIELD_NUMBER;
-      hash = (53 * hash) + getJHEBGEDHMLB();
+      hash = (37 * hash) + CFFPNHNDNNI_FIELD_NUMBER;
+      hash = (53 * hash) + getCFFPNHNDNNI();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -345,7 +345,7 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
     }
     /**
      * <pre>
-     * Name: IJIFIANJEKJ
+     * Name: LNEDLNCEKDB
      * </pre>
      *
      * Protobuf type {@code SummerTimeV2DungeonSettleInfo}
@@ -385,11 +385,11 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bCAIGBJGEOD_ = 0;
+
         isSuccess_ = false;
 
-        iMHBJJAIBFJ_ = 0;
-
-        jHEBGEDHMLB_ = 0;
+        cFFPNHNDNNI_ = 0;
 
         return this;
       }
@@ -417,9 +417,9 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SummerTimeV2DungeonSettleInfoOuterClass.SummerTimeV2DungeonSettleInfo buildPartial() {
         emu.grasscutter.net.proto.SummerTimeV2DungeonSettleInfoOuterClass.SummerTimeV2DungeonSettleInfo result = new emu.grasscutter.net.proto.SummerTimeV2DungeonSettleInfoOuterClass.SummerTimeV2DungeonSettleInfo(this);
+        result.bCAIGBJGEOD_ = bCAIGBJGEOD_;
         result.isSuccess_ = isSuccess_;
-        result.iMHBJJAIBFJ_ = iMHBJJAIBFJ_;
-        result.jHEBGEDHMLB_ = jHEBGEDHMLB_;
+        result.cFFPNHNDNNI_ = cFFPNHNDNNI_;
         onBuilt();
         return result;
       }
@@ -468,14 +468,14 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.SummerTimeV2DungeonSettleInfoOuterClass.SummerTimeV2DungeonSettleInfo other) {
         if (other == emu.grasscutter.net.proto.SummerTimeV2DungeonSettleInfoOuterClass.SummerTimeV2DungeonSettleInfo.getDefaultInstance()) return this;
+        if (other.getBCAIGBJGEOD() != 0) {
+          setBCAIGBJGEOD(other.getBCAIGBJGEOD());
+        }
         if (other.getIsSuccess() != false) {
           setIsSuccess(other.getIsSuccess());
         }
-        if (other.getIMHBJJAIBFJ() != 0) {
-          setIMHBJJAIBFJ(other.getIMHBJJAIBFJ());
-        }
-        if (other.getJHEBGEDHMLB() != 0) {
-          setJHEBGEDHMLB(other.getJHEBGEDHMLB());
+        if (other.getCFFPNHNDNNI() != 0) {
+          setCFFPNHNDNNI(other.getCFFPNHNDNNI());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -503,6 +503,37 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private int bCAIGBJGEOD_ ;
+      /**
+       * <code>uint32 BCAIGBJGEOD = 15;</code>
+       * @return The bCAIGBJGEOD.
+       */
+      @java.lang.Override
+      public int getBCAIGBJGEOD() {
+        return bCAIGBJGEOD_;
+      }
+      /**
+       * <code>uint32 BCAIGBJGEOD = 15;</code>
+       * @param value The bCAIGBJGEOD to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBCAIGBJGEOD(int value) {
+        
+        bCAIGBJGEOD_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 BCAIGBJGEOD = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBCAIGBJGEOD() {
+        
+        bCAIGBJGEOD_ = 0;
+        onChanged();
         return this;
       }
 
@@ -537,64 +568,33 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
         return this;
       }
 
-      private int iMHBJJAIBFJ_ ;
+      private int cFFPNHNDNNI_ ;
       /**
-       * <code>uint32 IMHBJJAIBFJ = 12;</code>
-       * @return The iMHBJJAIBFJ.
+       * <code>uint32 CFFPNHNDNNI = 3;</code>
+       * @return The cFFPNHNDNNI.
        */
       @java.lang.Override
-      public int getIMHBJJAIBFJ() {
-        return iMHBJJAIBFJ_;
+      public int getCFFPNHNDNNI() {
+        return cFFPNHNDNNI_;
       }
       /**
-       * <code>uint32 IMHBJJAIBFJ = 12;</code>
-       * @param value The iMHBJJAIBFJ to set.
+       * <code>uint32 CFFPNHNDNNI = 3;</code>
+       * @param value The cFFPNHNDNNI to set.
        * @return This builder for chaining.
        */
-      public Builder setIMHBJJAIBFJ(int value) {
+      public Builder setCFFPNHNDNNI(int value) {
         
-        iMHBJJAIBFJ_ = value;
+        cFFPNHNDNNI_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 IMHBJJAIBFJ = 12;</code>
+       * <code>uint32 CFFPNHNDNNI = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearIMHBJJAIBFJ() {
+      public Builder clearCFFPNHNDNNI() {
         
-        iMHBJJAIBFJ_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int jHEBGEDHMLB_ ;
-      /**
-       * <code>uint32 JHEBGEDHMLB = 3;</code>
-       * @return The jHEBGEDHMLB.
-       */
-      @java.lang.Override
-      public int getJHEBGEDHMLB() {
-        return jHEBGEDHMLB_;
-      }
-      /**
-       * <code>uint32 JHEBGEDHMLB = 3;</code>
-       * @param value The jHEBGEDHMLB to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJHEBGEDHMLB(int value) {
-        
-        jHEBGEDHMLB_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 JHEBGEDHMLB = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearJHEBGEDHMLB() {
-        
-        jHEBGEDHMLB_ = 0;
+        cFFPNHNDNNI_ = 0;
         onChanged();
         return this;
       }
@@ -666,9 +666,9 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n#SummerTimeV2DungeonSettleInfo.proto\"]\n" +
-      "\035SummerTimeV2DungeonSettleInfo\022\022\n\nis_suc" +
-      "cess\030\005 \001(\010\022\023\n\013IMHBJJAIBFJ\030\014 \001(\r\022\023\n\013JHEBG" +
-      "EDHMLB\030\003 \001(\rB\033\n\031emu.grasscutter.net.prot" +
+      "\035SummerTimeV2DungeonSettleInfo\022\023\n\013BCAIGB" +
+      "JGEOD\030\017 \001(\r\022\022\n\nis_success\030\005 \001(\010\022\023\n\013CFFPN" +
+      "HNDNNI\030\003 \001(\rB\033\n\031emu.grasscutter.net.prot" +
       "ob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -680,7 +680,7 @@ public final class SummerTimeV2DungeonSettleInfoOuterClass {
     internal_static_SummerTimeV2DungeonSettleInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SummerTimeV2DungeonSettleInfo_descriptor,
-        new java.lang.String[] { "IsSuccess", "IMHBJJAIBFJ", "JHEBGEDHMLB", });
+        new java.lang.String[] { "BCAIGBJGEOD", "IsSuccess", "CFFPNHNDNNI", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

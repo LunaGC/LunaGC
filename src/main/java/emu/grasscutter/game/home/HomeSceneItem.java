@@ -54,8 +54,8 @@ public class HomeSceneItem {
         }
 
         this.bornPos = new Position(arrangementInfo.getBornPos());
-        this.bornRot = new Position(/*arrangementInfo.getgetBornRot()*/);
-        this.djinnPos = new Position(/*arrangementInfo.getDjinnPos()*/);
+        this.bornRot = new Position(arrangementInfo.getBornRot());
+        this.djinnPos = new Position(arrangementInfo.getDjinnPos());
         this.homeBgmId = arrangementInfo.getBgmId();
         this.mainHouse = HomeFurnitureItem.parseFrom(arrangementInfo.getMainHouse());
         this.tmpVersion = arrangementInfo.getTmpVersion();
@@ -79,13 +79,13 @@ public class HomeSceneItem {
         blockItems.values().forEach(b -> proto.addBlockArrangementInfoList(b.toProto()));
 
         proto.setComfortValue(calComfort())
-            .setBornPos(bornPos.toProto())
-            .setBornRot(bornRot.toProto())
-            .setDjinnPos(djinnPos.toProto())
-            .setIsSetBornPos(true)
-            .setSceneId(sceneId)
-            .setBgmId(homeBgmId)
-            .setTmpVersion(tmpVersion);
+                .setBornPos(bornPos.toProto())
+                .setBornRot(bornRot.toProto())
+                .setDjinnPos(djinnPos.toProto())
+                .setIsSetBornPos(true)
+                .setSceneId(sceneId)
+                .setBgmId(homeBgmId)
+                .setTmpVersion(tmpVersion);
 
         if (mainHouse != null) {
             proto.setMainHouse(mainHouse.toProto());

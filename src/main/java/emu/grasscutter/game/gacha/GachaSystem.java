@@ -1,5 +1,13 @@
 package emu.grasscutter.game.gacha;
 
+import static emu.grasscutter.config.Configuration.*;
+
+import java.io.File;
+import java.nio.file.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
+
 import com.sun.nio.file.SensitivityWatchEventModifier;
 import emu.grasscutter.Grasscutter;
 import emu.grasscutter.data.DataLoader;
@@ -30,13 +38,6 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.ints.IntArrayList;
 import it.unimi.dsi.fastutil.ints.IntList;
 import org.greenrobot.eventbus.Subscribe;
-
-import java.nio.file.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
-
-import static emu.grasscutter.config.Configuration.GAME_OPTIONS;
 
 public class GachaSystem extends BaseGameSystem {
     private final Int2ObjectMap<GachaBanner> gachaBanners;
@@ -412,8 +413,7 @@ public class GachaSystem extends BaseGameSystem {
     }
 
     private synchronized GetGachaInfoRsp createProto(Player player) {
-        GetGachaInfoRsp.Builder proto = GetGachaInfoRsp.newBuilder()
-            .setGachaRandom(12345);
+        GetGachaInfoRsp.Builder proto = GetGachaInfoRsp.newBuilder().setGachaRandom(12345);
 
         long currentTime = System.currentTimeMillis() / 1000L;
 

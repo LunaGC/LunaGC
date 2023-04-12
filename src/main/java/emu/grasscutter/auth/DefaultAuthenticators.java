@@ -5,8 +5,7 @@ import emu.grasscutter.Grasscutter;
 import emu.grasscutter.auth.AuthenticationSystem.AuthenticationRequest;
 import emu.grasscutter.database.DatabaseHelper;
 import emu.grasscutter.game.Account;
-import emu.grasscutter.server.http.objects.ComboTokenResJson;
-import emu.grasscutter.server.http.objects.LoginResultJson;
+import emu.grasscutter.server.http.objects.*;
 import emu.grasscutter.utils.FileUtils;
 import emu.grasscutter.utils.Utils;
 
@@ -16,7 +15,7 @@ import java.security.KeyFactory;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.spec.PKCS8EncodedKeySpec;
 
-import static emu.grasscutter.config.Configuration.ACCOUNT;
+import static emu.grasscutter.config.Configuration.*;
 import static emu.grasscutter.utils.Language.translate;
 
 /**
@@ -76,7 +75,7 @@ public final class DefaultAuthenticators {
                 response.message = "OK";
                 response.data.account.uid = account.getId();
                 response.data.account.token = account.generateSessionKey();
-                response.data.account.email = account.getUsername(); //account.getEmail();
+                response.data.account.email = account.getEmail();
 
                 loggerMessage = translate("messages.dispatch.account.login_success", address, account.getId());
             } else {

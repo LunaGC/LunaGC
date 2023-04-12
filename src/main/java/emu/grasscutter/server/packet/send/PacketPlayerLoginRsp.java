@@ -11,10 +11,13 @@ import emu.grasscutter.net.proto.RegionInfoOuterClass.RegionInfo;
 import emu.grasscutter.server.game.GameSession;
 import emu.grasscutter.server.http.dispatch.RegionHandler;
 import emu.grasscutter.utils.Crypto;
-
-import java.util.Objects;
+import emu.grasscutter.utils.FileUtils;
 
 import static emu.grasscutter.config.Configuration.*;
+
+import java.io.File;
+import java.util.Base64;
+import java.util.Objects;
 
 public class PacketPlayerLoginRsp extends BasePacket {
 
@@ -32,7 +35,7 @@ public class PacketPlayerLoginRsp extends BasePacket {
                 try {
                     // todo: we might want to push custom config to client
                     RegionInfo serverRegion = RegionInfo.newBuilder()
-                        .setGateserverIp(lr(GAME_INFO.accessAddress, GAME_INFO.bindAddress))
+                            .setGateserverIp(lr(GAME_INFO.accessAddress, GAME_INFO.bindAddress))
                             .setGateserverPort(lr(GAME_INFO.accessPort, GAME_INFO.bindPort))
                             .setSecretKey(ByteString.copyFrom(Crypto.DISPATCH_SEED))
                             .build();
@@ -49,13 +52,13 @@ public class PacketPlayerLoginRsp extends BasePacket {
         }
 
         PlayerLoginRsp p = PlayerLoginRsp.newBuilder()
-            .setIsUseAbilityHash(true) // true
-            .setAbilityHashCode(1844674) // 1844674
-            .setGameBiz("hk4e_global")
-            .setClientDataVersion(info.getClientDataVersion())
-            .setClientSilenceDataVersion(info.getClientSilenceDataVersion())
-            .setClientMd5(info.getClientDataMd5())
-            .setClientSilenceMd5(info.getClientSilenceDataMd5())
+                .setIsUseAbilityHash(true) // true
+                .setAbilityHashCode(1844674) // 1844674
+                .setGameBiz("hk4e_global")
+                .setClientDataVersion(info.getClientDataVersion())
+                .setClientSilenceDataVersion(info.getClientSilenceDataVersion())
+                .setClientMd5(info.getClientDataMd5())
+                .setClientSilenceMd5(info.getClientSilenceDataMd5())
                 .setResVersionConfig(info.getResVersionConfig())
                 .setClientVersionSuffix(info.getClientVersionSuffix())
                 .setClientSilenceVersionSuffix(info.getClientSilenceVersionSuffix())

@@ -15,9 +15,9 @@ public class PacketFurnitureMakeRsp extends BasePacket {
 		var proto = FurnitureMakeRspOuterClass.FurnitureMakeRsp.newBuilder();
 
 		proto.setFurnitureMakeSlot(FurnitureMakeSlotOuterClass.FurnitureMakeSlot.newBuilder()
-            .addAllFurnitureMakeDataList(home.getFurnitureMakeSlotItemList().stream()
-                .map(FurnitureMakeSlotItem::toProto)
-                .toList())
+				.addAllFurnitureMakeDataList(home.getFurnitureMakeSlotItemList().stream()
+						.map(FurnitureMakeSlotItem::toProto)
+						.toList())
 				.build());
 
 		this.setData(proto);

@@ -13,8 +13,8 @@ public class PacketBuyGoodsRsp extends BasePacket {
                 .setShopType(shopType)
                 .setBuyCount(boughtNum)
                 .addGoodsList(ShopGoodsOuterClass.ShopGoods.newBuilder()
-                    .mergeFrom(sg)
-                    .setBoughtNum(boughtNum)
+                        .mergeFrom(sg)
+                        .setBoughtNum(boughtNum)
                 ).build();
 
         this.setData(buyGoodsRsp);

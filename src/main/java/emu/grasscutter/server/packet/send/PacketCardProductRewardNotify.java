@@ -11,9 +11,9 @@ public class PacketCardProductRewardNotify extends BasePacket {
         super(PacketOpcodes.CardProductRewardNotify);
 
         CardProductRewardNotify proto = CardProductRewardNotify.newBuilder()
-            .setProductId("ys_chn_blessofmoon_tier5")
-            .setHcoin(90)
-            .setRemainDays(remainsDay)
+                .setProductId("ys_chn_blessofmoon_tier5")
+                .setHcoin(90)
+                .setRemainDays(remainsDay)
                 .build();
 
         // Hard code Product id keep cool 😎

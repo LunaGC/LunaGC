@@ -19,53 +19,53 @@ public final class SeaLampV3DetailInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
-     * @return Whether the oMIGMFKNCIK field is set.
+     * <code>.SeaLampV3ShadowInfo shadow_info = 14;</code>
+     * @return Whether the shadowInfo field is set.
      */
-    boolean hasOMIGMFKNCIK();
+    boolean hasShadowInfo();
     /**
-     * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
-     * @return The oMIGMFKNCIK.
+     * <code>.SeaLampV3ShadowInfo shadow_info = 14;</code>
+     * @return The shadowInfo.
      */
-    emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI getOMIGMFKNCIK();
+    emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo getShadowInfo();
     /**
-     * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
+     * <code>.SeaLampV3ShadowInfo shadow_info = 14;</code>
      */
-    emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHIOrBuilder getOMIGMFKNCIKOrBuilder();
+    emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfoOrBuilder getShadowInfoOrBuilder();
 
     /**
-     * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
-     * @return Whether the kJDPMHAHBOA field is set.
+     * <code>.SeaLampV3RaceInfo race_info = 3;</code>
+     * @return Whether the raceInfo field is set.
      */
-    boolean hasKJDPMHAHBOA();
+    boolean hasRaceInfo();
     /**
-     * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
-     * @return The kJDPMHAHBOA.
+     * <code>.SeaLampV3RaceInfo race_info = 3;</code>
+     * @return The raceInfo.
      */
-    emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK getKJDPMHAHBOA();
+    emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo getRaceInfo();
     /**
-     * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
+     * <code>.SeaLampV3RaceInfo race_info = 3;</code>
      */
-    emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCKOrBuilder getKJDPMHAHBOAOrBuilder();
+    emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfoOrBuilder getRaceInfoOrBuilder();
 
     /**
-     * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
-     * @return Whether the nLHOPBFKEKD field is set.
+     * <code>.SeaLampV3CampInfo camp_info = 2;</code>
+     * @return Whether the campInfo field is set.
      */
-    boolean hasNLHOPBFKEKD();
+    boolean hasCampInfo();
     /**
-     * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
-     * @return The nLHOPBFKEKD.
+     * <code>.SeaLampV3CampInfo camp_info = 2;</code>
+     * @return The campInfo.
      */
-    emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE getNLHOPBFKEKD();
+    emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo getCampInfo();
     /**
-     * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
+     * <code>.SeaLampV3CampInfo camp_info = 2;</code>
      */
-    emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAEOrBuilder getNLHOPBFKEKDOrBuilder();
+    emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfoOrBuilder getCampInfoOrBuilder();
   }
   /**
    * <pre>
-   * Name: KBEAIPPOPPC
+   * Name: MMJLAPCNFKG
    * </pre>
    *
    * Protobuf type {@code SeaLampV3DetailInfo}
@@ -112,41 +112,41 @@ public final class SeaLampV3DetailInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 10: {
-              emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.Builder subBuilder = null;
-              if (nLHOPBFKEKD_ != null) {
-                subBuilder = nLHOPBFKEKD_.toBuilder();
+            case 18: {
+              emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo.Builder subBuilder = null;
+              if (campInfo_ != null) {
+                subBuilder = campInfo_.toBuilder();
               }
-              nLHOPBFKEKD_ = input.readMessage(emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.parser(), extensionRegistry);
+              campInfo_ = input.readMessage(emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(nLHOPBFKEKD_);
-                nLHOPBFKEKD_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(campInfo_);
+                campInfo_ = subBuilder.buildPartial();
               }
 
               break;
             }
-            case 98: {
-              emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.Builder subBuilder = null;
-              if (kJDPMHAHBOA_ != null) {
-                subBuilder = kJDPMHAHBOA_.toBuilder();
+            case 26: {
+              emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo.Builder subBuilder = null;
+              if (raceInfo_ != null) {
+                subBuilder = raceInfo_.toBuilder();
               }
-              kJDPMHAHBOA_ = input.readMessage(emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.parser(), extensionRegistry);
+              raceInfo_ = input.readMessage(emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(kJDPMHAHBOA_);
-                kJDPMHAHBOA_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(raceInfo_);
+                raceInfo_ = subBuilder.buildPartial();
               }
 
               break;
             }
-            case 122: {
-              emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.Builder subBuilder = null;
-              if (oMIGMFKNCIK_ != null) {
-                subBuilder = oMIGMFKNCIK_.toBuilder();
+            case 114: {
+              emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo.Builder subBuilder = null;
+              if (shadowInfo_ != null) {
+                subBuilder = shadowInfo_.toBuilder();
               }
-              oMIGMFKNCIK_ = input.readMessage(emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.parser(), extensionRegistry);
+              shadowInfo_ = input.readMessage(emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(oMIGMFKNCIK_);
-                oMIGMFKNCIK_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(shadowInfo_);
+                shadowInfo_ = subBuilder.buildPartial();
               }
 
               break;
@@ -183,82 +183,82 @@ public final class SeaLampV3DetailInfoOuterClass {
               emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo.class, emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo.Builder.class);
     }
 
-    public static final int OMIGMFKNCIK_FIELD_NUMBER = 15;
-    private emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI oMIGMFKNCIK_;
+    public static final int SHADOW_INFO_FIELD_NUMBER = 14;
+    private emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo shadowInfo_;
     /**
-     * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
-     * @return Whether the oMIGMFKNCIK field is set.
+     * <code>.SeaLampV3ShadowInfo shadow_info = 14;</code>
+     * @return Whether the shadowInfo field is set.
      */
     @java.lang.Override
-    public boolean hasOMIGMFKNCIK() {
-      return oMIGMFKNCIK_ != null;
+    public boolean hasShadowInfo() {
+      return shadowInfo_ != null;
     }
     /**
-     * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
-     * @return The oMIGMFKNCIK.
+     * <code>.SeaLampV3ShadowInfo shadow_info = 14;</code>
+     * @return The shadowInfo.
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI getOMIGMFKNCIK() {
-      return oMIGMFKNCIK_ == null ? emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.getDefaultInstance() : oMIGMFKNCIK_;
+    public emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo getShadowInfo() {
+      return shadowInfo_ == null ? emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo.getDefaultInstance() : shadowInfo_;
     }
     /**
-     * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
+     * <code>.SeaLampV3ShadowInfo shadow_info = 14;</code>
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHIOrBuilder getOMIGMFKNCIKOrBuilder() {
-      return getOMIGMFKNCIK();
-    }
-
-    public static final int KJDPMHAHBOA_FIELD_NUMBER = 12;
-    private emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK kJDPMHAHBOA_;
-    /**
-     * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
-     * @return Whether the kJDPMHAHBOA field is set.
-     */
-    @java.lang.Override
-    public boolean hasKJDPMHAHBOA() {
-      return kJDPMHAHBOA_ != null;
-    }
-    /**
-     * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
-     * @return The kJDPMHAHBOA.
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK getKJDPMHAHBOA() {
-      return kJDPMHAHBOA_ == null ? emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.getDefaultInstance() : kJDPMHAHBOA_;
-    }
-    /**
-     * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCKOrBuilder getKJDPMHAHBOAOrBuilder() {
-      return getKJDPMHAHBOA();
+    public emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfoOrBuilder getShadowInfoOrBuilder() {
+      return getShadowInfo();
     }
 
-    public static final int NLHOPBFKEKD_FIELD_NUMBER = 1;
-    private emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE nLHOPBFKEKD_;
+    public static final int RACE_INFO_FIELD_NUMBER = 3;
+    private emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo raceInfo_;
     /**
-     * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
-     * @return Whether the nLHOPBFKEKD field is set.
+     * <code>.SeaLampV3RaceInfo race_info = 3;</code>
+     * @return Whether the raceInfo field is set.
      */
     @java.lang.Override
-    public boolean hasNLHOPBFKEKD() {
-      return nLHOPBFKEKD_ != null;
+    public boolean hasRaceInfo() {
+      return raceInfo_ != null;
     }
     /**
-     * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
-     * @return The nLHOPBFKEKD.
+     * <code>.SeaLampV3RaceInfo race_info = 3;</code>
+     * @return The raceInfo.
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE getNLHOPBFKEKD() {
-      return nLHOPBFKEKD_ == null ? emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.getDefaultInstance() : nLHOPBFKEKD_;
+    public emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo getRaceInfo() {
+      return raceInfo_ == null ? emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo.getDefaultInstance() : raceInfo_;
     }
     /**
-     * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
+     * <code>.SeaLampV3RaceInfo race_info = 3;</code>
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAEOrBuilder getNLHOPBFKEKDOrBuilder() {
-      return getNLHOPBFKEKD();
+    public emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfoOrBuilder getRaceInfoOrBuilder() {
+      return getRaceInfo();
+    }
+
+    public static final int CAMP_INFO_FIELD_NUMBER = 2;
+    private emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo campInfo_;
+    /**
+     * <code>.SeaLampV3CampInfo camp_info = 2;</code>
+     * @return Whether the campInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasCampInfo() {
+      return campInfo_ != null;
+    }
+    /**
+     * <code>.SeaLampV3CampInfo camp_info = 2;</code>
+     * @return The campInfo.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo getCampInfo() {
+      return campInfo_ == null ? emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo.getDefaultInstance() : campInfo_;
+    }
+    /**
+     * <code>.SeaLampV3CampInfo camp_info = 2;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfoOrBuilder getCampInfoOrBuilder() {
+      return getCampInfo();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -275,14 +275,14 @@ public final class SeaLampV3DetailInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (nLHOPBFKEKD_ != null) {
-        output.writeMessage(1, getNLHOPBFKEKD());
+      if (campInfo_ != null) {
+        output.writeMessage(2, getCampInfo());
       }
-      if (kJDPMHAHBOA_ != null) {
-        output.writeMessage(12, getKJDPMHAHBOA());
+      if (raceInfo_ != null) {
+        output.writeMessage(3, getRaceInfo());
       }
-      if (oMIGMFKNCIK_ != null) {
-        output.writeMessage(15, getOMIGMFKNCIK());
+      if (shadowInfo_ != null) {
+        output.writeMessage(14, getShadowInfo());
       }
       unknownFields.writeTo(output);
     }
@@ -293,17 +293,17 @@ public final class SeaLampV3DetailInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (nLHOPBFKEKD_ != null) {
+      if (campInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getNLHOPBFKEKD());
+          .computeMessageSize(2, getCampInfo());
       }
-      if (kJDPMHAHBOA_ != null) {
+      if (raceInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, getKJDPMHAHBOA());
+          .computeMessageSize(3, getRaceInfo());
       }
-      if (oMIGMFKNCIK_ != null) {
+      if (shadowInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getOMIGMFKNCIK());
+          .computeMessageSize(14, getShadowInfo());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -320,20 +320,20 @@ public final class SeaLampV3DetailInfoOuterClass {
       }
       emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo other = (emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo) obj;
 
-      if (hasOMIGMFKNCIK() != other.hasOMIGMFKNCIK()) return false;
-      if (hasOMIGMFKNCIK()) {
-        if (!getOMIGMFKNCIK()
-            .equals(other.getOMIGMFKNCIK())) return false;
+      if (hasShadowInfo() != other.hasShadowInfo()) return false;
+      if (hasShadowInfo()) {
+        if (!getShadowInfo()
+            .equals(other.getShadowInfo())) return false;
       }
-      if (hasKJDPMHAHBOA() != other.hasKJDPMHAHBOA()) return false;
-      if (hasKJDPMHAHBOA()) {
-        if (!getKJDPMHAHBOA()
-            .equals(other.getKJDPMHAHBOA())) return false;
+      if (hasRaceInfo() != other.hasRaceInfo()) return false;
+      if (hasRaceInfo()) {
+        if (!getRaceInfo()
+            .equals(other.getRaceInfo())) return false;
       }
-      if (hasNLHOPBFKEKD() != other.hasNLHOPBFKEKD()) return false;
-      if (hasNLHOPBFKEKD()) {
-        if (!getNLHOPBFKEKD()
-            .equals(other.getNLHOPBFKEKD())) return false;
+      if (hasCampInfo() != other.hasCampInfo()) return false;
+      if (hasCampInfo()) {
+        if (!getCampInfo()
+            .equals(other.getCampInfo())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -346,17 +346,17 @@ public final class SeaLampV3DetailInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasOMIGMFKNCIK()) {
-        hash = (37 * hash) + OMIGMFKNCIK_FIELD_NUMBER;
-        hash = (53 * hash) + getOMIGMFKNCIK().hashCode();
+      if (hasShadowInfo()) {
+        hash = (37 * hash) + SHADOW_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getShadowInfo().hashCode();
       }
-      if (hasKJDPMHAHBOA()) {
-        hash = (37 * hash) + KJDPMHAHBOA_FIELD_NUMBER;
-        hash = (53 * hash) + getKJDPMHAHBOA().hashCode();
+      if (hasRaceInfo()) {
+        hash = (37 * hash) + RACE_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getRaceInfo().hashCode();
       }
-      if (hasNLHOPBFKEKD()) {
-        hash = (37 * hash) + NLHOPBFKEKD_FIELD_NUMBER;
-        hash = (53 * hash) + getNLHOPBFKEKD().hashCode();
+      if (hasCampInfo()) {
+        hash = (37 * hash) + CAMP_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getCampInfo().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -455,7 +455,7 @@ public final class SeaLampV3DetailInfoOuterClass {
     }
     /**
      * <pre>
-     * Name: KBEAIPPOPPC
+     * Name: MMJLAPCNFKG
      * </pre>
      *
      * Protobuf type {@code SeaLampV3DetailInfo}
@@ -495,23 +495,23 @@ public final class SeaLampV3DetailInfoOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (oMIGMFKNCIKBuilder_ == null) {
-          oMIGMFKNCIK_ = null;
+        if (shadowInfoBuilder_ == null) {
+          shadowInfo_ = null;
         } else {
-          oMIGMFKNCIK_ = null;
-          oMIGMFKNCIKBuilder_ = null;
+          shadowInfo_ = null;
+          shadowInfoBuilder_ = null;
         }
-        if (kJDPMHAHBOABuilder_ == null) {
-          kJDPMHAHBOA_ = null;
+        if (raceInfoBuilder_ == null) {
+          raceInfo_ = null;
         } else {
-          kJDPMHAHBOA_ = null;
-          kJDPMHAHBOABuilder_ = null;
+          raceInfo_ = null;
+          raceInfoBuilder_ = null;
         }
-        if (nLHOPBFKEKDBuilder_ == null) {
-          nLHOPBFKEKD_ = null;
+        if (campInfoBuilder_ == null) {
+          campInfo_ = null;
         } else {
-          nLHOPBFKEKD_ = null;
-          nLHOPBFKEKDBuilder_ = null;
+          campInfo_ = null;
+          campInfoBuilder_ = null;
         }
         return this;
       }
@@ -539,20 +539,20 @@ public final class SeaLampV3DetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo buildPartial() {
         emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo result = new emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo(this);
-        if (oMIGMFKNCIKBuilder_ == null) {
-          result.oMIGMFKNCIK_ = oMIGMFKNCIK_;
+        if (shadowInfoBuilder_ == null) {
+          result.shadowInfo_ = shadowInfo_;
         } else {
-          result.oMIGMFKNCIK_ = oMIGMFKNCIKBuilder_.build();
+          result.shadowInfo_ = shadowInfoBuilder_.build();
         }
-        if (kJDPMHAHBOABuilder_ == null) {
-          result.kJDPMHAHBOA_ = kJDPMHAHBOA_;
+        if (raceInfoBuilder_ == null) {
+          result.raceInfo_ = raceInfo_;
         } else {
-          result.kJDPMHAHBOA_ = kJDPMHAHBOABuilder_.build();
+          result.raceInfo_ = raceInfoBuilder_.build();
         }
-        if (nLHOPBFKEKDBuilder_ == null) {
-          result.nLHOPBFKEKD_ = nLHOPBFKEKD_;
+        if (campInfoBuilder_ == null) {
+          result.campInfo_ = campInfo_;
         } else {
-          result.nLHOPBFKEKD_ = nLHOPBFKEKDBuilder_.build();
+          result.campInfo_ = campInfoBuilder_.build();
         }
         onBuilt();
         return result;
@@ -602,14 +602,14 @@ public final class SeaLampV3DetailInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo other) {
         if (other == emu.grasscutter.net.proto.SeaLampV3DetailInfoOuterClass.SeaLampV3DetailInfo.getDefaultInstance()) return this;
-        if (other.hasOMIGMFKNCIK()) {
-          mergeOMIGMFKNCIK(other.getOMIGMFKNCIK());
+        if (other.hasShadowInfo()) {
+          mergeShadowInfo(other.getShadowInfo());
         }
-        if (other.hasKJDPMHAHBOA()) {
-          mergeKJDPMHAHBOA(other.getKJDPMHAHBOA());
+        if (other.hasRaceInfo()) {
+          mergeRaceInfo(other.getRaceInfo());
         }
-        if (other.hasNLHOPBFKEKD()) {
-          mergeNLHOPBFKEKD(other.getNLHOPBFKEKD());
+        if (other.hasCampInfo()) {
+          mergeCampInfo(other.getCampInfo());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -640,361 +640,361 @@ public final class SeaLampV3DetailInfoOuterClass {
         return this;
       }
 
-      private emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI oMIGMFKNCIK_;
+      private emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo shadowInfo_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI, emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.Builder, emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHIOrBuilder> oMIGMFKNCIKBuilder_;
+          emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo, emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo.Builder, emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfoOrBuilder> shadowInfoBuilder_;
       /**
-       * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
-       * @return Whether the oMIGMFKNCIK field is set.
+       * <code>.SeaLampV3ShadowInfo shadow_info = 14;</code>
+       * @return Whether the shadowInfo field is set.
        */
-      public boolean hasOMIGMFKNCIK() {
-        return oMIGMFKNCIKBuilder_ != null || oMIGMFKNCIK_ != null;
+      public boolean hasShadowInfo() {
+        return shadowInfoBuilder_ != null || shadowInfo_ != null;
       }
       /**
-       * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
-       * @return The oMIGMFKNCIK.
+       * <code>.SeaLampV3ShadowInfo shadow_info = 14;</code>
+       * @return The shadowInfo.
        */
-      public emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI getOMIGMFKNCIK() {
-        if (oMIGMFKNCIKBuilder_ == null) {
-          return oMIGMFKNCIK_ == null ? emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.getDefaultInstance() : oMIGMFKNCIK_;
+      public emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo getShadowInfo() {
+        if (shadowInfoBuilder_ == null) {
+          return shadowInfo_ == null ? emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo.getDefaultInstance() : shadowInfo_;
         } else {
-          return oMIGMFKNCIKBuilder_.getMessage();
+          return shadowInfoBuilder_.getMessage();
         }
       }
       /**
-       * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
+       * <code>.SeaLampV3ShadowInfo shadow_info = 14;</code>
        */
-      public Builder setOMIGMFKNCIK(emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI value) {
-        if (oMIGMFKNCIKBuilder_ == null) {
+      public Builder setShadowInfo(emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo value) {
+        if (shadowInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          oMIGMFKNCIK_ = value;
+          shadowInfo_ = value;
           onChanged();
         } else {
-          oMIGMFKNCIKBuilder_.setMessage(value);
+          shadowInfoBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
+       * <code>.SeaLampV3ShadowInfo shadow_info = 14;</code>
        */
-      public Builder setOMIGMFKNCIK(
-          emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.Builder builderForValue) {
-        if (oMIGMFKNCIKBuilder_ == null) {
-          oMIGMFKNCIK_ = builderForValue.build();
+      public Builder setShadowInfo(
+          emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo.Builder builderForValue) {
+        if (shadowInfoBuilder_ == null) {
+          shadowInfo_ = builderForValue.build();
           onChanged();
         } else {
-          oMIGMFKNCIKBuilder_.setMessage(builderForValue.build());
+          shadowInfoBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
+       * <code>.SeaLampV3ShadowInfo shadow_info = 14;</code>
        */
-      public Builder mergeOMIGMFKNCIK(emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI value) {
-        if (oMIGMFKNCIKBuilder_ == null) {
-          if (oMIGMFKNCIK_ != null) {
-            oMIGMFKNCIK_ =
-              emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.newBuilder(oMIGMFKNCIK_).mergeFrom(value).buildPartial();
+      public Builder mergeShadowInfo(emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo value) {
+        if (shadowInfoBuilder_ == null) {
+          if (shadowInfo_ != null) {
+            shadowInfo_ =
+              emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo.newBuilder(shadowInfo_).mergeFrom(value).buildPartial();
           } else {
-            oMIGMFKNCIK_ = value;
+            shadowInfo_ = value;
           }
           onChanged();
         } else {
-          oMIGMFKNCIKBuilder_.mergeFrom(value);
+          shadowInfoBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
+       * <code>.SeaLampV3ShadowInfo shadow_info = 14;</code>
        */
-      public Builder clearOMIGMFKNCIK() {
-        if (oMIGMFKNCIKBuilder_ == null) {
-          oMIGMFKNCIK_ = null;
+      public Builder clearShadowInfo() {
+        if (shadowInfoBuilder_ == null) {
+          shadowInfo_ = null;
           onChanged();
         } else {
-          oMIGMFKNCIK_ = null;
-          oMIGMFKNCIKBuilder_ = null;
+          shadowInfo_ = null;
+          shadowInfoBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
+       * <code>.SeaLampV3ShadowInfo shadow_info = 14;</code>
        */
-      public emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.Builder getOMIGMFKNCIKBuilder() {
+      public emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo.Builder getShadowInfoBuilder() {
         
         onChanged();
-        return getOMIGMFKNCIKFieldBuilder().getBuilder();
+        return getShadowInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
+       * <code>.SeaLampV3ShadowInfo shadow_info = 14;</code>
        */
-      public emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHIOrBuilder getOMIGMFKNCIKOrBuilder() {
-        if (oMIGMFKNCIKBuilder_ != null) {
-          return oMIGMFKNCIKBuilder_.getMessageOrBuilder();
+      public emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfoOrBuilder getShadowInfoOrBuilder() {
+        if (shadowInfoBuilder_ != null) {
+          return shadowInfoBuilder_.getMessageOrBuilder();
         } else {
-          return oMIGMFKNCIK_ == null ?
-              emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.getDefaultInstance() : oMIGMFKNCIK_;
+          return shadowInfo_ == null ?
+              emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo.getDefaultInstance() : shadowInfo_;
         }
       }
       /**
-       * <code>.AFKACLJCCHI OMIGMFKNCIK = 15;</code>
+       * <code>.SeaLampV3ShadowInfo shadow_info = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI, emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.Builder, emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHIOrBuilder> 
-          getOMIGMFKNCIKFieldBuilder() {
-        if (oMIGMFKNCIKBuilder_ == null) {
-          oMIGMFKNCIKBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI, emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHI.Builder, emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.AFKACLJCCHIOrBuilder>(
-                  getOMIGMFKNCIK(),
+          emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo, emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo.Builder, emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfoOrBuilder> 
+          getShadowInfoFieldBuilder() {
+        if (shadowInfoBuilder_ == null) {
+          shadowInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo, emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfo.Builder, emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.SeaLampV3ShadowInfoOrBuilder>(
+                  getShadowInfo(),
                   getParentForChildren(),
                   isClean());
-          oMIGMFKNCIK_ = null;
+          shadowInfo_ = null;
         }
-        return oMIGMFKNCIKBuilder_;
+        return shadowInfoBuilder_;
       }
 
-      private emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK kJDPMHAHBOA_;
+      private emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo raceInfo_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK, emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.Builder, emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCKOrBuilder> kJDPMHAHBOABuilder_;
+          emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo, emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo.Builder, emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfoOrBuilder> raceInfoBuilder_;
       /**
-       * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
-       * @return Whether the kJDPMHAHBOA field is set.
+       * <code>.SeaLampV3RaceInfo race_info = 3;</code>
+       * @return Whether the raceInfo field is set.
        */
-      public boolean hasKJDPMHAHBOA() {
-        return kJDPMHAHBOABuilder_ != null || kJDPMHAHBOA_ != null;
+      public boolean hasRaceInfo() {
+        return raceInfoBuilder_ != null || raceInfo_ != null;
       }
       /**
-       * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
-       * @return The kJDPMHAHBOA.
+       * <code>.SeaLampV3RaceInfo race_info = 3;</code>
+       * @return The raceInfo.
        */
-      public emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK getKJDPMHAHBOA() {
-        if (kJDPMHAHBOABuilder_ == null) {
-          return kJDPMHAHBOA_ == null ? emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.getDefaultInstance() : kJDPMHAHBOA_;
+      public emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo getRaceInfo() {
+        if (raceInfoBuilder_ == null) {
+          return raceInfo_ == null ? emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo.getDefaultInstance() : raceInfo_;
         } else {
-          return kJDPMHAHBOABuilder_.getMessage();
+          return raceInfoBuilder_.getMessage();
         }
       }
       /**
-       * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
+       * <code>.SeaLampV3RaceInfo race_info = 3;</code>
        */
-      public Builder setKJDPMHAHBOA(emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK value) {
-        if (kJDPMHAHBOABuilder_ == null) {
+      public Builder setRaceInfo(emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo value) {
+        if (raceInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          kJDPMHAHBOA_ = value;
+          raceInfo_ = value;
           onChanged();
         } else {
-          kJDPMHAHBOABuilder_.setMessage(value);
+          raceInfoBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
+       * <code>.SeaLampV3RaceInfo race_info = 3;</code>
        */
-      public Builder setKJDPMHAHBOA(
-          emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.Builder builderForValue) {
-        if (kJDPMHAHBOABuilder_ == null) {
-          kJDPMHAHBOA_ = builderForValue.build();
+      public Builder setRaceInfo(
+          emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo.Builder builderForValue) {
+        if (raceInfoBuilder_ == null) {
+          raceInfo_ = builderForValue.build();
           onChanged();
         } else {
-          kJDPMHAHBOABuilder_.setMessage(builderForValue.build());
+          raceInfoBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
+       * <code>.SeaLampV3RaceInfo race_info = 3;</code>
        */
-      public Builder mergeKJDPMHAHBOA(emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK value) {
-        if (kJDPMHAHBOABuilder_ == null) {
-          if (kJDPMHAHBOA_ != null) {
-            kJDPMHAHBOA_ =
-              emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.newBuilder(kJDPMHAHBOA_).mergeFrom(value).buildPartial();
+      public Builder mergeRaceInfo(emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo value) {
+        if (raceInfoBuilder_ == null) {
+          if (raceInfo_ != null) {
+            raceInfo_ =
+              emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo.newBuilder(raceInfo_).mergeFrom(value).buildPartial();
           } else {
-            kJDPMHAHBOA_ = value;
+            raceInfo_ = value;
           }
           onChanged();
         } else {
-          kJDPMHAHBOABuilder_.mergeFrom(value);
+          raceInfoBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
+       * <code>.SeaLampV3RaceInfo race_info = 3;</code>
        */
-      public Builder clearKJDPMHAHBOA() {
-        if (kJDPMHAHBOABuilder_ == null) {
-          kJDPMHAHBOA_ = null;
+      public Builder clearRaceInfo() {
+        if (raceInfoBuilder_ == null) {
+          raceInfo_ = null;
           onChanged();
         } else {
-          kJDPMHAHBOA_ = null;
-          kJDPMHAHBOABuilder_ = null;
+          raceInfo_ = null;
+          raceInfoBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
+       * <code>.SeaLampV3RaceInfo race_info = 3;</code>
        */
-      public emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.Builder getKJDPMHAHBOABuilder() {
+      public emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo.Builder getRaceInfoBuilder() {
         
         onChanged();
-        return getKJDPMHAHBOAFieldBuilder().getBuilder();
+        return getRaceInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
+       * <code>.SeaLampV3RaceInfo race_info = 3;</code>
        */
-      public emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCKOrBuilder getKJDPMHAHBOAOrBuilder() {
-        if (kJDPMHAHBOABuilder_ != null) {
-          return kJDPMHAHBOABuilder_.getMessageOrBuilder();
+      public emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfoOrBuilder getRaceInfoOrBuilder() {
+        if (raceInfoBuilder_ != null) {
+          return raceInfoBuilder_.getMessageOrBuilder();
         } else {
-          return kJDPMHAHBOA_ == null ?
-              emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.getDefaultInstance() : kJDPMHAHBOA_;
+          return raceInfo_ == null ?
+              emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo.getDefaultInstance() : raceInfo_;
         }
       }
       /**
-       * <code>.DAEEOGCBCCK KJDPMHAHBOA = 12;</code>
+       * <code>.SeaLampV3RaceInfo race_info = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK, emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.Builder, emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCKOrBuilder> 
-          getKJDPMHAHBOAFieldBuilder() {
-        if (kJDPMHAHBOABuilder_ == null) {
-          kJDPMHAHBOABuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK, emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCK.Builder, emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.DAEEOGCBCCKOrBuilder>(
-                  getKJDPMHAHBOA(),
+          emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo, emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo.Builder, emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfoOrBuilder> 
+          getRaceInfoFieldBuilder() {
+        if (raceInfoBuilder_ == null) {
+          raceInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo, emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfo.Builder, emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.SeaLampV3RaceInfoOrBuilder>(
+                  getRaceInfo(),
                   getParentForChildren(),
                   isClean());
-          kJDPMHAHBOA_ = null;
+          raceInfo_ = null;
         }
-        return kJDPMHAHBOABuilder_;
+        return raceInfoBuilder_;
       }
 
-      private emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE nLHOPBFKEKD_;
+      private emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo campInfo_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE, emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.Builder, emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAEOrBuilder> nLHOPBFKEKDBuilder_;
+          emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo, emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo.Builder, emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfoOrBuilder> campInfoBuilder_;
       /**
-       * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
-       * @return Whether the nLHOPBFKEKD field is set.
+       * <code>.SeaLampV3CampInfo camp_info = 2;</code>
+       * @return Whether the campInfo field is set.
        */
-      public boolean hasNLHOPBFKEKD() {
-        return nLHOPBFKEKDBuilder_ != null || nLHOPBFKEKD_ != null;
+      public boolean hasCampInfo() {
+        return campInfoBuilder_ != null || campInfo_ != null;
       }
       /**
-       * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
-       * @return The nLHOPBFKEKD.
+       * <code>.SeaLampV3CampInfo camp_info = 2;</code>
+       * @return The campInfo.
        */
-      public emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE getNLHOPBFKEKD() {
-        if (nLHOPBFKEKDBuilder_ == null) {
-          return nLHOPBFKEKD_ == null ? emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.getDefaultInstance() : nLHOPBFKEKD_;
+      public emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo getCampInfo() {
+        if (campInfoBuilder_ == null) {
+          return campInfo_ == null ? emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo.getDefaultInstance() : campInfo_;
         } else {
-          return nLHOPBFKEKDBuilder_.getMessage();
+          return campInfoBuilder_.getMessage();
         }
       }
       /**
-       * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
+       * <code>.SeaLampV3CampInfo camp_info = 2;</code>
        */
-      public Builder setNLHOPBFKEKD(emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE value) {
-        if (nLHOPBFKEKDBuilder_ == null) {
+      public Builder setCampInfo(emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo value) {
+        if (campInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          nLHOPBFKEKD_ = value;
+          campInfo_ = value;
           onChanged();
         } else {
-          nLHOPBFKEKDBuilder_.setMessage(value);
+          campInfoBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
+       * <code>.SeaLampV3CampInfo camp_info = 2;</code>
        */
-      public Builder setNLHOPBFKEKD(
-          emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.Builder builderForValue) {
-        if (nLHOPBFKEKDBuilder_ == null) {
-          nLHOPBFKEKD_ = builderForValue.build();
+      public Builder setCampInfo(
+          emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo.Builder builderForValue) {
+        if (campInfoBuilder_ == null) {
+          campInfo_ = builderForValue.build();
           onChanged();
         } else {
-          nLHOPBFKEKDBuilder_.setMessage(builderForValue.build());
+          campInfoBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
+       * <code>.SeaLampV3CampInfo camp_info = 2;</code>
        */
-      public Builder mergeNLHOPBFKEKD(emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE value) {
-        if (nLHOPBFKEKDBuilder_ == null) {
-          if (nLHOPBFKEKD_ != null) {
-            nLHOPBFKEKD_ =
-              emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.newBuilder(nLHOPBFKEKD_).mergeFrom(value).buildPartial();
+      public Builder mergeCampInfo(emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo value) {
+        if (campInfoBuilder_ == null) {
+          if (campInfo_ != null) {
+            campInfo_ =
+              emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo.newBuilder(campInfo_).mergeFrom(value).buildPartial();
           } else {
-            nLHOPBFKEKD_ = value;
+            campInfo_ = value;
           }
           onChanged();
         } else {
-          nLHOPBFKEKDBuilder_.mergeFrom(value);
+          campInfoBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
+       * <code>.SeaLampV3CampInfo camp_info = 2;</code>
        */
-      public Builder clearNLHOPBFKEKD() {
-        if (nLHOPBFKEKDBuilder_ == null) {
-          nLHOPBFKEKD_ = null;
+      public Builder clearCampInfo() {
+        if (campInfoBuilder_ == null) {
+          campInfo_ = null;
           onChanged();
         } else {
-          nLHOPBFKEKD_ = null;
-          nLHOPBFKEKDBuilder_ = null;
+          campInfo_ = null;
+          campInfoBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
+       * <code>.SeaLampV3CampInfo camp_info = 2;</code>
        */
-      public emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.Builder getNLHOPBFKEKDBuilder() {
+      public emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo.Builder getCampInfoBuilder() {
         
         onChanged();
-        return getNLHOPBFKEKDFieldBuilder().getBuilder();
+        return getCampInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
+       * <code>.SeaLampV3CampInfo camp_info = 2;</code>
        */
-      public emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAEOrBuilder getNLHOPBFKEKDOrBuilder() {
-        if (nLHOPBFKEKDBuilder_ != null) {
-          return nLHOPBFKEKDBuilder_.getMessageOrBuilder();
+      public emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfoOrBuilder getCampInfoOrBuilder() {
+        if (campInfoBuilder_ != null) {
+          return campInfoBuilder_.getMessageOrBuilder();
         } else {
-          return nLHOPBFKEKD_ == null ?
-              emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.getDefaultInstance() : nLHOPBFKEKD_;
+          return campInfo_ == null ?
+              emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo.getDefaultInstance() : campInfo_;
         }
       }
       /**
-       * <code>.OHKODCEMCAE NLHOPBFKEKD = 1;</code>
+       * <code>.SeaLampV3CampInfo camp_info = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE, emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.Builder, emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAEOrBuilder> 
-          getNLHOPBFKEKDFieldBuilder() {
-        if (nLHOPBFKEKDBuilder_ == null) {
-          nLHOPBFKEKDBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE, emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAE.Builder, emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.OHKODCEMCAEOrBuilder>(
-                  getNLHOPBFKEKD(),
+          emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo, emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo.Builder, emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfoOrBuilder> 
+          getCampInfoFieldBuilder() {
+        if (campInfoBuilder_ == null) {
+          campInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo, emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfo.Builder, emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.SeaLampV3CampInfoOrBuilder>(
+                  getCampInfo(),
                   getParentForChildren(),
                   isClean());
-          nLHOPBFKEKD_ = null;
+          campInfo_ = null;
         }
-        return nLHOPBFKEKDBuilder_;
+        return campInfoBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1063,30 +1063,31 @@ public final class SeaLampV3DetailInfoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031SeaLampV3DetailInfo.proto\032\021AFKACLJCCHI" +
-      ".proto\032\021DAEEOGCBCCK.proto\032\021OHKODCEMCAE.p" +
-      "roto\"~\n\023SeaLampV3DetailInfo\022!\n\013OMIGMFKNC" +
-      "IK\030\017 \001(\0132\014.AFKACLJCCHI\022!\n\013KJDPMHAHBOA\030\014 " +
-      "\001(\0132\014.DAEEOGCBCCK\022!\n\013NLHOPBFKEKD\030\001 \001(\0132\014" +
-      ".OHKODCEMCAEB\033\n\031emu.grasscutter.net.prot" +
-      "ob\006proto3"
+      "\n\031SeaLampV3DetailInfo.proto\032\027SeaLampV3Ca" +
+      "mpInfo.proto\032\027SeaLampV3RaceInfo.proto\032\031S" +
+      "eaLampV3ShadowInfo.proto\"\216\001\n\023SeaLampV3De" +
+      "tailInfo\022)\n\013shadow_info\030\016 \001(\0132\024.SeaLampV" +
+      "3ShadowInfo\022%\n\trace_info\030\003 \001(\0132\022.SeaLamp" +
+      "V3RaceInfo\022%\n\tcamp_info\030\002 \001(\0132\022.SeaLampV" +
+      "3CampInfoB\033\n\031emu.grasscutter.net.protob\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.getDescriptor(),
-          emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.getDescriptor(),
-          emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.getDescriptor(),
         });
     internal_static_SeaLampV3DetailInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_SeaLampV3DetailInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SeaLampV3DetailInfo_descriptor,
-        new java.lang.String[] { "OMIGMFKNCIK", "KJDPMHAHBOA", "NLHOPBFKEKD", });
-    emu.grasscutter.net.proto.AFKACLJCCHIOuterClass.getDescriptor();
-    emu.grasscutter.net.proto.DAEEOGCBCCKOuterClass.getDescriptor();
-    emu.grasscutter.net.proto.OHKODCEMCAEOuterClass.getDescriptor();
+        new java.lang.String[] { "ShadowInfo", "RaceInfo", "CampInfo", });
+    emu.grasscutter.net.proto.SeaLampV3CampInfoOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.SeaLampV3RaceInfoOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.SeaLampV3ShadowInfoOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

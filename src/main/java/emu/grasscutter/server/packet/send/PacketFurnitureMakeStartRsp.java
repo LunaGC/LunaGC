@@ -19,7 +19,7 @@ public class PacketFurnitureMakeStartRsp extends BasePacket {
 
 		if(furnitureMakeData != null){
 			proto.setFurnitureMakeSlot(FurnitureMakeSlotOuterClass.FurnitureMakeSlot.newBuilder()
-                .addAllFurnitureMakeDataList(furnitureMakeData)
+					.addAllFurnitureMakeDataList(furnitureMakeData)
 					.build());
 		}
 

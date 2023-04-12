@@ -19,36 +19,40 @@ public final class FungusDetailOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool isCultivate = 12;</code>
+     * <code>uint32 NABBCOACLGI = 3;</code>
+     * @return The nABBCOACLGI.
+     */
+    int getNABBCOACLGI();
+
+    /**
+     * <code>bool is_cultivate = 9;</code>
      * @return The isCultivate.
      */
     boolean getIsCultivate();
 
     /**
-     * <code>uint32 Unk3300_GCLBPDJDEDN = 14;</code>
-     * @return The unk3300GCLBPDJDEDN.
+     * <code>uint32 BHGDBPKJHMA = 15;</code>
+     * @return The bHGDBPKJHMA.
      */
-    int getUnk3300GCLBPDJDEDN();
+    int getBHGDBPKJHMA();
 
     /**
-     * <code>uint32 Unk3300_EHNBDJPANKL = 3;</code>
-     * @return The unk3300EHNBDJPANKL.
-     */
-    int getUnk3300EHNBDJPANKL();
-
-    /**
-     * <code>uint32 fungusId = 6;</code>
+     * <code>uint32 fungus_id = 8;</code>
      * @return The fungusId.
      */
     int getFungusId();
 
     /**
-     * <code>uint32 nameId = 4;</code>
+     * <code>uint32 name_id = 6;</code>
      * @return The nameId.
      */
     int getNameId();
   }
   /**
+   * <pre>
+   * Name: AOCBMGOJAEH
+   * </pre>
+   *
    * Protobuf type {@code FungusDetail}
    */
   public static final class FungusDetail extends
@@ -95,27 +99,27 @@ public final class FungusDetailOuterClass {
               break;
             case 24: {
 
-              unk3300EHNBDJPANKL_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-
-              nameId_ = input.readUInt32();
+              nABBCOACLGI_ = input.readUInt32();
               break;
             }
             case 48: {
 
+              nameId_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
               fungusId_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 72: {
 
               isCultivate_ = input.readBool();
               break;
             }
-            case 112: {
+            case 120: {
 
-              unk3300GCLBPDJDEDN_ = input.readUInt32();
+              bHGDBPKJHMA_ = input.readUInt32();
               break;
             }
             default: {
@@ -150,10 +154,21 @@ public final class FungusDetailOuterClass {
               emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail.class, emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail.Builder.class);
     }
 
-    public static final int ISCULTIVATE_FIELD_NUMBER = 12;
+    public static final int NABBCOACLGI_FIELD_NUMBER = 3;
+    private int nABBCOACLGI_;
+    /**
+     * <code>uint32 NABBCOACLGI = 3;</code>
+     * @return The nABBCOACLGI.
+     */
+    @java.lang.Override
+    public int getNABBCOACLGI() {
+      return nABBCOACLGI_;
+    }
+
+    public static final int IS_CULTIVATE_FIELD_NUMBER = 9;
     private boolean isCultivate_;
     /**
-     * <code>bool isCultivate = 12;</code>
+     * <code>bool is_cultivate = 9;</code>
      * @return The isCultivate.
      */
     @java.lang.Override
@@ -161,32 +176,21 @@ public final class FungusDetailOuterClass {
       return isCultivate_;
     }
 
-    public static final int UNK3300_GCLBPDJDEDN_FIELD_NUMBER = 14;
-    private int unk3300GCLBPDJDEDN_;
+    public static final int BHGDBPKJHMA_FIELD_NUMBER = 15;
+    private int bHGDBPKJHMA_;
     /**
-     * <code>uint32 Unk3300_GCLBPDJDEDN = 14;</code>
-     * @return The unk3300GCLBPDJDEDN.
+     * <code>uint32 BHGDBPKJHMA = 15;</code>
+     * @return The bHGDBPKJHMA.
      */
     @java.lang.Override
-    public int getUnk3300GCLBPDJDEDN() {
-      return unk3300GCLBPDJDEDN_;
+    public int getBHGDBPKJHMA() {
+      return bHGDBPKJHMA_;
     }
 
-    public static final int UNK3300_EHNBDJPANKL_FIELD_NUMBER = 3;
-    private int unk3300EHNBDJPANKL_;
-    /**
-     * <code>uint32 Unk3300_EHNBDJPANKL = 3;</code>
-     * @return The unk3300EHNBDJPANKL.
-     */
-    @java.lang.Override
-    public int getUnk3300EHNBDJPANKL() {
-      return unk3300EHNBDJPANKL_;
-    }
-
-    public static final int FUNGUSID_FIELD_NUMBER = 6;
+    public static final int FUNGUS_ID_FIELD_NUMBER = 8;
     private int fungusId_;
     /**
-     * <code>uint32 fungusId = 6;</code>
+     * <code>uint32 fungus_id = 8;</code>
      * @return The fungusId.
      */
     @java.lang.Override
@@ -194,10 +198,10 @@ public final class FungusDetailOuterClass {
       return fungusId_;
     }
 
-    public static final int NAMEID_FIELD_NUMBER = 4;
+    public static final int NAME_ID_FIELD_NUMBER = 6;
     private int nameId_;
     /**
-     * <code>uint32 nameId = 4;</code>
+     * <code>uint32 name_id = 6;</code>
      * @return The nameId.
      */
     @java.lang.Override
@@ -219,20 +223,20 @@ public final class FungusDetailOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (unk3300EHNBDJPANKL_ != 0) {
-        output.writeUInt32(3, unk3300EHNBDJPANKL_);
+      if (nABBCOACLGI_ != 0) {
+        output.writeUInt32(3, nABBCOACLGI_);
       }
       if (nameId_ != 0) {
-        output.writeUInt32(4, nameId_);
+        output.writeUInt32(6, nameId_);
       }
       if (fungusId_ != 0) {
-        output.writeUInt32(6, fungusId_);
+        output.writeUInt32(8, fungusId_);
       }
       if (isCultivate_ != false) {
-        output.writeBool(12, isCultivate_);
+        output.writeBool(9, isCultivate_);
       }
-      if (unk3300GCLBPDJDEDN_ != 0) {
-        output.writeUInt32(14, unk3300GCLBPDJDEDN_);
+      if (bHGDBPKJHMA_ != 0) {
+        output.writeUInt32(15, bHGDBPKJHMA_);
       }
       unknownFields.writeTo(output);
     }
@@ -243,25 +247,25 @@ public final class FungusDetailOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (unk3300EHNBDJPANKL_ != 0) {
+      if (nABBCOACLGI_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, unk3300EHNBDJPANKL_);
+          .computeUInt32Size(3, nABBCOACLGI_);
       }
       if (nameId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, nameId_);
+          .computeUInt32Size(6, nameId_);
       }
       if (fungusId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, fungusId_);
+          .computeUInt32Size(8, fungusId_);
       }
       if (isCultivate_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, isCultivate_);
+          .computeBoolSize(9, isCultivate_);
       }
-      if (unk3300GCLBPDJDEDN_ != 0) {
+      if (bHGDBPKJHMA_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, unk3300GCLBPDJDEDN_);
+          .computeUInt32Size(15, bHGDBPKJHMA_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -278,12 +282,12 @@ public final class FungusDetailOuterClass {
       }
       emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail other = (emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail) obj;
 
+      if (getNABBCOACLGI()
+          != other.getNABBCOACLGI()) return false;
       if (getIsCultivate()
           != other.getIsCultivate()) return false;
-      if (getUnk3300GCLBPDJDEDN()
-          != other.getUnk3300GCLBPDJDEDN()) return false;
-      if (getUnk3300EHNBDJPANKL()
-          != other.getUnk3300EHNBDJPANKL()) return false;
+      if (getBHGDBPKJHMA()
+          != other.getBHGDBPKJHMA()) return false;
       if (getFungusId()
           != other.getFungusId()) return false;
       if (getNameId()
@@ -299,16 +303,16 @@ public final class FungusDetailOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ISCULTIVATE_FIELD_NUMBER;
+      hash = (37 * hash) + NABBCOACLGI_FIELD_NUMBER;
+      hash = (53 * hash) + getNABBCOACLGI();
+      hash = (37 * hash) + IS_CULTIVATE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsCultivate());
-      hash = (37 * hash) + UNK3300_GCLBPDJDEDN_FIELD_NUMBER;
-      hash = (53 * hash) + getUnk3300GCLBPDJDEDN();
-      hash = (37 * hash) + UNK3300_EHNBDJPANKL_FIELD_NUMBER;
-      hash = (53 * hash) + getUnk3300EHNBDJPANKL();
-      hash = (37 * hash) + FUNGUSID_FIELD_NUMBER;
+      hash = (37 * hash) + BHGDBPKJHMA_FIELD_NUMBER;
+      hash = (53 * hash) + getBHGDBPKJHMA();
+      hash = (37 * hash) + FUNGUS_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFungusId();
-      hash = (37 * hash) + NAMEID_FIELD_NUMBER;
+      hash = (37 * hash) + NAME_ID_FIELD_NUMBER;
       hash = (53 * hash) + getNameId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -406,6 +410,10 @@ public final class FungusDetailOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: AOCBMGOJAEH
+     * </pre>
+     *
      * Protobuf type {@code FungusDetail}
      */
     public static final class Builder extends
@@ -443,11 +451,11 @@ public final class FungusDetailOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        nABBCOACLGI_ = 0;
+
         isCultivate_ = false;
 
-        unk3300GCLBPDJDEDN_ = 0;
-
-        unk3300EHNBDJPANKL_ = 0;
+        bHGDBPKJHMA_ = 0;
 
         fungusId_ = 0;
 
@@ -479,9 +487,9 @@ public final class FungusDetailOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail buildPartial() {
         emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail result = new emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail(this);
+        result.nABBCOACLGI_ = nABBCOACLGI_;
         result.isCultivate_ = isCultivate_;
-        result.unk3300GCLBPDJDEDN_ = unk3300GCLBPDJDEDN_;
-        result.unk3300EHNBDJPANKL_ = unk3300EHNBDJPANKL_;
+        result.bHGDBPKJHMA_ = bHGDBPKJHMA_;
         result.fungusId_ = fungusId_;
         result.nameId_ = nameId_;
         onBuilt();
@@ -532,14 +540,14 @@ public final class FungusDetailOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail other) {
         if (other == emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail.getDefaultInstance()) return this;
+        if (other.getNABBCOACLGI() != 0) {
+          setNABBCOACLGI(other.getNABBCOACLGI());
+        }
         if (other.getIsCultivate() != false) {
           setIsCultivate(other.getIsCultivate());
         }
-        if (other.getUnk3300GCLBPDJDEDN() != 0) {
-          setUnk3300GCLBPDJDEDN(other.getUnk3300GCLBPDJDEDN());
-        }
-        if (other.getUnk3300EHNBDJPANKL() != 0) {
-          setUnk3300EHNBDJPANKL(other.getUnk3300EHNBDJPANKL());
+        if (other.getBHGDBPKJHMA() != 0) {
+          setBHGDBPKJHMA(other.getBHGDBPKJHMA());
         }
         if (other.getFungusId() != 0) {
           setFungusId(other.getFungusId());
@@ -576,9 +584,40 @@ public final class FungusDetailOuterClass {
         return this;
       }
 
+      private int nABBCOACLGI_ ;
+      /**
+       * <code>uint32 NABBCOACLGI = 3;</code>
+       * @return The nABBCOACLGI.
+       */
+      @java.lang.Override
+      public int getNABBCOACLGI() {
+        return nABBCOACLGI_;
+      }
+      /**
+       * <code>uint32 NABBCOACLGI = 3;</code>
+       * @param value The nABBCOACLGI to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNABBCOACLGI(int value) {
+        
+        nABBCOACLGI_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 NABBCOACLGI = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNABBCOACLGI() {
+        
+        nABBCOACLGI_ = 0;
+        onChanged();
+        return this;
+      }
+
       private boolean isCultivate_ ;
       /**
-       * <code>bool isCultivate = 12;</code>
+       * <code>bool is_cultivate = 9;</code>
        * @return The isCultivate.
        */
       @java.lang.Override
@@ -586,7 +625,7 @@ public final class FungusDetailOuterClass {
         return isCultivate_;
       }
       /**
-       * <code>bool isCultivate = 12;</code>
+       * <code>bool is_cultivate = 9;</code>
        * @param value The isCultivate to set.
        * @return This builder for chaining.
        */
@@ -597,7 +636,7 @@ public final class FungusDetailOuterClass {
         return this;
       }
       /**
-       * <code>bool isCultivate = 12;</code>
+       * <code>bool is_cultivate = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsCultivate() {
@@ -607,71 +646,40 @@ public final class FungusDetailOuterClass {
         return this;
       }
 
-      private int unk3300GCLBPDJDEDN_ ;
+      private int bHGDBPKJHMA_ ;
       /**
-       * <code>uint32 Unk3300_GCLBPDJDEDN = 14;</code>
-       * @return The unk3300GCLBPDJDEDN.
+       * <code>uint32 BHGDBPKJHMA = 15;</code>
+       * @return The bHGDBPKJHMA.
        */
       @java.lang.Override
-      public int getUnk3300GCLBPDJDEDN() {
-        return unk3300GCLBPDJDEDN_;
+      public int getBHGDBPKJHMA() {
+        return bHGDBPKJHMA_;
       }
       /**
-       * <code>uint32 Unk3300_GCLBPDJDEDN = 14;</code>
-       * @param value The unk3300GCLBPDJDEDN to set.
+       * <code>uint32 BHGDBPKJHMA = 15;</code>
+       * @param value The bHGDBPKJHMA to set.
        * @return This builder for chaining.
        */
-      public Builder setUnk3300GCLBPDJDEDN(int value) {
+      public Builder setBHGDBPKJHMA(int value) {
         
-        unk3300GCLBPDJDEDN_ = value;
+        bHGDBPKJHMA_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 Unk3300_GCLBPDJDEDN = 14;</code>
+       * <code>uint32 BHGDBPKJHMA = 15;</code>
        * @return This builder for chaining.
        */
-      public Builder clearUnk3300GCLBPDJDEDN() {
+      public Builder clearBHGDBPKJHMA() {
         
-        unk3300GCLBPDJDEDN_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int unk3300EHNBDJPANKL_ ;
-      /**
-       * <code>uint32 Unk3300_EHNBDJPANKL = 3;</code>
-       * @return The unk3300EHNBDJPANKL.
-       */
-      @java.lang.Override
-      public int getUnk3300EHNBDJPANKL() {
-        return unk3300EHNBDJPANKL_;
-      }
-      /**
-       * <code>uint32 Unk3300_EHNBDJPANKL = 3;</code>
-       * @param value The unk3300EHNBDJPANKL to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUnk3300EHNBDJPANKL(int value) {
-        
-        unk3300EHNBDJPANKL_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 Unk3300_EHNBDJPANKL = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUnk3300EHNBDJPANKL() {
-        
-        unk3300EHNBDJPANKL_ = 0;
+        bHGDBPKJHMA_ = 0;
         onChanged();
         return this;
       }
 
       private int fungusId_ ;
       /**
-       * <code>uint32 fungusId = 6;</code>
+       * <code>uint32 fungus_id = 8;</code>
        * @return The fungusId.
        */
       @java.lang.Override
@@ -679,7 +687,7 @@ public final class FungusDetailOuterClass {
         return fungusId_;
       }
       /**
-       * <code>uint32 fungusId = 6;</code>
+       * <code>uint32 fungus_id = 8;</code>
        * @param value The fungusId to set.
        * @return This builder for chaining.
        */
@@ -690,7 +698,7 @@ public final class FungusDetailOuterClass {
         return this;
       }
       /**
-       * <code>uint32 fungusId = 6;</code>
+       * <code>uint32 fungus_id = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearFungusId() {
@@ -702,7 +710,7 @@ public final class FungusDetailOuterClass {
 
       private int nameId_ ;
       /**
-       * <code>uint32 nameId = 4;</code>
+       * <code>uint32 name_id = 6;</code>
        * @return The nameId.
        */
       @java.lang.Override
@@ -710,7 +718,7 @@ public final class FungusDetailOuterClass {
         return nameId_;
       }
       /**
-       * <code>uint32 nameId = 4;</code>
+       * <code>uint32 name_id = 6;</code>
        * @param value The nameId to set.
        * @return This builder for chaining.
        */
@@ -721,7 +729,7 @@ public final class FungusDetailOuterClass {
         return this;
       }
       /**
-       * <code>uint32 nameId = 4;</code>
+       * <code>uint32 name_id = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearNameId() {
@@ -797,11 +805,11 @@ public final class FungusDetailOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022FungusDetail.proto\"\177\n\014FungusDetail\022\023\n\013" +
-      "isCultivate\030\014 \001(\010\022\033\n\023Unk3300_GCLBPDJDEDN" +
-      "\030\016 \001(\r\022\033\n\023Unk3300_EHNBDJPANKL\030\003 \001(\r\022\020\n\010f" +
-      "ungusId\030\006 \001(\r\022\016\n\006nameId\030\004 \001(\rB\033\n\031emu.gra" +
-      "sscutter.net.protob\006proto3"
+      "\n\022FungusDetail.proto\"r\n\014FungusDetail\022\023\n\013" +
+      "NABBCOACLGI\030\003 \001(\r\022\024\n\014is_cultivate\030\t \001(\010\022" +
+      "\023\n\013BHGDBPKJHMA\030\017 \001(\r\022\021\n\tfungus_id\030\010 \001(\r\022" +
+      "\017\n\007name_id\030\006 \001(\rB\033\n\031emu.grasscutter.net." +
+      "protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -812,7 +820,7 @@ public final class FungusDetailOuterClass {
     internal_static_FungusDetail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_FungusDetail_descriptor,
-        new java.lang.String[] { "IsCultivate", "Unk3300GCLBPDJDEDN", "Unk3300EHNBDJPANKL", "FungusId", "NameId", });
+        new java.lang.String[] { "NABBCOACLGI", "IsCultivate", "BHGDBPKJHMA", "FungusId", "NameId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -3,8 +3,8 @@ package emu.grasscutter.server.packet.send;
 import emu.grasscutter.game.player.Player;
 import emu.grasscutter.net.packet.BasePacket;
 import emu.grasscutter.net.packet.PacketOpcodes;
-import emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource;
 import emu.grasscutter.net.proto.HomeResourceTakeHomeCoinRspOuterClass;
+import emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource;
 
 public class PacketHomeResourceTakeHomeCoinRsp extends BasePacket {
     public PacketHomeResourceTakeHomeCoinRsp(Player player) {
@@ -21,7 +21,7 @@ public class PacketHomeResourceTakeHomeCoinRsp extends BasePacket {
                 .build();
 
         var proto = HomeResourceTakeHomeCoinRspOuterClass.HomeResourceTakeHomeCoinRsp.newBuilder()
-            .setHomeCoin(coin)
+                .setHomeCoin(coin)
                 .build();
 
         this.setData(proto);

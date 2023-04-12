@@ -19,18 +19,22 @@ public final class GravenInnocenceCarveStageInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool isOpen = 12;</code>
+     * <code>bool is_open = 13;</code>
      * @return The isOpen.
      */
     boolean getIsOpen();
 
     /**
-     * <code>uint32 stageId = 2;</code>
+     * <code>uint32 stage_id = 11;</code>
      * @return The stageId.
      */
     int getStageId();
   }
   /**
+   * <pre>
+   * Name: CFBKCJCMFEP
+   * </pre>
+   *
    * Protobuf type {@code GravenInnocenceCarveStageInfo}
    */
   public static final class GravenInnocenceCarveStageInfo extends
@@ -75,12 +79,12 @@ public final class GravenInnocenceCarveStageInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
+            case 88: {
 
               stageId_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 104: {
 
               isOpen_ = input.readBool();
               break;
@@ -117,10 +121,10 @@ public final class GravenInnocenceCarveStageInfoOuterClass {
               emu.grasscutter.net.proto.GravenInnocenceCarveStageInfoOuterClass.GravenInnocenceCarveStageInfo.class, emu.grasscutter.net.proto.GravenInnocenceCarveStageInfoOuterClass.GravenInnocenceCarveStageInfo.Builder.class);
     }
 
-    public static final int ISOPEN_FIELD_NUMBER = 12;
+    public static final int IS_OPEN_FIELD_NUMBER = 13;
     private boolean isOpen_;
     /**
-     * <code>bool isOpen = 12;</code>
+     * <code>bool is_open = 13;</code>
      * @return The isOpen.
      */
     @java.lang.Override
@@ -128,10 +132,10 @@ public final class GravenInnocenceCarveStageInfoOuterClass {
       return isOpen_;
     }
 
-    public static final int STAGEID_FIELD_NUMBER = 2;
+    public static final int STAGE_ID_FIELD_NUMBER = 11;
     private int stageId_;
     /**
-     * <code>uint32 stageId = 2;</code>
+     * <code>uint32 stage_id = 11;</code>
      * @return The stageId.
      */
     @java.lang.Override
@@ -154,10 +158,10 @@ public final class GravenInnocenceCarveStageInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (stageId_ != 0) {
-        output.writeUInt32(2, stageId_);
+        output.writeUInt32(11, stageId_);
       }
       if (isOpen_ != false) {
-        output.writeBool(12, isOpen_);
+        output.writeBool(13, isOpen_);
       }
       unknownFields.writeTo(output);
     }
@@ -170,11 +174,11 @@ public final class GravenInnocenceCarveStageInfoOuterClass {
       size = 0;
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, stageId_);
+          .computeUInt32Size(11, stageId_);
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, isOpen_);
+          .computeBoolSize(13, isOpen_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -206,10 +210,10 @@ public final class GravenInnocenceCarveStageInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ISOPEN_FIELD_NUMBER;
+      hash = (37 * hash) + IS_OPEN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsOpen());
-      hash = (37 * hash) + STAGEID_FIELD_NUMBER;
+      hash = (37 * hash) + STAGE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getStageId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -307,6 +311,10 @@ public final class GravenInnocenceCarveStageInfoOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: CFBKCJCMFEP
+     * </pre>
+     *
      * Protobuf type {@code GravenInnocenceCarveStageInfo}
      */
     public static final class Builder extends
@@ -461,7 +469,7 @@ public final class GravenInnocenceCarveStageInfoOuterClass {
 
       private boolean isOpen_ ;
       /**
-       * <code>bool isOpen = 12;</code>
+       * <code>bool is_open = 13;</code>
        * @return The isOpen.
        */
       @java.lang.Override
@@ -469,7 +477,7 @@ public final class GravenInnocenceCarveStageInfoOuterClass {
         return isOpen_;
       }
       /**
-       * <code>bool isOpen = 12;</code>
+       * <code>bool is_open = 13;</code>
        * @param value The isOpen to set.
        * @return This builder for chaining.
        */
@@ -480,7 +488,7 @@ public final class GravenInnocenceCarveStageInfoOuterClass {
         return this;
       }
       /**
-       * <code>bool isOpen = 12;</code>
+       * <code>bool is_open = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
@@ -492,7 +500,7 @@ public final class GravenInnocenceCarveStageInfoOuterClass {
 
       private int stageId_ ;
       /**
-       * <code>uint32 stageId = 2;</code>
+       * <code>uint32 stage_id = 11;</code>
        * @return The stageId.
        */
       @java.lang.Override
@@ -500,7 +508,7 @@ public final class GravenInnocenceCarveStageInfoOuterClass {
         return stageId_;
       }
       /**
-       * <code>uint32 stageId = 2;</code>
+       * <code>uint32 stage_id = 11;</code>
        * @param value The stageId to set.
        * @return This builder for chaining.
        */
@@ -511,7 +519,7 @@ public final class GravenInnocenceCarveStageInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 stageId = 2;</code>
+       * <code>uint32 stage_id = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearStageId() {
@@ -587,10 +595,10 @@ public final class GravenInnocenceCarveStageInfoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n#GravenInnocenceCarveStageInfo.proto\"@\n" +
-      "\035GravenInnocenceCarveStageInfo\022\016\n\006isOpen" +
-      "\030\014 \001(\010\022\017\n\007stageId\030\002 \001(\rB\033\n\031emu.grasscutt" +
-      "er.net.protob\006proto3"
+      "\n#GravenInnocenceCarveStageInfo.proto\"B\n" +
+      "\035GravenInnocenceCarveStageInfo\022\017\n\007is_ope" +
+      "n\030\r \001(\010\022\020\n\010stage_id\030\013 \001(\rB\033\n\031emu.grasscu" +
+      "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

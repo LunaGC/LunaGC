@@ -1,16 +1,27 @@
 package emu.grasscutter.data;
 
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
 import emu.grasscutter.Grasscutter;
 import emu.grasscutter.data.binout.*;
-import emu.grasscutter.data.excels.*;
 import emu.grasscutter.game.quest.QuestEncryptionKey;
 import emu.grasscutter.utils.Utils;
-import it.unimi.dsi.fastutil.ints.*;
+import emu.grasscutter.data.excels.*;
+import it.unimi.dsi.fastutil.ints.Int2IntMap;
+import it.unimi.dsi.fastutil.ints.Int2IntOpenHashMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectLinkedOpenHashMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+import it.unimi.dsi.fastutil.ints.IntArrayList;
+import it.unimi.dsi.fastutil.ints.IntList;
+import it.unimi.dsi.fastutil.ints.IntSet;
 import lombok.Getter;
 import lombok.experimental.Tolerate;
-
-import java.lang.reflect.Field;
-import java.util.*;
 
 public class GameData {
     // BinOutputs
@@ -72,50 +83,26 @@ public class GameData {
     @Getter private static final Int2ObjectMap<GatherData> gatherDataMap = new Int2ObjectOpenHashMap<>();
     @Getter private static final Int2ObjectMap<HomeWorldBgmData> homeWorldBgmDataMap = new Int2ObjectOpenHashMap<>();
     @Getter private static final Int2ObjectMap<HomeWorldLevelData> homeWorldLevelDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<InvestigationMonsterData> investigationMonsterDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<ItemData> itemDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<MonsterCurveData> monsterCurveDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<MonsterData> monsterDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<MonsterDescribeData> monsterDescribeDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<MusicGameBasicData> musicGameBasicDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<NpcData> npcDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<OpenStateData> openStateDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<PersonalLineData> personalLineDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<PlayerLevelData> playerLevelDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<ProductIdData> productIdDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<ProductMcoinDetailData> productMcoinDetailDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<ProudSkillData> proudSkillDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<QuestData> questDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<ReliquaryAffixData> reliquaryAffixDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<ReliquaryMainPropData> reliquaryMainPropDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<ReliquarySetData> reliquarySetDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<RewardData> rewardDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<RewardPreviewData> rewardPreviewDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<SceneData> sceneDataMap = new Int2ObjectLinkedOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<TowerFloorData> towerFloorDataMap = new Int2ObjectOpenHashMap<>();
-    @Getter
-    private static final Int2ObjectMap<TowerLevelData> towerLevelDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<InvestigationMonsterData> investigationMonsterDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<ItemData> itemDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<MonsterCurveData> monsterCurveDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<MonsterData> monsterDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<MonsterDescribeData> monsterDescribeDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<MusicGameBasicData> musicGameBasicDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<NpcData> npcDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<OpenStateData> openStateDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<PersonalLineData> personalLineDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<PlayerLevelData> playerLevelDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<ProudSkillData> proudSkillDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<QuestData> questDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<ReliquaryAffixData> reliquaryAffixDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<ReliquaryMainPropData> reliquaryMainPropDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<ReliquarySetData> reliquarySetDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<RewardData> rewardDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<RewardPreviewData> rewardPreviewDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<SceneData> sceneDataMap = new Int2ObjectLinkedOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<TowerFloorData> towerFloorDataMap = new Int2ObjectOpenHashMap<>();
+    @Getter private static final Int2ObjectMap<TowerLevelData> towerLevelDataMap = new Int2ObjectOpenHashMap<>();
     @Getter private static final Int2ObjectMap<TowerScheduleData> towerScheduleDataMap = new Int2ObjectOpenHashMap<>();
     @Getter private static final Int2ObjectMap<TriggerExcelConfigData> triggerExcelConfigDataMap = new Int2ObjectOpenHashMap<>();
     @Getter private static final Int2ObjectMap<WeaponCurveData> weaponCurveDataMap = new Int2ObjectOpenHashMap<>();

@@ -1,15 +1,17 @@
 package emu.grasscutter.server.packet.send;
 
 
+import emu.grasscutter.Grasscutter;
 import emu.grasscutter.game.mail.Mail;
 import emu.grasscutter.game.player.Player;
 import emu.grasscutter.net.packet.BasePacket;
 import emu.grasscutter.net.packet.PacketOpcodes;
-import emu.grasscutter.net.proto.EquipParamOuterClass.EquipParam;
 import emu.grasscutter.net.proto.MailChangeNotifyOuterClass.MailChangeNotify;
-import emu.grasscutter.net.proto.MailDataOuterClass.MailData;
-import emu.grasscutter.net.proto.MailItemOuterClass.MailItem;
 import emu.grasscutter.net.proto.MailTextContentOuterClass.MailTextContent;
+import emu.grasscutter.net.proto.MailItemOuterClass.MailItem;
+import emu.grasscutter.net.proto.MailDataOuterClass.MailData;
+
+import emu.grasscutter.net.proto.EquipParamOuterClass.EquipParam;
 
 import java.util.ArrayList;
 import java.util.List;

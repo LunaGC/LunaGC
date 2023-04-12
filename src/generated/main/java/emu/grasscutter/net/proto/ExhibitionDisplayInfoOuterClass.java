@@ -38,7 +38,7 @@ public final class ExhibitionDisplayInfoOuterClass {
   }
   /**
    * <pre>
-   * Name: ABMCDDFMBOC
+   * Name: LJLCOKBCBOG
    * </pre>
    *
    * Protobuf type {@code ExhibitionDisplayInfo}
@@ -344,7 +344,7 @@ public final class ExhibitionDisplayInfoOuterClass {
     }
     /**
      * <pre>
-     * Name: ABMCDDFMBOC
+     * Name: LJLCOKBCBOG
      * </pre>
      *
      * Protobuf type {@code ExhibitionDisplayInfo}

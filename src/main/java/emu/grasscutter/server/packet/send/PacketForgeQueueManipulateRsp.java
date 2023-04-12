@@ -1,5 +1,7 @@
 package emu.grasscutter.server.packet.send;
 
+import java.util.List;
+
 import emu.grasscutter.game.inventory.GameItem;
 import emu.grasscutter.net.packet.BasePacket;
 import emu.grasscutter.net.packet.PacketOpcodes;
@@ -7,8 +9,6 @@ import emu.grasscutter.net.proto.ForgeQueueManipulateRspOuterClass.ForgeQueueMan
 import emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType;
 import emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam;
 import emu.grasscutter.net.proto.RetcodeOuterClass.Retcode;
-
-import java.util.List;
 
 public class PacketForgeQueueManipulateRsp extends BasePacket {
 

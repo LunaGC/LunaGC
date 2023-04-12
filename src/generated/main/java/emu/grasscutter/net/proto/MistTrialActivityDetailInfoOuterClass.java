@@ -44,7 +44,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
   }
   /**
    * <pre>
-   * Name: JEGJGGKPPKA
+   * Name: CKIKFAOABMK
    * </pre>
    *
    * Protobuf type {@code MistTrialActivityDetailInfo}
@@ -336,7 +336,7 @@ public final class MistTrialActivityDetailInfoOuterClass {
     }
     /**
      * <pre>
-     * Name: JEGJGGKPPKA
+     * Name: CKIKFAOABMK
      * </pre>
      *
      * Protobuf type {@code MistTrialActivityDetailInfo}

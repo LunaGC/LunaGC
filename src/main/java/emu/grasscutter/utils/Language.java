@@ -15,32 +15,38 @@ import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import lombok.EqualsAndHashCode;
 
-import java.io.*;
+import static emu.grasscutter.config.Configuration.*;
+import static emu.grasscutter.utils.FileUtils.getResourcePath;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-
-import static emu.grasscutter.config.Configuration.FALLBACK_LANGUAGE;
-import static emu.grasscutter.utils.FileUtils.getResourcePath;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public final class Language {
     private static final Map<String, Language> cachedLanguages = new ConcurrentHashMap<>();
 
     private final String languageCode;
     private final Map<String, String> translations = new ConcurrentHashMap<>();
-    private static final AtomicBoolean scannedTextMaps = new AtomicBoolean();  // Ensure that we don't infinitely rescan on cache misses that don't exist
+    private static boolean scannedTextmaps = false;  // Ensure that we don't infinitely rescan on cache misses that don't exist
 
     /**
      * Creates a language instance from a code.
@@ -238,17 +244,71 @@ public final class Language {
     }
 
     private static final int TEXTMAP_CACHE_VERSION = 0x9CCACE04;
+    @EqualsAndHashCode public static class TextStrings implements Serializable {
+        public static final String[] ARR_LANGUAGES = {"EN", "CHS", "CHT", "JP", "KR", "DE", "ES", "FR", "ID", "PT", "RU", "TH", "VI"};
+        public static final String[] ARR_GC_LANGUAGES = {"en-US", "zh-CN", "zh-TW", "ja-JP", "ko-KR", "en-US", "es-ES", "fr-FR", "en-US", "en-US", "ru-RU", "en-US", "en-US"};  // TODO: Update the placeholder en-US entries if we ever add GC translations for the missing client languages
+        public static final int NUM_LANGUAGES = ARR_LANGUAGES.length;
+        public static final List<String> LIST_LANGUAGES = Arrays.asList(ARR_LANGUAGES);
+        public static final Object2IntMap<String> MAP_LANGUAGES =  // Map "EN": 0, "CHS": 1, ..., "VI": 12
+            new Object2IntOpenHashMap<>(
+                IntStream.range(0, ARR_LANGUAGES.length)
+                .boxed()
+                .collect(Collectors.toMap(i -> ARR_LANGUAGES[i], i -> i)));
+        public static final Object2IntMap<String> MAP_GC_LANGUAGES =  // Map "en-US": 0, "zh-CN": 1, ...
+            new Object2IntOpenHashMap<>(
+                IntStream.range(0, ARR_GC_LANGUAGES.length)
+                .boxed()
+                .collect(Collectors.toMap(i -> ARR_GC_LANGUAGES[i], i -> i, (i1, i2) -> i1)));  // Have to handle duplicates referring back to the first
+        public String[] strings = new String[ARR_LANGUAGES.length];
 
-    public static TextStrings getTextMapKey(int key) {
-        if ((textMapStrings == null) || (!scannedTextMaps.get() && !textMapStrings.containsKey(key))) {
-            loadTextMaps();
+        public TextStrings() {};
 
-            if (!textMapStrings.containsKey(key)) {
-                generateTextMapsCache();
+        public TextStrings(String init) {
+            for (int i = 0; i < NUM_LANGUAGES; i++)
+                this.strings[i] = init;
+        };
+
+        public TextStrings(List<String> strings, int key) {
+            // Some hashes don't have strings for some languages :(
+            String nullReplacement = "[N/A] %d".formatted((long) key & 0xFFFFFFFFL);
+            for (int i = 0; i < NUM_LANGUAGES; i++) {  // Find first non-null if there is any
+                String s = strings.get(i);
+                if (s != null) {
+                    nullReplacement = "[%s] - %s".formatted(ARR_LANGUAGES[i], s);
+                    break;
+                }
+            }
+            for (int i = 0; i < NUM_LANGUAGES; i++) {
+                String s = strings.get(i);
+                if (s != null)
+                    this.strings[i] = s;
+                else
+                    this.strings[i] = nullReplacement;
             }
         }
 
-        return textMapStrings.getOrDefault(key, TextStrings.DEFAULT);
+        public static List<Language> getLanguages() {
+            return Arrays.stream(ARR_GC_LANGUAGES).map(Language::getLanguage).toList();
+        }
+
+        public String get(int languageIndex) {
+            return strings[languageIndex];
+        }
+
+        public String get(String languageCode) {
+            return strings[MAP_LANGUAGES.getOrDefault(languageCode, 0)];
+        }
+
+        public String getGC(String languageCode) {
+            return strings[MAP_GC_LANGUAGES.getOrDefault(languageCode, 0)];
+        }
+
+        public boolean set(String languageCode, String string) {
+            int index = MAP_LANGUAGES.getOrDefault(languageCode, -1);
+            if (index < 0) return false;
+            strings[index] = string;
+            return true;
+        }
     }
 
     private static final Pattern textMapKeyValueRegex = Pattern.compile("\"(\\d+)\": \"(.+)\"");
@@ -327,6 +387,16 @@ public final class Language {
         return textMapStrings;
     }
 
+    public static TextStrings getTextMapKey(int key) {
+        if ((textMapStrings == null) || (!scannedTextmaps && !textMapStrings.containsKey(key)))
+            loadTextMaps();
+        return textMapStrings.get(key);
+    }
+
+    public static TextStrings getTextMapKey(long hash) {
+        return getTextMapKey((int) hash);
+    }
+
     public static void loadTextMaps() {
         // Check system timestamps on cache and resources
         try {
@@ -354,23 +424,10 @@ public final class Language {
             }
         } catch (Exception e) {
             Grasscutter.getLogger().debug("Exception while checking cache: ", e);
-        }
-        ;
+        };
 
         // Regenerate cache
-        generateTextMapsCache();
-    }
-
-    public static TextStrings getTextMapKey(long hash) {
-        return getTextMapKey((int) hash);
-    }
-
-    public static void generateTextMapsCache() {
-        if (scannedTextMaps.get()) {
-            return;
-        }
-
-        Grasscutter.getLogger().info("Generating TextMaps cache");
+        Grasscutter.getLogger().debug("Generating TextMaps cache");
         ResourceLoader.loadAll();
         IntSet usedHashes = new IntOpenHashSet();
         GameData.getAchievementDataMap().values().stream()
@@ -392,91 +449,17 @@ public final class Language {
         // Incidental strings
         usedHashes.add((int) 4233146695L);  // Character
         usedHashes.add((int) 4231343903L);  // Weapon
-        usedHashes.add((int) 332935371L);  // Standard Wish
+        usedHashes.add((int)  332935371L);  // Standard Wish
         usedHashes.add((int) 2272170627L);  // Character Event Wish
         usedHashes.add((int) 3352513147L);  // Character Event Wish-2
         usedHashes.add((int) 2864268523L);  // Weapon Event Wish
 
         textMapStrings = loadTextMapFiles(usedHashes);
-        scannedTextMaps.set(true);
+        scannedTextmaps = true;
         try {
             saveTextMapsCache(textMapStrings);
         } catch (IOException e) {
             Grasscutter.getLogger().error("Failed to save TextMap cache: ", e);
-        }
-    }
-
-    @EqualsAndHashCode public static class TextStrings implements Serializable {
-        public static final String[] ARR_LANGUAGES = {"EN", "CHS", "CHT", "JP", "KR", "DE", "ES", "FR", "ID", "PT", "RU", "TH", "VI"};
-        public static final String[] ARR_GC_LANGUAGES = {"en-US", "zh-CN", "zh-TW", "ja-JP", "ko-KR", "en-US", "es-ES", "fr-FR", "en-US", "en-US", "ru-RU", "en-US", "en-US"};  // TODO: Update the placeholder en-US entries if we ever add GC translations for the missing client languages
-        public static final int NUM_LANGUAGES = ARR_LANGUAGES.length;
-        public static final List<String> LIST_LANGUAGES = Arrays.asList(ARR_LANGUAGES);
-        public static final Object2IntMap<String> MAP_LANGUAGES =  // Map "EN": 0, "CHS": 1, ..., "VI": 12
-            new Object2IntOpenHashMap<>(
-                IntStream.range(0, ARR_LANGUAGES.length)
-                    .boxed()
-                    .collect(Collectors.toMap(i -> ARR_LANGUAGES[i], i -> i)));
-        public static final Object2IntMap<String> MAP_GC_LANGUAGES =  // Map "en-US": 0, "zh-CN": 1, ...
-            new Object2IntOpenHashMap<>(
-                IntStream.range(0, ARR_GC_LANGUAGES.length)
-                    .boxed()
-                    .collect(Collectors.toMap(i -> ARR_GC_LANGUAGES[i], i -> i, (i1, i2) -> i1)));  // Have to handle duplicates referring back to the first
-        public String[] strings = new String[ARR_LANGUAGES.length];
-
-        public static final TextStrings DEFAULT = new TextStrings("");
-
-        public TextStrings() {
-        }
-
-        ;
-
-        public TextStrings(String init) {
-            for (int i = 0; i < NUM_LANGUAGES; i++)
-                this.strings[i] = init;
-        }
-
-        ;
-
-        public TextStrings(List<String> strings, int key) {
-            // Some hashes don't have strings for some languages :(
-            String nullReplacement = "[N/A] %d".formatted((long) key & 0xFFFFFFFFL);
-            for (int i = 0; i < NUM_LANGUAGES; i++) {  // Find first non-null if there is any
-                String s = strings.get(i);
-                if (s != null) {
-                    nullReplacement = "[%s] - %s".formatted(ARR_LANGUAGES[i], s);
-                    break;
-                }
-            }
-            for (int i = 0; i < NUM_LANGUAGES; i++) {
-                String s = strings.get(i);
-                if (s != null)
-                    this.strings[i] = s;
-                else
-                    this.strings[i] = nullReplacement;
-            }
-        }
-
-        public static List<Language> getLanguages() {
-            return Arrays.stream(ARR_GC_LANGUAGES).map(Language::getLanguage).toList();
-        }
-
-        public String get(int languageIndex) {
-            return strings[languageIndex];
-        }
-
-        public String get(String languageCode) {
-            return strings[MAP_LANGUAGES.getOrDefault(languageCode, 0)];
-        }
-
-        public String getGC(String languageCode) {
-            return strings[MAP_GC_LANGUAGES.getOrDefault(languageCode, 0)];
-        }
-
-        public boolean set(String languageCode, String string) {
-            int index = MAP_LANGUAGES.getOrDefault(languageCode, -1);
-            if (index < 0) return false;
-            strings[index] = string;
-            return true;
-        }
+        };
     }
 }
