@@ -88,7 +88,8 @@ public class HealAbilityManager {
 
     ArrayList<HealDataAvatar> healDataAvatarList;
 	private Player player;
-    
+    public static int skillId = 0;
+
     public HealAbilityManager (Player player) {
 		this.player = player;
         healDataAvatarList = new ArrayList();
@@ -181,6 +182,13 @@ public class HealAbilityManager {
                         //Special case for Hu Tao:
                         if(healDataAvatar.avatarName.equals("Hutao") && curHP <= maxHP * 0.5 && ratio != 0) {
                             ratio = 0.1555f;
+                        }
+
+                        //Special case Hutao E
+                        if(healDataAvatar.avatarName.equals("Hutao") && skillId == 10462) {
+                            skillId = 0;
+                            float damageAmount = curHP * 0.3f;
+                            currentAvatar.damage(damageAmount);
                         }
 
                         switch(fightPropertyType) {

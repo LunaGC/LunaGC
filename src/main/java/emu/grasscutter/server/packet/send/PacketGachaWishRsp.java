@@ -12,7 +12,7 @@ public class PacketGachaWishRsp extends BasePacket {
         GachaWishRsp proto = GachaWishRsp.newBuilder()
                 .setGachaType(gachaType)
                 .setGachaScheduleId(scheduleId)
-                .setWishItemId(itemId)
+                //.setWishItemId(itemId)
                 .setWishProgress(progress)
                 .setWishMaxProgress(maxProgress)
                 .build();
