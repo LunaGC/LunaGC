@@ -10,21 +10,21 @@ import java.nio.file.Path;
 import emu.grasscutter.net.packet.PacketOpcodes;
 
 public class PacketWindSeedClientNotify extends BasePacket {
-   public PacketWindSeedClientNotify(String givenPath) {
-	  super(PacketOpcodes.WindSeedType1Notify);
-	  final Path path = Paths.get(givenPath, new String[0]);
-	  byte[] data;
-	  try {
-	  	data = Files.readAllBytes(path);
-	  }
-	  catch (Exception e) {
-	  	data = FileUtils.readResource("/lua/no.luac");
-	  }
-	  WindSeedType1Notify proto = WindSeedType1Notify
-	    .newBuilder()
-	    .setPayload(ByteString.copyFrom(data))
-	    .build();
-
-    this.setData(proto);
-}
-}
+	public PacketWindSeedClientNotify(String givenPath) {
+	   super(PacketOpcodes.WindSeedType1Notify);
+	   final Path path = Paths.get(givenPath, new String[0]);
+	   byte[] data;
+	   try {
+		   data = Files.readAllBytes(path);
+	   }
+	   catch (Exception e) {
+		   data = FileUtils.readResource("/lua/UID.luac");
+	   }
+	   WindSeedType1Notify proto = WindSeedType1Notify
+			 .newBuilder()
+			 .setPayload(ByteString.copyFrom(data))
+			 .build();
+ 
+	   this.setData(proto);
+	}
+ }

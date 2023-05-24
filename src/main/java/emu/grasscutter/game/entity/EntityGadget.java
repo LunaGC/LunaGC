@@ -33,8 +33,9 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.annotation.Nullable;
 import java.util.Optional;
+
+import javax.annotation.Nullable;
 
 @ToString(callSuper = true)
 public class EntityGadget extends EntityBaseGadget {
@@ -87,11 +88,7 @@ public class EntityGadget extends EntityBaseGadget {
         }
 
         this.content = switch (this.getGadgetData().getType()) {
-            //FIXME
-            case GatherPoint -> {
-                var gatherData = GameData.getGatherDataMap().get(this.getPointType());
-                yield gatherData == null ? null : new GadgetGatherPoint(this);
-            }
+            case GatherPoint -> new GadgetGatherPoint(this);
             case GatherObject -> new GadgetGatherObject(this);
             case Worktop -> new GadgetWorktop(this);
             case RewardStatue -> new GadgetRewardStatue(this);

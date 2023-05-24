@@ -1,5 +1,21 @@
 package emu.grasscutter.tools;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
+
 import emu.grasscutter.GameConstants;
 import emu.grasscutter.Grasscutter;
 import emu.grasscutter.command.CommandHandler;
@@ -14,18 +30,6 @@ import emu.grasscutter.utils.Language.TextStrings;
 import it.unimi.dsi.fastutil.ints.Int2IntRBTreeMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectRBTreeMap;
 import lombok.val;
-
-import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.LongStream;
 
 import static emu.grasscutter.utils.FileUtils.getResourcePath;
 import static emu.grasscutter.utils.Language.getTextMapKey;
@@ -58,13 +62,7 @@ public final class Tools {
         val questDataMap = new Int2ObjectRBTreeMap<>(GameData.getQuestDataMap());
         val achievementDataMap = new Int2ObjectRBTreeMap<>(GameData.getAchievementDataMap());
 
-        Function<SortedMap<?, ?>, String> getPad = m -> {
-            try {
-                return "%" + m.lastKey().toString().length() + "s : ";
-            } catch (NoSuchElementException e) {
-                return "N/A";
-            }
-        };
+        Function<SortedMap<?, ?>, String> getPad = m -> "%" + m.lastKey().toString().length() + "s : ";
 
         // Create builders and helper functions
         val handbookBuilders = IntStream.range(0, TextStrings.NUM_LANGUAGES).mapToObj(i -> new StringBuilder()).toList();

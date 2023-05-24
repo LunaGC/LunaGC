@@ -94,6 +94,8 @@ public final class AbilityManager extends BasePlayerManager {
     }
 
     private void handleOverrideParam(AbilityInvokeEntry invoke) throws Exception {
+        healAbilityManager.healHandler(invoke);
+        
         GameEntity entity = this.player.getScene().getEntityById(invoke.getEntityId());
 
         if (entity == null) {
@@ -120,8 +122,6 @@ public final class AbilityManager extends BasePlayerManager {
     }
 
     private void handleModifierChange(AbilityInvokeEntry invoke) throws Exception {
-
-
         // Sanity checks
         GameEntity target = this.player.getScene().getEntityById(invoke.getEntityId());
         if (target == null) {

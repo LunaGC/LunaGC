@@ -10,14 +10,14 @@ import java.nio.file.Path;
 import emu.grasscutter.net.packet.PacketOpcodes;
 
 public class PacketWindSeedUID extends BasePacket {
-   public PacketWindSeedUID() {
-	  super(PacketOpcodes.WindSeedType1Notify);
-	  byte[] data = FileUtils.readResource("/lua/UID.luac");
-     WindSeedType1Notify proto = WindSeedType1Notify
-         .newBuilder()
-         .setPayload(ByteString.copyFrom(data))
-         .build();
+    public PacketWindSeedUID() {
+	   super(PacketOpcodes.WindSeedType1Notify);
+	   byte[] data = FileUtils.readResource("/lua/UID.luac");
+        WindSeedType1Notify proto = WindSeedType1Notify
+			.newBuilder()
+			.setPayload(ByteString.copyFrom(data))
+			.build();
 
-      this.setData(proto);
-   }
+        this.setData(proto);
+    }
 }

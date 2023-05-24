@@ -66,6 +66,7 @@ tmp/
 /*.sh
 
 GM Handbook*.txt
+config.json
 mitmdump.exe
 mongod.exe
 

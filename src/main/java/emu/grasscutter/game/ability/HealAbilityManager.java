@@ -89,7 +89,7 @@ public class HealAbilityManager {
     ArrayList<HealDataAvatar> healDataAvatarList;
 	private Player player;
     public static int skillId = 0;
-    
+
     public HealAbilityManager (Player player) {
 		this.player = player;
         healDataAvatarList = new ArrayList();
@@ -179,12 +179,12 @@ public class HealAbilityManager {
                         curAttack = healActionAvatar.getFightProperty(FightProperty.FIGHT_PROP_CUR_ATTACK);
                         curDefense = healActionAvatar.getFightProperty(FightProperty.FIGHT_PROP_CUR_DEFENSE);
 
-                        //Special case for Q skill of Hu Tao:
+                        //Special case for Hu Tao:
                         if(healDataAvatar.avatarName.equals("Hutao") && curHP <= maxHP * 0.5 && ratio != 0) {
                             ratio = 0.1555f;
                         }
 
-                        //Special case for E skill of Hu Tao
+                        //Special case Hutao E
                         if(healDataAvatar.avatarName.equals("Hutao") && skillId == 10462) {
                             skillId = 0;
                             float damageAmount = curHP * 0.3f;

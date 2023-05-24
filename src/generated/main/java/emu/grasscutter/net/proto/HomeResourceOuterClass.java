@@ -25,20 +25,12 @@ public final class HomeResourceOuterClass {
     int getNextRefreshTime();
 
     /**
-     * <pre>
-     * GBBFEOLGIPA
-     * </pre>
-     *
      * <code>uint32 store_limit = 13;</code>
      * @return The storeLimit.
      */
     int getStoreLimit();
 
     /**
-     * <pre>
-     * ELNCBCIJMJJ
-     * </pre>
-     *
      * <code>uint32 store_value = 10;</code>
      * @return The storeValue.
      */
@@ -154,10 +146,6 @@ public final class HomeResourceOuterClass {
     public static final int STORE_LIMIT_FIELD_NUMBER = 13;
     private int storeLimit_;
     /**
-     * <pre>
-     * GBBFEOLGIPA
-     * </pre>
-     *
      * <code>uint32 store_limit = 13;</code>
      * @return The storeLimit.
      */
@@ -169,10 +157,6 @@ public final class HomeResourceOuterClass {
     public static final int STORE_VALUE_FIELD_NUMBER = 10;
     private int storeValue_;
     /**
-     * <pre>
-     * ELNCBCIJMJJ
-     * </pre>
-     *
      * <code>uint32 store_value = 10;</code>
      * @return The storeValue.
      */
@@ -554,10 +538,6 @@ public final class HomeResourceOuterClass {
 
       private int storeLimit_ ;
       /**
-       * <pre>
-       * GBBFEOLGIPA
-       * </pre>
-       *
        * <code>uint32 store_limit = 13;</code>
        * @return The storeLimit.
        */
@@ -566,10 +546,6 @@ public final class HomeResourceOuterClass {
         return storeLimit_;
       }
       /**
-       * <pre>
-       * GBBFEOLGIPA
-       * </pre>
-       *
        * <code>uint32 store_limit = 13;</code>
        * @param value The storeLimit to set.
        * @return This builder for chaining.
@@ -581,10 +557,6 @@ public final class HomeResourceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * GBBFEOLGIPA
-       * </pre>
-       *
        * <code>uint32 store_limit = 13;</code>
        * @return This builder for chaining.
        */
@@ -597,10 +569,6 @@ public final class HomeResourceOuterClass {
 
       private int storeValue_ ;
       /**
-       * <pre>
-       * ELNCBCIJMJJ
-       * </pre>
-       *
        * <code>uint32 store_value = 10;</code>
        * @return The storeValue.
        */
@@ -609,10 +577,6 @@ public final class HomeResourceOuterClass {
         return storeValue_;
       }
       /**
-       * <pre>
-       * ELNCBCIJMJJ
-       * </pre>
-       *
        * <code>uint32 store_value = 10;</code>
        * @param value The storeValue to set.
        * @return This builder for chaining.
@@ -624,10 +588,6 @@ public final class HomeResourceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * ELNCBCIJMJJ
-       * </pre>
-       *
        * <code>uint32 store_value = 10;</code>
        * @return This builder for chaining.
        */
