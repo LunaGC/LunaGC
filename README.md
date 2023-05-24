@@ -9,4 +9,4 @@
 * [Fiddler Classic](https://telerik-fiddler.s3.amazonaws.com/fiddler/FiddlerSetup.exe) (プロキシツールならfiddler以外でも大丈夫です)
 
 
-質問がある場合は[Discord(Luna DataBase)](https://discord.gg/T5vZU6UyeG) に参加して下さい｡
+質問がある場合は[Discord(Luna DataBase)](https://discord.gg/x2uEzwCNn2) に参加して下さい｡
