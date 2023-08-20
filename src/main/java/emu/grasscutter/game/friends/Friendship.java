@@ -90,27 +90,24 @@ public class Friendship {
     }
 
     public FriendBrief toProto() {
-        FriendBrief proto =
-                FriendBrief.newBuilder()
-                        .setUid(getFriendProfile().getUid())
-                        .setNickname(getFriendProfile().getName())
-                        .setLevel(getFriendProfile().getPlayerLevel())
-                        .setProfilePicture(
-                                ProfilePicture.newBuilder().setAvatarId(getFriendProfile().getAvatarId()))
-                        .setWorldLevel(getFriendProfile().getWorldLevel())
-                        .setSignature(getFriendProfile().getSignature())
-                        .setOnlineState(
-                                getFriendProfile().isOnline()
-                                        ? FriendOnlineState.FRIEND_ONLINE_STATE_ONLINE
-                                        : FriendOnlineState.FRIEND_ONLINE_STATE_DISCONNECT)
-                        .setIsMpModeAvailable(true)
-                        .setLastActiveTime(getFriendProfile().getLastActiveTime())
-                        .setNameCardId(getFriendProfile().getNameCard())
-                        .setParam(getFriendProfile().getDaysSinceLogin())
-                        .setIsGameSource(true)
-                        .setPlatformType(PlatformTypeOuterClass.PlatformType.PLATFORM_TYPE_PC)
-                        .build();
-
-        return proto;
+        return FriendBrief.newBuilder()
+            .setUid(getFriendProfile().getUid())
+            .setNickname(getFriendProfile().getName())
+            .setLevel(getFriendProfile().getPlayerLevel())
+            .setProfilePicture(
+                ProfilePicture.newBuilder().setAvatarId(getFriendProfile().getAvatarId()))
+            .setWorldLevel(getFriendProfile().getWorldLevel())
+            .setSignature(getFriendProfile().getSignature())
+            .setOnlineState(
+                getFriendProfile().isOnline()
+                    ? FriendOnlineState.FRIEND_ONLINE_STATE_ONLINE
+                    : FriendOnlineState.FRIEND_ONLINE_STATE_DISCONNECT)
+            .setIsMpModeAvailable(true)
+            .setEFMMMOPAPAK(getFriendProfile().getLastActiveTime())//FIXME
+            .setNameCardId(getFriendProfile().getNameCard())
+            .setParam(getFriendProfile().getDaysSinceLogin())
+            .setIsGameSource(true)
+            .setPlatformType(PlatformTypeOuterClass.PlatformType.PLATFORM_TYPE_PC)
+            .build();
     }
 }

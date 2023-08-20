@@ -16,11 +16,11 @@ public class PacketGetScenePointRsp extends BasePacket {
         if (GameData.getScenePointIdList().size() == 0) {
             for (int i = 1; i < 1000; i++) {
                 p.addUnlockedPointList(i);
-                p.addUnhidePointList(i);
+                p.addEBIFELCKPEA(i);//FIXME
             }
         } else {
             p.addAllUnlockedPointList(player.getUnlockedScenePoints(sceneId));
-            p.addAllUnhidePointList(player.getUnlockedScenePoints(sceneId));
+            p.addAllEBIFELCKPEA(player.getUnlockedScenePoints(sceneId));
         }
 
         for (int i = 1; i < 9; i++) {

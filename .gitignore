@@ -68,7 +68,6 @@ tmp/
 GM Handbook*.txt
 handbook.html
 
-config.json
 mitmdump.exe
 mongod.exe
 

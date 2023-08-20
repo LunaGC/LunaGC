@@ -19,7 +19,7 @@ public final class HomeResourceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 store_value = 4;</code>
+     * <code>uint32 store_value = 1;</code>
      * @return The storeValue.
      */
     int getStoreValue();
@@ -31,14 +31,14 @@ public final class HomeResourceOuterClass {
     int getNextRefreshTime();
 
     /**
-     * <code>uint32 store_limit = 13;</code>
+     * <code>uint32 store_limit = 3;</code>
      * @return The storeLimit.
      */
     int getStoreLimit();
   }
   /**
    * <pre>
-   * Obf: KEJFFCAKLNH
+   * Obf: NFFHIBBIIKB
    * </pre>
    *
    * Protobuf type {@code HomeResource}
@@ -85,19 +85,19 @@ public final class HomeResourceOuterClass {
             case 0:
               done = true;
               break;
-            case 32: {
+            case 8: {
 
               storeValue_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+
+              storeLimit_ = input.readUInt32();
               break;
             }
             case 45: {
 
               nextRefreshTime_ = input.readFixed32();
-              break;
-            }
-            case 104: {
-
-              storeLimit_ = input.readUInt32();
               break;
             }
             default: {
@@ -132,10 +132,10 @@ public final class HomeResourceOuterClass {
               emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource.class, emu.grasscutter.net.proto.HomeResourceOuterClass.HomeResource.Builder.class);
     }
 
-    public static final int STORE_VALUE_FIELD_NUMBER = 4;
+    public static final int STORE_VALUE_FIELD_NUMBER = 1;
     private int storeValue_;
     /**
-     * <code>uint32 store_value = 4;</code>
+     * <code>uint32 store_value = 1;</code>
      * @return The storeValue.
      */
     @java.lang.Override
@@ -154,10 +154,10 @@ public final class HomeResourceOuterClass {
       return nextRefreshTime_;
     }
 
-    public static final int STORE_LIMIT_FIELD_NUMBER = 13;
+    public static final int STORE_LIMIT_FIELD_NUMBER = 3;
     private int storeLimit_;
     /**
-     * <code>uint32 store_limit = 13;</code>
+     * <code>uint32 store_limit = 3;</code>
      * @return The storeLimit.
      */
     @java.lang.Override
@@ -180,13 +180,13 @@ public final class HomeResourceOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (storeValue_ != 0) {
-        output.writeUInt32(4, storeValue_);
+        output.writeUInt32(1, storeValue_);
+      }
+      if (storeLimit_ != 0) {
+        output.writeUInt32(3, storeLimit_);
       }
       if (nextRefreshTime_ != 0) {
         output.writeFixed32(5, nextRefreshTime_);
-      }
-      if (storeLimit_ != 0) {
-        output.writeUInt32(13, storeLimit_);
       }
       unknownFields.writeTo(output);
     }
@@ -199,15 +199,15 @@ public final class HomeResourceOuterClass {
       size = 0;
       if (storeValue_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, storeValue_);
+          .computeUInt32Size(1, storeValue_);
+      }
+      if (storeLimit_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, storeLimit_);
       }
       if (nextRefreshTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed32Size(5, nextRefreshTime_);
-      }
-      if (storeLimit_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, storeLimit_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -344,7 +344,7 @@ public final class HomeResourceOuterClass {
     }
     /**
      * <pre>
-     * Obf: KEJFFCAKLNH
+     * Obf: NFFHIBBIIKB
      * </pre>
      *
      * Protobuf type {@code HomeResource}
@@ -507,7 +507,7 @@ public final class HomeResourceOuterClass {
 
       private int storeValue_ ;
       /**
-       * <code>uint32 store_value = 4;</code>
+       * <code>uint32 store_value = 1;</code>
        * @return The storeValue.
        */
       @java.lang.Override
@@ -515,7 +515,7 @@ public final class HomeResourceOuterClass {
         return storeValue_;
       }
       /**
-       * <code>uint32 store_value = 4;</code>
+       * <code>uint32 store_value = 1;</code>
        * @param value The storeValue to set.
        * @return This builder for chaining.
        */
@@ -526,7 +526,7 @@ public final class HomeResourceOuterClass {
         return this;
       }
       /**
-       * <code>uint32 store_value = 4;</code>
+       * <code>uint32 store_value = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearStoreValue() {
@@ -569,7 +569,7 @@ public final class HomeResourceOuterClass {
 
       private int storeLimit_ ;
       /**
-       * <code>uint32 store_limit = 13;</code>
+       * <code>uint32 store_limit = 3;</code>
        * @return The storeLimit.
        */
       @java.lang.Override
@@ -577,7 +577,7 @@ public final class HomeResourceOuterClass {
         return storeLimit_;
       }
       /**
-       * <code>uint32 store_limit = 13;</code>
+       * <code>uint32 store_limit = 3;</code>
        * @param value The storeLimit to set.
        * @return This builder for chaining.
        */
@@ -588,7 +588,7 @@ public final class HomeResourceOuterClass {
         return this;
       }
       /**
-       * <code>uint32 store_limit = 13;</code>
+       * <code>uint32 store_limit = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearStoreLimit() {
@@ -665,8 +665,8 @@ public final class HomeResourceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\022HomeResource.proto\"S\n\014HomeResource\022\023\n\013" +
-      "store_value\030\004 \001(\r\022\031\n\021next_refresh_time\030\005" +
-      " \001(\007\022\023\n\013store_limit\030\r \001(\rB\033\n\031emu.grasscu" +
+      "store_value\030\001 \001(\r\022\031\n\021next_refresh_time\030\005" +
+      " \001(\007\022\023\n\013store_limit\030\003 \001(\rB\033\n\031emu.grasscu" +
       "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

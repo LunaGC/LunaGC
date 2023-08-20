@@ -6,6 +6,9 @@ import static emu.grasscutter.utils.lang.Language.translate;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
 import emu.grasscutter.Grasscutter;
+import emu.grasscutter.data.ResourceLoader.AvatarConfig;
+import emu.grasscutter.data.ResourceLoader.OpenConfigData;
+import emu.grasscutter.data.ResourceLoader.ScenePointConfig;
 import emu.grasscutter.data.binout.*;
 import emu.grasscutter.data.binout.AbilityModifier.AbilityModifierAction;
 import emu.grasscutter.data.binout.config.*;
@@ -32,6 +35,7 @@ import java.util.regex.Pattern;
 import java.util.stream.*;
 import javax.script.*;
 import lombok.*;
+
 import org.reflections.Reflections;
 
 public final class ResourceLoader {
@@ -1037,6 +1041,7 @@ public final class ResourceLoader {
 
     public static
     class ScenePointConfig { // Sadly this doesn't work as a local class in loadScenePoints()
+        @SerializedName(value = "points", alternate = {"KCHJLAHIGAD"})
         public Map<Integer, PointData> points;
     }
 }
