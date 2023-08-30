@@ -1,9 +1,7 @@
 package emu.grasscutter.game.achievement;
 
 import com.github.davidmoten.guavamini.Lists;
-import dev.morphia.annotations.Entity;
-import dev.morphia.annotations.Id;
-import dev.morphia.annotations.Transient;
+import dev.morphia.annotations.*;
 import emu.grasscutter.Grasscutter;
 import emu.grasscutter.data.GameData;
 import emu.grasscutter.data.excels.achievement.AchievementData;
@@ -11,20 +9,13 @@ import emu.grasscutter.database.DatabaseHelper;
 import emu.grasscutter.game.inventory.GameItem;
 import emu.grasscutter.game.player.Player;
 import emu.grasscutter.game.props.ActionReason;
-import emu.grasscutter.server.packet.send.PacketAchievementAllDataNotify;
-import emu.grasscutter.server.packet.send.PacketAchievementUpdateNotify;
-import emu.grasscutter.server.packet.send.PacketTakeAchievementGoalRewardRsp;
-import emu.grasscutter.server.packet.send.PacketTakeAchievementRewardRsp;
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
+import emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status;
+import emu.grasscutter.server.packet.send.*;
+import lombok.*;
 import org.bson.types.ObjectId;
 
 import javax.annotation.Nullable;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.IntSupplier;
 
@@ -33,11 +24,10 @@ import java.util.function.IntSupplier;
 @Builder(builderMethodName = "of")
 public class Achievements {
     private static final IntSupplier currentTimeSecs =
-        () -> (int) (System.currentTimeMillis() / 1000L);
+            () -> (int) (System.currentTimeMillis() / 1000L);
     private static final Achievement INVALID =
-        new Achievement(AchievementStatus.INVALID, -1, 0, 0, 0);
-    @Id
-    private ObjectId id;
+            new Achievement(Status.STATUS_INVALID, -1, 0, 0, 0);
+    @Id private ObjectId id;
     private int uid;
     @Transient private Player player;
     private Map<Integer, Achievement> achievementList;
@@ -74,9 +64,9 @@ public class Achievements {
                 .forEach(
                         a -> {
                             map.put(
-                                a.getId(),
-                                new Achievement(
-                                    AchievementStatus.UNFINISHED, a.getId(), a.getProgress(), 0, 0));
+                                    a.getId(),
+                                    new Achievement(
+                                            Status.STATUS_UNFINISHED, a.getId(), a.getProgress(), 0, 0));
                         });
         return map;
     }
@@ -136,13 +126,13 @@ public class Achievements {
     }
 
     private boolean update(Achievement a) {
-        if (a.getAchievementStatus() == AchievementStatus.UNFINISHED
-            && a.getCurProgress() >= a.getTotalProgress()) {
-            a.setAchievementStatus(AchievementStatus.FINISHED);
+        if (a.getStatus() == Status.STATUS_UNFINISHED
+                && a.getCurProgress() >= a.getTotalProgress()) {
+            a.setStatus(Status.STATUS_FINISHED);
             a.setFinishTimestampSec(currentTimeSecs.getAsInt());
             return true;
         } else if (this.isFinished(a.getId()) && a.getCurProgress() < a.getTotalProgress()) {
-            a.setAchievementStatus(AchievementStatus.UNFINISHED);
+            a.setStatus(Status.STATUS_UNFINISHED);
             a.setFinishTimestampSec(0);
             return true;
         }
@@ -188,11 +178,11 @@ public class Achievements {
                         achievementId,
                         id -> {
                             return new Achievement(
-                                AchievementStatus.UNFINISHED,
-                                id,
-                                GameData.getAchievementDataMap().get(id.intValue()).getProgress(),
-                                0,
-                                0);
+                                    Status.STATUS_UNFINISHED,
+                                    id,
+                                    GameData.getAchievementDataMap().get(id.intValue()).getProgress(),
+                                    0,
+                                    0);
                         });
     }
 
@@ -201,14 +191,14 @@ public class Achievements {
         return data == null || data.isDisuse();
     }
 
-    public AchievementStatus getStatus(int achievementId) {
-        return this.getAchievementList().getOrDefault(achievementId, INVALID).getAchievementStatus();
+    public Status getStatus(int achievementId) {
+        return this.getAchievementList().getOrDefault(achievementId, INVALID).getStatus();
     }
 
     public boolean isFinished(int achievementId) {
         var status = this.getStatus(achievementId);
-        return status == AchievementStatus.FINISHED
-            || status == AchievementStatus.REWARD_TAKEN;
+        return status == Status.STATUS_FINISHED
+                || status == Status.STATUS_REWARD_TAKEN;
     }
 
     public void takeReward(List<Integer> ids) {
@@ -245,7 +235,7 @@ public class Achievements {
                             });
 
             var a = this.getAchievement(i);
-            a.setAchievementStatus(AchievementStatus.REWARD_TAKEN);
+            a.setStatus(Status.STATUS_REWARD_TAKEN);
             this.save();
             this.sendUpdatePacket(a);
         }
@@ -299,11 +289,11 @@ public class Achievements {
     }
 
     public boolean isRewardTaken(int achievementId) {
-        return this.getStatus(achievementId) == AchievementStatus.REWARD_TAKEN;
+        return this.getStatus(achievementId) == Status.STATUS_REWARD_TAKEN;
     }
 
     public boolean isRewardLeft(int achievementId) {
-        return this.getStatus(achievementId) == AchievementStatus.FINISHED;
+        return this.getStatus(achievementId) == Status.STATUS_FINISHED;
     }
 
     private boolean isPacketSendable() {
@@ -319,6 +309,21 @@ public class Achievements {
             this.player = player;
         }
 
+        this.registerNewAchievementsIfExist();
         this.player.sendPacket(new PacketAchievementAllDataNotify(this.player));
+    }
+
+    private void registerNewAchievementsIfExist() {
+        GameData.getAchievementDataMap().values().stream()
+                .filter(AchievementData::isUsed)
+                .filter(a -> !this.achievementList.containsKey(a.getId()))
+                .forEach(
+                        a -> {
+                            Grasscutter.getLogger().trace("Registering a new achievement (id: {})", a.getId());
+                            this.achievementList.put(
+                                    a.getId(),
+                                    new Achievement(Status.STATUS_UNFINISHED, a.getId(), a.getProgress(), 0, 0));
+                        });
+        this.save();
     }
 }

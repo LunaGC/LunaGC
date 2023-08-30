@@ -1750,7 +1750,7 @@ public final class GetScenePointRspOuterClass {
        * @return This builder for chaining.
        */
       public Builder setFBFJPEPMAOF(boolean value) {
-        
+
         fBFJPEPMAOF_ = value;
         onChanged();
         return this;
@@ -1760,7 +1760,7 @@ public final class GetScenePointRspOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFBFJPEPMAOF() {
-        
+
         fBFJPEPMAOF_ = false;
         onChanged();
         return this;
@@ -1781,7 +1781,7 @@ public final class GetScenePointRspOuterClass {
        * @return This builder for chaining.
        */
       public Builder setRetcode(int value) {
-        
+
         retcode_ = value;
         onChanged();
         return this;
@@ -1791,7 +1791,7 @@ public final class GetScenePointRspOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
-        
+
         retcode_ = 0;
         onChanged();
         return this;
@@ -2207,7 +2207,7 @@ public final class GetScenePointRspOuterClass {
        * @return This builder for chaining.
        */
       public Builder setBelongUid(int value) {
-        
+
         belongUid_ = value;
         onChanged();
         return this;
@@ -2217,7 +2217,7 @@ public final class GetScenePointRspOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBelongUid() {
-        
+
         belongUid_ = 0;
         onChanged();
         return this;
@@ -2317,7 +2317,7 @@ public final class GetScenePointRspOuterClass {
        * @return This builder for chaining.
        */
       public Builder setSceneId(int value) {
-        
+
         sceneId_ = value;
         onChanged();
         return this;
@@ -2327,7 +2327,7 @@ public final class GetScenePointRspOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSceneId() {
-        
+
         sceneId_ = 0;
         onChanged();
         return this;
@@ -2466,7 +2466,7 @@ public final class GetScenePointRspOuterClass {
 
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_GetScenePointRsp_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_GetScenePointRsp_fieldAccessorTable;
 

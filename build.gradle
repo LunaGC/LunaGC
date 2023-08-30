@@ -39,6 +39,7 @@ spotless {
         target fileTree(rootDir) {
             include '**/*.java'
             exclude '**/generated/**/*.*'
+            exclude '.idea/**/*.*'
         }
 
         importOrder('io.grasscutter', '', 'java', 'javax', '\\#java', '\\#') // Configure import order.
@@ -335,10 +336,16 @@ tasks.register('generateHandbook') {
         return
     }
 
+    // Resolve the NPM command.
+    var npm = 'npm'
+    if (Os.isFamily(Os.FAMILY_WINDOWS))
+        npm = 'npm.cmd'
+
     def npmVersion = {
         try {
-            return 'npm --version'.execute().text.trim()
+            return "${npm} --version".execute()
         } catch (ignored) {
+            ignored.printStackTrace()
             return 'NPM_NOT_FOUND'
         }
     }
@@ -378,10 +385,6 @@ tasks.register('generateHandbook') {
         }
 
         // Build the handbook.
-        var npm = 'npm'
-        if (Os.isFamily(Os.FAMILY_WINDOWS))
-            npm = 'npm.cmd'
-
         exec {
             workingDir 'src/handbook'
             commandLine npm, 'run', 'build'

@@ -1,10 +1,10 @@
 package emu.grasscutter.database;
 
-import dev.morphia.query.FindOptions;
-import dev.morphia.query.Sort;
+import static com.mongodb.client.model.Filters.eq;
+
+import dev.morphia.query.*;
 import dev.morphia.query.experimental.filters.Filters;
-import emu.grasscutter.GameConstants;
-import emu.grasscutter.Grasscutter;
+import emu.grasscutter.*;
 import emu.grasscutter.game.Account;
 import emu.grasscutter.game.achievement.Achievements;
 import emu.grasscutter.game.activity.PlayerActivityData;
@@ -21,14 +21,11 @@ import emu.grasscutter.game.quest.GameMainQuest;
 import emu.grasscutter.game.world.SceneGroupInstance;
 import emu.grasscutter.utils.objects.Returnable;
 import io.netty.util.concurrent.FastThreadLocalThread;
-import lombok.Getter;
-
-import javax.annotation.Nullable;
 import java.util.List;
 import java.util.concurrent.*;
 import java.util.stream.Stream;
-
-import static com.mongodb.client.model.Filters.eq;
+import javax.annotation.Nullable;
+import lombok.Getter;
 
 public final class DatabaseHelper {
     @Getter
@@ -545,19 +542,16 @@ public final class DatabaseHelper {
         DatabaseHelper.saveGameAsync(musicGameBeatmap);
     }
 
-    @Nullable
-    public static Achievements getAchievementData(int uid) {
+    @Nullable public static Achievements getAchievementData(int uid) {
         try {
             return DatabaseManager.getGameDatastore()
-                .find(Achievements.class)
-                .filter(Filters.and(Filters.eq("uid", uid)))
-                .first();
+                    .find(Achievements.class)
+                    .filter(Filters.and(Filters.eq("uid", uid)))
+                    .first();
         } catch (IllegalArgumentException e) {
-            Grasscutter.getLogger().warn("Error occurred while getting uid " + uid + "'s achievement data", e);
-            //delete uid's broken achievement data. sorry XD
-            DatabaseManager.getGameDatabase()
-                .getCollection("achievements")
-                .deleteMany(eq("uid", uid));
+            Grasscutter.getLogger()
+                    .debug("Error occurred while getting uid " + uid + "'s achievement data", e);
+            DatabaseManager.getGameDatabase().getCollection("achievements").deleteMany(eq("uid", uid));
             return null;
         }
     }

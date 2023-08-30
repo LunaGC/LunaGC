@@ -4,8 +4,7 @@
     "data": "./data/",
     "packets": "./packets/",
     "scripts": "resources:Scripts/",
-    "plugins": "./plugins/",
-    "cache": "./cache/"
+    "plugins": "./plugins/"
   },
   "databaseInfo": {
     "server": {
@@ -69,7 +68,6 @@
       "logPackets": "NONE",
       "isShowPacketPayload": false,
       "isShowLoopPackets": false,
-      "cacheSceneEntitiesEveryRun": false,
       "gameOptions": {
         "inventoryLimits": {
           "weapons": 2000,
@@ -88,10 +86,6 @@
         "staminaUsage": true,
         "energyUsage": true,
         "fishhookTeleport": true,
-        "trialCostumes": false,
-        "questing": {
-          "enabled": true
-        },
         "resinOptions": {
           "resinUsage": false,
           "cap": 160,
@@ -101,22 +95,6 @@
           "adventureExp": 1.0,
           "mora": 1.0,
           "leyLines": 1.0
-        },
-        "handbook": {
-          "enable": false,
-          "allowCommands": true,
-          "limits": {
-            "enabled": false,
-            "interval": 3,
-            "maxRequests": 10,
-            "maxEntities": 25
-          },
-          "server": {
-            "enforced": false,
-            "address": "127.0.0.1",
-            "port": 443,
-            "canChange": true
-          }
         }
       },
       "joinOptions": {
@@ -125,12 +103,13 @@
           1002,
           4010
         ],
-        "welcomeMessage": "Welcome to a LunaGC4.0",
+        "welcomeMessage": "Welcome to a LunaGC 4.0",
         "welcomeMail": {
           "title": "Welcome to LunaGC!",
           "content": "This server is base Grasscutter. Edit by Kei-Luna",
           "sender": "Kei-Luna",
-          "items": []
+          "items": [
+          ]
         }
       },
       "serverAccount": {
@@ -138,47 +117,12 @@
         "nameCardId": 210001,
         "adventureRank": 1,
         "worldLevel": 0,
-        "nickName": "<color=#00eaff>LunaDataBase</color>",
+        "nickName": "\u003ccolor\u003d#00eaff\u003eLunaDataBase\u003c/color\u003e",
         "signature": "LunaGC"
-      },
-      "visionOptions": [
-        {
-          "name": "VISION_LEVEL_NORMAL",
-          "visionRange": 80,
-          "gridWidth": 20
-        },
-        {
-          "name": "VISION_LEVEL_LITTLE_REMOTE",
-          "visionRange": 16,
-          "gridWidth": 40
-        },
-        {
-          "name": "VISION_LEVEL_REMOTE",
-          "visionRange": 1000,
-          "gridWidth": 250
-        },
-        {
-          "name": "VISION_LEVEL_SUPER",
-          "visionRange": 4000,
-          "gridWidth": 1000
-        },
-        {
-          "name": "VISION_LEVEL_NEARBY",
-          "visionRange": 40,
-          "gridWidth": 20
-        },
-        {
-          "name": "VISION_LEVEL_SUPER_NEARBY",
-          "visionRange": 20,
-          "gridWidth": 20
-        }
-      ]
+      }
     },
     "dispatch": {
       "regions": [],
-      "dispatchUrl": "ws://127.0.0.1:1111",
-      "encryptionKey": "QCrudwFI+7t3CqRfn7qQcX7WxkE3mSUj4JjEGfmptxs=",
-      "dispatchKey": "fo3xbkfiAGI2t9kW40CO63To2LUT+bkxmtDdYSYsWtk=",
       "defaultName": "Grasscutter",
       "logRequests": "NONE"
     },
@@ -197,5 +141,5 @@
       "logRequests": "ALL"
     }
   },
-  "version": 10
+  "version": 4
 }

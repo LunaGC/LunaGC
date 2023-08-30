@@ -25,15 +25,15 @@ public final class AchievementOuterClass {
     int getFinishTimestamp();
 
     /**
-     * <code>.Achievement.KNKEIELCCDB status = 10;</code>
+     * <code>.Achievement.Status status = 10;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
-     * <code>.Achievement.KNKEIELCCDB status = 10;</code>
+     * <code>.Achievement.Status status = 10;</code>
      * @return The status.
      */
-    emu.grasscutter.net.proto.AchievementOuterClass.Achievement.KNKEIELCCDB getStatus();
+    emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status getStatus();
 
     /**
      * <code>uint32 total_progress = 4;</code>
@@ -162,45 +162,45 @@ public final class AchievementOuterClass {
     }
 
     /**
-     * Protobuf enum {@code Achievement.KNKEIELCCDB}
+     * Protobuf enum {@code Achievement.Status}
      */
-    public enum KNKEIELCCDB
+    public enum Status
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
-       * <code>OPFLKOJMOIG_Invalid = 0;</code>
+       * <code>STATUS_INVALID = 0;</code>
        */
-      OPFLKOJMOIG_Invalid(0),
+      STATUS_INVALID(0),
       /**
-       * <code>OPFLKOJMOIG_Unfinished = 1;</code>
+       * <code>STATUS_UNFINISHED = 1;</code>
        */
-      OPFLKOJMOIG_Unfinished(1),
+      STATUS_UNFINISHED(1),
       /**
-       * <code>OPFLKOJMOIG_Finished = 2;</code>
+       * <code>STATUS_FINISHED = 2;</code>
        */
-      OPFLKOJMOIG_Finished(2),
+      STATUS_FINISHED(2),
       /**
-       * <code>OPFLKOJMOIG_RewardTaken = 3;</code>
+       * <code>STATUS_REWARD_TAKEN = 3;</code>
        */
-      OPFLKOJMOIG_RewardTaken(3),
+      STATUS_REWARD_TAKEN(3),
       UNRECOGNIZED(-1),
       ;
 
       /**
-       * <code>OPFLKOJMOIG_Invalid = 0;</code>
+       * <code>STATUS_INVALID = 0;</code>
        */
-      public static final int OPFLKOJMOIG_Invalid_VALUE = 0;
+      public static final int STATUS_INVALID_VALUE = 0;
       /**
-       * <code>OPFLKOJMOIG_Unfinished = 1;</code>
+       * <code>STATUS_UNFINISHED = 1;</code>
        */
-      public static final int OPFLKOJMOIG_Unfinished_VALUE = 1;
+      public static final int STATUS_UNFINISHED_VALUE = 1;
       /**
-       * <code>OPFLKOJMOIG_Finished = 2;</code>
+       * <code>STATUS_FINISHED = 2;</code>
        */
-      public static final int OPFLKOJMOIG_Finished_VALUE = 2;
+      public static final int STATUS_FINISHED_VALUE = 2;
       /**
-       * <code>OPFLKOJMOIG_RewardTaken = 3;</code>
+       * <code>STATUS_REWARD_TAKEN = 3;</code>
        */
-      public static final int OPFLKOJMOIG_RewardTaken_VALUE = 3;
+      public static final int STATUS_REWARD_TAKEN_VALUE = 3;
 
 
       public final int getNumber() {
@@ -217,7 +217,7 @@ public final class AchievementOuterClass {
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
-      public static KNKEIELCCDB valueOf(int value) {
+      public static Status valueOf(int value) {
         return forNumber(value);
       }
 
@@ -225,25 +225,25 @@ public final class AchievementOuterClass {
        * @param value The numeric wire value of the corresponding enum entry.
        * @return The enum associated with the given numeric wire value.
        */
-      public static KNKEIELCCDB forNumber(int value) {
+      public static Status forNumber(int value) {
         switch (value) {
-          case 0: return OPFLKOJMOIG_Invalid;
-          case 1: return OPFLKOJMOIG_Unfinished;
-          case 2: return OPFLKOJMOIG_Finished;
-          case 3: return OPFLKOJMOIG_RewardTaken;
+          case 0: return STATUS_INVALID;
+          case 1: return STATUS_UNFINISHED;
+          case 2: return STATUS_FINISHED;
+          case 3: return STATUS_REWARD_TAKEN;
           default: return null;
         }
       }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<KNKEIELCCDB>
+      public static com.google.protobuf.Internal.EnumLiteMap<Status>
           internalGetValueMap() {
         return internalValueMap;
       }
       private static final com.google.protobuf.Internal.EnumLiteMap<
-          KNKEIELCCDB> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<KNKEIELCCDB>() {
-              public KNKEIELCCDB findValueByNumber(int number) {
-                return KNKEIELCCDB.forNumber(number);
+          Status> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+              public Status findValueByNumber(int number) {
+                return Status.forNumber(number);
               }
             };
 
@@ -264,9 +264,9 @@ public final class AchievementOuterClass {
         return emu.grasscutter.net.proto.AchievementOuterClass.Achievement.getDescriptor().getEnumTypes().get(0);
       }
 
-      private static final KNKEIELCCDB[] VALUES = values();
+      private static final Status[] VALUES = values();
 
-      public static KNKEIELCCDB valueOf(
+      public static Status valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
           throw new java.lang.IllegalArgumentException(
@@ -280,11 +280,11 @@ public final class AchievementOuterClass {
 
       private final int value;
 
-      private KNKEIELCCDB(int value) {
+      private Status(int value) {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:Achievement.KNKEIELCCDB)
+      // @@protoc_insertion_point(enum_scope:Achievement.Status)
     }
 
     public static final int FINISH_TIMESTAMP_FIELD_NUMBER = 15;
@@ -301,20 +301,20 @@ public final class AchievementOuterClass {
     public static final int STATUS_FIELD_NUMBER = 10;
     private int status_;
     /**
-     * <code>.Achievement.KNKEIELCCDB status = 10;</code>
+     * <code>.Achievement.Status status = 10;</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>.Achievement.KNKEIELCCDB status = 10;</code>
+     * <code>.Achievement.Status status = 10;</code>
      * @return The status.
      */
-    @java.lang.Override public emu.grasscutter.net.proto.AchievementOuterClass.Achievement.KNKEIELCCDB getStatus() {
+    @java.lang.Override public emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status getStatus() {
       @SuppressWarnings("deprecation")
-      emu.grasscutter.net.proto.AchievementOuterClass.Achievement.KNKEIELCCDB result = emu.grasscutter.net.proto.AchievementOuterClass.Achievement.KNKEIELCCDB.valueOf(status_);
-      return result == null ? emu.grasscutter.net.proto.AchievementOuterClass.Achievement.KNKEIELCCDB.UNRECOGNIZED : result;
+      emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status result = emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status.valueOf(status_);
+      return result == null ? emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status.UNRECOGNIZED : result;
     }
 
     public static final int TOTAL_PROGRESS_FIELD_NUMBER = 4;
@@ -370,7 +370,7 @@ public final class AchievementOuterClass {
       if (id_ != 0) {
         output.writeUInt32(5, id_);
       }
-      if (status_ != emu.grasscutter.net.proto.AchievementOuterClass.Achievement.KNKEIELCCDB.OPFLKOJMOIG_Invalid.getNumber()) {
+      if (status_ != emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status.STATUS_INVALID.getNumber()) {
         output.writeEnum(10, status_);
       }
       if (curProgress_ != 0) {
@@ -396,7 +396,7 @@ public final class AchievementOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(5, id_);
       }
-      if (status_ != emu.grasscutter.net.proto.AchievementOuterClass.Achievement.KNKEIELCCDB.OPFLKOJMOIG_Invalid.getNumber()) {
+      if (status_ != emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status.STATUS_INVALID.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(10, status_);
       }
@@ -756,14 +756,14 @@ public final class AchievementOuterClass {
 
       private int status_ = 0;
       /**
-       * <code>.Achievement.KNKEIELCCDB status = 10;</code>
+       * <code>.Achievement.Status status = 10;</code>
        * @return The enum numeric value on the wire for status.
        */
       @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
-       * <code>.Achievement.KNKEIELCCDB status = 10;</code>
+       * <code>.Achievement.Status status = 10;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
@@ -774,21 +774,21 @@ public final class AchievementOuterClass {
         return this;
       }
       /**
-       * <code>.Achievement.KNKEIELCCDB status = 10;</code>
+       * <code>.Achievement.Status status = 10;</code>
        * @return The status.
        */
       @java.lang.Override
-      public emu.grasscutter.net.proto.AchievementOuterClass.Achievement.KNKEIELCCDB getStatus() {
+      public emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status getStatus() {
         @SuppressWarnings("deprecation")
-        emu.grasscutter.net.proto.AchievementOuterClass.Achievement.KNKEIELCCDB result = emu.grasscutter.net.proto.AchievementOuterClass.Achievement.KNKEIELCCDB.valueOf(status_);
-        return result == null ? emu.grasscutter.net.proto.AchievementOuterClass.Achievement.KNKEIELCCDB.UNRECOGNIZED : result;
+        emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status result = emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status.valueOf(status_);
+        return result == null ? emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status.UNRECOGNIZED : result;
       }
       /**
-       * <code>.Achievement.KNKEIELCCDB status = 10;</code>
+       * <code>.Achievement.Status status = 10;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(emu.grasscutter.net.proto.AchievementOuterClass.Achievement.KNKEIELCCDB value) {
+      public Builder setStatus(emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -798,7 +798,7 @@ public final class AchievementOuterClass {
         return this;
       }
       /**
-       * <code>.Achievement.KNKEIELCCDB status = 10;</code>
+       * <code>.Achievement.Status status = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -967,15 +967,14 @@ public final class AchievementOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021Achievement.proto\"\206\002\n\013Achievement\022\030\n\020f" +
-      "inish_timestamp\030\017 \001(\r\022(\n\006status\030\n \001(\0162\030." +
-      "Achievement.KNKEIELCCDB\022\026\n\016total_progres" +
-      "s\030\004 \001(\r\022\024\n\014cur_progress\030\016 \001(\r\022\n\n\002id\030\005 \001(" +
-      "\r\"y\n\013KNKEIELCCDB\022\027\n\023OPFLKOJMOIG_Invalid\020" +
-      "\000\022\032\n\026OPFLKOJMOIG_Unfinished\020\001\022\030\n\024OPFLKOJ" +
-      "MOIG_Finished\020\002\022\033\n\027OPFLKOJMOIG_RewardTak" +
-      "en\020\003B\033\n\031emu.grasscutter.net.protob\006proto" +
-      "3"
+      "\n\021Achievement.proto\"\351\001\n\013Achievement\022\030\n\020f" +
+      "inish_timestamp\030\017 \001(\r\022#\n\006status\030\n \001(\0162\023." +
+      "Achievement.Status\022\026\n\016total_progress\030\004 \001" +
+      "(\r\022\024\n\014cur_progress\030\016 \001(\r\022\n\n\002id\030\005 \001(\r\"a\n\006" +
+      "Status\022\022\n\016STATUS_INVALID\020\000\022\025\n\021STATUS_UNF" +
+      "INISHED\020\001\022\023\n\017STATUS_FINISHED\020\002\022\027\n\023STATUS" +
+      "_REWARD_TAKEN\020\003B\033\n\031emu.grasscutter.net.p" +
+      "rotob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

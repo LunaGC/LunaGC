@@ -21,20 +21,20 @@ public class PacketGetPlayerFriendListRsp extends BasePacket {
 
         var serverAccount = GAME_INFO.serverAccount;
         FriendBrief serverFriend =
-            FriendBrief.newBuilder()
-                .setUid(GameConstants.SERVER_CONSOLE_UID)
-                .setNickname(serverAccount.nickName)
-                .setLevel(serverAccount.adventureRank)
-                .setProfilePicture(ProfilePicture.newBuilder().setAvatarId(serverAccount.avatarId))
-                .setWorldLevel(serverAccount.worldLevel)
-                .setSignature(serverAccount.signature)
-                .setNameCardId(serverAccount.nameCardId)
-                .setOnlineState(FriendOnlineState.FRIEND_ONLINE_STATE_ONLINE)
-                .setParam(1)
-                .setAvatarId(serverAccount.avatarId)
-                .setFriendEnterHomeOption(FriendEnterHomeOptionOuterClass.FriendEnterHomeOption.FRIEND_ENTER_HOME_OPTION_REFUSE)
-                .setIsGameSource(true)
+                FriendBrief.newBuilder()
+                        .setUid(GameConstants.SERVER_CONSOLE_UID)
+                        .setNickname(serverAccount.nickName)
+                        .setLevel(serverAccount.adventureRank)
+                        .setProfilePicture(ProfilePicture.newBuilder().setAvatarId(serverAccount.avatarId))
+                        .setWorldLevel(serverAccount.worldLevel)
+                        .setSignature(serverAccount.signature)
+                        .setLastActiveTime((int) (System.currentTimeMillis() / 1000f))
+                        .setNameCardId(serverAccount.nameCardId)
+                        .setOnlineState(FriendOnlineState.FRIEND_ONLINE_STATE_ONLINE)
+                        .setParam(1)
+                        .setIsGameSource(true)
                         .setPlatformType(PlatformTypeOuterClass.PlatformType.PLATFORM_TYPE_PC)
+                        .setFriendEnterHomeOptionValue(FriendEnterHomeOptionOuterClass.FriendEnterHomeOption.FRIEND_ENTER_HOME_OPTION_REFUSE_VALUE)
                         .build();
 
         GetPlayerFriendListRsp.Builder proto =

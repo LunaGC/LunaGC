@@ -19,21 +19,21 @@ public final class ScenePointUnlockNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 UnlockAreaList = 6;</code>
-     * @return A list containing the UnlockAreaList.
+     * <code>repeated uint32 ELDLGKEKABI = 6;</code>
+     * @return A list containing the eLDLGKEKABI.
      */
-    java.util.List<java.lang.Integer> getUnlockAreaListList();
+    java.util.List<java.lang.Integer> getELDLGKEKABIList();
     /**
-     * <code>repeated uint32 UnlockAreaList = 6;</code>
-     * @return The count of UnlockAreaList.
+     * <code>repeated uint32 ELDLGKEKABI = 6;</code>
+     * @return The count of eLDLGKEKABI.
      */
-    int getUnlockAreaListCount();
+    int getELDLGKEKABICount();
     /**
-     * <code>repeated uint32 UnlockAreaList = 6;</code>
+     * <code>repeated uint32 ELDLGKEKABI = 6;</code>
      * @param index The index of the element to return.
-     * @return The UnlockAreaList at the given index.
+     * @return The eLDLGKEKABI at the given index.
      */
-    int getUnlockAreaList(int index);
+    int getELDLGKEKABI(int index);
 
     /**
      * <code>repeated uint32 KOPAHGHMECF = 4;</code>
@@ -110,7 +110,7 @@ public final class ScenePointUnlockNotifyOuterClass {
       super(builder);
     }
     private ScenePointUnlockNotify() {
-      UnlockAreaList_ = emptyIntList();
+      eLDLGKEKABI_ = emptyIntList();
       kOPAHGHMECF_ = emptyIntList();
       pointList_ = emptyIntList();
       jCLHNODLPOH_ = emptyIntList();
@@ -191,21 +191,21 @@ public final class ScenePointUnlockNotifyOuterClass {
             }
             case 48: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                UnlockAreaList_ = newIntList();
+                eLDLGKEKABI_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              UnlockAreaList_.addInt(input.readUInt32());
+              eLDLGKEKABI_.addInt(input.readUInt32());
               break;
             }
             case 50: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                UnlockAreaList_ = newIntList();
+                eLDLGKEKABI_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
               }
               while (input.getBytesUntilLimit() > 0) {
-                UnlockAreaList_.addInt(input.readUInt32());
+                eLDLGKEKABI_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
               break;
@@ -258,7 +258,7 @@ public final class ScenePointUnlockNotifyOuterClass {
           kOPAHGHMECF_.makeImmutable(); // C
         }
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          UnlockAreaList_.makeImmutable(); // C
+          eLDLGKEKABI_.makeImmutable(); // C
         }
         if (((mutable_bitField0_ & 0x00000008) != 0)) {
           jCLHNODLPOH_.makeImmutable(); // C
@@ -280,33 +280,33 @@ public final class ScenePointUnlockNotifyOuterClass {
               emu.grasscutter.net.proto.ScenePointUnlockNotifyOuterClass.ScenePointUnlockNotify.class, emu.grasscutter.net.proto.ScenePointUnlockNotifyOuterClass.ScenePointUnlockNotify.Builder.class);
     }
 
-    public static final int UnlockAreaList_FIELD_NUMBER = 6;
-    private com.google.protobuf.Internal.IntList UnlockAreaList_;
+    public static final int ELDLGKEKABI_FIELD_NUMBER = 6;
+    private com.google.protobuf.Internal.IntList eLDLGKEKABI_;
     /**
-     * <code>repeated uint32 UnlockAreaList = 6;</code>
-     * @return A list containing the UnlockAreaList.
+     * <code>repeated uint32 ELDLGKEKABI = 6;</code>
+     * @return A list containing the eLDLGKEKABI.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getUnlockAreaListList() {
-      return UnlockAreaList_;
+        getELDLGKEKABIList() {
+      return eLDLGKEKABI_;
     }
     /**
-     * <code>repeated uint32 UnlockAreaList = 6;</code>
-     * @return The count of UnlockAreaList.
+     * <code>repeated uint32 ELDLGKEKABI = 6;</code>
+     * @return The count of eLDLGKEKABI.
      */
-    public int getUnlockAreaListCount() {
-      return UnlockAreaList_.size();
+    public int getELDLGKEKABICount() {
+      return eLDLGKEKABI_.size();
     }
     /**
-     * <code>repeated uint32 UnlockAreaList = 6;</code>
+     * <code>repeated uint32 ELDLGKEKABI = 6;</code>
      * @param index The index of the element to return.
-     * @return The UnlockAreaList at the given index.
+     * @return The eLDLGKEKABI at the given index.
      */
-    public int getUnlockAreaList(int index) {
-      return UnlockAreaList_.getInt(index);
+    public int getELDLGKEKABI(int index) {
+      return eLDLGKEKABI_.getInt(index);
     }
-    private int UnlockAreaListMemoizedSerializedSize = -1;
+    private int eLDLGKEKABIMemoizedSerializedSize = -1;
 
     public static final int KOPAHGHMECF_FIELD_NUMBER = 4;
     private com.google.protobuf.Internal.IntList kOPAHGHMECF_;
@@ -432,12 +432,12 @@ public final class ScenePointUnlockNotifyOuterClass {
       for (int i = 0; i < kOPAHGHMECF_.size(); i++) {
         output.writeUInt32NoTag(kOPAHGHMECF_.getInt(i));
       }
-      if (getUnlockAreaListList().size() > 0) {
+      if (getELDLGKEKABIList().size() > 0) {
         output.writeUInt32NoTag(50);
-        output.writeUInt32NoTag(UnlockAreaListMemoizedSerializedSize);
+        output.writeUInt32NoTag(eLDLGKEKABIMemoizedSerializedSize);
       }
-      for (int i = 0; i < UnlockAreaList_.size(); i++) {
-        output.writeUInt32NoTag(UnlockAreaList_.getInt(i));
+      for (int i = 0; i < eLDLGKEKABI_.size(); i++) {
+        output.writeUInt32NoTag(eLDLGKEKABI_.getInt(i));
       }
       if (getJCLHNODLPOHList().size() > 0) {
         output.writeUInt32NoTag(90);
@@ -488,17 +488,17 @@ public final class ScenePointUnlockNotifyOuterClass {
       }
       {
         int dataSize = 0;
-        for (int i = 0; i < UnlockAreaList_.size(); i++) {
+        for (int i = 0; i < eLDLGKEKABI_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(UnlockAreaList_.getInt(i));
+            .computeUInt32SizeNoTag(eLDLGKEKABI_.getInt(i));
         }
         size += dataSize;
-        if (!getUnlockAreaListList().isEmpty()) {
+        if (!getELDLGKEKABIList().isEmpty()) {
           size += 1;
           size += com.google.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
-        UnlockAreaListMemoizedSerializedSize = dataSize;
+        eLDLGKEKABIMemoizedSerializedSize = dataSize;
       }
       {
         int dataSize = 0;
@@ -533,8 +533,8 @@ public final class ScenePointUnlockNotifyOuterClass {
       }
       emu.grasscutter.net.proto.ScenePointUnlockNotifyOuterClass.ScenePointUnlockNotify other = (emu.grasscutter.net.proto.ScenePointUnlockNotifyOuterClass.ScenePointUnlockNotify) obj;
 
-      if (!getUnlockAreaListList()
-          .equals(other.getUnlockAreaListList())) return false;
+      if (!getELDLGKEKABIList()
+          .equals(other.getELDLGKEKABIList())) return false;
       if (!getKOPAHGHMECFList()
           .equals(other.getKOPAHGHMECFList())) return false;
       if (getSceneId()
@@ -554,9 +554,9 @@ public final class ScenePointUnlockNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getUnlockAreaListCount() > 0) {
-        hash = (37 * hash) + UnlockAreaList_FIELD_NUMBER;
-        hash = (53 * hash) + getUnlockAreaListList().hashCode();
+      if (getELDLGKEKABICount() > 0) {
+        hash = (37 * hash) + ELDLGKEKABI_FIELD_NUMBER;
+        hash = (53 * hash) + getELDLGKEKABIList().hashCode();
       }
       if (getKOPAHGHMECFCount() > 0) {
         hash = (37 * hash) + KOPAHGHMECF_FIELD_NUMBER;
@@ -710,7 +710,7 @@ public final class ScenePointUnlockNotifyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        UnlockAreaList_ = emptyIntList();
+        eLDLGKEKABI_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
         kOPAHGHMECF_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -748,10 +748,10 @@ public final class ScenePointUnlockNotifyOuterClass {
         emu.grasscutter.net.proto.ScenePointUnlockNotifyOuterClass.ScenePointUnlockNotify result = new emu.grasscutter.net.proto.ScenePointUnlockNotifyOuterClass.ScenePointUnlockNotify(this);
         int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) != 0)) {
-          UnlockAreaList_.makeImmutable();
+          eLDLGKEKABI_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.UnlockAreaList_ = UnlockAreaList_;
+        result.eLDLGKEKABI_ = eLDLGKEKABI_;
         if (((bitField0_ & 0x00000002) != 0)) {
           kOPAHGHMECF_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
@@ -816,13 +816,13 @@ public final class ScenePointUnlockNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.ScenePointUnlockNotifyOuterClass.ScenePointUnlockNotify other) {
         if (other == emu.grasscutter.net.proto.ScenePointUnlockNotifyOuterClass.ScenePointUnlockNotify.getDefaultInstance()) return this;
-        if (!other.UnlockAreaList_.isEmpty()) {
-          if (UnlockAreaList_.isEmpty()) {
-            UnlockAreaList_ = other.UnlockAreaList_;
+        if (!other.eLDLGKEKABI_.isEmpty()) {
+          if (eLDLGKEKABI_.isEmpty()) {
+            eLDLGKEKABI_ = other.eLDLGKEKABI_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureUnlockAreaListIsMutable();
-            UnlockAreaList_.addAll(other.UnlockAreaList_);
+            ensureELDLGKEKABIIsMutable();
+            eLDLGKEKABI_.addAll(other.eLDLGKEKABI_);
           }
           onChanged();
         }
@@ -889,80 +889,80 @@ public final class ScenePointUnlockNotifyOuterClass {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Internal.IntList UnlockAreaList_ = emptyIntList();
-      private void ensureUnlockAreaListIsMutable() {
+      private com.google.protobuf.Internal.IntList eLDLGKEKABI_ = emptyIntList();
+      private void ensureELDLGKEKABIIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          UnlockAreaList_ = mutableCopy(UnlockAreaList_);
+          eLDLGKEKABI_ = mutableCopy(eLDLGKEKABI_);
           bitField0_ |= 0x00000001;
          }
       }
       /**
-       * <code>repeated uint32 UnlockAreaList = 6;</code>
-       * @return A list containing the UnlockAreaList.
+       * <code>repeated uint32 ELDLGKEKABI = 6;</code>
+       * @return A list containing the eLDLGKEKABI.
        */
       public java.util.List<java.lang.Integer>
-          getUnlockAreaListList() {
+          getELDLGKEKABIList() {
         return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(UnlockAreaList_) : UnlockAreaList_;
+                 java.util.Collections.unmodifiableList(eLDLGKEKABI_) : eLDLGKEKABI_;
       }
       /**
-       * <code>repeated uint32 UnlockAreaList = 6;</code>
-       * @return The count of UnlockAreaList.
+       * <code>repeated uint32 ELDLGKEKABI = 6;</code>
+       * @return The count of eLDLGKEKABI.
        */
-      public int getUnlockAreaListCount() {
-        return UnlockAreaList_.size();
+      public int getELDLGKEKABICount() {
+        return eLDLGKEKABI_.size();
       }
       /**
-       * <code>repeated uint32 UnlockAreaList = 6;</code>
+       * <code>repeated uint32 ELDLGKEKABI = 6;</code>
        * @param index The index of the element to return.
-       * @return The UnlockAreaList at the given index.
+       * @return The eLDLGKEKABI at the given index.
        */
-      public int getUnlockAreaList(int index) {
-        return UnlockAreaList_.getInt(index);
+      public int getELDLGKEKABI(int index) {
+        return eLDLGKEKABI_.getInt(index);
       }
       /**
-       * <code>repeated uint32 UnlockAreaList = 6;</code>
+       * <code>repeated uint32 ELDLGKEKABI = 6;</code>
        * @param index The index to set the value at.
-       * @param value The UnlockAreaList to set.
+       * @param value The eLDLGKEKABI to set.
        * @return This builder for chaining.
        */
-      public Builder setUnlockAreaList(
+      public Builder setELDLGKEKABI(
           int index, int value) {
-        ensureUnlockAreaListIsMutable();
-        UnlockAreaList_.setInt(index, value);
+        ensureELDLGKEKABIIsMutable();
+        eLDLGKEKABI_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 UnlockAreaList = 6;</code>
-       * @param value The UnlockAreaList to add.
+       * <code>repeated uint32 ELDLGKEKABI = 6;</code>
+       * @param value The eLDLGKEKABI to add.
        * @return This builder for chaining.
        */
-      public Builder addUnlockAreaList(int value) {
-        ensureUnlockAreaListIsMutable();
-        UnlockAreaList_.addInt(value);
+      public Builder addELDLGKEKABI(int value) {
+        ensureELDLGKEKABIIsMutable();
+        eLDLGKEKABI_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 UnlockAreaList = 6;</code>
-       * @param values The UnlockAreaList to add.
+       * <code>repeated uint32 ELDLGKEKABI = 6;</code>
+       * @param values The eLDLGKEKABI to add.
        * @return This builder for chaining.
        */
-      public Builder addAllUnlockAreaList(
+      public Builder addAllELDLGKEKABI(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureUnlockAreaListIsMutable();
+        ensureELDLGKEKABIIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, UnlockAreaList_);
+            values, eLDLGKEKABI_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 UnlockAreaList = 6;</code>
+       * <code>repeated uint32 ELDLGKEKABI = 6;</code>
        * @return This builder for chaining.
        */
-      public Builder clearUnlockAreaList() {
-        UnlockAreaList_ = emptyIntList();
+      public Builder clearELDLGKEKABI() {
+        eLDLGKEKABI_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
@@ -1303,7 +1303,7 @@ public final class ScenePointUnlockNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034ScenePointUnlockNotify.proto\"}\n\026SceneP" +
-      "ointUnlockNotify\022\023\n\013UnlockAreaList\030\006 \003(\r\022\023\n" +
+      "ointUnlockNotify\022\023\n\013ELDLGKEKABI\030\006 \003(\r\022\023\n" +
       "\013KOPAHGHMECF\030\004 \003(\r\022\020\n\010scene_id\030\014 \001(\r\022\022\n\n" +
       "point_list\030\002 \003(\r\022\023\n\013JCLHNODLPOH\030\013 \003(\rB\033\n" +
       "\031emu.grasscutter.net.protob\006proto3"
@@ -1317,7 +1317,7 @@ public final class ScenePointUnlockNotifyOuterClass {
     internal_static_ScenePointUnlockNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ScenePointUnlockNotify_descriptor,
-        new java.lang.String[] { "UnlockAreaList", "KOPAHGHMECF", "SceneId", "PointList", "JCLHNODLPOH", });
+        new java.lang.String[] { "ELDLGKEKABI", "KOPAHGHMECF", "SceneId", "PointList", "JCLHNODLPOH", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
