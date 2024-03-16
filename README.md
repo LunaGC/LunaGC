@@ -1,5 +1,8 @@
 # LunaGC
 
+Compatible version is 4.0
+Not available since 4.0
+
 ### 動作要件
 
 * [Java SE - 17](https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html) (17以上であればいいです)
