@@ -1,6 +1,7 @@
 # LunaGC
 
 Compatible version is 4.0
+
 Not available since 4.0
 
 ### 動作要件
